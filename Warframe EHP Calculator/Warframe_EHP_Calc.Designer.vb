@@ -114,11 +114,46 @@ Partial Class Warframe_EHP_Calc
         Me.cb_base_health = New System.Windows.Forms.ComboBox()
         Me.cb_base_armor = New System.Windows.Forms.ComboBox()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.ember_panel = New System.Windows.Forms.Panel()
-        Me.ember_None = New System.Windows.Forms.RadioButton()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.ember_Backdraft = New System.Windows.Forms.RadioButton()
-        Me.ember_Phoenix = New System.Windows.Forms.RadioButton()
+        Me.volt_panel = New System.Windows.Forms.Panel()
+        Me.volt_None = New System.Windows.Forms.RadioButton()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.volt_Pulse = New System.Windows.Forms.RadioButton()
+        Me.vauban_panel = New System.Windows.Forms.Panel()
+        Me.vauban_None = New System.Windows.Forms.RadioButton()
+        Me.Label32 = New System.Windows.Forms.Label()
+        Me.vauban_Esprit = New System.Windows.Forms.RadioButton()
+        Me.trinity_panel = New System.Windows.Forms.Panel()
+        Me.trinity_None = New System.Windows.Forms.RadioButton()
+        Me.Label31 = New System.Windows.Forms.Label()
+        Me.trinity_Meridian = New System.Windows.Forms.RadioButton()
+        Me.trinity_Aura = New System.Windows.Forms.RadioButton()
+        Me.saryn_panel = New System.Windows.Forms.Panel()
+        Me.saryn_None = New System.Windows.Forms.RadioButton()
+        Me.Label30 = New System.Windows.Forms.Label()
+        Me.saryn_Hemlock = New System.Windows.Forms.RadioButton()
+        Me.rhino_panel = New System.Windows.Forms.Panel()
+        Me.rhino_None = New System.Windows.Forms.RadioButton()
+        Me.Label29 = New System.Windows.Forms.Label()
+        Me.rhino_Thrak = New System.Windows.Forms.RadioButton()
+        Me.nyx_panel = New System.Windows.Forms.Panel()
+        Me.nyx_None = New System.Windows.Forms.RadioButton()
+        Me.Label28 = New System.Windows.Forms.Label()
+        Me.nyx_Vespa = New System.Windows.Forms.RadioButton()
+        Me.nyx_Menticide = New System.Windows.Forms.RadioButton()
+        Me.nova_panel = New System.Windows.Forms.Panel()
+        Me.nova_None = New System.Windows.Forms.RadioButton()
+        Me.Label27 = New System.Windows.Forms.Label()
+        Me.nova_Flux = New System.Windows.Forms.RadioButton()
+        Me.mag_panel = New System.Windows.Forms.Panel()
+        Me.mag_None = New System.Windows.Forms.RadioButton()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.mag_Gauss = New System.Windows.Forms.RadioButton()
+        Me.mag_Coil = New System.Windows.Forms.RadioButton()
+        Me.loki_panel = New System.Windows.Forms.Panel()
+        Me.loki_None = New System.Windows.Forms.RadioButton()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.loki_Swindle = New System.Windows.Forms.RadioButton()
+        Me.loki_Essence = New System.Windows.Forms.RadioButton()
         Me.key_decaying = New System.Windows.Forms.CheckBox()
         Me.key_bleeding = New System.Windows.Forms.CheckBox()
         Me.Label17 = New System.Windows.Forms.Label()
@@ -128,64 +163,29 @@ Partial Class Warframe_EHP_Calc
         Me.arcane_guardian_val = New System.Windows.Forms.NumericUpDown()
         Me.arcane_guardian = New System.Windows.Forms.CheckBox()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.banshee_panel = New System.Windows.Forms.Panel()
-        Me.banshee_None = New System.Windows.Forms.RadioButton()
-        Me.Label19 = New System.Windows.Forms.Label()
-        Me.banshee_Reverb = New System.Windows.Forms.RadioButton()
-        Me.volt_panel = New System.Windows.Forms.Panel()
-        Me.volt_None = New System.Windows.Forms.RadioButton()
-        Me.Label21 = New System.Windows.Forms.Label()
-        Me.volt_Pulse = New System.Windows.Forms.RadioButton()
-        Me.ash_panel = New System.Windows.Forms.Panel()
-        Me.ash_None = New System.Windows.Forms.RadioButton()
-        Me.Label22 = New System.Windows.Forms.Label()
-        Me.ash_Locust = New System.Windows.Forms.RadioButton()
-        Me.excalibur_panel = New System.Windows.Forms.Panel()
-        Me.excalibur_None = New System.Windows.Forms.RadioButton()
-        Me.Label23 = New System.Windows.Forms.Label()
-        Me.excalibur_Pendragon = New System.Windows.Forms.RadioButton()
-        Me.excalibur_Avalon = New System.Windows.Forms.RadioButton()
         Me.frost_panel = New System.Windows.Forms.Panel()
         Me.frost_None = New System.Windows.Forms.RadioButton()
         Me.Label24 = New System.Windows.Forms.Label()
         Me.frost_Squall = New System.Windows.Forms.RadioButton()
         Me.frost_Aurora = New System.Windows.Forms.RadioButton()
-        Me.loki_panel = New System.Windows.Forms.Panel()
-        Me.loki_None = New System.Windows.Forms.RadioButton()
-        Me.Label25 = New System.Windows.Forms.Label()
-        Me.loki_Swindle = New System.Windows.Forms.RadioButton()
-        Me.loki_Essence = New System.Windows.Forms.RadioButton()
-        Me.mag_panel = New System.Windows.Forms.Panel()
-        Me.mag_None = New System.Windows.Forms.RadioButton()
-        Me.Label26 = New System.Windows.Forms.Label()
-        Me.mag_Gauss = New System.Windows.Forms.RadioButton()
-        Me.mag_Coil = New System.Windows.Forms.RadioButton()
-        Me.nova_panel = New System.Windows.Forms.Panel()
-        Me.nova_None = New System.Windows.Forms.RadioButton()
-        Me.Label27 = New System.Windows.Forms.Label()
-        Me.nova_Flux = New System.Windows.Forms.RadioButton()
-        Me.nyx_panel = New System.Windows.Forms.Panel()
-        Me.nyx_None = New System.Windows.Forms.RadioButton()
-        Me.Label28 = New System.Windows.Forms.Label()
-        Me.nyx_Vespa = New System.Windows.Forms.RadioButton()
-        Me.nyx_Menticide = New System.Windows.Forms.RadioButton()
-        Me.rhino_panel = New System.Windows.Forms.Panel()
-        Me.rhino_None = New System.Windows.Forms.RadioButton()
-        Me.Label29 = New System.Windows.Forms.Label()
-        Me.rhino_Thrak = New System.Windows.Forms.RadioButton()
-        Me.saryn_panel = New System.Windows.Forms.Panel()
-        Me.saryn_None = New System.Windows.Forms.RadioButton()
-        Me.Label30 = New System.Windows.Forms.Label()
-        Me.saryn_Hemlock = New System.Windows.Forms.RadioButton()
-        Me.trinity_panel = New System.Windows.Forms.Panel()
-        Me.trinity_None = New System.Windows.Forms.RadioButton()
-        Me.Label31 = New System.Windows.Forms.Label()
-        Me.trinity_Meridian = New System.Windows.Forms.RadioButton()
-        Me.trinity_Aura = New System.Windows.Forms.RadioButton()
-        Me.vauban_panel = New System.Windows.Forms.Panel()
-        Me.vauban_None = New System.Windows.Forms.RadioButton()
-        Me.Label32 = New System.Windows.Forms.Label()
-        Me.vauban_Esprit = New System.Windows.Forms.RadioButton()
+        Me.ember_panel = New System.Windows.Forms.Panel()
+        Me.ember_None = New System.Windows.Forms.RadioButton()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.ember_Backdraft = New System.Windows.Forms.RadioButton()
+        Me.ember_Phoenix = New System.Windows.Forms.RadioButton()
+        Me.banshee_panel = New System.Windows.Forms.Panel()
+        Me.banshee_None = New System.Windows.Forms.RadioButton()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.banshee_Reverb = New System.Windows.Forms.RadioButton()
+        Me.excalibur_panel = New System.Windows.Forms.Panel()
+        Me.excalibur_None = New System.Windows.Forms.RadioButton()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.excalibur_Pendragon = New System.Windows.Forms.RadioButton()
+        Me.excalibur_Avalon = New System.Windows.Forms.RadioButton()
+        Me.ash_panel = New System.Windows.Forms.Panel()
+        Me.ash_None = New System.Windows.Forms.RadioButton()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.ash_Locust = New System.Windows.Forms.RadioButton()
         Me.GroupBox1.SuspendLayout()
         Me.EHP_container.SuspendLayout()
         CType(Me.wf_hpconvert_stacks, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -211,22 +211,22 @@ Partial Class Warframe_EHP_Calc
         CType(Me.link_armor_val, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
-        Me.ember_panel.SuspendLayout()
+        Me.volt_panel.SuspendLayout()
+        Me.vauban_panel.SuspendLayout()
+        Me.trinity_panel.SuspendLayout()
+        Me.saryn_panel.SuspendLayout()
+        Me.rhino_panel.SuspendLayout()
+        Me.nyx_panel.SuspendLayout()
+        Me.nova_panel.SuspendLayout()
+        Me.mag_panel.SuspendLayout()
+        Me.loki_panel.SuspendLayout()
         CType(Me.arcane_ultimatum_val, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.arcane_guardian_val, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.banshee_panel.SuspendLayout()
-        Me.volt_panel.SuspendLayout()
-        Me.ash_panel.SuspendLayout()
-        Me.excalibur_panel.SuspendLayout()
         Me.frost_panel.SuspendLayout()
-        Me.loki_panel.SuspendLayout()
-        Me.mag_panel.SuspendLayout()
-        Me.nova_panel.SuspendLayout()
-        Me.nyx_panel.SuspendLayout()
-        Me.rhino_panel.SuspendLayout()
-        Me.saryn_panel.SuspendLayout()
-        Me.trinity_panel.SuspendLayout()
-        Me.vauban_panel.SuspendLayout()
+        Me.ember_panel.SuspendLayout()
+        Me.banshee_panel.SuspendLayout()
+        Me.excalibur_panel.SuspendLayout()
+        Me.ash_panel.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -723,7 +723,8 @@ Partial Class Warframe_EHP_Calc
         Me.x_armor_val.Enabled = False
         Me.x_armor_val.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.x_armor_val.Location = New System.Drawing.Point(97, 62)
-        Me.x_armor_val.Maximum = New Decimal(New Integer() {5000, 0, 0, 0})
+        Me.x_armor_val.Maximum = New Decimal(New Integer() {50000, 0, 0, 0})
+        Me.x_armor_val.Minimum = New Decimal(New Integer() {50000, 0, 0, -2147483648})
         Me.x_armor_val.Name = "x_armor_val"
         Me.x_armor_val.Size = New System.Drawing.Size(120, 21)
         Me.x_armor_val.TabIndex = 40
@@ -733,7 +734,8 @@ Partial Class Warframe_EHP_Calc
         Me.x_health_val.Enabled = False
         Me.x_health_val.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.x_health_val.Location = New System.Drawing.Point(97, 89)
-        Me.x_health_val.Maximum = New Decimal(New Integer() {5000, 0, 0, 0})
+        Me.x_health_val.Maximum = New Decimal(New Integer() {50000, 0, 0, 0})
+        Me.x_health_val.Minimum = New Decimal(New Integer() {50000, 0, 0, -2147483648})
         Me.x_health_val.Name = "x_health_val"
         Me.x_health_val.Size = New System.Drawing.Size(120, 21)
         Me.x_health_val.TabIndex = 42
@@ -765,7 +767,8 @@ Partial Class Warframe_EHP_Calc
         Me.x_shield_val.Enabled = False
         Me.x_shield_val.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.x_shield_val.Location = New System.Drawing.Point(97, 116)
-        Me.x_shield_val.Maximum = New Decimal(New Integer() {5000, 0, 0, 0})
+        Me.x_shield_val.Maximum = New Decimal(New Integer() {50000, 0, 0, 0})
+        Me.x_shield_val.Minimum = New Decimal(New Integer() {50000, 0, 0, -2147483648})
         Me.x_shield_val.Name = "x_shield_val"
         Me.x_shield_val.Size = New System.Drawing.Size(120, 21)
         Me.x_shield_val.TabIndex = 38
@@ -1291,62 +1294,458 @@ Partial Class Warframe_EHP_Calc
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Extra"
         '
-        'ember_panel
+        'volt_panel
         '
-        Me.ember_panel.Controls.Add(Me.ember_None)
-        Me.ember_panel.Controls.Add(Me.Label18)
-        Me.ember_panel.Controls.Add(Me.ember_Backdraft)
-        Me.ember_panel.Controls.Add(Me.ember_Phoenix)
-        Me.ember_panel.Location = New System.Drawing.Point(1, 320)
-        Me.ember_panel.Name = "ember_panel"
-        Me.ember_panel.Size = New System.Drawing.Size(230, 100)
-        Me.ember_panel.TabIndex = 52
-        Me.ember_panel.Visible = False
+        Me.volt_panel.Controls.Add(Me.volt_None)
+        Me.volt_panel.Controls.Add(Me.Label21)
+        Me.volt_panel.Controls.Add(Me.volt_Pulse)
+        Me.volt_panel.Location = New System.Drawing.Point(1, 320)
+        Me.volt_panel.Name = "volt_panel"
+        Me.volt_panel.Size = New System.Drawing.Size(230, 100)
+        Me.volt_panel.TabIndex = 59
+        Me.volt_panel.Visible = False
         '
-        'ember_None
+        'volt_None
         '
-        Me.ember_None.AutoSize = True
-        Me.ember_None.Checked = True
-        Me.ember_None.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.ember_None.Location = New System.Drawing.Point(10, 76)
-        Me.ember_None.Name = "ember_None"
-        Me.ember_None.Size = New System.Drawing.Size(69, 24)
-        Me.ember_None.TabIndex = 57
-        Me.ember_None.TabStop = True
-        Me.ember_None.Text = "None"
-        Me.ember_None.UseVisualStyleBackColor = True
+        Me.volt_None.AutoSize = True
+        Me.volt_None.Checked = True
+        Me.volt_None.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.volt_None.Location = New System.Drawing.Point(10, 50)
+        Me.volt_None.Name = "volt_None"
+        Me.volt_None.Size = New System.Drawing.Size(69, 24)
+        Me.volt_None.TabIndex = 57
+        Me.volt_None.TabStop = True
+        Me.volt_None.Text = "None"
+        Me.volt_None.UseVisualStyleBackColor = True
         '
-        'Label18
+        'Label21
         '
-        Me.Label18.AutoSize = True
-        Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(6, 2)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(151, 22)
-        Me.Label18.TabIndex = 56
-        Me.Label18.Text = "Arcane Helmets"
+        Me.Label21.AutoSize = True
+        Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label21.Location = New System.Drawing.Point(6, 2)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(151, 22)
+        Me.Label21.TabIndex = 56
+        Me.Label21.Text = "Arcane Helmets"
         '
-        'ember_Backdraft
+        'volt_Pulse
         '
-        Me.ember_Backdraft.AutoSize = True
-        Me.ember_Backdraft.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.ember_Backdraft.Location = New System.Drawing.Point(10, 50)
-        Me.ember_Backdraft.Name = "ember_Backdraft"
-        Me.ember_Backdraft.Size = New System.Drawing.Size(167, 24)
-        Me.ember_Backdraft.TabIndex = 1
-        Me.ember_Backdraft.Text = "Backdraft Helmet"
-        Me.ember_Backdraft.UseVisualStyleBackColor = True
+        Me.volt_Pulse.AutoSize = True
+        Me.volt_Pulse.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.volt_Pulse.Location = New System.Drawing.Point(10, 25)
+        Me.volt_Pulse.Name = "volt_Pulse"
+        Me.volt_Pulse.Size = New System.Drawing.Size(133, 24)
+        Me.volt_Pulse.TabIndex = 0
+        Me.volt_Pulse.Text = "Pulse Helmet"
+        Me.volt_Pulse.UseVisualStyleBackColor = True
         '
-        'ember_Phoenix
+        'vauban_panel
         '
-        Me.ember_Phoenix.AutoSize = True
-        Me.ember_Phoenix.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.ember_Phoenix.Location = New System.Drawing.Point(10, 25)
-        Me.ember_Phoenix.Name = "ember_Phoenix"
-        Me.ember_Phoenix.Size = New System.Drawing.Size(152, 24)
-        Me.ember_Phoenix.TabIndex = 0
-        Me.ember_Phoenix.Text = "Phoenix Helmet"
-        Me.ember_Phoenix.UseVisualStyleBackColor = True
+        Me.vauban_panel.Controls.Add(Me.vauban_None)
+        Me.vauban_panel.Controls.Add(Me.Label32)
+        Me.vauban_panel.Controls.Add(Me.vauban_Esprit)
+        Me.vauban_panel.Location = New System.Drawing.Point(1, 320)
+        Me.vauban_panel.Name = "vauban_panel"
+        Me.vauban_panel.Size = New System.Drawing.Size(230, 100)
+        Me.vauban_panel.TabIndex = 60
+        Me.vauban_panel.Visible = False
+        '
+        'vauban_None
+        '
+        Me.vauban_None.AutoSize = True
+        Me.vauban_None.Checked = True
+        Me.vauban_None.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.vauban_None.Location = New System.Drawing.Point(10, 50)
+        Me.vauban_None.Name = "vauban_None"
+        Me.vauban_None.Size = New System.Drawing.Size(69, 24)
+        Me.vauban_None.TabIndex = 57
+        Me.vauban_None.TabStop = True
+        Me.vauban_None.Text = "None"
+        Me.vauban_None.UseVisualStyleBackColor = True
+        '
+        'Label32
+        '
+        Me.Label32.AutoSize = True
+        Me.Label32.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label32.Location = New System.Drawing.Point(6, 2)
+        Me.Label32.Name = "Label32"
+        Me.Label32.Size = New System.Drawing.Size(151, 22)
+        Me.Label32.TabIndex = 56
+        Me.Label32.Text = "Arcane Helmets"
+        '
+        'vauban_Esprit
+        '
+        Me.vauban_Esprit.AutoSize = True
+        Me.vauban_Esprit.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.vauban_Esprit.Location = New System.Drawing.Point(10, 25)
+        Me.vauban_Esprit.Name = "vauban_Esprit"
+        Me.vauban_Esprit.Size = New System.Drawing.Size(136, 24)
+        Me.vauban_Esprit.TabIndex = 0
+        Me.vauban_Esprit.Text = "Esprit Helmet"
+        Me.vauban_Esprit.UseVisualStyleBackColor = True
+        '
+        'trinity_panel
+        '
+        Me.trinity_panel.Controls.Add(Me.trinity_None)
+        Me.trinity_panel.Controls.Add(Me.Label31)
+        Me.trinity_panel.Controls.Add(Me.trinity_Meridian)
+        Me.trinity_panel.Controls.Add(Me.trinity_Aura)
+        Me.trinity_panel.Location = New System.Drawing.Point(1, 320)
+        Me.trinity_panel.Name = "trinity_panel"
+        Me.trinity_panel.Size = New System.Drawing.Size(230, 100)
+        Me.trinity_panel.TabIndex = 59
+        Me.trinity_panel.Visible = False
+        '
+        'trinity_None
+        '
+        Me.trinity_None.AutoSize = True
+        Me.trinity_None.Checked = True
+        Me.trinity_None.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.trinity_None.Location = New System.Drawing.Point(10, 76)
+        Me.trinity_None.Name = "trinity_None"
+        Me.trinity_None.Size = New System.Drawing.Size(69, 24)
+        Me.trinity_None.TabIndex = 57
+        Me.trinity_None.TabStop = True
+        Me.trinity_None.Text = "None"
+        Me.trinity_None.UseVisualStyleBackColor = True
+        '
+        'Label31
+        '
+        Me.Label31.AutoSize = True
+        Me.Label31.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label31.Location = New System.Drawing.Point(6, 2)
+        Me.Label31.Name = "Label31"
+        Me.Label31.Size = New System.Drawing.Size(151, 22)
+        Me.Label31.TabIndex = 56
+        Me.Label31.Text = "Arcane Helmets"
+        '
+        'trinity_Meridian
+        '
+        Me.trinity_Meridian.AutoSize = True
+        Me.trinity_Meridian.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.trinity_Meridian.Location = New System.Drawing.Point(10, 50)
+        Me.trinity_Meridian.Name = "trinity_Meridian"
+        Me.trinity_Meridian.Size = New System.Drawing.Size(157, 24)
+        Me.trinity_Meridian.TabIndex = 1
+        Me.trinity_Meridian.Text = "Meridian Helmet"
+        Me.trinity_Meridian.UseVisualStyleBackColor = True
+        '
+        'trinity_Aura
+        '
+        Me.trinity_Aura.AutoSize = True
+        Me.trinity_Aura.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.trinity_Aura.Location = New System.Drawing.Point(10, 25)
+        Me.trinity_Aura.Name = "trinity_Aura"
+        Me.trinity_Aura.Size = New System.Drawing.Size(127, 24)
+        Me.trinity_Aura.TabIndex = 0
+        Me.trinity_Aura.Text = "Aura Helmet"
+        Me.trinity_Aura.UseVisualStyleBackColor = True
+        '
+        'saryn_panel
+        '
+        Me.saryn_panel.Controls.Add(Me.saryn_None)
+        Me.saryn_panel.Controls.Add(Me.Label30)
+        Me.saryn_panel.Controls.Add(Me.saryn_Hemlock)
+        Me.saryn_panel.Location = New System.Drawing.Point(1, 320)
+        Me.saryn_panel.Name = "saryn_panel"
+        Me.saryn_panel.Size = New System.Drawing.Size(230, 100)
+        Me.saryn_panel.TabIndex = 60
+        Me.saryn_panel.Visible = False
+        '
+        'saryn_None
+        '
+        Me.saryn_None.AutoSize = True
+        Me.saryn_None.Checked = True
+        Me.saryn_None.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.saryn_None.Location = New System.Drawing.Point(10, 50)
+        Me.saryn_None.Name = "saryn_None"
+        Me.saryn_None.Size = New System.Drawing.Size(69, 24)
+        Me.saryn_None.TabIndex = 57
+        Me.saryn_None.TabStop = True
+        Me.saryn_None.Text = "None"
+        Me.saryn_None.UseVisualStyleBackColor = True
+        '
+        'Label30
+        '
+        Me.Label30.AutoSize = True
+        Me.Label30.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label30.Location = New System.Drawing.Point(6, 2)
+        Me.Label30.Name = "Label30"
+        Me.Label30.Size = New System.Drawing.Size(151, 22)
+        Me.Label30.TabIndex = 56
+        Me.Label30.Text = "Arcane Helmets"
+        '
+        'saryn_Hemlock
+        '
+        Me.saryn_Hemlock.AutoSize = True
+        Me.saryn_Hemlock.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.saryn_Hemlock.Location = New System.Drawing.Point(10, 25)
+        Me.saryn_Hemlock.Name = "saryn_Hemlock"
+        Me.saryn_Hemlock.Size = New System.Drawing.Size(158, 24)
+        Me.saryn_Hemlock.TabIndex = 0
+        Me.saryn_Hemlock.Text = "Hemlock Helmet"
+        Me.saryn_Hemlock.UseVisualStyleBackColor = True
+        '
+        'rhino_panel
+        '
+        Me.rhino_panel.Controls.Add(Me.rhino_None)
+        Me.rhino_panel.Controls.Add(Me.Label29)
+        Me.rhino_panel.Controls.Add(Me.rhino_Thrak)
+        Me.rhino_panel.Location = New System.Drawing.Point(1, 320)
+        Me.rhino_panel.Name = "rhino_panel"
+        Me.rhino_panel.Size = New System.Drawing.Size(230, 100)
+        Me.rhino_panel.TabIndex = 60
+        Me.rhino_panel.Visible = False
+        '
+        'rhino_None
+        '
+        Me.rhino_None.AutoSize = True
+        Me.rhino_None.Checked = True
+        Me.rhino_None.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.rhino_None.Location = New System.Drawing.Point(10, 50)
+        Me.rhino_None.Name = "rhino_None"
+        Me.rhino_None.Size = New System.Drawing.Size(69, 24)
+        Me.rhino_None.TabIndex = 57
+        Me.rhino_None.TabStop = True
+        Me.rhino_None.Text = "None"
+        Me.rhino_None.UseVisualStyleBackColor = True
+        '
+        'Label29
+        '
+        Me.Label29.AutoSize = True
+        Me.Label29.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label29.Location = New System.Drawing.Point(6, 2)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(151, 22)
+        Me.Label29.TabIndex = 56
+        Me.Label29.Text = "Arcane Helmets"
+        '
+        'rhino_Thrak
+        '
+        Me.rhino_Thrak.AutoSize = True
+        Me.rhino_Thrak.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.rhino_Thrak.Location = New System.Drawing.Point(10, 25)
+        Me.rhino_Thrak.Name = "rhino_Thrak"
+        Me.rhino_Thrak.Size = New System.Drawing.Size(134, 24)
+        Me.rhino_Thrak.TabIndex = 0
+        Me.rhino_Thrak.Text = "Thrak Helmet"
+        Me.rhino_Thrak.UseVisualStyleBackColor = True
+        '
+        'nyx_panel
+        '
+        Me.nyx_panel.Controls.Add(Me.nyx_None)
+        Me.nyx_panel.Controls.Add(Me.Label28)
+        Me.nyx_panel.Controls.Add(Me.nyx_Vespa)
+        Me.nyx_panel.Controls.Add(Me.nyx_Menticide)
+        Me.nyx_panel.Location = New System.Drawing.Point(1, 320)
+        Me.nyx_panel.Name = "nyx_panel"
+        Me.nyx_panel.Size = New System.Drawing.Size(230, 100)
+        Me.nyx_panel.TabIndex = 59
+        Me.nyx_panel.Visible = False
+        '
+        'nyx_None
+        '
+        Me.nyx_None.AutoSize = True
+        Me.nyx_None.Checked = True
+        Me.nyx_None.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.nyx_None.Location = New System.Drawing.Point(10, 76)
+        Me.nyx_None.Name = "nyx_None"
+        Me.nyx_None.Size = New System.Drawing.Size(69, 24)
+        Me.nyx_None.TabIndex = 57
+        Me.nyx_None.TabStop = True
+        Me.nyx_None.Text = "None"
+        Me.nyx_None.UseVisualStyleBackColor = True
+        '
+        'Label28
+        '
+        Me.Label28.AutoSize = True
+        Me.Label28.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label28.Location = New System.Drawing.Point(6, 2)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(151, 22)
+        Me.Label28.TabIndex = 56
+        Me.Label28.Text = "Arcane Helmets"
+        '
+        'nyx_Vespa
+        '
+        Me.nyx_Vespa.AutoSize = True
+        Me.nyx_Vespa.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.nyx_Vespa.Location = New System.Drawing.Point(10, 50)
+        Me.nyx_Vespa.Name = "nyx_Vespa"
+        Me.nyx_Vespa.Size = New System.Drawing.Size(140, 24)
+        Me.nyx_Vespa.TabIndex = 1
+        Me.nyx_Vespa.Text = "Vespa Helmet"
+        Me.nyx_Vespa.UseVisualStyleBackColor = True
+        '
+        'nyx_Menticide
+        '
+        Me.nyx_Menticide.AutoSize = True
+        Me.nyx_Menticide.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.nyx_Menticide.Location = New System.Drawing.Point(10, 25)
+        Me.nyx_Menticide.Name = "nyx_Menticide"
+        Me.nyx_Menticide.Size = New System.Drawing.Size(166, 24)
+        Me.nyx_Menticide.TabIndex = 0
+        Me.nyx_Menticide.Text = "Menticide Helmet"
+        Me.nyx_Menticide.UseVisualStyleBackColor = True
+        '
+        'nova_panel
+        '
+        Me.nova_panel.Controls.Add(Me.nova_None)
+        Me.nova_panel.Controls.Add(Me.Label27)
+        Me.nova_panel.Controls.Add(Me.nova_Flux)
+        Me.nova_panel.Location = New System.Drawing.Point(1, 320)
+        Me.nova_panel.Name = "nova_panel"
+        Me.nova_panel.Size = New System.Drawing.Size(230, 100)
+        Me.nova_panel.TabIndex = 60
+        Me.nova_panel.Visible = False
+        '
+        'nova_None
+        '
+        Me.nova_None.AutoSize = True
+        Me.nova_None.Checked = True
+        Me.nova_None.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.nova_None.Location = New System.Drawing.Point(10, 50)
+        Me.nova_None.Name = "nova_None"
+        Me.nova_None.Size = New System.Drawing.Size(69, 24)
+        Me.nova_None.TabIndex = 57
+        Me.nova_None.TabStop = True
+        Me.nova_None.Text = "None"
+        Me.nova_None.UseVisualStyleBackColor = True
+        '
+        'Label27
+        '
+        Me.Label27.AutoSize = True
+        Me.Label27.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label27.Location = New System.Drawing.Point(6, 2)
+        Me.Label27.Name = "Label27"
+        Me.Label27.Size = New System.Drawing.Size(151, 22)
+        Me.Label27.TabIndex = 56
+        Me.Label27.Text = "Arcane Helmets"
+        '
+        'nova_Flux
+        '
+        Me.nova_Flux.AutoSize = True
+        Me.nova_Flux.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.nova_Flux.Location = New System.Drawing.Point(10, 25)
+        Me.nova_Flux.Name = "nova_Flux"
+        Me.nova_Flux.Size = New System.Drawing.Size(122, 24)
+        Me.nova_Flux.TabIndex = 0
+        Me.nova_Flux.Text = "Flux Helmet"
+        Me.nova_Flux.UseVisualStyleBackColor = True
+        '
+        'mag_panel
+        '
+        Me.mag_panel.Controls.Add(Me.mag_None)
+        Me.mag_panel.Controls.Add(Me.Label26)
+        Me.mag_panel.Controls.Add(Me.mag_Gauss)
+        Me.mag_panel.Controls.Add(Me.mag_Coil)
+        Me.mag_panel.Location = New System.Drawing.Point(1, 320)
+        Me.mag_panel.Name = "mag_panel"
+        Me.mag_panel.Size = New System.Drawing.Size(230, 100)
+        Me.mag_panel.TabIndex = 59
+        Me.mag_panel.Visible = False
+        '
+        'mag_None
+        '
+        Me.mag_None.AutoSize = True
+        Me.mag_None.Checked = True
+        Me.mag_None.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.mag_None.Location = New System.Drawing.Point(10, 76)
+        Me.mag_None.Name = "mag_None"
+        Me.mag_None.Size = New System.Drawing.Size(69, 24)
+        Me.mag_None.TabIndex = 57
+        Me.mag_None.TabStop = True
+        Me.mag_None.Text = "None"
+        Me.mag_None.UseVisualStyleBackColor = True
+        '
+        'Label26
+        '
+        Me.Label26.AutoSize = True
+        Me.Label26.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label26.Location = New System.Drawing.Point(6, 2)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(151, 22)
+        Me.Label26.TabIndex = 56
+        Me.Label26.Text = "Arcane Helmets"
+        '
+        'mag_Gauss
+        '
+        Me.mag_Gauss.AutoSize = True
+        Me.mag_Gauss.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.mag_Gauss.Location = New System.Drawing.Point(10, 50)
+        Me.mag_Gauss.Name = "mag_Gauss"
+        Me.mag_Gauss.Size = New System.Drawing.Size(141, 24)
+        Me.mag_Gauss.TabIndex = 1
+        Me.mag_Gauss.Text = "Gauss Helmet"
+        Me.mag_Gauss.UseVisualStyleBackColor = True
+        '
+        'mag_Coil
+        '
+        Me.mag_Coil.AutoSize = True
+        Me.mag_Coil.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.mag_Coil.Location = New System.Drawing.Point(10, 25)
+        Me.mag_Coil.Name = "mag_Coil"
+        Me.mag_Coil.Size = New System.Drawing.Size(119, 24)
+        Me.mag_Coil.TabIndex = 0
+        Me.mag_Coil.Text = "Coil Helmet"
+        Me.mag_Coil.UseVisualStyleBackColor = True
+        '
+        'loki_panel
+        '
+        Me.loki_panel.Controls.Add(Me.loki_None)
+        Me.loki_panel.Controls.Add(Me.Label25)
+        Me.loki_panel.Controls.Add(Me.loki_Swindle)
+        Me.loki_panel.Controls.Add(Me.loki_Essence)
+        Me.loki_panel.Location = New System.Drawing.Point(1, 320)
+        Me.loki_panel.Name = "loki_panel"
+        Me.loki_panel.Size = New System.Drawing.Size(230, 100)
+        Me.loki_panel.TabIndex = 59
+        Me.loki_panel.Visible = False
+        '
+        'loki_None
+        '
+        Me.loki_None.AutoSize = True
+        Me.loki_None.Checked = True
+        Me.loki_None.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.loki_None.Location = New System.Drawing.Point(10, 76)
+        Me.loki_None.Name = "loki_None"
+        Me.loki_None.Size = New System.Drawing.Size(69, 24)
+        Me.loki_None.TabIndex = 57
+        Me.loki_None.TabStop = True
+        Me.loki_None.Text = "None"
+        Me.loki_None.UseVisualStyleBackColor = True
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label25.Location = New System.Drawing.Point(6, 2)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(151, 22)
+        Me.Label25.TabIndex = 56
+        Me.Label25.Text = "Arcane Helmets"
+        '
+        'loki_Swindle
+        '
+        Me.loki_Swindle.AutoSize = True
+        Me.loki_Swindle.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.loki_Swindle.Location = New System.Drawing.Point(10, 50)
+        Me.loki_Swindle.Name = "loki_Swindle"
+        Me.loki_Swindle.Size = New System.Drawing.Size(151, 24)
+        Me.loki_Swindle.TabIndex = 1
+        Me.loki_Swindle.Text = "Swindle Helmet"
+        Me.loki_Swindle.UseVisualStyleBackColor = True
+        '
+        'loki_Essence
+        '
+        Me.loki_Essence.AutoSize = True
+        Me.loki_Essence.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.loki_Essence.Location = New System.Drawing.Point(10, 25)
+        Me.loki_Essence.Name = "loki_Essence"
+        Me.loki_Essence.Size = New System.Drawing.Size(158, 24)
+        Me.loki_Essence.TabIndex = 0
+        Me.loki_Essence.Text = "Essence Helmet"
+        Me.loki_Essence.UseVisualStyleBackColor = True
         '
         'key_decaying
         '
@@ -1446,6 +1845,120 @@ Partial Class Warframe_EHP_Calc
         Me.Label15.TabIndex = 46
         Me.Label15.Text = "Added by Abilities"
         '
+        'frost_panel
+        '
+        Me.frost_panel.Controls.Add(Me.frost_None)
+        Me.frost_panel.Controls.Add(Me.Label24)
+        Me.frost_panel.Controls.Add(Me.frost_Squall)
+        Me.frost_panel.Controls.Add(Me.frost_Aurora)
+        Me.frost_panel.Location = New System.Drawing.Point(1, 320)
+        Me.frost_panel.Name = "frost_panel"
+        Me.frost_panel.Size = New System.Drawing.Size(230, 100)
+        Me.frost_panel.TabIndex = 59
+        Me.frost_panel.Visible = False
+        '
+        'frost_None
+        '
+        Me.frost_None.AutoSize = True
+        Me.frost_None.Checked = True
+        Me.frost_None.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.frost_None.Location = New System.Drawing.Point(10, 76)
+        Me.frost_None.Name = "frost_None"
+        Me.frost_None.Size = New System.Drawing.Size(69, 24)
+        Me.frost_None.TabIndex = 57
+        Me.frost_None.TabStop = True
+        Me.frost_None.Text = "None"
+        Me.frost_None.UseVisualStyleBackColor = True
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label24.Location = New System.Drawing.Point(6, 2)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(151, 22)
+        Me.Label24.TabIndex = 56
+        Me.Label24.Text = "Arcane Helmets"
+        '
+        'frost_Squall
+        '
+        Me.frost_Squall.AutoSize = True
+        Me.frost_Squall.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.frost_Squall.Location = New System.Drawing.Point(10, 50)
+        Me.frost_Squall.Name = "frost_Squall"
+        Me.frost_Squall.Size = New System.Drawing.Size(139, 24)
+        Me.frost_Squall.TabIndex = 1
+        Me.frost_Squall.Text = "Squall Helmet"
+        Me.frost_Squall.UseVisualStyleBackColor = True
+        '
+        'frost_Aurora
+        '
+        Me.frost_Aurora.AutoSize = True
+        Me.frost_Aurora.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.frost_Aurora.Location = New System.Drawing.Point(10, 25)
+        Me.frost_Aurora.Name = "frost_Aurora"
+        Me.frost_Aurora.Size = New System.Drawing.Size(143, 24)
+        Me.frost_Aurora.TabIndex = 0
+        Me.frost_Aurora.Text = "Aurora Helmet"
+        Me.frost_Aurora.UseVisualStyleBackColor = True
+        '
+        'ember_panel
+        '
+        Me.ember_panel.Controls.Add(Me.ember_None)
+        Me.ember_panel.Controls.Add(Me.Label18)
+        Me.ember_panel.Controls.Add(Me.ember_Backdraft)
+        Me.ember_panel.Controls.Add(Me.ember_Phoenix)
+        Me.ember_panel.Location = New System.Drawing.Point(1, 320)
+        Me.ember_panel.Name = "ember_panel"
+        Me.ember_panel.Size = New System.Drawing.Size(230, 100)
+        Me.ember_panel.TabIndex = 52
+        Me.ember_panel.Visible = False
+        '
+        'ember_None
+        '
+        Me.ember_None.AutoSize = True
+        Me.ember_None.Checked = True
+        Me.ember_None.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.ember_None.Location = New System.Drawing.Point(10, 76)
+        Me.ember_None.Name = "ember_None"
+        Me.ember_None.Size = New System.Drawing.Size(69, 24)
+        Me.ember_None.TabIndex = 57
+        Me.ember_None.TabStop = True
+        Me.ember_None.Text = "None"
+        Me.ember_None.UseVisualStyleBackColor = True
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.Location = New System.Drawing.Point(6, 2)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(151, 22)
+        Me.Label18.TabIndex = 56
+        Me.Label18.Text = "Arcane Helmets"
+        '
+        'ember_Backdraft
+        '
+        Me.ember_Backdraft.AutoSize = True
+        Me.ember_Backdraft.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.ember_Backdraft.Location = New System.Drawing.Point(10, 50)
+        Me.ember_Backdraft.Name = "ember_Backdraft"
+        Me.ember_Backdraft.Size = New System.Drawing.Size(167, 24)
+        Me.ember_Backdraft.TabIndex = 1
+        Me.ember_Backdraft.Text = "Backdraft Helmet"
+        Me.ember_Backdraft.UseVisualStyleBackColor = True
+        '
+        'ember_Phoenix
+        '
+        Me.ember_Phoenix.AutoSize = True
+        Me.ember_Phoenix.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.ember_Phoenix.Location = New System.Drawing.Point(10, 25)
+        Me.ember_Phoenix.Name = "ember_Phoenix"
+        Me.ember_Phoenix.Size = New System.Drawing.Size(152, 24)
+        Me.ember_Phoenix.TabIndex = 0
+        Me.ember_Phoenix.Text = "Phoenix Helmet"
+        Me.ember_Phoenix.UseVisualStyleBackColor = True
+        '
         'banshee_panel
         '
         Me.banshee_panel.Controls.Add(Me.banshee_None)
@@ -1490,96 +2003,6 @@ Partial Class Warframe_EHP_Calc
         Me.banshee_Reverb.TabIndex = 0
         Me.banshee_Reverb.Text = "Reverb Helmet"
         Me.banshee_Reverb.UseVisualStyleBackColor = True
-        '
-        'volt_panel
-        '
-        Me.volt_panel.Controls.Add(Me.volt_None)
-        Me.volt_panel.Controls.Add(Me.Label21)
-        Me.volt_panel.Controls.Add(Me.volt_Pulse)
-        Me.volt_panel.Location = New System.Drawing.Point(1, 320)
-        Me.volt_panel.Name = "volt_panel"
-        Me.volt_panel.Size = New System.Drawing.Size(230, 100)
-        Me.volt_panel.TabIndex = 59
-        Me.volt_panel.Visible = False
-        '
-        'volt_None
-        '
-        Me.volt_None.AutoSize = True
-        Me.volt_None.Checked = True
-        Me.volt_None.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.volt_None.Location = New System.Drawing.Point(10, 50)
-        Me.volt_None.Name = "volt_None"
-        Me.volt_None.Size = New System.Drawing.Size(69, 24)
-        Me.volt_None.TabIndex = 57
-        Me.volt_None.TabStop = True
-        Me.volt_None.Text = "None"
-        Me.volt_None.UseVisualStyleBackColor = True
-        '
-        'Label21
-        '
-        Me.Label21.AutoSize = True
-        Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label21.Location = New System.Drawing.Point(6, 2)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(151, 22)
-        Me.Label21.TabIndex = 56
-        Me.Label21.Text = "Arcane Helmets"
-        '
-        'volt_Pulse
-        '
-        Me.volt_Pulse.AutoSize = True
-        Me.volt_Pulse.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.volt_Pulse.Location = New System.Drawing.Point(10, 25)
-        Me.volt_Pulse.Name = "volt_Pulse"
-        Me.volt_Pulse.Size = New System.Drawing.Size(133, 24)
-        Me.volt_Pulse.TabIndex = 0
-        Me.volt_Pulse.Text = "Pulse Helmet"
-        Me.volt_Pulse.UseVisualStyleBackColor = True
-        '
-        'ash_panel
-        '
-        Me.ash_panel.Controls.Add(Me.ash_None)
-        Me.ash_panel.Controls.Add(Me.Label22)
-        Me.ash_panel.Controls.Add(Me.ash_Locust)
-        Me.ash_panel.Location = New System.Drawing.Point(1, 320)
-        Me.ash_panel.Name = "ash_panel"
-        Me.ash_panel.Size = New System.Drawing.Size(230, 100)
-        Me.ash_panel.TabIndex = 60
-        Me.ash_panel.Visible = False
-        '
-        'ash_None
-        '
-        Me.ash_None.AutoSize = True
-        Me.ash_None.Checked = True
-        Me.ash_None.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.ash_None.Location = New System.Drawing.Point(10, 50)
-        Me.ash_None.Name = "ash_None"
-        Me.ash_None.Size = New System.Drawing.Size(69, 24)
-        Me.ash_None.TabIndex = 57
-        Me.ash_None.TabStop = True
-        Me.ash_None.Text = "None"
-        Me.ash_None.UseVisualStyleBackColor = True
-        '
-        'Label22
-        '
-        Me.Label22.AutoSize = True
-        Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label22.Location = New System.Drawing.Point(6, 2)
-        Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(151, 22)
-        Me.Label22.TabIndex = 56
-        Me.Label22.Text = "Arcane Helmets"
-        '
-        'ash_Locust
-        '
-        Me.ash_Locust.AutoSize = True
-        Me.ash_Locust.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.ash_Locust.Location = New System.Drawing.Point(10, 25)
-        Me.ash_Locust.Name = "ash_Locust"
-        Me.ash_Locust.Size = New System.Drawing.Size(143, 24)
-        Me.ash_Locust.TabIndex = 0
-        Me.ash_Locust.Text = "Locust Helmet"
-        Me.ash_Locust.UseVisualStyleBackColor = True
         '
         'excalibur_panel
         '
@@ -1638,470 +2061,50 @@ Partial Class Warframe_EHP_Calc
         Me.excalibur_Avalon.Text = "Avalon Helmet"
         Me.excalibur_Avalon.UseVisualStyleBackColor = True
         '
-        'frost_panel
-        '
-        Me.frost_panel.Controls.Add(Me.frost_None)
-        Me.frost_panel.Controls.Add(Me.Label24)
-        Me.frost_panel.Controls.Add(Me.frost_Squall)
-        Me.frost_panel.Controls.Add(Me.frost_Aurora)
-        Me.frost_panel.Location = New System.Drawing.Point(1, 320)
-        Me.frost_panel.Name = "frost_panel"
-        Me.frost_panel.Size = New System.Drawing.Size(230, 100)
-        Me.frost_panel.TabIndex = 59
-        Me.frost_panel.Visible = False
-        '
-        'frost_None
-        '
-        Me.frost_None.AutoSize = True
-        Me.frost_None.Checked = True
-        Me.frost_None.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.frost_None.Location = New System.Drawing.Point(10, 76)
-        Me.frost_None.Name = "frost_None"
-        Me.frost_None.Size = New System.Drawing.Size(69, 24)
-        Me.frost_None.TabIndex = 57
-        Me.frost_None.TabStop = True
-        Me.frost_None.Text = "None"
-        Me.frost_None.UseVisualStyleBackColor = True
-        '
-        'Label24
-        '
-        Me.Label24.AutoSize = True
-        Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label24.Location = New System.Drawing.Point(6, 2)
-        Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(151, 22)
-        Me.Label24.TabIndex = 56
-        Me.Label24.Text = "Arcane Helmets"
-        '
-        'frost_Squall
-        '
-        Me.frost_Squall.AutoSize = True
-        Me.frost_Squall.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.frost_Squall.Location = New System.Drawing.Point(10, 50)
-        Me.frost_Squall.Name = "frost_Squall"
-        Me.frost_Squall.Size = New System.Drawing.Size(139, 24)
-        Me.frost_Squall.TabIndex = 1
-        Me.frost_Squall.Text = "Squall Helmet"
-        Me.frost_Squall.UseVisualStyleBackColor = True
-        '
-        'frost_Aurora
-        '
-        Me.frost_Aurora.AutoSize = True
-        Me.frost_Aurora.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.frost_Aurora.Location = New System.Drawing.Point(10, 25)
-        Me.frost_Aurora.Name = "frost_Aurora"
-        Me.frost_Aurora.Size = New System.Drawing.Size(143, 24)
-        Me.frost_Aurora.TabIndex = 0
-        Me.frost_Aurora.Text = "Aurora Helmet"
-        Me.frost_Aurora.UseVisualStyleBackColor = True
-        '
-        'loki_panel
-        '
-        Me.loki_panel.Controls.Add(Me.loki_None)
-        Me.loki_panel.Controls.Add(Me.Label25)
-        Me.loki_panel.Controls.Add(Me.loki_Swindle)
-        Me.loki_panel.Controls.Add(Me.loki_Essence)
-        Me.loki_panel.Location = New System.Drawing.Point(1, 320)
-        Me.loki_panel.Name = "loki_panel"
-        Me.loki_panel.Size = New System.Drawing.Size(230, 100)
-        Me.loki_panel.TabIndex = 59
-        Me.loki_panel.Visible = False
-        '
-        'loki_None
-        '
-        Me.loki_None.AutoSize = True
-        Me.loki_None.Checked = True
-        Me.loki_None.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.loki_None.Location = New System.Drawing.Point(10, 76)
-        Me.loki_None.Name = "loki_None"
-        Me.loki_None.Size = New System.Drawing.Size(69, 24)
-        Me.loki_None.TabIndex = 57
-        Me.loki_None.TabStop = True
-        Me.loki_None.Text = "None"
-        Me.loki_None.UseVisualStyleBackColor = True
-        '
-        'Label25
-        '
-        Me.Label25.AutoSize = True
-        Me.Label25.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label25.Location = New System.Drawing.Point(6, 2)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(151, 22)
-        Me.Label25.TabIndex = 56
-        Me.Label25.Text = "Arcane Helmets"
-        '
-        'loki_Swindle
-        '
-        Me.loki_Swindle.AutoSize = True
-        Me.loki_Swindle.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.loki_Swindle.Location = New System.Drawing.Point(10, 50)
-        Me.loki_Swindle.Name = "loki_Swindle"
-        Me.loki_Swindle.Size = New System.Drawing.Size(151, 24)
-        Me.loki_Swindle.TabIndex = 1
-        Me.loki_Swindle.Text = "Swindle Helmet"
-        Me.loki_Swindle.UseVisualStyleBackColor = True
-        '
-        'loki_Essence
-        '
-        Me.loki_Essence.AutoSize = True
-        Me.loki_Essence.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.loki_Essence.Location = New System.Drawing.Point(10, 25)
-        Me.loki_Essence.Name = "loki_Essence"
-        Me.loki_Essence.Size = New System.Drawing.Size(158, 24)
-        Me.loki_Essence.TabIndex = 0
-        Me.loki_Essence.Text = "Essence Helmet"
-        Me.loki_Essence.UseVisualStyleBackColor = True
-        '
-        'mag_panel
-        '
-        Me.mag_panel.Controls.Add(Me.mag_None)
-        Me.mag_panel.Controls.Add(Me.Label26)
-        Me.mag_panel.Controls.Add(Me.mag_Gauss)
-        Me.mag_panel.Controls.Add(Me.mag_Coil)
-        Me.mag_panel.Location = New System.Drawing.Point(1, 320)
-        Me.mag_panel.Name = "mag_panel"
-        Me.mag_panel.Size = New System.Drawing.Size(230, 100)
-        Me.mag_panel.TabIndex = 59
-        Me.mag_panel.Visible = False
-        '
-        'mag_None
-        '
-        Me.mag_None.AutoSize = True
-        Me.mag_None.Checked = True
-        Me.mag_None.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.mag_None.Location = New System.Drawing.Point(10, 76)
-        Me.mag_None.Name = "mag_None"
-        Me.mag_None.Size = New System.Drawing.Size(69, 24)
-        Me.mag_None.TabIndex = 57
-        Me.mag_None.TabStop = True
-        Me.mag_None.Text = "None"
-        Me.mag_None.UseVisualStyleBackColor = True
-        '
-        'Label26
-        '
-        Me.Label26.AutoSize = True
-        Me.Label26.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label26.Location = New System.Drawing.Point(6, 2)
-        Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(151, 22)
-        Me.Label26.TabIndex = 56
-        Me.Label26.Text = "Arcane Helmets"
-        '
-        'mag_Gauss
-        '
-        Me.mag_Gauss.AutoSize = True
-        Me.mag_Gauss.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.mag_Gauss.Location = New System.Drawing.Point(10, 50)
-        Me.mag_Gauss.Name = "mag_Gauss"
-        Me.mag_Gauss.Size = New System.Drawing.Size(141, 24)
-        Me.mag_Gauss.TabIndex = 1
-        Me.mag_Gauss.Text = "Gauss Helmet"
-        Me.mag_Gauss.UseVisualStyleBackColor = True
-        '
-        'mag_Coil
-        '
-        Me.mag_Coil.AutoSize = True
-        Me.mag_Coil.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.mag_Coil.Location = New System.Drawing.Point(10, 25)
-        Me.mag_Coil.Name = "mag_Coil"
-        Me.mag_Coil.Size = New System.Drawing.Size(119, 24)
-        Me.mag_Coil.TabIndex = 0
-        Me.mag_Coil.Text = "Coil Helmet"
-        Me.mag_Coil.UseVisualStyleBackColor = True
-        '
-        'nova_panel
-        '
-        Me.nova_panel.Controls.Add(Me.nova_None)
-        Me.nova_panel.Controls.Add(Me.Label27)
-        Me.nova_panel.Controls.Add(Me.nova_Flux)
-        Me.nova_panel.Location = New System.Drawing.Point(1, 320)
-        Me.nova_panel.Name = "nova_panel"
-        Me.nova_panel.Size = New System.Drawing.Size(230, 100)
-        Me.nova_panel.TabIndex = 60
-        Me.nova_panel.Visible = False
-        '
-        'nova_None
-        '
-        Me.nova_None.AutoSize = True
-        Me.nova_None.Checked = True
-        Me.nova_None.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.nova_None.Location = New System.Drawing.Point(10, 50)
-        Me.nova_None.Name = "nova_None"
-        Me.nova_None.Size = New System.Drawing.Size(69, 24)
-        Me.nova_None.TabIndex = 57
-        Me.nova_None.TabStop = True
-        Me.nova_None.Text = "None"
-        Me.nova_None.UseVisualStyleBackColor = True
-        '
-        'Label27
-        '
-        Me.Label27.AutoSize = True
-        Me.Label27.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label27.Location = New System.Drawing.Point(6, 2)
-        Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(151, 22)
-        Me.Label27.TabIndex = 56
-        Me.Label27.Text = "Arcane Helmets"
-        '
-        'nova_Flux
-        '
-        Me.nova_Flux.AutoSize = True
-        Me.nova_Flux.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.nova_Flux.Location = New System.Drawing.Point(10, 25)
-        Me.nova_Flux.Name = "nova_Flux"
-        Me.nova_Flux.Size = New System.Drawing.Size(122, 24)
-        Me.nova_Flux.TabIndex = 0
-        Me.nova_Flux.Text = "Flux Helmet"
-        Me.nova_Flux.UseVisualStyleBackColor = True
-        '
-        'nyx_panel
-        '
-        Me.nyx_panel.Controls.Add(Me.nyx_None)
-        Me.nyx_panel.Controls.Add(Me.Label28)
-        Me.nyx_panel.Controls.Add(Me.nyx_Vespa)
-        Me.nyx_panel.Controls.Add(Me.nyx_Menticide)
-        Me.nyx_panel.Location = New System.Drawing.Point(1, 320)
-        Me.nyx_panel.Name = "nyx_panel"
-        Me.nyx_panel.Size = New System.Drawing.Size(230, 100)
-        Me.nyx_panel.TabIndex = 59
-        Me.nyx_panel.Visible = False
-        '
-        'nyx_None
-        '
-        Me.nyx_None.AutoSize = True
-        Me.nyx_None.Checked = True
-        Me.nyx_None.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.nyx_None.Location = New System.Drawing.Point(10, 76)
-        Me.nyx_None.Name = "nyx_None"
-        Me.nyx_None.Size = New System.Drawing.Size(69, 24)
-        Me.nyx_None.TabIndex = 57
-        Me.nyx_None.TabStop = True
-        Me.nyx_None.Text = "None"
-        Me.nyx_None.UseVisualStyleBackColor = True
-        '
-        'Label28
-        '
-        Me.Label28.AutoSize = True
-        Me.Label28.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label28.Location = New System.Drawing.Point(6, 2)
-        Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(151, 22)
-        Me.Label28.TabIndex = 56
-        Me.Label28.Text = "Arcane Helmets"
-        '
-        'nyx_Vespa
-        '
-        Me.nyx_Vespa.AutoSize = True
-        Me.nyx_Vespa.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.nyx_Vespa.Location = New System.Drawing.Point(10, 50)
-        Me.nyx_Vespa.Name = "nyx_Vespa"
-        Me.nyx_Vespa.Size = New System.Drawing.Size(140, 24)
-        Me.nyx_Vespa.TabIndex = 1
-        Me.nyx_Vespa.Text = "Vespa Helmet"
-        Me.nyx_Vespa.UseVisualStyleBackColor = True
-        '
-        'nyx_Menticide
-        '
-        Me.nyx_Menticide.AutoSize = True
-        Me.nyx_Menticide.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.nyx_Menticide.Location = New System.Drawing.Point(10, 25)
-        Me.nyx_Menticide.Name = "nyx_Menticide"
-        Me.nyx_Menticide.Size = New System.Drawing.Size(166, 24)
-        Me.nyx_Menticide.TabIndex = 0
-        Me.nyx_Menticide.Text = "Menticide Helmet"
-        Me.nyx_Menticide.UseVisualStyleBackColor = True
-        '
-        'rhino_panel
-        '
-        Me.rhino_panel.Controls.Add(Me.rhino_None)
-        Me.rhino_panel.Controls.Add(Me.Label29)
-        Me.rhino_panel.Controls.Add(Me.rhino_Thrak)
-        Me.rhino_panel.Location = New System.Drawing.Point(1, 320)
-        Me.rhino_panel.Name = "rhino_panel"
-        Me.rhino_panel.Size = New System.Drawing.Size(230, 100)
-        Me.rhino_panel.TabIndex = 60
-        Me.rhino_panel.Visible = False
-        '
-        'rhino_None
-        '
-        Me.rhino_None.AutoSize = True
-        Me.rhino_None.Checked = True
-        Me.rhino_None.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.rhino_None.Location = New System.Drawing.Point(10, 50)
-        Me.rhino_None.Name = "rhino_None"
-        Me.rhino_None.Size = New System.Drawing.Size(69, 24)
-        Me.rhino_None.TabIndex = 57
-        Me.rhino_None.TabStop = True
-        Me.rhino_None.Text = "None"
-        Me.rhino_None.UseVisualStyleBackColor = True
-        '
-        'Label29
-        '
-        Me.Label29.AutoSize = True
-        Me.Label29.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label29.Location = New System.Drawing.Point(6, 2)
-        Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(151, 22)
-        Me.Label29.TabIndex = 56
-        Me.Label29.Text = "Arcane Helmets"
-        '
-        'rhino_Thrak
-        '
-        Me.rhino_Thrak.AutoSize = True
-        Me.rhino_Thrak.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.rhino_Thrak.Location = New System.Drawing.Point(10, 25)
-        Me.rhino_Thrak.Name = "rhino_Thrak"
-        Me.rhino_Thrak.Size = New System.Drawing.Size(134, 24)
-        Me.rhino_Thrak.TabIndex = 0
-        Me.rhino_Thrak.Text = "Thrak Helmet"
-        Me.rhino_Thrak.UseVisualStyleBackColor = True
-        '
-        'saryn_panel
-        '
-        Me.saryn_panel.Controls.Add(Me.saryn_None)
-        Me.saryn_panel.Controls.Add(Me.Label30)
-        Me.saryn_panel.Controls.Add(Me.saryn_Hemlock)
-        Me.saryn_panel.Location = New System.Drawing.Point(1, 320)
-        Me.saryn_panel.Name = "saryn_panel"
-        Me.saryn_panel.Size = New System.Drawing.Size(230, 100)
-        Me.saryn_panel.TabIndex = 60
-        Me.saryn_panel.Visible = False
-        '
-        'saryn_None
-        '
-        Me.saryn_None.AutoSize = True
-        Me.saryn_None.Checked = True
-        Me.saryn_None.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.saryn_None.Location = New System.Drawing.Point(10, 50)
-        Me.saryn_None.Name = "saryn_None"
-        Me.saryn_None.Size = New System.Drawing.Size(69, 24)
-        Me.saryn_None.TabIndex = 57
-        Me.saryn_None.TabStop = True
-        Me.saryn_None.Text = "None"
-        Me.saryn_None.UseVisualStyleBackColor = True
-        '
-        'Label30
-        '
-        Me.Label30.AutoSize = True
-        Me.Label30.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label30.Location = New System.Drawing.Point(6, 2)
-        Me.Label30.Name = "Label30"
-        Me.Label30.Size = New System.Drawing.Size(151, 22)
-        Me.Label30.TabIndex = 56
-        Me.Label30.Text = "Arcane Helmets"
-        '
-        'saryn_Hemlock
-        '
-        Me.saryn_Hemlock.AutoSize = True
-        Me.saryn_Hemlock.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.saryn_Hemlock.Location = New System.Drawing.Point(10, 25)
-        Me.saryn_Hemlock.Name = "saryn_Hemlock"
-        Me.saryn_Hemlock.Size = New System.Drawing.Size(158, 24)
-        Me.saryn_Hemlock.TabIndex = 0
-        Me.saryn_Hemlock.Text = "Hemlock Helmet"
-        Me.saryn_Hemlock.UseVisualStyleBackColor = True
-        '
-        'trinity_panel
-        '
-        Me.trinity_panel.Controls.Add(Me.trinity_None)
-        Me.trinity_panel.Controls.Add(Me.Label31)
-        Me.trinity_panel.Controls.Add(Me.trinity_Meridian)
-        Me.trinity_panel.Controls.Add(Me.trinity_Aura)
-        Me.trinity_panel.Location = New System.Drawing.Point(1, 320)
-        Me.trinity_panel.Name = "trinity_panel"
-        Me.trinity_panel.Size = New System.Drawing.Size(230, 100)
-        Me.trinity_panel.TabIndex = 59
-        Me.trinity_panel.Visible = False
-        '
-        'trinity_None
-        '
-        Me.trinity_None.AutoSize = True
-        Me.trinity_None.Checked = True
-        Me.trinity_None.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.trinity_None.Location = New System.Drawing.Point(10, 76)
-        Me.trinity_None.Name = "trinity_None"
-        Me.trinity_None.Size = New System.Drawing.Size(69, 24)
-        Me.trinity_None.TabIndex = 57
-        Me.trinity_None.TabStop = True
-        Me.trinity_None.Text = "None"
-        Me.trinity_None.UseVisualStyleBackColor = True
-        '
-        'Label31
-        '
-        Me.Label31.AutoSize = True
-        Me.Label31.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label31.Location = New System.Drawing.Point(6, 2)
-        Me.Label31.Name = "Label31"
-        Me.Label31.Size = New System.Drawing.Size(151, 22)
-        Me.Label31.TabIndex = 56
-        Me.Label31.Text = "Arcane Helmets"
-        '
-        'trinity_Meridian
-        '
-        Me.trinity_Meridian.AutoSize = True
-        Me.trinity_Meridian.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.trinity_Meridian.Location = New System.Drawing.Point(10, 50)
-        Me.trinity_Meridian.Name = "trinity_Meridian"
-        Me.trinity_Meridian.Size = New System.Drawing.Size(157, 24)
-        Me.trinity_Meridian.TabIndex = 1
-        Me.trinity_Meridian.Text = "Meridian Helmet"
-        Me.trinity_Meridian.UseVisualStyleBackColor = True
-        '
-        'trinity_Aura
-        '
-        Me.trinity_Aura.AutoSize = True
-        Me.trinity_Aura.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.trinity_Aura.Location = New System.Drawing.Point(10, 25)
-        Me.trinity_Aura.Name = "trinity_Aura"
-        Me.trinity_Aura.Size = New System.Drawing.Size(127, 24)
-        Me.trinity_Aura.TabIndex = 0
-        Me.trinity_Aura.Text = "Aura Helmet"
-        Me.trinity_Aura.UseVisualStyleBackColor = True
-        '
-        'vauban_panel
-        '
-        Me.vauban_panel.Controls.Add(Me.vauban_None)
-        Me.vauban_panel.Controls.Add(Me.Label32)
-        Me.vauban_panel.Controls.Add(Me.vauban_Esprit)
-        Me.vauban_panel.Location = New System.Drawing.Point(1, 320)
-        Me.vauban_panel.Name = "vauban_panel"
-        Me.vauban_panel.Size = New System.Drawing.Size(230, 100)
-        Me.vauban_panel.TabIndex = 60
-        Me.vauban_panel.Visible = False
-        '
-        'vauban_None
-        '
-        Me.vauban_None.AutoSize = True
-        Me.vauban_None.Checked = True
-        Me.vauban_None.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.vauban_None.Location = New System.Drawing.Point(10, 50)
-        Me.vauban_None.Name = "vauban_None"
-        Me.vauban_None.Size = New System.Drawing.Size(69, 24)
-        Me.vauban_None.TabIndex = 57
-        Me.vauban_None.TabStop = True
-        Me.vauban_None.Text = "None"
-        Me.vauban_None.UseVisualStyleBackColor = True
-        '
-        'Label32
-        '
-        Me.Label32.AutoSize = True
-        Me.Label32.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label32.Location = New System.Drawing.Point(6, 2)
-        Me.Label32.Name = "Label32"
-        Me.Label32.Size = New System.Drawing.Size(151, 22)
-        Me.Label32.TabIndex = 56
-        Me.Label32.Text = "Arcane Helmets"
-        '
-        'vauban_Esprit
-        '
-        Me.vauban_Esprit.AutoSize = True
-        Me.vauban_Esprit.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.vauban_Esprit.Location = New System.Drawing.Point(10, 25)
-        Me.vauban_Esprit.Name = "vauban_Esprit"
-        Me.vauban_Esprit.Size = New System.Drawing.Size(136, 24)
-        Me.vauban_Esprit.TabIndex = 0
-        Me.vauban_Esprit.Text = "Esprit Helmet"
-        Me.vauban_Esprit.UseVisualStyleBackColor = True
+        'ash_panel
+        '
+        Me.ash_panel.Controls.Add(Me.ash_None)
+        Me.ash_panel.Controls.Add(Me.Label22)
+        Me.ash_panel.Controls.Add(Me.ash_Locust)
+        Me.ash_panel.Location = New System.Drawing.Point(1, 320)
+        Me.ash_panel.Name = "ash_panel"
+        Me.ash_panel.Size = New System.Drawing.Size(230, 100)
+        Me.ash_panel.TabIndex = 60
+        Me.ash_panel.Visible = False
+        '
+        'ash_None
+        '
+        Me.ash_None.AutoSize = True
+        Me.ash_None.Checked = True
+        Me.ash_None.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.ash_None.Location = New System.Drawing.Point(10, 50)
+        Me.ash_None.Name = "ash_None"
+        Me.ash_None.Size = New System.Drawing.Size(69, 24)
+        Me.ash_None.TabIndex = 57
+        Me.ash_None.TabStop = True
+        Me.ash_None.Text = "None"
+        Me.ash_None.UseVisualStyleBackColor = True
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label22.Location = New System.Drawing.Point(6, 2)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(151, 22)
+        Me.Label22.TabIndex = 56
+        Me.Label22.Text = "Arcane Helmets"
+        '
+        'ash_Locust
+        '
+        Me.ash_Locust.AutoSize = True
+        Me.ash_Locust.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.ash_Locust.Location = New System.Drawing.Point(10, 25)
+        Me.ash_Locust.Name = "ash_Locust"
+        Me.ash_Locust.Size = New System.Drawing.Size(143, 24)
+        Me.ash_Locust.TabIndex = 0
+        Me.ash_Locust.Text = "Locust Helmet"
+        Me.ash_Locust.UseVisualStyleBackColor = True
         '
         'Warframe_EHP_Calc
         '
@@ -2149,36 +2152,36 @@ Partial Class Warframe_EHP_Calc
         Me.Panel1.PerformLayout()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
-        Me.ember_panel.ResumeLayout(False)
-        Me.ember_panel.PerformLayout()
-        CType(Me.arcane_ultimatum_val, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.arcane_guardian_val, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.banshee_panel.ResumeLayout(False)
-        Me.banshee_panel.PerformLayout()
         Me.volt_panel.ResumeLayout(False)
         Me.volt_panel.PerformLayout()
-        Me.ash_panel.ResumeLayout(False)
-        Me.ash_panel.PerformLayout()
-        Me.excalibur_panel.ResumeLayout(False)
-        Me.excalibur_panel.PerformLayout()
-        Me.frost_panel.ResumeLayout(False)
-        Me.frost_panel.PerformLayout()
-        Me.loki_panel.ResumeLayout(False)
-        Me.loki_panel.PerformLayout()
-        Me.mag_panel.ResumeLayout(False)
-        Me.mag_panel.PerformLayout()
-        Me.nova_panel.ResumeLayout(False)
-        Me.nova_panel.PerformLayout()
-        Me.nyx_panel.ResumeLayout(False)
-        Me.nyx_panel.PerformLayout()
-        Me.rhino_panel.ResumeLayout(False)
-        Me.rhino_panel.PerformLayout()
-        Me.saryn_panel.ResumeLayout(False)
-        Me.saryn_panel.PerformLayout()
-        Me.trinity_panel.ResumeLayout(False)
-        Me.trinity_panel.PerformLayout()
         Me.vauban_panel.ResumeLayout(False)
         Me.vauban_panel.PerformLayout()
+        Me.trinity_panel.ResumeLayout(False)
+        Me.trinity_panel.PerformLayout()
+        Me.saryn_panel.ResumeLayout(False)
+        Me.saryn_panel.PerformLayout()
+        Me.rhino_panel.ResumeLayout(False)
+        Me.rhino_panel.PerformLayout()
+        Me.nyx_panel.ResumeLayout(False)
+        Me.nyx_panel.PerformLayout()
+        Me.nova_panel.ResumeLayout(False)
+        Me.nova_panel.PerformLayout()
+        Me.mag_panel.ResumeLayout(False)
+        Me.mag_panel.PerformLayout()
+        Me.loki_panel.ResumeLayout(False)
+        Me.loki_panel.PerformLayout()
+        CType(Me.arcane_ultimatum_val, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.arcane_guardian_val, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.frost_panel.ResumeLayout(False)
+        Me.frost_panel.PerformLayout()
+        Me.ember_panel.ResumeLayout(False)
+        Me.ember_panel.PerformLayout()
+        Me.banshee_panel.ResumeLayout(False)
+        Me.banshee_panel.PerformLayout()
+        Me.excalibur_panel.ResumeLayout(False)
+        Me.excalibur_panel.PerformLayout()
+        Me.ash_panel.ResumeLayout(False)
+        Me.ash_panel.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
