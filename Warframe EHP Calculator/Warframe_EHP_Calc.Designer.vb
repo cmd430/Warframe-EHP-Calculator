@@ -186,6 +186,7 @@ Partial Class Warframe_EHP_Calc
         Me.ash_None = New System.Windows.Forms.RadioButton()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.ash_Locust = New System.Windows.Forms.RadioButton()
+        Me.prime_collar = New System.Windows.Forms.CheckBox()
         Me.GroupBox1.SuspendLayout()
         Me.EHP_container.SuspendLayout()
         CType(Me.wf_hpconvert_stacks, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -797,6 +798,7 @@ Partial Class Warframe_EHP_Calc
         '
         'GroupBox3
         '
+        Me.GroupBox3.Controls.Add(Me.prime_collar)
         Me.GroupBox3.Controls.Add(Me.cb_pet)
         Me.GroupBox3.Controls.Add(Me.link_sheild)
         Me.GroupBox3.Controls.Add(Me.link_sheild_val)
@@ -2106,6 +2108,18 @@ Partial Class Warframe_EHP_Calc
         Me.ash_Locust.Text = "Locust Helmet"
         Me.ash_Locust.UseVisualStyleBackColor = True
         '
+        'prime_collar
+        '
+        Me.prime_collar.AutoSize = True
+        Me.prime_collar.Enabled = False
+        Me.prime_collar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.prime_collar.Location = New System.Drawing.Point(306, 35)
+        Me.prime_collar.Name = "prime_collar"
+        Me.prime_collar.Size = New System.Drawing.Size(187, 24)
+        Me.prime_collar.TabIndex = 51
+        Me.prime_collar.Text = "Kavasa Prime Collar"
+        Me.prime_collar.UseVisualStyleBackColor = True
+        '
         'Warframe_EHP_Calc
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2349,4 +2363,5 @@ Partial Class Warframe_EHP_Calc
     Friend WithEvents vauban_None As RadioButton
     Friend WithEvents Label32 As Label
     Friend WithEvents vauban_Esprit As RadioButton
+    Friend WithEvents prime_collar As CheckBox
 End Class

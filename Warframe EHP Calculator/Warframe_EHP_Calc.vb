@@ -49,6 +49,11 @@
         Else
             wf_prime.Enabled = False
         End If
+        If cb_pet.SelectedIndex > 2 Then
+            prime_collar.Enabled = True
+        Else
+            prime_collar.Enabled = False
+        End If
         Dim ComboBoxs As New List(Of Control)
         If wf_prime.Enabled And wf_prime.Checked Then
             cb_primes.SelectedItem = cb_frame.SelectedItem
@@ -422,6 +427,11 @@
             Else
                 pet_sheild.Text = cb_shield_pet.SelectedItem
             End If
+        End If
+        If prime_collar.Enabled And prime_collar.Checked Then
+            pet_health.Text = pet_health.Text + 10
+            pet_sheild.Text = pet_sheild.Text + 10
+            pet_armor.Text = pet_armor.Text + 100
         End If
         Armor_DamageRedux_Pet = Convert.ToDecimal(pet_armor.Text, New Globalization.CultureInfo("en-US")) / (300 + Convert.ToDecimal(pet_armor.Text, New Globalization.CultureInfo("en-US")))
         EHP_Pet = Convert.ToDecimal(pet_health.Text, New Globalization.CultureInfo("en-US")) / (1 - Armor_DamageRedux_Pet)
