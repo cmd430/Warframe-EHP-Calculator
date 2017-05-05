@@ -101,23 +101,23 @@
             wf_power = 0
         Else
             If wf_prime.Enabled And wf_prime.Checked Then
-                wf_armor_base = Convert.ToDecimal(prime_base_armor.SelectedItem, New Globalization.CultureInfo("en-US"))
-                wf_health_base = Convert.ToDecimal(prime_base_health.SelectedItem, New Globalization.CultureInfo("en-US"))
-                wf_sheild_base = Convert.ToDecimal(prime_base_shield.SelectedItem, New Globalization.CultureInfo("en-US"))
-                wf_power_base = Convert.ToDecimal(prime_base_power.SelectedItem, New Globalization.CultureInfo("en-US"))
-                wf_armor = Convert.ToDecimal(prime_armor.SelectedItem, New Globalization.CultureInfo("en-US"))
-                wf_health = Convert.ToDecimal(prime_health.SelectedItem, New Globalization.CultureInfo("en-US"))
-                wf_sheild = Convert.ToDecimal(prime_shield.SelectedItem, New Globalization.CultureInfo("en-US"))
-                wf_power = Convert.ToDecimal(prime_power.SelectedItem, New Globalization.CultureInfo("en-US"))
+                wf_armor_base = Convert.ToDecimal(prime_base_armor.SelectedItem.ToString.Split("_")(0), New Globalization.CultureInfo("en-US"))
+                wf_health_base = Convert.ToDecimal(prime_base_health.SelectedItem.ToString.Split("_")(0), New Globalization.CultureInfo("en-US"))
+                wf_sheild_base = Convert.ToDecimal(prime_base_shield.SelectedItem.ToString.Split("_")(0), New Globalization.CultureInfo("en-US"))
+                wf_power_base = Convert.ToDecimal(prime_base_power.SelectedItem.ToString.Split("_")(0), New Globalization.CultureInfo("en-US"))
+                wf_armor = Convert.ToDecimal(prime_armor.SelectedItem.ToString.Split("_")(0), New Globalization.CultureInfo("en-US"))
+                wf_health = Convert.ToDecimal(prime_health.SelectedItem.ToString.Split("_")(0), New Globalization.CultureInfo("en-US"))
+                wf_sheild = Convert.ToDecimal(prime_shield.SelectedItem.ToString.Split("_")(0), New Globalization.CultureInfo("en-US"))
+                wf_power = Convert.ToDecimal(prime_power.SelectedItem.ToString.Split("_")(0), New Globalization.CultureInfo("en-US"))
             Else
-                wf_armor_base = Convert.ToDecimal(cb_base_armor.SelectedItem, New Globalization.CultureInfo("en-US"))
-                wf_health_base = Convert.ToDecimal(cb_base_health.SelectedItem, New Globalization.CultureInfo("en-US"))
-                wf_sheild_base = Convert.ToDecimal(cb_base_shield.SelectedItem, New Globalization.CultureInfo("en-US"))
-                wf_power_base = Convert.ToDecimal(cb_base_power.SelectedItem, New Globalization.CultureInfo("en-US"))
-                wf_armor = Convert.ToDecimal(cb_armor.SelectedItem, New Globalization.CultureInfo("en-US"))
-                wf_health = Convert.ToDecimal(cb_health.SelectedItem, New Globalization.CultureInfo("en-US"))
-                wf_sheild = Convert.ToDecimal(cb_shield.SelectedItem, New Globalization.CultureInfo("en-US"))
-                wf_power = Convert.ToDecimal(cb_power.SelectedItem, New Globalization.CultureInfo("en-US"))
+                wf_armor_base = Convert.ToDecimal(cb_base_armor.SelectedItem.ToString.Split("_")(0), New Globalization.CultureInfo("en-US"))
+                wf_health_base = Convert.ToDecimal(cb_base_health.SelectedItem.ToString.Split("_")(0), New Globalization.CultureInfo("en-US"))
+                wf_sheild_base = Convert.ToDecimal(cb_base_shield.SelectedItem.ToString.Split("_")(0), New Globalization.CultureInfo("en-US"))
+                wf_power_base = Convert.ToDecimal(cb_base_power.SelectedItem.ToString.Split("_")(0), New Globalization.CultureInfo("en-US"))
+                wf_armor = Convert.ToDecimal(cb_armor.SelectedItem.ToString.Split("_")(0), New Globalization.CultureInfo("en-US"))
+                wf_health = Convert.ToDecimal(cb_health.SelectedItem.ToString.Split("_")(0), New Globalization.CultureInfo("en-US"))
+                wf_sheild = Convert.ToDecimal(cb_shield.SelectedItem.ToString.Split("_")(0), New Globalization.CultureInfo("en-US"))
+                wf_power = Convert.ToDecimal(cb_power.SelectedItem.ToString.Split("_")(0), New Globalization.CultureInfo("en-US"))
             End If
         End If
 
@@ -413,19 +413,19 @@
             pet_ehp.Text = "0"
         Else
             If link_armor.Checked = True Then
-                pet_armor.Text = Math.Ceiling(cb_armor_pet.SelectedItem + (wf_armor * ((link_armor_val.Value + 1) * 0.1)))
+                pet_armor.Text = Math.Ceiling(cb_armor_pet.SelectedItem.ToString.Split("_")(0) + (wf_armor * ((link_armor_val.Value + 1) * 0.1)))
             Else
-                pet_armor.Text = cb_armor_pet.SelectedItem
+                pet_armor.Text = cb_armor_pet.SelectedItem.ToString.Split("_")(0)
             End If
             If link_health.Checked = True Then
-                pet_health.Text = Math.Ceiling(cb_health_pet.SelectedItem + (wf_health * ((link_health_val.Value + 1) * 0.15)))
+                pet_health.Text = Math.Ceiling(cb_health_pet.SelectedItem.ToString.Split("_")(0) + (wf_health * ((link_health_val.Value + 1) * 0.15)))
             Else
-                pet_health.Text = cb_health_pet.SelectedItem
+                pet_health.Text = cb_health_pet.SelectedItem.ToString.Split("_")(0)
             End If
             If link_sheild.Checked = True Then
-                pet_sheild.Text = Math.Ceiling(cb_shield_pet.SelectedItem + (wf_sheild * ((link_sheild_val.Value + 1) * 0.1)))
+                pet_sheild.Text = Math.Ceiling(cb_shield_pet.SelectedItem.ToString.Split("_")(0) + (wf_sheild * ((link_sheild_val.Value + 1) * 0.1)))
             Else
-                pet_sheild.Text = cb_shield_pet.SelectedItem
+                pet_sheild.Text = cb_shield_pet.SelectedItem.ToString.Split("_")(0)
             End If
         End If
         If prime_collar.Enabled And prime_collar.Checked Then
