@@ -89,7 +89,6 @@
         Dim DamageRedux As Decimal = 0
         Dim EHP As Decimal = 0
         Dim Armor_DamageRedux_Pet As Decimal = 0
-        Dim EHP_Pet As Decimal = 0
         If cb_frame.SelectedIndex = 0 Then
             wf_armor_base = 0
             wf_health_base = 0
@@ -406,36 +405,47 @@
         frame_health.Text = Math.Floor(wf_health)
         frame_sheild.Text = Math.Floor(wf_sheild)
         frame_power.Text = Math.Floor(wf_power)
+        'PETS
+        Dim p_armor As Decimal
+        Dim p_health As Decimal
+        Dim p_sheild As Decimal
+        Dim p_ehp As Decimal = 0
         If cb_pet.SelectedIndex = 0 Then
-            pet_armor.Text = "0"
-            pet_health.Text = "0"
-            pet_sheild.Text = "0"
-            pet_ehp.Text = "0"
+            p_armor = 0
+            p_health = 0
+            p_sheild = 0
+            p_ehp = 0
         Else
+            p_armor = Convert.ToDecimal(cb_armor_pet.SelectedItem.ToString.Split("_")(0), New Globalization.CultureInfo("en-US"))
+            p_health = Convert.ToDecimal(cb_health_pet.SelectedItem.ToString.Split("_")(0), New Globalization.CultureInfo("en-US"))
+            p_sheild = Convert.ToDecimal(cb_shield_pet.SelectedItem.ToString.Split("_")(0), New Globalization.CultureInfo("en-US"))
+            If cb_frame.SelectedItem = "Oberon" Then
+                'Oberon Passive
+                p_armor = p_armor + 75
+                p_health = Math.Floor(p_health + (p_health * 0.25))
+                p_sheild = Math.Floor(p_sheild + (p_sheild * 0.25))
+            End If
             If link_armor.Checked = True Then
-                pet_armor.Text = Math.Ceiling(cb_armor_pet.SelectedItem.ToString.Split("_")(0) + (wf_armor * ((link_armor_val.Value + 1) * 0.1)))
-            Else
-                pet_armor.Text = cb_armor_pet.SelectedItem.ToString.Split("_")(0)
+                p_armor = Math.Floor(p_armor + (wf_armor * ((link_armor_val.Value + 1) * 0.1)))
             End If
             If link_health.Checked = True Then
-                pet_health.Text = Math.Ceiling(cb_health_pet.SelectedItem.ToString.Split("_")(0) + (wf_health * ((link_health_val.Value + 1) * 0.15)))
-            Else
-                pet_health.Text = cb_health_pet.SelectedItem.ToString.Split("_")(0)
+                p_health = Math.Floor(p_health + (wf_health * ((link_health_val.Value + 1) * 0.15)))
             End If
             If link_sheild.Checked = True Then
-                pet_sheild.Text = Math.Ceiling(cb_shield_pet.SelectedItem.ToString.Split("_")(0) + (wf_sheild * ((link_sheild_val.Value + 1) * 0.1)))
-            Else
-                pet_sheild.Text = cb_shield_pet.SelectedItem.ToString.Split("_")(0)
+                p_sheild = Math.Floor(p_sheild + (wf_sheild * ((link_sheild_val.Value + 1) * 0.1)))
             End If
         End If
         If prime_collar.Enabled And prime_collar.Checked Then
-            pet_health.Text = pet_health.Text + 10
-            pet_sheild.Text = pet_sheild.Text + 10
-            pet_armor.Text = pet_armor.Text + 100
+            p_armor = p_armor + 100
+            p_health = p_health + 10
+            p_sheild = p_sheild + 10
         End If
-        Armor_DamageRedux_Pet = Convert.ToDecimal(pet_armor.Text, New Globalization.CultureInfo("en-US")) / (300 + Convert.ToDecimal(pet_armor.Text, New Globalization.CultureInfo("en-US")))
-        EHP_Pet = Convert.ToDecimal(pet_health.Text, New Globalization.CultureInfo("en-US")) / (1 - Armor_DamageRedux_Pet)
-        pet_ehp.Text = Math.Ceiling(EHP_Pet + Convert.ToDecimal(pet_sheild.Text, New Globalization.CultureInfo("en-US")))
+        Armor_DamageRedux_Pet = p_armor / (300 + p_armor)
+        p_ehp = (p_health / (1 - Armor_DamageRedux_Pet)) + p_sheild
+        pet_ehp.Text = Math.Ceiling(p_ehp)
+        pet_armor.Text = Math.Floor(p_armor)
+        pet_health.Text = Math.Floor(p_health)
+        pet_sheild.Text = Math.Floor(p_sheild)
     End Sub
 
     Private Sub Selected_Mods(sender As Object, e As EventArgs)
