@@ -282,7 +282,7 @@ Partial Class Warframe_EHP_Calc
         '
         Me.EHP_container.Controls.Add(Me.Label5)
         Me.EHP_container.Controls.Add(Me.wf_ehp)
-        Me.EHP_container.Location = New System.Drawing.Point(331, 351)
+        Me.EHP_container.Location = New System.Drawing.Point(331, 350)
         Me.EHP_container.Name = "EHP_container"
         Me.EHP_container.Size = New System.Drawing.Size(154, 48)
         Me.EHP_container.TabIndex = 50

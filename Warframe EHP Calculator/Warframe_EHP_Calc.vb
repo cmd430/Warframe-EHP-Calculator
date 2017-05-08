@@ -12,8 +12,8 @@
     End Function
 
     Private Sub Warframe_EHP_Calc_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'Hide Dev stuff
         Size = New Point(797, 652)
-        EHP_container.Location = New Point(331, 350)
         'ComboBoxs
         Dim ComboBoxs As New List(Of Control)
         For Each combo_box As ComboBox In FindControlRecursive(ComboBoxs, Me, GetType(ComboBox))
@@ -74,14 +74,14 @@
                 combo_box.SelectedIndex = cb_pet.SelectedIndex
             End If
         Next
-        Dim wf_armor_base As Decimal
-        Dim wf_health_base As Decimal
-        Dim wf_sheild_base As Decimal
-        Dim wf_power_base As Decimal
-        Dim wf_armor As Decimal
-        Dim wf_health As Decimal
-        Dim wf_sheild As Decimal
-        Dim wf_power As Decimal
+        Dim wf_armor_base As Decimal = 0
+        Dim wf_health_base As Decimal = 0
+        Dim wf_sheild_base As Decimal = 0
+        Dim wf_power_base As Decimal = 0
+        Dim wf_armor As Decimal = 0
+        Dim wf_health As Decimal = 0
+        Dim wf_sheild As Decimal = 0
+        Dim wf_power As Decimal = 0
         Dim ArmorMulti As Decimal = 0
         Dim HealthMulti As Decimal = 0
         Dim SheildMulti As Decimal = 0
@@ -89,16 +89,7 @@
         Dim DamageRedux As Decimal = 0
         Dim EHP As Decimal = 0
         Dim Armor_DamageRedux_Pet As Decimal = 0
-        If cb_frame.SelectedIndex = 0 Then
-            wf_armor_base = 0
-            wf_health_base = 0
-            wf_sheild_base = 0
-            wf_power_base = 0
-            wf_armor = 0
-            wf_health = 0
-            wf_sheild = 0
-            wf_power = 0
-        Else
+        If cb_frame.SelectedIndex > 0 Then
             If wf_prime.Enabled And wf_prime.Checked Then
                 wf_armor_base = Convert.ToDecimal(prime_base_armor.SelectedItem.ToString.Split("_")(0), New Globalization.CultureInfo("en-US"))
                 wf_health_base = Convert.ToDecimal(prime_base_health.SelectedItem.ToString.Split("_")(0), New Globalization.CultureInfo("en-US"))
@@ -119,7 +110,6 @@
                 wf_power = Convert.ToDecimal(cb_power.SelectedItem.ToString.Split("_")(0), New Globalization.CultureInfo("en-US"))
             End If
         End If
-
         'arcane helmets
         If cb_frame.SelectedItem = "Ash" Then
             If ash_panel.Visible = False Then
@@ -406,16 +396,11 @@
         frame_sheild.Text = Math.Floor(wf_sheild)
         frame_power.Text = Math.Floor(wf_power)
         'PETS
-        Dim p_armor As Decimal
-        Dim p_health As Decimal
-        Dim p_sheild As Decimal
+        Dim p_armor As Decimal = 0
+        Dim p_health As Decimal = 0
+        Dim p_sheild As Decimal = 0
         Dim p_ehp As Decimal = 0
-        If cb_pet.SelectedIndex = 0 Then
-            p_armor = 0
-            p_health = 0
-            p_sheild = 0
-            p_ehp = 0
-        Else
+        If cb_pet.SelectedIndex > 0 Then
             p_armor = Convert.ToDecimal(cb_armor_pet.SelectedItem.ToString.Split("_")(0), New Globalization.CultureInfo("en-US"))
             p_health = Convert.ToDecimal(cb_health_pet.SelectedItem.ToString.Split("_")(0), New Globalization.CultureInfo("en-US"))
             p_sheild = Convert.ToDecimal(cb_shield_pet.SelectedItem.ToString.Split("_")(0), New Globalization.CultureInfo("en-US"))
@@ -440,6 +425,10 @@
             p_health = p_health + 10
             p_sheild = p_sheild + 10
         End If
+        'DMG Reduc.
+        '   Armor / 300 + Armor = Reduc%
+        'EHP 
+        '   HP / 1 - DMG Redux = EHP
         Armor_DamageRedux_Pet = p_armor / (300 + p_armor)
         p_ehp = (p_health / (1 - Armor_DamageRedux_Pet)) + p_sheild
         pet_ehp.Text = Math.Ceiling(p_ehp)
