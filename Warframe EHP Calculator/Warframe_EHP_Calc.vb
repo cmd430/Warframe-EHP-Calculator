@@ -302,13 +302,15 @@
         If wf_physique.Checked Then
             HealthMulti = HealthMulti + (0.03 + (wf_physique_val.Value * 0.03))
             If wf_coaction.Checked Then
-                HealthMulti = HealthMulti + (HealthMulti * (0.025 + (0.025 * wf_coaction_val.Value)))
+                HealthMulti = HealthMulti + (HealthMulti * (0.025 + (0.025 * wf_coaction_val.Value))) '15% Str
+                HealthMulti = HealthMulti + (HealthMulti * (0.025 + (0.025 * wf_coaction_val.Value))) '15% Eff
             End If
         End If
         If wf_standunited.Checked Then
-            ArmorMulti = ArmorMulti + (0.425 + (wf_standunited_val.Value * 0.425))
+            ArmorMulti = ArmorMulti + (0.0425 + (wf_standunited_val.Value * 0.0425))
             If wf_coaction.Checked Then
-                ArmorMulti = ArmorMulti + (ArmorMulti * (0.025 + (0.025 * wf_coaction_val.Value)))
+                ArmorMulti = ArmorMulti + (ArmorMulti * (0.025 + (0.025 * wf_coaction_val.Value))) '15% Str
+                ArmorMulti = ArmorMulti + (ArmorMulti * (0.025 + (0.025 * wf_coaction_val.Value))) '15% Eff
             End If
         End If
         If wf_vitality.Checked Then

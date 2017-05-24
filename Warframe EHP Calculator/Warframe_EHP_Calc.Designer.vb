@@ -25,8 +25,8 @@ Partial Class Warframe_EHP_Calc
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Warframe_EHP_Calc))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.EHP_container = New System.Windows.Forms.Panel()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.wf_ehp = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.wf_umbra = New System.Windows.Forms.CheckBox()
         Me.wf_hpconvert_stacks = New System.Windows.Forms.NumericUpDown()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -280,27 +280,16 @@ Partial Class Warframe_EHP_Calc
         '
         'EHP_container
         '
-        Me.EHP_container.Controls.Add(Me.Label5)
         Me.EHP_container.Controls.Add(Me.wf_ehp)
-        Me.EHP_container.Location = New System.Drawing.Point(331, 350)
+        Me.EHP_container.Controls.Add(Me.Label5)
+        Me.EHP_container.Location = New System.Drawing.Point(331, 357)
         Me.EHP_container.Name = "EHP_container"
         Me.EHP_container.Size = New System.Drawing.Size(154, 48)
         Me.EHP_container.TabIndex = 50
         '
-        'Label5
-        '
-        Me.Label5.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(3, 3)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(148, 20)
-        Me.Label5.TabIndex = 11
-        Me.Label5.Text = "Effective Health: "
-        '
         'wf_ehp
         '
-        Me.wf_ehp.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.wf_ehp.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.wf_ehp.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.wf_ehp.Location = New System.Drawing.Point(2, 24)
         Me.wf_ehp.Name = "wf_ehp"
@@ -308,6 +297,17 @@ Partial Class Warframe_EHP_Calc
         Me.wf_ehp.TabIndex = 12
         Me.wf_ehp.Text = "0"
         Me.wf_ehp.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'Label5
+        '
+        Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(3, 3)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(148, 20)
+        Me.Label5.TabIndex = 11
+        Me.Label5.Text = "Effective Health: "
         '
         'wf_umbra
         '
