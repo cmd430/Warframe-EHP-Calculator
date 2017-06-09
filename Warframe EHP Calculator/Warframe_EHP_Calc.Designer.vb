@@ -1149,7 +1149,7 @@ Partial Class Warframe_EHP_Calc
         Me.cb_shield_pet.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cb_shield_pet.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cb_shield_pet.FormattingEnabled = True
-        Me.cb_shield_pet.Items.AddRange(New Object() {"PET SHIELD", "210_Adarza", "180_Smeeta", "225_Chesa", "375_Huras", "300_Raksa", "225_Sahasa", "270_Sunika", "225_Helminth Charger"})
+        Me.cb_shield_pet.Items.AddRange(New Object() {"PET SHIELD", "210_Adarza", "180_Smeeta", "225_Chesa", "375_Huras", "300_Raksa", "225_Sahasa", "270_Sunika", "225_HelminthCharger"})
         Me.cb_shield_pet.Location = New System.Drawing.Point(3, 559)
         Me.cb_shield_pet.Name = "cb_shield_pet"
         Me.cb_shield_pet.Size = New System.Drawing.Size(248, 24)
