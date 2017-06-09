@@ -1049,7 +1049,7 @@ Partial Class Warframe_EHP_Calc
         Me.prime_power.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.prime_power.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.prime_power.FormattingEnabled = True
-        Me.prime_power.Items.AddRange(New Object() {"PRIME POWER", "150_Ash", "262.5_Banshee", "225_Ember", "150_Excalibur", "150_Frost", "262.5_Loki", "150_Mag", "187.5_Nekros", "262.5_Nova", "225_Nyx", "150_Rhino", "300_Saryn", "225_Trinity", "225_Valkyr", "225_Vauban", "300_Volt"})
+        Me.prime_power.Items.AddRange(New Object() {"PRIME POWER", "150_Ash", "262.5_Banshee", "225_Ember", "150_Excalibur", "150_Frost", "262.5_Loki", "150_Mag", "187.5_Nekros", "262.5_Nova", "225_Nyx", "263_Oberon", "150_Rhino", "300_Saryn", "225_Trinity", "225_Valkyr", "225_Vauban", "300_Volt"})
         Me.prime_power.Location = New System.Drawing.Point(129, 269)
         Me.prime_power.Name = "prime_power"
         Me.prime_power.Size = New System.Drawing.Size(120, 24)
@@ -1060,7 +1060,7 @@ Partial Class Warframe_EHP_Calc
         Me.prime_shield.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.prime_shield.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.prime_shield.FormattingEnabled = True
-        Me.prime_shield.Items.AddRange(New Object() {"PRIME SHIELD", "375_Ash", "300_Banshee", "375_Ember", "300_Excalibur", "525_Frost", "225_Loki", "450_Mag", "450_Nekros", "300_Nova", "375_Nyx", "450_Rhino", "300_Saryn", "450_Trinity", "150_Valkyr", "300_Vauban", "450_Volt"})
+        Me.prime_shield.Items.AddRange(New Object() {"PRIME SHIELD", "375_Ash", "300_Banshee", "375_Ember", "300_Excalibur", "525_Frost", "225_Loki", "450_Mag", "450_Nekros", "300_Nova", "375_Nyx", "300_Oberon", "450_Rhino", "300_Saryn", "450_Trinity", "150_Valkyr", "300_Vauban", "450_Volt"})
         Me.prime_shield.Location = New System.Drawing.Point(129, 239)
         Me.prime_shield.Name = "prime_shield"
         Me.prime_shield.Size = New System.Drawing.Size(120, 24)
@@ -1071,7 +1071,7 @@ Partial Class Warframe_EHP_Calc
         Me.prime_health.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.prime_health.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.prime_health.FormattingEnabled = True
-        Me.prime_health.Items.AddRange(New Object() {"PRIME HEALTH", "450_Ash", "300_Banshee", "300_Ember", "300_Excalibur", "300_Frost", "225_Loki", "300_Mag", "300_Nekros", "300_Nova", "300_Nyx", "300_Rhino", "375_Saryn", "300_Trinity", "300_Valkyr", "300_Vauban", "300_Volt"})
+        Me.prime_health.Items.AddRange(New Object() {"PRIME HEALTH", "450_Ash", "300_Banshee", "300_Ember", "300_Excalibur", "300_Frost", "225_Loki", "300_Mag", "300_Nekros", "300_Nova", "300_Nyx", "375_Oberon", "300_Rhino", "375_Saryn", "300_Trinity", "300_Valkyr", "300_Vauban", "300_Volt"})
         Me.prime_health.Location = New System.Drawing.Point(129, 209)
         Me.prime_health.Name = "prime_health"
         Me.prime_health.Size = New System.Drawing.Size(120, 24)
@@ -1082,7 +1082,7 @@ Partial Class Warframe_EHP_Calc
         Me.prime_armor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.prime_armor.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.prime_armor.FormattingEnabled = True
-        Me.prime_armor.Items.AddRange(New Object() {"PRIME ARMOR", "150_Ash", "65_Banshee", "125_Ember", "250_Excalibur", "300_Frost", "65_Loki", "65_Mag", "65_Nekros", "65_Nova", "50_Nyx", "275_Rhino", "225_Saryn", "15_Trinity", "700_Valkyr", "100_Vauban", "100_Volt"})
+        Me.prime_armor.Items.AddRange(New Object() {"PRIME ARMOR", "150_Ash", "65_Banshee", "125_Ember", "250_Excalibur", "300_Frost", "65_Loki", "65_Mag", "65_Nekros", "65_Nova", "50_Nyx", "225_Oberon", "275_Rhino", "225_Saryn", "15_Trinity", "700_Valkyr", "100_Vauban", "100_Volt"})
         Me.prime_armor.Location = New System.Drawing.Point(129, 179)
         Me.prime_armor.Name = "prime_armor"
         Me.prime_armor.Size = New System.Drawing.Size(120, 24)
@@ -1093,7 +1093,7 @@ Partial Class Warframe_EHP_Calc
         Me.prime_base_power.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.prime_base_power.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.prime_base_power.FormattingEnabled = True
-        Me.prime_base_power.Items.AddRange(New Object() {"PRIME BASE POWER", "100_Ash", "175_Banshee", "150_Ember", "100_Excalibur", "100_Frost", "175_Loki", "100_Mag", "125_Nekros", "175_Nova", "150_Nyx", "100_Rhino", "200_Saryn", "150_Trinity", "150_Valkyr", "150_Vauban", "200_Volt"})
+        Me.prime_base_power.Items.AddRange(New Object() {"PRIME BASE POWER", "100_Ash", "175_Banshee", "150_Ember", "100_Excalibur", "100_Frost", "175_Loki", "100_Mag", "125_Nekros", "175_Nova", "150_Nyx", "175_Oberon", "100_Rhino", "200_Saryn", "150_Trinity", "150_Valkyr", "150_Vauban", "200_Volt"})
         Me.prime_base_power.Location = New System.Drawing.Point(3, 269)
         Me.prime_base_power.Name = "prime_base_power"
         Me.prime_base_power.Size = New System.Drawing.Size(120, 24)
@@ -1104,7 +1104,7 @@ Partial Class Warframe_EHP_Calc
         Me.prime_base_shield.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.prime_base_shield.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.prime_base_shield.FormattingEnabled = True
-        Me.prime_base_shield.Items.AddRange(New Object() {"PRIME BASE SHIELD", "125_Ash", "100_Banshee", "125_Ember", "100_Excalibur", "175_Frost", "75_Loki", "150_Mag", "150_Nekros", "100_Nova", "125_Nyx", "150_Rhino", "100_Saryn", "150_Trinity", "50_Valkyr", "100_Vauban", "150_Volt"})
+        Me.prime_base_shield.Items.AddRange(New Object() {"PRIME BASE SHIELD", "125_Ash", "100_Banshee", "125_Ember", "100_Excalibur", "175_Frost", "75_Loki", "150_Mag", "150_Nekros", "100_Nova", "125_Nyx", "100_Oberon", "150_Rhino", "100_Saryn", "150_Trinity", "50_Valkyr", "100_Vauban", "150_Volt"})
         Me.prime_base_shield.Location = New System.Drawing.Point(3, 239)
         Me.prime_base_shield.Name = "prime_base_shield"
         Me.prime_base_shield.Size = New System.Drawing.Size(120, 24)
@@ -1115,7 +1115,7 @@ Partial Class Warframe_EHP_Calc
         Me.prime_base_health.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.prime_base_health.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.prime_base_health.FormattingEnabled = True
-        Me.prime_base_health.Items.AddRange(New Object() {"PRIME BASE HEALTH", "150_Ash", "100_Banshee", "100_Ember", "100_Excalibur", "100_Frost", "75_Loki", "100_Mag", "100_Nekros", "100_Nova", "100_Nyx", "100_Rhino", "125_Saryn", "100_Trinity", "100_Valkyr", "100_Vauban", "100_Volt"})
+        Me.prime_base_health.Items.AddRange(New Object() {"PRIME BASE HEALTH", "150_Ash", "100_Banshee", "100_Ember", "100_Excalibur", "100_Frost", "75_Loki", "100_Mag", "100_Nekros", "100_Nova", "100_Nyx", "125_Oberon", "100_Rhino", "125_Saryn", "100_Trinity", "100_Valkyr", "100_Vauban", "100_Volt"})
         Me.prime_base_health.Location = New System.Drawing.Point(3, 209)
         Me.prime_base_health.Name = "prime_base_health"
         Me.prime_base_health.Size = New System.Drawing.Size(120, 24)
@@ -1126,7 +1126,7 @@ Partial Class Warframe_EHP_Calc
         Me.prime_base_armor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.prime_base_armor.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.prime_base_armor.FormattingEnabled = True
-        Me.prime_base_armor.Items.AddRange(New Object() {"PRIME BASE ARMOR", "150_Ash", "65_Banshee", "125_Ember", "250_Excalibur", "300_Frost", "65_Loki", "65_Mag", "65_Nekros", "65_Nova", "50_Nyx", "275_Rhino", "225_Saryn", "15_Trinity", "700_Valkyr", "100_Vauban", "100_Volt"})
+        Me.prime_base_armor.Items.AddRange(New Object() {"PRIME BASE ARMOR", "150_Ash", "65_Banshee", "125_Ember", "250_Excalibur", "300_Frost", "65_Loki", "65_Mag", "65_Nekros", "65_Nova", "50_Nyx", "225_Oberon", "275_Rhino", "225_Saryn", "15_Trinity", "700_Valkyr", "100_Vauban", "100_Volt"})
         Me.prime_base_armor.Location = New System.Drawing.Point(3, 179)
         Me.prime_base_armor.Name = "prime_base_armor"
         Me.prime_base_armor.Size = New System.Drawing.Size(120, 24)
@@ -1137,7 +1137,7 @@ Partial Class Warframe_EHP_Calc
         Me.cb_primes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cb_primes.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cb_primes.FormattingEnabled = True
-        Me.cb_primes.Items.AddRange(New Object() {"PRIMES", "Ash", "Banshee", "Ember", "Excalibur", "Frost", "Loki", "Mag", "Nekros", "Nova", "Nyx", "Rhino", "Saryn", "Trinity", "Valkyr", "Vauban", "Volt"})
+        Me.cb_primes.Items.AddRange(New Object() {"PRIMES", "Ash", "Banshee", "Ember", "Excalibur", "Frost", "Loki", "Mag", "Nekros", "Nova", "Nyx", "Oberon", "Rhino", "Saryn", "Trinity", "Valkyr", "Vauban", "Volt"})
         Me.cb_primes.Location = New System.Drawing.Point(3, 149)
         Me.cb_primes.Name = "cb_primes"
         Me.cb_primes.Size = New System.Drawing.Size(246, 24)
