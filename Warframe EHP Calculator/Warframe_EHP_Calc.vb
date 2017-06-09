@@ -13,7 +13,7 @@
 
     Private Sub Warframe_EHP_Calc_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Hide Dev stuff
-        '   Size = New Point(797, 652)
+        Size = New Point(797, 652)
         'ComboBoxs
         Dim ComboBoxs As New List(Of Control)
         For Each combo_box As ComboBox In FindControlRecursive(ComboBoxs, Me, GetType(ComboBox))
