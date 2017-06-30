@@ -51,8 +51,12 @@
         End If
         If cb_pet.SelectedIndex > 2 Then
             prime_collar.Enabled = True
+            kubrow_stability_lbl.ForeColor = Color.Black
+            kubrow_stability_val.Enabled = True
         Else
             prime_collar.Enabled = False
+            kubrow_stability_lbl.ForeColor = Color.DarkGray
+            kubrow_stability_val.Enabled = False
         End If
         Dim ComboBoxs As New List(Of Control)
         If wf_prime.Enabled And wf_prime.Checked Then
@@ -414,6 +418,10 @@
             End If
             If link_armor.Checked = True Then
                 p_armor = Math.Floor(p_armor + (wf_armor * ((link_armor_val.Value + 1) * 0.1)))
+            End If
+            If kubrow_stability_val.Visible = True Then
+                'genetic stability
+                p_health = p_health * (1 + (kubrow_stability_val.Value / 100))
             End If
             If link_health.Checked = True Then
                 p_health = Math.Floor(p_health + (wf_health * ((link_health_val.Value + 1) * 0.15)))

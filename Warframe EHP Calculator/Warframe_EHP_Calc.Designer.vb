@@ -187,6 +187,8 @@ Partial Class Warframe_EHP_Calc
         Me.ash_None = New System.Windows.Forms.RadioButton()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.ash_Locust = New System.Windows.Forms.RadioButton()
+        Me.kubrow_stability_lbl = New System.Windows.Forms.Label()
+        Me.kubrow_stability_val = New System.Windows.Forms.NumericUpDown()
         Me.GroupBox1.SuspendLayout()
         Me.EHP_container.SuspendLayout()
         CType(Me.wf_hpconvert_stacks, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -228,6 +230,7 @@ Partial Class Warframe_EHP_Calc
         Me.banshee_panel.SuspendLayout()
         Me.excalibur_panel.SuspendLayout()
         Me.ash_panel.SuspendLayout()
+        CType(Me.kubrow_stability_val, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -630,7 +633,7 @@ Partial Class Warframe_EHP_Calc
         Me.cb_frame.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cb_frame.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cb_frame.FormattingEnabled = True
-        Me.cb_frame.Items.AddRange(New Object() {"Select a Warframe", "Ash", "Atlas", "Banshee", "Chroma", "Ember", "Equinox", "Excalibur", "Frost", "Hydroid", "Inaros", "Ivara", "Limbo", "Loki", "Mag", "Mesa", "Mirage", "Nekros", "Nezha", "Nidus", "Nova", "Nyx", "Oberon", "Octavia", "Rhino", "Saryn", "Titania", "Trinity", "Valkyr", "Vauban", "Volt", "Wukong", "Zephyr"})
+        Me.cb_frame.Items.AddRange(New Object() {"Select a Warframe", "Ash", "Atlas", "Banshee", "Chroma", "Ember", "Equinox", "Excalibur", "Frost", "Harrow", "Hydroid", "Inaros", "Ivara", "Limbo", "Loki", "Mag", "Mesa", "Mirage", "Nekros", "Nezha", "Nidus", "Nova", "Nyx", "Oberon", "Octavia", "Rhino", "Saryn", "Titania", "Trinity", "Valkyr", "Vauban", "Volt", "Wukong", "Zephyr"})
         Me.cb_frame.Location = New System.Drawing.Point(18, 35)
         Me.cb_frame.Name = "cb_frame"
         Me.cb_frame.Size = New System.Drawing.Size(272, 24)
@@ -798,6 +801,8 @@ Partial Class Warframe_EHP_Calc
         '
         'GroupBox3
         '
+        Me.GroupBox3.Controls.Add(Me.kubrow_stability_val)
+        Me.GroupBox3.Controls.Add(Me.kubrow_stability_lbl)
         Me.GroupBox3.Controls.Add(Me.prime_collar)
         Me.GroupBox3.Controls.Add(Me.cb_pet)
         Me.GroupBox3.Controls.Add(Me.link_sheild)
@@ -879,7 +884,7 @@ Partial Class Warframe_EHP_Calc
         'pet_ehp
         '
         Me.pet_ehp.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.pet_ehp.Location = New System.Drawing.Point(561, 110)
+        Me.pet_ehp.Location = New System.Drawing.Point(558, 110)
         Me.pet_ehp.Name = "pet_ehp"
         Me.pet_ehp.Size = New System.Drawing.Size(148, 15)
         Me.pet_ehp.TabIndex = 12
@@ -890,7 +895,7 @@ Partial Class Warframe_EHP_Calc
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(561, 89)
+        Me.Label8.Location = New System.Drawing.Point(558, 89)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(148, 20)
         Me.Label8.TabIndex = 11
@@ -1184,7 +1189,7 @@ Partial Class Warframe_EHP_Calc
         Me.cb_power.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cb_power.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cb_power.FormattingEnabled = True
-        Me.cb_power.Items.AddRange(New Object() {"POWER", "150_Ash", "225_Atlas", "225_Banshee", "225_Chroma", "225_Ember", "225_Equinox", "150_Excalibur", "150_Frost", "150_Hydroid", "150_Inaros", "262.5_Ivara", "225_Limbo", "225_Loki", "150_Mag", "150_Mesa", "225_Mirage", "150_Nekros", "225_Nezha", "150_Nidus", "225_Nova", "225_Nyx", "225_Oberon", "225_Octavia", "150_Rhino", "225_Saryn", "150_Titania", "225_Trinity", "150_Valkyr", "225_Vauban", "150_Volt", "150_Wukong", "150_Zephyr"})
+        Me.cb_power.Items.AddRange(New Object() {"POWER", "150_Ash", "225_Atlas", "225_Banshee", "225_Chroma", "225_Ember", "225_Equinox", "150_Excalibur", "150_Frost", "150_Harrow", "150_Hydroid", "150_Inaros", "262.5_Ivara", "225_Limbo", "225_Loki", "150_Mag", "150_Mesa", "225_Mirage", "150_Nekros", "225_Nezha", "150_Nidus", "225_Nova", "225_Nyx", "225_Oberon", "225_Octavia", "150_Rhino", "225_Saryn", "150_Titania", "225_Trinity", "150_Valkyr", "225_Vauban", "150_Volt", "150_Wukong", "150_Zephyr"})
         Me.cb_power.Location = New System.Drawing.Point(130, 106)
         Me.cb_power.Name = "cb_power"
         Me.cb_power.Size = New System.Drawing.Size(120, 24)
@@ -1195,7 +1200,7 @@ Partial Class Warframe_EHP_Calc
         Me.cb_shield.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cb_shield.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cb_shield.FormattingEnabled = True
-        Me.cb_shield.Items.AddRange(New Object() {"SHIELD", "300_Ash", "300_Atlas", "300_Banshee", "300_Chroma", "300_Ember", "300_Equinox", "300_Excalibur", "450_Frost", "345_Hydroid", "0_Inaros", "300_Ivara", "225_Limbo", "225_Loki", "450_Mag", "225_Mesa", "240_Mirage", "270_Nekros", "225_Nezha", "0_Nidus", "225_Nova", "300_Nyx", "300_Oberon", "225_Octavia", "450_Rhino", "300_Saryn", "300_Titania", "300_Trinity", "150_Valkyr", "225_Vauban", "450_Volt", "375_Wukong", "450_Zephyr"})
+        Me.cb_shield.Items.AddRange(New Object() {"SHIELD", "300_Ash", "300_Atlas", "300_Banshee", "300_Chroma", "300_Ember", "300_Equinox", "300_Excalibur", "450_Frost", "450_Harrow", "345_Hydroid", "0_Inaros", "300_Ivara", "225_Limbo", "225_Loki", "450_Mag", "225_Mesa", "240_Mirage", "270_Nekros", "225_Nezha", "0_Nidus", "225_Nova", "300_Nyx", "300_Oberon", "225_Octavia", "450_Rhino", "300_Saryn", "300_Titania", "300_Trinity", "150_Valkyr", "225_Vauban", "450_Volt", "375_Wukong", "450_Zephyr"})
         Me.cb_shield.Location = New System.Drawing.Point(130, 76)
         Me.cb_shield.Name = "cb_shield"
         Me.cb_shield.Size = New System.Drawing.Size(120, 24)
@@ -1206,7 +1211,7 @@ Partial Class Warframe_EHP_Calc
         Me.cb_health.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cb_health.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cb_health.FormattingEnabled = True
-        Me.cb_health.Items.AddRange(New Object() {"HEALTH", "450_Ash", "300_Atlas", "300_Banshee", "300_Chroma", "300_Ember", "300_Equinox", "300_Excalibur", "300_Frost", "300_Hydroid", "2200_Inaros", "225_Ivara", "300_Limbo", "225_Loki", "255_Mag", "375_Mesa", "240_Mirage", "300_Nekros", "225_Nezha", "450_Nidus", "300_Nova", "300_Nyx", "375_Oberon", "300_Octavia", "300_Rhino", "375_Saryn", "300_Titania", "300_Trinity", "300_Valkyr", "300_Vauban", "300_Volt", "300_Wukong", "450_Zephyr"})
+        Me.cb_health.Items.AddRange(New Object() {"HEALTH", "450_Ash", "300_Atlas", "300_Banshee", "300_Chroma", "300_Ember", "300_Equinox", "300_Excalibur", "300_Frost", "300_Harrow", "300_Hydroid", "2200_Inaros", "225_Ivara", "300_Limbo", "225_Loki", "255_Mag", "375_Mesa", "240_Mirage", "300_Nekros", "225_Nezha", "450_Nidus", "300_Nova", "300_Nyx", "375_Oberon", "300_Octavia", "300_Rhino", "375_Saryn", "300_Titania", "300_Trinity", "300_Valkyr", "300_Vauban", "300_Volt", "300_Wukong", "450_Zephyr"})
         Me.cb_health.Location = New System.Drawing.Point(130, 46)
         Me.cb_health.Name = "cb_health"
         Me.cb_health.Size = New System.Drawing.Size(120, 24)
@@ -1217,7 +1222,7 @@ Partial Class Warframe_EHP_Calc
         Me.cb_armor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cb_armor.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cb_armor.FormattingEnabled = True
-        Me.cb_armor.Items.AddRange(New Object() {"ARMOR", "65_Ash", "450_Atlas", "15_Banshee", "350_Chroma", "100_Ember", "100_Equinox", "225_Excalibur", "300_Frost", "65_Hydroid", "200_Inaros", "65_Ivara", "65_Limbo", "65_Loki", "65_Mag", "65_Mesa", "65_Mirage", "65_Nekros", "175_Nezha", "450_Nidus", "65_Nova", "15_Nyx", "150_Oberon", "125_Octavia", "190_Rhino", "175_Saryn", "65_Titania", "15_Trinity", "600_Valkyr", "50_Vauban", "15_Volt", "225_Wukong", "15_Zephyr"})
+        Me.cb_armor.Items.AddRange(New Object() {"ARMOR", "65_Ash", "450_Atlas", "15_Banshee", "350_Chroma", "100_Ember", "100_Equinox", "225_Excalibur", "300_Frost", "150_Harrow", "65_Hydroid", "200_Inaros", "65_Ivara", "65_Limbo", "65_Loki", "65_Mag", "65_Mesa", "65_Mirage", "65_Nekros", "175_Nezha", "450_Nidus", "65_Nova", "15_Nyx", "150_Oberon", "125_Octavia", "190_Rhino", "175_Saryn", "65_Titania", "15_Trinity", "600_Valkyr", "50_Vauban", "15_Volt", "225_Wukong", "15_Zephyr"})
         Me.cb_armor.Location = New System.Drawing.Point(130, 16)
         Me.cb_armor.Name = "cb_armor"
         Me.cb_armor.Size = New System.Drawing.Size(120, 24)
@@ -1228,7 +1233,7 @@ Partial Class Warframe_EHP_Calc
         Me.cb_base_power.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cb_base_power.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cb_base_power.FormattingEnabled = True
-        Me.cb_base_power.Items.AddRange(New Object() {"BASE POWER", "100_Ash", "150_Atlas", "150_Banshee", "150_Chroma", "150_Ember", "150_Equinox", "100_Excalibur", "100_Frost", "100_Hydroid", "100_Inaros", "175_Ivara", "150_Limbo", "150_Loki", "100_Mag", "100_Mesa", "150_Mirage", "100_Nekros", "150_Nezha", "100_Nidus", "150_Nova", "150_Nyx", "150_Oberon", "150_Octavia", "100_Rhino", "150_Saryn", "100_Titania", "150_Trinity", "100_Valkyr", "150_Vauban", "100_Volt", "100_Wukong", "100_Zephyr"})
+        Me.cb_base_power.Items.AddRange(New Object() {"BASE POWER", "100_Ash", "150_Atlas", "150_Banshee", "150_Chroma", "150_Ember", "150_Equinox", "100_Excalibur", "100_Frost", "100_Harrow", "100_Hydroid", "100_Inaros", "175_Ivara", "150_Limbo", "150_Loki", "100_Mag", "100_Mesa", "150_Mirage", "100_Nekros", "150_Nezha", "100_Nidus", "150_Nova", "150_Nyx", "150_Oberon", "150_Octavia", "100_Rhino", "150_Saryn", "100_Titania", "150_Trinity", "100_Valkyr", "150_Vauban", "100_Volt", "100_Wukong", "100_Zephyr"})
         Me.cb_base_power.Location = New System.Drawing.Point(4, 106)
         Me.cb_base_power.Name = "cb_base_power"
         Me.cb_base_power.Size = New System.Drawing.Size(120, 24)
@@ -1239,7 +1244,7 @@ Partial Class Warframe_EHP_Calc
         Me.cb_base_shield.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cb_base_shield.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cb_base_shield.FormattingEnabled = True
-        Me.cb_base_shield.Items.AddRange(New Object() {"BASE SHIELD", "100_Ash", "100_Atlas", "100_Banshee", "100_Chroma", "100_Ember", "100_Equinox", "100_Excalibur", "150_Frost", "115_Hydroid", "0_Inaros", "100_Ivara", "75_Limbo", "75_Loki", "150_Mag", "75_Mesa", "80_Mirage", "90_Nekros", "75_Nezha", "0_Nidus", "75_Nova", "100_Nyx", "100_Oberon", "75_Octavia", "150_Rhino", "100_Saryn", "100_Titania", "100_Trinity", "50_Valkyr", "75_Vauban", "150_Volt", "125_Wukong", "150_Zephyr"})
+        Me.cb_base_shield.Items.AddRange(New Object() {"BASE SHIELD", "100_Ash", "100_Atlas", "100_Banshee", "100_Chroma", "100_Ember", "100_Equinox", "100_Excalibur", "150_Frost", "150_Harrow", "115_Hydroid", "0_Inaros", "100_Ivara", "75_Limbo", "75_Loki", "150_Mag", "75_Mesa", "80_Mirage", "90_Nekros", "75_Nezha", "0_Nidus", "75_Nova", "100_Nyx", "100_Oberon", "75_Octavia", "150_Rhino", "100_Saryn", "100_Titania", "100_Trinity", "50_Valkyr", "75_Vauban", "150_Volt", "125_Wukong", "150_Zephyr"})
         Me.cb_base_shield.Location = New System.Drawing.Point(4, 76)
         Me.cb_base_shield.Name = "cb_base_shield"
         Me.cb_base_shield.Size = New System.Drawing.Size(120, 24)
@@ -1250,7 +1255,7 @@ Partial Class Warframe_EHP_Calc
         Me.cb_base_health.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cb_base_health.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cb_base_health.FormattingEnabled = True
-        Me.cb_base_health.Items.AddRange(New Object() {"BASE HEALTH", "150_Ash", "100_Atlas", "100_Banshee", "100_Chroma", "100_Ember", "100_Equinox", "100_Excalibur", "100_Frost", "100_Hydroid", "550_Inaros", "75_Ivara", "100_Limbo", "75_Loki", "75_Mag", "125_Mesa", "80_Mirage", "100_Nekros", "75_Nezha", "150_Nidus", "100_Nova", "100_Nyx", "125_Oberon", "100_Octavia", "100_Rhino", "125_Saryn", "100_Titania", "100_Trinity", "100_Valkyr", "100_Vauban", "100_Volt", "100_Wukong", "150_Zephyr"})
+        Me.cb_base_health.Items.AddRange(New Object() {"BASE HEALTH", "150_Ash", "100_Atlas", "100_Banshee", "100_Chroma", "100_Ember", "100_Equinox", "100_Excalibur", "100_Frost", "100_Harrow", "100_Hydroid", "550_Inaros", "75_Ivara", "100_Limbo", "75_Loki", "75_Mag", "125_Mesa", "80_Mirage", "100_Nekros", "75_Nezha", "150_Nidus", "100_Nova", "100_Nyx", "125_Oberon", "100_Octavia", "100_Rhino", "125_Saryn", "100_Titania", "100_Trinity", "100_Valkyr", "100_Vauban", "100_Volt", "100_Wukong", "150_Zephyr"})
         Me.cb_base_health.Location = New System.Drawing.Point(4, 46)
         Me.cb_base_health.Name = "cb_base_health"
         Me.cb_base_health.Size = New System.Drawing.Size(120, 24)
@@ -1261,7 +1266,7 @@ Partial Class Warframe_EHP_Calc
         Me.cb_base_armor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cb_base_armor.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cb_base_armor.FormattingEnabled = True
-        Me.cb_base_armor.Items.AddRange(New Object() {"BASE ARMOR", "65_Ash", "450_Atlas", "15_Banshee", "350_Chroma", "100_Ember", "100_Equinox", "225_Excalibur", "300_Frost", "65_Hydroid", "200_Inaros", "65_Ivara", "65_Limbo", "65_Loki", "65_Mag", "65_Mesa", "65_Mirage", "65_Nekros", "175_Nezha", "300_Nidus", "65_Nova", "15_Nyx", "150_Oberon", "125_Octavia", "190_Rhino", "175_Saryn", "65_Titania", "15_Trinity", "600_Valkyr", "50_Vauban", "15_Volt", "225_Wukong", "15_Zephyr"})
+        Me.cb_base_armor.Items.AddRange(New Object() {"BASE ARMOR", "65_Ash", "450_Atlas", "15_Banshee", "350_Chroma", "100_Ember", "100_Equinox", "225_Excalibur", "300_Frost", "150_Harrow", "65_Hydroid", "200_Inaros", "65_Ivara", "65_Limbo", "65_Loki", "65_Mag", "65_Mesa", "65_Mirage", "65_Nekros", "175_Nezha", "300_Nidus", "65_Nova", "15_Nyx", "150_Oberon", "125_Octavia", "190_Rhino", "175_Saryn", "65_Titania", "15_Trinity", "600_Valkyr", "50_Vauban", "15_Volt", "225_Wukong", "15_Zephyr"})
         Me.cb_base_armor.Location = New System.Drawing.Point(4, 16)
         Me.cb_base_armor.Name = "cb_base_armor"
         Me.cb_base_armor.Size = New System.Drawing.Size(120, 24)
@@ -2120,6 +2125,29 @@ Partial Class Warframe_EHP_Calc
         Me.ash_Locust.Text = "Locust Helmet"
         Me.ash_Locust.UseVisualStyleBackColor = True
         '
+        'kubrow_stability_lbl
+        '
+        Me.kubrow_stability_lbl.AutoSize = True
+        Me.kubrow_stability_lbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.kubrow_stability_lbl.ForeColor = System.Drawing.SystemColors.ControlDark
+        Me.kubrow_stability_lbl.Location = New System.Drawing.Point(525, 35)
+        Me.kubrow_stability_lbl.Name = "kubrow_stability_lbl"
+        Me.kubrow_stability_lbl.Size = New System.Drawing.Size(146, 20)
+        Me.kubrow_stability_lbl.TabIndex = 52
+        Me.kubrow_stability_lbl.Text = "Genetic Stability:"
+        '
+        'kubrow_stability_val
+        '
+        Me.kubrow_stability_val.Enabled = False
+        Me.kubrow_stability_val.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.kubrow_stability_val.Increment = New Decimal(New Integer() {5, 0, 0, 0})
+        Me.kubrow_stability_val.Location = New System.Drawing.Point(675, 36)
+        Me.kubrow_stability_val.Minimum = New Decimal(New Integer() {95, 0, 0, -2147483648})
+        Me.kubrow_stability_val.Name = "kubrow_stability_val"
+        Me.kubrow_stability_val.Size = New System.Drawing.Size(68, 21)
+        Me.kubrow_stability_val.TabIndex = 54
+        Me.kubrow_stability_val.Value = New Decimal(New Integer() {100, 0, 0, 0})
+        '
         'Warframe_EHP_Calc
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2196,6 +2224,7 @@ Partial Class Warframe_EHP_Calc
         Me.excalibur_panel.PerformLayout()
         Me.ash_panel.ResumeLayout(False)
         Me.ash_panel.PerformLayout()
+        CType(Me.kubrow_stability_val, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -2364,4 +2393,6 @@ Partial Class Warframe_EHP_Calc
     Friend WithEvents Label32 As Label
     Friend WithEvents vauban_Esprit As RadioButton
     Friend WithEvents prime_collar As CheckBox
+    Friend WithEvents kubrow_stability_val As NumericUpDown
+    Friend WithEvents kubrow_stability_lbl As Label
 End Class
