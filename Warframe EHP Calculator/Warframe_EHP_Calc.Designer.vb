@@ -74,6 +74,8 @@ Partial Class Warframe_EHP_Calc
         Me.x_armor = New System.Windows.Forms.CheckBox()
         Me.cb_pet = New System.Windows.Forms.ComboBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.kubrow_stability_val = New System.Windows.Forms.NumericUpDown()
+        Me.kubrow_stability_lbl = New System.Windows.Forms.Label()
         Me.prime_collar = New System.Windows.Forms.CheckBox()
         Me.link_sheild = New System.Windows.Forms.CheckBox()
         Me.link_sheild_val = New System.Windows.Forms.NumericUpDown()
@@ -187,8 +189,6 @@ Partial Class Warframe_EHP_Calc
         Me.ash_None = New System.Windows.Forms.RadioButton()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.ash_Locust = New System.Windows.Forms.RadioButton()
-        Me.kubrow_stability_lbl = New System.Windows.Forms.Label()
-        Me.kubrow_stability_val = New System.Windows.Forms.NumericUpDown()
         Me.GroupBox1.SuspendLayout()
         Me.EHP_container.SuspendLayout()
         CType(Me.wf_hpconvert_stacks, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -209,6 +209,7 @@ Partial Class Warframe_EHP_Calc
         CType(Me.x_health_val, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.x_shield_val, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
+        CType(Me.kubrow_stability_val, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.link_sheild_val, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.link_health_val, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.link_armor_val, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -230,7 +231,6 @@ Partial Class Warframe_EHP_Calc
         Me.banshee_panel.SuspendLayout()
         Me.excalibur_panel.SuspendLayout()
         Me.ash_panel.SuspendLayout()
-        CType(Me.kubrow_stability_val, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -827,6 +827,29 @@ Partial Class Warframe_EHP_Calc
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Kavat / Kubrow / Helminth Charger"
         '
+        'kubrow_stability_val
+        '
+        Me.kubrow_stability_val.Enabled = False
+        Me.kubrow_stability_val.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.kubrow_stability_val.Increment = New Decimal(New Integer() {5, 0, 0, 0})
+        Me.kubrow_stability_val.Location = New System.Drawing.Point(675, 36)
+        Me.kubrow_stability_val.Minimum = New Decimal(New Integer() {95, 0, 0, -2147483648})
+        Me.kubrow_stability_val.Name = "kubrow_stability_val"
+        Me.kubrow_stability_val.Size = New System.Drawing.Size(68, 21)
+        Me.kubrow_stability_val.TabIndex = 54
+        Me.kubrow_stability_val.Value = New Decimal(New Integer() {100, 0, 0, 0})
+        '
+        'kubrow_stability_lbl
+        '
+        Me.kubrow_stability_lbl.AutoSize = True
+        Me.kubrow_stability_lbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.kubrow_stability_lbl.ForeColor = System.Drawing.SystemColors.ControlDark
+        Me.kubrow_stability_lbl.Location = New System.Drawing.Point(525, 35)
+        Me.kubrow_stability_lbl.Name = "kubrow_stability_lbl"
+        Me.kubrow_stability_lbl.Size = New System.Drawing.Size(146, 20)
+        Me.kubrow_stability_lbl.TabIndex = 52
+        Me.kubrow_stability_lbl.Text = "Genetic Stability:"
+        '
         'prime_collar
         '
         Me.prime_collar.AutoSize = True
@@ -1054,7 +1077,7 @@ Partial Class Warframe_EHP_Calc
         Me.prime_power.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.prime_power.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.prime_power.FormattingEnabled = True
-        Me.prime_power.Items.AddRange(New Object() {"PRIME POWER", "150_Ash", "262.5_Banshee", "225_Ember", "150_Excalibur", "150_Frost", "262.5_Loki", "150_Mag", "187.5_Nekros", "262.5_Nova", "225_Nyx", "263_Oberon", "150_Rhino", "300_Saryn", "225_Trinity", "225_Valkyr", "225_Vauban", "300_Volt"})
+        Me.prime_power.Items.AddRange(New Object() {"PRIME POWER", "150_Ash", "262.5_Banshee", "225_Ember", "150_Excalibur", "150_Frost", "262.5_Loki", "150_Mag", "187.5_Nekros", "262.5_Nova", "225_Nyx", "262.5_Oberon", "150_Rhino", "300_Saryn", "225_Trinity", "225_Valkyr", "225_Vauban", "300_Volt"})
         Me.prime_power.Location = New System.Drawing.Point(129, 269)
         Me.prime_power.Name = "prime_power"
         Me.prime_power.Size = New System.Drawing.Size(120, 24)
@@ -1274,15 +1297,6 @@ Partial Class Warframe_EHP_Calc
         '
         'GroupBox4
         '
-        Me.GroupBox4.Controls.Add(Me.volt_panel)
-        Me.GroupBox4.Controls.Add(Me.vauban_panel)
-        Me.GroupBox4.Controls.Add(Me.trinity_panel)
-        Me.GroupBox4.Controls.Add(Me.saryn_panel)
-        Me.GroupBox4.Controls.Add(Me.rhino_panel)
-        Me.GroupBox4.Controls.Add(Me.nyx_panel)
-        Me.GroupBox4.Controls.Add(Me.nova_panel)
-        Me.GroupBox4.Controls.Add(Me.mag_panel)
-        Me.GroupBox4.Controls.Add(Me.loki_panel)
         Me.GroupBox4.Controls.Add(Me.key_decaying)
         Me.GroupBox4.Controls.Add(Me.key_bleeding)
         Me.GroupBox4.Controls.Add(Me.Label17)
@@ -1300,6 +1314,15 @@ Partial Class Warframe_EHP_Calc
         Me.GroupBox4.Controls.Add(Me.x_health)
         Me.GroupBox4.Controls.Add(Me.x_health_val)
         Me.GroupBox4.Controls.Add(Me.x_shield)
+        Me.GroupBox4.Controls.Add(Me.volt_panel)
+        Me.GroupBox4.Controls.Add(Me.vauban_panel)
+        Me.GroupBox4.Controls.Add(Me.trinity_panel)
+        Me.GroupBox4.Controls.Add(Me.saryn_panel)
+        Me.GroupBox4.Controls.Add(Me.rhino_panel)
+        Me.GroupBox4.Controls.Add(Me.nyx_panel)
+        Me.GroupBox4.Controls.Add(Me.nova_panel)
+        Me.GroupBox4.Controls.Add(Me.mag_panel)
+        Me.GroupBox4.Controls.Add(Me.loki_panel)
         Me.GroupBox4.Controls.Add(Me.frost_panel)
         Me.GroupBox4.Controls.Add(Me.ember_panel)
         Me.GroupBox4.Controls.Add(Me.banshee_panel)
@@ -2125,29 +2148,6 @@ Partial Class Warframe_EHP_Calc
         Me.ash_Locust.Text = "Locust Helmet"
         Me.ash_Locust.UseVisualStyleBackColor = True
         '
-        'kubrow_stability_lbl
-        '
-        Me.kubrow_stability_lbl.AutoSize = True
-        Me.kubrow_stability_lbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.kubrow_stability_lbl.ForeColor = System.Drawing.SystemColors.ControlDark
-        Me.kubrow_stability_lbl.Location = New System.Drawing.Point(525, 35)
-        Me.kubrow_stability_lbl.Name = "kubrow_stability_lbl"
-        Me.kubrow_stability_lbl.Size = New System.Drawing.Size(146, 20)
-        Me.kubrow_stability_lbl.TabIndex = 52
-        Me.kubrow_stability_lbl.Text = "Genetic Stability:"
-        '
-        'kubrow_stability_val
-        '
-        Me.kubrow_stability_val.Enabled = False
-        Me.kubrow_stability_val.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.kubrow_stability_val.Increment = New Decimal(New Integer() {5, 0, 0, 0})
-        Me.kubrow_stability_val.Location = New System.Drawing.Point(675, 36)
-        Me.kubrow_stability_val.Minimum = New Decimal(New Integer() {95, 0, 0, -2147483648})
-        Me.kubrow_stability_val.Name = "kubrow_stability_val"
-        Me.kubrow_stability_val.Size = New System.Drawing.Size(68, 21)
-        Me.kubrow_stability_val.TabIndex = 54
-        Me.kubrow_stability_val.Value = New Decimal(New Integer() {100, 0, 0, 0})
-        '
         'Warframe_EHP_Calc
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2187,6 +2187,7 @@ Partial Class Warframe_EHP_Calc
         CType(Me.x_shield_val, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
+        CType(Me.kubrow_stability_val, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.link_sheild_val, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.link_health_val, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.link_armor_val, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2224,7 +2225,6 @@ Partial Class Warframe_EHP_Calc
         Me.excalibur_panel.PerformLayout()
         Me.ash_panel.ResumeLayout(False)
         Me.ash_panel.PerformLayout()
-        CType(Me.kubrow_stability_val, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
