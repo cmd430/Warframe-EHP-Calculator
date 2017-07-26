@@ -266,6 +266,7 @@
                 CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsVolt
             Case Else
                 CheckBox_arcaneHelmets.Enabled = False
+                CustomTabControl_arcaneHelmets.Enabled = False
                 CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsDefault
         End Select
         '
@@ -310,6 +311,7 @@
                 CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesValkyr
             Case Else
                 CheckBox_abilities.Enabled = False
+                CustomTabControl_abilitys.Enabled = False
                 CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesDefault
         End Select
         If ComboBox_warframes.SelectedIndex > 0 Then
@@ -336,9 +338,7 @@
             '
             CheckBox_oversheilds.Enabled = True
             GroupBox_oversheilds.Enabled = CheckBox_oversheilds.Checked
-            CheckBox_abilities.Enabled = True
             CustomTabControl_abilitys.Enabled = CheckBox_abilities.Checked
-            CheckBox_arcaneHelmets.Enabled = True
             CustomTabControl_arcaneHelmets.Enabled = CheckBox_arcaneHelmets.Checked
 
             If CheckBox_isPrime.Checked And CheckBox_isPrime.Enabled Then
