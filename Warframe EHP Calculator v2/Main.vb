@@ -118,7 +118,6 @@
                 AddHandler NumericUpDown.ValueChanged, AddressOf Warframe_Value_Changed
             Else
                 AddHandler NumericUpDown.ValueChanged, AddressOf Companion_Value_Changed
-                MsgBox(NumericUpDown.Name)
             End If
         Next
         '
