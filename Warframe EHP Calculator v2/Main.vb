@@ -16,8 +16,18 @@
         Return list
     End Function
 
-    Public Function formatNumber(ByVal Number As ComboBox)
-        Return Convert.ToDecimal(Number.SelectedItem.ToString().Split("_")(0), New Globalization.CultureInfo("en-US"))
+    Public Function formatNumber(ByVal Number)
+        Dim formatted As Decimal = 0.0
+        If TypeOf Number Is ComboBox Then
+            formatted = Convert.ToDecimal(Number.SelectedItem.ToString().Split("_")(0), New Globalization.CultureInfo("en-US"))
+        ElseIf TypeOf Number Is TextBox Then
+            If Number.Text = "-" Then
+                formatted = Convert.ToDecimal(0, New Globalization.CultureInfo("en-US"))
+            Else
+                formatted = Convert.ToDecimal(Number.Text, New Globalization.CultureInfo("en-US"))
+            End If
+        End If
+        Return formatted
     End Function
 
     Private Sub Main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -52,7 +62,7 @@
         ComboBox_warframes.SelectedIndex = 0
         ComboBox_primes.SelectedIndex = 0
         ComboBox_umbras.SelectedIndex = 0
-        ComboBox_pets.SelectedIndex = 0
+        ComboBox_companions.SelectedIndex = 0
         '
         '   Abilities and Focus
         '
@@ -92,7 +102,11 @@
         AddHandler ComboBox_warframes.SelectedIndexChanged, AddressOf Warframe_Value_Changed
         Dim CheckBoxs As New List(Of Control)
         For Each CheckBox As CheckBox In FindControlRecursive(CheckBoxs, TabControl_main, GetType(CheckBox))
-            AddHandler CheckBox.CheckedChanged, AddressOf Warframe_Value_Changed
+            If Not CheckBox.Name.Contains("companion") Then
+                AddHandler CheckBox.CheckedChanged, AddressOf Warframe_Value_Changed
+            Else
+                AddHandler CheckBox.CheckedChanged, AddressOf Companion_Value_Changed
+            End If
         Next
         Dim RadioButtons As New List(Of Control)
         For Each RadioButton As RadioButton In FindControlRecursive(RadioButtons, TabControl_main, GetType(RadioButton))
@@ -100,8 +114,19 @@
         Next
         Dim NumericUpDowns As New List(Of Control)
         For Each NumericUpDown As NumericUpDown In FindControlRecursive(NumericUpDowns, TabControl_main, GetType(NumericUpDown))
-            AddHandler NumericUpDown.ValueChanged, AddressOf Warframe_Value_Changed
+            If Not NumericUpDown.Name.Contains("companion") Then
+                AddHandler NumericUpDown.ValueChanged, AddressOf Warframe_Value_Changed
+            Else
+                AddHandler NumericUpDown.ValueChanged, AddressOf Companion_Value_Changed
+                MsgBox(NumericUpDown.Name)
+            End If
         Next
+        '
+        '   Companions
+        '
+
+        AddHandler ComboBox_companions.SelectedIndexChanged, AddressOf Companion_Value_Changed
+        AddHandler CheckBox_companionSurvivability.CheckedChanged, AddressOf Enable_Disable_Section
     End Sub
 
     Public Sub Toggle_Warframe_Type(sender As Object, e As EventArgs)
@@ -138,7 +163,7 @@
         '
         '   Enable and disable GroupBoxes/CustomTabControls based on its checkbox
         '
-        TabPage_warframe.Controls(sender.tag).Enabled = sender.Checked
+        sender.Parent.Controls(sender.tag).Enabled = sender.Checked
     End Sub
 
     Private Sub Warframe_Value_Changed(sender As Object, e As EventArgs)
@@ -712,6 +737,21 @@
             Shield = ((baseShield * (1 + shieldMultiplier)) + (Shield - baseShield)) + shieldBonus
             Energy = Math.Ceiling(Energy) + Math.Floor((baseEnergy * energyMultiplier) + energyBonus)
             '
+            '   Arcanes
+            '
+            If CheckBox_arcanes.Checked Then
+                If CheckBox_arcaneGuardian.Checked And CheckBox_arcaneUltimatum.Checked Then
+                    Armor = Armor * (1 + ((0.15 * NumericUpDown_arcaneGuardian.Value) + (0.15 * NumericUpDown_arcaneUltimatum.Value)))
+                Else
+                    If CheckBox_arcaneGuardian.Checked Then
+                        Armor = Armor * (1 + (0.15 * NumericUpDown_arcaneGuardian.Value))
+                    End If
+                    If CheckBox_arcaneUltimatum.Checked Then
+                        Armor = Armor * (1 + (0.15 * NumericUpDown_arcaneUltimatum.Value))
+                    End If
+                End If
+            End If
+            '
             '   Dragon Keys
             '
             If CheckBox_dragonKeys.Checked Then
@@ -767,18 +807,72 @@
             TextBox_warframePowerStrength.Text = "-"
             TextBox_warframeEHP.Text = "-"
         End If
+        Companion_Value_Changed(sender, e)
     End Sub
 
-    Private Sub Companion_Changed_UI_Update(sender As Object, e As EventArgs)
+    Private Sub Companion_Value_Changed(sender As Object, e As EventArgs)
         '   Pet Stats
-        ComboBox_petArmor.SelectedIndex = ComboBox_pets.SelectedIndex
-        ComboBox_petHealth.SelectedIndex = ComboBox_pets.SelectedIndex
-        ComboBox_petShield.SelectedIndex = ComboBox_pets.SelectedIndex
-
-        '
-        '   TODO:\\
-        '
-
+        Dim Armor As Decimal = 0.0
+        Dim Health As Decimal = 0.0
+        Dim Shield As Decimal = 0.0
+        ComboBox_petArmor.SelectedIndex = ComboBox_companions.SelectedIndex
+        ComboBox_petHealth.SelectedIndex = ComboBox_companions.SelectedIndex
+        ComboBox_petShield.SelectedIndex = ComboBox_companions.SelectedIndex
+        If ComboBox_companions.SelectedIndex > 2 Then
+            CheckBox_companionPrimeCollar.Enabled = True
+            NumericUpDown_companionStability.Enabled = True
+            Label_companionStability.Enabled = True
+        Else
+            CheckBox_companionPrimeCollar.Enabled = False
+            NumericUpDown_companionStability.Enabled = False
+            Label_companionStability.Enabled = False
+        End If
+        If ComboBox_companions.SelectedIndex > 0 Then
+            CheckBox_companionSurvivability.Enabled = True
+            GroupBox_companionSurvivability.Enabled = CheckBox_companionSurvivability.Checked
+            Armor = formatNumber(ComboBox_petArmor)
+            Health = formatNumber(ComboBox_petHealth)
+            Shield = formatNumber(ComboBox_petShield)
+            If NumericUpDown_companionStability.Enabled = True Then
+                'genetic stability
+                Health = Health * (1 + (NumericUpDown_companionStability.Value / 100))
+            End If
+            If ComboBox_warframes.SelectedItem = "Oberon" Then
+                'Oberon Passive
+                Armor = Armor + 75
+                Health = Math.Floor(Health + (Health * 0.25))
+                Shield = Math.Floor(Shield + (Shield * 0.25))
+            End If
+            If CheckBox_companionPrimeCollar.Enabled And CheckBox_companionPrimeCollar.Checked Then
+                Armor = Armor + 100
+                Health = Health + 10
+                Shield = Shield + 10
+            End If
+            If CheckBox_companionSurvivability.Checked Then
+                If CheckBox_companionLinkArmor.Checked = True Then
+                    Armor = Math.Floor(Armor + (formatNumber(TextBox_warframeArmor) * ((NumericUpDown_companionLinkArmor.Value + 1) * 0.1)))
+                End If
+                If CheckBox_companionLinkHealth.Checked = True Then
+                    Health = Math.Floor(Health + (formatNumber(TextBox_warframeHealth) * ((NumericUpDown_companionLinkHealth.Value + 1) * 0.15)))
+                End If
+                If CheckBox_companionLinkShield.Checked = True Then
+                    Shield = Math.Floor(Shield + (formatNumber(TextBox_warframeShield) * ((NumericUpDown_companionLinkShield.Value + 1) * 0.1)))
+                End If
+            End If
+            Dim damageReductionArmor = Armor / (300 + Armor)
+            Dim effectiveHealth = (Health / (1 - damageReductionArmor)) + Shield
+            TextBox_companionEHP.Text = Math.Ceiling(effectiveHealth)
+            TextBox_companionArmor.Text = Math.Floor(Armor)
+            TextBox_companionHealth.Text = Math.Floor(Health)
+            TextBox_companionShield.Text = Math.Floor(Shield)
+        Else
+            CheckBox_companionSurvivability.Enabled = False
+            GroupBox_companionSurvivability.Enabled = False
+            TextBox_companionArmor.Text = "-"
+            TextBox_companionHealth.Text = "-"
+            TextBox_companionShield.Text = "-"
+            TextBox_companionEHP.Text = "-"
+        End If
     End Sub
 
 End Class

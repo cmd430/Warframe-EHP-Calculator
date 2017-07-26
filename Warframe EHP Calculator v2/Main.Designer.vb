@@ -111,7 +111,7 @@ Partial Class Main
         Me.Label_focusPlaceholder = New System.Windows.Forms.Label()
         Me.Panel_RulerTwo = New System.Windows.Forms.Panel()
         Me.TabPage_companion = New System.Windows.Forms.TabPage()
-        Me.ComboBox_pets = New System.Windows.Forms.ComboBox()
+        Me.ComboBox_companions = New System.Windows.Forms.ComboBox()
         Me.TabPage_development = New System.Windows.Forms.TabPage()
         Me.ComboBox_umbraPower = New System.Windows.Forms.ComboBox()
         Me.ComboBox_umbraBasePower = New System.Windows.Forms.ComboBox()
@@ -157,6 +157,26 @@ Partial Class Main
         Me.Icons = New System.Windows.Forms.ImageList(Me.components)
         Me.Label_author = New System.Windows.Forms.Label()
         Me.Label_love = New System.Windows.Forms.Label()
+        Me.CheckBox_companionPrimeCollar = New System.Windows.Forms.CheckBox()
+        Me.CheckBox_companionSurvivability = New System.Windows.Forms.CheckBox()
+        Me.GroupBox_companionSurvivability = New System.Windows.Forms.GroupBox()
+        Me.CheckBox_companionLinkShield = New System.Windows.Forms.CheckBox()
+        Me.NumericUpDown_companionLinkShield = New System.Windows.Forms.NumericUpDown()
+        Me.CheckBox_companionLinkHealth = New System.Windows.Forms.CheckBox()
+        Me.NumericUpDown_companionLinkHealth = New System.Windows.Forms.NumericUpDown()
+        Me.CheckBox_companionLinkArmor = New System.Windows.Forms.CheckBox()
+        Me.NumericUpDown_companionLinkArmor = New System.Windows.Forms.NumericUpDown()
+        Me.NumericUpDown_companionStability = New System.Windows.Forms.NumericUpDown()
+        Me.Label_companionStability = New System.Windows.Forms.Label()
+        Me.TextBox_companionShield = New System.Windows.Forms.TextBox()
+        Me.TextBox_companionHealth = New System.Windows.Forms.TextBox()
+        Me.Label_companionShield = New System.Windows.Forms.Label()
+        Me.Label_companionHealth = New System.Windows.Forms.Label()
+        Me.TextBox_companionArmor = New System.Windows.Forms.TextBox()
+        Me.Label_companionArmor = New System.Windows.Forms.Label()
+        Me.GroupBox_companionResults = New System.Windows.Forms.GroupBox()
+        Me.Label_companionEHP = New System.Windows.Forms.Label()
+        Me.TextBox_companionEHP = New System.Windows.Forms.TextBox()
         Me.CustomTabControl_arcaneHelmets = New Warframe_EHP_Calculator_v2.CustomTabControl()
         Me.TabPage_arcaneHelmetsDefault = New System.Windows.Forms.TabPage()
         Me.Label_arcaneHelmetPlaceholder = New System.Windows.Forms.Label()
@@ -276,6 +296,12 @@ Partial Class Main
         Me.GroupBox_focus.SuspendLayout()
         Me.TabPage_companion.SuspendLayout()
         Me.TabPage_development.SuspendLayout()
+        Me.GroupBox_companionSurvivability.SuspendLayout()
+        CType(Me.NumericUpDown_companionLinkShield, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.NumericUpDown_companionLinkHealth, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.NumericUpDown_companionLinkArmor, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.NumericUpDown_companionStability, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox_companionResults.SuspendLayout()
         Me.CustomTabControl_arcaneHelmets.SuspendLayout()
         Me.TabPage_arcaneHelmetsDefault.SuspendLayout()
         Me.TabPage_arcaneHelmetsAsh.SuspendLayout()
@@ -1289,7 +1315,13 @@ Partial Class Main
         '
         'TabPage_companion
         '
-        Me.TabPage_companion.Controls.Add(Me.ComboBox_pets)
+        Me.TabPage_companion.Controls.Add(Me.GroupBox_companionResults)
+        Me.TabPage_companion.Controls.Add(Me.NumericUpDown_companionStability)
+        Me.TabPage_companion.Controls.Add(Me.Label_companionStability)
+        Me.TabPage_companion.Controls.Add(Me.CheckBox_companionSurvivability)
+        Me.TabPage_companion.Controls.Add(Me.GroupBox_companionSurvivability)
+        Me.TabPage_companion.Controls.Add(Me.CheckBox_companionPrimeCollar)
+        Me.TabPage_companion.Controls.Add(Me.ComboBox_companions)
         Me.TabPage_companion.ImageKey = "sentinel.png"
         Me.TabPage_companion.Location = New System.Drawing.Point(4, 29)
         Me.TabPage_companion.Name = "TabPage_companion"
@@ -1299,16 +1331,16 @@ Partial Class Main
         Me.TabPage_companion.Text = "Companions "
         Me.TabPage_companion.UseVisualStyleBackColor = True
         '
-        'ComboBox_pets
+        'ComboBox_companions
         '
-        Me.ComboBox_pets.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox_pets.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox_pets.FormattingEnabled = True
-        Me.ComboBox_pets.Items.AddRange(New Object() {"Select a Pet", "Adarza", "Smeeta", "Chesa", "Huras", "Raksa", "Sahasa", "Sunika", "Helminth Charger"})
-        Me.ComboBox_pets.Location = New System.Drawing.Point(70, 65)
-        Me.ComboBox_pets.Name = "ComboBox_pets"
-        Me.ComboBox_pets.Size = New System.Drawing.Size(272, 24)
-        Me.ComboBox_pets.TabIndex = 4
+        Me.ComboBox_companions.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox_companions.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.ComboBox_companions.FormattingEnabled = True
+        Me.ComboBox_companions.Items.AddRange(New Object() {"Select a Pet", "Adarza", "Smeeta", "Chesa", "Huras", "Raksa", "Sahasa", "Sunika", "Helminth Charger"})
+        Me.ComboBox_companions.Location = New System.Drawing.Point(280, 142)
+        Me.ComboBox_companions.Name = "ComboBox_companions"
+        Me.ComboBox_companions.Size = New System.Drawing.Size(233, 24)
+        Me.ComboBox_companions.TabIndex = 4
         '
         'TabPage_development
         '
@@ -1874,6 +1906,227 @@ Partial Class Main
         Me.Label_love.Size = New System.Drawing.Size(15, 15)
         Me.Label_love.TabIndex = 2
         Me.Label_love.Text = "♥"
+        '
+        'CheckBox_companionPrimeCollar
+        '
+        Me.CheckBox_companionPrimeCollar.AutoSize = True
+        Me.CheckBox_companionPrimeCollar.Enabled = False
+        Me.CheckBox_companionPrimeCollar.Location = New System.Drawing.Point(532, 145)
+        Me.CheckBox_companionPrimeCollar.Name = "CheckBox_companionPrimeCollar"
+        Me.CheckBox_companionPrimeCollar.Size = New System.Drawing.Size(103, 21)
+        Me.CheckBox_companionPrimeCollar.TabIndex = 5
+        Me.CheckBox_companionPrimeCollar.Text = "Prime Collar"
+        Me.CheckBox_companionPrimeCollar.UseVisualStyleBackColor = True
+        '
+        'CheckBox_companionSurvivability
+        '
+        Me.CheckBox_companionSurvivability.AutoSize = True
+        Me.CheckBox_companionSurvivability.Enabled = False
+        Me.CheckBox_companionSurvivability.Location = New System.Drawing.Point(293, 172)
+        Me.CheckBox_companionSurvivability.Name = "CheckBox_companionSurvivability"
+        Me.CheckBox_companionSurvivability.Size = New System.Drawing.Size(102, 21)
+        Me.CheckBox_companionSurvivability.TabIndex = 100
+        Me.CheckBox_companionSurvivability.Tag = "GroupBox_companionSurvivability"
+        Me.CheckBox_companionSurvivability.Text = "Survivability"
+        Me.CheckBox_companionSurvivability.UseVisualStyleBackColor = True
+        '
+        'GroupBox_companionSurvivability
+        '
+        Me.GroupBox_companionSurvivability.Controls.Add(Me.CheckBox_companionLinkShield)
+        Me.GroupBox_companionSurvivability.Controls.Add(Me.NumericUpDown_companionLinkShield)
+        Me.GroupBox_companionSurvivability.Controls.Add(Me.CheckBox_companionLinkHealth)
+        Me.GroupBox_companionSurvivability.Controls.Add(Me.NumericUpDown_companionLinkHealth)
+        Me.GroupBox_companionSurvivability.Controls.Add(Me.CheckBox_companionLinkArmor)
+        Me.GroupBox_companionSurvivability.Controls.Add(Me.NumericUpDown_companionLinkArmor)
+        Me.GroupBox_companionSurvivability.Enabled = False
+        Me.GroupBox_companionSurvivability.Location = New System.Drawing.Point(281, 172)
+        Me.GroupBox_companionSurvivability.Name = "GroupBox_companionSurvivability"
+        Me.GroupBox_companionSurvivability.Size = New System.Drawing.Size(233, 112)
+        Me.GroupBox_companionSurvivability.TabIndex = 101
+        Me.GroupBox_companionSurvivability.TabStop = False
+        Me.GroupBox_companionSurvivability.Text = "  "
+        '
+        'CheckBox_companionLinkShield
+        '
+        Me.CheckBox_companionLinkShield.AutoSize = True
+        Me.CheckBox_companionLinkShield.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.CheckBox_companionLinkShield.Location = New System.Drawing.Point(12, 79)
+        Me.CheckBox_companionLinkShield.Name = "CheckBox_companionLinkShield"
+        Me.CheckBox_companionLinkShield.Size = New System.Drawing.Size(100, 21)
+        Me.CheckBox_companionLinkShield.TabIndex = 22
+        Me.CheckBox_companionLinkShield.Text = "Shield Link:"
+        Me.CheckBox_companionLinkShield.UseVisualStyleBackColor = True
+        '
+        'NumericUpDown_companionLinkShield
+        '
+        Me.NumericUpDown_companionLinkShield.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.NumericUpDown_companionLinkShield.Location = New System.Drawing.Point(149, 78)
+        Me.NumericUpDown_companionLinkShield.Maximum = New Decimal(New Integer() {10, 0, 0, 0})
+        Me.NumericUpDown_companionLinkShield.Name = "NumericUpDown_companionLinkShield"
+        Me.NumericUpDown_companionLinkShield.Size = New System.Drawing.Size(74, 23)
+        Me.NumericUpDown_companionLinkShield.TabIndex = 21
+        '
+        'CheckBox_companionLinkHealth
+        '
+        Me.CheckBox_companionLinkHealth.AutoSize = True
+        Me.CheckBox_companionLinkHealth.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.CheckBox_companionLinkHealth.Location = New System.Drawing.Point(12, 53)
+        Me.CheckBox_companionLinkHealth.Name = "CheckBox_companionLinkHealth"
+        Me.CheckBox_companionLinkHealth.Size = New System.Drawing.Size(102, 21)
+        Me.CheckBox_companionLinkHealth.TabIndex = 20
+        Me.CheckBox_companionLinkHealth.Text = "Health Link:"
+        Me.CheckBox_companionLinkHealth.UseVisualStyleBackColor = True
+        '
+        'NumericUpDown_companionLinkHealth
+        '
+        Me.NumericUpDown_companionLinkHealth.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.NumericUpDown_companionLinkHealth.Location = New System.Drawing.Point(149, 52)
+        Me.NumericUpDown_companionLinkHealth.Maximum = New Decimal(New Integer() {10, 0, 0, 0})
+        Me.NumericUpDown_companionLinkHealth.Name = "NumericUpDown_companionLinkHealth"
+        Me.NumericUpDown_companionLinkHealth.Size = New System.Drawing.Size(74, 23)
+        Me.NumericUpDown_companionLinkHealth.TabIndex = 19
+        '
+        'CheckBox_companionLinkArmor
+        '
+        Me.CheckBox_companionLinkArmor.AutoSize = True
+        Me.CheckBox_companionLinkArmor.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.CheckBox_companionLinkArmor.Location = New System.Drawing.Point(12, 27)
+        Me.CheckBox_companionLinkArmor.Name = "CheckBox_companionLinkArmor"
+        Me.CheckBox_companionLinkArmor.Size = New System.Drawing.Size(99, 21)
+        Me.CheckBox_companionLinkArmor.TabIndex = 18
+        Me.CheckBox_companionLinkArmor.Text = "Armor Link:"
+        Me.CheckBox_companionLinkArmor.UseVisualStyleBackColor = True
+        '
+        'NumericUpDown_companionLinkArmor
+        '
+        Me.NumericUpDown_companionLinkArmor.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.NumericUpDown_companionLinkArmor.Location = New System.Drawing.Point(149, 26)
+        Me.NumericUpDown_companionLinkArmor.Maximum = New Decimal(New Integer() {10, 0, 0, 0})
+        Me.NumericUpDown_companionLinkArmor.Name = "NumericUpDown_companionLinkArmor"
+        Me.NumericUpDown_companionLinkArmor.Size = New System.Drawing.Size(74, 23)
+        Me.NumericUpDown_companionLinkArmor.TabIndex = 17
+        '
+        'NumericUpDown_companionStability
+        '
+        Me.NumericUpDown_companionStability.Enabled = False
+        Me.NumericUpDown_companionStability.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.NumericUpDown_companionStability.Increment = New Decimal(New Integer() {5, 0, 0, 0})
+        Me.NumericUpDown_companionStability.Location = New System.Drawing.Point(430, 288)
+        Me.NumericUpDown_companionStability.Minimum = New Decimal(New Integer() {95, 0, 0, -2147483648})
+        Me.NumericUpDown_companionStability.Name = "NumericUpDown_companionStability"
+        Me.NumericUpDown_companionStability.Size = New System.Drawing.Size(74, 23)
+        Me.NumericUpDown_companionStability.TabIndex = 103
+        Me.NumericUpDown_companionStability.Value = New Decimal(New Integer() {100, 0, 0, 0})
+        '
+        'Label_companionStability
+        '
+        Me.Label_companionStability.AutoSize = True
+        Me.Label_companionStability.Enabled = False
+        Me.Label_companionStability.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.Label_companionStability.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label_companionStability.Location = New System.Drawing.Point(290, 290)
+        Me.Label_companionStability.Name = "Label_companionStability"
+        Me.Label_companionStability.Size = New System.Drawing.Size(114, 17)
+        Me.Label_companionStability.TabIndex = 102
+        Me.Label_companionStability.Text = "Genetic Stability:"
+        '
+        'TextBox_companionShield
+        '
+        Me.TextBox_companionShield.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.TextBox_companionShield.Location = New System.Drawing.Point(121, 77)
+        Me.TextBox_companionShield.Name = "TextBox_companionShield"
+        Me.TextBox_companionShield.ReadOnly = True
+        Me.TextBox_companionShield.Size = New System.Drawing.Size(102, 23)
+        Me.TextBox_companionShield.TabIndex = 109
+        Me.TextBox_companionShield.Text = "-"
+        Me.TextBox_companionShield.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'TextBox_companionHealth
+        '
+        Me.TextBox_companionHealth.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.TextBox_companionHealth.Location = New System.Drawing.Point(121, 51)
+        Me.TextBox_companionHealth.Name = "TextBox_companionHealth"
+        Me.TextBox_companionHealth.ReadOnly = True
+        Me.TextBox_companionHealth.Size = New System.Drawing.Size(102, 23)
+        Me.TextBox_companionHealth.TabIndex = 108
+        Me.TextBox_companionHealth.Text = "-"
+        Me.TextBox_companionHealth.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Label_companionShield
+        '
+        Me.Label_companionShield.AutoSize = True
+        Me.Label_companionShield.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.Label_companionShield.Location = New System.Drawing.Point(10, 77)
+        Me.Label_companionShield.Name = "Label_companionShield"
+        Me.Label_companionShield.Size = New System.Drawing.Size(51, 17)
+        Me.Label_companionShield.TabIndex = 107
+        Me.Label_companionShield.Text = "Shield:"
+        '
+        'Label_companionHealth
+        '
+        Me.Label_companionHealth.AutoSize = True
+        Me.Label_companionHealth.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.Label_companionHealth.Location = New System.Drawing.Point(10, 51)
+        Me.Label_companionHealth.Name = "Label_companionHealth"
+        Me.Label_companionHealth.Size = New System.Drawing.Size(53, 17)
+        Me.Label_companionHealth.TabIndex = 106
+        Me.Label_companionHealth.Text = "Health:"
+        '
+        'TextBox_companionArmor
+        '
+        Me.TextBox_companionArmor.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.TextBox_companionArmor.Location = New System.Drawing.Point(121, 25)
+        Me.TextBox_companionArmor.Name = "TextBox_companionArmor"
+        Me.TextBox_companionArmor.ReadOnly = True
+        Me.TextBox_companionArmor.Size = New System.Drawing.Size(102, 23)
+        Me.TextBox_companionArmor.TabIndex = 105
+        Me.TextBox_companionArmor.Text = "-"
+        Me.TextBox_companionArmor.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Label_companionArmor
+        '
+        Me.Label_companionArmor.AutoSize = True
+        Me.Label_companionArmor.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.Label_companionArmor.Location = New System.Drawing.Point(10, 25)
+        Me.Label_companionArmor.Name = "Label_companionArmor"
+        Me.Label_companionArmor.Size = New System.Drawing.Size(50, 17)
+        Me.Label_companionArmor.TabIndex = 104
+        Me.Label_companionArmor.Text = "Armor:"
+        '
+        'GroupBox_companionResults
+        '
+        Me.GroupBox_companionResults.Controls.Add(Me.Label_companionEHP)
+        Me.GroupBox_companionResults.Controls.Add(Me.TextBox_companionEHP)
+        Me.GroupBox_companionResults.Controls.Add(Me.TextBox_companionArmor)
+        Me.GroupBox_companionResults.Controls.Add(Me.Label_companionShield)
+        Me.GroupBox_companionResults.Controls.Add(Me.TextBox_companionShield)
+        Me.GroupBox_companionResults.Controls.Add(Me.Label_companionHealth)
+        Me.GroupBox_companionResults.Controls.Add(Me.TextBox_companionHealth)
+        Me.GroupBox_companionResults.Controls.Add(Me.Label_companionArmor)
+        Me.GroupBox_companionResults.Location = New System.Drawing.Point(520, 172)
+        Me.GroupBox_companionResults.Name = "GroupBox_companionResults"
+        Me.GroupBox_companionResults.Size = New System.Drawing.Size(233, 147)
+        Me.GroupBox_companionResults.TabIndex = 110
+        Me.GroupBox_companionResults.TabStop = False
+        '
+        'Label_companionEHP
+        '
+        Me.Label_companionEHP.AutoSize = True
+        Me.Label_companionEHP.Location = New System.Drawing.Point(9, 118)
+        Me.Label_companionEHP.Name = "Label_companionEHP"
+        Me.Label_companionEHP.Size = New System.Drawing.Size(111, 17)
+        Me.Label_companionEHP.TabIndex = 111
+        Me.Label_companionEHP.Text = "Effective Health:"
+        '
+        'TextBox_companionEHP
+        '
+        Me.TextBox_companionEHP.Location = New System.Drawing.Point(121, 115)
+        Me.TextBox_companionEHP.Name = "TextBox_companionEHP"
+        Me.TextBox_companionEHP.ReadOnly = True
+        Me.TextBox_companionEHP.Size = New System.Drawing.Size(102, 23)
+        Me.TextBox_companionEHP.TabIndex = 110
+        Me.TextBox_companionEHP.Text = "-"
+        Me.TextBox_companionEHP.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'CustomTabControl_arcaneHelmets
         '
@@ -2871,8 +3124,17 @@ Partial Class Main
         Me.GroupBox_focus.ResumeLayout(False)
         Me.GroupBox_focus.PerformLayout()
         Me.TabPage_companion.ResumeLayout(False)
+        Me.TabPage_companion.PerformLayout()
         Me.TabPage_development.ResumeLayout(False)
         Me.TabPage_development.PerformLayout()
+        Me.GroupBox_companionSurvivability.ResumeLayout(False)
+        Me.GroupBox_companionSurvivability.PerformLayout()
+        CType(Me.NumericUpDown_companionLinkShield, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.NumericUpDown_companionLinkHealth, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.NumericUpDown_companionLinkArmor, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.NumericUpDown_companionStability, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox_companionResults.ResumeLayout(False)
+        Me.GroupBox_companionResults.PerformLayout()
         Me.CustomTabControl_arcaneHelmets.ResumeLayout(False)
         Me.TabPage_arcaneHelmetsDefault.ResumeLayout(False)
         Me.TabPage_arcaneHelmetsDefault.PerformLayout()
@@ -3105,7 +3367,7 @@ Partial Class Main
     Friend WithEvents Label_warframeEHP As Label
     Friend WithEvents TextBox_warframeEHP As TextBox
     Friend WithEvents RadioButton_locustHelmet As RadioButton
-    Friend WithEvents ComboBox_pets As ComboBox
+    Friend WithEvents ComboBox_companions As ComboBox
     Friend WithEvents Label_devUmbraStats As Label
     Friend WithEvents ComboBox_umbraEnergy As ComboBox
     Friend WithEvents ComboBox_umbraShield As ComboBox
@@ -3159,4 +3421,24 @@ Partial Class Main
     Friend WithEvents NumericUpDown_wardingHalo As NumericUpDown
     Friend WithEvents Label_ironSkin As Label
     Friend WithEvents NumericUpDown_ironSkin As NumericUpDown
+    Friend WithEvents CheckBox_companionPrimeCollar As CheckBox
+    Friend WithEvents CheckBox_companionSurvivability As CheckBox
+    Friend WithEvents GroupBox_companionSurvivability As GroupBox
+    Friend WithEvents CheckBox_companionLinkShield As CheckBox
+    Friend WithEvents NumericUpDown_companionLinkShield As NumericUpDown
+    Friend WithEvents CheckBox_companionLinkHealth As CheckBox
+    Friend WithEvents NumericUpDown_companionLinkHealth As NumericUpDown
+    Friend WithEvents CheckBox_companionLinkArmor As CheckBox
+    Friend WithEvents NumericUpDown_companionLinkArmor As NumericUpDown
+    Friend WithEvents NumericUpDown_companionStability As NumericUpDown
+    Friend WithEvents Label_companionStability As Label
+    Friend WithEvents GroupBox_companionResults As GroupBox
+    Friend WithEvents TextBox_companionArmor As TextBox
+    Friend WithEvents Label_companionShield As Label
+    Friend WithEvents TextBox_companionShield As TextBox
+    Friend WithEvents Label_companionHealth As Label
+    Friend WithEvents TextBox_companionHealth As TextBox
+    Friend WithEvents Label_companionArmor As Label
+    Friend WithEvents Label_companionEHP As Label
+    Friend WithEvents TextBox_companionEHP As TextBox
 End Class
