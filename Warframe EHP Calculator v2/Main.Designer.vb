@@ -1284,10 +1284,10 @@ Partial Class Main
         Me.CheckBox_power.Enabled = False
         Me.CheckBox_power.Location = New System.Drawing.Point(259, 156)
         Me.CheckBox_power.Name = "CheckBox_power"
-        Me.CheckBox_power.Size = New System.Drawing.Size(66, 21)
+        Me.CheckBox_power.Size = New System.Drawing.Size(124, 21)
         Me.CheckBox_power.TabIndex = 37
         Me.CheckBox_power.Tag = "GroupBox_power"
-        Me.CheckBox_power.Text = "Power"
+        Me.CheckBox_power.Text = "Power Strength"
         Me.CheckBox_power.UseVisualStyleBackColor = True
         '
         'GroupBox_power
