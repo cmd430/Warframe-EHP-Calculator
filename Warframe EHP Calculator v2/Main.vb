@@ -661,6 +661,9 @@
                     Case "Nekros"
                         If CheckBox_shieldOfShadows.Checked Then
                             Dim shieldOfShadows As Decimal = (0.06 * powerStrength) * NumericUpDown_shieldOfShadows.Value
+                            If shieldOfShadows > 0.9 Then
+                                shieldOfShadows = 0.9
+                            End If
                             damageReduction = shieldOfShadows
                         End If
                     Case "Nezha"
