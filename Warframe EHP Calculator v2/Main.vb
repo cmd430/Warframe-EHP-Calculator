@@ -1,20 +1,36 @@
 ﻿Public Class Main
 
-
     '
     '   TODO:\\ warframe abilities
-    '   TODO:\\ hookup stats
-    '   TODO:\\ hookup mods to affect stats
-    '   TODO:\\ calculate EHP
     '   TODO:\\ everything in companions
     '
 
+    Public Shared Function FindControlRecursive(ByVal list As List(Of Control), ByVal parent As Control, ByVal ctrlType As System.Type) As List(Of Control)
+        If parent Is Nothing Then Return list
+        If parent.GetType Is ctrlType Then
+            list.Add(parent)
+        End If
+        For Each child As Control In parent.Controls
+            FindControlRecursive(list, child, ctrlType)
+        Next
+        Return list
+    End Function
+
+    Public Function formatNumber(ByVal Number As ComboBox)
+        Return Convert.ToDecimal(Number.SelectedItem.ToString().Split("_")(0), New Globalization.CultureInfo("en-US"))
+    End Function
 
     Private Sub Main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         '
         '   Hide Debug controls
         '
         TabControl_main.TabPages.Remove(TabPage_development)
+        '
+        '   This should let the math not explode for non English OS's
+        '   But just incase i also use the function `formatNumber` to be safe
+        '
+        Threading.Thread.CurrentThread.CurrentCulture = Globalization.CultureInfo.CreateSpecificCulture("en-US")
+        Threading.Thread.CurrentThread.CurrentUICulture = Globalization.CultureInfo.CreateSpecificCulture("en-US")
         '
         '   Remove Tab Headers for Abilities
         '
@@ -30,41 +46,13 @@
         '
         '   Change Warframe select box to the default section
         '   also change all other combo boxs to index 0
+        '   comboboxs that match index are auto updated by the 
+        '   event handler
         '
         ComboBox_warframes.SelectedIndex = 0
-        ComboBox_baseArmor.SelectedIndex = 0
-        ComboBox_armor.SelectedIndex = 0
-        ComboBox_baseHealth.SelectedIndex = 0
-        ComboBox_health.SelectedIndex = 0
-        ComboBox_baseShield.SelectedIndex = 0
-        ComboBox_shield.SelectedIndex = 0
-        ComboBox_baseEnergy.SelectedIndex = 0
-        ComboBox_energy.SelectedIndex = 0
-        '   Primes
         ComboBox_primes.SelectedIndex = 0
-        ComboBox_primeBaseArmor.SelectedIndex = 0
-        ComboBox_primeArmor.SelectedIndex = 0
-        ComboBox_primeBaseHealth.SelectedIndex = 0
-        ComboBox_primeHealth.SelectedIndex = 0
-        ComboBox_primeBaseShield.SelectedIndex = 0
-        ComboBox_primeShield.SelectedIndex = 0
-        ComboBox_primeBaseEnergy.SelectedIndex = 0
-        ComboBox_primeEnergy.SelectedIndex = 0
-        '   Umbra
         ComboBox_umbras.SelectedIndex = 0
-        ComboBox_umbraBaseArmor.SelectedIndex = 0
-        ComboBox_umbraArmor.SelectedIndex = 0
-        ComboBox_umbraBaseHealth.SelectedIndex = 0
-        ComboBox_umbraHealth.SelectedIndex = 0
-        ComboBox_umbraBaseShield.SelectedIndex = 0
-        ComboBox_umbraShield.SelectedIndex = 0
-        ComboBox_umbraBaseEnergy.SelectedIndex = 0
-        ComboBox_umbraEnergy.SelectedIndex = 0
-        '   Pets
         ComboBox_pets.SelectedIndex = 0
-        ComboBox_petArmor.SelectedIndex = 0
-        ComboBox_petHealth.SelectedIndex = 0
-        ComboBox_petShield.SelectedIndex = 0
         '
         '   Abilities and Focus
         '
@@ -95,6 +83,25 @@
         '   Arcane Helmets
         '
         AddHandler CheckBox_arcaneHelmets.CheckedChanged, AddressOf Enable_Disable_Section
+        '
+        '   UI Update on warframe change - ability and helmet enabling
+        '   and recalc EHP on stat change (pretty much everything is linked in here)
+        '   Since there are so many things to addHandler for im going to do it at runtime
+        '   with loops to make my life easier
+        '
+        AddHandler ComboBox_warframes.SelectedIndexChanged, AddressOf Warframe_Value_Changed
+        Dim CheckBoxs As New List(Of Control)
+        For Each CheckBox As CheckBox In FindControlRecursive(CheckBoxs, TabControl_main, GetType(CheckBox))
+            AddHandler CheckBox.CheckedChanged, AddressOf Warframe_Value_Changed
+        Next
+        Dim RadioButtons As New List(Of Control)
+        For Each RadioButton As RadioButton In FindControlRecursive(RadioButtons, TabControl_main, GetType(RadioButton))
+            AddHandler RadioButton.CheckedChanged, AddressOf Warframe_Value_Changed
+        Next
+        Dim NumericUpDowns As New List(Of Control)
+        For Each NumericUpDown As NumericUpDown In FindControlRecursive(NumericUpDowns, TabControl_main, GetType(NumericUpDown))
+            AddHandler NumericUpDown.ValueChanged, AddressOf Warframe_Value_Changed
+        Next
     End Sub
 
     Public Sub Toggle_Warframe_Type(sender As Object, e As EventArgs)
@@ -134,70 +141,644 @@
         TabPage_warframe.Controls(sender.tag).Enabled = sender.Checked
     End Sub
 
-    Private Sub ComboBox_warframes_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox_warframes.SelectedIndexChanged
+    Private Sub Warframe_Value_Changed(sender As Object, e As EventArgs)
         '
-        '   Set warframe to calculate for
+        '   Default Stats
         '
+        Dim baseArmor As Decimal = 0.0
+        Dim Armor As Decimal = 0.0
+        Dim baseHealth As Decimal = 0.0
+        Dim Health As Decimal = 0.0
+        Dim baseShield As Decimal = 0.0
+        Dim Shield As Decimal = 0.0
+        Dim baseEnergy As Decimal = 0.0
+        Dim Energy As Decimal = 0.0
+        Dim basePowerStrength As Decimal = 0.0
+        Dim powerStrength As Decimal = 0.0
+        '
+        '   Default Multipliers (From Mods)
+        '   and bonus added armor
+        '
+        Dim armorMultiplier As Decimal = 0.0
+        Dim healthMultiplier As Decimal = 0.0
+        Dim shieldMultiplier As Decimal = 0.0
+        Dim energyMultiplier As Decimal = 0.0
+        Dim armorBonus As Decimal = 0.0
+        Dim healthBonus As Decimal = 0.0
+        Dim shieldBonus As Decimal = 0.0 'unused
+        Dim energyBonus As Decimal = 0.0 'unused
+        Dim damageReduction As Decimal = 0.0
+        '
+        '   Sepical Hidden stat for abilities that
+        '   100% absorb dmg
+        '
+        Dim damageAbsorbstion As Decimal = 0.0
+        '
+        '   Does the frame have a Prime or Umbra version ?
+        '   if so we can enable to checkbox
+        '
+        If ComboBox_primes.Items.Contains(ComboBox_warframes.SelectedItem) Then
+            CheckBox_isPrime.Enabled = True
+        Else
+            CheckBox_isPrime.Enabled = False
+        End If
+        If ComboBox_umbras.Items.Contains(ComboBox_warframes.SelectedItem) Then
+            CheckBox_isUmbra.Enabled = True
+        Else
+            CheckBox_isUmbra.Enabled = False
+        End If
+        '
+        '   Special Modifiers
+        '
+        '   some frames have passives that change fixed things
+        '   currently only Harrow matters for this app
+        '
+        Select Case ComboBox_warframes.SelectedItem
+            Case "Harrow"
+                NumericUpDown_oversheilds.Maximum = 2200
+            Case Else
+                NumericUpDown_oversheilds.Maximum = 1200
+        End Select
+        '
+        '  Enable/Disable Arcane Helmets selection
+        '
+        Select Case ComboBox_warframes.SelectedItem
+            Case "Ash"
+                CheckBox_arcaneHelmets.Enabled = True
+                CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsAsh
+            Case "Banshee"
+                CheckBox_arcaneHelmets.Enabled = True
+                CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsBanshee
+            Case "Ember"
+                CheckBox_arcaneHelmets.Enabled = True
+                CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsEmber
+            Case "Excalibur"
+                CheckBox_arcaneHelmets.Enabled = True
+                CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsExcalibur
+            Case "Frost"
+                CheckBox_arcaneHelmets.Enabled = True
+                CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsFrost
+            Case "Loki"
+                CheckBox_arcaneHelmets.Enabled = True
+                CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsLoki
+            Case "Mag"
+                CheckBox_arcaneHelmets.Enabled = True
+                CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsMag
+            Case "Nova"
+                CheckBox_arcaneHelmets.Enabled = True
+                CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsNova
+            Case "Nyx"
+                CheckBox_arcaneHelmets.Enabled = True
+                CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsNyx
+            Case "Rhino"
+                CheckBox_arcaneHelmets.Enabled = True
+                CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsRhino
+            Case "Saryn"
+                CheckBox_arcaneHelmets.Enabled = True
+                CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsSaryn
+            Case "Trinity"
+                CheckBox_arcaneHelmets.Enabled = True
+                CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsTrinity
+            Case "Vauban"
+                CheckBox_arcaneHelmets.Enabled = True
+                CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsVauban
+            Case "Volt"
+                CheckBox_arcaneHelmets.Enabled = True
+                CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsVolt
+            Case Else
+                CheckBox_arcaneHelmets.Enabled = False
+                CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsDefault
+        End Select
+        '
+        '   Enable/Disable Abilities Selection
+        '
+        Select Case ComboBox_warframes.SelectedItem
+            Case "Chroma"
+                CheckBox_abilities.Enabled = True
+                CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesChroma
+            Case "Frost"
+                CheckBox_abilities.Enabled = True
+                CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesFrost
+            Case "Inaros"
+                CheckBox_abilities.Enabled = True
+                CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesInaros
+            Case "Mesa"
+                CheckBox_abilities.Enabled = True
+                CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesMesa
+            Case "Mirage"
+                CheckBox_abilities.Enabled = True
+                CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesMirage
+            Case "Nekros"
+                CheckBox_abilities.Enabled = True
+                CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesNekros
+            Case "Nezha"
+                CheckBox_abilities.Enabled = True
+                CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesNezha
+            Case "Nidus"
+                CheckBox_abilities.Enabled = True
+                CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesNidus
+            Case "Oberon"
+                CheckBox_abilities.Enabled = True
+                CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesOberon
+            Case "Rhino"
+                CheckBox_abilities.Enabled = True
+                CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesRhino
+            Case "Trinity"
+                CheckBox_abilities.Enabled = True
+                CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesTrinity
+            Case "Valkyr"
+                CheckBox_abilities.Enabled = True
+                CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesValkyr
+            Case Else
+                CheckBox_abilities.Enabled = False
+                CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesDefault
+        End Select
         If ComboBox_warframes.SelectedIndex > 0 Then
             '
-            '   Arcane Helmet Selection
+            '   Enable Selections
+            '
+            CheckBox_aura.Enabled = True
+            GroupBox_aura.Enabled = CheckBox_aura.Checked
+            CheckBox_survivability.Enabled = True
+            GroupBox_survivability.Enabled = CheckBox_survivability.Checked
+            CheckBox_miscellaneous.Enabled = True
+            GroupBox_miscellaneous.Enabled = CheckBox_miscellaneous.Checked
+            CheckBox_power.Enabled = True
+            GroupBox_power.Enabled = CheckBox_power.Checked
+            CheckBox_arcanes.Enabled = True
+            GroupBox_arcanes.Enabled = CheckBox_arcanes.Checked
+            CheckBox_dragonKeys.Enabled = True
+            GroupBox_dragonKeys.Enabled = CheckBox_dragonKeys.Checked
+            '
+            '   Focus is currently disabled
+            '
+            CheckBox_focus.Enabled = False
+            GroupBox_focus.Enabled = CheckBox_focus.Checked
+            '
+            CheckBox_oversheilds.Enabled = True
+            GroupBox_oversheilds.Enabled = CheckBox_oversheilds.Checked
+            CheckBox_abilities.Enabled = True
+            CustomTabControl_abilitys.Enabled = CheckBox_abilities.Checked
+            CheckBox_arcaneHelmets.Enabled = True
+            CustomTabControl_arcaneHelmets.Enabled = CheckBox_arcaneHelmets.Checked
+
+            If CheckBox_isPrime.Checked And CheckBox_isPrime.Enabled Then
+                '
+                '   Prime Warframe stats
+                '
+                ComboBox_primes.SelectedIndex = ComboBox_primes.Items.IndexOf(ComboBox_warframes.SelectedItem)
+                ComboBox_primeBaseArmor.SelectedIndex = ComboBox_primes.SelectedIndex
+                ComboBox_primeArmor.SelectedIndex = ComboBox_primes.SelectedIndex
+                ComboBox_primeBaseHealth.SelectedIndex = ComboBox_primes.SelectedIndex
+                ComboBox_primeHealth.SelectedIndex = ComboBox_primes.SelectedIndex
+                ComboBox_primeBaseShield.SelectedIndex = ComboBox_primes.SelectedIndex
+                ComboBox_primeShield.SelectedIndex = ComboBox_primes.SelectedIndex
+                ComboBox_primeBaseEnergy.SelectedIndex = ComboBox_primes.SelectedIndex
+                ComboBox_primeEnergy.SelectedIndex = ComboBox_primes.SelectedIndex
+                ComboBox_primeBasePower.SelectedIndex = ComboBox_primes.SelectedIndex
+                ComboBox_primePower.SelectedIndex = ComboBox_primes.SelectedIndex
+
+                baseArmor = formatNumber(ComboBox_primeBaseArmor)
+                Armor = formatNumber(ComboBox_primeArmor)
+                baseHealth = formatNumber(ComboBox_primeBaseHealth)
+                Health = formatNumber(ComboBox_primeHealth)
+                baseShield = formatNumber(ComboBox_primeBaseShield)
+                Shield = formatNumber(ComboBox_primeShield)
+                baseEnergy = formatNumber(ComboBox_primeBaseEnergy)
+                Energy = formatNumber(ComboBox_primeEnergy)
+                basePowerStrength = formatNumber(ComboBox_primeBasePower) / 100
+                powerStrength = formatNumber(ComboBox_primePower) / 100
+            ElseIf CheckBox_isUmbra.Checked And CheckBox_isUmbra.Enabled Then
+                '
+                '   Umbra Warframe stats
+                '
+                ComboBox_umbras.SelectedIndex = ComboBox_umbras.Items.IndexOf(ComboBox_warframes.SelectedItem)
+                ComboBox_umbraBaseArmor.SelectedIndex = ComboBox_umbras.SelectedIndex
+                ComboBox_umbraArmor.SelectedIndex = ComboBox_umbras.SelectedIndex
+                ComboBox_umbraBaseHealth.SelectedIndex = ComboBox_umbras.SelectedIndex
+                ComboBox_umbraHealth.SelectedIndex = ComboBox_umbras.SelectedIndex
+                ComboBox_umbraBaseShield.SelectedIndex = ComboBox_umbras.SelectedIndex
+                ComboBox_umbraShield.SelectedIndex = ComboBox_umbras.SelectedIndex
+                ComboBox_umbraBaseEnergy.SelectedIndex = ComboBox_umbras.SelectedIndex
+                ComboBox_umbraEnergy.SelectedIndex = ComboBox_umbras.SelectedIndex
+                ComboBox_umbraBasePower.SelectedIndex = ComboBox_umbras.SelectedIndex
+                ComboBox_umbraPower.SelectedIndex = ComboBox_umbras.SelectedIndex
+
+                baseArmor = formatNumber(ComboBox_umbraBaseArmor)
+                Armor = formatNumber(ComboBox_umbraArmor)
+                baseHealth = formatNumber(ComboBox_umbraBaseHealth)
+                Health = formatNumber(ComboBox_umbraHealth)
+                baseShield = formatNumber(ComboBox_umbraBaseShield)
+                Shield = formatNumber(ComboBox_umbraShield)
+                baseEnergy = formatNumber(ComboBox_umbraBaseEnergy)
+                Energy = formatNumber(ComboBox_umbraEnergy)
+                basePowerStrength = formatNumber(ComboBox_umbraBasePower) / 100
+                powerStrength = formatNumber(ComboBox_umbraPower) / 100
+            Else
+                '
+                '   Normal Warframe stats
+                '
+                ComboBox_baseArmor.SelectedIndex = ComboBox_warframes.SelectedIndex
+                ComboBox_armor.SelectedIndex = ComboBox_warframes.SelectedIndex
+                ComboBox_baseHealth.SelectedIndex = ComboBox_warframes.SelectedIndex
+                ComboBox_health.SelectedIndex = ComboBox_warframes.SelectedIndex
+                ComboBox_baseShield.SelectedIndex = ComboBox_warframes.SelectedIndex
+                ComboBox_shield.SelectedIndex = ComboBox_warframes.SelectedIndex
+                ComboBox_baseEnergy.SelectedIndex = ComboBox_warframes.SelectedIndex
+                ComboBox_energy.SelectedIndex = ComboBox_warframes.SelectedIndex
+                ComboBox_basePower.SelectedIndex = ComboBox_warframes.SelectedIndex
+                ComboBox_power.SelectedIndex = ComboBox_warframes.SelectedIndex
+
+                baseArmor = formatNumber(ComboBox_baseArmor)
+                Armor = formatNumber(ComboBox_armor)
+                baseHealth = formatNumber(ComboBox_baseHealth)
+                Health = formatNumber(ComboBox_health)
+                baseShield = formatNumber(ComboBox_baseShield)
+                Shield = formatNumber(ComboBox_shield)
+                baseEnergy = formatNumber(ComboBox_baseEnergy)
+                Energy = formatNumber(ComboBox_energy)
+                basePowerStrength = formatNumber(ComboBox_basePower) / 100
+                powerStrength = formatNumber(ComboBox_power) / 100
+            End If
+            '
+            ' Overshields
+            '
+            If CheckBox_oversheilds.Checked Then
+                shieldBonus = shieldBonus + NumericUpDown_oversheilds.Value
+            End If
+            '
+            '   Arcane Helmets
             '
             Select Case ComboBox_warframes.SelectedItem
                 Case "Ash"
-                    CheckBox_arcaneHelmets.Enabled = True
-                    CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsAsh
+                    If RadioButton_locustHelmet.Checked Then
+                        Energy = Energy + (baseEnergy * 0.2)
+                    End If
                 Case "Banshee"
-                    CheckBox_arcaneHelmets.Enabled = True
-                    CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsBanshee
+                    If RadioButton_reverbHelmet.Checked Then
+                        Health = Health - (baseHealth * 0.05)
+                        Energy = Energy + (baseEnergy * 0.1)
+                    End If
                 Case "Ember"
-                    CheckBox_arcaneHelmets.Enabled = True
-                    CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsEmber
+                    If RadioButton_phoenixHelmet.Checked Then
+                        Shield = Shield + (baseShield * 0.05)
+                        Energy = Energy + (baseEnergy * 0.25)
+                    ElseIf RadioButton_backdraftHelmet.Checked Then
+                        Health = Health + (baseHealth * 0.15)
+                    End If
                 Case "Excalibur"
-                    CheckBox_arcaneHelmets.Enabled = True
-                    CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsExcalibur
+                    If RadioButton_avalonHelmet.Checked Then
+                        Health = Health - (baseHealth * 0.05)
+                        Shield = Shield + (baseShield * 0.25)
+                    ElseIf RadioButton_pendragonHelmet.Checked Then
+                        Armor = Armor - (baseArmor * 0.05)
+                    End If
                 Case "Frost"
-                    CheckBox_arcaneHelmets.Enabled = True
-                    CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsFrost
+                    If RadioButton_auroraHelmet.Checked Then
+                        Health = Health - (baseHealth * 0.05)
+                        Armor = Armor + (baseArmor * 0.25)
+                    ElseIf RadioButton_squallHelmet.Checked Then
+                        Shield = Shield - (baseShield * 0.05)
+                    End If
                 Case "Loki"
-                    CheckBox_arcaneHelmets.Enabled = True
-                    CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsLoki
+                    If RadioButton_essenceHelmet.Checked Then
+                        Armor = Armor - (baseArmor * 0.05)
+                    ElseIf RadioButton_swindleHelmet.Checked Then
+                        Health = Health - (baseHealth * 0.05)
+                    End If
                 Case "Mag"
-                    CheckBox_arcaneHelmets.Enabled = True
-                    CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsMag
+                    If RadioButton_coilHelmet.Checked Then
+                        Shield = Shield - (baseShield * 0.05)
+                    ElseIf RadioButton_gaussHelmet.Checked Then
+                        Energy = Energy + (baseEnergy * 0.25)
+                    End If
                 Case "Nova"
-                    CheckBox_arcaneHelmets.Enabled = True
-                    CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsNova
+                    If RadioButton_fluxHelmet.Checked Then
+                        Health = Health - (baseHealth * 0.05)
+                    End If
                 Case "Nyx"
-                    CheckBox_arcaneHelmets.Enabled = True
-                    CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsNyx
+                    If RadioButton_menticideHelmet.Checked Then
+                        Shield = Shield - (baseShield * 0.05)
+                    ElseIf RadioButton_vespaHelmet.Checked Then
+                        Armor = Armor - (baseArmor * 0.05)
+                    End If
                 Case "Rhino"
-                    CheckBox_arcaneHelmets.Enabled = True
-                    CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsRhino
+                    If RadioButton_thrak.Checked Then
+                        Health = Health + (baseHealth * 0.25)
+                    ElseIf RadioButton_vanguardHelmet.Checked Then
+                        powerStrength = powerStrength - (powerStrength * 0.05)
+                    End If
                 Case "Saryn"
-                    CheckBox_arcaneHelmets.Enabled = True
-                    CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsSaryn
+                    If RadioButton_hemlockHelmet.Checked Then
+                        Health = Health - (baseHealth * 0.05)
+                    End If
                 Case "Trinity"
-                    CheckBox_arcaneHelmets.Enabled = True
-                    CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsTrinity
+                    If RadioButton_auraHelmet.Checked Then
+                        Health = Health - (baseHealth * 0.05)
+                    ElseIf RadioButton_meridianHelmet.Checked Then
+                        Shield = Shield + (baseShield * 0.15)
+                    End If
                 Case "Vauban"
-                    CheckBox_arcaneHelmets.Enabled = True
-                    CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsVauban
+                    If RadioButton_espritHelmet.Checked Then
+                        Shield = Shield - (baseShield * 0.1)
+                        Energy = Energy + (baseEnergy * 0.1)
+                    End If
                 Case "Volt"
-                    CheckBox_arcaneHelmets.Enabled = True
-                    CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsVolt
-                Case Else
-                    CheckBox_arcaneHelmets.Enabled = False
-                    CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsDefault
+                    If RadioButton_pulseHelmet.Checked Then
+                        Shield = Shield - (baseShield * 0.05)
+                    ElseIf RadioButton_stormHelmet.Checked Then
+                        powerStrength = powerStrength + (powerStrength * 0.1)
+                    End If
             End Select
+            '
+            '   Aura Mods
+            '
+            If CheckBox_aura.Checked Then
+                If RadioButton_physique.Checked Then
+                    Dim physique As Decimal = 0.03 + (NumericUpDown_physique.Value * 0.03)
+                    If CheckBox_coactionDrift.Checked And CheckBox_miscellaneous.Checked Then
+                        '
+                        '   Coaction Drift is Strange, it gives you a 0.15 boost to all Auras
+                        '   and another 0.15 boost to your Aura ontop of the other for a total
+                        '   of 0.15 * (1 + 0.15) + 0.15 = 0.3225 (values are for max rank mod)
+                        '
+                        Dim coactionDrit As Decimal = 0.025 + (0.025 * NumericUpDown_coactionDrift.Value)
+                        healthMultiplier = healthMultiplier + (physique + (physique * (coactionDrit * (1 + coactionDrit) + coactionDrit)))
+                    Else
+                        healthMultiplier = healthMultiplier + physique
+                    End If
+                ElseIf RadioButton_standUnited.Checked Then
+                    Dim standUnited As Decimal = 0.0425 + (NumericUpDown_standUnited.Value * 0.0425)
+                    If CheckBox_coactionDrift.Checked And CheckBox_miscellaneous.Checked Then
+                        Dim coactionDrit As Decimal = 0.025 + (0.025 * NumericUpDown_coactionDrift.Value)
+                        armorMultiplier = armorMultiplier + (standUnited + (standUnited * (coactionDrit * (1 + coactionDrit) + coactionDrit)))
+                    Else
+                        armorMultiplier = armorMultiplier + standUnited
+                    End If
+                ElseIf RadioButton_growingPower.Checked Then
+                    Dim growingPower As Decimal = basePowerStrength * (0.04166666667 + (NumericUpDown_growingPower.Value * 0.04166666667))
+                    If CheckBox_coactionDrift.Checked And CheckBox_miscellaneous.Checked Then
+                        Dim coactionDrit As Decimal = 0.025 + (0.025 * NumericUpDown_coactionDrift.Value)
+                        powerStrength = powerStrength + (growingPower + (growingPower * (coactionDrit * (1 + coactionDrit) + coactionDrit)))
+                    Else
+                        powerStrength = powerStrength + growingPower
+                    End If
+                End If
+            End If
+            '
+            '   Armor / Health / Shield Mods
+            '
+            If CheckBox_survivability.Checked Then
+                'Armor
+                If CheckBox_steelFiber.Checked Then
+                    armorMultiplier = armorMultiplier + (0.1 + (NumericUpDown_steelFiber.Value * 0.1))
+                End If
+                If CheckBox_armoredAgility.Checked Then
+                    armorMultiplier = armorMultiplier + (0.075 + (NumericUpDown_armoredAgility.Value * 0.075))
+                End If
+                If CheckBox_healthConversion.Checked Then
+                    armorBonus = (armorBonus + ((75 + (NumericUpDown_healthConversion.Value * 75)) * NumericUpDown_healthConversionStacks.Value))
+                End If
+                'health
+                If CheckBox_vitality.Checked Then
+                    healthMultiplier = healthMultiplier + (0.4 + (NumericUpDown_vitality.Value * 0.4))
+                End If
+                If CheckBox_quickThinking.Checked Then
+                    healthBonus = healthBonus + ((0.4 * (1 + NumericUpDown_quickThinking.Value)) * Energy)
+                End If
+                'shields
+                If CheckBox_redirection.Checked Then
+                    shieldMultiplier = shieldMultiplier + (0.4 + (NumericUpDown_redirection.Value * 0.4))
+                End If
+                'dual
+                If CheckBox_vigor.Checked Then
+                    healthMultiplier = healthMultiplier + (0.2 + (NumericUpDown_vigor.Value * 0.2))
+                    shieldMultiplier = shieldMultiplier + (0.2 + (NumericUpDown_vigor.Value * 0.2))
+                End If
+            End If
+            '
+            '   Energy Mods
+            '
+            If CheckBox_miscellaneous.Checked Then
+                If CheckBox_enduranceDrift.Checked Then
+                    energyMultiplier = energyMultiplier + (0.025 + (NumericUpDown_enduranceDrift.Value * 0.025))
+                End If
+                If CheckBox_flow.Checked Then
+                    energyMultiplier = energyMultiplier + (0.25 + (NumericUpDown_flow.Value * 0.25))
+                End If
+            End If
+            '
+            '   Power Strength Mods
+            '
+            If CheckBox_power.Checked Then
+                If CheckBox_overextended.Checked Then
+                    powerStrength = powerStrength - (basePowerStrength * (0.1 + (NumericUpDown_overextended.Value * 0.1)))
+                End If
+                If CheckBox_blindRage.Checked Then
+                    powerStrength = powerStrength + (basePowerStrength * (0.09 + (NumericUpDown_blindRage.Value * 0.09)))
+                End If
+                If CheckBox_energyConversion.Checked Then
+                    powerStrength = powerStrength + (basePowerStrength * (0.08333333333 + (NumericUpDown_energyConversion.Value * 0.08333333333)))
+                End If
+                If CheckBox_intensify.Checked Then
+                    powerStrength = powerStrength + (basePowerStrength * (0.05 + (NumericUpDown_intensify.Value * 0.05)))
+                End If
+                If CheckBox_transientFortitude.Checked Then
+                    powerStrength = powerStrength + (basePowerStrength * (0.05 + (NumericUpDown_transientFortitude.Value * 0.05)))
+                End If
+                If CheckBox_powerDrift.Checked Then
+                    powerStrength = powerStrength + (basePowerStrength * (0.025 + (NumericUpDown_powerDrift.Value * 0.025)))
+                End If
+            End If
+            '
+            '   Abilities
+            '
+            If CheckBox_abilities.Checked Then
+                Select Case ComboBox_warframes.SelectedItem
+                    Case "Chroma"
+                        If CheckBox_elementalWard.Checked Then
+                            Dim elementalWard As Decimal = 0.0
+                            If RadioButton_iceChroma.Checked Then
+                                elementalWard = 1.5 * powerStrength
+                                armorMultiplier = armorMultiplier + elementalWard
+                            ElseIf RadioButton_fireChroma.Checked Then
+                                elementalWard = 2.0 * powerStrength
+                                healthMultiplier = healthMultiplier + elementalWard
+                            ElseIf RadioButton_electricChroma.Checked Then
+                                elementalWard = 1.0 * powerStrength
+                                shieldMultiplier = shieldMultiplier + elementalWard
+                            End If
+                        End If
+                        '
+                        '   Vex armor is down with the final health calulations because of how it works
+                        '   it'd be a pain to do without writing extra crap...
+                        '
+                    Case "Frost"
+                        If CheckBox_icyAvalanche.Checked Then
+                            Dim icyAvalance As Decimal = (0.6 * powerStrength) * NumericUpDown_icyAvalanche.Value
+                            damageAbsorbstion = icyAvalance
+                        End If
+                    Case "Inaros"
+                        If CheckBox_scarabSwarm.Checked Then
+                            Dim scarabSwarm As Decimal = 2 * NumericUpDown_scarabSwarm.Value
+                            armorBonus = armorBonus + scarabSwarm
+                        End If
+                    Case "Mesa"
+                        If CheckBox_shatterShield.Checked Then
+                            Dim shatterShield As Decimal = 0.8 * powerStrength
+                            If shatterShield > 0.95 Then
+                                shatterShield = 0.95
+                            End If
+                            damageReduction = damageReduction + shatterShield
+                        End If
+                    Case "Mirage"
+                        If CheckBox_eclipse.Checked Then
+                            Dim eclipse As Decimal = 0.75 * powerStrength
+                            If eclipse > 0.95 Then
+                                eclipse = 0.95
+                            End If
+                            damageReduction = damageReduction + eclipse
+                        End If
+                    Case "Nekros"
+                        If CheckBox_shieldOfShadows.Checked Then
+                            Dim shieldOfShadows As Decimal = (0.06 * powerStrength) * NumericUpDown_shieldOfShadows.Value
+                            damageReduction = shieldOfShadows
+                        End If
+                    Case "Nezha"
+                        If CheckBox_wardingHalo.Checked Then
+                            Dim wardingHaloArmor As Decimal = 2.5 * Armor * (1 + armorMultiplier)
+                            Dim wardingHaloHealth As Decimal = 900
+                            Dim wardingHalo As Decimal = ((wardingHaloHealth + wardingHaloArmor) * powerStrength) + NumericUpDown_wardingHalo.Value
+                            damageAbsorbstion = wardingHalo
+                        End If
+                    Case "Nidus"
+                        If CheckBox_mutationStacks.Checked Then
+                            Dim validStacks = Math.Floor(NumericUpDown_mutationStacks.Value / 5)
+                            armorBonus = armorBonus + (20 * validStacks)
+                        End If
+                    Case "Oberon"
+                        If CheckBox_ironRenewal.Checked Then
+                            Dim ironRenewal As Decimal = 2.0 * powerStrength
+                            armorMultiplier = armorMultiplier + ironRenewal
+                        End If
+                        If CheckBox_hallowedReckoning.Checked Then
+                            Dim hallowedReckoning As Decimal = 250
+                            armorBonus = armorBonus + hallowedReckoning
+                        End If
+                    Case "Rhino"
+                        If CheckBox_ironcladCharge.Checked Then
+                            Dim ironcladCharge As Decimal = (0.5 * powerStrength) * NumericUpDown_ironcladCharge.Value
+                            armorMultiplier = armorMultiplier + ironcladCharge
+                        End If
+                        If CheckBox_ironSkin.Checked Then
+                            Dim ironSkinArmor As Decimal = 2.5 * Armor * (1 + armorMultiplier)
+                            Dim ironSkinHealth As Decimal = 1200
+                            Dim ironSkin As Decimal = ((ironSkinHealth + ironSkinArmor) * powerStrength) + NumericUpDown_ironSkin.Value
+                            damageAbsorbstion = ironSkin
+                        End If
+                    Case "Trinity"
+                        Dim link As Decimal = 0.75
+                        Dim blessing As Decimal = 0.5 * powerStrength
+                        If CheckBox_link.Checked And Not CheckBox_blessing.Checked Then
+                            damageReduction = link
+                        ElseIf CheckBox_blessing.Checked And Not CheckBox_link.Checked Then
+                            If blessing > 0.75 Then
+                                blessing = 0.75
+                            End If
+                            damageReduction = blessing
+                        ElseIf CheckBox_link.Checked And CheckBox_blessing.Checked Then
+                            If blessing > 0.75 Then
+                                blessing = 0.75
+                            End If
+                            damageReduction = blessing + ((1 - blessing) * link)
+                        End If
+                    Case "Valkyr"
+                        If CheckBox_warcry.Checked Then
+                            Dim warcryMultiplier As Decimal = 0.5 * powerStrength
+                            armorMultiplier = armorMultiplier + warcryMultiplier
+                        End If
+                End Select
+            End If
+            '
+            '   Calculate Values (with special support for Vex armor)
+            '
+            If CheckBox_vexArmor.Checked And ComboBox_warframes.SelectedItem = "Chroma" And CheckBox_abilities.Checked Then
+                Dim vexArmor As Decimal = 3.5
+                Armor = ((baseArmor * (((1 + armorMultiplier) * vexArmor) * powerStrength)) + (Armor - baseArmor)) + armorBonus
+            Else
+                Armor = ((baseArmor * (1 + armorMultiplier)) + (Armor - baseArmor)) + armorBonus
+            End If
+            Health = ((baseHealth * (1 + healthMultiplier)) + (Health - baseHealth)) + healthBonus
+            Shield = ((baseShield * (1 + shieldMultiplier)) + (Shield - baseShield)) + shieldBonus
+            Energy = Math.Ceiling(Energy) + Math.Floor((baseEnergy * energyMultiplier) + energyBonus)
+            '
+            '   Dragon Keys
+            '
+            If CheckBox_dragonKeys.Checked Then
+                If RadioButton_bleedingKey.Checked Then
+                    Health = Health * 0.25
+                ElseIf RadioButton_decayingKey.Checked Then
+                    Shield = Shield * 0.25
+                End If
+            End If
+            TextBox_warframeArmor.Text = Math.Floor(Armor)
+            TextBox_warframeHealth.Text = Math.Floor(Health)
+            TextBox_warframeShield.Text = Math.Floor(Shield)
+            TextBox_warframeEnergy.Text = Math.Floor(Energy)
+            TextBox_warframePowerStrength.Text = Math.Floor(powerStrength * 100)
+            '
+            '   Calculate EHP
+            '
+            Dim damageReductionArmor As Decimal = Armor / (300 + Armor)
+            Dim totalDamageReduction As Decimal = damageReductionArmor + ((1 - damageReductionArmor) * damageReduction)
+            Dim effectiveHealth As Integer = Math.Ceiling((Health / (1 - totalDamageReduction)) + (Shield + damageAbsorbstion))
+            TextBox_warframeEHP.Text = effectiveHealth
         Else
             '
-            '   No Warframe Selected
+            '   Disable Selections
             '
-            CheckBox_arcaneHelmets.Enabled = False
-            CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsDefault
+            CheckBox_aura.Enabled = False
+            GroupBox_aura.Enabled = False
+            CheckBox_survivability.Enabled = False
+            GroupBox_survivability.Enabled = False
+            CheckBox_miscellaneous.Enabled = False
+            GroupBox_miscellaneous.Enabled = False
+            CheckBox_power.Enabled = False
+            GroupBox_power.Enabled = False
+            CheckBox_arcanes.Enabled = False
+            GroupBox_arcanes.Enabled = False
+            CheckBox_dragonKeys.Enabled = False
+            GroupBox_dragonKeys.Enabled = False
+            CheckBox_focus.Enabled = False
+            GroupBox_focus.Enabled = False
+            CheckBox_oversheilds.Enabled = False
+            GroupBox_oversheilds.Enabled = False
             CheckBox_abilities.Enabled = False
-            CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesDefault
+            CustomTabControl_abilitys.Enabled = False
+            CheckBox_arcaneHelmets.Enabled = False
+            CustomTabControl_arcaneHelmets.Enabled = False
+            '
+            '   No Warframe selected, display values should be set to default
+            '
+            TextBox_warframeArmor.Text = "-"
+            TextBox_warframeHealth.Text = "-"
+            TextBox_warframeShield.Text = "-"
+            TextBox_warframeEnergy.Text = "-"
+            TextBox_warframePowerStrength.Text = "-"
+            TextBox_warframeEHP.Text = "-"
         End If
+    End Sub
+
+    Private Sub Companion_Changed_UI_Update(sender As Object, e As EventArgs)
+        '   Pet Stats
+        ComboBox_petArmor.SelectedIndex = ComboBox_pets.SelectedIndex
+        ComboBox_petHealth.SelectedIndex = ComboBox_pets.SelectedIndex
+        ComboBox_petShield.SelectedIndex = ComboBox_pets.SelectedIndex
+
+        '
+        '   TODO:\\
+        '
+
     End Sub
 
 End Class
