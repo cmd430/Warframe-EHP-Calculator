@@ -1,4 +1,6 @@
-﻿Public Class Main
+﻿Public Class Form_main
+
+    Public squadMembers As New Dictionary(Of String, String)
 
     Public Shared Function FindControlRecursive(ByVal list As List(Of Control), ByVal parent As Control, ByVal ctrlType As System.Type) As List(Of Control)
         If parent Is Nothing Then Return list
@@ -81,9 +83,13 @@
         AddHandler CheckBox_arcanes.CheckedChanged, AddressOf Enable_Disable_Section
         AddHandler CheckBox_dragonKeys.CheckedChanged, AddressOf Enable_Disable_Section
         '
-        '   Overshields
+        '   Special Effects
         '
-        AddHandler CheckBox_oversheilds.CheckedChanged, AddressOf Enable_Disable_Section
+        AddHandler CheckBox_specialEffects.CheckedChanged, AddressOf Enable_Disable_Section
+        '
+        '   Sortie Modifiers
+        '
+        AddHandler CheckBox_sortieModifiers.CheckedChanged, AddressOf Enable_Disable_Section
         '
         '   Arcane Helmets
         '
@@ -116,9 +122,25 @@
             End If
         Next
         '
+        '   Add Squad Members
+        '
+        squadMembers.Add("One", "One:Chroma:None:None:100")
+        squadMembers.Add("Two", "Two:Chroma:None:None:100")
+        squadMembers.Add("Three", "Three:Chroma:None:None:100")
+        squadMembers.Add("Four", "Four:Chroma:None:None:100")
+        squadMembers.Add("Five", "Five:Chroma:None:None:100")
+        squadMembers.Add("Six", "Six:Chroma:None:None:100")
+        squadMembers.Add("Seven", "Seven:Chroma:None:None:100")
+        AddHandler Button_squadEffectsOne.Click, AddressOf Add_Squad_Member
+        AddHandler Button_squadEffectsTwo.Click, AddressOf Add_Squad_Member
+        AddHandler Button_squadEffectsThree.Click, AddressOf Add_Squad_Member
+        AddHandler Button_squadEffectsFour.Click, AddressOf Add_Squad_Member
+        AddHandler Button_squadEffectsFive.Click, AddressOf Add_Squad_Member
+        AddHandler Button_squadEffectsSix.Click, AddressOf Add_Squad_Member
+        AddHandler Button_squadEffectsSeven.Click, AddressOf Add_Squad_Member
+        '
         '   Companions
         '
-
         AddHandler ComboBox_companions.SelectedIndexChanged, AddressOf Companion_Value_Changed
         AddHandler CheckBox_companionSurvivability.CheckedChanged, AddressOf Enable_Disable_Section
     End Sub
@@ -160,6 +182,24 @@
         sender.Parent.Controls(sender.tag).Enabled = sender.Checked
     End Sub
 
+    Private Sub Add_Squad_Member(sender As Object, e As EventArgs)
+        Dim SquadMember As String = sender.Name.ToString.Replace("Button_squadEffects", "")
+        Dim SquadDialog As New Form_squadMember(squadMembers.Item(SquadMember))
+        If SquadDialog.ShowDialog() = DialogResult.OK Then
+            squadMembers.Item(SquadMember) = SquadDialog.TextBox_squadInfo.Text
+        End If
+        SquadDialog.Dispose()
+
+        '
+        '   TODO:\\ Figure out how the fuck the data from the form is to be added to the player
+        '           (some stuff needs to be added before stat calculation [i.e PowerStr additive buffs] 
+        '            some stuff after some calculations for before others [i.e PowerStr multiplicitive buffs]
+        '            dmg reduction, absorbtion and armor buffs should all be after other calculations
+        '
+
+        Warframe_Value_Changed(sender, e)
+    End Sub
+
     Private Sub Warframe_Value_Changed(sender As Object, e As EventArgs)
         '
         '   Default Stats
@@ -189,7 +229,7 @@
         Dim damageReduction As Decimal = 0.0
         '
         '   Sepical Hidden stat for abilities that
-        '   100% absorb dmg
+        '   100% absorb x amount dmg
         '
         Dim damageAbsorbstion As Decimal = 0.0
         '
@@ -300,21 +340,36 @@
             Case "Oberon"
                 CheckBox_abilities.Enabled = True
                 CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesOberon
+            Case "Octavia"
+                CheckBox_abilities.Enabled = True
+                CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesOctavia
             Case "Rhino"
                 CheckBox_abilities.Enabled = True
                 CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesRhino
+            Case "Titania"
+                CheckBox_abilities.Enabled = True
+                CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesTrinity
             Case "Trinity"
                 CheckBox_abilities.Enabled = True
                 CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesTrinity
             Case "Valkyr"
                 CheckBox_abilities.Enabled = True
                 CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesValkyr
+            Case "Vauban"
+                CheckBox_abilities.Enabled = True
+                CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesVauban
             Case Else
                 CheckBox_abilities.Enabled = False
                 CustomTabControl_abilitys.Enabled = False
                 CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesDefault
         End Select
         If ComboBox_warframes.SelectedIndex > 0 Then
+            '
+            '   Special test for Squad Checkboxs to enable/disbale buttons
+            '
+            If sender.Name.ToString.Contains("CheckBox_squadEffects") Then
+                sender.Parent.Controls(sender.tag).Enabled = sender.Checked
+            End If
             '
             '   Enable Selections
             '
@@ -336,10 +391,14 @@
             CheckBox_focus.Enabled = False
             GroupBox_focus.Enabled = CheckBox_focus.Checked
             '
-            CheckBox_oversheilds.Enabled = True
-            GroupBox_oversheilds.Enabled = CheckBox_oversheilds.Checked
+            CheckBox_specialEffects.Enabled = True
+            GroupBox_specialEffects.Enabled = CheckBox_specialEffects.Checked
+            CheckBox_sortieModifiers.Enabled = True
+            GroupBox_sortieModifiers.Enabled = CheckBox_sortieModifiers.Checked
             CustomTabControl_abilitys.Enabled = CheckBox_abilities.Checked
             CustomTabControl_arcaneHelmets.Enabled = CheckBox_arcaneHelmets.Checked
+            CheckBox_squadEffects.Enabled = True
+            GroupBox_squadEffects.Enabled = CheckBox_squadEffects.Checked
 
             If CheckBox_isPrime.Checked And CheckBox_isPrime.Enabled Then
                 '
@@ -422,7 +481,7 @@
             '
             ' Overshields
             '
-            If CheckBox_oversheilds.Checked Then
+            If CheckBox_specialEffects.Checked And CheckBox_overshields.Checked Then
                 shieldBonus = shieldBonus + NumericUpDown_oversheilds.Value
             End If
             '
@@ -451,6 +510,7 @@
                         Shield = Shield + (baseShield * 0.25)
                     ElseIf RadioButton_pendragonHelmet.Checked Then
                         Armor = Armor - (baseArmor * 0.05)
+                        powerStrength = powerStrength + (powerStrength * 0.15)
                     End If
                 Case "Frost"
                     If RadioButton_auroraHelmet.Checked Then
@@ -458,6 +518,7 @@
                         Armor = Armor + (baseArmor * 0.25)
                     ElseIf RadioButton_squallHelmet.Checked Then
                         Shield = Shield - (baseShield * 0.05)
+                        powerStrength = powerStrength + (powerStrength * 0.15)
                     End If
                 Case "Loki"
                     If RadioButton_essenceHelmet.Checked Then
@@ -509,6 +570,16 @@
                         powerStrength = powerStrength + (powerStrength * 0.1)
                     End If
             End Select
+            '
+            '   Sortie Modifiers
+            '
+            If CheckBox_sortieModifiers.Checked Then
+                If RadioButton_sortieCryogenicLeakage.Checked Then
+                    Shield = Shield - (baseShield * 0.5)
+                ElseIf RadioButton_sortieFire.Checked Then
+                    Health = Health - (baseHealth * 0.5)
+                End If
+            End If
             '
             '   Aura Mods
             '
@@ -610,6 +681,12 @@
                 End If
             End If
             '
+            '   Reactant Buff | Void Fissures
+            '
+            If CheckBox_specialEffects.Checked And CheckBox_corruptedBuff.Checked Then
+                powerStrength = powerStrength * 2
+            End If
+            '
             '   Abilities
             '
             If CheckBox_abilities.Checked Then
@@ -628,10 +705,10 @@
                                 shieldMultiplier = shieldMultiplier + elementalWard
                             End If
                         End If
-                        '
-                        '   Vex armor is down with the final health calulations because of how it works
-                        '   it'd be a pain to do without writing extra crap...
-                        '
+                       '
+                       '   Vex armor is down with the final health calulations because of how it works
+                       '   it'd be a pain to do without writing extra crap...
+                       '
                     Case "Frost"
                         If CheckBox_icyAvalanche.Checked Then
                             Dim icyAvalance As Decimal = (0.6 * powerStrength) * NumericUpDown_icyAvalanche.Value
@@ -675,7 +752,7 @@
                         End If
                     Case "Nidus"
                         If CheckBox_mutationStacks.Checked Then
-                            Dim validStacks = Math.Floor(NumericUpDown_mutationStacks.Value / 5)
+                            Dim validStacks As Decimal = Math.Floor(NumericUpDown_mutationStacks.Value / 5)
                             armorBonus = armorBonus + (20 * validStacks)
                         End If
                     Case "Oberon"
@@ -687,6 +764,11 @@
                             Dim hallowedReckoning As Decimal = 250
                             armorBonus = armorBonus + hallowedReckoning
                         End If
+                    Case "Octavia"
+                        If CheckBox_metronome.Checked Then
+                            Dim metronome As Decimal = 0.35 * powerStrength
+                            armorMultiplier = armorMultiplier + metronome
+                        End If
                     Case "Rhino"
                         If CheckBox_ironcladCharge.Checked Then
                             Dim ironcladCharge As Decimal = (0.5 * powerStrength) * NumericUpDown_ironcladCharge.Value
@@ -697,6 +779,11 @@
                             Dim ironSkinHealth As Decimal = 1200
                             Dim ironSkin As Decimal = ((ironSkinHealth + ironSkinArmor) * powerStrength) + NumericUpDown_ironSkin.Value
                             damageAbsorbstion = ironSkin
+                        End If
+                    Case "Titania"
+                        If CheckBox_thorns.Checked Then
+                            Dim thorns As Decimal = Math.Floor(NumericUpDown_thorns.Value / 5) * 0.05
+                            damageReduction = thorns
                         End If
                     Case "Trinity"
                         Dim link As Decimal = 0.75
@@ -718,6 +805,11 @@
                         If CheckBox_warcry.Checked Then
                             Dim warcryMultiplier As Decimal = 0.5 * powerStrength
                             armorMultiplier = armorMultiplier + warcryMultiplier
+                        End If
+                    Case "Vauban"
+                        If CheckBox_reinforce.Checked Then
+                            Dim reinforceMultiplier As Decimal = 0.25 * NumericUpDown_reinforce.Value
+                            armorMultiplier = armorMultiplier + reinforceMultiplier
                         End If
                 End Select
             End If
@@ -788,12 +880,16 @@
             GroupBox_dragonKeys.Enabled = False
             CheckBox_focus.Enabled = False
             GroupBox_focus.Enabled = False
-            CheckBox_oversheilds.Enabled = False
-            GroupBox_oversheilds.Enabled = False
+            CheckBox_specialEffects.Enabled = False
+            GroupBox_specialEffects.Enabled = False
+            CheckBox_sortieModifiers.Enabled = False
+            GroupBox_sortieModifiers.Enabled = False
             CheckBox_abilities.Enabled = False
             CustomTabControl_abilitys.Enabled = False
             CheckBox_arcaneHelmets.Enabled = False
             CustomTabControl_arcaneHelmets.Enabled = False
+            CheckBox_squadEffects.Enabled = False
+            GroupBox_squadEffects.Enabled = False
             '
             '   No Warframe selected, display values should be set to default
             '

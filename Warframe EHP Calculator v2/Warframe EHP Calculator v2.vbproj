@@ -96,11 +96,17 @@
     <Compile Include="CustomTabControl.vb">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Main.vb">
+    <Compile Include="Form_main.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main.Designer.vb">
-      <DependentUpon>Main.vb</DependentUpon>
+    <Compile Include="Form_main.Designer.vb">
+      <DependentUpon>Form_main.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_squadMember.Designer.vb">
+      <DependentUpon>Form_squadMember.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_squadMember.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -120,8 +126,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Main.resx">
-      <DependentUpon>Main.vb</DependentUpon>
+    <EmbeddedResource Include="Form_main.resx">
+      <DependentUpon>Form_main.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_squadMember.resx">
+      <DependentUpon>Form_squadMember.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

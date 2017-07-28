@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.Warframe_EHP_Calculator_v2.Main
+            Me.MainForm = Global.Warframe_EHP_Calculator_v2.Form_main
         End Sub
     End Class
 End Namespace
