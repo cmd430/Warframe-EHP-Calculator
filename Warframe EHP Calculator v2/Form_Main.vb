@@ -755,6 +755,13 @@
                             Dim validStacks As Decimal = Math.Floor(NumericUpDown_mutationStacks.Value / 5)
                             armorBonus = armorBonus + (20 * validStacks)
                         End If
+                        If CheckBox_parasiticLink.Checked Then
+                            Dim parasiticLink As Decimal = 0.5 * powerStrength
+                            If parasiticLink > 0.9 Then
+                                parasiticLink = 0.9
+                            End If
+                            damageReduction = parasiticLink
+                        End If
                     Case "Oberon"
                         If CheckBox_ironRenewal.Checked Then
                             Dim ironRenewal As Decimal = 2.0 * powerStrength
