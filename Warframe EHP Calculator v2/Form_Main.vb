@@ -487,89 +487,91 @@
             '
             '   Arcane Helmets
             '
-            Select Case ComboBox_warframes.SelectedItem
-                Case "Ash"
-                    If RadioButton_locustHelmet.Checked Then
-                        Energy = Energy + (baseEnergy * 0.2)
-                    End If
-                Case "Banshee"
-                    If RadioButton_reverbHelmet.Checked Then
-                        Health = Health - (baseHealth * 0.05)
-                        Energy = Energy + (baseEnergy * 0.1)
-                    End If
-                Case "Ember"
-                    If RadioButton_phoenixHelmet.Checked Then
-                        Shield = Shield + (baseShield * 0.05)
-                        Energy = Energy + (baseEnergy * 0.25)
-                    ElseIf RadioButton_backdraftHelmet.Checked Then
-                        Health = Health + (baseHealth * 0.15)
-                    End If
-                Case "Excalibur"
-                    If RadioButton_avalonHelmet.Checked Then
-                        Health = Health - (baseHealth * 0.05)
-                        Shield = Shield + (baseShield * 0.25)
-                    ElseIf RadioButton_pendragonHelmet.Checked Then
-                        Armor = Armor - (baseArmor * 0.05)
-                        powerStrength = powerStrength + (powerStrength * 0.15)
-                    End If
-                Case "Frost"
-                    If RadioButton_auroraHelmet.Checked Then
-                        Health = Health - (baseHealth * 0.05)
-                        Armor = Armor + (baseArmor * 0.25)
-                    ElseIf RadioButton_squallHelmet.Checked Then
-                        Shield = Shield - (baseShield * 0.05)
-                        powerStrength = powerStrength + (powerStrength * 0.15)
-                    End If
-                Case "Loki"
-                    If RadioButton_essenceHelmet.Checked Then
-                        Armor = Armor - (baseArmor * 0.05)
-                    ElseIf RadioButton_swindleHelmet.Checked Then
-                        Health = Health - (baseHealth * 0.05)
-                    End If
-                Case "Mag"
-                    If RadioButton_coilHelmet.Checked Then
-                        Shield = Shield - (baseShield * 0.05)
-                    ElseIf RadioButton_gaussHelmet.Checked Then
-                        Energy = Energy + (baseEnergy * 0.25)
-                    End If
-                Case "Nova"
-                    If RadioButton_fluxHelmet.Checked Then
-                        Health = Health - (baseHealth * 0.05)
-                    End If
-                Case "Nyx"
-                    If RadioButton_menticideHelmet.Checked Then
-                        Shield = Shield - (baseShield * 0.05)
-                    ElseIf RadioButton_vespaHelmet.Checked Then
-                        Armor = Armor - (baseArmor * 0.05)
-                    End If
-                Case "Rhino"
-                    If RadioButton_thrak.Checked Then
-                        Health = Health + (baseHealth * 0.25)
-                    ElseIf RadioButton_vanguardHelmet.Checked Then
-                        powerStrength = powerStrength - (powerStrength * 0.05)
-                    End If
-                Case "Saryn"
-                    If RadioButton_hemlockHelmet.Checked Then
-                        Health = Health - (baseHealth * 0.05)
-                    End If
-                Case "Trinity"
-                    If RadioButton_auraHelmet.Checked Then
-                        Health = Health - (baseHealth * 0.05)
-                    ElseIf RadioButton_meridianHelmet.Checked Then
-                        Shield = Shield + (baseShield * 0.15)
-                    End If
-                Case "Vauban"
-                    If RadioButton_espritHelmet.Checked Then
-                        Shield = Shield - (baseShield * 0.1)
-                        Energy = Energy + (baseEnergy * 0.1)
-                    End If
-                Case "Volt"
-                    If RadioButton_pulseHelmet.Checked Then
-                        Shield = Shield - (baseShield * 0.05)
-                    ElseIf RadioButton_stormHelmet.Checked Then
-                        powerStrength = powerStrength + (powerStrength * 0.1)
-                    End If
-            End Select
+            If CheckBox_arcaneHelmets.Checked Then
+                Select Case ComboBox_warframes.SelectedItem
+                    Case "Ash"
+                        If RadioButton_locustHelmet.Checked Then
+                            Energy = Energy + (baseEnergy * 0.2)
+                        End If
+                    Case "Banshee"
+                        If RadioButton_reverbHelmet.Checked Then
+                            Health = Health - (baseHealth * 0.05)
+                            Energy = Energy + (baseEnergy * 0.1)
+                        End If
+                    Case "Ember"
+                        If RadioButton_phoenixHelmet.Checked Then
+                            Shield = Shield + (baseShield * 0.05)
+                            Energy = Energy + (baseEnergy * 0.25)
+                        ElseIf RadioButton_backdraftHelmet.Checked Then
+                            Health = Health + (baseHealth * 0.15)
+                        End If
+                    Case "Excalibur"
+                        If RadioButton_avalonHelmet.Checked Then
+                            Health = Health - (baseHealth * 0.05)
+                            Shield = Shield + (baseShield * 0.25)
+                        ElseIf RadioButton_pendragonHelmet.Checked Then
+                            Armor = Armor - (baseArmor * 0.05)
+                            powerStrength = powerStrength + (powerStrength * 0.15)
+                        End If
+                    Case "Frost"
+                        If RadioButton_auroraHelmet.Checked Then
+                            Health = Health - (baseHealth * 0.05)
+                            Armor = Armor + (baseArmor * 0.25)
+                        ElseIf RadioButton_squallHelmet.Checked Then
+                            Shield = Shield - (baseShield * 0.05)
+                            powerStrength = powerStrength + (powerStrength * 0.15)
+                        End If
+                    Case "Loki"
+                        If RadioButton_essenceHelmet.Checked Then
+                            Armor = Armor - (baseArmor * 0.05)
+                        ElseIf RadioButton_swindleHelmet.Checked Then
+                            Health = Health - (baseHealth * 0.05)
+                        End If
+                    Case "Mag"
+                        If RadioButton_coilHelmet.Checked Then
+                            Shield = Shield - (baseShield * 0.05)
+                        ElseIf RadioButton_gaussHelmet.Checked Then
+                            Energy = Energy + (baseEnergy * 0.25)
+                        End If
+                    Case "Nova"
+                        If RadioButton_fluxHelmet.Checked Then
+                            Health = Health - (baseHealth * 0.05)
+                        End If
+                    Case "Nyx"
+                        If RadioButton_menticideHelmet.Checked Then
+                            Shield = Shield - (baseShield * 0.05)
+                        ElseIf RadioButton_vespaHelmet.Checked Then
+                            Armor = Armor - (baseArmor * 0.05)
+                        End If
+                    Case "Rhino"
+                        If RadioButton_thrak.Checked Then
+                            Health = Health + (baseHealth * 0.25)
+                        ElseIf RadioButton_vanguardHelmet.Checked Then
+                            powerStrength = powerStrength - (powerStrength * 0.05)
+                        End If
+                    Case "Saryn"
+                        If RadioButton_hemlockHelmet.Checked Then
+                            Health = Health - (baseHealth * 0.05)
+                        End If
+                    Case "Trinity"
+                        If RadioButton_auraHelmet.Checked Then
+                            Health = Health - (baseHealth * 0.05)
+                        ElseIf RadioButton_meridianHelmet.Checked Then
+                            Shield = Shield + (baseShield * 0.15)
+                        End If
+                    Case "Vauban"
+                        If RadioButton_espritHelmet.Checked Then
+                            Shield = Shield - (baseShield * 0.1)
+                            Energy = Energy + (baseEnergy * 0.1)
+                        End If
+                    Case "Volt"
+                        If RadioButton_pulseHelmet.Checked Then
+                            Shield = Shield - (baseShield * 0.05)
+                        ElseIf RadioButton_stormHelmet.Checked Then
+                            powerStrength = powerStrength + (powerStrength * 0.1)
+                        End If
+                End Select
+            End If
             '
             '   Sortie Modifiers
             '
@@ -607,12 +609,12 @@
                     End If
                 ElseIf RadioButton_growingPower.Checked Then
                     Dim growingPower As Decimal = basePowerStrength * (0.04166666667 + (NumericUpDown_growingPower.Value * 0.04166666667))
-                    If CheckBox_coactionDrift.Checked And CheckBox_miscellaneous.Checked Then
-                        Dim coactionDrit As Decimal = 0.025 + (0.025 * NumericUpDown_coactionDrift.Value)
-                        powerStrength = powerStrength + (growingPower + (growingPower * (coactionDrit * (1 + coactionDrit) + coactionDrit)))
-                    Else
-                        powerStrength = powerStrength + growingPower
-                    End If
+                    'If CheckBox_coactionDrift.Checked And CheckBox_miscellaneous.Checked Then
+                    'Dim coactionDrit As Decimal = 0.025 + (0.025 * NumericUpDown_coactionDrift.Value)
+                    'powerStrength = powerStrength + (growingPower + (growingPower * (coactionDrit * (1 + coactionDrit) + coactionDrit)))
+                    'Else
+                    powerStrength = powerStrength + growingPower
+                    ' End If
                 End If
             End If
             '
@@ -633,9 +635,7 @@
                 If CheckBox_vitality.Checked Then
                     healthMultiplier = healthMultiplier + (0.4 + (NumericUpDown_vitality.Value * 0.4))
                 End If
-                If CheckBox_quickThinking.Checked Then
-                    healthBonus = healthBonus + ((0.4 * (1 + NumericUpDown_quickThinking.Value)) * Energy)
-                End If
+                'quickthinking moved.
                 'shields
                 If CheckBox_redirection.Checked Then
                     shieldMultiplier = shieldMultiplier + (0.4 + (NumericUpDown_redirection.Value * 0.4))
@@ -714,6 +714,14 @@
                             Dim icyAvalance As Decimal = (0.6 * powerStrength) * NumericUpDown_icyAvalanche.Value
                             damageAbsorbstion = icyAvalance
                         End If
+                    Case "Gara"
+                        If CheckBox_splinterStorm.Checked Then
+                            Dim splinterStorm As Decimal = 0.7 * powerStrength
+                            If splinterStorm > 0.9 Then
+                                splinterStorm = 0.9
+                            End If
+                            damageReduction = splinterStorm
+                        End If
                     Case "Inaros"
                         If CheckBox_scarabSwarm.Checked Then
                             Dim scarabSwarm As Decimal = 2 * NumericUpDown_scarabSwarm.Value
@@ -726,6 +734,9 @@
                                 shatterShield = 0.95
                             End If
                             damageReduction = damageReduction + shatterShield
+                        End If
+                        If CheckBox_marksmansDexterity.Checked Then
+                            healthBonus = healthBonus + 50
                         End If
                     Case "Mirage"
                         If CheckBox_eclipse.Checked Then
@@ -821,7 +832,7 @@
                 End Select
             End If
             '
-            '   Calculate Values (with special support for Vex armor)
+            '   Calculate Values (with special support for Vex armor and Quickthinking)
             '
             If CheckBox_vexArmor.Checked And ComboBox_warframes.SelectedItem = "Chroma" And CheckBox_abilities.Checked Then
                 Dim vexArmor As Decimal = 3.5
@@ -829,9 +840,12 @@
             Else
                 Armor = ((baseArmor * (1 + armorMultiplier)) + (Armor - baseArmor)) + armorBonus
             End If
+            Energy = Math.Ceiling(Energy) + Math.Floor((baseEnergy * energyMultiplier) + energyBonus)
+            If CheckBox_survivability.Checked And CheckBox_quickThinking.Checked Then
+                healthBonus = healthBonus + ((0.4 * (1 + NumericUpDown_quickThinking.Value)) * Energy)
+            End If
             Health = ((baseHealth * (1 + healthMultiplier)) + (Health - baseHealth)) + healthBonus
             Shield = ((baseShield * (1 + shieldMultiplier)) + (Shield - baseShield)) + shieldBonus
-            Energy = Math.Ceiling(Energy) + Math.Floor((baseEnergy * energyMultiplier) + energyBonus)
             '
             '   Arcanes
             '
