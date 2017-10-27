@@ -775,8 +775,8 @@
                         End If
                     Case "Oberon"
                         If CheckBox_ironRenewal.Checked Then
-                            Dim ironRenewal As Decimal = 2.0 * powerStrength
-                            armorMultiplier = armorMultiplier + ironRenewal
+                            Dim ironRenewal As Decimal = 200 * powerStrength
+                            armorBonus = armorBonus + ironRenewal
                         End If
                         If CheckBox_hallowedReckoning.Checked Then
                             Dim hallowedReckoning As Decimal = 250
