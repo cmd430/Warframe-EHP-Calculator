@@ -631,14 +631,24 @@
                 If CheckBox_healthConversion.Checked Then
                     armorBonus = (armorBonus + ((75 + (NumericUpDown_healthConversion.Value * 75)) * NumericUpDown_healthConversionStacks.Value))
                 End If
+                If CheckBox_gladiatorAegis.Checked Then
+                    armorMultiplier = armorMultiplier + (0.075 + (NumericUpDown_gladiatorAegis.Value * 0.075))
+                End If
                 'health
                 If CheckBox_vitality.Checked Then
                     healthMultiplier = healthMultiplier + (0.4 + (NumericUpDown_vitality.Value * 0.4))
                 End If
+                If CheckBox_gladiatorResolve.Checked Then
+                    healthMultiplier = healthMultiplier + (0.3 + (NumericUpDown_gladiatorResolve.Value * 0.3))
+                End If
                 'quickthinking moved.
+                'gladiator finesse moved.
                 'shields
                 If CheckBox_redirection.Checked Then
                     shieldMultiplier = shieldMultiplier + (0.4 + (NumericUpDown_redirection.Value * 0.4))
+                End If
+                If CheckBox_augurAccord.Checked Then
+                    shieldMultiplier = shieldMultiplier + (0.3 + (NumericUpDown_augurAccord.Value * 0.3))
                 End If
                 'dual
                 If CheckBox_vigor.Checked Then
@@ -678,6 +688,9 @@
                 End If
                 If CheckBox_powerDrift.Checked Then
                     powerStrength = powerStrength + (basePowerStrength * (0.025 + (NumericUpDown_powerDrift.Value * 0.025)))
+                End If
+                If CheckBox_augurSecrets.Checked Then
+                    powerStrength = powerStrength + (basePowerStrength * (0.04 + (NumericUpDown_augurSecrets.Value * 0.04)))
                 End If
             End If
             '
@@ -832,7 +845,7 @@
                 End Select
             End If
             '
-            '   Calculate Values (with special support for Vex armor and Quickthinking)
+            '   Calculate Values (with special support for Vex armor, Quickthinking and Gladiator Finesse)
             '
             If CheckBox_vexArmor.Checked And ComboBox_warframes.SelectedItem = "Chroma" And CheckBox_abilities.Checked Then
                 Dim vexArmor As Decimal = 3.5
@@ -841,8 +854,13 @@
                 Armor = ((baseArmor * (1 + armorMultiplier)) + (Armor - baseArmor)) + armorBonus
             End If
             Energy = Math.Ceiling(Energy) + Math.Floor((baseEnergy * energyMultiplier) + energyBonus)
-            If CheckBox_survivability.Checked And CheckBox_quickThinking.Checked Then
-                healthBonus = healthBonus + ((0.4 * (1 + NumericUpDown_quickThinking.Value)) * Energy)
+            If CheckBox_survivability.Checked Then
+                If CheckBox_quickThinking.Checked Then
+                    healthBonus = healthBonus + ((0.4 * (1 + NumericUpDown_quickThinking.Value)) * Energy)
+                End If
+                If CheckBox_gladiatorFinesse.Checked Then
+                    healthBonus = healthBonus + ((0.1 * (1 + NumericUpDown_gladiatorFinesse.Value)) * Energy)
+                End If
             End If
             Health = ((baseHealth * (1 + healthMultiplier)) + (Health - baseHealth)) + healthBonus
             Shield = ((baseShield * (1 + shieldMultiplier)) + (Shield - baseShield)) + shieldBonus
