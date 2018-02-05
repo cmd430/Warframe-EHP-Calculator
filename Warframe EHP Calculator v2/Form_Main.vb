@@ -254,7 +254,7 @@
         '
         Select Case ComboBox_warframes.SelectedItem
             Case "Harrow"
-                NumericUpDown_oversheilds.Maximum = 2200
+                NumericUpDown_oversheilds.Maximum = 2400
             Case Else
                 NumericUpDown_oversheilds.Maximum = 1200
         End Select

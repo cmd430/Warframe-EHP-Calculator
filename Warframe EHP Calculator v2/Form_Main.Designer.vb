@@ -60,46 +60,6 @@ Partial Class Form_main
         Me.Label_warframeArmor = New System.Windows.Forms.Label()
         Me.TextBox_warframeArmor = New System.Windows.Forms.TextBox()
         Me.CheckBox_arcaneHelmets = New System.Windows.Forms.CheckBox()
-        Me.CustomTabControl_arcaneHelmets = New Warframe_EHP_Calculator_v2.CustomTabControl()
-        Me.TabPage_arcaneHelmetsDefault = New System.Windows.Forms.TabPage()
-        Me.Label_arcaneHelmetPlaceholder = New System.Windows.Forms.Label()
-        Me.TabPage_arcaneHelmetsAsh = New System.Windows.Forms.TabPage()
-        Me.RadioButton_locustHelmet = New System.Windows.Forms.RadioButton()
-        Me.TabPage_arcaneHelmetsBanshee = New System.Windows.Forms.TabPage()
-        Me.RadioButton_reverbHelmet = New System.Windows.Forms.RadioButton()
-        Me.TabPage_arcaneHelmetsEmber = New System.Windows.Forms.TabPage()
-        Me.RadioButton_backdraftHelmet = New System.Windows.Forms.RadioButton()
-        Me.RadioButton_phoenixHelmet = New System.Windows.Forms.RadioButton()
-        Me.TabPage_arcaneHelmetsExcalibur = New System.Windows.Forms.TabPage()
-        Me.RadioButton_pendragonHelmet = New System.Windows.Forms.RadioButton()
-        Me.RadioButton_avalonHelmet = New System.Windows.Forms.RadioButton()
-        Me.TabPage_arcaneHelmetsFrost = New System.Windows.Forms.TabPage()
-        Me.RadioButton_squallHelmet = New System.Windows.Forms.RadioButton()
-        Me.RadioButton_auroraHelmet = New System.Windows.Forms.RadioButton()
-        Me.TabPage_arcaneHelmetsLoki = New System.Windows.Forms.TabPage()
-        Me.RadioButton_swindleHelmet = New System.Windows.Forms.RadioButton()
-        Me.RadioButton_essenceHelmet = New System.Windows.Forms.RadioButton()
-        Me.TabPage_arcaneHelmetsMag = New System.Windows.Forms.TabPage()
-        Me.RadioButton_gaussHelmet = New System.Windows.Forms.RadioButton()
-        Me.RadioButton_coilHelmet = New System.Windows.Forms.RadioButton()
-        Me.TabPage_arcaneHelmetsNova = New System.Windows.Forms.TabPage()
-        Me.RadioButton_fluxHelmet = New System.Windows.Forms.RadioButton()
-        Me.TabPage_arcaneHelmetsNyx = New System.Windows.Forms.TabPage()
-        Me.RadioButton_vespaHelmet = New System.Windows.Forms.RadioButton()
-        Me.RadioButton_menticideHelmet = New System.Windows.Forms.RadioButton()
-        Me.TabPage_arcaneHelmetsRhino = New System.Windows.Forms.TabPage()
-        Me.RadioButton_vanguardHelmet = New System.Windows.Forms.RadioButton()
-        Me.RadioButton_thrak = New System.Windows.Forms.RadioButton()
-        Me.TabPage_arcaneHelmetsSaryn = New System.Windows.Forms.TabPage()
-        Me.RadioButton_hemlockHelmet = New System.Windows.Forms.RadioButton()
-        Me.TabPage_arcaneHelmetsTrinity = New System.Windows.Forms.TabPage()
-        Me.RadioButton_meridianHelmet = New System.Windows.Forms.RadioButton()
-        Me.RadioButton_auraHelmet = New System.Windows.Forms.RadioButton()
-        Me.TabPage_arcaneHelmetsVauban = New System.Windows.Forms.TabPage()
-        Me.RadioButton_espritHelmet = New System.Windows.Forms.RadioButton()
-        Me.TabPage_arcaneHelmetsVolt = New System.Windows.Forms.TabPage()
-        Me.RadioButton_stormHelmet = New System.Windows.Forms.RadioButton()
-        Me.RadioButton_pulseHelmet = New System.Windows.Forms.RadioButton()
         Me.CheckBox_specialEffects = New System.Windows.Forms.CheckBox()
         Me.GroupBox_specialEffects = New System.Windows.Forms.GroupBox()
         Me.CheckBox_corruptedBuff = New System.Windows.Forms.CheckBox()
@@ -178,61 +138,6 @@ Partial Class Form_main
         Me.CheckBox_isUmbra = New System.Windows.Forms.CheckBox()
         Me.ComboBox_warframes = New System.Windows.Forms.ComboBox()
         Me.CheckBox_isPrime = New System.Windows.Forms.CheckBox()
-        Me.CustomTabControl_abilitys = New Warframe_EHP_Calculator_v2.CustomTabControl()
-        Me.TabPage_abilitiesDefault = New System.Windows.Forms.TabPage()
-        Me.Label_abilityPlaceholder = New System.Windows.Forms.Label()
-        Me.TabPage_abilitiesChroma = New System.Windows.Forms.TabPage()
-        Me.CheckBox_vexArmor = New System.Windows.Forms.CheckBox()
-        Me.CheckBox_elementalWard = New System.Windows.Forms.CheckBox()
-        Me.RadioButton_electricChroma = New System.Windows.Forms.RadioButton()
-        Me.RadioButton_iceChroma = New System.Windows.Forms.RadioButton()
-        Me.RadioButton_fireChroma = New System.Windows.Forms.RadioButton()
-        Me.TabPage_abilitiesFrost = New System.Windows.Forms.TabPage()
-        Me.NumericUpDown_icyAvalanche = New System.Windows.Forms.NumericUpDown()
-        Me.CheckBox_icyAvalanche = New System.Windows.Forms.CheckBox()
-        Me.TabPage_abilitiesGara = New System.Windows.Forms.TabPage()
-        Me.CheckBox_splinterStorm = New System.Windows.Forms.CheckBox()
-        Me.TabPage_abilitiesInaros = New System.Windows.Forms.TabPage()
-        Me.NumericUpDown_scarabSwarm = New System.Windows.Forms.NumericUpDown()
-        Me.CheckBox_scarabSwarm = New System.Windows.Forms.CheckBox()
-        Me.TabPage_abilitiesMesa = New System.Windows.Forms.TabPage()
-        Me.CheckBox_marksmansDexterity = New System.Windows.Forms.CheckBox()
-        Me.CheckBox_shatterShield = New System.Windows.Forms.CheckBox()
-        Me.TabPage_abilitiesMirage = New System.Windows.Forms.TabPage()
-        Me.CheckBox_eclipse = New System.Windows.Forms.CheckBox()
-        Me.TabPage_abilitiesNekros = New System.Windows.Forms.TabPage()
-        Me.NumericUpDown_shieldOfShadows = New System.Windows.Forms.NumericUpDown()
-        Me.CheckBox_shieldOfShadows = New System.Windows.Forms.CheckBox()
-        Me.TabPage_abilitiesNezha = New System.Windows.Forms.TabPage()
-        Me.Label_wardingHalo = New System.Windows.Forms.Label()
-        Me.NumericUpDown_wardingHalo = New System.Windows.Forms.NumericUpDown()
-        Me.CheckBox_wardingHalo = New System.Windows.Forms.CheckBox()
-        Me.TabPage_abilitiesNidus = New System.Windows.Forms.TabPage()
-        Me.CheckBox_parasiticLink = New System.Windows.Forms.CheckBox()
-        Me.NumericUpDown_mutationStacks = New System.Windows.Forms.NumericUpDown()
-        Me.CheckBox_mutationStacks = New System.Windows.Forms.CheckBox()
-        Me.TabPage_abilitiesOberon = New System.Windows.Forms.TabPage()
-        Me.CheckBox_hallowedReckoning = New System.Windows.Forms.CheckBox()
-        Me.CheckBox_ironRenewal = New System.Windows.Forms.CheckBox()
-        Me.TabPage_abilitiesOctavia = New System.Windows.Forms.TabPage()
-        Me.CheckBox_metronome = New System.Windows.Forms.CheckBox()
-        Me.TabPage_abilitiesRhino = New System.Windows.Forms.TabPage()
-        Me.NumericUpDown_ironcladCharge = New System.Windows.Forms.NumericUpDown()
-        Me.CheckBox_ironcladCharge = New System.Windows.Forms.CheckBox()
-        Me.CheckBox_ironSkin = New System.Windows.Forms.CheckBox()
-        Me.Label_ironSkin = New System.Windows.Forms.Label()
-        Me.NumericUpDown_ironSkin = New System.Windows.Forms.NumericUpDown()
-        Me.TabPage_abilitiesTitania = New System.Windows.Forms.TabPage()
-        Me.NumericUpDown_thorns = New System.Windows.Forms.NumericUpDown()
-        Me.CheckBox_thorns = New System.Windows.Forms.CheckBox()
-        Me.TabPage_abilitiesTrinity = New System.Windows.Forms.TabPage()
-        Me.CheckBox_blessing = New System.Windows.Forms.CheckBox()
-        Me.CheckBox_link = New System.Windows.Forms.CheckBox()
-        Me.TabPage_abilitiesValkyr = New System.Windows.Forms.TabPage()
-        Me.CheckBox_warcry = New System.Windows.Forms.CheckBox()
-        Me.TabPage_abilitiesVauban = New System.Windows.Forms.TabPage()
-        Me.NumericUpDown_reinforce = New System.Windows.Forms.NumericUpDown()
-        Me.CheckBox_reinforce = New System.Windows.Forms.CheckBox()
         Me.Panel_Ruler = New System.Windows.Forms.Panel()
         Me.GroupBox_focus = New System.Windows.Forms.GroupBox()
         Me.Label_focusPlaceholder = New System.Windows.Forms.Label()
@@ -306,27 +211,106 @@ Partial Class Form_main
         Me.Icons = New System.Windows.Forms.ImageList(Me.components)
         Me.Label_author = New System.Windows.Forms.Label()
         Me.Label_love = New System.Windows.Forms.Label()
+        Me.CustomTabControl_arcaneHelmets = New Warframe_EHP_Calculator_v2.CustomTabControl()
+        Me.TabPage_arcaneHelmetsDefault = New System.Windows.Forms.TabPage()
+        Me.Label_arcaneHelmetPlaceholder = New System.Windows.Forms.Label()
+        Me.TabPage_arcaneHelmetsAsh = New System.Windows.Forms.TabPage()
+        Me.RadioButton_locustHelmet = New System.Windows.Forms.RadioButton()
+        Me.TabPage_arcaneHelmetsBanshee = New System.Windows.Forms.TabPage()
+        Me.RadioButton_reverbHelmet = New System.Windows.Forms.RadioButton()
+        Me.TabPage_arcaneHelmetsEmber = New System.Windows.Forms.TabPage()
+        Me.RadioButton_backdraftHelmet = New System.Windows.Forms.RadioButton()
+        Me.RadioButton_phoenixHelmet = New System.Windows.Forms.RadioButton()
+        Me.TabPage_arcaneHelmetsExcalibur = New System.Windows.Forms.TabPage()
+        Me.RadioButton_pendragonHelmet = New System.Windows.Forms.RadioButton()
+        Me.RadioButton_avalonHelmet = New System.Windows.Forms.RadioButton()
+        Me.TabPage_arcaneHelmetsFrost = New System.Windows.Forms.TabPage()
+        Me.RadioButton_squallHelmet = New System.Windows.Forms.RadioButton()
+        Me.RadioButton_auroraHelmet = New System.Windows.Forms.RadioButton()
+        Me.TabPage_arcaneHelmetsLoki = New System.Windows.Forms.TabPage()
+        Me.RadioButton_swindleHelmet = New System.Windows.Forms.RadioButton()
+        Me.RadioButton_essenceHelmet = New System.Windows.Forms.RadioButton()
+        Me.TabPage_arcaneHelmetsMag = New System.Windows.Forms.TabPage()
+        Me.RadioButton_gaussHelmet = New System.Windows.Forms.RadioButton()
+        Me.RadioButton_coilHelmet = New System.Windows.Forms.RadioButton()
+        Me.TabPage_arcaneHelmetsNova = New System.Windows.Forms.TabPage()
+        Me.RadioButton_fluxHelmet = New System.Windows.Forms.RadioButton()
+        Me.TabPage_arcaneHelmetsNyx = New System.Windows.Forms.TabPage()
+        Me.RadioButton_vespaHelmet = New System.Windows.Forms.RadioButton()
+        Me.RadioButton_menticideHelmet = New System.Windows.Forms.RadioButton()
+        Me.TabPage_arcaneHelmetsRhino = New System.Windows.Forms.TabPage()
+        Me.RadioButton_vanguardHelmet = New System.Windows.Forms.RadioButton()
+        Me.RadioButton_thrak = New System.Windows.Forms.RadioButton()
+        Me.TabPage_arcaneHelmetsSaryn = New System.Windows.Forms.TabPage()
+        Me.RadioButton_hemlockHelmet = New System.Windows.Forms.RadioButton()
+        Me.TabPage_arcaneHelmetsTrinity = New System.Windows.Forms.TabPage()
+        Me.RadioButton_meridianHelmet = New System.Windows.Forms.RadioButton()
+        Me.RadioButton_auraHelmet = New System.Windows.Forms.RadioButton()
+        Me.TabPage_arcaneHelmetsVauban = New System.Windows.Forms.TabPage()
+        Me.RadioButton_espritHelmet = New System.Windows.Forms.RadioButton()
+        Me.TabPage_arcaneHelmetsVolt = New System.Windows.Forms.TabPage()
+        Me.RadioButton_stormHelmet = New System.Windows.Forms.RadioButton()
+        Me.RadioButton_pulseHelmet = New System.Windows.Forms.RadioButton()
+        Me.CustomTabControl_abilitys = New Warframe_EHP_Calculator_v2.CustomTabControl()
+        Me.TabPage_abilitiesDefault = New System.Windows.Forms.TabPage()
+        Me.Label_abilityPlaceholder = New System.Windows.Forms.Label()
+        Me.TabPage_abilitiesChroma = New System.Windows.Forms.TabPage()
+        Me.CheckBox_vexArmor = New System.Windows.Forms.CheckBox()
+        Me.CheckBox_elementalWard = New System.Windows.Forms.CheckBox()
+        Me.RadioButton_electricChroma = New System.Windows.Forms.RadioButton()
+        Me.RadioButton_iceChroma = New System.Windows.Forms.RadioButton()
+        Me.RadioButton_fireChroma = New System.Windows.Forms.RadioButton()
+        Me.TabPage_abilitiesFrost = New System.Windows.Forms.TabPage()
+        Me.NumericUpDown_icyAvalanche = New System.Windows.Forms.NumericUpDown()
+        Me.CheckBox_icyAvalanche = New System.Windows.Forms.CheckBox()
+        Me.TabPage_abilitiesGara = New System.Windows.Forms.TabPage()
+        Me.CheckBox_splinterStorm = New System.Windows.Forms.CheckBox()
+        Me.TabPage_abilitiesInaros = New System.Windows.Forms.TabPage()
+        Me.NumericUpDown_scarabSwarm = New System.Windows.Forms.NumericUpDown()
+        Me.CheckBox_scarabSwarm = New System.Windows.Forms.CheckBox()
+        Me.TabPage_abilitiesMesa = New System.Windows.Forms.TabPage()
+        Me.CheckBox_marksmansDexterity = New System.Windows.Forms.CheckBox()
+        Me.CheckBox_shatterShield = New System.Windows.Forms.CheckBox()
+        Me.TabPage_abilitiesMirage = New System.Windows.Forms.TabPage()
+        Me.CheckBox_eclipse = New System.Windows.Forms.CheckBox()
+        Me.TabPage_abilitiesNekros = New System.Windows.Forms.TabPage()
+        Me.NumericUpDown_shieldOfShadows = New System.Windows.Forms.NumericUpDown()
+        Me.CheckBox_shieldOfShadows = New System.Windows.Forms.CheckBox()
+        Me.TabPage_abilitiesNezha = New System.Windows.Forms.TabPage()
+        Me.Label_wardingHalo = New System.Windows.Forms.Label()
+        Me.NumericUpDown_wardingHalo = New System.Windows.Forms.NumericUpDown()
+        Me.CheckBox_wardingHalo = New System.Windows.Forms.CheckBox()
+        Me.TabPage_abilitiesNidus = New System.Windows.Forms.TabPage()
+        Me.CheckBox_parasiticLink = New System.Windows.Forms.CheckBox()
+        Me.NumericUpDown_mutationStacks = New System.Windows.Forms.NumericUpDown()
+        Me.CheckBox_mutationStacks = New System.Windows.Forms.CheckBox()
+        Me.TabPage_abilitiesOberon = New System.Windows.Forms.TabPage()
+        Me.CheckBox_hallowedReckoning = New System.Windows.Forms.CheckBox()
+        Me.CheckBox_ironRenewal = New System.Windows.Forms.CheckBox()
+        Me.TabPage_abilitiesOctavia = New System.Windows.Forms.TabPage()
+        Me.CheckBox_metronome = New System.Windows.Forms.CheckBox()
+        Me.TabPage_abilitiesRhino = New System.Windows.Forms.TabPage()
+        Me.NumericUpDown_ironcladCharge = New System.Windows.Forms.NumericUpDown()
+        Me.CheckBox_ironcladCharge = New System.Windows.Forms.CheckBox()
+        Me.CheckBox_ironSkin = New System.Windows.Forms.CheckBox()
+        Me.Label_ironSkin = New System.Windows.Forms.Label()
+        Me.NumericUpDown_ironSkin = New System.Windows.Forms.NumericUpDown()
+        Me.TabPage_abilitiesTitania = New System.Windows.Forms.TabPage()
+        Me.NumericUpDown_thorns = New System.Windows.Forms.NumericUpDown()
+        Me.CheckBox_thorns = New System.Windows.Forms.CheckBox()
+        Me.TabPage_abilitiesTrinity = New System.Windows.Forms.TabPage()
+        Me.CheckBox_blessing = New System.Windows.Forms.CheckBox()
+        Me.CheckBox_link = New System.Windows.Forms.CheckBox()
+        Me.TabPage_abilitiesValkyr = New System.Windows.Forms.TabPage()
+        Me.CheckBox_warcry = New System.Windows.Forms.CheckBox()
+        Me.TabPage_abilitiesVauban = New System.Windows.Forms.TabPage()
+        Me.NumericUpDown_reinforce = New System.Windows.Forms.NumericUpDown()
+        Me.CheckBox_reinforce = New System.Windows.Forms.CheckBox()
         Me.TabControl_main.SuspendLayout()
         Me.TabPage_warframe.SuspendLayout()
         Me.GroupBox_sortieModifiers.SuspendLayout()
         Me.GroupBox_warframeResults.SuspendLayout()
         Me.GroupBox_squadEffects.SuspendLayout()
-        Me.CustomTabControl_arcaneHelmets.SuspendLayout()
-        Me.TabPage_arcaneHelmetsDefault.SuspendLayout()
-        Me.TabPage_arcaneHelmetsAsh.SuspendLayout()
-        Me.TabPage_arcaneHelmetsBanshee.SuspendLayout()
-        Me.TabPage_arcaneHelmetsEmber.SuspendLayout()
-        Me.TabPage_arcaneHelmetsExcalibur.SuspendLayout()
-        Me.TabPage_arcaneHelmetsFrost.SuspendLayout()
-        Me.TabPage_arcaneHelmetsLoki.SuspendLayout()
-        Me.TabPage_arcaneHelmetsMag.SuspendLayout()
-        Me.TabPage_arcaneHelmetsNova.SuspendLayout()
-        Me.TabPage_arcaneHelmetsNyx.SuspendLayout()
-        Me.TabPage_arcaneHelmetsRhino.SuspendLayout()
-        Me.TabPage_arcaneHelmetsSaryn.SuspendLayout()
-        Me.TabPage_arcaneHelmetsTrinity.SuspendLayout()
-        Me.TabPage_arcaneHelmetsVauban.SuspendLayout()
-        Me.TabPage_arcaneHelmetsVolt.SuspendLayout()
         Me.GroupBox_specialEffects.SuspendLayout()
         CType(Me.NumericUpDown_oversheilds, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox_dragonKeys.SuspendLayout()
@@ -362,6 +346,32 @@ Partial Class Form_main
         CType(Me.NumericUpDown_growingPower, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NumericUpDown_standUnited, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NumericUpDown_physique, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox_focus.SuspendLayout()
+        Me.TabPage_companion.SuspendLayout()
+        Me.GroupBox_companionResults.SuspendLayout()
+        CType(Me.NumericUpDown_companionStability, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox_companionSurvivability.SuspendLayout()
+        CType(Me.NumericUpDown_companionLinkShield, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.NumericUpDown_companionLinkHealth, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.NumericUpDown_companionLinkArmor, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage_archwing.SuspendLayout()
+        Me.TabPage_development.SuspendLayout()
+        Me.CustomTabControl_arcaneHelmets.SuspendLayout()
+        Me.TabPage_arcaneHelmetsDefault.SuspendLayout()
+        Me.TabPage_arcaneHelmetsAsh.SuspendLayout()
+        Me.TabPage_arcaneHelmetsBanshee.SuspendLayout()
+        Me.TabPage_arcaneHelmetsEmber.SuspendLayout()
+        Me.TabPage_arcaneHelmetsExcalibur.SuspendLayout()
+        Me.TabPage_arcaneHelmetsFrost.SuspendLayout()
+        Me.TabPage_arcaneHelmetsLoki.SuspendLayout()
+        Me.TabPage_arcaneHelmetsMag.SuspendLayout()
+        Me.TabPage_arcaneHelmetsNova.SuspendLayout()
+        Me.TabPage_arcaneHelmetsNyx.SuspendLayout()
+        Me.TabPage_arcaneHelmetsRhino.SuspendLayout()
+        Me.TabPage_arcaneHelmetsSaryn.SuspendLayout()
+        Me.TabPage_arcaneHelmetsTrinity.SuspendLayout()
+        Me.TabPage_arcaneHelmetsVauban.SuspendLayout()
+        Me.TabPage_arcaneHelmetsVolt.SuspendLayout()
         Me.CustomTabControl_abilitys.SuspendLayout()
         Me.TabPage_abilitiesDefault.SuspendLayout()
         Me.TabPage_abilitiesChroma.SuspendLayout()
@@ -389,16 +399,6 @@ Partial Class Form_main
         Me.TabPage_abilitiesValkyr.SuspendLayout()
         Me.TabPage_abilitiesVauban.SuspendLayout()
         CType(Me.NumericUpDown_reinforce, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox_focus.SuspendLayout()
-        Me.TabPage_companion.SuspendLayout()
-        Me.GroupBox_companionResults.SuspendLayout()
-        CType(Me.NumericUpDown_companionStability, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox_companionSurvivability.SuspendLayout()
-        CType(Me.NumericUpDown_companionLinkShield, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.NumericUpDown_companionLinkHealth, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.NumericUpDown_companionLinkArmor, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage_archwing.SuspendLayout()
-        Me.TabPage_development.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl_main
@@ -449,7 +449,7 @@ Partial Class Form_main
         Me.TabPage_warframe.ImageKey = "warframe.png"
         Me.TabPage_warframe.Location = New System.Drawing.Point(4, 29)
         Me.TabPage_warframe.Name = "TabPage_warframe"
-        Me.TabPage_warframe.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.TabPage_warframe.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage_warframe.Size = New System.Drawing.Size(1018, 591)
         Me.TabPage_warframe.TabIndex = 0
         Me.TabPage_warframe.Text = "Warframe  "
@@ -833,480 +833,6 @@ Partial Class Form_main
         Me.CheckBox_arcaneHelmets.Tag = "CustomTabControl_arcaneHelmets"
         Me.CheckBox_arcaneHelmets.Text = "Arcane Helmets"
         Me.CheckBox_arcaneHelmets.UseVisualStyleBackColor = True
-        '
-        'CustomTabControl_arcaneHelmets
-        '
-        Me.CustomTabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsDefault)
-        Me.CustomTabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsAsh)
-        Me.CustomTabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsBanshee)
-        Me.CustomTabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsEmber)
-        Me.CustomTabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsExcalibur)
-        Me.CustomTabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsFrost)
-        Me.CustomTabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsLoki)
-        Me.CustomTabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsMag)
-        Me.CustomTabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsNova)
-        Me.CustomTabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsNyx)
-        Me.CustomTabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsRhino)
-        Me.CustomTabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsSaryn)
-        Me.CustomTabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsTrinity)
-        Me.CustomTabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsVauban)
-        Me.CustomTabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsVolt)
-        Me.CustomTabControl_arcaneHelmets.Enabled = False
-        Me.CustomTabControl_arcaneHelmets.Location = New System.Drawing.Point(487, 416)
-        Me.CustomTabControl_arcaneHelmets.Name = "CustomTabControl_arcaneHelmets"
-        Me.CustomTabControl_arcaneHelmets.SelectedIndex = 0
-        Me.CustomTabControl_arcaneHelmets.Size = New System.Drawing.Size(280, 75)
-        Me.CustomTabControl_arcaneHelmets.TabIndex = 117
-        '
-        'TabPage_arcaneHelmetsDefault
-        '
-        Me.TabPage_arcaneHelmetsDefault.BackColor = System.Drawing.Color.White
-        Me.TabPage_arcaneHelmetsDefault.Controls.Add(Me.Label_arcaneHelmetPlaceholder)
-        Me.TabPage_arcaneHelmetsDefault.Location = New System.Drawing.Point(1, 21)
-        Me.TabPage_arcaneHelmetsDefault.Name = "TabPage_arcaneHelmetsDefault"
-        Me.TabPage_arcaneHelmetsDefault.Size = New System.Drawing.Size(278, 53)
-        Me.TabPage_arcaneHelmetsDefault.TabIndex = 2
-        Me.TabPage_arcaneHelmetsDefault.Text = "Default"
-        '
-        'Label_arcaneHelmetPlaceholder
-        '
-        Me.Label_arcaneHelmetPlaceholder.AutoSize = True
-        Me.Label_arcaneHelmetPlaceholder.Location = New System.Drawing.Point(63, 18)
-        Me.Label_arcaneHelmetPlaceholder.Name = "Label_arcaneHelmetPlaceholder"
-        Me.Label_arcaneHelmetPlaceholder.Size = New System.Drawing.Size(152, 34)
-        Me.Label_arcaneHelmetPlaceholder.TabIndex = 1
-        Me.Label_arcaneHelmetPlaceholder.Text = "This Warframe has no " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Arcane Helmets"
-        Me.Label_arcaneHelmetPlaceholder.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'TabPage_arcaneHelmetsAsh
-        '
-        Me.TabPage_arcaneHelmetsAsh.BackColor = System.Drawing.Color.White
-        Me.TabPage_arcaneHelmetsAsh.Controls.Add(Me.RadioButton_locustHelmet)
-        Me.TabPage_arcaneHelmetsAsh.Location = New System.Drawing.Point(1, 21)
-        Me.TabPage_arcaneHelmetsAsh.Name = "TabPage_arcaneHelmetsAsh"
-        Me.TabPage_arcaneHelmetsAsh.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
-        Me.TabPage_arcaneHelmetsAsh.Size = New System.Drawing.Size(278, 53)
-        Me.TabPage_arcaneHelmetsAsh.TabIndex = 0
-        Me.TabPage_arcaneHelmetsAsh.Text = "Ash"
-        '
-        'RadioButton_locustHelmet
-        '
-        Me.RadioButton_locustHelmet.AutoSize = True
-        Me.RadioButton_locustHelmet.Checked = True
-        Me.RadioButton_locustHelmet.Location = New System.Drawing.Point(11, 25)
-        Me.RadioButton_locustHelmet.Name = "RadioButton_locustHelmet"
-        Me.RadioButton_locustHelmet.Size = New System.Drawing.Size(116, 21)
-        Me.RadioButton_locustHelmet.TabIndex = 0
-        Me.RadioButton_locustHelmet.TabStop = True
-        Me.RadioButton_locustHelmet.Text = "Locust Helmet"
-        Me.RadioButton_locustHelmet.UseVisualStyleBackColor = True
-        '
-        'TabPage_arcaneHelmetsBanshee
-        '
-        Me.TabPage_arcaneHelmetsBanshee.BackColor = System.Drawing.Color.White
-        Me.TabPage_arcaneHelmetsBanshee.Controls.Add(Me.RadioButton_reverbHelmet)
-        Me.TabPage_arcaneHelmetsBanshee.Location = New System.Drawing.Point(1, 21)
-        Me.TabPage_arcaneHelmetsBanshee.Name = "TabPage_arcaneHelmetsBanshee"
-        Me.TabPage_arcaneHelmetsBanshee.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
-        Me.TabPage_arcaneHelmetsBanshee.Size = New System.Drawing.Size(278, 53)
-        Me.TabPage_arcaneHelmetsBanshee.TabIndex = 1
-        Me.TabPage_arcaneHelmetsBanshee.Text = "Banshee"
-        '
-        'RadioButton_reverbHelmet
-        '
-        Me.RadioButton_reverbHelmet.AutoSize = True
-        Me.RadioButton_reverbHelmet.Checked = True
-        Me.RadioButton_reverbHelmet.Location = New System.Drawing.Point(11, 25)
-        Me.RadioButton_reverbHelmet.Name = "RadioButton_reverbHelmet"
-        Me.RadioButton_reverbHelmet.Size = New System.Drawing.Size(120, 21)
-        Me.RadioButton_reverbHelmet.TabIndex = 1
-        Me.RadioButton_reverbHelmet.TabStop = True
-        Me.RadioButton_reverbHelmet.Text = "Reverb Helmet"
-        Me.RadioButton_reverbHelmet.UseVisualStyleBackColor = True
-        '
-        'TabPage_arcaneHelmetsEmber
-        '
-        Me.TabPage_arcaneHelmetsEmber.BackColor = System.Drawing.Color.White
-        Me.TabPage_arcaneHelmetsEmber.Controls.Add(Me.RadioButton_backdraftHelmet)
-        Me.TabPage_arcaneHelmetsEmber.Controls.Add(Me.RadioButton_phoenixHelmet)
-        Me.TabPage_arcaneHelmetsEmber.Location = New System.Drawing.Point(1, 21)
-        Me.TabPage_arcaneHelmetsEmber.Name = "TabPage_arcaneHelmetsEmber"
-        Me.TabPage_arcaneHelmetsEmber.Size = New System.Drawing.Size(278, 53)
-        Me.TabPage_arcaneHelmetsEmber.TabIndex = 3
-        Me.TabPage_arcaneHelmetsEmber.Text = "Ember"
-        '
-        'RadioButton_backdraftHelmet
-        '
-        Me.RadioButton_backdraftHelmet.AutoSize = True
-        Me.RadioButton_backdraftHelmet.Location = New System.Drawing.Point(140, 25)
-        Me.RadioButton_backdraftHelmet.Name = "RadioButton_backdraftHelmet"
-        Me.RadioButton_backdraftHelmet.Size = New System.Drawing.Size(134, 21)
-        Me.RadioButton_backdraftHelmet.TabIndex = 3
-        Me.RadioButton_backdraftHelmet.Tag = ""
-        Me.RadioButton_backdraftHelmet.Text = "Backdraft Helmet"
-        Me.RadioButton_backdraftHelmet.UseVisualStyleBackColor = True
-        '
-        'RadioButton_phoenixHelmet
-        '
-        Me.RadioButton_phoenixHelmet.AutoSize = True
-        Me.RadioButton_phoenixHelmet.Checked = True
-        Me.RadioButton_phoenixHelmet.Location = New System.Drawing.Point(10, 25)
-        Me.RadioButton_phoenixHelmet.Name = "RadioButton_phoenixHelmet"
-        Me.RadioButton_phoenixHelmet.Size = New System.Drawing.Size(124, 21)
-        Me.RadioButton_phoenixHelmet.TabIndex = 2
-        Me.RadioButton_phoenixHelmet.TabStop = True
-        Me.RadioButton_phoenixHelmet.Tag = ""
-        Me.RadioButton_phoenixHelmet.Text = "Phoenix Helmet"
-        Me.RadioButton_phoenixHelmet.UseVisualStyleBackColor = True
-        '
-        'TabPage_arcaneHelmetsExcalibur
-        '
-        Me.TabPage_arcaneHelmetsExcalibur.BackColor = System.Drawing.Color.White
-        Me.TabPage_arcaneHelmetsExcalibur.Controls.Add(Me.RadioButton_pendragonHelmet)
-        Me.TabPage_arcaneHelmetsExcalibur.Controls.Add(Me.RadioButton_avalonHelmet)
-        Me.TabPage_arcaneHelmetsExcalibur.Location = New System.Drawing.Point(1, 21)
-        Me.TabPage_arcaneHelmetsExcalibur.Name = "TabPage_arcaneHelmetsExcalibur"
-        Me.TabPage_arcaneHelmetsExcalibur.Size = New System.Drawing.Size(278, 53)
-        Me.TabPage_arcaneHelmetsExcalibur.TabIndex = 4
-        Me.TabPage_arcaneHelmetsExcalibur.Text = "Excalibur"
-        '
-        'RadioButton_pendragonHelmet
-        '
-        Me.RadioButton_pendragonHelmet.AutoSize = True
-        Me.RadioButton_pendragonHelmet.Location = New System.Drawing.Point(130, 25)
-        Me.RadioButton_pendragonHelmet.Name = "RadioButton_pendragonHelmet"
-        Me.RadioButton_pendragonHelmet.Size = New System.Drawing.Size(144, 21)
-        Me.RadioButton_pendragonHelmet.TabIndex = 4
-        Me.RadioButton_pendragonHelmet.Tag = ""
-        Me.RadioButton_pendragonHelmet.Text = "Pendragon Helmet"
-        Me.RadioButton_pendragonHelmet.UseVisualStyleBackColor = True
-        '
-        'RadioButton_avalonHelmet
-        '
-        Me.RadioButton_avalonHelmet.AutoSize = True
-        Me.RadioButton_avalonHelmet.Checked = True
-        Me.RadioButton_avalonHelmet.Location = New System.Drawing.Point(10, 25)
-        Me.RadioButton_avalonHelmet.Name = "RadioButton_avalonHelmet"
-        Me.RadioButton_avalonHelmet.Size = New System.Drawing.Size(117, 21)
-        Me.RadioButton_avalonHelmet.TabIndex = 3
-        Me.RadioButton_avalonHelmet.TabStop = True
-        Me.RadioButton_avalonHelmet.Tag = ""
-        Me.RadioButton_avalonHelmet.Text = "Avalon Helmet"
-        Me.RadioButton_avalonHelmet.UseVisualStyleBackColor = True
-        '
-        'TabPage_arcaneHelmetsFrost
-        '
-        Me.TabPage_arcaneHelmetsFrost.BackColor = System.Drawing.Color.White
-        Me.TabPage_arcaneHelmetsFrost.Controls.Add(Me.RadioButton_squallHelmet)
-        Me.TabPage_arcaneHelmetsFrost.Controls.Add(Me.RadioButton_auroraHelmet)
-        Me.TabPage_arcaneHelmetsFrost.Location = New System.Drawing.Point(1, 21)
-        Me.TabPage_arcaneHelmetsFrost.Name = "TabPage_arcaneHelmetsFrost"
-        Me.TabPage_arcaneHelmetsFrost.Size = New System.Drawing.Size(278, 53)
-        Me.TabPage_arcaneHelmetsFrost.TabIndex = 5
-        Me.TabPage_arcaneHelmetsFrost.Text = "Frost"
-        '
-        'RadioButton_squallHelmet
-        '
-        Me.RadioButton_squallHelmet.AutoSize = True
-        Me.RadioButton_squallHelmet.Location = New System.Drawing.Point(132, 25)
-        Me.RadioButton_squallHelmet.Name = "RadioButton_squallHelmet"
-        Me.RadioButton_squallHelmet.Size = New System.Drawing.Size(113, 21)
-        Me.RadioButton_squallHelmet.TabIndex = 5
-        Me.RadioButton_squallHelmet.Tag = ""
-        Me.RadioButton_squallHelmet.Text = "Squall Helmet"
-        Me.RadioButton_squallHelmet.UseVisualStyleBackColor = True
-        '
-        'RadioButton_auroraHelmet
-        '
-        Me.RadioButton_auroraHelmet.AutoSize = True
-        Me.RadioButton_auroraHelmet.Checked = True
-        Me.RadioButton_auroraHelmet.Location = New System.Drawing.Point(9, 25)
-        Me.RadioButton_auroraHelmet.Name = "RadioButton_auroraHelmet"
-        Me.RadioButton_auroraHelmet.Size = New System.Drawing.Size(117, 21)
-        Me.RadioButton_auroraHelmet.TabIndex = 4
-        Me.RadioButton_auroraHelmet.TabStop = True
-        Me.RadioButton_auroraHelmet.Tag = ""
-        Me.RadioButton_auroraHelmet.Text = "Aurora Helmet"
-        Me.RadioButton_auroraHelmet.UseVisualStyleBackColor = True
-        '
-        'TabPage_arcaneHelmetsLoki
-        '
-        Me.TabPage_arcaneHelmetsLoki.BackColor = System.Drawing.Color.White
-        Me.TabPage_arcaneHelmetsLoki.Controls.Add(Me.RadioButton_swindleHelmet)
-        Me.TabPage_arcaneHelmetsLoki.Controls.Add(Me.RadioButton_essenceHelmet)
-        Me.TabPage_arcaneHelmetsLoki.Location = New System.Drawing.Point(1, 21)
-        Me.TabPage_arcaneHelmetsLoki.Name = "TabPage_arcaneHelmetsLoki"
-        Me.TabPage_arcaneHelmetsLoki.Size = New System.Drawing.Size(278, 53)
-        Me.TabPage_arcaneHelmetsLoki.TabIndex = 6
-        Me.TabPage_arcaneHelmetsLoki.Text = "Loki"
-        '
-        'RadioButton_swindleHelmet
-        '
-        Me.RadioButton_swindleHelmet.AutoSize = True
-        Me.RadioButton_swindleHelmet.Location = New System.Drawing.Point(145, 25)
-        Me.RadioButton_swindleHelmet.Name = "RadioButton_swindleHelmet"
-        Me.RadioButton_swindleHelmet.Size = New System.Drawing.Size(122, 21)
-        Me.RadioButton_swindleHelmet.TabIndex = 5
-        Me.RadioButton_swindleHelmet.Tag = ""
-        Me.RadioButton_swindleHelmet.Text = "Swindle Helmet"
-        Me.RadioButton_swindleHelmet.UseVisualStyleBackColor = True
-        '
-        'RadioButton_essenceHelmet
-        '
-        Me.RadioButton_essenceHelmet.AutoSize = True
-        Me.RadioButton_essenceHelmet.Checked = True
-        Me.RadioButton_essenceHelmet.Location = New System.Drawing.Point(11, 25)
-        Me.RadioButton_essenceHelmet.Name = "RadioButton_essenceHelmet"
-        Me.RadioButton_essenceHelmet.Size = New System.Drawing.Size(128, 21)
-        Me.RadioButton_essenceHelmet.TabIndex = 4
-        Me.RadioButton_essenceHelmet.TabStop = True
-        Me.RadioButton_essenceHelmet.Tag = ""
-        Me.RadioButton_essenceHelmet.Text = "Essence Helmet"
-        Me.RadioButton_essenceHelmet.UseVisualStyleBackColor = True
-        '
-        'TabPage_arcaneHelmetsMag
-        '
-        Me.TabPage_arcaneHelmetsMag.BackColor = System.Drawing.Color.White
-        Me.TabPage_arcaneHelmetsMag.Controls.Add(Me.RadioButton_gaussHelmet)
-        Me.TabPage_arcaneHelmetsMag.Controls.Add(Me.RadioButton_coilHelmet)
-        Me.TabPage_arcaneHelmetsMag.Location = New System.Drawing.Point(1, 21)
-        Me.TabPage_arcaneHelmetsMag.Name = "TabPage_arcaneHelmetsMag"
-        Me.TabPage_arcaneHelmetsMag.Size = New System.Drawing.Size(278, 53)
-        Me.TabPage_arcaneHelmetsMag.TabIndex = 7
-        Me.TabPage_arcaneHelmetsMag.Text = "Mag"
-        '
-        'RadioButton_gaussHelmet
-        '
-        Me.RadioButton_gaussHelmet.AutoSize = True
-        Me.RadioButton_gaussHelmet.Location = New System.Drawing.Point(114, 25)
-        Me.RadioButton_gaussHelmet.Name = "RadioButton_gaussHelmet"
-        Me.RadioButton_gaussHelmet.Size = New System.Drawing.Size(115, 21)
-        Me.RadioButton_gaussHelmet.TabIndex = 5
-        Me.RadioButton_gaussHelmet.Tag = ""
-        Me.RadioButton_gaussHelmet.Text = "Gauss Helmet"
-        Me.RadioButton_gaussHelmet.UseVisualStyleBackColor = True
-        '
-        'RadioButton_coilHelmet
-        '
-        Me.RadioButton_coilHelmet.AutoSize = True
-        Me.RadioButton_coilHelmet.Checked = True
-        Me.RadioButton_coilHelmet.Location = New System.Drawing.Point(11, 25)
-        Me.RadioButton_coilHelmet.Name = "RadioButton_coilHelmet"
-        Me.RadioButton_coilHelmet.Size = New System.Drawing.Size(97, 21)
-        Me.RadioButton_coilHelmet.TabIndex = 4
-        Me.RadioButton_coilHelmet.TabStop = True
-        Me.RadioButton_coilHelmet.Tag = ""
-        Me.RadioButton_coilHelmet.Text = "Coil Helmet"
-        Me.RadioButton_coilHelmet.UseVisualStyleBackColor = True
-        '
-        'TabPage_arcaneHelmetsNova
-        '
-        Me.TabPage_arcaneHelmetsNova.BackColor = System.Drawing.Color.White
-        Me.TabPage_arcaneHelmetsNova.Controls.Add(Me.RadioButton_fluxHelmet)
-        Me.TabPage_arcaneHelmetsNova.Location = New System.Drawing.Point(1, 21)
-        Me.TabPage_arcaneHelmetsNova.Name = "TabPage_arcaneHelmetsNova"
-        Me.TabPage_arcaneHelmetsNova.Size = New System.Drawing.Size(278, 53)
-        Me.TabPage_arcaneHelmetsNova.TabIndex = 14
-        Me.TabPage_arcaneHelmetsNova.Text = "Nova"
-        '
-        'RadioButton_fluxHelmet
-        '
-        Me.RadioButton_fluxHelmet.AutoSize = True
-        Me.RadioButton_fluxHelmet.Checked = True
-        Me.RadioButton_fluxHelmet.Location = New System.Drawing.Point(11, 25)
-        Me.RadioButton_fluxHelmet.Name = "RadioButton_fluxHelmet"
-        Me.RadioButton_fluxHelmet.Size = New System.Drawing.Size(99, 21)
-        Me.RadioButton_fluxHelmet.TabIndex = 4
-        Me.RadioButton_fluxHelmet.TabStop = True
-        Me.RadioButton_fluxHelmet.Tag = ""
-        Me.RadioButton_fluxHelmet.Text = "Flux Helmet"
-        Me.RadioButton_fluxHelmet.UseVisualStyleBackColor = True
-        '
-        'TabPage_arcaneHelmetsNyx
-        '
-        Me.TabPage_arcaneHelmetsNyx.BackColor = System.Drawing.Color.White
-        Me.TabPage_arcaneHelmetsNyx.Controls.Add(Me.RadioButton_vespaHelmet)
-        Me.TabPage_arcaneHelmetsNyx.Controls.Add(Me.RadioButton_menticideHelmet)
-        Me.TabPage_arcaneHelmetsNyx.Location = New System.Drawing.Point(1, 21)
-        Me.TabPage_arcaneHelmetsNyx.Name = "TabPage_arcaneHelmetsNyx"
-        Me.TabPage_arcaneHelmetsNyx.Size = New System.Drawing.Size(278, 53)
-        Me.TabPage_arcaneHelmetsNyx.TabIndex = 8
-        Me.TabPage_arcaneHelmetsNyx.Text = "Nyx"
-        '
-        'RadioButton_vespaHelmet
-        '
-        Me.RadioButton_vespaHelmet.AutoSize = True
-        Me.RadioButton_vespaHelmet.Location = New System.Drawing.Point(149, 25)
-        Me.RadioButton_vespaHelmet.Name = "RadioButton_vespaHelmet"
-        Me.RadioButton_vespaHelmet.Size = New System.Drawing.Size(114, 21)
-        Me.RadioButton_vespaHelmet.TabIndex = 5
-        Me.RadioButton_vespaHelmet.Tag = ""
-        Me.RadioButton_vespaHelmet.Text = "Vespa Helmet"
-        Me.RadioButton_vespaHelmet.UseVisualStyleBackColor = True
-        '
-        'RadioButton_menticideHelmet
-        '
-        Me.RadioButton_menticideHelmet.AutoSize = True
-        Me.RadioButton_menticideHelmet.Checked = True
-        Me.RadioButton_menticideHelmet.Location = New System.Drawing.Point(9, 25)
-        Me.RadioButton_menticideHelmet.Name = "RadioButton_menticideHelmet"
-        Me.RadioButton_menticideHelmet.Size = New System.Drawing.Size(134, 21)
-        Me.RadioButton_menticideHelmet.TabIndex = 4
-        Me.RadioButton_menticideHelmet.TabStop = True
-        Me.RadioButton_menticideHelmet.Tag = ""
-        Me.RadioButton_menticideHelmet.Text = "Menticide Helmet"
-        Me.RadioButton_menticideHelmet.UseVisualStyleBackColor = True
-        '
-        'TabPage_arcaneHelmetsRhino
-        '
-        Me.TabPage_arcaneHelmetsRhino.BackColor = System.Drawing.Color.White
-        Me.TabPage_arcaneHelmetsRhino.Controls.Add(Me.RadioButton_vanguardHelmet)
-        Me.TabPage_arcaneHelmetsRhino.Controls.Add(Me.RadioButton_thrak)
-        Me.TabPage_arcaneHelmetsRhino.Location = New System.Drawing.Point(1, 21)
-        Me.TabPage_arcaneHelmetsRhino.Name = "TabPage_arcaneHelmetsRhino"
-        Me.TabPage_arcaneHelmetsRhino.Size = New System.Drawing.Size(278, 53)
-        Me.TabPage_arcaneHelmetsRhino.TabIndex = 9
-        Me.TabPage_arcaneHelmetsRhino.Text = "Rhino"
-        '
-        'RadioButton_vanguardHelmet
-        '
-        Me.RadioButton_vanguardHelmet.AutoSize = True
-        Me.RadioButton_vanguardHelmet.Location = New System.Drawing.Point(128, 25)
-        Me.RadioButton_vanguardHelmet.Name = "RadioButton_vanguardHelmet"
-        Me.RadioButton_vanguardHelmet.Size = New System.Drawing.Size(136, 21)
-        Me.RadioButton_vanguardHelmet.TabIndex = 5
-        Me.RadioButton_vanguardHelmet.Tag = ""
-        Me.RadioButton_vanguardHelmet.Text = "Vanguard Helmet"
-        Me.RadioButton_vanguardHelmet.UseVisualStyleBackColor = True
-        '
-        'RadioButton_thrak
-        '
-        Me.RadioButton_thrak.AutoSize = True
-        Me.RadioButton_thrak.Checked = True
-        Me.RadioButton_thrak.Location = New System.Drawing.Point(11, 25)
-        Me.RadioButton_thrak.Name = "RadioButton_thrak"
-        Me.RadioButton_thrak.Size = New System.Drawing.Size(111, 21)
-        Me.RadioButton_thrak.TabIndex = 4
-        Me.RadioButton_thrak.TabStop = True
-        Me.RadioButton_thrak.Tag = ""
-        Me.RadioButton_thrak.Text = "Thrak Helmet"
-        Me.RadioButton_thrak.UseVisualStyleBackColor = True
-        '
-        'TabPage_arcaneHelmetsSaryn
-        '
-        Me.TabPage_arcaneHelmetsSaryn.BackColor = System.Drawing.Color.White
-        Me.TabPage_arcaneHelmetsSaryn.Controls.Add(Me.RadioButton_hemlockHelmet)
-        Me.TabPage_arcaneHelmetsSaryn.Location = New System.Drawing.Point(1, 21)
-        Me.TabPage_arcaneHelmetsSaryn.Name = "TabPage_arcaneHelmetsSaryn"
-        Me.TabPage_arcaneHelmetsSaryn.Size = New System.Drawing.Size(278, 53)
-        Me.TabPage_arcaneHelmetsSaryn.TabIndex = 10
-        Me.TabPage_arcaneHelmetsSaryn.Text = "Saryn"
-        '
-        'RadioButton_hemlockHelmet
-        '
-        Me.RadioButton_hemlockHelmet.AutoSize = True
-        Me.RadioButton_hemlockHelmet.Checked = True
-        Me.RadioButton_hemlockHelmet.Location = New System.Drawing.Point(9, 25)
-        Me.RadioButton_hemlockHelmet.Name = "RadioButton_hemlockHelmet"
-        Me.RadioButton_hemlockHelmet.Size = New System.Drawing.Size(128, 21)
-        Me.RadioButton_hemlockHelmet.TabIndex = 4
-        Me.RadioButton_hemlockHelmet.TabStop = True
-        Me.RadioButton_hemlockHelmet.Tag = ""
-        Me.RadioButton_hemlockHelmet.Text = "Hemlock Helmet"
-        Me.RadioButton_hemlockHelmet.UseVisualStyleBackColor = True
-        '
-        'TabPage_arcaneHelmetsTrinity
-        '
-        Me.TabPage_arcaneHelmetsTrinity.BackColor = System.Drawing.Color.White
-        Me.TabPage_arcaneHelmetsTrinity.Controls.Add(Me.RadioButton_meridianHelmet)
-        Me.TabPage_arcaneHelmetsTrinity.Controls.Add(Me.RadioButton_auraHelmet)
-        Me.TabPage_arcaneHelmetsTrinity.Location = New System.Drawing.Point(1, 21)
-        Me.TabPage_arcaneHelmetsTrinity.Name = "TabPage_arcaneHelmetsTrinity"
-        Me.TabPage_arcaneHelmetsTrinity.Size = New System.Drawing.Size(278, 53)
-        Me.TabPage_arcaneHelmetsTrinity.TabIndex = 11
-        Me.TabPage_arcaneHelmetsTrinity.Text = "Trinity"
-        '
-        'RadioButton_meridianHelmet
-        '
-        Me.RadioButton_meridianHelmet.AutoSize = True
-        Me.RadioButton_meridianHelmet.Location = New System.Drawing.Point(121, 25)
-        Me.RadioButton_meridianHelmet.Name = "RadioButton_meridianHelmet"
-        Me.RadioButton_meridianHelmet.Size = New System.Drawing.Size(128, 21)
-        Me.RadioButton_meridianHelmet.TabIndex = 5
-        Me.RadioButton_meridianHelmet.Tag = ""
-        Me.RadioButton_meridianHelmet.Text = "Maridian Helmet"
-        Me.RadioButton_meridianHelmet.UseVisualStyleBackColor = True
-        '
-        'RadioButton_auraHelmet
-        '
-        Me.RadioButton_auraHelmet.AutoSize = True
-        Me.RadioButton_auraHelmet.Checked = True
-        Me.RadioButton_auraHelmet.Location = New System.Drawing.Point(11, 25)
-        Me.RadioButton_auraHelmet.Name = "RadioButton_auraHelmet"
-        Me.RadioButton_auraHelmet.Size = New System.Drawing.Size(104, 21)
-        Me.RadioButton_auraHelmet.TabIndex = 4
-        Me.RadioButton_auraHelmet.TabStop = True
-        Me.RadioButton_auraHelmet.Tag = ""
-        Me.RadioButton_auraHelmet.Text = "Aura Helmet"
-        Me.RadioButton_auraHelmet.UseVisualStyleBackColor = True
-        '
-        'TabPage_arcaneHelmetsVauban
-        '
-        Me.TabPage_arcaneHelmetsVauban.BackColor = System.Drawing.Color.White
-        Me.TabPage_arcaneHelmetsVauban.Controls.Add(Me.RadioButton_espritHelmet)
-        Me.TabPage_arcaneHelmetsVauban.Location = New System.Drawing.Point(1, 21)
-        Me.TabPage_arcaneHelmetsVauban.Name = "TabPage_arcaneHelmetsVauban"
-        Me.TabPage_arcaneHelmetsVauban.Size = New System.Drawing.Size(278, 53)
-        Me.TabPage_arcaneHelmetsVauban.TabIndex = 12
-        Me.TabPage_arcaneHelmetsVauban.Text = "Vauban"
-        '
-        'RadioButton_espritHelmet
-        '
-        Me.RadioButton_espritHelmet.AutoSize = True
-        Me.RadioButton_espritHelmet.Checked = True
-        Me.RadioButton_espritHelmet.Location = New System.Drawing.Point(9, 25)
-        Me.RadioButton_espritHelmet.Name = "RadioButton_espritHelmet"
-        Me.RadioButton_espritHelmet.Size = New System.Drawing.Size(110, 21)
-        Me.RadioButton_espritHelmet.TabIndex = 4
-        Me.RadioButton_espritHelmet.TabStop = True
-        Me.RadioButton_espritHelmet.Tag = ""
-        Me.RadioButton_espritHelmet.Text = "Esprit Helmet"
-        Me.RadioButton_espritHelmet.UseVisualStyleBackColor = True
-        '
-        'TabPage_arcaneHelmetsVolt
-        '
-        Me.TabPage_arcaneHelmetsVolt.BackColor = System.Drawing.Color.White
-        Me.TabPage_arcaneHelmetsVolt.Controls.Add(Me.RadioButton_stormHelmet)
-        Me.TabPage_arcaneHelmetsVolt.Controls.Add(Me.RadioButton_pulseHelmet)
-        Me.TabPage_arcaneHelmetsVolt.Location = New System.Drawing.Point(1, 21)
-        Me.TabPage_arcaneHelmetsVolt.Name = "TabPage_arcaneHelmetsVolt"
-        Me.TabPage_arcaneHelmetsVolt.Size = New System.Drawing.Size(278, 53)
-        Me.TabPage_arcaneHelmetsVolt.TabIndex = 13
-        Me.TabPage_arcaneHelmetsVolt.Text = "Volt"
-        '
-        'RadioButton_stormHelmet
-        '
-        Me.RadioButton_stormHelmet.AutoSize = True
-        Me.RadioButton_stormHelmet.Location = New System.Drawing.Point(124, 25)
-        Me.RadioButton_stormHelmet.Name = "RadioButton_stormHelmet"
-        Me.RadioButton_stormHelmet.Size = New System.Drawing.Size(111, 21)
-        Me.RadioButton_stormHelmet.TabIndex = 5
-        Me.RadioButton_stormHelmet.Tag = ""
-        Me.RadioButton_stormHelmet.Text = "Storm Helmet"
-        Me.RadioButton_stormHelmet.UseVisualStyleBackColor = True
-        '
-        'RadioButton_pulseHelmet
-        '
-        Me.RadioButton_pulseHelmet.AutoSize = True
-        Me.RadioButton_pulseHelmet.Checked = True
-        Me.RadioButton_pulseHelmet.Location = New System.Drawing.Point(9, 25)
-        Me.RadioButton_pulseHelmet.Name = "RadioButton_pulseHelmet"
-        Me.RadioButton_pulseHelmet.Size = New System.Drawing.Size(109, 21)
-        Me.RadioButton_pulseHelmet.TabIndex = 4
-        Me.RadioButton_pulseHelmet.TabStop = True
-        Me.RadioButton_pulseHelmet.Tag = ""
-        Me.RadioButton_pulseHelmet.Text = "Pulse Helmet"
-        Me.RadioButton_pulseHelmet.UseVisualStyleBackColor = True
         '
         'CheckBox_specialEffects
         '
@@ -1814,7 +1340,7 @@ Partial Class Form_main
         Me.GroupBox_survivability.Enabled = False
         Me.GroupBox_survivability.Location = New System.Drawing.Point(8, 156)
         Me.GroupBox_survivability.Name = "GroupBox_survivability"
-        Me.GroupBox_survivability.Size = New System.Drawing.Size(233, 336)
+        Me.GroupBox_survivability.Size = New System.Drawing.Size(233, 337)
         Me.GroupBox_survivability.TabIndex = 101
         Me.GroupBox_survivability.TabStop = False
         Me.GroupBox_survivability.Text = "  "
@@ -1970,7 +1496,7 @@ Partial Class Form_main
         '
         Me.Label_healthConversionStacks.AutoSize = True
         Me.Label_healthConversionStacks.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.Label_healthConversionStacks.Location = New System.Drawing.Point(95, 206)
+        Me.Label_healthConversionStacks.Location = New System.Drawing.Point(102, 206)
         Me.Label_healthConversionStacks.Name = "Label_healthConversionStacks"
         Me.Label_healthConversionStacks.Size = New System.Drawing.Size(54, 17)
         Me.Label_healthConversionStacks.TabIndex = 63
@@ -2181,600 +1707,6 @@ Partial Class Form_main
         Me.CheckBox_isPrime.Text = "Prime"
         Me.CheckBox_isPrime.UseVisualStyleBackColor = True
         '
-        'CustomTabControl_abilitys
-        '
-        Me.CustomTabControl_abilitys.Controls.Add(Me.TabPage_abilitiesDefault)
-        Me.CustomTabControl_abilitys.Controls.Add(Me.TabPage_abilitiesChroma)
-        Me.CustomTabControl_abilitys.Controls.Add(Me.TabPage_abilitiesFrost)
-        Me.CustomTabControl_abilitys.Controls.Add(Me.TabPage_abilitiesGara)
-        Me.CustomTabControl_abilitys.Controls.Add(Me.TabPage_abilitiesInaros)
-        Me.CustomTabControl_abilitys.Controls.Add(Me.TabPage_abilitiesMesa)
-        Me.CustomTabControl_abilitys.Controls.Add(Me.TabPage_abilitiesMirage)
-        Me.CustomTabControl_abilitys.Controls.Add(Me.TabPage_abilitiesNekros)
-        Me.CustomTabControl_abilitys.Controls.Add(Me.TabPage_abilitiesNezha)
-        Me.CustomTabControl_abilitys.Controls.Add(Me.TabPage_abilitiesNidus)
-        Me.CustomTabControl_abilitys.Controls.Add(Me.TabPage_abilitiesOberon)
-        Me.CustomTabControl_abilitys.Controls.Add(Me.TabPage_abilitiesOctavia)
-        Me.CustomTabControl_abilitys.Controls.Add(Me.TabPage_abilitiesRhino)
-        Me.CustomTabControl_abilitys.Controls.Add(Me.TabPage_abilitiesTitania)
-        Me.CustomTabControl_abilitys.Controls.Add(Me.TabPage_abilitiesTrinity)
-        Me.CustomTabControl_abilitys.Controls.Add(Me.TabPage_abilitiesValkyr)
-        Me.CustomTabControl_abilitys.Controls.Add(Me.TabPage_abilitiesVauban)
-        Me.CustomTabControl_abilitys.Enabled = False
-        Me.CustomTabControl_abilitys.Location = New System.Drawing.Point(486, 44)
-        Me.CustomTabControl_abilitys.Name = "CustomTabControl_abilitys"
-        Me.CustomTabControl_abilitys.SelectedIndex = 0
-        Me.CustomTabControl_abilitys.Size = New System.Drawing.Size(281, 105)
-        Me.CustomTabControl_abilitys.TabIndex = 59
-        '
-        'TabPage_abilitiesDefault
-        '
-        Me.TabPage_abilitiesDefault.BackColor = System.Drawing.Color.White
-        Me.TabPage_abilitiesDefault.Controls.Add(Me.Label_abilityPlaceholder)
-        Me.TabPage_abilitiesDefault.Location = New System.Drawing.Point(1, 21)
-        Me.TabPage_abilitiesDefault.Name = "TabPage_abilitiesDefault"
-        Me.TabPage_abilitiesDefault.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
-        Me.TabPage_abilitiesDefault.Size = New System.Drawing.Size(279, 83)
-        Me.TabPage_abilitiesDefault.TabIndex = 1
-        Me.TabPage_abilitiesDefault.Text = "Default"
-        '
-        'Label_abilityPlaceholder
-        '
-        Me.Label_abilityPlaceholder.AutoSize = True
-        Me.Label_abilityPlaceholder.Location = New System.Drawing.Point(65, 30)
-        Me.Label_abilityPlaceholder.Name = "Label_abilityPlaceholder"
-        Me.Label_abilityPlaceholder.Size = New System.Drawing.Size(152, 34)
-        Me.Label_abilityPlaceholder.TabIndex = 0
-        Me.Label_abilityPlaceholder.Text = "This Warframe has no " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "EHP affecting Abilities"
-        Me.Label_abilityPlaceholder.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'TabPage_abilitiesChroma
-        '
-        Me.TabPage_abilitiesChroma.BackColor = System.Drawing.Color.White
-        Me.TabPage_abilitiesChroma.Controls.Add(Me.CheckBox_vexArmor)
-        Me.TabPage_abilitiesChroma.Controls.Add(Me.CheckBox_elementalWard)
-        Me.TabPage_abilitiesChroma.Controls.Add(Me.RadioButton_electricChroma)
-        Me.TabPage_abilitiesChroma.Controls.Add(Me.RadioButton_iceChroma)
-        Me.TabPage_abilitiesChroma.Controls.Add(Me.RadioButton_fireChroma)
-        Me.TabPage_abilitiesChroma.Location = New System.Drawing.Point(1, 21)
-        Me.TabPage_abilitiesChroma.Name = "TabPage_abilitiesChroma"
-        Me.TabPage_abilitiesChroma.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
-        Me.TabPage_abilitiesChroma.Size = New System.Drawing.Size(279, 83)
-        Me.TabPage_abilitiesChroma.TabIndex = 0
-        Me.TabPage_abilitiesChroma.Text = "Chroma"
-        '
-        'CheckBox_vexArmor
-        '
-        Me.CheckBox_vexArmor.AutoSize = True
-        Me.CheckBox_vexArmor.Location = New System.Drawing.Point(151, 43)
-        Me.CheckBox_vexArmor.Name = "CheckBox_vexArmor"
-        Me.CheckBox_vexArmor.Size = New System.Drawing.Size(92, 21)
-        Me.CheckBox_vexArmor.TabIndex = 18
-        Me.CheckBox_vexArmor.Text = "Vex Armor"
-        Me.CheckBox_vexArmor.UseVisualStyleBackColor = True
-        '
-        'CheckBox_elementalWard
-        '
-        Me.CheckBox_elementalWard.AutoSize = True
-        Me.CheckBox_elementalWard.Location = New System.Drawing.Point(151, 17)
-        Me.CheckBox_elementalWard.Name = "CheckBox_elementalWard"
-        Me.CheckBox_elementalWard.Size = New System.Drawing.Size(127, 21)
-        Me.CheckBox_elementalWard.TabIndex = 17
-        Me.CheckBox_elementalWard.Text = "Elemental Ward"
-        Me.CheckBox_elementalWard.UseVisualStyleBackColor = True
-        '
-        'RadioButton_electricChroma
-        '
-        Me.RadioButton_electricChroma.AutoSize = True
-        Me.RadioButton_electricChroma.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.RadioButton_electricChroma.Location = New System.Drawing.Point(9, 16)
-        Me.RadioButton_electricChroma.Name = "RadioButton_electricChroma"
-        Me.RadioButton_electricChroma.Size = New System.Drawing.Size(125, 21)
-        Me.RadioButton_electricChroma.TabIndex = 16
-        Me.RadioButton_electricChroma.Text = "Electric Chroma"
-        Me.RadioButton_electricChroma.UseVisualStyleBackColor = True
-        '
-        'RadioButton_iceChroma
-        '
-        Me.RadioButton_iceChroma.AutoSize = True
-        Me.RadioButton_iceChroma.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.RadioButton_iceChroma.Location = New System.Drawing.Point(9, 68)
-        Me.RadioButton_iceChroma.Name = "RadioButton_iceChroma"
-        Me.RadioButton_iceChroma.Size = New System.Drawing.Size(97, 21)
-        Me.RadioButton_iceChroma.TabIndex = 15
-        Me.RadioButton_iceChroma.Text = "Ice Chroma"
-        Me.RadioButton_iceChroma.UseVisualStyleBackColor = True
-        '
-        'RadioButton_fireChroma
-        '
-        Me.RadioButton_fireChroma.AutoSize = True
-        Me.RadioButton_fireChroma.Checked = True
-        Me.RadioButton_fireChroma.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.RadioButton_fireChroma.Location = New System.Drawing.Point(9, 42)
-        Me.RadioButton_fireChroma.Name = "RadioButton_fireChroma"
-        Me.RadioButton_fireChroma.Size = New System.Drawing.Size(103, 21)
-        Me.RadioButton_fireChroma.TabIndex = 14
-        Me.RadioButton_fireChroma.TabStop = True
-        Me.RadioButton_fireChroma.Text = "Fire Chroma"
-        Me.RadioButton_fireChroma.UseVisualStyleBackColor = True
-        '
-        'TabPage_abilitiesFrost
-        '
-        Me.TabPage_abilitiesFrost.BackColor = System.Drawing.Color.White
-        Me.TabPage_abilitiesFrost.Controls.Add(Me.NumericUpDown_icyAvalanche)
-        Me.TabPage_abilitiesFrost.Controls.Add(Me.CheckBox_icyAvalanche)
-        Me.TabPage_abilitiesFrost.Location = New System.Drawing.Point(1, 21)
-        Me.TabPage_abilitiesFrost.Name = "TabPage_abilitiesFrost"
-        Me.TabPage_abilitiesFrost.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
-        Me.TabPage_abilitiesFrost.Size = New System.Drawing.Size(279, 83)
-        Me.TabPage_abilitiesFrost.TabIndex = 2
-        Me.TabPage_abilitiesFrost.Text = "Frost"
-        '
-        'NumericUpDown_icyAvalanche
-        '
-        Me.NumericUpDown_icyAvalanche.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.NumericUpDown_icyAvalanche.Location = New System.Drawing.Point(203, 15)
-        Me.NumericUpDown_icyAvalanche.Maximum = New Decimal(New Integer() {200, 0, 0, 0})
-        Me.NumericUpDown_icyAvalanche.Name = "NumericUpDown_icyAvalanche"
-        Me.NumericUpDown_icyAvalanche.Size = New System.Drawing.Size(61, 23)
-        Me.NumericUpDown_icyAvalanche.TabIndex = 40
-        '
-        'CheckBox_icyAvalanche
-        '
-        Me.CheckBox_icyAvalanche.AutoSize = True
-        Me.CheckBox_icyAvalanche.Location = New System.Drawing.Point(9, 16)
-        Me.CheckBox_icyAvalanche.Name = "CheckBox_icyAvalanche"
-        Me.CheckBox_icyAvalanche.Size = New System.Drawing.Size(114, 21)
-        Me.CheckBox_icyAvalanche.TabIndex = 0
-        Me.CheckBox_icyAvalanche.Text = "Icy Avalanche"
-        Me.CheckBox_icyAvalanche.UseVisualStyleBackColor = True
-        '
-        'TabPage_abilitiesGara
-        '
-        Me.TabPage_abilitiesGara.Controls.Add(Me.CheckBox_splinterStorm)
-        Me.TabPage_abilitiesGara.Location = New System.Drawing.Point(1, 21)
-        Me.TabPage_abilitiesGara.Name = "TabPage_abilitiesGara"
-        Me.TabPage_abilitiesGara.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
-        Me.TabPage_abilitiesGara.Size = New System.Drawing.Size(279, 83)
-        Me.TabPage_abilitiesGara.TabIndex = 17
-        Me.TabPage_abilitiesGara.Text = "Gara"
-        Me.TabPage_abilitiesGara.UseVisualStyleBackColor = True
-        '
-        'CheckBox_splinterStorm
-        '
-        Me.CheckBox_splinterStorm.AutoSize = True
-        Me.CheckBox_splinterStorm.Location = New System.Drawing.Point(9, 16)
-        Me.CheckBox_splinterStorm.Name = "CheckBox_splinterStorm"
-        Me.CheckBox_splinterStorm.Size = New System.Drawing.Size(116, 21)
-        Me.CheckBox_splinterStorm.TabIndex = 1
-        Me.CheckBox_splinterStorm.Text = "Splinter Storm"
-        Me.CheckBox_splinterStorm.UseVisualStyleBackColor = True
-        '
-        'TabPage_abilitiesInaros
-        '
-        Me.TabPage_abilitiesInaros.BackColor = System.Drawing.Color.White
-        Me.TabPage_abilitiesInaros.Controls.Add(Me.NumericUpDown_scarabSwarm)
-        Me.TabPage_abilitiesInaros.Controls.Add(Me.CheckBox_scarabSwarm)
-        Me.TabPage_abilitiesInaros.Location = New System.Drawing.Point(1, 21)
-        Me.TabPage_abilitiesInaros.Name = "TabPage_abilitiesInaros"
-        Me.TabPage_abilitiesInaros.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
-        Me.TabPage_abilitiesInaros.Size = New System.Drawing.Size(279, 83)
-        Me.TabPage_abilitiesInaros.TabIndex = 3
-        Me.TabPage_abilitiesInaros.Text = "Inaros"
-        '
-        'NumericUpDown_scarabSwarm
-        '
-        Me.NumericUpDown_scarabSwarm.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.NumericUpDown_scarabSwarm.Location = New System.Drawing.Point(205, 15)
-        Me.NumericUpDown_scarabSwarm.Maximum = New Decimal(New Integer() {200, 0, 0, 0})
-        Me.NumericUpDown_scarabSwarm.Name = "NumericUpDown_scarabSwarm"
-        Me.NumericUpDown_scarabSwarm.Size = New System.Drawing.Size(61, 23)
-        Me.NumericUpDown_scarabSwarm.TabIndex = 39
-        '
-        'CheckBox_scarabSwarm
-        '
-        Me.CheckBox_scarabSwarm.AutoSize = True
-        Me.CheckBox_scarabSwarm.Location = New System.Drawing.Point(9, 16)
-        Me.CheckBox_scarabSwarm.Name = "CheckBox_scarabSwarm"
-        Me.CheckBox_scarabSwarm.Size = New System.Drawing.Size(118, 21)
-        Me.CheckBox_scarabSwarm.TabIndex = 1
-        Me.CheckBox_scarabSwarm.Text = "Scarab Swarm"
-        Me.CheckBox_scarabSwarm.UseVisualStyleBackColor = True
-        '
-        'TabPage_abilitiesMesa
-        '
-        Me.TabPage_abilitiesMesa.BackColor = System.Drawing.Color.White
-        Me.TabPage_abilitiesMesa.Controls.Add(Me.CheckBox_marksmansDexterity)
-        Me.TabPage_abilitiesMesa.Controls.Add(Me.CheckBox_shatterShield)
-        Me.TabPage_abilitiesMesa.Location = New System.Drawing.Point(1, 21)
-        Me.TabPage_abilitiesMesa.Name = "TabPage_abilitiesMesa"
-        Me.TabPage_abilitiesMesa.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
-        Me.TabPage_abilitiesMesa.Size = New System.Drawing.Size(279, 83)
-        Me.TabPage_abilitiesMesa.TabIndex = 6
-        Me.TabPage_abilitiesMesa.Text = "Mesa"
-        '
-        'CheckBox_marksmansDexterity
-        '
-        Me.CheckBox_marksmansDexterity.AutoSize = True
-        Me.CheckBox_marksmansDexterity.Location = New System.Drawing.Point(9, 43)
-        Me.CheckBox_marksmansDexterity.Name = "CheckBox_marksmansDexterity"
-        Me.CheckBox_marksmansDexterity.Size = New System.Drawing.Size(161, 21)
-        Me.CheckBox_marksmansDexterity.TabIndex = 3
-        Me.CheckBox_marksmansDexterity.Text = "Marksman's Dexterity"
-        Me.CheckBox_marksmansDexterity.UseVisualStyleBackColor = True
-        '
-        'CheckBox_shatterShield
-        '
-        Me.CheckBox_shatterShield.AutoSize = True
-        Me.CheckBox_shatterShield.Location = New System.Drawing.Point(9, 16)
-        Me.CheckBox_shatterShield.Name = "CheckBox_shatterShield"
-        Me.CheckBox_shatterShield.Size = New System.Drawing.Size(116, 21)
-        Me.CheckBox_shatterShield.TabIndex = 2
-        Me.CheckBox_shatterShield.Text = "Shatter Shield"
-        Me.CheckBox_shatterShield.UseVisualStyleBackColor = True
-        '
-        'TabPage_abilitiesMirage
-        '
-        Me.TabPage_abilitiesMirage.BackColor = System.Drawing.Color.White
-        Me.TabPage_abilitiesMirage.Controls.Add(Me.CheckBox_eclipse)
-        Me.TabPage_abilitiesMirage.Location = New System.Drawing.Point(1, 21)
-        Me.TabPage_abilitiesMirage.Name = "TabPage_abilitiesMirage"
-        Me.TabPage_abilitiesMirage.Size = New System.Drawing.Size(279, 83)
-        Me.TabPage_abilitiesMirage.TabIndex = 13
-        Me.TabPage_abilitiesMirage.Text = "Mirage"
-        '
-        'CheckBox_eclipse
-        '
-        Me.CheckBox_eclipse.AutoSize = True
-        Me.CheckBox_eclipse.Location = New System.Drawing.Point(9, 16)
-        Me.CheckBox_eclipse.Name = "CheckBox_eclipse"
-        Me.CheckBox_eclipse.Size = New System.Drawing.Size(72, 21)
-        Me.CheckBox_eclipse.TabIndex = 3
-        Me.CheckBox_eclipse.Text = "Eclipse"
-        Me.CheckBox_eclipse.UseVisualStyleBackColor = True
-        '
-        'TabPage_abilitiesNekros
-        '
-        Me.TabPage_abilitiesNekros.BackColor = System.Drawing.Color.White
-        Me.TabPage_abilitiesNekros.Controls.Add(Me.NumericUpDown_shieldOfShadows)
-        Me.TabPage_abilitiesNekros.Controls.Add(Me.CheckBox_shieldOfShadows)
-        Me.TabPage_abilitiesNekros.Location = New System.Drawing.Point(1, 21)
-        Me.TabPage_abilitiesNekros.Name = "TabPage_abilitiesNekros"
-        Me.TabPage_abilitiesNekros.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
-        Me.TabPage_abilitiesNekros.Size = New System.Drawing.Size(279, 83)
-        Me.TabPage_abilitiesNekros.TabIndex = 11
-        Me.TabPage_abilitiesNekros.Text = "Nekros"
-        '
-        'NumericUpDown_shieldOfShadows
-        '
-        Me.NumericUpDown_shieldOfShadows.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.NumericUpDown_shieldOfShadows.Location = New System.Drawing.Point(203, 15)
-        Me.NumericUpDown_shieldOfShadows.Maximum = New Decimal(New Integer() {7, 0, 0, 0})
-        Me.NumericUpDown_shieldOfShadows.Name = "NumericUpDown_shieldOfShadows"
-        Me.NumericUpDown_shieldOfShadows.Size = New System.Drawing.Size(61, 23)
-        Me.NumericUpDown_shieldOfShadows.TabIndex = 38
-        '
-        'CheckBox_shieldOfShadows
-        '
-        Me.CheckBox_shieldOfShadows.AutoSize = True
-        Me.CheckBox_shieldOfShadows.Location = New System.Drawing.Point(9, 16)
-        Me.CheckBox_shieldOfShadows.Name = "CheckBox_shieldOfShadows"
-        Me.CheckBox_shieldOfShadows.Size = New System.Drawing.Size(147, 21)
-        Me.CheckBox_shieldOfShadows.TabIndex = 3
-        Me.CheckBox_shieldOfShadows.Text = "Shield of Shadows:"
-        Me.CheckBox_shieldOfShadows.UseVisualStyleBackColor = True
-        '
-        'TabPage_abilitiesNezha
-        '
-        Me.TabPage_abilitiesNezha.BackColor = System.Drawing.Color.White
-        Me.TabPage_abilitiesNezha.Controls.Add(Me.Label_wardingHalo)
-        Me.TabPage_abilitiesNezha.Controls.Add(Me.NumericUpDown_wardingHalo)
-        Me.TabPage_abilitiesNezha.Controls.Add(Me.CheckBox_wardingHalo)
-        Me.TabPage_abilitiesNezha.Location = New System.Drawing.Point(1, 21)
-        Me.TabPage_abilitiesNezha.Name = "TabPage_abilitiesNezha"
-        Me.TabPage_abilitiesNezha.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
-        Me.TabPage_abilitiesNezha.Size = New System.Drawing.Size(279, 83)
-        Me.TabPage_abilitiesNezha.TabIndex = 4
-        Me.TabPage_abilitiesNezha.Text = "Nezha"
-        '
-        'Label_wardingHalo
-        '
-        Me.Label_wardingHalo.AutoSize = True
-        Me.Label_wardingHalo.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.Label_wardingHalo.Location = New System.Drawing.Point(6, 43)
-        Me.Label_wardingHalo.Name = "Label_wardingHalo"
-        Me.Label_wardingHalo.Size = New System.Drawing.Size(128, 17)
-        Me.Label_wardingHalo.TabIndex = 64
-        Me.Label_wardingHalo.Text = "Damage Received:"
-        '
-        'NumericUpDown_wardingHalo
-        '
-        Me.NumericUpDown_wardingHalo.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.NumericUpDown_wardingHalo.Location = New System.Drawing.Point(140, 41)
-        Me.NumericUpDown_wardingHalo.Maximum = New Decimal(New Integer() {100000000, 0, 0, 0})
-        Me.NumericUpDown_wardingHalo.Name = "NumericUpDown_wardingHalo"
-        Me.NumericUpDown_wardingHalo.Size = New System.Drawing.Size(127, 23)
-        Me.NumericUpDown_wardingHalo.TabIndex = 38
-        '
-        'CheckBox_wardingHalo
-        '
-        Me.CheckBox_wardingHalo.AutoSize = True
-        Me.CheckBox_wardingHalo.Location = New System.Drawing.Point(9, 16)
-        Me.CheckBox_wardingHalo.Name = "CheckBox_wardingHalo"
-        Me.CheckBox_wardingHalo.Size = New System.Drawing.Size(113, 21)
-        Me.CheckBox_wardingHalo.TabIndex = 2
-        Me.CheckBox_wardingHalo.Text = "Warding Halo"
-        Me.CheckBox_wardingHalo.UseVisualStyleBackColor = True
-        '
-        'TabPage_abilitiesNidus
-        '
-        Me.TabPage_abilitiesNidus.BackColor = System.Drawing.Color.White
-        Me.TabPage_abilitiesNidus.Controls.Add(Me.CheckBox_parasiticLink)
-        Me.TabPage_abilitiesNidus.Controls.Add(Me.NumericUpDown_mutationStacks)
-        Me.TabPage_abilitiesNidus.Controls.Add(Me.CheckBox_mutationStacks)
-        Me.TabPage_abilitiesNidus.Location = New System.Drawing.Point(1, 21)
-        Me.TabPage_abilitiesNidus.Name = "TabPage_abilitiesNidus"
-        Me.TabPage_abilitiesNidus.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
-        Me.TabPage_abilitiesNidus.Size = New System.Drawing.Size(279, 83)
-        Me.TabPage_abilitiesNidus.TabIndex = 9
-        Me.TabPage_abilitiesNidus.Text = "Nidus"
-        '
-        'CheckBox_parasiticLink
-        '
-        Me.CheckBox_parasiticLink.AutoSize = True
-        Me.CheckBox_parasiticLink.Location = New System.Drawing.Point(9, 42)
-        Me.CheckBox_parasiticLink.Name = "CheckBox_parasiticLink"
-        Me.CheckBox_parasiticLink.Size = New System.Drawing.Size(111, 21)
-        Me.CheckBox_parasiticLink.TabIndex = 38
-        Me.CheckBox_parasiticLink.Text = "Parasitic Link"
-        Me.CheckBox_parasiticLink.UseVisualStyleBackColor = True
-        '
-        'NumericUpDown_mutationStacks
-        '
-        Me.NumericUpDown_mutationStacks.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.NumericUpDown_mutationStacks.Location = New System.Drawing.Point(203, 15)
-        Me.NumericUpDown_mutationStacks.Name = "NumericUpDown_mutationStacks"
-        Me.NumericUpDown_mutationStacks.Size = New System.Drawing.Size(61, 23)
-        Me.NumericUpDown_mutationStacks.TabIndex = 37
-        '
-        'CheckBox_mutationStacks
-        '
-        Me.CheckBox_mutationStacks.AutoSize = True
-        Me.CheckBox_mutationStacks.Location = New System.Drawing.Point(9, 16)
-        Me.CheckBox_mutationStacks.Name = "CheckBox_mutationStacks"
-        Me.CheckBox_mutationStacks.Size = New System.Drawing.Size(131, 21)
-        Me.CheckBox_mutationStacks.TabIndex = 3
-        Me.CheckBox_mutationStacks.Text = "Mutation Stacks:"
-        Me.CheckBox_mutationStacks.UseVisualStyleBackColor = True
-        '
-        'TabPage_abilitiesOberon
-        '
-        Me.TabPage_abilitiesOberon.BackColor = System.Drawing.Color.White
-        Me.TabPage_abilitiesOberon.Controls.Add(Me.CheckBox_hallowedReckoning)
-        Me.TabPage_abilitiesOberon.Controls.Add(Me.CheckBox_ironRenewal)
-        Me.TabPage_abilitiesOberon.Location = New System.Drawing.Point(1, 21)
-        Me.TabPage_abilitiesOberon.Name = "TabPage_abilitiesOberon"
-        Me.TabPage_abilitiesOberon.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
-        Me.TabPage_abilitiesOberon.Size = New System.Drawing.Size(279, 83)
-        Me.TabPage_abilitiesOberon.TabIndex = 5
-        Me.TabPage_abilitiesOberon.Text = "Oberon"
-        '
-        'CheckBox_hallowedReckoning
-        '
-        Me.CheckBox_hallowedReckoning.AutoSize = True
-        Me.CheckBox_hallowedReckoning.Location = New System.Drawing.Point(9, 42)
-        Me.CheckBox_hallowedReckoning.Name = "CheckBox_hallowedReckoning"
-        Me.CheckBox_hallowedReckoning.Size = New System.Drawing.Size(155, 21)
-        Me.CheckBox_hallowedReckoning.TabIndex = 4
-        Me.CheckBox_hallowedReckoning.Text = "Hallowed Reckoning"
-        Me.CheckBox_hallowedReckoning.UseVisualStyleBackColor = True
-        '
-        'CheckBox_ironRenewal
-        '
-        Me.CheckBox_ironRenewal.AutoSize = True
-        Me.CheckBox_ironRenewal.Location = New System.Drawing.Point(9, 16)
-        Me.CheckBox_ironRenewal.Name = "CheckBox_ironRenewal"
-        Me.CheckBox_ironRenewal.Size = New System.Drawing.Size(109, 21)
-        Me.CheckBox_ironRenewal.TabIndex = 3
-        Me.CheckBox_ironRenewal.Text = "Iron Renewal"
-        Me.CheckBox_ironRenewal.UseVisualStyleBackColor = True
-        '
-        'TabPage_abilitiesOctavia
-        '
-        Me.TabPage_abilitiesOctavia.BackColor = System.Drawing.Color.White
-        Me.TabPage_abilitiesOctavia.Controls.Add(Me.CheckBox_metronome)
-        Me.TabPage_abilitiesOctavia.Location = New System.Drawing.Point(1, 21)
-        Me.TabPage_abilitiesOctavia.Name = "TabPage_abilitiesOctavia"
-        Me.TabPage_abilitiesOctavia.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
-        Me.TabPage_abilitiesOctavia.Size = New System.Drawing.Size(279, 83)
-        Me.TabPage_abilitiesOctavia.TabIndex = 15
-        Me.TabPage_abilitiesOctavia.Text = "Octavia"
-        '
-        'CheckBox_metronome
-        '
-        Me.CheckBox_metronome.AutoSize = True
-        Me.CheckBox_metronome.Location = New System.Drawing.Point(9, 16)
-        Me.CheckBox_metronome.Name = "CheckBox_metronome"
-        Me.CheckBox_metronome.Size = New System.Drawing.Size(98, 21)
-        Me.CheckBox_metronome.TabIndex = 4
-        Me.CheckBox_metronome.Text = "Metronome"
-        Me.CheckBox_metronome.UseVisualStyleBackColor = True
-        '
-        'TabPage_abilitiesRhino
-        '
-        Me.TabPage_abilitiesRhino.BackColor = System.Drawing.Color.White
-        Me.TabPage_abilitiesRhino.Controls.Add(Me.NumericUpDown_ironcladCharge)
-        Me.TabPage_abilitiesRhino.Controls.Add(Me.CheckBox_ironcladCharge)
-        Me.TabPage_abilitiesRhino.Controls.Add(Me.CheckBox_ironSkin)
-        Me.TabPage_abilitiesRhino.Controls.Add(Me.Label_ironSkin)
-        Me.TabPage_abilitiesRhino.Controls.Add(Me.NumericUpDown_ironSkin)
-        Me.TabPage_abilitiesRhino.Location = New System.Drawing.Point(1, 21)
-        Me.TabPage_abilitiesRhino.Name = "TabPage_abilitiesRhino"
-        Me.TabPage_abilitiesRhino.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
-        Me.TabPage_abilitiesRhino.Size = New System.Drawing.Size(279, 83)
-        Me.TabPage_abilitiesRhino.TabIndex = 7
-        Me.TabPage_abilitiesRhino.Text = "Rhino"
-        '
-        'NumericUpDown_ironcladCharge
-        '
-        Me.NumericUpDown_ironcladCharge.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.NumericUpDown_ironcladCharge.Location = New System.Drawing.Point(203, 67)
-        Me.NumericUpDown_ironcladCharge.Name = "NumericUpDown_ironcladCharge"
-        Me.NumericUpDown_ironcladCharge.Size = New System.Drawing.Size(61, 23)
-        Me.NumericUpDown_ironcladCharge.TabIndex = 38
-        '
-        'CheckBox_ironcladCharge
-        '
-        Me.CheckBox_ironcladCharge.AutoSize = True
-        Me.CheckBox_ironcladCharge.Location = New System.Drawing.Point(9, 68)
-        Me.CheckBox_ironcladCharge.Name = "CheckBox_ironcladCharge"
-        Me.CheckBox_ironcladCharge.Size = New System.Drawing.Size(127, 21)
-        Me.CheckBox_ironcladCharge.TabIndex = 5
-        Me.CheckBox_ironcladCharge.Text = "Ironclad Charge"
-        Me.CheckBox_ironcladCharge.UseVisualStyleBackColor = True
-        '
-        'CheckBox_ironSkin
-        '
-        Me.CheckBox_ironSkin.AutoSize = True
-        Me.CheckBox_ironSkin.Location = New System.Drawing.Point(9, 16)
-        Me.CheckBox_ironSkin.Name = "CheckBox_ironSkin"
-        Me.CheckBox_ironSkin.Size = New System.Drawing.Size(82, 21)
-        Me.CheckBox_ironSkin.TabIndex = 4
-        Me.CheckBox_ironSkin.Text = "Iron Skin"
-        Me.CheckBox_ironSkin.UseVisualStyleBackColor = True
-        '
-        'Label_ironSkin
-        '
-        Me.Label_ironSkin.AutoSize = True
-        Me.Label_ironSkin.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.Label_ironSkin.Location = New System.Drawing.Point(6, 43)
-        Me.Label_ironSkin.Name = "Label_ironSkin"
-        Me.Label_ironSkin.Size = New System.Drawing.Size(128, 17)
-        Me.Label_ironSkin.TabIndex = 66
-        Me.Label_ironSkin.Text = "Damage Received:"
-        '
-        'NumericUpDown_ironSkin
-        '
-        Me.NumericUpDown_ironSkin.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.NumericUpDown_ironSkin.Location = New System.Drawing.Point(142, 41)
-        Me.NumericUpDown_ironSkin.Maximum = New Decimal(New Integer() {100000000, 0, 0, 0})
-        Me.NumericUpDown_ironSkin.Name = "NumericUpDown_ironSkin"
-        Me.NumericUpDown_ironSkin.Size = New System.Drawing.Size(122, 23)
-        Me.NumericUpDown_ironSkin.TabIndex = 65
-        '
-        'TabPage_abilitiesTitania
-        '
-        Me.TabPage_abilitiesTitania.BackColor = System.Drawing.Color.White
-        Me.TabPage_abilitiesTitania.Controls.Add(Me.NumericUpDown_thorns)
-        Me.TabPage_abilitiesTitania.Controls.Add(Me.CheckBox_thorns)
-        Me.TabPage_abilitiesTitania.Location = New System.Drawing.Point(1, 21)
-        Me.TabPage_abilitiesTitania.Name = "TabPage_abilitiesTitania"
-        Me.TabPage_abilitiesTitania.Size = New System.Drawing.Size(279, 83)
-        Me.TabPage_abilitiesTitania.TabIndex = 16
-        Me.TabPage_abilitiesTitania.Text = "Titania"
-        '
-        'NumericUpDown_thorns
-        '
-        Me.NumericUpDown_thorns.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.NumericUpDown_thorns.Increment = New Decimal(New Integer() {5, 0, 0, 0})
-        Me.NumericUpDown_thorns.Location = New System.Drawing.Point(205, 15)
-        Me.NumericUpDown_thorns.Maximum = New Decimal(New Integer() {25, 0, 0, 0})
-        Me.NumericUpDown_thorns.Name = "NumericUpDown_thorns"
-        Me.NumericUpDown_thorns.Size = New System.Drawing.Size(61, 23)
-        Me.NumericUpDown_thorns.TabIndex = 39
-        '
-        'CheckBox_thorns
-        '
-        Me.CheckBox_thorns.AutoSize = True
-        Me.CheckBox_thorns.Location = New System.Drawing.Point(9, 16)
-        Me.CheckBox_thorns.Name = "CheckBox_thorns"
-        Me.CheckBox_thorns.Size = New System.Drawing.Size(72, 21)
-        Me.CheckBox_thorns.TabIndex = 0
-        Me.CheckBox_thorns.Text = "Thorns"
-        Me.CheckBox_thorns.UseVisualStyleBackColor = True
-        '
-        'TabPage_abilitiesTrinity
-        '
-        Me.TabPage_abilitiesTrinity.BackColor = System.Drawing.Color.White
-        Me.TabPage_abilitiesTrinity.Controls.Add(Me.CheckBox_blessing)
-        Me.TabPage_abilitiesTrinity.Controls.Add(Me.CheckBox_link)
-        Me.TabPage_abilitiesTrinity.Location = New System.Drawing.Point(1, 21)
-        Me.TabPage_abilitiesTrinity.Name = "TabPage_abilitiesTrinity"
-        Me.TabPage_abilitiesTrinity.Size = New System.Drawing.Size(279, 83)
-        Me.TabPage_abilitiesTrinity.TabIndex = 12
-        Me.TabPage_abilitiesTrinity.Text = "Trinity"
-        '
-        'CheckBox_blessing
-        '
-        Me.CheckBox_blessing.AutoSize = True
-        Me.CheckBox_blessing.Location = New System.Drawing.Point(9, 42)
-        Me.CheckBox_blessing.Name = "CheckBox_blessing"
-        Me.CheckBox_blessing.Size = New System.Drawing.Size(84, 21)
-        Me.CheckBox_blessing.TabIndex = 41
-        Me.CheckBox_blessing.Text = "Blessing:"
-        Me.CheckBox_blessing.UseVisualStyleBackColor = True
-        '
-        'CheckBox_link
-        '
-        Me.CheckBox_link.AutoSize = True
-        Me.CheckBox_link.Location = New System.Drawing.Point(9, 16)
-        Me.CheckBox_link.Name = "CheckBox_link"
-        Me.CheckBox_link.Size = New System.Drawing.Size(57, 21)
-        Me.CheckBox_link.TabIndex = 39
-        Me.CheckBox_link.Text = "Link:"
-        Me.CheckBox_link.UseVisualStyleBackColor = True
-        '
-        'TabPage_abilitiesValkyr
-        '
-        Me.TabPage_abilitiesValkyr.BackColor = System.Drawing.Color.White
-        Me.TabPage_abilitiesValkyr.Controls.Add(Me.CheckBox_warcry)
-        Me.TabPage_abilitiesValkyr.Location = New System.Drawing.Point(1, 21)
-        Me.TabPage_abilitiesValkyr.Name = "TabPage_abilitiesValkyr"
-        Me.TabPage_abilitiesValkyr.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
-        Me.TabPage_abilitiesValkyr.Size = New System.Drawing.Size(279, 83)
-        Me.TabPage_abilitiesValkyr.TabIndex = 8
-        Me.TabPage_abilitiesValkyr.Text = "Valkyr"
-        '
-        'CheckBox_warcry
-        '
-        Me.CheckBox_warcry.AutoSize = True
-        Me.CheckBox_warcry.Location = New System.Drawing.Point(9, 16)
-        Me.CheckBox_warcry.Name = "CheckBox_warcry"
-        Me.CheckBox_warcry.Size = New System.Drawing.Size(72, 21)
-        Me.CheckBox_warcry.TabIndex = 5
-        Me.CheckBox_warcry.Text = "Warcry"
-        Me.CheckBox_warcry.UseVisualStyleBackColor = True
-        '
-        'TabPage_abilitiesVauban
-        '
-        Me.TabPage_abilitiesVauban.BackColor = System.Drawing.Color.White
-        Me.TabPage_abilitiesVauban.Controls.Add(Me.NumericUpDown_reinforce)
-        Me.TabPage_abilitiesVauban.Controls.Add(Me.CheckBox_reinforce)
-        Me.TabPage_abilitiesVauban.Location = New System.Drawing.Point(1, 21)
-        Me.TabPage_abilitiesVauban.Name = "TabPage_abilitiesVauban"
-        Me.TabPage_abilitiesVauban.Size = New System.Drawing.Size(279, 83)
-        Me.TabPage_abilitiesVauban.TabIndex = 14
-        Me.TabPage_abilitiesVauban.Text = "Vauban"
-        '
-        'NumericUpDown_reinforce
-        '
-        Me.NumericUpDown_reinforce.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.NumericUpDown_reinforce.Location = New System.Drawing.Point(205, 15)
-        Me.NumericUpDown_reinforce.Maximum = New Decimal(New Integer() {7, 0, 0, 0})
-        Me.NumericUpDown_reinforce.Name = "NumericUpDown_reinforce"
-        Me.NumericUpDown_reinforce.Size = New System.Drawing.Size(61, 23)
-        Me.NumericUpDown_reinforce.TabIndex = 39
-        '
-        'CheckBox_reinforce
-        '
-        Me.CheckBox_reinforce.AutoSize = True
-        Me.CheckBox_reinforce.Location = New System.Drawing.Point(11, 16)
-        Me.CheckBox_reinforce.Name = "CheckBox_reinforce"
-        Me.CheckBox_reinforce.Size = New System.Drawing.Size(92, 21)
-        Me.CheckBox_reinforce.TabIndex = 38
-        Me.CheckBox_reinforce.Text = "Reinforce:"
-        Me.CheckBox_reinforce.UseVisualStyleBackColor = True
-        '
         'Panel_Ruler
         '
         Me.Panel_Ruler.BackColor = System.Drawing.Color.Transparent
@@ -2818,7 +1750,7 @@ Partial Class Form_main
         Me.TabPage_companion.ImageKey = "sentinel.png"
         Me.TabPage_companion.Location = New System.Drawing.Point(4, 29)
         Me.TabPage_companion.Name = "TabPage_companion"
-        Me.TabPage_companion.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.TabPage_companion.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage_companion.Size = New System.Drawing.Size(1018, 591)
         Me.TabPage_companion.TabIndex = 1
         Me.TabPage_companion.Text = "Companions  "
@@ -3133,7 +2065,7 @@ Partial Class Form_main
         Me.TabPage_development.ImageKey = "alert.png"
         Me.TabPage_development.Location = New System.Drawing.Point(4, 29)
         Me.TabPage_development.Name = "TabPage_development"
-        Me.TabPage_development.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.TabPage_development.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage_development.Size = New System.Drawing.Size(1018, 591)
         Me.TabPage_development.TabIndex = 2
         Me.TabPage_development.Text = "Development  "
@@ -3145,7 +2077,7 @@ Partial Class Form_main
         Me.ComboBox_umbraPower.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox_umbraPower.FormattingEnabled = True
         Me.ComboBox_umbraPower.Items.AddRange(New Object() {"UMBRA POWER", "100_Excalibur"})
-        Me.ComboBox_umbraPower.Location = New System.Drawing.Point(455, 391)
+        Me.ComboBox_umbraPower.Location = New System.Drawing.Point(455, 429)
         Me.ComboBox_umbraPower.Name = "ComboBox_umbraPower"
         Me.ComboBox_umbraPower.Size = New System.Drawing.Size(120, 24)
         Me.ComboBox_umbraPower.TabIndex = 115
@@ -3157,7 +2089,7 @@ Partial Class Form_main
         Me.ComboBox_umbraBasePower.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox_umbraBasePower.FormattingEnabled = True
         Me.ComboBox_umbraBasePower.Items.AddRange(New Object() {"UMBRA BASE POWER", "100_Excalibur"})
-        Me.ComboBox_umbraBasePower.Location = New System.Drawing.Point(329, 391)
+        Me.ComboBox_umbraBasePower.Location = New System.Drawing.Point(329, 429)
         Me.ComboBox_umbraBasePower.Name = "ComboBox_umbraBasePower"
         Me.ComboBox_umbraBasePower.Size = New System.Drawing.Size(120, 24)
         Me.ComboBox_umbraBasePower.TabIndex = 114
@@ -3214,7 +2146,7 @@ Partial Class Form_main
         'Label_devUmbraStats
         '
         Me.Label_devUmbraStats.AutoSize = True
-        Me.Label_devUmbraStats.Location = New System.Drawing.Point(326, 221)
+        Me.Label_devUmbraStats.Location = New System.Drawing.Point(326, 259)
         Me.Label_devUmbraStats.Name = "Label_devUmbraStats"
         Me.Label_devUmbraStats.Size = New System.Drawing.Size(144, 17)
         Me.Label_devUmbraStats.TabIndex = 109
@@ -3226,7 +2158,7 @@ Partial Class Form_main
         Me.ComboBox_umbraEnergy.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox_umbraEnergy.FormattingEnabled = True
         Me.ComboBox_umbraEnergy.Items.AddRange(New Object() {"UMBRA ENERGY", "0_Excalibur"})
-        Me.ComboBox_umbraEnergy.Location = New System.Drawing.Point(455, 361)
+        Me.ComboBox_umbraEnergy.Location = New System.Drawing.Point(455, 399)
         Me.ComboBox_umbraEnergy.Name = "ComboBox_umbraEnergy"
         Me.ComboBox_umbraEnergy.Size = New System.Drawing.Size(120, 24)
         Me.ComboBox_umbraEnergy.TabIndex = 108
@@ -3238,7 +2170,7 @@ Partial Class Form_main
         Me.ComboBox_umbraShield.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox_umbraShield.FormattingEnabled = True
         Me.ComboBox_umbraShield.Items.AddRange(New Object() {"UMBRA SHIELD", "0_Excalibur"})
-        Me.ComboBox_umbraShield.Location = New System.Drawing.Point(455, 331)
+        Me.ComboBox_umbraShield.Location = New System.Drawing.Point(455, 369)
         Me.ComboBox_umbraShield.Name = "ComboBox_umbraShield"
         Me.ComboBox_umbraShield.Size = New System.Drawing.Size(120, 24)
         Me.ComboBox_umbraShield.TabIndex = 107
@@ -3250,7 +2182,7 @@ Partial Class Form_main
         Me.ComboBox_umbraHealth.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox_umbraHealth.FormattingEnabled = True
         Me.ComboBox_umbraHealth.Items.AddRange(New Object() {"UMBRA HEALTH", "0_Excalibur"})
-        Me.ComboBox_umbraHealth.Location = New System.Drawing.Point(455, 301)
+        Me.ComboBox_umbraHealth.Location = New System.Drawing.Point(455, 339)
         Me.ComboBox_umbraHealth.Name = "ComboBox_umbraHealth"
         Me.ComboBox_umbraHealth.Size = New System.Drawing.Size(120, 24)
         Me.ComboBox_umbraHealth.TabIndex = 106
@@ -3262,7 +2194,7 @@ Partial Class Form_main
         Me.ComboBox_umbraArmor.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox_umbraArmor.FormattingEnabled = True
         Me.ComboBox_umbraArmor.Items.AddRange(New Object() {"UMBRA ARMOR", "0_Excalibur"})
-        Me.ComboBox_umbraArmor.Location = New System.Drawing.Point(455, 271)
+        Me.ComboBox_umbraArmor.Location = New System.Drawing.Point(455, 309)
         Me.ComboBox_umbraArmor.Name = "ComboBox_umbraArmor"
         Me.ComboBox_umbraArmor.Size = New System.Drawing.Size(120, 24)
         Me.ComboBox_umbraArmor.TabIndex = 105
@@ -3274,7 +2206,7 @@ Partial Class Form_main
         Me.ComboBox_umbraBaseEnergy.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox_umbraBaseEnergy.FormattingEnabled = True
         Me.ComboBox_umbraBaseEnergy.Items.AddRange(New Object() {"UMBRA BASE ENERGY", "0_Excalibur"})
-        Me.ComboBox_umbraBaseEnergy.Location = New System.Drawing.Point(329, 361)
+        Me.ComboBox_umbraBaseEnergy.Location = New System.Drawing.Point(329, 399)
         Me.ComboBox_umbraBaseEnergy.Name = "ComboBox_umbraBaseEnergy"
         Me.ComboBox_umbraBaseEnergy.Size = New System.Drawing.Size(120, 24)
         Me.ComboBox_umbraBaseEnergy.TabIndex = 104
@@ -3286,7 +2218,7 @@ Partial Class Form_main
         Me.ComboBox_umbraBaseShield.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox_umbraBaseShield.FormattingEnabled = True
         Me.ComboBox_umbraBaseShield.Items.AddRange(New Object() {"UMBRA BASE SHIELD", "0_Excalibur"})
-        Me.ComboBox_umbraBaseShield.Location = New System.Drawing.Point(329, 331)
+        Me.ComboBox_umbraBaseShield.Location = New System.Drawing.Point(329, 369)
         Me.ComboBox_umbraBaseShield.Name = "ComboBox_umbraBaseShield"
         Me.ComboBox_umbraBaseShield.Size = New System.Drawing.Size(120, 24)
         Me.ComboBox_umbraBaseShield.TabIndex = 103
@@ -3298,7 +2230,7 @@ Partial Class Form_main
         Me.ComboBox_umbraBaseHealth.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox_umbraBaseHealth.FormattingEnabled = True
         Me.ComboBox_umbraBaseHealth.Items.AddRange(New Object() {"UMBRA BASE HEALTH", "0_Excalibur"})
-        Me.ComboBox_umbraBaseHealth.Location = New System.Drawing.Point(329, 301)
+        Me.ComboBox_umbraBaseHealth.Location = New System.Drawing.Point(329, 339)
         Me.ComboBox_umbraBaseHealth.Name = "ComboBox_umbraBaseHealth"
         Me.ComboBox_umbraBaseHealth.Size = New System.Drawing.Size(120, 24)
         Me.ComboBox_umbraBaseHealth.TabIndex = 102
@@ -3310,7 +2242,7 @@ Partial Class Form_main
         Me.ComboBox_umbraBaseArmor.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox_umbraBaseArmor.FormattingEnabled = True
         Me.ComboBox_umbraBaseArmor.Items.AddRange(New Object() {"UMBRA BASE ARMOR", "0_Excalibur"})
-        Me.ComboBox_umbraBaseArmor.Location = New System.Drawing.Point(329, 271)
+        Me.ComboBox_umbraBaseArmor.Location = New System.Drawing.Point(329, 309)
         Me.ComboBox_umbraBaseArmor.Name = "ComboBox_umbraBaseArmor"
         Me.ComboBox_umbraBaseArmor.Size = New System.Drawing.Size(120, 24)
         Me.ComboBox_umbraBaseArmor.TabIndex = 101
@@ -3322,7 +2254,7 @@ Partial Class Form_main
         Me.ComboBox_umbras.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox_umbras.FormattingEnabled = True
         Me.ComboBox_umbras.Items.AddRange(New Object() {"UMBRAS", "Excalibur"})
-        Me.ComboBox_umbras.Location = New System.Drawing.Point(329, 241)
+        Me.ComboBox_umbras.Location = New System.Drawing.Point(329, 279)
         Me.ComboBox_umbras.Name = "ComboBox_umbras"
         Me.ComboBox_umbras.Size = New System.Drawing.Size(246, 24)
         Me.ComboBox_umbras.TabIndex = 100
@@ -3504,7 +2436,7 @@ Partial Class Form_main
         Me.ComboBox_petHealth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox_petHealth.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox_petHealth.FormattingEnabled = True
-        Me.ComboBox_petHealth.Items.AddRange(New Object() {"PET HEALTH", "240_Adarza", "300_Smeeta", "375_Chesa", "75_Huras", "300_Raksa", "375_Sahasa", "330_Sunika", "285_HelminthCharger"})
+        Me.ComboBox_petHealth.Items.AddRange(New Object() {"PET HEALTH", "240_Adarza", "300_Smeeta", "375_Chesa", "225_Huras", "300_Raksa", "375_Sahasa", "330_Sunika", "285_HelminthCharger"})
         Me.ComboBox_petHealth.Location = New System.Drawing.Point(329, 178)
         Me.ComboBox_petHealth.Name = "ComboBox_petHealth"
         Me.ComboBox_petHealth.Size = New System.Drawing.Size(248, 24)
@@ -3517,7 +2449,7 @@ Partial Class Form_main
         Me.ComboBox_petArmor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox_petArmor.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox_petArmor.FormattingEnabled = True
-        Me.ComboBox_petArmor.Items.AddRange(New Object() {"PET ARMOR", "40_Adarza", "50_Smeeta", "50_Chesa", "50_Huras", "50_Raksa", "50_Sahasa", "50_Sunika", "50_HelminthCharger"})
+        Me.ComboBox_petArmor.Items.AddRange(New Object() {"PET ARMOR", "50_Adarza", "50_Smeeta", "50_Chesa", "50_Huras", "50_Raksa", "50_Sahasa", "50_Sunika", "50_HelminthCharger"})
         Me.ComboBox_petArmor.Location = New System.Drawing.Point(329, 148)
         Me.ComboBox_petArmor.Name = "ComboBox_petArmor"
         Me.ComboBox_petArmor.Size = New System.Drawing.Size(248, 24)
@@ -3653,6 +2585,1074 @@ Partial Class Form_main
         Me.Label_love.TabIndex = 2
         Me.Label_love.Text = "♥"
         '
+        'CustomTabControl_arcaneHelmets
+        '
+        Me.CustomTabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsDefault)
+        Me.CustomTabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsAsh)
+        Me.CustomTabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsBanshee)
+        Me.CustomTabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsEmber)
+        Me.CustomTabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsExcalibur)
+        Me.CustomTabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsFrost)
+        Me.CustomTabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsLoki)
+        Me.CustomTabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsMag)
+        Me.CustomTabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsNova)
+        Me.CustomTabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsNyx)
+        Me.CustomTabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsRhino)
+        Me.CustomTabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsSaryn)
+        Me.CustomTabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsTrinity)
+        Me.CustomTabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsVauban)
+        Me.CustomTabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsVolt)
+        Me.CustomTabControl_arcaneHelmets.Enabled = False
+        Me.CustomTabControl_arcaneHelmets.Location = New System.Drawing.Point(487, 416)
+        Me.CustomTabControl_arcaneHelmets.Name = "CustomTabControl_arcaneHelmets"
+        Me.CustomTabControl_arcaneHelmets.SelectedIndex = 0
+        Me.CustomTabControl_arcaneHelmets.Size = New System.Drawing.Size(280, 75)
+        Me.CustomTabControl_arcaneHelmets.TabIndex = 117
+        '
+        'TabPage_arcaneHelmetsDefault
+        '
+        Me.TabPage_arcaneHelmetsDefault.BackColor = System.Drawing.Color.White
+        Me.TabPage_arcaneHelmetsDefault.Controls.Add(Me.Label_arcaneHelmetPlaceholder)
+        Me.TabPage_arcaneHelmetsDefault.Location = New System.Drawing.Point(1, 21)
+        Me.TabPage_arcaneHelmetsDefault.Name = "TabPage_arcaneHelmetsDefault"
+        Me.TabPage_arcaneHelmetsDefault.Size = New System.Drawing.Size(278, 53)
+        Me.TabPage_arcaneHelmetsDefault.TabIndex = 2
+        Me.TabPage_arcaneHelmetsDefault.Text = "Default"
+        '
+        'Label_arcaneHelmetPlaceholder
+        '
+        Me.Label_arcaneHelmetPlaceholder.AutoSize = True
+        Me.Label_arcaneHelmetPlaceholder.Location = New System.Drawing.Point(63, 18)
+        Me.Label_arcaneHelmetPlaceholder.Name = "Label_arcaneHelmetPlaceholder"
+        Me.Label_arcaneHelmetPlaceholder.Size = New System.Drawing.Size(152, 34)
+        Me.Label_arcaneHelmetPlaceholder.TabIndex = 1
+        Me.Label_arcaneHelmetPlaceholder.Text = "This Warframe has no " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Arcane Helmets"
+        Me.Label_arcaneHelmetPlaceholder.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'TabPage_arcaneHelmetsAsh
+        '
+        Me.TabPage_arcaneHelmetsAsh.BackColor = System.Drawing.Color.White
+        Me.TabPage_arcaneHelmetsAsh.Controls.Add(Me.RadioButton_locustHelmet)
+        Me.TabPage_arcaneHelmetsAsh.Location = New System.Drawing.Point(1, 21)
+        Me.TabPage_arcaneHelmetsAsh.Name = "TabPage_arcaneHelmetsAsh"
+        Me.TabPage_arcaneHelmetsAsh.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage_arcaneHelmetsAsh.Size = New System.Drawing.Size(278, 53)
+        Me.TabPage_arcaneHelmetsAsh.TabIndex = 0
+        Me.TabPage_arcaneHelmetsAsh.Text = "Ash"
+        '
+        'RadioButton_locustHelmet
+        '
+        Me.RadioButton_locustHelmet.AutoSize = True
+        Me.RadioButton_locustHelmet.Checked = True
+        Me.RadioButton_locustHelmet.Location = New System.Drawing.Point(11, 25)
+        Me.RadioButton_locustHelmet.Name = "RadioButton_locustHelmet"
+        Me.RadioButton_locustHelmet.Size = New System.Drawing.Size(116, 21)
+        Me.RadioButton_locustHelmet.TabIndex = 0
+        Me.RadioButton_locustHelmet.TabStop = True
+        Me.RadioButton_locustHelmet.Text = "Locust Helmet"
+        Me.RadioButton_locustHelmet.UseVisualStyleBackColor = True
+        '
+        'TabPage_arcaneHelmetsBanshee
+        '
+        Me.TabPage_arcaneHelmetsBanshee.BackColor = System.Drawing.Color.White
+        Me.TabPage_arcaneHelmetsBanshee.Controls.Add(Me.RadioButton_reverbHelmet)
+        Me.TabPage_arcaneHelmetsBanshee.Location = New System.Drawing.Point(1, 21)
+        Me.TabPage_arcaneHelmetsBanshee.Name = "TabPage_arcaneHelmetsBanshee"
+        Me.TabPage_arcaneHelmetsBanshee.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage_arcaneHelmetsBanshee.Size = New System.Drawing.Size(278, 53)
+        Me.TabPage_arcaneHelmetsBanshee.TabIndex = 1
+        Me.TabPage_arcaneHelmetsBanshee.Text = "Banshee"
+        '
+        'RadioButton_reverbHelmet
+        '
+        Me.RadioButton_reverbHelmet.AutoSize = True
+        Me.RadioButton_reverbHelmet.Checked = True
+        Me.RadioButton_reverbHelmet.Location = New System.Drawing.Point(11, 25)
+        Me.RadioButton_reverbHelmet.Name = "RadioButton_reverbHelmet"
+        Me.RadioButton_reverbHelmet.Size = New System.Drawing.Size(120, 21)
+        Me.RadioButton_reverbHelmet.TabIndex = 1
+        Me.RadioButton_reverbHelmet.TabStop = True
+        Me.RadioButton_reverbHelmet.Text = "Reverb Helmet"
+        Me.RadioButton_reverbHelmet.UseVisualStyleBackColor = True
+        '
+        'TabPage_arcaneHelmetsEmber
+        '
+        Me.TabPage_arcaneHelmetsEmber.BackColor = System.Drawing.Color.White
+        Me.TabPage_arcaneHelmetsEmber.Controls.Add(Me.RadioButton_backdraftHelmet)
+        Me.TabPage_arcaneHelmetsEmber.Controls.Add(Me.RadioButton_phoenixHelmet)
+        Me.TabPage_arcaneHelmetsEmber.Location = New System.Drawing.Point(1, 21)
+        Me.TabPage_arcaneHelmetsEmber.Name = "TabPage_arcaneHelmetsEmber"
+        Me.TabPage_arcaneHelmetsEmber.Size = New System.Drawing.Size(278, 53)
+        Me.TabPage_arcaneHelmetsEmber.TabIndex = 3
+        Me.TabPage_arcaneHelmetsEmber.Text = "Ember"
+        '
+        'RadioButton_backdraftHelmet
+        '
+        Me.RadioButton_backdraftHelmet.AutoSize = True
+        Me.RadioButton_backdraftHelmet.Location = New System.Drawing.Point(140, 25)
+        Me.RadioButton_backdraftHelmet.Name = "RadioButton_backdraftHelmet"
+        Me.RadioButton_backdraftHelmet.Size = New System.Drawing.Size(134, 21)
+        Me.RadioButton_backdraftHelmet.TabIndex = 3
+        Me.RadioButton_backdraftHelmet.Tag = ""
+        Me.RadioButton_backdraftHelmet.Text = "Backdraft Helmet"
+        Me.RadioButton_backdraftHelmet.UseVisualStyleBackColor = True
+        '
+        'RadioButton_phoenixHelmet
+        '
+        Me.RadioButton_phoenixHelmet.AutoSize = True
+        Me.RadioButton_phoenixHelmet.Checked = True
+        Me.RadioButton_phoenixHelmet.Location = New System.Drawing.Point(10, 25)
+        Me.RadioButton_phoenixHelmet.Name = "RadioButton_phoenixHelmet"
+        Me.RadioButton_phoenixHelmet.Size = New System.Drawing.Size(124, 21)
+        Me.RadioButton_phoenixHelmet.TabIndex = 2
+        Me.RadioButton_phoenixHelmet.TabStop = True
+        Me.RadioButton_phoenixHelmet.Tag = ""
+        Me.RadioButton_phoenixHelmet.Text = "Phoenix Helmet"
+        Me.RadioButton_phoenixHelmet.UseVisualStyleBackColor = True
+        '
+        'TabPage_arcaneHelmetsExcalibur
+        '
+        Me.TabPage_arcaneHelmetsExcalibur.BackColor = System.Drawing.Color.White
+        Me.TabPage_arcaneHelmetsExcalibur.Controls.Add(Me.RadioButton_pendragonHelmet)
+        Me.TabPage_arcaneHelmetsExcalibur.Controls.Add(Me.RadioButton_avalonHelmet)
+        Me.TabPage_arcaneHelmetsExcalibur.Location = New System.Drawing.Point(1, 21)
+        Me.TabPage_arcaneHelmetsExcalibur.Name = "TabPage_arcaneHelmetsExcalibur"
+        Me.TabPage_arcaneHelmetsExcalibur.Size = New System.Drawing.Size(278, 53)
+        Me.TabPage_arcaneHelmetsExcalibur.TabIndex = 4
+        Me.TabPage_arcaneHelmetsExcalibur.Text = "Excalibur"
+        '
+        'RadioButton_pendragonHelmet
+        '
+        Me.RadioButton_pendragonHelmet.AutoSize = True
+        Me.RadioButton_pendragonHelmet.Location = New System.Drawing.Point(130, 25)
+        Me.RadioButton_pendragonHelmet.Name = "RadioButton_pendragonHelmet"
+        Me.RadioButton_pendragonHelmet.Size = New System.Drawing.Size(144, 21)
+        Me.RadioButton_pendragonHelmet.TabIndex = 4
+        Me.RadioButton_pendragonHelmet.Tag = ""
+        Me.RadioButton_pendragonHelmet.Text = "Pendragon Helmet"
+        Me.RadioButton_pendragonHelmet.UseVisualStyleBackColor = True
+        '
+        'RadioButton_avalonHelmet
+        '
+        Me.RadioButton_avalonHelmet.AutoSize = True
+        Me.RadioButton_avalonHelmet.Checked = True
+        Me.RadioButton_avalonHelmet.Location = New System.Drawing.Point(10, 25)
+        Me.RadioButton_avalonHelmet.Name = "RadioButton_avalonHelmet"
+        Me.RadioButton_avalonHelmet.Size = New System.Drawing.Size(117, 21)
+        Me.RadioButton_avalonHelmet.TabIndex = 3
+        Me.RadioButton_avalonHelmet.TabStop = True
+        Me.RadioButton_avalonHelmet.Tag = ""
+        Me.RadioButton_avalonHelmet.Text = "Avalon Helmet"
+        Me.RadioButton_avalonHelmet.UseVisualStyleBackColor = True
+        '
+        'TabPage_arcaneHelmetsFrost
+        '
+        Me.TabPage_arcaneHelmetsFrost.BackColor = System.Drawing.Color.White
+        Me.TabPage_arcaneHelmetsFrost.Controls.Add(Me.RadioButton_squallHelmet)
+        Me.TabPage_arcaneHelmetsFrost.Controls.Add(Me.RadioButton_auroraHelmet)
+        Me.TabPage_arcaneHelmetsFrost.Location = New System.Drawing.Point(1, 21)
+        Me.TabPage_arcaneHelmetsFrost.Name = "TabPage_arcaneHelmetsFrost"
+        Me.TabPage_arcaneHelmetsFrost.Size = New System.Drawing.Size(278, 53)
+        Me.TabPage_arcaneHelmetsFrost.TabIndex = 5
+        Me.TabPage_arcaneHelmetsFrost.Text = "Frost"
+        '
+        'RadioButton_squallHelmet
+        '
+        Me.RadioButton_squallHelmet.AutoSize = True
+        Me.RadioButton_squallHelmet.Location = New System.Drawing.Point(132, 25)
+        Me.RadioButton_squallHelmet.Name = "RadioButton_squallHelmet"
+        Me.RadioButton_squallHelmet.Size = New System.Drawing.Size(113, 21)
+        Me.RadioButton_squallHelmet.TabIndex = 5
+        Me.RadioButton_squallHelmet.Tag = ""
+        Me.RadioButton_squallHelmet.Text = "Squall Helmet"
+        Me.RadioButton_squallHelmet.UseVisualStyleBackColor = True
+        '
+        'RadioButton_auroraHelmet
+        '
+        Me.RadioButton_auroraHelmet.AutoSize = True
+        Me.RadioButton_auroraHelmet.Checked = True
+        Me.RadioButton_auroraHelmet.Location = New System.Drawing.Point(9, 25)
+        Me.RadioButton_auroraHelmet.Name = "RadioButton_auroraHelmet"
+        Me.RadioButton_auroraHelmet.Size = New System.Drawing.Size(117, 21)
+        Me.RadioButton_auroraHelmet.TabIndex = 4
+        Me.RadioButton_auroraHelmet.TabStop = True
+        Me.RadioButton_auroraHelmet.Tag = ""
+        Me.RadioButton_auroraHelmet.Text = "Aurora Helmet"
+        Me.RadioButton_auroraHelmet.UseVisualStyleBackColor = True
+        '
+        'TabPage_arcaneHelmetsLoki
+        '
+        Me.TabPage_arcaneHelmetsLoki.BackColor = System.Drawing.Color.White
+        Me.TabPage_arcaneHelmetsLoki.Controls.Add(Me.RadioButton_swindleHelmet)
+        Me.TabPage_arcaneHelmetsLoki.Controls.Add(Me.RadioButton_essenceHelmet)
+        Me.TabPage_arcaneHelmetsLoki.Location = New System.Drawing.Point(1, 21)
+        Me.TabPage_arcaneHelmetsLoki.Name = "TabPage_arcaneHelmetsLoki"
+        Me.TabPage_arcaneHelmetsLoki.Size = New System.Drawing.Size(278, 53)
+        Me.TabPage_arcaneHelmetsLoki.TabIndex = 6
+        Me.TabPage_arcaneHelmetsLoki.Text = "Loki"
+        '
+        'RadioButton_swindleHelmet
+        '
+        Me.RadioButton_swindleHelmet.AutoSize = True
+        Me.RadioButton_swindleHelmet.Location = New System.Drawing.Point(145, 25)
+        Me.RadioButton_swindleHelmet.Name = "RadioButton_swindleHelmet"
+        Me.RadioButton_swindleHelmet.Size = New System.Drawing.Size(122, 21)
+        Me.RadioButton_swindleHelmet.TabIndex = 5
+        Me.RadioButton_swindleHelmet.Tag = ""
+        Me.RadioButton_swindleHelmet.Text = "Swindle Helmet"
+        Me.RadioButton_swindleHelmet.UseVisualStyleBackColor = True
+        '
+        'RadioButton_essenceHelmet
+        '
+        Me.RadioButton_essenceHelmet.AutoSize = True
+        Me.RadioButton_essenceHelmet.Checked = True
+        Me.RadioButton_essenceHelmet.Location = New System.Drawing.Point(11, 25)
+        Me.RadioButton_essenceHelmet.Name = "RadioButton_essenceHelmet"
+        Me.RadioButton_essenceHelmet.Size = New System.Drawing.Size(128, 21)
+        Me.RadioButton_essenceHelmet.TabIndex = 4
+        Me.RadioButton_essenceHelmet.TabStop = True
+        Me.RadioButton_essenceHelmet.Tag = ""
+        Me.RadioButton_essenceHelmet.Text = "Essence Helmet"
+        Me.RadioButton_essenceHelmet.UseVisualStyleBackColor = True
+        '
+        'TabPage_arcaneHelmetsMag
+        '
+        Me.TabPage_arcaneHelmetsMag.BackColor = System.Drawing.Color.White
+        Me.TabPage_arcaneHelmetsMag.Controls.Add(Me.RadioButton_gaussHelmet)
+        Me.TabPage_arcaneHelmetsMag.Controls.Add(Me.RadioButton_coilHelmet)
+        Me.TabPage_arcaneHelmetsMag.Location = New System.Drawing.Point(1, 21)
+        Me.TabPage_arcaneHelmetsMag.Name = "TabPage_arcaneHelmetsMag"
+        Me.TabPage_arcaneHelmetsMag.Size = New System.Drawing.Size(278, 53)
+        Me.TabPage_arcaneHelmetsMag.TabIndex = 7
+        Me.TabPage_arcaneHelmetsMag.Text = "Mag"
+        '
+        'RadioButton_gaussHelmet
+        '
+        Me.RadioButton_gaussHelmet.AutoSize = True
+        Me.RadioButton_gaussHelmet.Location = New System.Drawing.Point(114, 25)
+        Me.RadioButton_gaussHelmet.Name = "RadioButton_gaussHelmet"
+        Me.RadioButton_gaussHelmet.Size = New System.Drawing.Size(115, 21)
+        Me.RadioButton_gaussHelmet.TabIndex = 5
+        Me.RadioButton_gaussHelmet.Tag = ""
+        Me.RadioButton_gaussHelmet.Text = "Gauss Helmet"
+        Me.RadioButton_gaussHelmet.UseVisualStyleBackColor = True
+        '
+        'RadioButton_coilHelmet
+        '
+        Me.RadioButton_coilHelmet.AutoSize = True
+        Me.RadioButton_coilHelmet.Checked = True
+        Me.RadioButton_coilHelmet.Location = New System.Drawing.Point(11, 25)
+        Me.RadioButton_coilHelmet.Name = "RadioButton_coilHelmet"
+        Me.RadioButton_coilHelmet.Size = New System.Drawing.Size(97, 21)
+        Me.RadioButton_coilHelmet.TabIndex = 4
+        Me.RadioButton_coilHelmet.TabStop = True
+        Me.RadioButton_coilHelmet.Tag = ""
+        Me.RadioButton_coilHelmet.Text = "Coil Helmet"
+        Me.RadioButton_coilHelmet.UseVisualStyleBackColor = True
+        '
+        'TabPage_arcaneHelmetsNova
+        '
+        Me.TabPage_arcaneHelmetsNova.BackColor = System.Drawing.Color.White
+        Me.TabPage_arcaneHelmetsNova.Controls.Add(Me.RadioButton_fluxHelmet)
+        Me.TabPage_arcaneHelmetsNova.Location = New System.Drawing.Point(1, 21)
+        Me.TabPage_arcaneHelmetsNova.Name = "TabPage_arcaneHelmetsNova"
+        Me.TabPage_arcaneHelmetsNova.Size = New System.Drawing.Size(278, 53)
+        Me.TabPage_arcaneHelmetsNova.TabIndex = 14
+        Me.TabPage_arcaneHelmetsNova.Text = "Nova"
+        '
+        'RadioButton_fluxHelmet
+        '
+        Me.RadioButton_fluxHelmet.AutoSize = True
+        Me.RadioButton_fluxHelmet.Checked = True
+        Me.RadioButton_fluxHelmet.Location = New System.Drawing.Point(11, 25)
+        Me.RadioButton_fluxHelmet.Name = "RadioButton_fluxHelmet"
+        Me.RadioButton_fluxHelmet.Size = New System.Drawing.Size(99, 21)
+        Me.RadioButton_fluxHelmet.TabIndex = 4
+        Me.RadioButton_fluxHelmet.TabStop = True
+        Me.RadioButton_fluxHelmet.Tag = ""
+        Me.RadioButton_fluxHelmet.Text = "Flux Helmet"
+        Me.RadioButton_fluxHelmet.UseVisualStyleBackColor = True
+        '
+        'TabPage_arcaneHelmetsNyx
+        '
+        Me.TabPage_arcaneHelmetsNyx.BackColor = System.Drawing.Color.White
+        Me.TabPage_arcaneHelmetsNyx.Controls.Add(Me.RadioButton_vespaHelmet)
+        Me.TabPage_arcaneHelmetsNyx.Controls.Add(Me.RadioButton_menticideHelmet)
+        Me.TabPage_arcaneHelmetsNyx.Location = New System.Drawing.Point(1, 21)
+        Me.TabPage_arcaneHelmetsNyx.Name = "TabPage_arcaneHelmetsNyx"
+        Me.TabPage_arcaneHelmetsNyx.Size = New System.Drawing.Size(278, 53)
+        Me.TabPage_arcaneHelmetsNyx.TabIndex = 8
+        Me.TabPage_arcaneHelmetsNyx.Text = "Nyx"
+        '
+        'RadioButton_vespaHelmet
+        '
+        Me.RadioButton_vespaHelmet.AutoSize = True
+        Me.RadioButton_vespaHelmet.Location = New System.Drawing.Point(149, 25)
+        Me.RadioButton_vespaHelmet.Name = "RadioButton_vespaHelmet"
+        Me.RadioButton_vespaHelmet.Size = New System.Drawing.Size(114, 21)
+        Me.RadioButton_vespaHelmet.TabIndex = 5
+        Me.RadioButton_vespaHelmet.Tag = ""
+        Me.RadioButton_vespaHelmet.Text = "Vespa Helmet"
+        Me.RadioButton_vespaHelmet.UseVisualStyleBackColor = True
+        '
+        'RadioButton_menticideHelmet
+        '
+        Me.RadioButton_menticideHelmet.AutoSize = True
+        Me.RadioButton_menticideHelmet.Checked = True
+        Me.RadioButton_menticideHelmet.Location = New System.Drawing.Point(9, 25)
+        Me.RadioButton_menticideHelmet.Name = "RadioButton_menticideHelmet"
+        Me.RadioButton_menticideHelmet.Size = New System.Drawing.Size(134, 21)
+        Me.RadioButton_menticideHelmet.TabIndex = 4
+        Me.RadioButton_menticideHelmet.TabStop = True
+        Me.RadioButton_menticideHelmet.Tag = ""
+        Me.RadioButton_menticideHelmet.Text = "Menticide Helmet"
+        Me.RadioButton_menticideHelmet.UseVisualStyleBackColor = True
+        '
+        'TabPage_arcaneHelmetsRhino
+        '
+        Me.TabPage_arcaneHelmetsRhino.BackColor = System.Drawing.Color.White
+        Me.TabPage_arcaneHelmetsRhino.Controls.Add(Me.RadioButton_vanguardHelmet)
+        Me.TabPage_arcaneHelmetsRhino.Controls.Add(Me.RadioButton_thrak)
+        Me.TabPage_arcaneHelmetsRhino.Location = New System.Drawing.Point(1, 21)
+        Me.TabPage_arcaneHelmetsRhino.Name = "TabPage_arcaneHelmetsRhino"
+        Me.TabPage_arcaneHelmetsRhino.Size = New System.Drawing.Size(278, 53)
+        Me.TabPage_arcaneHelmetsRhino.TabIndex = 9
+        Me.TabPage_arcaneHelmetsRhino.Text = "Rhino"
+        '
+        'RadioButton_vanguardHelmet
+        '
+        Me.RadioButton_vanguardHelmet.AutoSize = True
+        Me.RadioButton_vanguardHelmet.Location = New System.Drawing.Point(128, 25)
+        Me.RadioButton_vanguardHelmet.Name = "RadioButton_vanguardHelmet"
+        Me.RadioButton_vanguardHelmet.Size = New System.Drawing.Size(136, 21)
+        Me.RadioButton_vanguardHelmet.TabIndex = 5
+        Me.RadioButton_vanguardHelmet.Tag = ""
+        Me.RadioButton_vanguardHelmet.Text = "Vanguard Helmet"
+        Me.RadioButton_vanguardHelmet.UseVisualStyleBackColor = True
+        '
+        'RadioButton_thrak
+        '
+        Me.RadioButton_thrak.AutoSize = True
+        Me.RadioButton_thrak.Checked = True
+        Me.RadioButton_thrak.Location = New System.Drawing.Point(11, 25)
+        Me.RadioButton_thrak.Name = "RadioButton_thrak"
+        Me.RadioButton_thrak.Size = New System.Drawing.Size(111, 21)
+        Me.RadioButton_thrak.TabIndex = 4
+        Me.RadioButton_thrak.TabStop = True
+        Me.RadioButton_thrak.Tag = ""
+        Me.RadioButton_thrak.Text = "Thrak Helmet"
+        Me.RadioButton_thrak.UseVisualStyleBackColor = True
+        '
+        'TabPage_arcaneHelmetsSaryn
+        '
+        Me.TabPage_arcaneHelmetsSaryn.BackColor = System.Drawing.Color.White
+        Me.TabPage_arcaneHelmetsSaryn.Controls.Add(Me.RadioButton_hemlockHelmet)
+        Me.TabPage_arcaneHelmetsSaryn.Location = New System.Drawing.Point(1, 21)
+        Me.TabPage_arcaneHelmetsSaryn.Name = "TabPage_arcaneHelmetsSaryn"
+        Me.TabPage_arcaneHelmetsSaryn.Size = New System.Drawing.Size(278, 53)
+        Me.TabPage_arcaneHelmetsSaryn.TabIndex = 10
+        Me.TabPage_arcaneHelmetsSaryn.Text = "Saryn"
+        '
+        'RadioButton_hemlockHelmet
+        '
+        Me.RadioButton_hemlockHelmet.AutoSize = True
+        Me.RadioButton_hemlockHelmet.Checked = True
+        Me.RadioButton_hemlockHelmet.Location = New System.Drawing.Point(9, 25)
+        Me.RadioButton_hemlockHelmet.Name = "RadioButton_hemlockHelmet"
+        Me.RadioButton_hemlockHelmet.Size = New System.Drawing.Size(128, 21)
+        Me.RadioButton_hemlockHelmet.TabIndex = 4
+        Me.RadioButton_hemlockHelmet.TabStop = True
+        Me.RadioButton_hemlockHelmet.Tag = ""
+        Me.RadioButton_hemlockHelmet.Text = "Hemlock Helmet"
+        Me.RadioButton_hemlockHelmet.UseVisualStyleBackColor = True
+        '
+        'TabPage_arcaneHelmetsTrinity
+        '
+        Me.TabPage_arcaneHelmetsTrinity.BackColor = System.Drawing.Color.White
+        Me.TabPage_arcaneHelmetsTrinity.Controls.Add(Me.RadioButton_meridianHelmet)
+        Me.TabPage_arcaneHelmetsTrinity.Controls.Add(Me.RadioButton_auraHelmet)
+        Me.TabPage_arcaneHelmetsTrinity.Location = New System.Drawing.Point(1, 21)
+        Me.TabPage_arcaneHelmetsTrinity.Name = "TabPage_arcaneHelmetsTrinity"
+        Me.TabPage_arcaneHelmetsTrinity.Size = New System.Drawing.Size(278, 53)
+        Me.TabPage_arcaneHelmetsTrinity.TabIndex = 11
+        Me.TabPage_arcaneHelmetsTrinity.Text = "Trinity"
+        '
+        'RadioButton_meridianHelmet
+        '
+        Me.RadioButton_meridianHelmet.AutoSize = True
+        Me.RadioButton_meridianHelmet.Location = New System.Drawing.Point(121, 25)
+        Me.RadioButton_meridianHelmet.Name = "RadioButton_meridianHelmet"
+        Me.RadioButton_meridianHelmet.Size = New System.Drawing.Size(128, 21)
+        Me.RadioButton_meridianHelmet.TabIndex = 5
+        Me.RadioButton_meridianHelmet.Tag = ""
+        Me.RadioButton_meridianHelmet.Text = "Maridian Helmet"
+        Me.RadioButton_meridianHelmet.UseVisualStyleBackColor = True
+        '
+        'RadioButton_auraHelmet
+        '
+        Me.RadioButton_auraHelmet.AutoSize = True
+        Me.RadioButton_auraHelmet.Checked = True
+        Me.RadioButton_auraHelmet.Location = New System.Drawing.Point(11, 25)
+        Me.RadioButton_auraHelmet.Name = "RadioButton_auraHelmet"
+        Me.RadioButton_auraHelmet.Size = New System.Drawing.Size(104, 21)
+        Me.RadioButton_auraHelmet.TabIndex = 4
+        Me.RadioButton_auraHelmet.TabStop = True
+        Me.RadioButton_auraHelmet.Tag = ""
+        Me.RadioButton_auraHelmet.Text = "Aura Helmet"
+        Me.RadioButton_auraHelmet.UseVisualStyleBackColor = True
+        '
+        'TabPage_arcaneHelmetsVauban
+        '
+        Me.TabPage_arcaneHelmetsVauban.BackColor = System.Drawing.Color.White
+        Me.TabPage_arcaneHelmetsVauban.Controls.Add(Me.RadioButton_espritHelmet)
+        Me.TabPage_arcaneHelmetsVauban.Location = New System.Drawing.Point(1, 21)
+        Me.TabPage_arcaneHelmetsVauban.Name = "TabPage_arcaneHelmetsVauban"
+        Me.TabPage_arcaneHelmetsVauban.Size = New System.Drawing.Size(278, 53)
+        Me.TabPage_arcaneHelmetsVauban.TabIndex = 12
+        Me.TabPage_arcaneHelmetsVauban.Text = "Vauban"
+        '
+        'RadioButton_espritHelmet
+        '
+        Me.RadioButton_espritHelmet.AutoSize = True
+        Me.RadioButton_espritHelmet.Checked = True
+        Me.RadioButton_espritHelmet.Location = New System.Drawing.Point(9, 25)
+        Me.RadioButton_espritHelmet.Name = "RadioButton_espritHelmet"
+        Me.RadioButton_espritHelmet.Size = New System.Drawing.Size(110, 21)
+        Me.RadioButton_espritHelmet.TabIndex = 4
+        Me.RadioButton_espritHelmet.TabStop = True
+        Me.RadioButton_espritHelmet.Tag = ""
+        Me.RadioButton_espritHelmet.Text = "Esprit Helmet"
+        Me.RadioButton_espritHelmet.UseVisualStyleBackColor = True
+        '
+        'TabPage_arcaneHelmetsVolt
+        '
+        Me.TabPage_arcaneHelmetsVolt.BackColor = System.Drawing.Color.White
+        Me.TabPage_arcaneHelmetsVolt.Controls.Add(Me.RadioButton_stormHelmet)
+        Me.TabPage_arcaneHelmetsVolt.Controls.Add(Me.RadioButton_pulseHelmet)
+        Me.TabPage_arcaneHelmetsVolt.Location = New System.Drawing.Point(1, 21)
+        Me.TabPage_arcaneHelmetsVolt.Name = "TabPage_arcaneHelmetsVolt"
+        Me.TabPage_arcaneHelmetsVolt.Size = New System.Drawing.Size(278, 53)
+        Me.TabPage_arcaneHelmetsVolt.TabIndex = 13
+        Me.TabPage_arcaneHelmetsVolt.Text = "Volt"
+        '
+        'RadioButton_stormHelmet
+        '
+        Me.RadioButton_stormHelmet.AutoSize = True
+        Me.RadioButton_stormHelmet.Location = New System.Drawing.Point(124, 25)
+        Me.RadioButton_stormHelmet.Name = "RadioButton_stormHelmet"
+        Me.RadioButton_stormHelmet.Size = New System.Drawing.Size(111, 21)
+        Me.RadioButton_stormHelmet.TabIndex = 5
+        Me.RadioButton_stormHelmet.Tag = ""
+        Me.RadioButton_stormHelmet.Text = "Storm Helmet"
+        Me.RadioButton_stormHelmet.UseVisualStyleBackColor = True
+        '
+        'RadioButton_pulseHelmet
+        '
+        Me.RadioButton_pulseHelmet.AutoSize = True
+        Me.RadioButton_pulseHelmet.Checked = True
+        Me.RadioButton_pulseHelmet.Location = New System.Drawing.Point(9, 25)
+        Me.RadioButton_pulseHelmet.Name = "RadioButton_pulseHelmet"
+        Me.RadioButton_pulseHelmet.Size = New System.Drawing.Size(109, 21)
+        Me.RadioButton_pulseHelmet.TabIndex = 4
+        Me.RadioButton_pulseHelmet.TabStop = True
+        Me.RadioButton_pulseHelmet.Tag = ""
+        Me.RadioButton_pulseHelmet.Text = "Pulse Helmet"
+        Me.RadioButton_pulseHelmet.UseVisualStyleBackColor = True
+        '
+        'CustomTabControl_abilitys
+        '
+        Me.CustomTabControl_abilitys.Controls.Add(Me.TabPage_abilitiesDefault)
+        Me.CustomTabControl_abilitys.Controls.Add(Me.TabPage_abilitiesChroma)
+        Me.CustomTabControl_abilitys.Controls.Add(Me.TabPage_abilitiesFrost)
+        Me.CustomTabControl_abilitys.Controls.Add(Me.TabPage_abilitiesGara)
+        Me.CustomTabControl_abilitys.Controls.Add(Me.TabPage_abilitiesInaros)
+        Me.CustomTabControl_abilitys.Controls.Add(Me.TabPage_abilitiesMesa)
+        Me.CustomTabControl_abilitys.Controls.Add(Me.TabPage_abilitiesMirage)
+        Me.CustomTabControl_abilitys.Controls.Add(Me.TabPage_abilitiesNekros)
+        Me.CustomTabControl_abilitys.Controls.Add(Me.TabPage_abilitiesNezha)
+        Me.CustomTabControl_abilitys.Controls.Add(Me.TabPage_abilitiesNidus)
+        Me.CustomTabControl_abilitys.Controls.Add(Me.TabPage_abilitiesOberon)
+        Me.CustomTabControl_abilitys.Controls.Add(Me.TabPage_abilitiesOctavia)
+        Me.CustomTabControl_abilitys.Controls.Add(Me.TabPage_abilitiesRhino)
+        Me.CustomTabControl_abilitys.Controls.Add(Me.TabPage_abilitiesTitania)
+        Me.CustomTabControl_abilitys.Controls.Add(Me.TabPage_abilitiesTrinity)
+        Me.CustomTabControl_abilitys.Controls.Add(Me.TabPage_abilitiesValkyr)
+        Me.CustomTabControl_abilitys.Controls.Add(Me.TabPage_abilitiesVauban)
+        Me.CustomTabControl_abilitys.Enabled = False
+        Me.CustomTabControl_abilitys.Location = New System.Drawing.Point(486, 44)
+        Me.CustomTabControl_abilitys.Name = "CustomTabControl_abilitys"
+        Me.CustomTabControl_abilitys.SelectedIndex = 0
+        Me.CustomTabControl_abilitys.Size = New System.Drawing.Size(281, 105)
+        Me.CustomTabControl_abilitys.TabIndex = 59
+        '
+        'TabPage_abilitiesDefault
+        '
+        Me.TabPage_abilitiesDefault.BackColor = System.Drawing.Color.White
+        Me.TabPage_abilitiesDefault.Controls.Add(Me.Label_abilityPlaceholder)
+        Me.TabPage_abilitiesDefault.Location = New System.Drawing.Point(1, 21)
+        Me.TabPage_abilitiesDefault.Name = "TabPage_abilitiesDefault"
+        Me.TabPage_abilitiesDefault.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage_abilitiesDefault.Size = New System.Drawing.Size(279, 83)
+        Me.TabPage_abilitiesDefault.TabIndex = 1
+        Me.TabPage_abilitiesDefault.Text = "Default"
+        '
+        'Label_abilityPlaceholder
+        '
+        Me.Label_abilityPlaceholder.AutoSize = True
+        Me.Label_abilityPlaceholder.Location = New System.Drawing.Point(65, 30)
+        Me.Label_abilityPlaceholder.Name = "Label_abilityPlaceholder"
+        Me.Label_abilityPlaceholder.Size = New System.Drawing.Size(152, 34)
+        Me.Label_abilityPlaceholder.TabIndex = 0
+        Me.Label_abilityPlaceholder.Text = "This Warframe has no " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "EHP affecting Abilities"
+        Me.Label_abilityPlaceholder.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'TabPage_abilitiesChroma
+        '
+        Me.TabPage_abilitiesChroma.BackColor = System.Drawing.Color.White
+        Me.TabPage_abilitiesChroma.Controls.Add(Me.CheckBox_vexArmor)
+        Me.TabPage_abilitiesChroma.Controls.Add(Me.CheckBox_elementalWard)
+        Me.TabPage_abilitiesChroma.Controls.Add(Me.RadioButton_electricChroma)
+        Me.TabPage_abilitiesChroma.Controls.Add(Me.RadioButton_iceChroma)
+        Me.TabPage_abilitiesChroma.Controls.Add(Me.RadioButton_fireChroma)
+        Me.TabPage_abilitiesChroma.Location = New System.Drawing.Point(1, 21)
+        Me.TabPage_abilitiesChroma.Name = "TabPage_abilitiesChroma"
+        Me.TabPage_abilitiesChroma.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage_abilitiesChroma.Size = New System.Drawing.Size(279, 83)
+        Me.TabPage_abilitiesChroma.TabIndex = 0
+        Me.TabPage_abilitiesChroma.Text = "Chroma"
+        '
+        'CheckBox_vexArmor
+        '
+        Me.CheckBox_vexArmor.AutoSize = True
+        Me.CheckBox_vexArmor.Location = New System.Drawing.Point(151, 43)
+        Me.CheckBox_vexArmor.Name = "CheckBox_vexArmor"
+        Me.CheckBox_vexArmor.Size = New System.Drawing.Size(92, 21)
+        Me.CheckBox_vexArmor.TabIndex = 18
+        Me.CheckBox_vexArmor.Text = "Vex Armor"
+        Me.CheckBox_vexArmor.UseVisualStyleBackColor = True
+        '
+        'CheckBox_elementalWard
+        '
+        Me.CheckBox_elementalWard.AutoSize = True
+        Me.CheckBox_elementalWard.Location = New System.Drawing.Point(151, 17)
+        Me.CheckBox_elementalWard.Name = "CheckBox_elementalWard"
+        Me.CheckBox_elementalWard.Size = New System.Drawing.Size(127, 21)
+        Me.CheckBox_elementalWard.TabIndex = 17
+        Me.CheckBox_elementalWard.Text = "Elemental Ward"
+        Me.CheckBox_elementalWard.UseVisualStyleBackColor = True
+        '
+        'RadioButton_electricChroma
+        '
+        Me.RadioButton_electricChroma.AutoSize = True
+        Me.RadioButton_electricChroma.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.RadioButton_electricChroma.Location = New System.Drawing.Point(9, 16)
+        Me.RadioButton_electricChroma.Name = "RadioButton_electricChroma"
+        Me.RadioButton_electricChroma.Size = New System.Drawing.Size(125, 21)
+        Me.RadioButton_electricChroma.TabIndex = 16
+        Me.RadioButton_electricChroma.Text = "Electric Chroma"
+        Me.RadioButton_electricChroma.UseVisualStyleBackColor = True
+        '
+        'RadioButton_iceChroma
+        '
+        Me.RadioButton_iceChroma.AutoSize = True
+        Me.RadioButton_iceChroma.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.RadioButton_iceChroma.Location = New System.Drawing.Point(9, 68)
+        Me.RadioButton_iceChroma.Name = "RadioButton_iceChroma"
+        Me.RadioButton_iceChroma.Size = New System.Drawing.Size(97, 21)
+        Me.RadioButton_iceChroma.TabIndex = 15
+        Me.RadioButton_iceChroma.Text = "Ice Chroma"
+        Me.RadioButton_iceChroma.UseVisualStyleBackColor = True
+        '
+        'RadioButton_fireChroma
+        '
+        Me.RadioButton_fireChroma.AutoSize = True
+        Me.RadioButton_fireChroma.Checked = True
+        Me.RadioButton_fireChroma.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.RadioButton_fireChroma.Location = New System.Drawing.Point(9, 42)
+        Me.RadioButton_fireChroma.Name = "RadioButton_fireChroma"
+        Me.RadioButton_fireChroma.Size = New System.Drawing.Size(103, 21)
+        Me.RadioButton_fireChroma.TabIndex = 14
+        Me.RadioButton_fireChroma.TabStop = True
+        Me.RadioButton_fireChroma.Text = "Fire Chroma"
+        Me.RadioButton_fireChroma.UseVisualStyleBackColor = True
+        '
+        'TabPage_abilitiesFrost
+        '
+        Me.TabPage_abilitiesFrost.BackColor = System.Drawing.Color.White
+        Me.TabPage_abilitiesFrost.Controls.Add(Me.NumericUpDown_icyAvalanche)
+        Me.TabPage_abilitiesFrost.Controls.Add(Me.CheckBox_icyAvalanche)
+        Me.TabPage_abilitiesFrost.Location = New System.Drawing.Point(1, 21)
+        Me.TabPage_abilitiesFrost.Name = "TabPage_abilitiesFrost"
+        Me.TabPage_abilitiesFrost.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage_abilitiesFrost.Size = New System.Drawing.Size(279, 83)
+        Me.TabPage_abilitiesFrost.TabIndex = 2
+        Me.TabPage_abilitiesFrost.Text = "Frost"
+        '
+        'NumericUpDown_icyAvalanche
+        '
+        Me.NumericUpDown_icyAvalanche.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.NumericUpDown_icyAvalanche.Location = New System.Drawing.Point(203, 15)
+        Me.NumericUpDown_icyAvalanche.Maximum = New Decimal(New Integer() {200, 0, 0, 0})
+        Me.NumericUpDown_icyAvalanche.Name = "NumericUpDown_icyAvalanche"
+        Me.NumericUpDown_icyAvalanche.Size = New System.Drawing.Size(61, 23)
+        Me.NumericUpDown_icyAvalanche.TabIndex = 40
+        '
+        'CheckBox_icyAvalanche
+        '
+        Me.CheckBox_icyAvalanche.AutoSize = True
+        Me.CheckBox_icyAvalanche.Location = New System.Drawing.Point(9, 16)
+        Me.CheckBox_icyAvalanche.Name = "CheckBox_icyAvalanche"
+        Me.CheckBox_icyAvalanche.Size = New System.Drawing.Size(114, 21)
+        Me.CheckBox_icyAvalanche.TabIndex = 0
+        Me.CheckBox_icyAvalanche.Text = "Icy Avalanche"
+        Me.CheckBox_icyAvalanche.UseVisualStyleBackColor = True
+        '
+        'TabPage_abilitiesGara
+        '
+        Me.TabPage_abilitiesGara.Controls.Add(Me.CheckBox_splinterStorm)
+        Me.TabPage_abilitiesGara.Location = New System.Drawing.Point(1, 21)
+        Me.TabPage_abilitiesGara.Name = "TabPage_abilitiesGara"
+        Me.TabPage_abilitiesGara.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage_abilitiesGara.Size = New System.Drawing.Size(279, 83)
+        Me.TabPage_abilitiesGara.TabIndex = 17
+        Me.TabPage_abilitiesGara.Text = "Gara"
+        Me.TabPage_abilitiesGara.UseVisualStyleBackColor = True
+        '
+        'CheckBox_splinterStorm
+        '
+        Me.CheckBox_splinterStorm.AutoSize = True
+        Me.CheckBox_splinterStorm.Location = New System.Drawing.Point(9, 16)
+        Me.CheckBox_splinterStorm.Name = "CheckBox_splinterStorm"
+        Me.CheckBox_splinterStorm.Size = New System.Drawing.Size(116, 21)
+        Me.CheckBox_splinterStorm.TabIndex = 1
+        Me.CheckBox_splinterStorm.Text = "Splinter Storm"
+        Me.CheckBox_splinterStorm.UseVisualStyleBackColor = True
+        '
+        'TabPage_abilitiesInaros
+        '
+        Me.TabPage_abilitiesInaros.BackColor = System.Drawing.Color.White
+        Me.TabPage_abilitiesInaros.Controls.Add(Me.NumericUpDown_scarabSwarm)
+        Me.TabPage_abilitiesInaros.Controls.Add(Me.CheckBox_scarabSwarm)
+        Me.TabPage_abilitiesInaros.Location = New System.Drawing.Point(1, 21)
+        Me.TabPage_abilitiesInaros.Name = "TabPage_abilitiesInaros"
+        Me.TabPage_abilitiesInaros.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage_abilitiesInaros.Size = New System.Drawing.Size(279, 83)
+        Me.TabPage_abilitiesInaros.TabIndex = 3
+        Me.TabPage_abilitiesInaros.Text = "Inaros"
+        '
+        'NumericUpDown_scarabSwarm
+        '
+        Me.NumericUpDown_scarabSwarm.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.NumericUpDown_scarabSwarm.Location = New System.Drawing.Point(205, 15)
+        Me.NumericUpDown_scarabSwarm.Maximum = New Decimal(New Integer() {200, 0, 0, 0})
+        Me.NumericUpDown_scarabSwarm.Name = "NumericUpDown_scarabSwarm"
+        Me.NumericUpDown_scarabSwarm.Size = New System.Drawing.Size(61, 23)
+        Me.NumericUpDown_scarabSwarm.TabIndex = 39
+        '
+        'CheckBox_scarabSwarm
+        '
+        Me.CheckBox_scarabSwarm.AutoSize = True
+        Me.CheckBox_scarabSwarm.Location = New System.Drawing.Point(9, 16)
+        Me.CheckBox_scarabSwarm.Name = "CheckBox_scarabSwarm"
+        Me.CheckBox_scarabSwarm.Size = New System.Drawing.Size(118, 21)
+        Me.CheckBox_scarabSwarm.TabIndex = 1
+        Me.CheckBox_scarabSwarm.Text = "Scarab Swarm"
+        Me.CheckBox_scarabSwarm.UseVisualStyleBackColor = True
+        '
+        'TabPage_abilitiesMesa
+        '
+        Me.TabPage_abilitiesMesa.BackColor = System.Drawing.Color.White
+        Me.TabPage_abilitiesMesa.Controls.Add(Me.CheckBox_marksmansDexterity)
+        Me.TabPage_abilitiesMesa.Controls.Add(Me.CheckBox_shatterShield)
+        Me.TabPage_abilitiesMesa.Location = New System.Drawing.Point(1, 21)
+        Me.TabPage_abilitiesMesa.Name = "TabPage_abilitiesMesa"
+        Me.TabPage_abilitiesMesa.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage_abilitiesMesa.Size = New System.Drawing.Size(279, 83)
+        Me.TabPage_abilitiesMesa.TabIndex = 6
+        Me.TabPage_abilitiesMesa.Text = "Mesa"
+        '
+        'CheckBox_marksmansDexterity
+        '
+        Me.CheckBox_marksmansDexterity.AutoSize = True
+        Me.CheckBox_marksmansDexterity.Location = New System.Drawing.Point(9, 43)
+        Me.CheckBox_marksmansDexterity.Name = "CheckBox_marksmansDexterity"
+        Me.CheckBox_marksmansDexterity.Size = New System.Drawing.Size(161, 21)
+        Me.CheckBox_marksmansDexterity.TabIndex = 3
+        Me.CheckBox_marksmansDexterity.Text = "Marksman's Dexterity"
+        Me.CheckBox_marksmansDexterity.UseVisualStyleBackColor = True
+        '
+        'CheckBox_shatterShield
+        '
+        Me.CheckBox_shatterShield.AutoSize = True
+        Me.CheckBox_shatterShield.Location = New System.Drawing.Point(9, 16)
+        Me.CheckBox_shatterShield.Name = "CheckBox_shatterShield"
+        Me.CheckBox_shatterShield.Size = New System.Drawing.Size(116, 21)
+        Me.CheckBox_shatterShield.TabIndex = 2
+        Me.CheckBox_shatterShield.Text = "Shatter Shield"
+        Me.CheckBox_shatterShield.UseVisualStyleBackColor = True
+        '
+        'TabPage_abilitiesMirage
+        '
+        Me.TabPage_abilitiesMirage.BackColor = System.Drawing.Color.White
+        Me.TabPage_abilitiesMirage.Controls.Add(Me.CheckBox_eclipse)
+        Me.TabPage_abilitiesMirage.Location = New System.Drawing.Point(1, 21)
+        Me.TabPage_abilitiesMirage.Name = "TabPage_abilitiesMirage"
+        Me.TabPage_abilitiesMirage.Size = New System.Drawing.Size(279, 83)
+        Me.TabPage_abilitiesMirage.TabIndex = 13
+        Me.TabPage_abilitiesMirage.Text = "Mirage"
+        '
+        'CheckBox_eclipse
+        '
+        Me.CheckBox_eclipse.AutoSize = True
+        Me.CheckBox_eclipse.Location = New System.Drawing.Point(9, 16)
+        Me.CheckBox_eclipse.Name = "CheckBox_eclipse"
+        Me.CheckBox_eclipse.Size = New System.Drawing.Size(72, 21)
+        Me.CheckBox_eclipse.TabIndex = 3
+        Me.CheckBox_eclipse.Text = "Eclipse"
+        Me.CheckBox_eclipse.UseVisualStyleBackColor = True
+        '
+        'TabPage_abilitiesNekros
+        '
+        Me.TabPage_abilitiesNekros.BackColor = System.Drawing.Color.White
+        Me.TabPage_abilitiesNekros.Controls.Add(Me.NumericUpDown_shieldOfShadows)
+        Me.TabPage_abilitiesNekros.Controls.Add(Me.CheckBox_shieldOfShadows)
+        Me.TabPage_abilitiesNekros.Location = New System.Drawing.Point(1, 21)
+        Me.TabPage_abilitiesNekros.Name = "TabPage_abilitiesNekros"
+        Me.TabPage_abilitiesNekros.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage_abilitiesNekros.Size = New System.Drawing.Size(279, 83)
+        Me.TabPage_abilitiesNekros.TabIndex = 11
+        Me.TabPage_abilitiesNekros.Text = "Nekros"
+        '
+        'NumericUpDown_shieldOfShadows
+        '
+        Me.NumericUpDown_shieldOfShadows.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.NumericUpDown_shieldOfShadows.Location = New System.Drawing.Point(203, 15)
+        Me.NumericUpDown_shieldOfShadows.Maximum = New Decimal(New Integer() {7, 0, 0, 0})
+        Me.NumericUpDown_shieldOfShadows.Name = "NumericUpDown_shieldOfShadows"
+        Me.NumericUpDown_shieldOfShadows.Size = New System.Drawing.Size(61, 23)
+        Me.NumericUpDown_shieldOfShadows.TabIndex = 38
+        '
+        'CheckBox_shieldOfShadows
+        '
+        Me.CheckBox_shieldOfShadows.AutoSize = True
+        Me.CheckBox_shieldOfShadows.Location = New System.Drawing.Point(9, 16)
+        Me.CheckBox_shieldOfShadows.Name = "CheckBox_shieldOfShadows"
+        Me.CheckBox_shieldOfShadows.Size = New System.Drawing.Size(147, 21)
+        Me.CheckBox_shieldOfShadows.TabIndex = 3
+        Me.CheckBox_shieldOfShadows.Text = "Shield of Shadows:"
+        Me.CheckBox_shieldOfShadows.UseVisualStyleBackColor = True
+        '
+        'TabPage_abilitiesNezha
+        '
+        Me.TabPage_abilitiesNezha.BackColor = System.Drawing.Color.White
+        Me.TabPage_abilitiesNezha.Controls.Add(Me.Label_wardingHalo)
+        Me.TabPage_abilitiesNezha.Controls.Add(Me.NumericUpDown_wardingHalo)
+        Me.TabPage_abilitiesNezha.Controls.Add(Me.CheckBox_wardingHalo)
+        Me.TabPage_abilitiesNezha.Location = New System.Drawing.Point(1, 21)
+        Me.TabPage_abilitiesNezha.Name = "TabPage_abilitiesNezha"
+        Me.TabPage_abilitiesNezha.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage_abilitiesNezha.Size = New System.Drawing.Size(279, 83)
+        Me.TabPage_abilitiesNezha.TabIndex = 4
+        Me.TabPage_abilitiesNezha.Text = "Nezha"
+        '
+        'Label_wardingHalo
+        '
+        Me.Label_wardingHalo.AutoSize = True
+        Me.Label_wardingHalo.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.Label_wardingHalo.Location = New System.Drawing.Point(6, 43)
+        Me.Label_wardingHalo.Name = "Label_wardingHalo"
+        Me.Label_wardingHalo.Size = New System.Drawing.Size(128, 17)
+        Me.Label_wardingHalo.TabIndex = 64
+        Me.Label_wardingHalo.Text = "Damage Received:"
+        '
+        'NumericUpDown_wardingHalo
+        '
+        Me.NumericUpDown_wardingHalo.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.NumericUpDown_wardingHalo.Location = New System.Drawing.Point(140, 41)
+        Me.NumericUpDown_wardingHalo.Maximum = New Decimal(New Integer() {100000000, 0, 0, 0})
+        Me.NumericUpDown_wardingHalo.Name = "NumericUpDown_wardingHalo"
+        Me.NumericUpDown_wardingHalo.Size = New System.Drawing.Size(127, 23)
+        Me.NumericUpDown_wardingHalo.TabIndex = 38
+        '
+        'CheckBox_wardingHalo
+        '
+        Me.CheckBox_wardingHalo.AutoSize = True
+        Me.CheckBox_wardingHalo.Location = New System.Drawing.Point(9, 16)
+        Me.CheckBox_wardingHalo.Name = "CheckBox_wardingHalo"
+        Me.CheckBox_wardingHalo.Size = New System.Drawing.Size(113, 21)
+        Me.CheckBox_wardingHalo.TabIndex = 2
+        Me.CheckBox_wardingHalo.Text = "Warding Halo"
+        Me.CheckBox_wardingHalo.UseVisualStyleBackColor = True
+        '
+        'TabPage_abilitiesNidus
+        '
+        Me.TabPage_abilitiesNidus.BackColor = System.Drawing.Color.White
+        Me.TabPage_abilitiesNidus.Controls.Add(Me.CheckBox_parasiticLink)
+        Me.TabPage_abilitiesNidus.Controls.Add(Me.NumericUpDown_mutationStacks)
+        Me.TabPage_abilitiesNidus.Controls.Add(Me.CheckBox_mutationStacks)
+        Me.TabPage_abilitiesNidus.Location = New System.Drawing.Point(1, 21)
+        Me.TabPage_abilitiesNidus.Name = "TabPage_abilitiesNidus"
+        Me.TabPage_abilitiesNidus.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage_abilitiesNidus.Size = New System.Drawing.Size(279, 83)
+        Me.TabPage_abilitiesNidus.TabIndex = 9
+        Me.TabPage_abilitiesNidus.Text = "Nidus"
+        '
+        'CheckBox_parasiticLink
+        '
+        Me.CheckBox_parasiticLink.AutoSize = True
+        Me.CheckBox_parasiticLink.Location = New System.Drawing.Point(9, 42)
+        Me.CheckBox_parasiticLink.Name = "CheckBox_parasiticLink"
+        Me.CheckBox_parasiticLink.Size = New System.Drawing.Size(111, 21)
+        Me.CheckBox_parasiticLink.TabIndex = 38
+        Me.CheckBox_parasiticLink.Text = "Parasitic Link"
+        Me.CheckBox_parasiticLink.UseVisualStyleBackColor = True
+        '
+        'NumericUpDown_mutationStacks
+        '
+        Me.NumericUpDown_mutationStacks.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.NumericUpDown_mutationStacks.Location = New System.Drawing.Point(203, 15)
+        Me.NumericUpDown_mutationStacks.Name = "NumericUpDown_mutationStacks"
+        Me.NumericUpDown_mutationStacks.Size = New System.Drawing.Size(61, 23)
+        Me.NumericUpDown_mutationStacks.TabIndex = 37
+        '
+        'CheckBox_mutationStacks
+        '
+        Me.CheckBox_mutationStacks.AutoSize = True
+        Me.CheckBox_mutationStacks.Location = New System.Drawing.Point(9, 16)
+        Me.CheckBox_mutationStacks.Name = "CheckBox_mutationStacks"
+        Me.CheckBox_mutationStacks.Size = New System.Drawing.Size(131, 21)
+        Me.CheckBox_mutationStacks.TabIndex = 3
+        Me.CheckBox_mutationStacks.Text = "Mutation Stacks:"
+        Me.CheckBox_mutationStacks.UseVisualStyleBackColor = True
+        '
+        'TabPage_abilitiesOberon
+        '
+        Me.TabPage_abilitiesOberon.BackColor = System.Drawing.Color.White
+        Me.TabPage_abilitiesOberon.Controls.Add(Me.CheckBox_hallowedReckoning)
+        Me.TabPage_abilitiesOberon.Controls.Add(Me.CheckBox_ironRenewal)
+        Me.TabPage_abilitiesOberon.Location = New System.Drawing.Point(1, 21)
+        Me.TabPage_abilitiesOberon.Name = "TabPage_abilitiesOberon"
+        Me.TabPage_abilitiesOberon.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage_abilitiesOberon.Size = New System.Drawing.Size(279, 83)
+        Me.TabPage_abilitiesOberon.TabIndex = 5
+        Me.TabPage_abilitiesOberon.Text = "Oberon"
+        '
+        'CheckBox_hallowedReckoning
+        '
+        Me.CheckBox_hallowedReckoning.AutoSize = True
+        Me.CheckBox_hallowedReckoning.Location = New System.Drawing.Point(9, 42)
+        Me.CheckBox_hallowedReckoning.Name = "CheckBox_hallowedReckoning"
+        Me.CheckBox_hallowedReckoning.Size = New System.Drawing.Size(155, 21)
+        Me.CheckBox_hallowedReckoning.TabIndex = 4
+        Me.CheckBox_hallowedReckoning.Text = "Hallowed Reckoning"
+        Me.CheckBox_hallowedReckoning.UseVisualStyleBackColor = True
+        '
+        'CheckBox_ironRenewal
+        '
+        Me.CheckBox_ironRenewal.AutoSize = True
+        Me.CheckBox_ironRenewal.Location = New System.Drawing.Point(9, 16)
+        Me.CheckBox_ironRenewal.Name = "CheckBox_ironRenewal"
+        Me.CheckBox_ironRenewal.Size = New System.Drawing.Size(109, 21)
+        Me.CheckBox_ironRenewal.TabIndex = 3
+        Me.CheckBox_ironRenewal.Text = "Iron Renewal"
+        Me.CheckBox_ironRenewal.UseVisualStyleBackColor = True
+        '
+        'TabPage_abilitiesOctavia
+        '
+        Me.TabPage_abilitiesOctavia.BackColor = System.Drawing.Color.White
+        Me.TabPage_abilitiesOctavia.Controls.Add(Me.CheckBox_metronome)
+        Me.TabPage_abilitiesOctavia.Location = New System.Drawing.Point(1, 21)
+        Me.TabPage_abilitiesOctavia.Name = "TabPage_abilitiesOctavia"
+        Me.TabPage_abilitiesOctavia.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage_abilitiesOctavia.Size = New System.Drawing.Size(279, 83)
+        Me.TabPage_abilitiesOctavia.TabIndex = 15
+        Me.TabPage_abilitiesOctavia.Text = "Octavia"
+        '
+        'CheckBox_metronome
+        '
+        Me.CheckBox_metronome.AutoSize = True
+        Me.CheckBox_metronome.Location = New System.Drawing.Point(9, 16)
+        Me.CheckBox_metronome.Name = "CheckBox_metronome"
+        Me.CheckBox_metronome.Size = New System.Drawing.Size(98, 21)
+        Me.CheckBox_metronome.TabIndex = 4
+        Me.CheckBox_metronome.Text = "Metronome"
+        Me.CheckBox_metronome.UseVisualStyleBackColor = True
+        '
+        'TabPage_abilitiesRhino
+        '
+        Me.TabPage_abilitiesRhino.BackColor = System.Drawing.Color.White
+        Me.TabPage_abilitiesRhino.Controls.Add(Me.NumericUpDown_ironcladCharge)
+        Me.TabPage_abilitiesRhino.Controls.Add(Me.CheckBox_ironcladCharge)
+        Me.TabPage_abilitiesRhino.Controls.Add(Me.CheckBox_ironSkin)
+        Me.TabPage_abilitiesRhino.Controls.Add(Me.Label_ironSkin)
+        Me.TabPage_abilitiesRhino.Controls.Add(Me.NumericUpDown_ironSkin)
+        Me.TabPage_abilitiesRhino.Location = New System.Drawing.Point(1, 21)
+        Me.TabPage_abilitiesRhino.Name = "TabPage_abilitiesRhino"
+        Me.TabPage_abilitiesRhino.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage_abilitiesRhino.Size = New System.Drawing.Size(279, 83)
+        Me.TabPage_abilitiesRhino.TabIndex = 7
+        Me.TabPage_abilitiesRhino.Text = "Rhino"
+        '
+        'NumericUpDown_ironcladCharge
+        '
+        Me.NumericUpDown_ironcladCharge.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.NumericUpDown_ironcladCharge.Location = New System.Drawing.Point(203, 67)
+        Me.NumericUpDown_ironcladCharge.Name = "NumericUpDown_ironcladCharge"
+        Me.NumericUpDown_ironcladCharge.Size = New System.Drawing.Size(61, 23)
+        Me.NumericUpDown_ironcladCharge.TabIndex = 38
+        '
+        'CheckBox_ironcladCharge
+        '
+        Me.CheckBox_ironcladCharge.AutoSize = True
+        Me.CheckBox_ironcladCharge.Location = New System.Drawing.Point(9, 68)
+        Me.CheckBox_ironcladCharge.Name = "CheckBox_ironcladCharge"
+        Me.CheckBox_ironcladCharge.Size = New System.Drawing.Size(127, 21)
+        Me.CheckBox_ironcladCharge.TabIndex = 5
+        Me.CheckBox_ironcladCharge.Text = "Ironclad Charge"
+        Me.CheckBox_ironcladCharge.UseVisualStyleBackColor = True
+        '
+        'CheckBox_ironSkin
+        '
+        Me.CheckBox_ironSkin.AutoSize = True
+        Me.CheckBox_ironSkin.Location = New System.Drawing.Point(9, 16)
+        Me.CheckBox_ironSkin.Name = "CheckBox_ironSkin"
+        Me.CheckBox_ironSkin.Size = New System.Drawing.Size(82, 21)
+        Me.CheckBox_ironSkin.TabIndex = 4
+        Me.CheckBox_ironSkin.Text = "Iron Skin"
+        Me.CheckBox_ironSkin.UseVisualStyleBackColor = True
+        '
+        'Label_ironSkin
+        '
+        Me.Label_ironSkin.AutoSize = True
+        Me.Label_ironSkin.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.Label_ironSkin.Location = New System.Drawing.Point(6, 43)
+        Me.Label_ironSkin.Name = "Label_ironSkin"
+        Me.Label_ironSkin.Size = New System.Drawing.Size(128, 17)
+        Me.Label_ironSkin.TabIndex = 66
+        Me.Label_ironSkin.Text = "Damage Received:"
+        '
+        'NumericUpDown_ironSkin
+        '
+        Me.NumericUpDown_ironSkin.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.NumericUpDown_ironSkin.Location = New System.Drawing.Point(142, 41)
+        Me.NumericUpDown_ironSkin.Maximum = New Decimal(New Integer() {100000000, 0, 0, 0})
+        Me.NumericUpDown_ironSkin.Name = "NumericUpDown_ironSkin"
+        Me.NumericUpDown_ironSkin.Size = New System.Drawing.Size(122, 23)
+        Me.NumericUpDown_ironSkin.TabIndex = 65
+        '
+        'TabPage_abilitiesTitania
+        '
+        Me.TabPage_abilitiesTitania.BackColor = System.Drawing.Color.White
+        Me.TabPage_abilitiesTitania.Controls.Add(Me.NumericUpDown_thorns)
+        Me.TabPage_abilitiesTitania.Controls.Add(Me.CheckBox_thorns)
+        Me.TabPage_abilitiesTitania.Location = New System.Drawing.Point(1, 21)
+        Me.TabPage_abilitiesTitania.Name = "TabPage_abilitiesTitania"
+        Me.TabPage_abilitiesTitania.Size = New System.Drawing.Size(279, 83)
+        Me.TabPage_abilitiesTitania.TabIndex = 16
+        Me.TabPage_abilitiesTitania.Text = "Titania"
+        '
+        'NumericUpDown_thorns
+        '
+        Me.NumericUpDown_thorns.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.NumericUpDown_thorns.Increment = New Decimal(New Integer() {5, 0, 0, 0})
+        Me.NumericUpDown_thorns.Location = New System.Drawing.Point(205, 15)
+        Me.NumericUpDown_thorns.Maximum = New Decimal(New Integer() {25, 0, 0, 0})
+        Me.NumericUpDown_thorns.Name = "NumericUpDown_thorns"
+        Me.NumericUpDown_thorns.Size = New System.Drawing.Size(61, 23)
+        Me.NumericUpDown_thorns.TabIndex = 39
+        '
+        'CheckBox_thorns
+        '
+        Me.CheckBox_thorns.AutoSize = True
+        Me.CheckBox_thorns.Location = New System.Drawing.Point(9, 16)
+        Me.CheckBox_thorns.Name = "CheckBox_thorns"
+        Me.CheckBox_thorns.Size = New System.Drawing.Size(72, 21)
+        Me.CheckBox_thorns.TabIndex = 0
+        Me.CheckBox_thorns.Text = "Thorns"
+        Me.CheckBox_thorns.UseVisualStyleBackColor = True
+        '
+        'TabPage_abilitiesTrinity
+        '
+        Me.TabPage_abilitiesTrinity.BackColor = System.Drawing.Color.White
+        Me.TabPage_abilitiesTrinity.Controls.Add(Me.CheckBox_blessing)
+        Me.TabPage_abilitiesTrinity.Controls.Add(Me.CheckBox_link)
+        Me.TabPage_abilitiesTrinity.Location = New System.Drawing.Point(1, 21)
+        Me.TabPage_abilitiesTrinity.Name = "TabPage_abilitiesTrinity"
+        Me.TabPage_abilitiesTrinity.Size = New System.Drawing.Size(279, 83)
+        Me.TabPage_abilitiesTrinity.TabIndex = 12
+        Me.TabPage_abilitiesTrinity.Text = "Trinity"
+        '
+        'CheckBox_blessing
+        '
+        Me.CheckBox_blessing.AutoSize = True
+        Me.CheckBox_blessing.Location = New System.Drawing.Point(9, 42)
+        Me.CheckBox_blessing.Name = "CheckBox_blessing"
+        Me.CheckBox_blessing.Size = New System.Drawing.Size(84, 21)
+        Me.CheckBox_blessing.TabIndex = 41
+        Me.CheckBox_blessing.Text = "Blessing:"
+        Me.CheckBox_blessing.UseVisualStyleBackColor = True
+        '
+        'CheckBox_link
+        '
+        Me.CheckBox_link.AutoSize = True
+        Me.CheckBox_link.Location = New System.Drawing.Point(9, 16)
+        Me.CheckBox_link.Name = "CheckBox_link"
+        Me.CheckBox_link.Size = New System.Drawing.Size(57, 21)
+        Me.CheckBox_link.TabIndex = 39
+        Me.CheckBox_link.Text = "Link:"
+        Me.CheckBox_link.UseVisualStyleBackColor = True
+        '
+        'TabPage_abilitiesValkyr
+        '
+        Me.TabPage_abilitiesValkyr.BackColor = System.Drawing.Color.White
+        Me.TabPage_abilitiesValkyr.Controls.Add(Me.CheckBox_warcry)
+        Me.TabPage_abilitiesValkyr.Location = New System.Drawing.Point(1, 21)
+        Me.TabPage_abilitiesValkyr.Name = "TabPage_abilitiesValkyr"
+        Me.TabPage_abilitiesValkyr.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage_abilitiesValkyr.Size = New System.Drawing.Size(279, 83)
+        Me.TabPage_abilitiesValkyr.TabIndex = 8
+        Me.TabPage_abilitiesValkyr.Text = "Valkyr"
+        '
+        'CheckBox_warcry
+        '
+        Me.CheckBox_warcry.AutoSize = True
+        Me.CheckBox_warcry.Location = New System.Drawing.Point(9, 16)
+        Me.CheckBox_warcry.Name = "CheckBox_warcry"
+        Me.CheckBox_warcry.Size = New System.Drawing.Size(72, 21)
+        Me.CheckBox_warcry.TabIndex = 5
+        Me.CheckBox_warcry.Text = "Warcry"
+        Me.CheckBox_warcry.UseVisualStyleBackColor = True
+        '
+        'TabPage_abilitiesVauban
+        '
+        Me.TabPage_abilitiesVauban.BackColor = System.Drawing.Color.White
+        Me.TabPage_abilitiesVauban.Controls.Add(Me.NumericUpDown_reinforce)
+        Me.TabPage_abilitiesVauban.Controls.Add(Me.CheckBox_reinforce)
+        Me.TabPage_abilitiesVauban.Location = New System.Drawing.Point(1, 21)
+        Me.TabPage_abilitiesVauban.Name = "TabPage_abilitiesVauban"
+        Me.TabPage_abilitiesVauban.Size = New System.Drawing.Size(279, 83)
+        Me.TabPage_abilitiesVauban.TabIndex = 14
+        Me.TabPage_abilitiesVauban.Text = "Vauban"
+        '
+        'NumericUpDown_reinforce
+        '
+        Me.NumericUpDown_reinforce.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.NumericUpDown_reinforce.Location = New System.Drawing.Point(205, 15)
+        Me.NumericUpDown_reinforce.Maximum = New Decimal(New Integer() {7, 0, 0, 0})
+        Me.NumericUpDown_reinforce.Name = "NumericUpDown_reinforce"
+        Me.NumericUpDown_reinforce.Size = New System.Drawing.Size(61, 23)
+        Me.NumericUpDown_reinforce.TabIndex = 39
+        '
+        'CheckBox_reinforce
+        '
+        Me.CheckBox_reinforce.AutoSize = True
+        Me.CheckBox_reinforce.Location = New System.Drawing.Point(11, 16)
+        Me.CheckBox_reinforce.Name = "CheckBox_reinforce"
+        Me.CheckBox_reinforce.Size = New System.Drawing.Size(92, 21)
+        Me.CheckBox_reinforce.TabIndex = 38
+        Me.CheckBox_reinforce.Text = "Reinforce:"
+        Me.CheckBox_reinforce.UseVisualStyleBackColor = True
+        '
         'Form_main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -3675,37 +3675,6 @@ Partial Class Form_main
         Me.GroupBox_warframeResults.PerformLayout()
         Me.GroupBox_squadEffects.ResumeLayout(False)
         Me.GroupBox_squadEffects.PerformLayout()
-        Me.CustomTabControl_arcaneHelmets.ResumeLayout(False)
-        Me.TabPage_arcaneHelmetsDefault.ResumeLayout(False)
-        Me.TabPage_arcaneHelmetsDefault.PerformLayout()
-        Me.TabPage_arcaneHelmetsAsh.ResumeLayout(False)
-        Me.TabPage_arcaneHelmetsAsh.PerformLayout()
-        Me.TabPage_arcaneHelmetsBanshee.ResumeLayout(False)
-        Me.TabPage_arcaneHelmetsBanshee.PerformLayout()
-        Me.TabPage_arcaneHelmetsEmber.ResumeLayout(False)
-        Me.TabPage_arcaneHelmetsEmber.PerformLayout()
-        Me.TabPage_arcaneHelmetsExcalibur.ResumeLayout(False)
-        Me.TabPage_arcaneHelmetsExcalibur.PerformLayout()
-        Me.TabPage_arcaneHelmetsFrost.ResumeLayout(False)
-        Me.TabPage_arcaneHelmetsFrost.PerformLayout()
-        Me.TabPage_arcaneHelmetsLoki.ResumeLayout(False)
-        Me.TabPage_arcaneHelmetsLoki.PerformLayout()
-        Me.TabPage_arcaneHelmetsMag.ResumeLayout(False)
-        Me.TabPage_arcaneHelmetsMag.PerformLayout()
-        Me.TabPage_arcaneHelmetsNova.ResumeLayout(False)
-        Me.TabPage_arcaneHelmetsNova.PerformLayout()
-        Me.TabPage_arcaneHelmetsNyx.ResumeLayout(False)
-        Me.TabPage_arcaneHelmetsNyx.PerformLayout()
-        Me.TabPage_arcaneHelmetsRhino.ResumeLayout(False)
-        Me.TabPage_arcaneHelmetsRhino.PerformLayout()
-        Me.TabPage_arcaneHelmetsSaryn.ResumeLayout(False)
-        Me.TabPage_arcaneHelmetsSaryn.PerformLayout()
-        Me.TabPage_arcaneHelmetsTrinity.ResumeLayout(False)
-        Me.TabPage_arcaneHelmetsTrinity.PerformLayout()
-        Me.TabPage_arcaneHelmetsVauban.ResumeLayout(False)
-        Me.TabPage_arcaneHelmetsVauban.PerformLayout()
-        Me.TabPage_arcaneHelmetsVolt.ResumeLayout(False)
-        Me.TabPage_arcaneHelmetsVolt.PerformLayout()
         Me.GroupBox_specialEffects.ResumeLayout(False)
         Me.GroupBox_specialEffects.PerformLayout()
         CType(Me.NumericUpDown_oversheilds, System.ComponentModel.ISupportInitialize).EndInit()
@@ -3748,6 +3717,53 @@ Partial Class Form_main
         CType(Me.NumericUpDown_growingPower, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NumericUpDown_standUnited, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NumericUpDown_physique, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox_focus.ResumeLayout(False)
+        Me.GroupBox_focus.PerformLayout()
+        Me.TabPage_companion.ResumeLayout(False)
+        Me.TabPage_companion.PerformLayout()
+        Me.GroupBox_companionResults.ResumeLayout(False)
+        Me.GroupBox_companionResults.PerformLayout()
+        CType(Me.NumericUpDown_companionStability, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox_companionSurvivability.ResumeLayout(False)
+        Me.GroupBox_companionSurvivability.PerformLayout()
+        CType(Me.NumericUpDown_companionLinkShield, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.NumericUpDown_companionLinkHealth, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.NumericUpDown_companionLinkArmor, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage_archwing.ResumeLayout(False)
+        Me.TabPage_archwing.PerformLayout()
+        Me.TabPage_development.ResumeLayout(False)
+        Me.TabPage_development.PerformLayout()
+        Me.CustomTabControl_arcaneHelmets.ResumeLayout(False)
+        Me.TabPage_arcaneHelmetsDefault.ResumeLayout(False)
+        Me.TabPage_arcaneHelmetsDefault.PerformLayout()
+        Me.TabPage_arcaneHelmetsAsh.ResumeLayout(False)
+        Me.TabPage_arcaneHelmetsAsh.PerformLayout()
+        Me.TabPage_arcaneHelmetsBanshee.ResumeLayout(False)
+        Me.TabPage_arcaneHelmetsBanshee.PerformLayout()
+        Me.TabPage_arcaneHelmetsEmber.ResumeLayout(False)
+        Me.TabPage_arcaneHelmetsEmber.PerformLayout()
+        Me.TabPage_arcaneHelmetsExcalibur.ResumeLayout(False)
+        Me.TabPage_arcaneHelmetsExcalibur.PerformLayout()
+        Me.TabPage_arcaneHelmetsFrost.ResumeLayout(False)
+        Me.TabPage_arcaneHelmetsFrost.PerformLayout()
+        Me.TabPage_arcaneHelmetsLoki.ResumeLayout(False)
+        Me.TabPage_arcaneHelmetsLoki.PerformLayout()
+        Me.TabPage_arcaneHelmetsMag.ResumeLayout(False)
+        Me.TabPage_arcaneHelmetsMag.PerformLayout()
+        Me.TabPage_arcaneHelmetsNova.ResumeLayout(False)
+        Me.TabPage_arcaneHelmetsNova.PerformLayout()
+        Me.TabPage_arcaneHelmetsNyx.ResumeLayout(False)
+        Me.TabPage_arcaneHelmetsNyx.PerformLayout()
+        Me.TabPage_arcaneHelmetsRhino.ResumeLayout(False)
+        Me.TabPage_arcaneHelmetsRhino.PerformLayout()
+        Me.TabPage_arcaneHelmetsSaryn.ResumeLayout(False)
+        Me.TabPage_arcaneHelmetsSaryn.PerformLayout()
+        Me.TabPage_arcaneHelmetsTrinity.ResumeLayout(False)
+        Me.TabPage_arcaneHelmetsTrinity.PerformLayout()
+        Me.TabPage_arcaneHelmetsVauban.ResumeLayout(False)
+        Me.TabPage_arcaneHelmetsVauban.PerformLayout()
+        Me.TabPage_arcaneHelmetsVolt.ResumeLayout(False)
+        Me.TabPage_arcaneHelmetsVolt.PerformLayout()
         Me.CustomTabControl_abilitys.ResumeLayout(False)
         Me.TabPage_abilitiesDefault.ResumeLayout(False)
         Me.TabPage_abilitiesDefault.PerformLayout()
@@ -3792,22 +3808,6 @@ Partial Class Form_main
         Me.TabPage_abilitiesVauban.ResumeLayout(False)
         Me.TabPage_abilitiesVauban.PerformLayout()
         CType(Me.NumericUpDown_reinforce, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox_focus.ResumeLayout(False)
-        Me.GroupBox_focus.PerformLayout()
-        Me.TabPage_companion.ResumeLayout(False)
-        Me.TabPage_companion.PerformLayout()
-        Me.GroupBox_companionResults.ResumeLayout(False)
-        Me.GroupBox_companionResults.PerformLayout()
-        CType(Me.NumericUpDown_companionStability, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox_companionSurvivability.ResumeLayout(False)
-        Me.GroupBox_companionSurvivability.PerformLayout()
-        CType(Me.NumericUpDown_companionLinkShield, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.NumericUpDown_companionLinkHealth, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.NumericUpDown_companionLinkArmor, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabPage_archwing.ResumeLayout(False)
-        Me.TabPage_archwing.PerformLayout()
-        Me.TabPage_development.ResumeLayout(False)
-        Me.TabPage_development.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
