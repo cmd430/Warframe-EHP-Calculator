@@ -3171,6 +3171,7 @@ Partial Class Form_main
         '
         'TabPage_abilitiesAtlas
         '
+        Me.TabPage_abilitiesAtlas.BackColor = System.Drawing.Color.White
         Me.TabPage_abilitiesAtlas.Controls.Add(Me.NumericUpDown_rubble)
         Me.TabPage_abilitiesAtlas.Controls.Add(Me.CheckBox_rubble)
         Me.TabPage_abilitiesAtlas.Location = New System.Drawing.Point(1, 21)
@@ -3179,7 +3180,6 @@ Partial Class Form_main
         Me.TabPage_abilitiesAtlas.Size = New System.Drawing.Size(279, 83)
         Me.TabPage_abilitiesAtlas.TabIndex = 18
         Me.TabPage_abilitiesAtlas.Text = "Atlas"
-        Me.TabPage_abilitiesAtlas.UseVisualStyleBackColor = True
         '
         'NumericUpDown_rubble
         '

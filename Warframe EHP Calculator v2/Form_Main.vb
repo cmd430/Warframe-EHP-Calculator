@@ -313,6 +313,9 @@
         '   Enable/Disable Abilities Selection
         '
         Select Case ComboBox_warframes.SelectedItem
+            Case "Atlas"
+                CheckBox_abilities.Enabled = True
+                CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesAtlas
             Case "Chroma"
                 CheckBox_abilities.Enabled = True
                 CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesChroma
@@ -707,7 +710,7 @@
                     Case "Atlas"
                         If CheckBox_rubble.Checked Then
                             Dim rubble As Decimal = NumericUpDown_rubble.Value
-                            armorBonus = rubble + rubble
+                            armorBonus = armorBonus + rubble
                         End If
                     Case "Chroma"
                         If CheckBox_elementalWard.Checked Then
