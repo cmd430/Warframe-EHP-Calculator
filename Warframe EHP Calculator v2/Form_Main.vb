@@ -704,6 +704,11 @@
             '
             If CheckBox_abilities.Checked Then
                 Select Case ComboBox_warframes.SelectedItem
+                    Case "Atlas"
+                        If CheckBox_rubble.Checked Then
+                            Dim rubble As Decimal = NumericUpDown_rubble.Value
+                            armorBonus = rubble + rubble
+                        End If
                     Case "Chroma"
                         If CheckBox_elementalWard.Checked Then
                             Dim elementalWard As Decimal = 0.0
@@ -849,7 +854,11 @@
             '
             If CheckBox_vexArmor.Checked And ComboBox_warframes.SelectedItem = "Chroma" And CheckBox_abilities.Checked Then
                 Dim vexArmor As Decimal = 3.5
-                Armor = ((baseArmor * (((1 + armorMultiplier) * vexArmor) * powerStrength)) + (Armor - baseArmor)) + armorBonus
+                '
+                ' Old Chroma Buff  :'(
+                '
+                'Armor = ((baseArmor * (((1 + armorMultiplier) * vexArmor) * powerStrength)) + (Armor - baseArmor)) + armorBonus
+                Armor = baseArmor * (1 + (armorMultiplier + (vexArmor * powerStrength))) + armorBonus
             Else
                 Armor = ((baseArmor * (1 + armorMultiplier)) + (Armor - baseArmor)) + armorBonus
             End If
@@ -868,16 +877,31 @@
             '   Arcanes
             '
             If CheckBox_arcanes.Checked Then
-                If CheckBox_arcaneGuardian.Checked And CheckBox_arcaneUltimatum.Checked Then
-                    Armor = Armor * (1 + ((0.15 * NumericUpDown_arcaneGuardian.Value) + (0.15 * NumericUpDown_arcaneUltimatum.Value)))
-                Else
-                    If CheckBox_arcaneGuardian.Checked Then
-                        Armor = Armor * (1 + (0.15 * NumericUpDown_arcaneGuardian.Value))
-                    End If
-                    If CheckBox_arcaneUltimatum.Checked Then
-                        Armor = Armor * (1 + (0.15 * NumericUpDown_arcaneUltimatum.Value))
-                    End If
+                If CheckBox_arcaneGuardian.Checked Then
+                    Armor = Armor + (150 + (150 * NumericUpDown_arcaneGuardian.Value))
                 End If
+                If CheckBox_arcaneGuardian2.Checked Then
+                    Armor = Armor + (150 + (150 * NumericUpDown_arcaneGuardian2.Value))
+                End If
+                If CheckBox_arcaneUltimatum.Checked Then
+                    Armor = Armor + (150 + (150 * NumericUpDown_arcaneUltimatum.Value))
+                End If
+                If CheckBox_arcaneUltimatum2.Checked Then
+                    Armor = Armor + (150 + (150 * NumericUpDown_arcaneUltimatum2.Value))
+                End If
+                '
+                '   Old Arcane Effects
+                '
+                'If CheckBox_arcaneGuardian.Checked And CheckBox_arcaneUltimatum.Checked Then
+                '    Armor = Armor * (1 + ((0.15 * NumericUpDown_arcaneGuardian.Value) + (0.15 * NumericUpDown_arcaneUltimatum.Value)))
+                'Else
+                '    If CheckBox_arcaneGuardian.Checked Then
+                '        Armor = Armor * (1 + (0.15 * NumericUpDown_arcaneGuardian.Value))
+                '    End If
+                '    If CheckBox_arcaneUltimatum.Checked Then
+                '        Armor = Armor * (1 + (0.15 * NumericUpDown_arcaneUltimatum.Value))
+                '    End If
+                'End If
             End If
             '
             '   Dragon Keys
