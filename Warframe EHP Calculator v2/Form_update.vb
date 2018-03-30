@@ -4,7 +4,7 @@ Imports System.Net
 Public NotInheritable Class Form_update
 
     Private Sub Form_update_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Label_updateAvailable.Text = "Update" & Form_main.liveVersion.Trim() & " is available for download"
+        Label_updateAvailable.Text = "Update" & Form_main.liveVersion & " is available for download"
         Try
             TextBox_changes.Text = New StreamReader(New WebClient().OpenRead("https://raw.githubusercontent.com/cmd430/Warframe-EHP-Calculator/master/Warframe%20EHP%20Calculator%20v2/latest_changes")).ReadToEnd
         Catch ex As Exception

@@ -151,7 +151,7 @@ Public Class Form_main
         ' Check for Update
         '
         Try
-            liveVersion = New StreamReader(New WebClient().OpenRead("https://raw.githubusercontent.com/cmd430/Warframe-EHP-Calculator/master/Warframe%20EHP%20Calculator%20v2/version")).ReadToEnd
+            liveVersion = New StreamReader(New WebClient().OpenRead("https://raw.githubusercontent.com/cmd430/Warframe-EHP-Calculator/master/Warframe%20EHP%20Calculator%20v2/version")).ReadToEnd.Trim()
             If Not liveVersion = Label_version.Text Then
                 Form_update.ShowDialog()
             End If
