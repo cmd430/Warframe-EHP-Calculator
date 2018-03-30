@@ -1,6 +1,10 @@
-﻿Public Class Form_main
+﻿Imports System.IO
+Imports System.Net
+
+Public Class Form_main
 
     Public squadMembers As New Dictionary(Of String, String)
+    Public liveVersion As String
 
     Public Shared Function FindControlRecursive(ByVal list As List(Of Control), ByVal parent As Control, ByVal ctrlType As System.Type) As List(Of Control)
         If parent Is Nothing Then Return list
@@ -143,6 +147,17 @@
         '
         AddHandler ComboBox_companions.SelectedIndexChanged, AddressOf Companion_Value_Changed
         AddHandler CheckBox_companionSurvivability.CheckedChanged, AddressOf Enable_Disable_Section
+        '
+        ' Check for Update
+        '
+        Try
+            liveVersion = New StreamReader(New WebClient().OpenRead("https://raw.githubusercontent.com/cmd430/Warframe-EHP-Calculator/master/Warframe%20EHP%20Calculator%20v2/version")).ReadToEnd
+            If Not liveVersion = Label_version.Text Then
+                Form_update.ShowDialog()
+            End If
+        Catch ex As Exception
+            'Cant check for updates
+        End Try
     End Sub
 
     Public Sub Toggle_Warframe_Type(sender As Object, e As EventArgs)

@@ -110,6 +110,12 @@
     <Compile Include="Form_squadMember.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form_update.Designer.vb">
+      <DependentUpon>Form_update.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_update.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -133,6 +139,9 @@
     <EmbeddedResource Include="Form_squadMember.resx">
       <DependentUpon>Form_squadMember.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_update.resx">
+      <DependentUpon>Form_update.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -154,6 +163,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Debug\Warframe EHP Calculator v2.exe" />
+    <Content Include="latest_changes" />
+    <Content Include="version" />
     <Content Include="Warframe.ico" />
   </ItemGroup>
   <ItemGroup>

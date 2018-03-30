@@ -73,6 +73,10 @@ Partial Class Form_main
         Me.RadioButton_decayingKey = New System.Windows.Forms.RadioButton()
         Me.RadioButton_bleedingKey = New System.Windows.Forms.RadioButton()
         Me.GroupBox_arcanes = New System.Windows.Forms.GroupBox()
+        Me.CheckBox_arcaneGuardian2 = New System.Windows.Forms.CheckBox()
+        Me.NumericUpDown_arcaneGuardian2 = New System.Windows.Forms.NumericUpDown()
+        Me.NumericUpDown_arcaneUltimatum2 = New System.Windows.Forms.NumericUpDown()
+        Me.CheckBox_arcaneUltimatum2 = New System.Windows.Forms.CheckBox()
         Me.CheckBox_arcaneGuardian = New System.Windows.Forms.CheckBox()
         Me.NumericUpDown_arcaneUltimatum = New System.Windows.Forms.NumericUpDown()
         Me.NumericUpDown_arcaneGuardian = New System.Windows.Forms.NumericUpDown()
@@ -140,6 +144,8 @@ Partial Class Form_main
         Me.CheckBox_isPrime = New System.Windows.Forms.CheckBox()
         Me.Panel_Ruler = New System.Windows.Forms.Panel()
         Me.GroupBox_focus = New System.Windows.Forms.GroupBox()
+        Me.NumericUpDown_stoneSkin = New System.Windows.Forms.NumericUpDown()
+        Me.CheckBox_stoneSkin = New System.Windows.Forms.CheckBox()
         Me.TabPage_companion = New System.Windows.Forms.TabPage()
         Me.Label_companionNotice = New System.Windows.Forms.Label()
         Me.GroupBox_companionResults = New System.Windows.Forms.GroupBox()
@@ -210,12 +216,8 @@ Partial Class Form_main
         Me.Icons = New System.Windows.Forms.ImageList(Me.components)
         Me.Label_author = New System.Windows.Forms.Label()
         Me.Label_love = New System.Windows.Forms.Label()
-        Me.CheckBox_stoneSkin = New System.Windows.Forms.CheckBox()
-        Me.NumericUpDown_stoneSkin = New System.Windows.Forms.NumericUpDown()
-        Me.CheckBox_arcaneUltimatum2 = New System.Windows.Forms.CheckBox()
-        Me.NumericUpDown_arcaneUltimatum2 = New System.Windows.Forms.NumericUpDown()
-        Me.CheckBox_arcaneGuardian2 = New System.Windows.Forms.CheckBox()
-        Me.NumericUpDown_arcaneGuardian2 = New System.Windows.Forms.NumericUpDown()
+        Me.Label_versionName = New System.Windows.Forms.Label()
+        Me.Label_version = New System.Windows.Forms.Label()
         Me.CustomTabControl_arcaneHelmets = New Warframe_EHP_Calculator_v2.CustomTabControl()
         Me.TabPage_arcaneHelmetsDefault = New System.Windows.Forms.TabPage()
         Me.Label_arcaneHelmetPlaceholder = New System.Windows.Forms.Label()
@@ -323,6 +325,8 @@ Partial Class Form_main
         CType(Me.NumericUpDown_oversheilds, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox_dragonKeys.SuspendLayout()
         Me.GroupBox_arcanes.SuspendLayout()
+        CType(Me.NumericUpDown_arcaneGuardian2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.NumericUpDown_arcaneUltimatum2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NumericUpDown_arcaneUltimatum, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NumericUpDown_arcaneGuardian, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox_miscellaneous.SuspendLayout()
@@ -355,6 +359,7 @@ Partial Class Form_main
         CType(Me.NumericUpDown_standUnited, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NumericUpDown_physique, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox_focus.SuspendLayout()
+        CType(Me.NumericUpDown_stoneSkin, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage_companion.SuspendLayout()
         Me.GroupBox_companionResults.SuspendLayout()
         CType(Me.NumericUpDown_companionStability, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -364,9 +369,6 @@ Partial Class Form_main
         CType(Me.NumericUpDown_companionLinkArmor, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage_archwing.SuspendLayout()
         Me.TabPage_development.SuspendLayout()
-        CType(Me.NumericUpDown_stoneSkin, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.NumericUpDown_arcaneUltimatum2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.NumericUpDown_arcaneGuardian2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.CustomTabControl_arcaneHelmets.SuspendLayout()
         Me.TabPage_arcaneHelmetsDefault.SuspendLayout()
         Me.TabPage_arcaneHelmetsAsh.SuspendLayout()
@@ -1007,6 +1009,45 @@ Partial Class Form_main
         Me.GroupBox_arcanes.TabIndex = 107
         Me.GroupBox_arcanes.TabStop = False
         Me.GroupBox_arcanes.Text = "  "
+        '
+        'CheckBox_arcaneGuardian2
+        '
+        Me.CheckBox_arcaneGuardian2.AutoSize = True
+        Me.CheckBox_arcaneGuardian2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.CheckBox_arcaneGuardian2.Location = New System.Drawing.Point(252, 24)
+        Me.CheckBox_arcaneGuardian2.Name = "CheckBox_arcaneGuardian2"
+        Me.CheckBox_arcaneGuardian2.Size = New System.Drawing.Size(139, 21)
+        Me.CheckBox_arcaneGuardian2.TabIndex = 57
+        Me.CheckBox_arcaneGuardian2.Text = "Arcane Guardian:"
+        Me.CheckBox_arcaneGuardian2.UseVisualStyleBackColor = True
+        '
+        'NumericUpDown_arcaneGuardian2
+        '
+        Me.NumericUpDown_arcaneGuardian2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.NumericUpDown_arcaneGuardian2.Location = New System.Drawing.Point(397, 23)
+        Me.NumericUpDown_arcaneGuardian2.Maximum = New Decimal(New Integer() {3, 0, 0, 0})
+        Me.NumericUpDown_arcaneGuardian2.Name = "NumericUpDown_arcaneGuardian2"
+        Me.NumericUpDown_arcaneGuardian2.Size = New System.Drawing.Size(61, 23)
+        Me.NumericUpDown_arcaneGuardian2.TabIndex = 58
+        '
+        'NumericUpDown_arcaneUltimatum2
+        '
+        Me.NumericUpDown_arcaneUltimatum2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.NumericUpDown_arcaneUltimatum2.Location = New System.Drawing.Point(397, 49)
+        Me.NumericUpDown_arcaneUltimatum2.Maximum = New Decimal(New Integer() {3, 0, 0, 0})
+        Me.NumericUpDown_arcaneUltimatum2.Name = "NumericUpDown_arcaneUltimatum2"
+        Me.NumericUpDown_arcaneUltimatum2.Size = New System.Drawing.Size(61, 23)
+        Me.NumericUpDown_arcaneUltimatum2.TabIndex = 56
+        '
+        'CheckBox_arcaneUltimatum2
+        '
+        Me.CheckBox_arcaneUltimatum2.AutoSize = True
+        Me.CheckBox_arcaneUltimatum2.Location = New System.Drawing.Point(252, 50)
+        Me.CheckBox_arcaneUltimatum2.Name = "CheckBox_arcaneUltimatum2"
+        Me.CheckBox_arcaneUltimatum2.Size = New System.Drawing.Size(142, 21)
+        Me.CheckBox_arcaneUltimatum2.TabIndex = 55
+        Me.CheckBox_arcaneUltimatum2.Text = "Arcane Ultimatum:"
+        Me.CheckBox_arcaneUltimatum2.UseVisualStyleBackColor = True
         '
         'CheckBox_arcaneGuardian
         '
@@ -1741,6 +1782,25 @@ Partial Class Form_main
         Me.GroupBox_focus.TabStop = False
         Me.GroupBox_focus.Text = "  "
         '
+        'NumericUpDown_stoneSkin
+        '
+        Me.NumericUpDown_stoneSkin.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.NumericUpDown_stoneSkin.Location = New System.Drawing.Point(206, 26)
+        Me.NumericUpDown_stoneSkin.Maximum = New Decimal(New Integer() {3, 0, 0, 0})
+        Me.NumericUpDown_stoneSkin.Name = "NumericUpDown_stoneSkin"
+        Me.NumericUpDown_stoneSkin.Size = New System.Drawing.Size(61, 23)
+        Me.NumericUpDown_stoneSkin.TabIndex = 37
+        '
+        'CheckBox_stoneSkin
+        '
+        Me.CheckBox_stoneSkin.AutoSize = True
+        Me.CheckBox_stoneSkin.Location = New System.Drawing.Point(12, 25)
+        Me.CheckBox_stoneSkin.Name = "CheckBox_stoneSkin"
+        Me.CheckBox_stoneSkin.Size = New System.Drawing.Size(95, 21)
+        Me.CheckBox_stoneSkin.TabIndex = 0
+        Me.CheckBox_stoneSkin.Text = "Stone Skin"
+        Me.CheckBox_stoneSkin.UseVisualStyleBackColor = True
+        '
         'TabPage_companion
         '
         Me.TabPage_companion.Controls.Add(Me.Label_companionNotice)
@@ -2104,7 +2164,7 @@ Partial Class Form_main
         Me.ComboBox_primePower.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox_primePower.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox_primePower.FormattingEnabled = True
-        Me.ComboBox_primePower.Items.AddRange(New Object() {"PRIME POWER", "100_Ash", "100_Banshee", "100_Ember", "100_Excalibur", "100_Frost", "100_Hydroid", "100_Loki", "100_Mag", "100_Mirage", "100_Nekros", "100_Nova", "100_Nyx", "100_Oberon", "100_Rhino", "100_Saryn", "100_Trinity", "100_Valkyr", "100_Vauban", "100_Volt"})
+        Me.ComboBox_primePower.Items.AddRange(New Object() {"PRIME POWER", "100_Ash", "100_Banshee", "100_Ember", "100_Excalibur", "100_Frost", "100_Hydroid", "100_Loki", "100_Mag", "100_Mirage", "100_Nekros", "100_Nova", "100_Nyx", "100_Oberon", "100_Rhino", "100_Saryn", "100_Trinity", "100_Valkyr", "100_Vauban", "100_Volt", "100_Zephyr"})
         Me.ComboBox_primePower.Location = New System.Drawing.Point(166, 391)
         Me.ComboBox_primePower.Name = "ComboBox_primePower"
         Me.ComboBox_primePower.Size = New System.Drawing.Size(120, 24)
@@ -2116,7 +2176,7 @@ Partial Class Form_main
         Me.ComboBox_primeBasePower.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox_primeBasePower.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox_primeBasePower.FormattingEnabled = True
-        Me.ComboBox_primeBasePower.Items.AddRange(New Object() {"PRIME BASE POWER", "100_Ash", "100_Banshee", "100_Ember", "100_Excalibur", "100_Frost", "100_Hydroid", "100_Loki", "100_Mag", "100_Mirage", "100_Nekros", "100_Nova", "100_Nyx", "100_Oberon", "100_Rhino", "100_Saryn", "100_Trinity", "100_Valkyr", "100_Vauban", "100_Volt"})
+        Me.ComboBox_primeBasePower.Items.AddRange(New Object() {"PRIME BASE POWER", "100_Ash", "100_Banshee", "100_Ember", "100_Excalibur", "100_Frost", "100_Hydroid", "100_Loki", "100_Mag", "100_Mirage", "100_Nekros", "100_Nova", "100_Nyx", "100_Oberon", "100_Rhino", "100_Saryn", "100_Trinity", "100_Valkyr", "100_Vauban", "100_Volt", "100_Zephyr"})
         Me.ComboBox_primeBasePower.Location = New System.Drawing.Point(40, 391)
         Me.ComboBox_primeBasePower.Name = "ComboBox_primeBasePower"
         Me.ComboBox_primeBasePower.Size = New System.Drawing.Size(120, 24)
@@ -2318,7 +2378,7 @@ Partial Class Form_main
         Me.ComboBox_primeEnergy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox_primeEnergy.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox_primeEnergy.FormattingEnabled = True
-        Me.ComboBox_primeEnergy.Items.AddRange(New Object() {"PRIME ENERGY", "150_Ash", "262.5_Banshee", "225_Ember", "150_Excalibur", "150_Frost", "225_Hydroid", "262.5_Loki", "262.5_Mag", "225_Mirage", "187.5_Nekros", "262.5_Nova", "225_Nyx", "262.5_Oberon", "150_Rhino", "300_Saryn", "225_Trinity", "225_Valkyr", "225_Vauban", "300_Volt"})
+        Me.ComboBox_primeEnergy.Items.AddRange(New Object() {"PRIME ENERGY", "150_Ash", "262.5_Banshee", "225_Ember", "150_Excalibur", "150_Frost", "225_Hydroid", "262.5_Loki", "262.5_Mag", "225_Mirage", "187.5_Nekros", "262.5_Nova", "225_Nyx", "262.5_Oberon", "150_Rhino", "300_Saryn", "225_Trinity", "225_Valkyr", "225_Vauban", "300_Volt", "225_Zephyr"})
         Me.ComboBox_primeEnergy.Location = New System.Drawing.Point(166, 361)
         Me.ComboBox_primeEnergy.Name = "ComboBox_primeEnergy"
         Me.ComboBox_primeEnergy.Size = New System.Drawing.Size(120, 24)
@@ -2330,7 +2390,7 @@ Partial Class Form_main
         Me.ComboBox_primeShield.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox_primeShield.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox_primeShield.FormattingEnabled = True
-        Me.ComboBox_primeShield.Items.AddRange(New Object() {"PRIME SHIELD", "375_Ash", "300_Banshee", "375_Ember", "300_Excalibur", "525_Frost", "525_Hydroid", "225_Loki", "450_Mag", "330_Mirage", "450_Nekros", "300_Nova", "375_Nyx", "300_Oberon", "450_Rhino", "300_Saryn", "450_Trinity", "150_Valkyr", "300_Vauban", "450_Volt"})
+        Me.ComboBox_primeShield.Items.AddRange(New Object() {"PRIME SHIELD", "375_Ash", "300_Banshee", "375_Ember", "300_Excalibur", "525_Frost", "525_Hydroid", "225_Loki", "450_Mag", "330_Mirage", "450_Nekros", "300_Nova", "375_Nyx", "300_Oberon", "450_Rhino", "300_Saryn", "450_Trinity", "150_Valkyr", "300_Vauban", "450_Volt", "450_Zephyr"})
         Me.ComboBox_primeShield.Location = New System.Drawing.Point(166, 331)
         Me.ComboBox_primeShield.Name = "ComboBox_primeShield"
         Me.ComboBox_primeShield.Size = New System.Drawing.Size(120, 24)
@@ -2342,7 +2402,7 @@ Partial Class Form_main
         Me.ComboBox_primeHealth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox_primeHealth.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox_primeHealth.FormattingEnabled = True
-        Me.ComboBox_primeHealth.Items.AddRange(New Object() {"PRIME HEALTH", "450_Ash", "300_Banshee", "300_Ember", "300_Excalibur", "300_Frost", "300_Hydroid", "225_Loki", "300_Mag", "240_Mirage", "300_Nekros", "300_Nova", "300_Nyx", "375_Oberon", "300_Rhino", "375_Saryn", "300_Trinity", "300_Valkyr", "300_Vauban", "300_Volt"})
+        Me.ComboBox_primeHealth.Items.AddRange(New Object() {"PRIME HEALTH", "450_Ash", "300_Banshee", "300_Ember", "300_Excalibur", "300_Frost", "300_Hydroid", "225_Loki", "300_Mag", "240_Mirage", "300_Nekros", "300_Nova", "300_Nyx", "375_Oberon", "300_Rhino", "375_Saryn", "300_Trinity", "300_Valkyr", "300_Vauban", "300_Volt", "450_Zephyr"})
         Me.ComboBox_primeHealth.Location = New System.Drawing.Point(166, 301)
         Me.ComboBox_primeHealth.Name = "ComboBox_primeHealth"
         Me.ComboBox_primeHealth.Size = New System.Drawing.Size(120, 24)
@@ -2354,7 +2414,7 @@ Partial Class Form_main
         Me.ComboBox_primeArmor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox_primeArmor.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox_primeArmor.FormattingEnabled = True
-        Me.ComboBox_primeArmor.Items.AddRange(New Object() {"PRIME ARMOR", "150_Ash", "65_Banshee", "125_Ember", "250_Excalibur", "300_Frost", "250_Hydroid", "65_Loki", "65_Mag", "150_Mirage", "65_Nekros", "65_Nova", "50_Nyx", "225_Oberon", "275_Rhino", "225_Saryn", "15_Trinity", "700_Valkyr", "100_Vauban", "100_Volt"})
+        Me.ComboBox_primeArmor.Items.AddRange(New Object() {"PRIME ARMOR", "150_Ash", "65_Banshee", "125_Ember", "250_Excalibur", "300_Frost", "250_Hydroid", "65_Loki", "65_Mag", "150_Mirage", "65_Nekros", "65_Nova", "50_Nyx", "225_Oberon", "275_Rhino", "225_Saryn", "15_Trinity", "700_Valkyr", "100_Vauban", "100_Volt", "75_Zephyr"})
         Me.ComboBox_primeArmor.Location = New System.Drawing.Point(166, 271)
         Me.ComboBox_primeArmor.Name = "ComboBox_primeArmor"
         Me.ComboBox_primeArmor.Size = New System.Drawing.Size(120, 24)
@@ -2366,7 +2426,7 @@ Partial Class Form_main
         Me.ComboBox_primeBaseEnergy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox_primeBaseEnergy.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox_primeBaseEnergy.FormattingEnabled = True
-        Me.ComboBox_primeBaseEnergy.Items.AddRange(New Object() {"PRIME BASE ENERGY", "100_Ash", "175_Banshee", "150_Ember", "100_Excalibur", "100_Frost", "150_Hydroid", "175_Loki", "175_Mag", "150_Mirage", "125_Nekros", "175_Nova", "150_Nyx", "175_Oberon", "100_Rhino", "200_Saryn", "150_Trinity", "150_Valkyr", "150_Vauban", "200_Volt"})
+        Me.ComboBox_primeBaseEnergy.Items.AddRange(New Object() {"PRIME BASE ENERGY", "100_Ash", "175_Banshee", "150_Ember", "100_Excalibur", "100_Frost", "150_Hydroid", "175_Loki", "175_Mag", "150_Mirage", "125_Nekros", "175_Nova", "150_Nyx", "175_Oberon", "100_Rhino", "200_Saryn", "150_Trinity", "150_Valkyr", "150_Vauban", "200_Volt", "150_Zephyr"})
         Me.ComboBox_primeBaseEnergy.Location = New System.Drawing.Point(40, 361)
         Me.ComboBox_primeBaseEnergy.Name = "ComboBox_primeBaseEnergy"
         Me.ComboBox_primeBaseEnergy.Size = New System.Drawing.Size(120, 24)
@@ -2378,7 +2438,7 @@ Partial Class Form_main
         Me.ComboBox_primeBaseShield.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox_primeBaseShield.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox_primeBaseShield.FormattingEnabled = True
-        Me.ComboBox_primeBaseShield.Items.AddRange(New Object() {"PRIME BASE SHIELD", "125_Ash", "100_Banshee", "125_Ember", "100_Excalibur", "175_Frost", "175_Hydroid", "75_Loki", "150_Mag", "110_Mirage", "150_Nekros", "100_Nova", "125_Nyx", "100_Oberon", "150_Rhino", "100_Saryn", "150_Trinity", "50_Valkyr", "100_Vauban", "150_Volt"})
+        Me.ComboBox_primeBaseShield.Items.AddRange(New Object() {"PRIME BASE SHIELD", "125_Ash", "100_Banshee", "125_Ember", "100_Excalibur", "175_Frost", "175_Hydroid", "75_Loki", "150_Mag", "110_Mirage", "150_Nekros", "100_Nova", "125_Nyx", "100_Oberon", "150_Rhino", "100_Saryn", "150_Trinity", "50_Valkyr", "100_Vauban", "150_Volt", "150_Zephyr"})
         Me.ComboBox_primeBaseShield.Location = New System.Drawing.Point(40, 331)
         Me.ComboBox_primeBaseShield.Name = "ComboBox_primeBaseShield"
         Me.ComboBox_primeBaseShield.Size = New System.Drawing.Size(120, 24)
@@ -2390,7 +2450,7 @@ Partial Class Form_main
         Me.ComboBox_primeBaseHealth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox_primeBaseHealth.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox_primeBaseHealth.FormattingEnabled = True
-        Me.ComboBox_primeBaseHealth.Items.AddRange(New Object() {"PRIME BASE HEALTH", "150_Ash", "100_Banshee", "100_Ember", "100_Excalibur", "100_Frost", "100_Hydroid", "75_Loki", "100_Mag", "80_Mirage", "100_Nekros", "100_Nova", "100_Nyx", "125_Oberon", "100_Rhino", "125_Saryn", "100_Trinity", "100_Valkyr", "100_Vauban", "100_Volt"})
+        Me.ComboBox_primeBaseHealth.Items.AddRange(New Object() {"PRIME BASE HEALTH", "150_Ash", "100_Banshee", "100_Ember", "100_Excalibur", "100_Frost", "100_Hydroid", "75_Loki", "100_Mag", "80_Mirage", "100_Nekros", "100_Nova", "100_Nyx", "125_Oberon", "100_Rhino", "125_Saryn", "100_Trinity", "100_Valkyr", "100_Vauban", "100_Volt", "150_Zephyr"})
         Me.ComboBox_primeBaseHealth.Location = New System.Drawing.Point(40, 301)
         Me.ComboBox_primeBaseHealth.Name = "ComboBox_primeBaseHealth"
         Me.ComboBox_primeBaseHealth.Size = New System.Drawing.Size(120, 24)
@@ -2402,7 +2462,7 @@ Partial Class Form_main
         Me.ComboBox_primeBaseArmor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox_primeBaseArmor.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox_primeBaseArmor.FormattingEnabled = True
-        Me.ComboBox_primeBaseArmor.Items.AddRange(New Object() {"PRIME BASE ARMOR", "150_Ash", "65_Banshee", "125_Ember", "250_Excalibur", "300_Frost", "250_Hydroid", "65_Loki", "65_Mag", "150_Mirage", "65_Nekros", "65_Nova", "50_Nyx", "225_Oberon", "275_Rhino", "225_Saryn", "15_Trinity", "700_Valkyr", "100_Vauban", "100_Volt"})
+        Me.ComboBox_primeBaseArmor.Items.AddRange(New Object() {"PRIME BASE ARMOR", "150_Ash", "65_Banshee", "125_Ember", "250_Excalibur", "300_Frost", "250_Hydroid", "65_Loki", "65_Mag", "150_Mirage", "65_Nekros", "65_Nova", "50_Nyx", "225_Oberon", "275_Rhino", "225_Saryn", "15_Trinity", "700_Valkyr", "100_Vauban", "100_Volt", "75_Zephyr"})
         Me.ComboBox_primeBaseArmor.Location = New System.Drawing.Point(40, 271)
         Me.ComboBox_primeBaseArmor.Name = "ComboBox_primeBaseArmor"
         Me.ComboBox_primeBaseArmor.Size = New System.Drawing.Size(120, 24)
@@ -2414,7 +2474,7 @@ Partial Class Form_main
         Me.ComboBox_primes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox_primes.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox_primes.FormattingEnabled = True
-        Me.ComboBox_primes.Items.AddRange(New Object() {"PRIMES", "Ash", "Banshee", "Ember", "Excalibur", "Frost", "Hydroid", "Loki", "Mag", "Mirage", "Nekros", "Nova", "Nyx", "Oberon", "Rhino", "Saryn", "Trinity", "Valkyr", "Vauban", "Volt"})
+        Me.ComboBox_primes.Items.AddRange(New Object() {"PRIMES", "Ash", "Banshee", "Ember", "Excalibur", "Frost", "Hydroid", "Loki", "Mag", "Mirage", "Nekros", "Nova", "Nyx", "Oberon", "Rhino", "Saryn", "Trinity", "Valkyr", "Vauban", "Volt", "Zephyr"})
         Me.ComboBox_primes.Location = New System.Drawing.Point(40, 241)
         Me.ComboBox_primes.Name = "ComboBox_primes"
         Me.ComboBox_primes.Size = New System.Drawing.Size(246, 24)
@@ -2589,63 +2649,25 @@ Partial Class Form_main
         Me.Label_love.TabIndex = 2
         Me.Label_love.Text = "♥"
         '
-        'CheckBox_stoneSkin
+        'Label_versionName
         '
-        Me.CheckBox_stoneSkin.AutoSize = True
-        Me.CheckBox_stoneSkin.Location = New System.Drawing.Point(12, 25)
-        Me.CheckBox_stoneSkin.Name = "CheckBox_stoneSkin"
-        Me.CheckBox_stoneSkin.Size = New System.Drawing.Size(95, 21)
-        Me.CheckBox_stoneSkin.TabIndex = 0
-        Me.CheckBox_stoneSkin.Text = "Stone Skin"
-        Me.CheckBox_stoneSkin.UseVisualStyleBackColor = True
+        Me.Label_versionName.AutoSize = True
+        Me.Label_versionName.Location = New System.Drawing.Point(537, 8)
+        Me.Label_versionName.Name = "Label_versionName"
+        Me.Label_versionName.Size = New System.Drawing.Size(111, 13)
+        Me.Label_versionName.TabIndex = 3
+        Me.Label_versionName.Text = "CURRENT VERSION"
+        Me.Label_versionName.Visible = False
         '
-        'NumericUpDown_stoneSkin
+        'Label_version
         '
-        Me.NumericUpDown_stoneSkin.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.NumericUpDown_stoneSkin.Location = New System.Drawing.Point(206, 26)
-        Me.NumericUpDown_stoneSkin.Maximum = New Decimal(New Integer() {3, 0, 0, 0})
-        Me.NumericUpDown_stoneSkin.Name = "NumericUpDown_stoneSkin"
-        Me.NumericUpDown_stoneSkin.Size = New System.Drawing.Size(61, 23)
-        Me.NumericUpDown_stoneSkin.TabIndex = 37
-        '
-        'CheckBox_arcaneUltimatum2
-        '
-        Me.CheckBox_arcaneUltimatum2.AutoSize = True
-        Me.CheckBox_arcaneUltimatum2.Location = New System.Drawing.Point(252, 50)
-        Me.CheckBox_arcaneUltimatum2.Name = "CheckBox_arcaneUltimatum2"
-        Me.CheckBox_arcaneUltimatum2.Size = New System.Drawing.Size(142, 21)
-        Me.CheckBox_arcaneUltimatum2.TabIndex = 55
-        Me.CheckBox_arcaneUltimatum2.Text = "Arcane Ultimatum:"
-        Me.CheckBox_arcaneUltimatum2.UseVisualStyleBackColor = True
-        '
-        'NumericUpDown_arcaneUltimatum2
-        '
-        Me.NumericUpDown_arcaneUltimatum2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.NumericUpDown_arcaneUltimatum2.Location = New System.Drawing.Point(397, 49)
-        Me.NumericUpDown_arcaneUltimatum2.Maximum = New Decimal(New Integer() {3, 0, 0, 0})
-        Me.NumericUpDown_arcaneUltimatum2.Name = "NumericUpDown_arcaneUltimatum2"
-        Me.NumericUpDown_arcaneUltimatum2.Size = New System.Drawing.Size(61, 23)
-        Me.NumericUpDown_arcaneUltimatum2.TabIndex = 56
-        '
-        'CheckBox_arcaneGuardian2
-        '
-        Me.CheckBox_arcaneGuardian2.AutoSize = True
-        Me.CheckBox_arcaneGuardian2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.CheckBox_arcaneGuardian2.Location = New System.Drawing.Point(252, 24)
-        Me.CheckBox_arcaneGuardian2.Name = "CheckBox_arcaneGuardian2"
-        Me.CheckBox_arcaneGuardian2.Size = New System.Drawing.Size(139, 21)
-        Me.CheckBox_arcaneGuardian2.TabIndex = 57
-        Me.CheckBox_arcaneGuardian2.Text = "Arcane Guardian:"
-        Me.CheckBox_arcaneGuardian2.UseVisualStyleBackColor = True
-        '
-        'NumericUpDown_arcaneGuardian2
-        '
-        Me.NumericUpDown_arcaneGuardian2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.NumericUpDown_arcaneGuardian2.Location = New System.Drawing.Point(397, 23)
-        Me.NumericUpDown_arcaneGuardian2.Maximum = New Decimal(New Integer() {3, 0, 0, 0})
-        Me.NumericUpDown_arcaneGuardian2.Name = "NumericUpDown_arcaneGuardian2"
-        Me.NumericUpDown_arcaneGuardian2.Size = New System.Drawing.Size(61, 23)
-        Me.NumericUpDown_arcaneGuardian2.TabIndex = 58
+        Me.Label_version.AutoSize = True
+        Me.Label_version.Location = New System.Drawing.Point(658, 9)
+        Me.Label_version.Name = "Label_version"
+        Me.Label_version.Size = New System.Drawing.Size(31, 13)
+        Me.Label_version.TabIndex = 4
+        Me.Label_version.Text = "1803"
+        Me.Label_version.Visible = False
         '
         'CustomTabControl_arcaneHelmets
         '
@@ -3752,6 +3774,8 @@ Partial Class Form_main
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1026, 624)
+        Me.Controls.Add(Me.Label_version)
+        Me.Controls.Add(Me.Label_versionName)
         Me.Controls.Add(Me.Label_love)
         Me.Controls.Add(Me.Label_author)
         Me.Controls.Add(Me.TabControl_main)
@@ -3776,6 +3800,8 @@ Partial Class Form_main
         Me.GroupBox_dragonKeys.PerformLayout()
         Me.GroupBox_arcanes.ResumeLayout(False)
         Me.GroupBox_arcanes.PerformLayout()
+        CType(Me.NumericUpDown_arcaneGuardian2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.NumericUpDown_arcaneUltimatum2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NumericUpDown_arcaneUltimatum, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NumericUpDown_arcaneGuardian, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox_miscellaneous.ResumeLayout(False)
@@ -3813,6 +3839,7 @@ Partial Class Form_main
         CType(Me.NumericUpDown_physique, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox_focus.ResumeLayout(False)
         Me.GroupBox_focus.PerformLayout()
+        CType(Me.NumericUpDown_stoneSkin, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage_companion.ResumeLayout(False)
         Me.TabPage_companion.PerformLayout()
         Me.GroupBox_companionResults.ResumeLayout(False)
@@ -3827,9 +3854,6 @@ Partial Class Form_main
         Me.TabPage_archwing.PerformLayout()
         Me.TabPage_development.ResumeLayout(False)
         Me.TabPage_development.PerformLayout()
-        CType(Me.NumericUpDown_stoneSkin, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.NumericUpDown_arcaneUltimatum2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.NumericUpDown_arcaneGuardian2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.CustomTabControl_arcaneHelmets.ResumeLayout(False)
         Me.TabPage_arcaneHelmetsDefault.ResumeLayout(False)
         Me.TabPage_arcaneHelmetsDefault.PerformLayout()
@@ -4203,4 +4227,6 @@ Partial Class Form_main
     Friend WithEvents TabPage_abilitiesAtlas As TabPage
     Friend WithEvents NumericUpDown_rubble As NumericUpDown
     Friend WithEvents CheckBox_rubble As CheckBox
+    Friend WithEvents Label_versionName As Label
+    Friend WithEvents Label_version As Label
 End Class
