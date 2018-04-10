@@ -2664,9 +2664,9 @@ Partial Class Form_main
         Me.Label_version.AutoSize = True
         Me.Label_version.Location = New System.Drawing.Point(658, 9)
         Me.Label_version.Name = "Label_version"
-        Me.Label_version.Size = New System.Drawing.Size(31, 13)
+        Me.Label_version.Size = New System.Drawing.Size(40, 13)
         Me.Label_version.TabIndex = 4
-        Me.Label_version.Text = "1804"
+        Me.Label_version.Text = "1804-1"
         Me.Label_version.Visible = False
         '
         'CustomTabControl_arcaneHelmets

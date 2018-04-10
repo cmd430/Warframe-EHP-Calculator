@@ -898,6 +898,30 @@ Public Class Form_main
             '   Arcanes
             '
             If CheckBox_arcanes.Checked Then
+                '
+                '   Only allow 2 Arcanes max
+                '
+                Dim arcanes As New List(Of Control)
+                Dim activeArcanes As Int16 = 0
+                For Each arcane As CheckBox In FindControlRecursive(arcanes, GroupBox_arcanes, GetType(CheckBox))
+                    If arcane.Checked Then
+                        activeArcanes += 1
+                    End If
+                Next
+                If activeArcanes = 2 Then
+                    For Each arcane As CheckBox In FindControlRecursive(arcanes, GroupBox_arcanes, GetType(CheckBox))
+                        If Not arcane.Checked Then
+                            arcane.Enabled = False
+                        End If
+                    Next
+                Else
+                    For Each arcane As CheckBox In FindControlRecursive(arcanes, GroupBox_arcanes, GetType(CheckBox))
+                        arcane.Enabled = True
+                    Next
+                End If
+                '
+                '   Arcane Effects
+                '
                 If CheckBox_arcaneGuardian.Checked Then
                     Armor = Armor + (150 + (150 * NumericUpDown_arcaneGuardian.Value))
                 End If
