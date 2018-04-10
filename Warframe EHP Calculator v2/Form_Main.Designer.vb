@@ -2666,7 +2666,7 @@ Partial Class Form_main
         Me.Label_version.Name = "Label_version"
         Me.Label_version.Size = New System.Drawing.Size(31, 13)
         Me.Label_version.TabIndex = 4
-        Me.Label_version.Text = "1803"
+        Me.Label_version.Text = "1804"
         Me.Label_version.Visible = False
         '
         'CustomTabControl_arcaneHelmets
@@ -3325,6 +3325,7 @@ Partial Class Form_main
         '
         'TabPage_abilitiesGara
         '
+        Me.TabPage_abilitiesGara.BackColor = System.Drawing.Color.White
         Me.TabPage_abilitiesGara.Controls.Add(Me.CheckBox_splinterStorm)
         Me.TabPage_abilitiesGara.Location = New System.Drawing.Point(1, 21)
         Me.TabPage_abilitiesGara.Name = "TabPage_abilitiesGara"
@@ -3332,7 +3333,6 @@ Partial Class Form_main
         Me.TabPage_abilitiesGara.Size = New System.Drawing.Size(279, 83)
         Me.TabPage_abilitiesGara.TabIndex = 17
         Me.TabPage_abilitiesGara.Text = "Gara"
-        Me.TabPage_abilitiesGara.UseVisualStyleBackColor = True
         '
         'CheckBox_splinterStorm
         '

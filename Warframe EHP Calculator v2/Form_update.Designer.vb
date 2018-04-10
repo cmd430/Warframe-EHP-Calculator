@@ -30,6 +30,7 @@ Partial Class Form_update
         Me.TextBox_downloadLink = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.TextBox_changes = New System.Windows.Forms.RichTextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -99,11 +100,21 @@ Partial Class Form_update
         Me.TextBox_changes.TabIndex = 0
         Me.TextBox_changes.Text = ""
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(12, 206)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(193, 13)
+        Me.Label1.TabIndex = 7
+        Me.Label1.Text = "Update is downloaded via your broswer"
+        '
         'Form_update
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(414, 232)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.TextBox_downloadLink)
         Me.Controls.Add(Me.Label_updateAvailable)
@@ -132,4 +143,5 @@ Partial Class Form_update
     Friend WithEvents TextBox_downloadLink As TextBox
     Friend WithEvents Panel1 As Panel
     Friend WithEvents TextBox_changes As RichTextBox
+    Friend WithEvents Label1 As Label
 End Class
