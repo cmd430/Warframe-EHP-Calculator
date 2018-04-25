@@ -20,7 +20,7 @@ Public Class Form_main
     Public Function formatNumber(ByVal Number)
         Dim formatted As Decimal = 0.0
         If TypeOf Number Is ComboBox Then
-            formatted = Convert.ToDecimal(Number.SelectedItem.ToString().Split("_")(0), New Globalization.CultureInfo("en-US"))
+            formatted = Convert.ToDecimal(Number.SelectedItem.ToString().Split("_")(0).Replace("???", "0"), New Globalization.CultureInfo("en-US")) 'Allow placeholder frame values for dev
         ElseIf TypeOf Number Is TextBox Then
             If Number.Text = "-" Then
                 formatted = Convert.ToDecimal(0, New Globalization.CultureInfo("en-US"))
@@ -265,14 +265,20 @@ Public Class Form_main
         '   Special Modifiers
         '
         '   some frames have passives that change fixed things
-        '   currently only Harrow matters for this app
         '
-        Select Case ComboBox_warframes.SelectedItem
-            Case "Harrow"
-                NumericUpDown_oversheilds.Maximum = 2400
-            Case Else
-                NumericUpDown_oversheilds.Maximum = 1200
-        End Select
+        If ComboBox_warframes.SelectedItem = "Khora" And Not ComboBox_companions.Items.Contains("Venari") Then
+            ComboBox_companions.Items.Add("Venari")
+        ElseIf ComboBox_companions.Items.Contains("Venari") Then
+            If ComboBox_companions.SelectedItem = "Venari" Then
+                ComboBox_companions.SelectedIndex = 0
+            End If
+            ComboBox_companions.Items.RemoveAt(ComboBox_companions.Items.Count - 1)
+        End If
+            If ComboBox_warframes.SelectedItem = "Harrow" Then
+            NumericUpDown_oversheilds.Maximum = 2400
+        Else
+            NumericUpDown_oversheilds.Maximum = 1200
+        End If
         '
         '  Enable/Disable Arcane Helmets selection
         '
@@ -343,6 +349,9 @@ Public Class Form_main
             Case "Inaros"
                 CheckBox_abilities.Enabled = True
                 CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesInaros
+            Case "Khora"
+                CheckBox_abilities.Enabled = True
+                CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesKhora
             Case "Mesa"
                 CheckBox_abilities.Enabled = True
                 CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesMesa
@@ -766,6 +775,11 @@ Public Class Form_main
                             Dim scarabSwarm As Decimal = 2 * NumericUpDown_scarabSwarm.Value
                             armorBonus = armorBonus + scarabSwarm
                         End If
+                    Case "Khora"
+                        If CheckBox_beastshield.Checked Then
+                            Dim beastshield As Decimal = 0.15 * NumericUpDown_beastshield.Value
+                            armorMultiplier = armorMultiplier + beastshield 'im only guessing that this is on base armor will revisit once i know more...
+                        End If
                     Case "Mesa"
                         If CheckBox_shatterShield.Checked Then
                             Dim shatterShield As Decimal = 0.8 * powerStrength
@@ -1019,7 +1033,7 @@ Public Class Form_main
         ComboBox_petArmor.SelectedIndex = ComboBox_companions.SelectedIndex
         ComboBox_petHealth.SelectedIndex = ComboBox_companions.SelectedIndex
         ComboBox_petShield.SelectedIndex = ComboBox_companions.SelectedIndex
-        If ComboBox_companions.SelectedIndex > 2 Then
+        If ComboBox_companions.SelectedIndex > 2 And Not ComboBox_companions.SelectedItem = "Venari" Then
             CheckBox_companionPrimeCollar.Enabled = True
             NumericUpDown_companionStability.Enabled = True
             Label_companionStability.Enabled = True
