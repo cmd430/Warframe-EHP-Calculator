@@ -268,13 +268,13 @@ Public Class Form_main
         '
         If ComboBox_warframes.SelectedItem = "Khora" And Not ComboBox_companions.Items.Contains("Venari") Then
             ComboBox_companions.Items.Add("Venari")
-        ElseIf ComboBox_companions.Items.Contains("Venari") Then
+        ElseIf Not ComboBox_warframes.SelectedItem = "Khora" And ComboBox_companions.Items.Contains("Venari") Then
             If ComboBox_companions.SelectedItem = "Venari" Then
                 ComboBox_companions.SelectedIndex = 0
             End If
             ComboBox_companions.Items.RemoveAt(ComboBox_companions.Items.Count - 1)
         End If
-            If ComboBox_warframes.SelectedItem = "Harrow" Then
+        If ComboBox_warframes.SelectedItem = "Harrow" Then
             NumericUpDown_oversheilds.Maximum = 2400
         Else
             NumericUpDown_oversheilds.Maximum = 1200
@@ -349,9 +349,6 @@ Public Class Form_main
             Case "Inaros"
                 CheckBox_abilities.Enabled = True
                 CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesInaros
-            Case "Khora"
-                CheckBox_abilities.Enabled = True
-                CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesKhora
             Case "Mesa"
                 CheckBox_abilities.Enabled = True
                 CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesMesa
@@ -774,11 +771,6 @@ Public Class Form_main
                         If CheckBox_scarabSwarm.Checked Then
                             Dim scarabSwarm As Decimal = 2 * NumericUpDown_scarabSwarm.Value
                             armorBonus = armorBonus + scarabSwarm
-                        End If
-                    Case "Khora"
-                        If CheckBox_beastshield.Checked Then
-                            Dim beastshield As Decimal = 0.15 * NumericUpDown_beastshield.Value
-                            armorMultiplier = armorMultiplier + beastshield 'im only guessing that this is on base armor will revisit once i know more...
                         End If
                     Case "Mesa"
                         If CheckBox_shatterShield.Checked Then
