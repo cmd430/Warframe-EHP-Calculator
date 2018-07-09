@@ -116,7 +116,6 @@ Partial Class Form_main
         Me.CheckBox_augurAccord = New System.Windows.Forms.CheckBox()
         Me.CheckBox_gladiatorResolve = New System.Windows.Forms.CheckBox()
         Me.NumericUpDown_armoredAgility = New System.Windows.Forms.NumericUpDown()
-        Me.CheckBox_steelFiber = New System.Windows.Forms.CheckBox()
         Me.CheckBox_armoredAgility = New System.Windows.Forms.CheckBox()
         Me.NumericUpDown_vigor = New System.Windows.Forms.NumericUpDown()
         Me.NumericUpDown_healthConversionStacks = New System.Windows.Forms.NumericUpDown()
@@ -124,13 +123,10 @@ Partial Class Form_main
         Me.NumericUpDown_redirection = New System.Windows.Forms.NumericUpDown()
         Me.Label_healthConversionStacks = New System.Windows.Forms.Label()
         Me.CheckBox_quickThinking = New System.Windows.Forms.CheckBox()
-        Me.NumericUpDown_vitality = New System.Windows.Forms.NumericUpDown()
         Me.NumericUpDown_healthConversion = New System.Windows.Forms.NumericUpDown()
         Me.CheckBox_vigor = New System.Windows.Forms.CheckBox()
-        Me.NumericUpDown_steelFiber = New System.Windows.Forms.NumericUpDown()
         Me.CheckBox_healthConversion = New System.Windows.Forms.CheckBox()
         Me.CheckBox_redirection = New System.Windows.Forms.CheckBox()
-        Me.CheckBox_vitality = New System.Windows.Forms.CheckBox()
         Me.CheckBox_aura = New System.Windows.Forms.CheckBox()
         Me.GroupBox_aura = New System.Windows.Forms.GroupBox()
         Me.NumericUpDown_growingPower = New System.Windows.Forms.NumericUpDown()
@@ -218,6 +214,16 @@ Partial Class Form_main
         Me.Icons = New System.Windows.Forms.ImageList(Me.components)
         Me.Label_author = New System.Windows.Forms.Label()
         Me.Label_love = New System.Windows.Forms.Label()
+        Me.CheckBox_vitality = New System.Windows.Forms.CheckBox()
+        Me.NumericUpDown_steelFiber = New System.Windows.Forms.NumericUpDown()
+        Me.NumericUpDown_vitality = New System.Windows.Forms.NumericUpDown()
+        Me.CheckBox_steelFiber = New System.Windows.Forms.CheckBox()
+        Me.CheckBox_umbraFiber = New System.Windows.Forms.CheckBox()
+        Me.NumericUpDown_umbraVitality = New System.Windows.Forms.NumericUpDown()
+        Me.NumericUpDown_umbraFiber = New System.Windows.Forms.NumericUpDown()
+        Me.CheckBox_umbraVitality = New System.Windows.Forms.CheckBox()
+        Me.NumericUpDown_umbraIntensify = New System.Windows.Forms.NumericUpDown()
+        Me.CheckBox_umbraIntensify = New System.Windows.Forms.CheckBox()
         Me.CustomTabControl_arcaneHelmets = New Warframe_EHP_Calculator_v2.CustomTabControl()
         Me.TabPage_arcaneHelmetsDefault = New System.Windows.Forms.TabPage()
         Me.Label_arcaneHelmetPlaceholder = New System.Windows.Forms.Label()
@@ -316,6 +322,11 @@ Partial Class Form_main
         Me.TabPage_abilitiesVauban = New System.Windows.Forms.TabPage()
         Me.NumericUpDown_reinforce = New System.Windows.Forms.NumericUpDown()
         Me.CheckBox_reinforce = New System.Windows.Forms.CheckBox()
+        Me.CheckBox_blocking = New System.Windows.Forms.CheckBox()
+        Me.GroupBox_blocking = New System.Windows.Forms.GroupBox()
+        Me.ComboBox_blocking = New System.Windows.Forms.ComboBox()
+        Me.TabPage_abilitiesExcalibur = New System.Windows.Forms.TabPage()
+        Me.CheckBox_exaltedBlade = New System.Windows.Forms.CheckBox()
         Me.TabControl_main.SuspendLayout()
         Me.TabPage_warframe.SuspendLayout()
         Me.GroupBox_sortieModifiers.SuspendLayout()
@@ -351,9 +362,7 @@ Partial Class Form_main
         CType(Me.NumericUpDown_healthConversionStacks, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NumericUpDown_quickThinking, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NumericUpDown_redirection, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.NumericUpDown_vitality, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NumericUpDown_healthConversion, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.NumericUpDown_steelFiber, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox_aura.SuspendLayout()
         CType(Me.NumericUpDown_growingPower, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NumericUpDown_standUnited, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -369,6 +378,11 @@ Partial Class Form_main
         CType(Me.NumericUpDown_companionLinkArmor, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage_archwing.SuspendLayout()
         Me.TabPage_development.SuspendLayout()
+        CType(Me.NumericUpDown_steelFiber, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.NumericUpDown_vitality, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.NumericUpDown_umbraVitality, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.NumericUpDown_umbraFiber, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.NumericUpDown_umbraIntensify, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.CustomTabControl_arcaneHelmets.SuspendLayout()
         Me.TabPage_arcaneHelmetsDefault.SuspendLayout()
         Me.TabPage_arcaneHelmetsAsh.SuspendLayout()
@@ -414,6 +428,8 @@ Partial Class Form_main
         Me.TabPage_abilitiesValkyr.SuspendLayout()
         Me.TabPage_abilitiesVauban.SuspendLayout()
         CType(Me.NumericUpDown_reinforce, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox_blocking.SuspendLayout()
+        Me.TabPage_abilitiesExcalibur.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl_main
@@ -461,6 +477,8 @@ Partial Class Form_main
         Me.TabPage_warframe.Controls.Add(Me.CustomTabControl_abilitys)
         Me.TabPage_warframe.Controls.Add(Me.Panel_Ruler)
         Me.TabPage_warframe.Controls.Add(Me.GroupBox_focus)
+        Me.TabPage_warframe.Controls.Add(Me.CheckBox_blocking)
+        Me.TabPage_warframe.Controls.Add(Me.GroupBox_blocking)
         Me.TabPage_warframe.ImageKey = "warframe.png"
         Me.TabPage_warframe.Location = New System.Drawing.Point(4, 29)
         Me.TabPage_warframe.Name = "TabPage_warframe"
@@ -947,7 +965,7 @@ Partial Class Form_main
         '
         Me.CheckBox_arcanes.AutoSize = True
         Me.CheckBox_arcanes.Enabled = False
-        Me.CheckBox_arcanes.Location = New System.Drawing.Point(20, 499)
+        Me.CheckBox_arcanes.Location = New System.Drawing.Point(498, 454)
         Me.CheckBox_arcanes.Name = "CheckBox_arcanes"
         Me.CheckBox_arcanes.Size = New System.Drawing.Size(79, 21)
         Me.CheckBox_arcanes.TabIndex = 50
@@ -1003,9 +1021,9 @@ Partial Class Form_main
         Me.GroupBox_arcanes.Controls.Add(Me.NumericUpDown_arcaneGuardian)
         Me.GroupBox_arcanes.Controls.Add(Me.CheckBox_arcaneUltimatum)
         Me.GroupBox_arcanes.Enabled = False
-        Me.GroupBox_arcanes.Location = New System.Drawing.Point(8, 499)
+        Me.GroupBox_arcanes.Location = New System.Drawing.Point(486, 454)
         Me.GroupBox_arcanes.Name = "GroupBox_arcanes"
-        Me.GroupBox_arcanes.Size = New System.Drawing.Size(472, 84)
+        Me.GroupBox_arcanes.Size = New System.Drawing.Size(281, 129)
         Me.GroupBox_arcanes.TabIndex = 107
         Me.GroupBox_arcanes.TabStop = False
         Me.GroupBox_arcanes.Text = "  "
@@ -1014,7 +1032,7 @@ Partial Class Form_main
         '
         Me.CheckBox_arcaneGuardian2.AutoSize = True
         Me.CheckBox_arcaneGuardian2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.CheckBox_arcaneGuardian2.Location = New System.Drawing.Point(252, 24)
+        Me.CheckBox_arcaneGuardian2.Location = New System.Drawing.Point(12, 49)
         Me.CheckBox_arcaneGuardian2.Name = "CheckBox_arcaneGuardian2"
         Me.CheckBox_arcaneGuardian2.Size = New System.Drawing.Size(139, 21)
         Me.CheckBox_arcaneGuardian2.TabIndex = 57
@@ -1024,7 +1042,7 @@ Partial Class Form_main
         'NumericUpDown_arcaneGuardian2
         '
         Me.NumericUpDown_arcaneGuardian2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.NumericUpDown_arcaneGuardian2.Location = New System.Drawing.Point(397, 23)
+        Me.NumericUpDown_arcaneGuardian2.Location = New System.Drawing.Point(208, 48)
         Me.NumericUpDown_arcaneGuardian2.Maximum = New Decimal(New Integer() {3, 0, 0, 0})
         Me.NumericUpDown_arcaneGuardian2.Name = "NumericUpDown_arcaneGuardian2"
         Me.NumericUpDown_arcaneGuardian2.Size = New System.Drawing.Size(61, 23)
@@ -1033,7 +1051,7 @@ Partial Class Form_main
         'NumericUpDown_arcaneUltimatum2
         '
         Me.NumericUpDown_arcaneUltimatum2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.NumericUpDown_arcaneUltimatum2.Location = New System.Drawing.Point(397, 49)
+        Me.NumericUpDown_arcaneUltimatum2.Location = New System.Drawing.Point(208, 98)
         Me.NumericUpDown_arcaneUltimatum2.Maximum = New Decimal(New Integer() {3, 0, 0, 0})
         Me.NumericUpDown_arcaneUltimatum2.Name = "NumericUpDown_arcaneUltimatum2"
         Me.NumericUpDown_arcaneUltimatum2.Size = New System.Drawing.Size(61, 23)
@@ -1042,7 +1060,7 @@ Partial Class Form_main
         'CheckBox_arcaneUltimatum2
         '
         Me.CheckBox_arcaneUltimatum2.AutoSize = True
-        Me.CheckBox_arcaneUltimatum2.Location = New System.Drawing.Point(252, 50)
+        Me.CheckBox_arcaneUltimatum2.Location = New System.Drawing.Point(12, 99)
         Me.CheckBox_arcaneUltimatum2.Name = "CheckBox_arcaneUltimatum2"
         Me.CheckBox_arcaneUltimatum2.Size = New System.Drawing.Size(142, 21)
         Me.CheckBox_arcaneUltimatum2.TabIndex = 55
@@ -1063,7 +1081,7 @@ Partial Class Form_main
         'NumericUpDown_arcaneUltimatum
         '
         Me.NumericUpDown_arcaneUltimatum.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.NumericUpDown_arcaneUltimatum.Location = New System.Drawing.Point(159, 49)
+        Me.NumericUpDown_arcaneUltimatum.Location = New System.Drawing.Point(208, 73)
         Me.NumericUpDown_arcaneUltimatum.Maximum = New Decimal(New Integer() {3, 0, 0, 0})
         Me.NumericUpDown_arcaneUltimatum.Name = "NumericUpDown_arcaneUltimatum"
         Me.NumericUpDown_arcaneUltimatum.Size = New System.Drawing.Size(61, 23)
@@ -1072,7 +1090,7 @@ Partial Class Form_main
         'NumericUpDown_arcaneGuardian
         '
         Me.NumericUpDown_arcaneGuardian.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.NumericUpDown_arcaneGuardian.Location = New System.Drawing.Point(159, 23)
+        Me.NumericUpDown_arcaneGuardian.Location = New System.Drawing.Point(208, 23)
         Me.NumericUpDown_arcaneGuardian.Maximum = New Decimal(New Integer() {3, 0, 0, 0})
         Me.NumericUpDown_arcaneGuardian.Name = "NumericUpDown_arcaneGuardian"
         Me.NumericUpDown_arcaneGuardian.Size = New System.Drawing.Size(61, 23)
@@ -1082,7 +1100,7 @@ Partial Class Form_main
         '
         Me.CheckBox_arcaneUltimatum.AutoSize = True
         Me.CheckBox_arcaneUltimatum.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.CheckBox_arcaneUltimatum.Location = New System.Drawing.Point(12, 50)
+        Me.CheckBox_arcaneUltimatum.Location = New System.Drawing.Point(12, 74)
         Me.CheckBox_arcaneUltimatum.Name = "CheckBox_arcaneUltimatum"
         Me.CheckBox_arcaneUltimatum.Size = New System.Drawing.Size(142, 21)
         Me.CheckBox_arcaneUltimatum.TabIndex = 53
@@ -1191,6 +1209,8 @@ Partial Class Form_main
         '
         'GroupBox_power
         '
+        Me.GroupBox_power.Controls.Add(Me.NumericUpDown_umbraIntensify)
+        Me.GroupBox_power.Controls.Add(Me.CheckBox_umbraIntensify)
         Me.GroupBox_power.Controls.Add(Me.NumericUpDown_augurSecrets)
         Me.GroupBox_power.Controls.Add(Me.CheckBox_augurSecrets)
         Me.GroupBox_power.Controls.Add(Me.NumericUpDown_overextended)
@@ -1367,6 +1387,10 @@ Partial Class Form_main
         '
         'GroupBox_survivability
         '
+        Me.GroupBox_survivability.Controls.Add(Me.CheckBox_umbraFiber)
+        Me.GroupBox_survivability.Controls.Add(Me.NumericUpDown_umbraVitality)
+        Me.GroupBox_survivability.Controls.Add(Me.NumericUpDown_umbraFiber)
+        Me.GroupBox_survivability.Controls.Add(Me.CheckBox_umbraVitality)
         Me.GroupBox_survivability.Controls.Add(Me.CheckBox_gladiatorAegis)
         Me.GroupBox_survivability.Controls.Add(Me.NumericUpDown_gladiatorFinesse)
         Me.GroupBox_survivability.Controls.Add(Me.NumericUpDown_augurAccord)
@@ -1394,7 +1418,7 @@ Partial Class Form_main
         Me.GroupBox_survivability.Enabled = False
         Me.GroupBox_survivability.Location = New System.Drawing.Point(8, 156)
         Me.GroupBox_survivability.Name = "GroupBox_survivability"
-        Me.GroupBox_survivability.Size = New System.Drawing.Size(233, 337)
+        Me.GroupBox_survivability.Size = New System.Drawing.Size(233, 427)
         Me.GroupBox_survivability.TabIndex = 101
         Me.GroupBox_survivability.TabStop = False
         Me.GroupBox_survivability.Text = "  "
@@ -1488,17 +1512,6 @@ Partial Class Form_main
         Me.NumericUpDown_armoredAgility.Size = New System.Drawing.Size(61, 23)
         Me.NumericUpDown_armoredAgility.TabIndex = 24
         '
-        'CheckBox_steelFiber
-        '
-        Me.CheckBox_steelFiber.AutoSize = True
-        Me.CheckBox_steelFiber.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.CheckBox_steelFiber.Location = New System.Drawing.Point(12, 27)
-        Me.CheckBox_steelFiber.Name = "CheckBox_steelFiber"
-        Me.CheckBox_steelFiber.Size = New System.Drawing.Size(99, 21)
-        Me.CheckBox_steelFiber.TabIndex = 15
-        Me.CheckBox_steelFiber.Text = "Steel Fiber:"
-        Me.CheckBox_steelFiber.UseVisualStyleBackColor = True
-        '
         'CheckBox_armoredAgility
         '
         Me.CheckBox_armoredAgility.AutoSize = True
@@ -1567,15 +1580,6 @@ Partial Class Form_main
         Me.CheckBox_quickThinking.Text = "Quick Thinking:"
         Me.CheckBox_quickThinking.UseVisualStyleBackColor = True
         '
-        'NumericUpDown_vitality
-        '
-        Me.NumericUpDown_vitality.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.NumericUpDown_vitality.Location = New System.Drawing.Point(159, 52)
-        Me.NumericUpDown_vitality.Maximum = New Decimal(New Integer() {10, 0, 0, 0})
-        Me.NumericUpDown_vitality.Name = "NumericUpDown_vitality"
-        Me.NumericUpDown_vitality.Size = New System.Drawing.Size(61, 23)
-        Me.NumericUpDown_vitality.TabIndex = 18
-        '
         'NumericUpDown_healthConversion
         '
         Me.NumericUpDown_healthConversion.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
@@ -1595,15 +1599,6 @@ Partial Class Form_main
         Me.CheckBox_vigor.TabIndex = 21
         Me.CheckBox_vigor.Text = "Vigor:"
         Me.CheckBox_vigor.UseVisualStyleBackColor = True
-        '
-        'NumericUpDown_steelFiber
-        '
-        Me.NumericUpDown_steelFiber.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.NumericUpDown_steelFiber.Location = New System.Drawing.Point(159, 26)
-        Me.NumericUpDown_steelFiber.Maximum = New Decimal(New Integer() {10, 0, 0, 0})
-        Me.NumericUpDown_steelFiber.Name = "NumericUpDown_steelFiber"
-        Me.NumericUpDown_steelFiber.Size = New System.Drawing.Size(61, 23)
-        Me.NumericUpDown_steelFiber.TabIndex = 16
         '
         'CheckBox_healthConversion
         '
@@ -1626,17 +1621,6 @@ Partial Class Form_main
         Me.CheckBox_redirection.TabIndex = 19
         Me.CheckBox_redirection.Text = "Redirection:"
         Me.CheckBox_redirection.UseVisualStyleBackColor = True
-        '
-        'CheckBox_vitality
-        '
-        Me.CheckBox_vitality.AutoSize = True
-        Me.CheckBox_vitality.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.CheckBox_vitality.Location = New System.Drawing.Point(12, 53)
-        Me.CheckBox_vitality.Name = "CheckBox_vitality"
-        Me.CheckBox_vitality.Size = New System.Drawing.Size(72, 21)
-        Me.CheckBox_vitality.TabIndex = 17
-        Me.CheckBox_vitality.Text = "Vitality:"
-        Me.CheckBox_vitality.UseVisualStyleBackColor = True
         '
         'CheckBox_aura
         '
@@ -2142,9 +2126,9 @@ Partial Class Form_main
         Me.Label_version.AutoSize = True
         Me.Label_version.Location = New System.Drawing.Point(505, 71)
         Me.Label_version.Name = "Label_version"
-        Me.Label_version.Size = New System.Drawing.Size(40, 17)
+        Me.Label_version.Size = New System.Drawing.Size(53, 17)
         Me.Label_version.TabIndex = 4
-        Me.Label_version.Text = "1807"
+        Me.Label_version.Text = "1807-1"
         Me.Label_version.Visible = False
         '
         'ComboBox_umbraPower
@@ -2671,6 +2655,112 @@ Partial Class Form_main
         Me.Label_love.TabIndex = 2
         Me.Label_love.Text = "♥"
         '
+        'CheckBox_vitality
+        '
+        Me.CheckBox_vitality.AutoSize = True
+        Me.CheckBox_vitality.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.CheckBox_vitality.Location = New System.Drawing.Point(12, 53)
+        Me.CheckBox_vitality.Name = "CheckBox_vitality"
+        Me.CheckBox_vitality.Size = New System.Drawing.Size(72, 21)
+        Me.CheckBox_vitality.TabIndex = 17
+        Me.CheckBox_vitality.Text = "Vitality:"
+        Me.CheckBox_vitality.UseVisualStyleBackColor = True
+        '
+        'NumericUpDown_steelFiber
+        '
+        Me.NumericUpDown_steelFiber.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.NumericUpDown_steelFiber.Location = New System.Drawing.Point(159, 26)
+        Me.NumericUpDown_steelFiber.Maximum = New Decimal(New Integer() {10, 0, 0, 0})
+        Me.NumericUpDown_steelFiber.Name = "NumericUpDown_steelFiber"
+        Me.NumericUpDown_steelFiber.Size = New System.Drawing.Size(61, 23)
+        Me.NumericUpDown_steelFiber.TabIndex = 16
+        '
+        'NumericUpDown_vitality
+        '
+        Me.NumericUpDown_vitality.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.NumericUpDown_vitality.Location = New System.Drawing.Point(159, 52)
+        Me.NumericUpDown_vitality.Maximum = New Decimal(New Integer() {10, 0, 0, 0})
+        Me.NumericUpDown_vitality.Name = "NumericUpDown_vitality"
+        Me.NumericUpDown_vitality.Size = New System.Drawing.Size(61, 23)
+        Me.NumericUpDown_vitality.TabIndex = 18
+        '
+        'CheckBox_steelFiber
+        '
+        Me.CheckBox_steelFiber.AutoSize = True
+        Me.CheckBox_steelFiber.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.CheckBox_steelFiber.Location = New System.Drawing.Point(12, 27)
+        Me.CheckBox_steelFiber.Name = "CheckBox_steelFiber"
+        Me.CheckBox_steelFiber.Size = New System.Drawing.Size(99, 21)
+        Me.CheckBox_steelFiber.TabIndex = 15
+        Me.CheckBox_steelFiber.Text = "Steel Fiber:"
+        Me.CheckBox_steelFiber.UseVisualStyleBackColor = True
+        '
+        'CheckBox_umbraFiber
+        '
+        Me.CheckBox_umbraFiber.AutoSize = True
+        Me.CheckBox_umbraFiber.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.CheckBox_umbraFiber.Location = New System.Drawing.Point(12, 346)
+        Me.CheckBox_umbraFiber.Name = "CheckBox_umbraFiber"
+        Me.CheckBox_umbraFiber.Size = New System.Drawing.Size(112, 21)
+        Me.CheckBox_umbraFiber.TabIndex = 72
+        Me.CheckBox_umbraFiber.Text = "Umbral Fiber:"
+        Me.CheckBox_umbraFiber.UseVisualStyleBackColor = True
+        '
+        'NumericUpDown_umbraVitality
+        '
+        Me.NumericUpDown_umbraVitality.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.NumericUpDown_umbraVitality.Location = New System.Drawing.Point(159, 371)
+        Me.NumericUpDown_umbraVitality.Maximum = New Decimal(New Integer() {10, 0, 0, 0})
+        Me.NumericUpDown_umbraVitality.Minimum = New Decimal(New Integer() {5, 0, 0, 0})
+        Me.NumericUpDown_umbraVitality.Name = "NumericUpDown_umbraVitality"
+        Me.NumericUpDown_umbraVitality.Size = New System.Drawing.Size(61, 23)
+        Me.NumericUpDown_umbraVitality.TabIndex = 75
+        Me.NumericUpDown_umbraVitality.Value = New Decimal(New Integer() {5, 0, 0, 0})
+        '
+        'NumericUpDown_umbraFiber
+        '
+        Me.NumericUpDown_umbraFiber.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.NumericUpDown_umbraFiber.Location = New System.Drawing.Point(159, 345)
+        Me.NumericUpDown_umbraFiber.Maximum = New Decimal(New Integer() {10, 0, 0, 0})
+        Me.NumericUpDown_umbraFiber.Minimum = New Decimal(New Integer() {5, 0, 0, 0})
+        Me.NumericUpDown_umbraFiber.Name = "NumericUpDown_umbraFiber"
+        Me.NumericUpDown_umbraFiber.Size = New System.Drawing.Size(61, 23)
+        Me.NumericUpDown_umbraFiber.TabIndex = 73
+        Me.NumericUpDown_umbraFiber.Value = New Decimal(New Integer() {5, 0, 0, 0})
+        '
+        'CheckBox_umbraVitality
+        '
+        Me.CheckBox_umbraVitality.AutoSize = True
+        Me.CheckBox_umbraVitality.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.CheckBox_umbraVitality.Location = New System.Drawing.Point(12, 372)
+        Me.CheckBox_umbraVitality.Name = "CheckBox_umbraVitality"
+        Me.CheckBox_umbraVitality.Size = New System.Drawing.Size(121, 21)
+        Me.CheckBox_umbraVitality.TabIndex = 74
+        Me.CheckBox_umbraVitality.Text = "Umbral Vitality:"
+        Me.CheckBox_umbraVitality.UseVisualStyleBackColor = True
+        '
+        'NumericUpDown_umbraIntensify
+        '
+        Me.NumericUpDown_umbraIntensify.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.NumericUpDown_umbraIntensify.Location = New System.Drawing.Point(158, 217)
+        Me.NumericUpDown_umbraIntensify.Maximum = New Decimal(New Integer() {10, 0, 0, 0})
+        Me.NumericUpDown_umbraIntensify.Minimum = New Decimal(New Integer() {5, 0, 0, 0})
+        Me.NumericUpDown_umbraIntensify.Name = "NumericUpDown_umbraIntensify"
+        Me.NumericUpDown_umbraIntensify.Size = New System.Drawing.Size(61, 23)
+        Me.NumericUpDown_umbraIntensify.TabIndex = 53
+        Me.NumericUpDown_umbraIntensify.Value = New Decimal(New Integer() {5, 0, 0, 0})
+        '
+        'CheckBox_umbraIntensify
+        '
+        Me.CheckBox_umbraIntensify.AutoSize = True
+        Me.CheckBox_umbraIntensify.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.CheckBox_umbraIntensify.Location = New System.Drawing.Point(12, 218)
+        Me.CheckBox_umbraIntensify.Name = "CheckBox_umbraIntensify"
+        Me.CheckBox_umbraIntensify.Size = New System.Drawing.Size(132, 21)
+        Me.CheckBox_umbraIntensify.TabIndex = 52
+        Me.CheckBox_umbraIntensify.Text = "Umbral Intensify:"
+        Me.CheckBox_umbraIntensify.UseVisualStyleBackColor = True
+        '
         'CustomTabControl_arcaneHelmets
         '
         Me.CustomTabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsDefault)
@@ -3150,6 +3240,7 @@ Partial Class Form_main
         Me.CustomTabControl_abilitys.Controls.Add(Me.TabPage_abilitiesDefault)
         Me.CustomTabControl_abilitys.Controls.Add(Me.TabPage_abilitiesAtlas)
         Me.CustomTabControl_abilitys.Controls.Add(Me.TabPage_abilitiesChroma)
+        Me.CustomTabControl_abilitys.Controls.Add(Me.TabPage_abilitiesExcalibur)
         Me.CustomTabControl_abilitys.Controls.Add(Me.TabPage_abilitiesFrost)
         Me.CustomTabControl_abilitys.Controls.Add(Me.TabPage_abilitiesGara)
         Me.CustomTabControl_abilitys.Controls.Add(Me.TabPage_abilitiesInaros)
@@ -3771,6 +3862,59 @@ Partial Class Form_main
         Me.CheckBox_reinforce.Text = "Reinforce:"
         Me.CheckBox_reinforce.UseVisualStyleBackColor = True
         '
+        'CheckBox_blocking
+        '
+        Me.CheckBox_blocking.AutoSize = True
+        Me.CheckBox_blocking.Enabled = False
+        Me.CheckBox_blocking.Location = New System.Drawing.Point(259, 498)
+        Me.CheckBox_blocking.Name = "CheckBox_blocking"
+        Me.CheckBox_blocking.Size = New System.Drawing.Size(80, 21)
+        Me.CheckBox_blocking.TabIndex = 121
+        Me.CheckBox_blocking.Tag = "GroupBox_blocking"
+        Me.CheckBox_blocking.Text = "Blocking"
+        Me.CheckBox_blocking.UseVisualStyleBackColor = True
+        '
+        'GroupBox_blocking
+        '
+        Me.GroupBox_blocking.Controls.Add(Me.ComboBox_blocking)
+        Me.GroupBox_blocking.Enabled = False
+        Me.GroupBox_blocking.Location = New System.Drawing.Point(247, 498)
+        Me.GroupBox_blocking.Name = "GroupBox_blocking"
+        Me.GroupBox_blocking.Size = New System.Drawing.Size(233, 85)
+        Me.GroupBox_blocking.TabIndex = 122
+        Me.GroupBox_blocking.TabStop = False
+        Me.GroupBox_blocking.Text = "  "
+        '
+        'ComboBox_blocking
+        '
+        Me.ComboBox_blocking.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox_blocking.FormattingEnabled = True
+        Me.ComboBox_blocking.Items.AddRange(New Object() {"Blocking Damange Reduction", "35%", "60%", "80%", "85%", "90%"})
+        Me.ComboBox_blocking.Location = New System.Drawing.Point(12, 40)
+        Me.ComboBox_blocking.Name = "ComboBox_blocking"
+        Me.ComboBox_blocking.Size = New System.Drawing.Size(207, 24)
+        Me.ComboBox_blocking.TabIndex = 1
+        '
+        'TabPage_abilitiesExcalibur
+        '
+        Me.TabPage_abilitiesExcalibur.BackColor = System.Drawing.Color.White
+        Me.TabPage_abilitiesExcalibur.Controls.Add(Me.CheckBox_exaltedBlade)
+        Me.TabPage_abilitiesExcalibur.Location = New System.Drawing.Point(1, 21)
+        Me.TabPage_abilitiesExcalibur.Name = "TabPage_abilitiesExcalibur"
+        Me.TabPage_abilitiesExcalibur.Size = New System.Drawing.Size(279, 83)
+        Me.TabPage_abilitiesExcalibur.TabIndex = 19
+        Me.TabPage_abilitiesExcalibur.Text = "Excalibur"
+        '
+        'CheckBox_exaltedBlade
+        '
+        Me.CheckBox_exaltedBlade.AutoSize = True
+        Me.CheckBox_exaltedBlade.Location = New System.Drawing.Point(9, 16)
+        Me.CheckBox_exaltedBlade.Name = "CheckBox_exaltedBlade"
+        Me.CheckBox_exaltedBlade.Size = New System.Drawing.Size(113, 21)
+        Me.CheckBox_exaltedBlade.TabIndex = 39
+        Me.CheckBox_exaltedBlade.Text = "Exalted Blade"
+        Me.CheckBox_exaltedBlade.UseVisualStyleBackColor = True
+        '
         'Form_main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -3829,9 +3973,7 @@ Partial Class Form_main
         CType(Me.NumericUpDown_healthConversionStacks, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NumericUpDown_quickThinking, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NumericUpDown_redirection, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.NumericUpDown_vitality, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NumericUpDown_healthConversion, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.NumericUpDown_steelFiber, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox_aura.ResumeLayout(False)
         Me.GroupBox_aura.PerformLayout()
         CType(Me.NumericUpDown_growingPower, System.ComponentModel.ISupportInitialize).EndInit()
@@ -3854,6 +3996,11 @@ Partial Class Form_main
         Me.TabPage_archwing.PerformLayout()
         Me.TabPage_development.ResumeLayout(False)
         Me.TabPage_development.PerformLayout()
+        CType(Me.NumericUpDown_steelFiber, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.NumericUpDown_vitality, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.NumericUpDown_umbraVitality, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.NumericUpDown_umbraFiber, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.NumericUpDown_umbraIntensify, System.ComponentModel.ISupportInitialize).EndInit()
         Me.CustomTabControl_arcaneHelmets.ResumeLayout(False)
         Me.TabPage_arcaneHelmetsDefault.ResumeLayout(False)
         Me.TabPage_arcaneHelmetsDefault.PerformLayout()
@@ -3932,6 +4079,9 @@ Partial Class Form_main
         Me.TabPage_abilitiesVauban.ResumeLayout(False)
         Me.TabPage_abilitiesVauban.PerformLayout()
         CType(Me.NumericUpDown_reinforce, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox_blocking.ResumeLayout(False)
+        Me.TabPage_abilitiesExcalibur.ResumeLayout(False)
+        Me.TabPage_abilitiesExcalibur.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -3987,12 +4137,8 @@ Partial Class Form_main
     Friend WithEvents CheckBox_healthConversion As CheckBox
     Friend WithEvents NumericUpDown_flow As NumericUpDown
     Friend WithEvents CheckBox_flow As CheckBox
-    Friend WithEvents CheckBox_steelFiber As CheckBox
-    Friend WithEvents CheckBox_vitality As CheckBox
     Friend WithEvents CheckBox_redirection As CheckBox
-    Friend WithEvents NumericUpDown_steelFiber As NumericUpDown
     Friend WithEvents CheckBox_vigor As CheckBox
-    Friend WithEvents NumericUpDown_vitality As NumericUpDown
     Friend WithEvents CheckBox_quickThinking As CheckBox
     Friend WithEvents NumericUpDown_redirection As NumericUpDown
     Friend WithEvents NumericUpDown_quickThinking As NumericUpDown
@@ -4232,4 +4378,19 @@ Partial Class Form_main
     Friend WithEvents NumericUpDown_beastshield As NumericUpDown
     Friend WithEvents CheckBox_beastshield As CheckBox
     Public WithEvents Label_version As Label
+    Friend WithEvents NumericUpDown_umbraIntensify As NumericUpDown
+    Friend WithEvents CheckBox_umbraIntensify As CheckBox
+    Friend WithEvents CheckBox_umbraFiber As CheckBox
+    Friend WithEvents NumericUpDown_umbraVitality As NumericUpDown
+    Friend WithEvents NumericUpDown_umbraFiber As NumericUpDown
+    Friend WithEvents CheckBox_umbraVitality As CheckBox
+    Friend WithEvents CheckBox_steelFiber As CheckBox
+    Friend WithEvents NumericUpDown_vitality As NumericUpDown
+    Friend WithEvents NumericUpDown_steelFiber As NumericUpDown
+    Friend WithEvents CheckBox_vitality As CheckBox
+    Friend WithEvents CheckBox_blocking As CheckBox
+    Friend WithEvents GroupBox_blocking As GroupBox
+    Friend WithEvents ComboBox_blocking As ComboBox
+    Friend WithEvents TabPage_abilitiesExcalibur As TabPage
+    Friend WithEvents CheckBox_exaltedBlade As CheckBox
 End Class

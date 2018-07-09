@@ -64,6 +64,7 @@ Public Class Form_main
         ComboBox_primes.SelectedIndex = 0
         ComboBox_umbras.SelectedIndex = 0
         ComboBox_companions.SelectedIndex = 0
+        ComboBox_blocking.SelectedIndex = 0
         '
         '   Abilities and Focus
         '
@@ -105,6 +106,7 @@ Public Class Form_main
         '   with loops to make my life easier
         '
         AddHandler ComboBox_warframes.SelectedIndexChanged, AddressOf Warframe_Value_Changed
+        AddHandler ComboBox_blocking.SelectedIndexChanged, AddressOf Warframe_Value_Changed
         Dim CheckBoxs As New List(Of Control)
         For Each CheckBox As CheckBox In FindControlRecursive(CheckBoxs, TabControl_main, GetType(CheckBox))
             If Not CheckBox.Name.Contains("companion") Then
@@ -340,6 +342,9 @@ Public Class Form_main
             Case "Chroma"
                 CheckBox_abilities.Enabled = True
                 CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesChroma
+            Case "Excalibur"
+                CheckBox_abilities.Enabled = True
+                CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesExcalibur
             Case "Frost"
                 CheckBox_abilities.Enabled = True
                 CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesFrost
@@ -412,6 +417,8 @@ Public Class Form_main
             GroupBox_arcanes.Enabled = CheckBox_arcanes.Checked
             CheckBox_dragonKeys.Enabled = True
             GroupBox_dragonKeys.Enabled = CheckBox_dragonKeys.Checked
+            CheckBox_blocking.Enabled = True
+            GroupBox_blocking.Enabled = CheckBox_blocking.Checked
             '
             '   Focus is currently disabled
             '
@@ -645,6 +652,39 @@ Public Class Form_main
                 End If
             End If
             '
+            '   RadioButton Function for Umbral Mods
+            '
+            If sender.Name = "CheckBox_umbraFiber" Then
+                If sender.Checked Then
+                    CheckBox_steelFiber.Checked = False
+                End If
+            End If
+            If sender.Name = "CheckBox_umbraVitality" Then
+                If sender.Checked Then
+                    CheckBox_vitality.Checked = False
+                End If
+            End If
+            If sender.Name = "CheckBox_umbraIntensify" Then
+                If sender.Checked Then
+                    CheckBox_intensify.Checked = False
+                End If
+            End If
+            If sender.Name = "CheckBox_steelFiber" Then
+                If sender.Checked Then
+                    CheckBox_umbraFiber.Checked = False
+                End If
+            End If
+            If sender.Name = "CheckBox_vitality" Then
+                If sender.Checked Then
+                    CheckBox_umbraVitality.Checked = False
+                End If
+            End If
+            If sender.Name = "CheckBox_intensify" Then
+                If sender.Checked Then
+                    CheckBox_umbraIntensify.Checked = False
+                End If
+            End If
+            '
             '   Armor / Health / Shield Mods
             '
             If CheckBox_survivability.Checked Then
@@ -721,10 +761,70 @@ Public Class Form_main
                 End If
             End If
             '
+            '   Umbral Mods
+            '
+            Dim UmbralModifiy As Integer = 0
+            If CheckBox_survivability.Checked Then
+                If CheckBox_umbraFiber.Checked Then
+                    UmbralModifiy = UmbralModifiy + 1
+                End If
+                If CheckBox_umbraVitality.Checked Then
+                    UmbralModifiy = UmbralModifiy + 1
+                End If
+            End If
+            If CheckBox_power.Checked And CheckBox_umbraIntensify.Checked Then
+                UmbralModifiy = UmbralModifiy + 1
+            End If
+            If CheckBox_survivability.Checked Then
+                'Armor
+                If CheckBox_umbraFiber.Checked Then
+                    If UmbralModifiy = 1 Then
+                        armorMultiplier = armorMultiplier + (0.1 + (NumericUpDown_umbraFiber.Value * 0.1))
+                    ElseIf UmbralModifiy = 2 Then
+                        armorMultiplier = armorMultiplier + (0.125 + (NumericUpDown_umbraFiber.Value * 0.125))
+                    ElseIf UmbralModifiy = 3 Then
+                        armorMultiplier = armorMultiplier + (0.175 + (NumericUpDown_umbraFiber.Value * 0.175))
+                    End If
+                End If
+                'Health
+                If CheckBox_umbraVitality.Checked Then
+                    If UmbralModifiy = 1 Then
+                        healthMultiplier = healthMultiplier + (0.4 + (NumericUpDown_umbraVitality.Value * 0.4))
+                    ElseIf UmbralModifiy = 2 Then
+                        healthMultiplier = healthMultiplier + (0.5 + (NumericUpDown_umbraVitality.Value * 0.5))
+                    ElseIf UmbralModifiy = 3 Then
+                        healthMultiplier = healthMultiplier + (0.7 + (NumericUpDown_umbraVitality.Value * 0.7))
+                    End If
+                End If
+            End If
+            If CheckBox_power.Checked Then
+                'Power
+                If CheckBox_umbraIntensify.Checked Then
+                    If UmbralModifiy = 1 Then
+                        powerStrength = powerStrength + (basePowerStrength * (0.04 + (NumericUpDown_umbraIntensify.Value * 0.04)))
+                    ElseIf UmbralModifiy = 2 Then
+                        powerStrength = powerStrength + (basePowerStrength * (0.05 + (NumericUpDown_umbraIntensify.Value * 0.05)))
+                    ElseIf UmbralModifiy = 3 Then
+                        powerStrength = powerStrength + (basePowerStrength * (0.06 + (NumericUpDown_umbraIntensify.Value * 0.06)))
+                    End If
+
+                End If
+            End If
+            '
             '   Reactant Buff | Void Fissures
             '
             If CheckBox_specialEffects.Checked And CheckBox_corruptedBuff.Checked Then
                 powerStrength = powerStrength * 2
+            End If
+            '
+            '   Blocking
+            '
+            If CheckBox_blocking.Checked Then
+                If ComboBox_blocking.SelectedIndex > 0 Then
+                    Dim BlockSTR As String = "0." & ComboBox_blocking.SelectedItem.ToString.Replace("%", "")
+                    damageReduction = damageReduction + Convert.ToDecimal(BlockSTR, New Globalization.CultureInfo("en-US"))
+                    MsgBox(damageReduction)
+                End If
             End If
             '
             '   Abilities
@@ -754,10 +854,15 @@ Public Class Form_main
                        '   Vex armor is down with the final health calulations because of how it works
                        '   it'd be a pain to do without writing extra crap...
                        '
+                    Case "Excalibur"
+                        If CheckBox_exaltedBlade.Checked Then
+                            Dim exaltedBlade As Decimal = 0.6
+                            damageReduction = damageReduction + exaltedBlade
+                        End If
                     Case "Frost"
                         If CheckBox_icyAvalanche.Checked Then
                             Dim icyAvalance As Decimal = (0.6 * powerStrength) * NumericUpDown_icyAvalanche.Value
-                            damageAbsorbstion = icyAvalance
+                            damageAbsorbstion = damageAbsorbstion + icyAvalance
                         End If
                     Case "Gara"
                         If CheckBox_splinterStorm.Checked Then
@@ -765,7 +870,7 @@ Public Class Form_main
                             If splinterStorm > 0.9 Then
                                 splinterStorm = 0.9
                             End If
-                            damageReduction = splinterStorm
+                            damageReduction = damageReduction + splinterStorm
                         End If
                     Case "Inaros"
                         If CheckBox_scarabSwarm.Checked Then
@@ -797,14 +902,14 @@ Public Class Form_main
                             If shieldOfShadows > 0.9 Then
                                 shieldOfShadows = 0.9
                             End If
-                            damageReduction = shieldOfShadows
+                            damageReduction = damageReduction + shieldOfShadows
                         End If
                     Case "Nezha"
                         If CheckBox_wardingHalo.Checked Then
                             Dim wardingHaloArmor As Decimal = 2.5 * Armor * (1 + armorMultiplier)
                             Dim wardingHaloHealth As Decimal = 900
                             Dim wardingHalo As Decimal = ((wardingHaloHealth + wardingHaloArmor) * powerStrength) + NumericUpDown_wardingHalo.Value
-                            damageAbsorbstion = wardingHalo
+                            damageAbsorbstion = damageAbsorbstion + wardingHalo
                         End If
                     Case "Nidus"
                         If CheckBox_mutationStacks.Checked Then
@@ -816,7 +921,7 @@ Public Class Form_main
                             If parasiticLink > 0.9 Then
                                 parasiticLink = 0.9
                             End If
-                            damageReduction = parasiticLink
+                            damageReduction = damageReduction + parasiticLink
                         End If
                     Case "Oberon"
                         If CheckBox_ironRenewal.Checked Then
@@ -841,28 +946,28 @@ Public Class Form_main
                             Dim ironSkinArmor As Decimal = 2.5 * Armor * (1 + armorMultiplier)
                             Dim ironSkinHealth As Decimal = 1200
                             Dim ironSkin As Decimal = ((ironSkinHealth + ironSkinArmor) * powerStrength) + NumericUpDown_ironSkin.Value
-                            damageAbsorbstion = ironSkin
+                            damageAbsorbstion = damageAbsorbstion + ironSkin
                         End If
                     Case "Titania"
                         If CheckBox_thorns.Checked Then
                             Dim thorns As Decimal = Math.Floor(NumericUpDown_thorns.Value / 5) * 0.05
-                            damageReduction = thorns
+                            damageReduction = damageReduction + thorns
                         End If
                     Case "Trinity"
                         Dim link As Decimal = 0.75
                         Dim blessing As Decimal = 0.5 * powerStrength
                         If CheckBox_link.Checked And Not CheckBox_blessing.Checked Then
-                            damageReduction = link
+                            damageReduction = damageReduction + link
                         ElseIf CheckBox_blessing.Checked And Not CheckBox_link.Checked Then
                             If blessing > 0.75 Then
                                 blessing = 0.75
                             End If
-                            damageReduction = blessing
+                            damageReduction = damageReduction + blessing
                         ElseIf CheckBox_link.Checked And CheckBox_blessing.Checked Then
                             If blessing > 0.75 Then
                                 blessing = 0.75
                             End If
-                            damageReduction = blessing + ((1 - blessing) * link)
+                            damageReduction = damageReduction + (blessing + ((1 - blessing) * link))
                         End If
                     Case "Valkyr"
                         If CheckBox_warcry.Checked Then
