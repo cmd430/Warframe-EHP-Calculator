@@ -1,3 +1,6 @@
+1807-3
+* fixed auto updater using cache and showing incorrectly
+
 1807-2
 * removed leftover debug msg
 

@@ -1,5 +1,6 @@
 ﻿Imports System.IO
 Imports System.Net
+Imports System.Net.Cache
 
 Public Class Form_main
 
@@ -29,6 +30,17 @@ Public Class Form_main
             End If
         End If
         Return formatted
+    End Function
+
+    Public Shared Function GetResponseNoCache(ByVal url As String) As String
+        Dim policy As HttpRequestCachePolicy = New HttpRequestCachePolicy(HttpRequestCacheLevel.NoCacheNoStore)
+        HttpWebRequest.DefaultCachePolicy = policy
+        Dim request As WebRequest = WebRequest.Create(New Uri(url))
+        Dim response As WebResponse = request.GetResponse()
+        Using reader = New StreamReader(response.GetResponseStream())
+            Dim responseText As String = reader.ReadToEnd().Trim()
+            Return responseText
+        End Using
     End Function
 
     Private Sub Main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -153,7 +165,7 @@ Public Class Form_main
         ' Check for Update
         '
         Try
-            liveVersion = New StreamReader(New WebClient().OpenRead("https://raw.githubusercontent.com/cmd430/Warframe-EHP-Calculator/master/Warframe%20EHP%20Calculator%20v2/version")).ReadToEnd.Trim()
+            liveVersion = GetResponseNoCache("https://raw.githubusercontent.com/cmd430/Warframe-EHP-Calculator/master/Warframe%20EHP%20Calculator%20v2/version")
             If Not liveVersion = Label_version.Text Then
                 Form_update.ShowDialog()
             End If
