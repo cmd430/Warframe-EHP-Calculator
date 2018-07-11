@@ -1,6 +1,14 @@
 ﻿Imports System.IO
 Imports System.Net
 Imports System.Net.Cache
+Imports System.Runtime.InteropServices
+
+Module NativeMethods
+    <DllImport("WinInet.dll", PreserveSig:=True, SetLastError:=True)>
+    Sub DeleteUrlCacheEntry(ByVal url As String)
+    End Sub
+End Module
+
 
 Public Class Form_main
 
@@ -33,6 +41,7 @@ Public Class Form_main
     End Function
 
     Public Shared Function GetResponseNoCache(ByVal url As String) As String
+        DeleteUrlCacheEntry(url)
         Dim policy As HttpRequestCachePolicy = New HttpRequestCachePolicy(HttpRequestCacheLevel.NoCacheNoStore)
         HttpWebRequest.DefaultCachePolicy = policy
         Dim request As WebRequest = WebRequest.Create(New Uri(url))
