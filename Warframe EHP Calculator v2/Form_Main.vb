@@ -823,7 +823,6 @@ Public Class Form_main
                 If ComboBox_blocking.SelectedIndex > 0 Then
                     Dim BlockSTR As String = "0." & ComboBox_blocking.SelectedItem.ToString.Replace("%", "")
                     damageReduction = damageReduction + Convert.ToDecimal(BlockSTR, New Globalization.CultureInfo("en-US"))
-                    MsgBox(damageReduction)
                 End If
             End If
             '
