@@ -1,6 +1,5 @@
 ﻿Imports System.IO
 Imports System.Net
-Imports System.Net.Cache
 Imports System.Runtime.InteropServices
 
 Module NativeMethods
