@@ -42,6 +42,7 @@ Public Class Form_main
     Public Shared Function GetResponseNoCache(ByVal url As String) As String
         DeleteUrlCacheEntry(url)
         Dim request As WebRequest = WebRequest.Create(New Uri(url))
+        request.CachePolicy = New Cache.RequestCachePolicy(Cache.RequestCacheLevel.NoCacheNoStore)
         Dim response As WebResponse = request.GetResponse()
         Using reader = New StreamReader(response.GetResponseStream())
             Dim responseText As String = reader.ReadToEnd().Trim()
