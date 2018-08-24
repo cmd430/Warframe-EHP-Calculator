@@ -2265,9 +2265,9 @@ Partial Class Form_main
         Me.Label_version.AutoSize = True
         Me.Label_version.Location = New System.Drawing.Point(505, 71)
         Me.Label_version.Name = "Label_version"
-        Me.Label_version.Size = New System.Drawing.Size(40, 17)
+        Me.Label_version.Size = New System.Drawing.Size(53, 17)
         Me.Label_version.TabIndex = 4
-        Me.Label_version.Text = "1808"
+        Me.Label_version.Text = "1808-1"
         Me.Label_version.Visible = False
         '
         'ComboBox_umbraPower
@@ -2754,7 +2754,7 @@ Partial Class Form_main
         Me.ComboBox_baseArmor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox_baseArmor.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox_baseArmor.FormattingEnabled = True
-        Me.ComboBox_baseArmor.Items.AddRange(New Object() {"BASE ARMOR", "65_Ash", "450_Atlas", "15_Banshee", "350_Chroma", "100_Ember", "100_Equinox", "225_Excalibur", "300_Frost", "125_Gara", "150_Harrow", "200_Hydroid", "275_Khora", "200_Inaros", "65_Ivara", "65_Limbo", "65_Loki", "65_Mag", "65_Mesa", "65_Mirage", "65_Nekros", "175_Nezha", "300_Nidus", "65_Nova", "15_Nyx", "150_Oberon", "125_Octavia", "190_Rhino", "225_Saryn", "65_Titania", "15_Trinity", "600_Valkyr", "50_Vauban", "15_Volt", "225_Wukong", "15_Zephyr"})
+        Me.ComboBox_baseArmor.Items.AddRange(New Object() {"BASE ARMOR", "65_Ash", "450_Atlas", "15_Banshee", "350_Chroma", "100_Ember", "100_Equinox", "225_Excalibur", "300_Frost", "125_Gara", "150_Harrow", "200_Hydroid", "200_Inaros", "65_Ivara", "275_Khora", "65_Limbo", "65_Loki", "65_Mag", "65_Mesa", "65_Mirage", "65_Nekros", "175_Nezha", "300_Nidus", "65_Nova", "15_Nyx", "150_Oberon", "125_Octavia", "190_Rhino", "225_Saryn", "65_Titania", "15_Trinity", "600_Valkyr", "50_Vauban", "15_Volt", "225_Wukong", "15_Zephyr"})
         Me.ComboBox_baseArmor.Location = New System.Drawing.Point(40, 60)
         Me.ComboBox_baseArmor.Name = "ComboBox_baseArmor"
         Me.ComboBox_baseArmor.Size = New System.Drawing.Size(120, 24)
