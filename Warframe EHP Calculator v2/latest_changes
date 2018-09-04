@@ -1,8 +1,3 @@
-1808-2
-* added revenant
-
-1808-1
-* fixed armor calculation being off (had some things in the wrong place since added khora :S)
-
-1808
-* added limbo prime (sorry i forgot about him!)
+1809
+* fix mag max health (thanks Almagnus1)
+* possible fix chroma vex armor being incorrect (missing armor from leveling)

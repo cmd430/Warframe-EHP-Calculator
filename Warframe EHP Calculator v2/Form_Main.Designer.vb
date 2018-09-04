@@ -3386,9 +3386,9 @@ Partial Class Form_main
         Me.Label_version.AutoSize = True
         Me.Label_version.Location = New System.Drawing.Point(505, 71)
         Me.Label_version.Name = "Label_version"
-        Me.Label_version.Size = New System.Drawing.Size(53, 17)
+        Me.Label_version.Size = New System.Drawing.Size(40, 17)
         Me.Label_version.TabIndex = 4
-        Me.Label_version.Text = "1808-2"
+        Me.Label_version.Text = "1809"
         Me.Label_version.Visible = False
         '
         'ComboBox_umbraPower
