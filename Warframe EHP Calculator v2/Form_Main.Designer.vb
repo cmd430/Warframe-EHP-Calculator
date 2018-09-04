@@ -3815,7 +3815,7 @@ Partial Class Form_main
         Me.ComboBox_health.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox_health.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox_health.FormattingEnabled = True
-        Me.ComboBox_health.Items.AddRange(New Object() {"HEALTH", "450_Ash", "300_Atlas", "300_Banshee", "300_Chroma", "300_Ember", "300_Equinox", "300_Excalibur", "300_Frost", "300_Gara", "300_Harrow", "300_Hydroid", "2200_Inaros", "225_Ivara", "375_Khora", "300_Limbo", "225_Loki", "255_Mag", "375_Mesa", "240_Mirage", "300_Nekros", "225_Nezha", "450_Nidus", "300_Nova", "300_Nyx", "375_Oberon", "300_Octavia", "300_Revenant", "300_Rhino", "375_Saryn", "300_Titania", "300_Trinity", "300_Valkyr", "300_Vauban", "300_Volt", "300_Wukong", "450_Zephyr"})
+        Me.ComboBox_health.Items.AddRange(New Object() {"HEALTH", "450_Ash", "300_Atlas", "300_Banshee", "300_Chroma", "300_Ember", "300_Equinox", "300_Excalibur", "300_Frost", "300_Gara", "300_Harrow", "300_Hydroid", "2200_Inaros", "225_Ivara", "375_Khora", "300_Limbo", "225_Loki", "225_Mag", "375_Mesa", "240_Mirage", "300_Nekros", "225_Nezha", "450_Nidus", "300_Nova", "300_Nyx", "375_Oberon", "300_Octavia", "300_Revenant", "300_Rhino", "375_Saryn", "300_Titania", "300_Trinity", "300_Valkyr", "300_Vauban", "300_Volt", "300_Wukong", "450_Zephyr"})
         Me.ComboBox_health.Location = New System.Drawing.Point(166, 90)
         Me.ComboBox_health.Name = "ComboBox_health"
         Me.ComboBox_health.Size = New System.Drawing.Size(120, 24)
