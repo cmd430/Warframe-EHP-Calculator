@@ -1008,7 +1008,7 @@ Public Class Form_main
                 ' Old Chroma Buff  :'(
                 '
                 'Armor = ((baseArmor * (((1 + armorMultiplier) * vexArmor) * powerStrength)) + (Armor - baseArmor)) + armorBonus
-                Armor = baseArmor * (1 + (armorMultiplier + (vexArmor * powerStrength))) + armorBonus
+                Armor = baseArmor * (1 + (armorMultiplier + (vexArmor * powerStrength))) + ((Armor - baseArmor) + armorBonus)
             Else
                 Armor = ((baseArmor * (1 + armorMultiplier)) + (Armor - baseArmor)) + armorBonus
             End If
