@@ -219,8 +219,6 @@ Partial Class Form_main
         Me.NumericUpDown_shieldOfShadows = New System.Windows.Forms.NumericUpDown()
         Me.CheckBox_shieldOfShadows = New System.Windows.Forms.CheckBox()
         Me.TabPage_abilitiesNezha = New System.Windows.Forms.TabPage()
-        Me.Label_wardingHalo = New System.Windows.Forms.Label()
-        Me.NumericUpDown_wardingHalo = New System.Windows.Forms.NumericUpDown()
         Me.CheckBox_wardingHalo = New System.Windows.Forms.CheckBox()
         Me.TabPage_abilitiesNidus = New System.Windows.Forms.TabPage()
         Me.CheckBox_parasiticLink = New System.Windows.Forms.CheckBox()
@@ -404,7 +402,6 @@ Partial Class Form_main
         Me.TabPage_abilitiesNekros.SuspendLayout()
         CType(Me.NumericUpDown_shieldOfShadows, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage_abilitiesNezha.SuspendLayout()
-        CType(Me.NumericUpDown_wardingHalo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage_abilitiesNidus.SuspendLayout()
         CType(Me.NumericUpDown_mutationStacks, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage_abilitiesOberon.SuspendLayout()
@@ -2664,8 +2661,6 @@ Partial Class Form_main
         'TabPage_abilitiesNezha
         '
         Me.TabPage_abilitiesNezha.BackColor = System.Drawing.Color.White
-        Me.TabPage_abilitiesNezha.Controls.Add(Me.Label_wardingHalo)
-        Me.TabPage_abilitiesNezha.Controls.Add(Me.NumericUpDown_wardingHalo)
         Me.TabPage_abilitiesNezha.Controls.Add(Me.CheckBox_wardingHalo)
         Me.TabPage_abilitiesNezha.Location = New System.Drawing.Point(1, 21)
         Me.TabPage_abilitiesNezha.Name = "TabPage_abilitiesNezha"
@@ -2673,25 +2668,6 @@ Partial Class Form_main
         Me.TabPage_abilitiesNezha.Size = New System.Drawing.Size(279, 83)
         Me.TabPage_abilitiesNezha.TabIndex = 4
         Me.TabPage_abilitiesNezha.Text = "Nezha"
-        '
-        'Label_wardingHalo
-        '
-        Me.Label_wardingHalo.AutoSize = True
-        Me.Label_wardingHalo.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.Label_wardingHalo.Location = New System.Drawing.Point(6, 43)
-        Me.Label_wardingHalo.Name = "Label_wardingHalo"
-        Me.Label_wardingHalo.Size = New System.Drawing.Size(128, 17)
-        Me.Label_wardingHalo.TabIndex = 64
-        Me.Label_wardingHalo.Text = "Damage Received:"
-        '
-        'NumericUpDown_wardingHalo
-        '
-        Me.NumericUpDown_wardingHalo.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.NumericUpDown_wardingHalo.Location = New System.Drawing.Point(140, 41)
-        Me.NumericUpDown_wardingHalo.Maximum = New Decimal(New Integer() {100000000, 0, 0, 0})
-        Me.NumericUpDown_wardingHalo.Name = "NumericUpDown_wardingHalo"
-        Me.NumericUpDown_wardingHalo.Size = New System.Drawing.Size(127, 23)
-        Me.NumericUpDown_wardingHalo.TabIndex = 38
         '
         'CheckBox_wardingHalo
         '
@@ -3386,9 +3362,9 @@ Partial Class Form_main
         Me.Label_version.AutoSize = True
         Me.Label_version.Location = New System.Drawing.Point(505, 71)
         Me.Label_version.Name = "Label_version"
-        Me.Label_version.Size = New System.Drawing.Size(40, 17)
+        Me.Label_version.Size = New System.Drawing.Size(53, 17)
         Me.Label_version.TabIndex = 4
-        Me.Label_version.Text = "1809"
+        Me.Label_version.Text = "1809-2"
         Me.Label_version.Visible = False
         '
         'ComboBox_umbraPower
@@ -4042,7 +4018,6 @@ Partial Class Form_main
         CType(Me.NumericUpDown_shieldOfShadows, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage_abilitiesNezha.ResumeLayout(False)
         Me.TabPage_abilitiesNezha.PerformLayout()
-        CType(Me.NumericUpDown_wardingHalo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage_abilitiesNidus.ResumeLayout(False)
         Me.TabPage_abilitiesNidus.PerformLayout()
         CType(Me.NumericUpDown_mutationStacks, System.ComponentModel.ISupportInitialize).EndInit()
@@ -4293,8 +4268,6 @@ Partial Class Form_main
     Friend WithEvents TabPage_abilitiesMirage As TabPage
     Friend WithEvents CheckBox_eclipse As CheckBox
     Friend WithEvents NumericUpDown_icyAvalanche As NumericUpDown
-    Friend WithEvents Label_wardingHalo As Label
-    Friend WithEvents NumericUpDown_wardingHalo As NumericUpDown
     Friend WithEvents Label_ironSkin As Label
     Friend WithEvents NumericUpDown_ironSkin As NumericUpDown
     Friend WithEvents CheckBox_companionPrimeCollar As CheckBox

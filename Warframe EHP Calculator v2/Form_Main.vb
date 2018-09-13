@@ -924,10 +924,8 @@ Public Class Form_main
                         End If
                     Case "Nezha"
                         If CheckBox_wardingHalo.Checked Then
-                            Dim wardingHaloArmor As Decimal = 2.5 * Armor * (1 + armorMultiplier)
-                            Dim wardingHaloHealth As Decimal = 900
-                            Dim wardingHalo As Decimal = ((wardingHaloHealth + wardingHaloArmor) * powerStrength) + NumericUpDown_wardingHalo.Value
-                            damageAbsorbstion = damageAbsorbstion + wardingHalo
+                            Dim wardingHalo As Decimal = 0.9
+                            damageReduction = damageReduction + wardingHalo
                         End If
                     Case "Nidus"
                         If CheckBox_mutationStacks.Checked Then
