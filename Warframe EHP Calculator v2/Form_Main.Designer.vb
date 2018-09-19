@@ -286,6 +286,8 @@ Partial Class Form_main
         Me.CheckBox_icyAvalanche = New System.Windows.Forms.CheckBox()
         Me.TabPage_abilitiesGara = New System.Windows.Forms.TabPage()
         Me.CheckBox_splinterStorm = New System.Windows.Forms.CheckBox()
+        Me.TabPage_abilitiesHarrow = New System.Windows.Forms.TabPage()
+        Me.CheckBox_wardingThurible = New System.Windows.Forms.CheckBox()
         Me.TabPage_abilitiesInaros = New System.Windows.Forms.TabPage()
         Me.NumericUpDown_scarabSwarm = New System.Windows.Forms.NumericUpDown()
         Me.CheckBox_scarabSwarm = New System.Windows.Forms.CheckBox()
@@ -410,6 +412,7 @@ Partial Class Form_main
         Me.TabPage_abilitiesFrost.SuspendLayout()
         CType(Me.NumericUpDown_icyAvalanche, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage_abilitiesGara.SuspendLayout()
+        Me.TabPage_abilitiesHarrow.SuspendLayout()
         Me.TabPage_abilitiesInaros.SuspendLayout()
         CType(Me.NumericUpDown_scarabSwarm, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage_abilitiesMesa.SuspendLayout()
@@ -2269,7 +2272,7 @@ Partial Class Form_main
         Me.Label_version.Name = "Label_version"
         Me.Label_version.Size = New System.Drawing.Size(53, 17)
         Me.Label_version.TabIndex = 4
-        Me.Label_version.Text = "1809-3"
+        Me.Label_version.Text = "1809-4"
         Me.Label_version.Visible = False
         '
         'ComboBox_umbraPower
@@ -3278,6 +3281,7 @@ Partial Class Form_main
         Me.CustomTabControl_abilitys.Controls.Add(Me.TabPage_abilitiesExcalibur)
         Me.CustomTabControl_abilitys.Controls.Add(Me.TabPage_abilitiesFrost)
         Me.CustomTabControl_abilitys.Controls.Add(Me.TabPage_abilitiesGara)
+        Me.CustomTabControl_abilitys.Controls.Add(Me.TabPage_abilitiesHarrow)
         Me.CustomTabControl_abilitys.Controls.Add(Me.TabPage_abilitiesInaros)
         Me.CustomTabControl_abilitys.Controls.Add(Me.TabPage_abilitiesMesa)
         Me.CustomTabControl_abilitys.Controls.Add(Me.TabPage_abilitiesMirage)
@@ -3492,6 +3496,26 @@ Partial Class Form_main
         Me.CheckBox_splinterStorm.TabIndex = 1
         Me.CheckBox_splinterStorm.Text = "Splinter Storm"
         Me.CheckBox_splinterStorm.UseVisualStyleBackColor = True
+        '
+        'TabPage_abilitiesHarrow
+        '
+        Me.TabPage_abilitiesHarrow.BackColor = System.Drawing.Color.White
+        Me.TabPage_abilitiesHarrow.Controls.Add(Me.CheckBox_wardingThurible)
+        Me.TabPage_abilitiesHarrow.Location = New System.Drawing.Point(1, 21)
+        Me.TabPage_abilitiesHarrow.Name = "TabPage_abilitiesHarrow"
+        Me.TabPage_abilitiesHarrow.Size = New System.Drawing.Size(279, 83)
+        Me.TabPage_abilitiesHarrow.TabIndex = 21
+        Me.TabPage_abilitiesHarrow.Text = "Harrow"
+        '
+        'CheckBox_wardingThurible
+        '
+        Me.CheckBox_wardingThurible.AutoSize = True
+        Me.CheckBox_wardingThurible.Location = New System.Drawing.Point(11, 16)
+        Me.CheckBox_wardingThurible.Name = "CheckBox_wardingThurible"
+        Me.CheckBox_wardingThurible.Size = New System.Drawing.Size(136, 21)
+        Me.CheckBox_wardingThurible.TabIndex = 2
+        Me.CheckBox_wardingThurible.Text = "Warding Thurible"
+        Me.CheckBox_wardingThurible.UseVisualStyleBackColor = True
         '
         'TabPage_abilitiesInaros
         '
@@ -4065,6 +4089,8 @@ Partial Class Form_main
         CType(Me.NumericUpDown_icyAvalanche, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage_abilitiesGara.ResumeLayout(False)
         Me.TabPage_abilitiesGara.PerformLayout()
+        Me.TabPage_abilitiesHarrow.ResumeLayout(False)
+        Me.TabPage_abilitiesHarrow.PerformLayout()
         Me.TabPage_abilitiesInaros.ResumeLayout(False)
         Me.TabPage_abilitiesInaros.PerformLayout()
         CType(Me.NumericUpDown_scarabSwarm, System.ComponentModel.ISupportInitialize).EndInit()
@@ -4413,4 +4439,6 @@ Partial Class Form_main
     Friend WithEvents TabPage_abilitiesNova As TabPage
     Friend WithEvents NumericUpDown_nullStar As NumericUpDown
     Friend WithEvents CheckBox_nullStar As CheckBox
+    Friend WithEvents TabPage_abilitiesHarrow As TabPage
+    Friend WithEvents CheckBox_wardingThurible As CheckBox
 End Class

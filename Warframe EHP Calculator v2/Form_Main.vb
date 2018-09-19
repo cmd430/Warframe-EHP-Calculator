@@ -370,6 +370,9 @@ Public Class Form_main
             Case "Gara"
                 CheckBox_abilities.Enabled = True
                 CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesGara
+            Case "Harrow"
+                CheckBox_abilities.Enabled = True
+                CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesHarrow
             Case "Inaros"
                 CheckBox_abilities.Enabled = True
                 CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesInaros
@@ -880,6 +883,14 @@ Public Class Form_main
                                 splinterStorm = 0.9
                             End If
                             damageReduction = damageReduction + splinterStorm
+                        End If
+                    Case "Harrow"
+                        If CheckBox_wardingThurible.Checked Then
+                            Dim wardingThurible As Decimal = 0.4 * powerStrength
+                            If wardingThurible > 0.9 Then
+                                wardingThurible = 0.9
+                            End If
+                            damageReduction = damageReduction + wardingThurible
                         End If
                     Case "Inaros"
                         If CheckBox_scarabSwarm.Checked Then
