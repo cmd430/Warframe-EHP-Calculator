@@ -388,6 +388,9 @@ Public Class Form_main
             Case "Nidus"
                 CheckBox_abilities.Enabled = True
                 CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesNidus
+            Case "Nova"
+                CheckBox_abilities.Enabled = True
+                CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesNova
             Case "Oberon"
                 CheckBox_abilities.Enabled = True
                 CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesOberon
@@ -438,10 +441,7 @@ Public Class Form_main
             GroupBox_dragonKeys.Enabled = CheckBox_dragonKeys.Checked
             CheckBox_blocking.Enabled = True
             GroupBox_blocking.Enabled = CheckBox_blocking.Checked
-            '
-            '   Focus is currently disabled
-            '
-            CheckBox_focus.Enabled = False
+            CheckBox_focus.Enabled = True
             GroupBox_focus.Enabled = CheckBox_focus.Checked
             '
             CheckBox_specialEffects.Enabled = True
@@ -836,15 +836,6 @@ Public Class Form_main
                 powerStrength = powerStrength * 2
             End If
             '
-            '   Blocking
-            '
-            If CheckBox_blocking.Checked Then
-                If ComboBox_blocking.SelectedIndex > 0 Then
-                    Dim BlockSTR As String = "0." & ComboBox_blocking.SelectedItem.ToString.Replace("%", "")
-                    damageReduction = damageReduction + Convert.ToDecimal(BlockSTR, New Globalization.CultureInfo("en-US"))
-                End If
-            End If
-            '
             '   Abilities
             '
             If CheckBox_abilities.Checked Then
@@ -939,6 +930,15 @@ Public Class Form_main
                             End If
                             damageReduction = damageReduction + parasiticLink
                         End If
+                    Case "Nova"
+                        If CheckBox_nullStar.Checked Then
+                            Dim particles As Decimal = NumericUpDown_nullStar.Value
+                            Dim nullStar As Decimal = 0.05 * particles
+                            If nullStar > 0.9 Then
+                                nullStar = 0.9
+                            End If
+                            damageReduction = damageReduction + nullStar
+                        End If
                     Case "Oberon"
                         If CheckBox_ironRenewal.Checked Then
                             Dim ironRenewal As Decimal = 200 * powerStrength
@@ -996,6 +996,15 @@ Public Class Form_main
                             armorMultiplier = armorMultiplier + reinforceMultiplier
                         End If
                 End Select
+            End If
+            '
+            '   Blocking
+            '
+            If CheckBox_blocking.Checked Then
+                If ComboBox_blocking.SelectedIndex > 0 Then
+                    Dim BlockSTR As String = "0." & ComboBox_blocking.SelectedItem.ToString.Replace("%", "")
+                    damageReduction = damageReduction + ((1 - damageReduction) * Convert.ToDecimal(BlockSTR, New Globalization.CultureInfo("en-US")))
+                End If
             End If
             '
             '   Calculate Values (with special support for Vex armor, Quickthinking and Gladiator Finesse)
@@ -1074,6 +1083,16 @@ Public Class Form_main
                 '        Armor = Armor * (1 + (0.15 * NumericUpDown_arcaneUltimatum.Value))
                 '    End If
                 'End If
+            End If
+            '
+            '   Focus
+            '
+            If CheckBox_focus.Checked And CheckBox_stoneSkin.Checked Then
+                If NumericUpDown_stoneSkin.Value = 1 Then
+                    Armor = Armor + 30 'stupid not being same formula...
+                Else
+                    Armor = Armor + (20 + (20 * NumericUpDown_stoneSkin.Value))
+                End If
             End If
             '
             '   Dragon Keys

@@ -1,3 +1,9 @@
+1809-3
+* removed nidus armor stacks from mutations as they are not part of the game
+* fix blocking damage reduction sometimes causing EHP to go negative
++ added nova nullstar damage reduction
++ added support for unaru focus stone skin passive
+
 1809-2
 * changed nezha warding halo to 90% damage reduction
 
