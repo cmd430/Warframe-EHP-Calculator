@@ -862,10 +862,10 @@ Public Class Form_main
                                 shieldMultiplier = shieldMultiplier + elementalWard
                             End If
                         End If
-                       '
-                       '   Vex armor is down with the final health calulations because of how it works
-                       '   it'd be a pain to do without writing extra crap...
-                       '
+                        If CheckBox_vexArmor.Checked And ComboBox_warframes.SelectedItem = "Chroma" And CheckBox_abilities.Checked Then
+                            Dim vexArmor As Decimal = 3.5 * powerStrength
+                            armorMultiplier = armorMultiplier + vexArmor
+                        End If
                     Case "Excalibur"
                         If CheckBox_exaltedBlade.Checked Then
                             Dim exaltedBlade As Decimal = 0.6
@@ -1020,16 +1020,7 @@ Public Class Form_main
             '
             '   Calculate Values (with special support for Vex armor, Quickthinking and Gladiator Finesse)
             '
-            If CheckBox_vexArmor.Checked And ComboBox_warframes.SelectedItem = "Chroma" And CheckBox_abilities.Checked Then
-                Dim vexArmor As Decimal = 3.5
-                '
-                ' Old Chroma Buff  :'(
-                '
-                'Armor = ((baseArmor * (((1 + armorMultiplier) * vexArmor) * powerStrength)) + (Armor - baseArmor)) + armorBonus
-                Armor = baseArmor * (1 + (armorMultiplier + (vexArmor * powerStrength))) + ((Armor - baseArmor) + armorBonus)
-            Else
-                Armor = ((baseArmor * (1 + armorMultiplier)) + (Armor - baseArmor)) + armorBonus
-            End If
+            Armor = ((baseArmor * (1 + armorMultiplier)) + (Armor - baseArmor)) + armorBonus
             Energy = Math.Ceiling(Energy) + Math.Floor((baseEnergy * energyMultiplier) + energyBonus)
             If CheckBox_survivability.Checked Then
                 If CheckBox_quickThinking.Checked Then
@@ -1081,28 +1072,15 @@ Public Class Form_main
                 If CheckBox_arcaneUltimatum2.Checked Then
                     Armor = Armor + (150 + (150 * NumericUpDown_arcaneUltimatum2.Value))
                 End If
-                '
-                '   Old Arcane Effects
-                '
-                'If CheckBox_arcaneGuardian.Checked And CheckBox_arcaneUltimatum.Checked Then
-                '    Armor = Armor * (1 + ((0.15 * NumericUpDown_arcaneGuardian.Value) + (0.15 * NumericUpDown_arcaneUltimatum.Value)))
-                'Else
-                '    If CheckBox_arcaneGuardian.Checked Then
-                '        Armor = Armor * (1 + (0.15 * NumericUpDown_arcaneGuardian.Value))
-                '    End If
-                '    If CheckBox_arcaneUltimatum.Checked Then
-                '        Armor = Armor * (1 + (0.15 * NumericUpDown_arcaneUltimatum.Value))
-                '    End If
-                'End If
             End If
             '
             '   Focus
             '
             If CheckBox_focus.Checked And CheckBox_stoneSkin.Checked Then
-                If NumericUpDown_stoneSkin.Value = 1 Then
-                    Armor = Armor + 30 'stupid not being same formula...
+                If NumericUpDown_stoneSkin.Value = 3 Then
+                    Armor = Armor + 60 'stupid not being same formula...
                 Else
-                    Armor = Armor + (20 + (20 * NumericUpDown_stoneSkin.Value))
+                    Armor = Armor + (20 + (10 * NumericUpDown_stoneSkin.Value))
                 End If
             End If
             '
