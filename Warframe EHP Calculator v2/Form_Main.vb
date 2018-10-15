@@ -671,8 +671,12 @@ Public Class Form_main
                     'Else
                     powerStrength = powerStrength + growingPower
                     ' End If
+                ElseIf RadioButton_powerDonation.Checked Then
+                    Dim powerDonation As Decimal = basePowerStrength * (0.05 + (NumericUpDown_powerDonation.Value * 0.05))
+                    powerStrength = powerStrength - powerDonation
+                    ' End If
                 End If
-            End If
+        End If
             '
             '   RadioButton Function for Umbral Mods
             '
