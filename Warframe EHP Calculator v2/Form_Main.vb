@@ -11,8 +11,9 @@ End Module
 
 Public Class Form_main
 
-    Public squadMembers As New Dictionary(Of String, String)
+    Public localVersion As String = "1811"
     Public liveVersion As String
+    Public squadMembers As New Dictionary(Of String, String)
 
     Public Shared Function FindControlRecursive(ByVal list As List(Of Control), ByVal parent As Control, ByVal ctrlType As System.Type) As List(Of Control)
         If parent Is Nothing Then Return list
@@ -51,6 +52,10 @@ Public Class Form_main
     End Function
 
     Private Sub Main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        '
+        ' Add version to title
+        '
+        Me.Text = Me.Text & " (v" & localVersion & ")"
         '
         '   Hide Debug controls
         '
@@ -173,7 +178,7 @@ Public Class Form_main
         '
         Try
             liveVersion = GetResponseNoCache("https://raw.githubusercontent.com/cmd430/Warframe-EHP-Calculator/master/Warframe%20EHP%20Calculator%20v2/version")
-            If Not liveVersion = Label_version.Text Then
+            If Not liveVersion = localVersion Then
                 Form_update.ShowDialog()
             End If
         Catch ex As Exception
@@ -412,9 +417,6 @@ Public Class Form_main
             Case "Valkyr"
                 CheckBox_abilities.Enabled = True
                 CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesValkyr
-            Case "Vauban"
-                CheckBox_abilities.Enabled = True
-                CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesVauban
             Case Else
                 CheckBox_abilities.Enabled = False
                 CustomTabControl_abilitys.Enabled = False
@@ -672,6 +674,7 @@ Public Class Form_main
                     powerStrength = powerStrength + growingPower
                     ' End If
                 ElseIf RadioButton_powerDonation.Checked Then
+                    'Note: PowerLineStatus Donation does not seem to be affected by co-action drift at this time.
                     Dim powerDonation As Decimal = basePowerStrength * (0.05 + (NumericUpDown_powerDonation.Value * 0.05))
                     powerStrength = powerStrength - powerDonation
                     ' End If
@@ -1004,11 +1007,6 @@ Public Class Form_main
                         If CheckBox_warcry.Checked Then
                             Dim warcryMultiplier As Decimal = 0.5 * powerStrength
                             armorMultiplier = armorMultiplier + warcryMultiplier
-                        End If
-                    Case "Vauban"
-                        If CheckBox_reinforce.Checked Then
-                            Dim reinforceMultiplier As Decimal = 0.25 * NumericUpDown_reinforce.Value
-                            armorMultiplier = armorMultiplier + reinforceMultiplier
                         End If
                 End Select
             End If
