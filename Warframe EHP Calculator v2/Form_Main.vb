@@ -11,7 +11,7 @@ End Module
 
 Public Class Form_main
 
-    Public localVersion As String = "1812"
+    Public localVersion As String = "1812-1"
     Public liveVersion As String
     Public squadMembers As New Dictionary(Of String, String)
 
@@ -865,6 +865,9 @@ Public Class Form_main
                             desolateHands = 0.9
                         End If
                         Dim sereneStorm As Decimal = 0.25 * powerStrength
+                        If sereneStorm > 0.4 Then
+                            sereneStorm = 0.4
+                        End If
                         If CheckBox_restraint.Checked Then
                             damageReduction = damageReduction + ((1 - damageReduction) * restraint)
                         End If

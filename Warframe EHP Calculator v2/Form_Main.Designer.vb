@@ -3372,7 +3372,7 @@ Partial Class Form_main
         'CheckBox_sereneStorm
         '
         Me.CheckBox_sereneStorm.AutoSize = True
-        Me.CheckBox_sereneStorm.Location = New System.Drawing.Point(12, 56)
+        Me.CheckBox_sereneStorm.Location = New System.Drawing.Point(12, 66)
         Me.CheckBox_sereneStorm.Name = "CheckBox_sereneStorm"
         Me.CheckBox_sereneStorm.Size = New System.Drawing.Size(114, 21)
         Me.CheckBox_sereneStorm.TabIndex = 43
@@ -3382,17 +3382,17 @@ Partial Class Form_main
         'CheckBox_desolateHands
         '
         Me.CheckBox_desolateHands.AutoSize = True
-        Me.CheckBox_desolateHands.Location = New System.Drawing.Point(12, 36)
+        Me.CheckBox_desolateHands.Location = New System.Drawing.Point(12, 42)
         Me.CheckBox_desolateHands.Name = "CheckBox_desolateHands"
-        Me.CheckBox_desolateHands.Size = New System.Drawing.Size(128, 21)
+        Me.CheckBox_desolateHands.Size = New System.Drawing.Size(224, 21)
         Me.CheckBox_desolateHands.TabIndex = 42
-        Me.CheckBox_desolateHands.Text = "Desolate Hands"
+        Me.CheckBox_desolateHands.Text = "Desolate Hands (Max Charges)"
         Me.CheckBox_desolateHands.UseVisualStyleBackColor = True
         '
         'NumericUpDown_restraint
         '
         Me.NumericUpDown_restraint.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.NumericUpDown_restraint.Location = New System.Drawing.Point(206, 15)
+        Me.NumericUpDown_restraint.Location = New System.Drawing.Point(206, 16)
         Me.NumericUpDown_restraint.Name = "NumericUpDown_restraint"
         Me.NumericUpDown_restraint.Size = New System.Drawing.Size(61, 23)
         Me.NumericUpDown_restraint.TabIndex = 41
@@ -3401,7 +3401,7 @@ Partial Class Form_main
         'CheckBox_restraint
         '
         Me.CheckBox_restraint.AutoSize = True
-        Me.CheckBox_restraint.Location = New System.Drawing.Point(12, 16)
+        Me.CheckBox_restraint.Location = New System.Drawing.Point(12, 17)
         Me.CheckBox_restraint.Name = "CheckBox_restraint"
         Me.CheckBox_restraint.Size = New System.Drawing.Size(88, 21)
         Me.CheckBox_restraint.TabIndex = 40
