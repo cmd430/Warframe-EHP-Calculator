@@ -11,7 +11,7 @@ End Module
 
 Public Class Form_main
 
-    Public localVersion As String = "1811"
+    Public localVersion As String = "1812"
     Public liveVersion As String
     Public squadMembers As New Dictionary(Of String, String)
 
@@ -363,6 +363,9 @@ Public Class Form_main
             Case "Atlas"
                 CheckBox_abilities.Enabled = True
                 CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesAtlas
+            Case "Baruuk"
+                CheckBox_abilities.Enabled = True
+                CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesBaruuk
             Case "Chroma"
                 CheckBox_abilities.Enabled = True
                 CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesChroma
@@ -854,6 +857,22 @@ Public Class Form_main
                         If CheckBox_rubble.Checked Then
                             Dim rubble As Decimal = NumericUpDown_rubble.Value
                             armorBonus = armorBonus + rubble
+                        End If
+                    Case "Baruuk"
+                        Dim restraint As Decimal = (0.5 * (1 - (NumericUpDown_restraint.Value / 100)))
+                        Dim desolateHands As Decimal = 0.8 * powerStrength
+                        If desolateHands > 0.9 Then
+                            desolateHands = 0.9
+                        End If
+                        Dim sereneStorm As Decimal = 0.25 * powerStrength
+                        If CheckBox_restraint.Checked Then
+                            damageReduction = damageReduction + ((1 - damageReduction) * restraint)
+                        End If
+                        If CheckBox_desolateHands.Checked Then
+                            damageReduction = damageReduction + ((1 - damageReduction) * desolateHands)
+                        End If
+                        If CheckBox_sereneStorm.Checked Then
+                            damageReduction = damageReduction + ((1 - damageReduction) * sereneStorm)
                         End If
                     Case "Chroma"
                         If CheckBox_elementalWard.Checked Then
