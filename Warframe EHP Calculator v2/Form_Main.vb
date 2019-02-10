@@ -11,7 +11,7 @@ End Module
 
 Public Class Form_main
 
-    Public localVersion As String = "1812-1"
+    Public localVersion As String = "1902"
     Public liveVersion As String
     Public squadMembers As New Dictionary(Of String, String)
 

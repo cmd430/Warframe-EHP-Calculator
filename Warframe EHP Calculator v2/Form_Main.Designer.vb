@@ -60,6 +60,46 @@ Partial Class Form_main
         Me.Label_warframeArmor = New System.Windows.Forms.Label()
         Me.TextBox_warframeArmor = New System.Windows.Forms.TextBox()
         Me.CheckBox_arcaneHelmets = New System.Windows.Forms.CheckBox()
+        Me.CustomTabControl_arcaneHelmets = New Warframe_EHP_Calculator_v2.CustomTabControl()
+        Me.TabPage_arcaneHelmetsDefault = New System.Windows.Forms.TabPage()
+        Me.Label_arcaneHelmetPlaceholder = New System.Windows.Forms.Label()
+        Me.TabPage_arcaneHelmetsAsh = New System.Windows.Forms.TabPage()
+        Me.RadioButton_locustHelmet = New System.Windows.Forms.RadioButton()
+        Me.TabPage_arcaneHelmetsBanshee = New System.Windows.Forms.TabPage()
+        Me.RadioButton_reverbHelmet = New System.Windows.Forms.RadioButton()
+        Me.TabPage_arcaneHelmetsEmber = New System.Windows.Forms.TabPage()
+        Me.RadioButton_backdraftHelmet = New System.Windows.Forms.RadioButton()
+        Me.RadioButton_phoenixHelmet = New System.Windows.Forms.RadioButton()
+        Me.TabPage_arcaneHelmetsExcalibur = New System.Windows.Forms.TabPage()
+        Me.RadioButton_pendragonHelmet = New System.Windows.Forms.RadioButton()
+        Me.RadioButton_avalonHelmet = New System.Windows.Forms.RadioButton()
+        Me.TabPage_arcaneHelmetsFrost = New System.Windows.Forms.TabPage()
+        Me.RadioButton_squallHelmet = New System.Windows.Forms.RadioButton()
+        Me.RadioButton_auroraHelmet = New System.Windows.Forms.RadioButton()
+        Me.TabPage_arcaneHelmetsLoki = New System.Windows.Forms.TabPage()
+        Me.RadioButton_swindleHelmet = New System.Windows.Forms.RadioButton()
+        Me.RadioButton_essenceHelmet = New System.Windows.Forms.RadioButton()
+        Me.TabPage_arcaneHelmetsMag = New System.Windows.Forms.TabPage()
+        Me.RadioButton_gaussHelmet = New System.Windows.Forms.RadioButton()
+        Me.RadioButton_coilHelmet = New System.Windows.Forms.RadioButton()
+        Me.TabPage_arcaneHelmetsNova = New System.Windows.Forms.TabPage()
+        Me.RadioButton_fluxHelmet = New System.Windows.Forms.RadioButton()
+        Me.TabPage_arcaneHelmetsNyx = New System.Windows.Forms.TabPage()
+        Me.RadioButton_vespaHelmet = New System.Windows.Forms.RadioButton()
+        Me.RadioButton_menticideHelmet = New System.Windows.Forms.RadioButton()
+        Me.TabPage_arcaneHelmetsRhino = New System.Windows.Forms.TabPage()
+        Me.RadioButton_vanguardHelmet = New System.Windows.Forms.RadioButton()
+        Me.RadioButton_thrak = New System.Windows.Forms.RadioButton()
+        Me.TabPage_arcaneHelmetsSaryn = New System.Windows.Forms.TabPage()
+        Me.RadioButton_hemlockHelmet = New System.Windows.Forms.RadioButton()
+        Me.TabPage_arcaneHelmetsTrinity = New System.Windows.Forms.TabPage()
+        Me.RadioButton_meridianHelmet = New System.Windows.Forms.RadioButton()
+        Me.RadioButton_auraHelmet = New System.Windows.Forms.RadioButton()
+        Me.TabPage_arcaneHelmetsVauban = New System.Windows.Forms.TabPage()
+        Me.RadioButton_espritHelmet = New System.Windows.Forms.RadioButton()
+        Me.TabPage_arcaneHelmetsVolt = New System.Windows.Forms.TabPage()
+        Me.RadioButton_stormHelmet = New System.Windows.Forms.RadioButton()
+        Me.RadioButton_pulseHelmet = New System.Windows.Forms.RadioButton()
         Me.CheckBox_specialEffects = New System.Windows.Forms.CheckBox()
         Me.GroupBox_specialEffects = New System.Windows.Forms.GroupBox()
         Me.CheckBox_corruptedBuff = New System.Windows.Forms.CheckBox()
@@ -150,6 +190,71 @@ Partial Class Form_main
         Me.CheckBox_isUmbra = New System.Windows.Forms.CheckBox()
         Me.ComboBox_warframes = New System.Windows.Forms.ComboBox()
         Me.CheckBox_isPrime = New System.Windows.Forms.CheckBox()
+        Me.CustomTabControl_abilitys = New Warframe_EHP_Calculator_v2.CustomTabControl()
+        Me.TabPage_abilitiesDefault = New System.Windows.Forms.TabPage()
+        Me.Label_abilityPlaceholder = New System.Windows.Forms.Label()
+        Me.TabPage_abilitiesAtlas = New System.Windows.Forms.TabPage()
+        Me.NumericUpDown_rubble = New System.Windows.Forms.NumericUpDown()
+        Me.CheckBox_rubble = New System.Windows.Forms.CheckBox()
+        Me.TabPage_abilitiesBaruuk = New System.Windows.Forms.TabPage()
+        Me.CheckBox_sereneStorm = New System.Windows.Forms.CheckBox()
+        Me.CheckBox_desolateHands = New System.Windows.Forms.CheckBox()
+        Me.NumericUpDown_restraint = New System.Windows.Forms.NumericUpDown()
+        Me.CheckBox_restraint = New System.Windows.Forms.CheckBox()
+        Me.TabPage_abilitiesChroma = New System.Windows.Forms.TabPage()
+        Me.CheckBox_vexArmor = New System.Windows.Forms.CheckBox()
+        Me.CheckBox_elementalWard = New System.Windows.Forms.CheckBox()
+        Me.RadioButton_electricChroma = New System.Windows.Forms.RadioButton()
+        Me.RadioButton_iceChroma = New System.Windows.Forms.RadioButton()
+        Me.RadioButton_fireChroma = New System.Windows.Forms.RadioButton()
+        Me.TabPage_abilitiesExcalibur = New System.Windows.Forms.TabPage()
+        Me.CheckBox_exaltedBlade = New System.Windows.Forms.CheckBox()
+        Me.TabPage_abilitiesFrost = New System.Windows.Forms.TabPage()
+        Me.NumericUpDown_icyAvalanche = New System.Windows.Forms.NumericUpDown()
+        Me.CheckBox_icyAvalanche = New System.Windows.Forms.CheckBox()
+        Me.TabPage_abilitiesGara = New System.Windows.Forms.TabPage()
+        Me.CheckBox_splinterStorm = New System.Windows.Forms.CheckBox()
+        Me.TabPage_abilitiesHarrow = New System.Windows.Forms.TabPage()
+        Me.CheckBox_wardingThurible = New System.Windows.Forms.CheckBox()
+        Me.TabPage_abilitiesInaros = New System.Windows.Forms.TabPage()
+        Me.NumericUpDown_scarabSwarm = New System.Windows.Forms.NumericUpDown()
+        Me.CheckBox_scarabSwarm = New System.Windows.Forms.CheckBox()
+        Me.TabPage_abilitiesMesa = New System.Windows.Forms.TabPage()
+        Me.CheckBox_marksmansDexterity = New System.Windows.Forms.CheckBox()
+        Me.CheckBox_shatterShield = New System.Windows.Forms.CheckBox()
+        Me.TabPage_abilitiesMirage = New System.Windows.Forms.TabPage()
+        Me.CheckBox_eclipse = New System.Windows.Forms.CheckBox()
+        Me.TabPage_abilitiesNekros = New System.Windows.Forms.TabPage()
+        Me.NumericUpDown_shieldOfShadows = New System.Windows.Forms.NumericUpDown()
+        Me.CheckBox_shieldOfShadows = New System.Windows.Forms.CheckBox()
+        Me.TabPage_abilitiesNezha = New System.Windows.Forms.TabPage()
+        Me.CheckBox_wardingHalo = New System.Windows.Forms.CheckBox()
+        Me.TabPage_abilitiesNidus = New System.Windows.Forms.TabPage()
+        Me.CheckBox_parasiticLink = New System.Windows.Forms.CheckBox()
+        Me.NumericUpDown_mutationStacks = New System.Windows.Forms.NumericUpDown()
+        Me.CheckBox_mutationStacks = New System.Windows.Forms.CheckBox()
+        Me.TabPage_abilitiesNova = New System.Windows.Forms.TabPage()
+        Me.NumericUpDown_nullStar = New System.Windows.Forms.NumericUpDown()
+        Me.CheckBox_nullStar = New System.Windows.Forms.CheckBox()
+        Me.TabPage_abilitiesOberon = New System.Windows.Forms.TabPage()
+        Me.CheckBox_hallowedReckoning = New System.Windows.Forms.CheckBox()
+        Me.CheckBox_ironRenewal = New System.Windows.Forms.CheckBox()
+        Me.TabPage_abilitiesOctavia = New System.Windows.Forms.TabPage()
+        Me.CheckBox_metronome = New System.Windows.Forms.CheckBox()
+        Me.TabPage_abilitiesRhino = New System.Windows.Forms.TabPage()
+        Me.NumericUpDown_ironcladCharge = New System.Windows.Forms.NumericUpDown()
+        Me.CheckBox_ironcladCharge = New System.Windows.Forms.CheckBox()
+        Me.CheckBox_ironSkin = New System.Windows.Forms.CheckBox()
+        Me.Label_ironSkin = New System.Windows.Forms.Label()
+        Me.NumericUpDown_ironSkin = New System.Windows.Forms.NumericUpDown()
+        Me.TabPage_abilitiesTitania = New System.Windows.Forms.TabPage()
+        Me.NumericUpDown_thorns = New System.Windows.Forms.NumericUpDown()
+        Me.CheckBox_thorns = New System.Windows.Forms.CheckBox()
+        Me.TabPage_abilitiesTrinity = New System.Windows.Forms.TabPage()
+        Me.CheckBox_blessing = New System.Windows.Forms.CheckBox()
+        Me.CheckBox_link = New System.Windows.Forms.CheckBox()
+        Me.TabPage_abilitiesValkyr = New System.Windows.Forms.TabPage()
+        Me.CheckBox_warcry = New System.Windows.Forms.CheckBox()
         Me.Panel_Ruler = New System.Windows.Forms.Panel()
         Me.GroupBox_focus = New System.Windows.Forms.GroupBox()
         Me.NumericUpDown_stoneSkin = New System.Windows.Forms.NumericUpDown()
@@ -227,116 +332,27 @@ Partial Class Form_main
         Me.Icons = New System.Windows.Forms.ImageList(Me.components)
         Me.Label_author = New System.Windows.Forms.Label()
         Me.Label_love = New System.Windows.Forms.Label()
-        Me.CustomTabControl_arcaneHelmets = New Warframe_EHP_Calculator_v2.CustomTabControl()
-        Me.TabPage_arcaneHelmetsDefault = New System.Windows.Forms.TabPage()
-        Me.Label_arcaneHelmetPlaceholder = New System.Windows.Forms.Label()
-        Me.TabPage_arcaneHelmetsAsh = New System.Windows.Forms.TabPage()
-        Me.RadioButton_locustHelmet = New System.Windows.Forms.RadioButton()
-        Me.TabPage_arcaneHelmetsBanshee = New System.Windows.Forms.TabPage()
-        Me.RadioButton_reverbHelmet = New System.Windows.Forms.RadioButton()
-        Me.TabPage_arcaneHelmetsEmber = New System.Windows.Forms.TabPage()
-        Me.RadioButton_backdraftHelmet = New System.Windows.Forms.RadioButton()
-        Me.RadioButton_phoenixHelmet = New System.Windows.Forms.RadioButton()
-        Me.TabPage_arcaneHelmetsExcalibur = New System.Windows.Forms.TabPage()
-        Me.RadioButton_pendragonHelmet = New System.Windows.Forms.RadioButton()
-        Me.RadioButton_avalonHelmet = New System.Windows.Forms.RadioButton()
-        Me.TabPage_arcaneHelmetsFrost = New System.Windows.Forms.TabPage()
-        Me.RadioButton_squallHelmet = New System.Windows.Forms.RadioButton()
-        Me.RadioButton_auroraHelmet = New System.Windows.Forms.RadioButton()
-        Me.TabPage_arcaneHelmetsLoki = New System.Windows.Forms.TabPage()
-        Me.RadioButton_swindleHelmet = New System.Windows.Forms.RadioButton()
-        Me.RadioButton_essenceHelmet = New System.Windows.Forms.RadioButton()
-        Me.TabPage_arcaneHelmetsMag = New System.Windows.Forms.TabPage()
-        Me.RadioButton_gaussHelmet = New System.Windows.Forms.RadioButton()
-        Me.RadioButton_coilHelmet = New System.Windows.Forms.RadioButton()
-        Me.TabPage_arcaneHelmetsNova = New System.Windows.Forms.TabPage()
-        Me.RadioButton_fluxHelmet = New System.Windows.Forms.RadioButton()
-        Me.TabPage_arcaneHelmetsNyx = New System.Windows.Forms.TabPage()
-        Me.RadioButton_vespaHelmet = New System.Windows.Forms.RadioButton()
-        Me.RadioButton_menticideHelmet = New System.Windows.Forms.RadioButton()
-        Me.TabPage_arcaneHelmetsRhino = New System.Windows.Forms.TabPage()
-        Me.RadioButton_vanguardHelmet = New System.Windows.Forms.RadioButton()
-        Me.RadioButton_thrak = New System.Windows.Forms.RadioButton()
-        Me.TabPage_arcaneHelmetsSaryn = New System.Windows.Forms.TabPage()
-        Me.RadioButton_hemlockHelmet = New System.Windows.Forms.RadioButton()
-        Me.TabPage_arcaneHelmetsTrinity = New System.Windows.Forms.TabPage()
-        Me.RadioButton_meridianHelmet = New System.Windows.Forms.RadioButton()
-        Me.RadioButton_auraHelmet = New System.Windows.Forms.RadioButton()
-        Me.TabPage_arcaneHelmetsVauban = New System.Windows.Forms.TabPage()
-        Me.RadioButton_espritHelmet = New System.Windows.Forms.RadioButton()
-        Me.TabPage_arcaneHelmetsVolt = New System.Windows.Forms.TabPage()
-        Me.RadioButton_stormHelmet = New System.Windows.Forms.RadioButton()
-        Me.RadioButton_pulseHelmet = New System.Windows.Forms.RadioButton()
-        Me.CustomTabControl_abilitys = New Warframe_EHP_Calculator_v2.CustomTabControl()
-        Me.TabPage_abilitiesDefault = New System.Windows.Forms.TabPage()
-        Me.Label_abilityPlaceholder = New System.Windows.Forms.Label()
-        Me.TabPage_abilitiesAtlas = New System.Windows.Forms.TabPage()
-        Me.NumericUpDown_rubble = New System.Windows.Forms.NumericUpDown()
-        Me.CheckBox_rubble = New System.Windows.Forms.CheckBox()
-        Me.TabPage_abilitiesBaruuk = New System.Windows.Forms.TabPage()
-        Me.CheckBox_sereneStorm = New System.Windows.Forms.CheckBox()
-        Me.CheckBox_desolateHands = New System.Windows.Forms.CheckBox()
-        Me.NumericUpDown_restraint = New System.Windows.Forms.NumericUpDown()
-        Me.CheckBox_restraint = New System.Windows.Forms.CheckBox()
-        Me.TabPage_abilitiesChroma = New System.Windows.Forms.TabPage()
-        Me.CheckBox_vexArmor = New System.Windows.Forms.CheckBox()
-        Me.CheckBox_elementalWard = New System.Windows.Forms.CheckBox()
-        Me.RadioButton_electricChroma = New System.Windows.Forms.RadioButton()
-        Me.RadioButton_iceChroma = New System.Windows.Forms.RadioButton()
-        Me.RadioButton_fireChroma = New System.Windows.Forms.RadioButton()
-        Me.TabPage_abilitiesExcalibur = New System.Windows.Forms.TabPage()
-        Me.CheckBox_exaltedBlade = New System.Windows.Forms.CheckBox()
-        Me.TabPage_abilitiesFrost = New System.Windows.Forms.TabPage()
-        Me.NumericUpDown_icyAvalanche = New System.Windows.Forms.NumericUpDown()
-        Me.CheckBox_icyAvalanche = New System.Windows.Forms.CheckBox()
-        Me.TabPage_abilitiesGara = New System.Windows.Forms.TabPage()
-        Me.CheckBox_splinterStorm = New System.Windows.Forms.CheckBox()
-        Me.TabPage_abilitiesHarrow = New System.Windows.Forms.TabPage()
-        Me.CheckBox_wardingThurible = New System.Windows.Forms.CheckBox()
-        Me.TabPage_abilitiesInaros = New System.Windows.Forms.TabPage()
-        Me.NumericUpDown_scarabSwarm = New System.Windows.Forms.NumericUpDown()
-        Me.CheckBox_scarabSwarm = New System.Windows.Forms.CheckBox()
-        Me.TabPage_abilitiesMesa = New System.Windows.Forms.TabPage()
-        Me.CheckBox_marksmansDexterity = New System.Windows.Forms.CheckBox()
-        Me.CheckBox_shatterShield = New System.Windows.Forms.CheckBox()
-        Me.TabPage_abilitiesMirage = New System.Windows.Forms.TabPage()
-        Me.CheckBox_eclipse = New System.Windows.Forms.CheckBox()
-        Me.TabPage_abilitiesNekros = New System.Windows.Forms.TabPage()
-        Me.NumericUpDown_shieldOfShadows = New System.Windows.Forms.NumericUpDown()
-        Me.CheckBox_shieldOfShadows = New System.Windows.Forms.CheckBox()
-        Me.TabPage_abilitiesNezha = New System.Windows.Forms.TabPage()
-        Me.CheckBox_wardingHalo = New System.Windows.Forms.CheckBox()
-        Me.TabPage_abilitiesNidus = New System.Windows.Forms.TabPage()
-        Me.CheckBox_parasiticLink = New System.Windows.Forms.CheckBox()
-        Me.NumericUpDown_mutationStacks = New System.Windows.Forms.NumericUpDown()
-        Me.CheckBox_mutationStacks = New System.Windows.Forms.CheckBox()
-        Me.TabPage_abilitiesNova = New System.Windows.Forms.TabPage()
-        Me.NumericUpDown_nullStar = New System.Windows.Forms.NumericUpDown()
-        Me.CheckBox_nullStar = New System.Windows.Forms.CheckBox()
-        Me.TabPage_abilitiesOberon = New System.Windows.Forms.TabPage()
-        Me.CheckBox_hallowedReckoning = New System.Windows.Forms.CheckBox()
-        Me.CheckBox_ironRenewal = New System.Windows.Forms.CheckBox()
-        Me.TabPage_abilitiesOctavia = New System.Windows.Forms.TabPage()
-        Me.CheckBox_metronome = New System.Windows.Forms.CheckBox()
-        Me.TabPage_abilitiesRhino = New System.Windows.Forms.TabPage()
-        Me.NumericUpDown_ironcladCharge = New System.Windows.Forms.NumericUpDown()
-        Me.CheckBox_ironcladCharge = New System.Windows.Forms.CheckBox()
-        Me.CheckBox_ironSkin = New System.Windows.Forms.CheckBox()
-        Me.Label_ironSkin = New System.Windows.Forms.Label()
-        Me.NumericUpDown_ironSkin = New System.Windows.Forms.NumericUpDown()
-        Me.TabPage_abilitiesTitania = New System.Windows.Forms.TabPage()
-        Me.NumericUpDown_thorns = New System.Windows.Forms.NumericUpDown()
-        Me.CheckBox_thorns = New System.Windows.Forms.CheckBox()
-        Me.TabPage_abilitiesTrinity = New System.Windows.Forms.TabPage()
-        Me.CheckBox_blessing = New System.Windows.Forms.CheckBox()
-        Me.CheckBox_link = New System.Windows.Forms.CheckBox()
-        Me.TabPage_abilitiesValkyr = New System.Windows.Forms.TabPage()
-        Me.CheckBox_warcry = New System.Windows.Forms.CheckBox()
         Me.TabControl_main.SuspendLayout()
         Me.TabPage_warframe.SuspendLayout()
         Me.GroupBox_sortieModifiers.SuspendLayout()
         Me.GroupBox_warframeResults.SuspendLayout()
         Me.GroupBox_squadEffects.SuspendLayout()
+        Me.CustomTabControl_arcaneHelmets.SuspendLayout()
+        Me.TabPage_arcaneHelmetsDefault.SuspendLayout()
+        Me.TabPage_arcaneHelmetsAsh.SuspendLayout()
+        Me.TabPage_arcaneHelmetsBanshee.SuspendLayout()
+        Me.TabPage_arcaneHelmetsEmber.SuspendLayout()
+        Me.TabPage_arcaneHelmetsExcalibur.SuspendLayout()
+        Me.TabPage_arcaneHelmetsFrost.SuspendLayout()
+        Me.TabPage_arcaneHelmetsLoki.SuspendLayout()
+        Me.TabPage_arcaneHelmetsMag.SuspendLayout()
+        Me.TabPage_arcaneHelmetsNova.SuspendLayout()
+        Me.TabPage_arcaneHelmetsNyx.SuspendLayout()
+        Me.TabPage_arcaneHelmetsRhino.SuspendLayout()
+        Me.TabPage_arcaneHelmetsSaryn.SuspendLayout()
+        Me.TabPage_arcaneHelmetsTrinity.SuspendLayout()
+        Me.TabPage_arcaneHelmetsVauban.SuspendLayout()
+        Me.TabPage_arcaneHelmetsVolt.SuspendLayout()
         Me.GroupBox_specialEffects.SuspendLayout()
         CType(Me.NumericUpDown_oversheilds, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox_dragonKeys.SuspendLayout()
@@ -378,34 +394,6 @@ Partial Class Form_main
         CType(Me.NumericUpDown_growingPower, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NumericUpDown_standUnited, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NumericUpDown_physique, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox_focus.SuspendLayout()
-        CType(Me.NumericUpDown_stoneSkin, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox_blocking.SuspendLayout()
-        Me.TabPage_companion.SuspendLayout()
-        Me.GroupBox_companionResults.SuspendLayout()
-        CType(Me.NumericUpDown_companionStability, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox_companionSurvivability.SuspendLayout()
-        CType(Me.NumericUpDown_companionLinkShield, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.NumericUpDown_companionLinkHealth, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.NumericUpDown_companionLinkArmor, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage_archwing.SuspendLayout()
-        Me.TabPage_development.SuspendLayout()
-        Me.CustomTabControl_arcaneHelmets.SuspendLayout()
-        Me.TabPage_arcaneHelmetsDefault.SuspendLayout()
-        Me.TabPage_arcaneHelmetsAsh.SuspendLayout()
-        Me.TabPage_arcaneHelmetsBanshee.SuspendLayout()
-        Me.TabPage_arcaneHelmetsEmber.SuspendLayout()
-        Me.TabPage_arcaneHelmetsExcalibur.SuspendLayout()
-        Me.TabPage_arcaneHelmetsFrost.SuspendLayout()
-        Me.TabPage_arcaneHelmetsLoki.SuspendLayout()
-        Me.TabPage_arcaneHelmetsMag.SuspendLayout()
-        Me.TabPage_arcaneHelmetsNova.SuspendLayout()
-        Me.TabPage_arcaneHelmetsNyx.SuspendLayout()
-        Me.TabPage_arcaneHelmetsRhino.SuspendLayout()
-        Me.TabPage_arcaneHelmetsSaryn.SuspendLayout()
-        Me.TabPage_arcaneHelmetsTrinity.SuspendLayout()
-        Me.TabPage_arcaneHelmetsVauban.SuspendLayout()
-        Me.TabPage_arcaneHelmetsVolt.SuspendLayout()
         Me.CustomTabControl_abilitys.SuspendLayout()
         Me.TabPage_abilitiesDefault.SuspendLayout()
         Me.TabPage_abilitiesAtlas.SuspendLayout()
@@ -438,6 +426,18 @@ Partial Class Form_main
         CType(Me.NumericUpDown_thorns, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage_abilitiesTrinity.SuspendLayout()
         Me.TabPage_abilitiesValkyr.SuspendLayout()
+        Me.GroupBox_focus.SuspendLayout()
+        CType(Me.NumericUpDown_stoneSkin, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox_blocking.SuspendLayout()
+        Me.TabPage_companion.SuspendLayout()
+        Me.GroupBox_companionResults.SuspendLayout()
+        CType(Me.NumericUpDown_companionStability, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox_companionSurvivability.SuspendLayout()
+        CType(Me.NumericUpDown_companionLinkShield, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.NumericUpDown_companionLinkHealth, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.NumericUpDown_companionLinkArmor, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage_archwing.SuspendLayout()
+        Me.TabPage_development.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl_main
@@ -874,6 +874,480 @@ Partial Class Form_main
         Me.CheckBox_arcaneHelmets.Tag = "CustomTabControl_arcaneHelmets"
         Me.CheckBox_arcaneHelmets.Text = "Arcane Helmets"
         Me.CheckBox_arcaneHelmets.UseVisualStyleBackColor = True
+        '
+        'CustomTabControl_arcaneHelmets
+        '
+        Me.CustomTabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsDefault)
+        Me.CustomTabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsAsh)
+        Me.CustomTabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsBanshee)
+        Me.CustomTabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsEmber)
+        Me.CustomTabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsExcalibur)
+        Me.CustomTabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsFrost)
+        Me.CustomTabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsLoki)
+        Me.CustomTabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsMag)
+        Me.CustomTabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsNova)
+        Me.CustomTabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsNyx)
+        Me.CustomTabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsRhino)
+        Me.CustomTabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsSaryn)
+        Me.CustomTabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsTrinity)
+        Me.CustomTabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsVauban)
+        Me.CustomTabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsVolt)
+        Me.CustomTabControl_arcaneHelmets.Enabled = False
+        Me.CustomTabControl_arcaneHelmets.Location = New System.Drawing.Point(487, 373)
+        Me.CustomTabControl_arcaneHelmets.Name = "CustomTabControl_arcaneHelmets"
+        Me.CustomTabControl_arcaneHelmets.SelectedIndex = 0
+        Me.CustomTabControl_arcaneHelmets.Size = New System.Drawing.Size(280, 75)
+        Me.CustomTabControl_arcaneHelmets.TabIndex = 117
+        '
+        'TabPage_arcaneHelmetsDefault
+        '
+        Me.TabPage_arcaneHelmetsDefault.BackColor = System.Drawing.Color.White
+        Me.TabPage_arcaneHelmetsDefault.Controls.Add(Me.Label_arcaneHelmetPlaceholder)
+        Me.TabPage_arcaneHelmetsDefault.Location = New System.Drawing.Point(1, 21)
+        Me.TabPage_arcaneHelmetsDefault.Name = "TabPage_arcaneHelmetsDefault"
+        Me.TabPage_arcaneHelmetsDefault.Size = New System.Drawing.Size(278, 53)
+        Me.TabPage_arcaneHelmetsDefault.TabIndex = 2
+        Me.TabPage_arcaneHelmetsDefault.Text = "Default"
+        '
+        'Label_arcaneHelmetPlaceholder
+        '
+        Me.Label_arcaneHelmetPlaceholder.AutoSize = True
+        Me.Label_arcaneHelmetPlaceholder.Location = New System.Drawing.Point(63, 18)
+        Me.Label_arcaneHelmetPlaceholder.Name = "Label_arcaneHelmetPlaceholder"
+        Me.Label_arcaneHelmetPlaceholder.Size = New System.Drawing.Size(152, 34)
+        Me.Label_arcaneHelmetPlaceholder.TabIndex = 1
+        Me.Label_arcaneHelmetPlaceholder.Text = "This Warframe has no " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Arcane Helmets"
+        Me.Label_arcaneHelmetPlaceholder.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'TabPage_arcaneHelmetsAsh
+        '
+        Me.TabPage_arcaneHelmetsAsh.BackColor = System.Drawing.Color.White
+        Me.TabPage_arcaneHelmetsAsh.Controls.Add(Me.RadioButton_locustHelmet)
+        Me.TabPage_arcaneHelmetsAsh.Location = New System.Drawing.Point(1, 21)
+        Me.TabPage_arcaneHelmetsAsh.Name = "TabPage_arcaneHelmetsAsh"
+        Me.TabPage_arcaneHelmetsAsh.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage_arcaneHelmetsAsh.Size = New System.Drawing.Size(278, 53)
+        Me.TabPage_arcaneHelmetsAsh.TabIndex = 0
+        Me.TabPage_arcaneHelmetsAsh.Text = "Ash"
+        '
+        'RadioButton_locustHelmet
+        '
+        Me.RadioButton_locustHelmet.AutoSize = True
+        Me.RadioButton_locustHelmet.Checked = True
+        Me.RadioButton_locustHelmet.Location = New System.Drawing.Point(11, 25)
+        Me.RadioButton_locustHelmet.Name = "RadioButton_locustHelmet"
+        Me.RadioButton_locustHelmet.Size = New System.Drawing.Size(116, 21)
+        Me.RadioButton_locustHelmet.TabIndex = 0
+        Me.RadioButton_locustHelmet.TabStop = True
+        Me.RadioButton_locustHelmet.Text = "Locust Helmet"
+        Me.RadioButton_locustHelmet.UseVisualStyleBackColor = True
+        '
+        'TabPage_arcaneHelmetsBanshee
+        '
+        Me.TabPage_arcaneHelmetsBanshee.BackColor = System.Drawing.Color.White
+        Me.TabPage_arcaneHelmetsBanshee.Controls.Add(Me.RadioButton_reverbHelmet)
+        Me.TabPage_arcaneHelmetsBanshee.Location = New System.Drawing.Point(1, 21)
+        Me.TabPage_arcaneHelmetsBanshee.Name = "TabPage_arcaneHelmetsBanshee"
+        Me.TabPage_arcaneHelmetsBanshee.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage_arcaneHelmetsBanshee.Size = New System.Drawing.Size(278, 53)
+        Me.TabPage_arcaneHelmetsBanshee.TabIndex = 1
+        Me.TabPage_arcaneHelmetsBanshee.Text = "Banshee"
+        '
+        'RadioButton_reverbHelmet
+        '
+        Me.RadioButton_reverbHelmet.AutoSize = True
+        Me.RadioButton_reverbHelmet.Checked = True
+        Me.RadioButton_reverbHelmet.Location = New System.Drawing.Point(11, 25)
+        Me.RadioButton_reverbHelmet.Name = "RadioButton_reverbHelmet"
+        Me.RadioButton_reverbHelmet.Size = New System.Drawing.Size(120, 21)
+        Me.RadioButton_reverbHelmet.TabIndex = 1
+        Me.RadioButton_reverbHelmet.TabStop = True
+        Me.RadioButton_reverbHelmet.Text = "Reverb Helmet"
+        Me.RadioButton_reverbHelmet.UseVisualStyleBackColor = True
+        '
+        'TabPage_arcaneHelmetsEmber
+        '
+        Me.TabPage_arcaneHelmetsEmber.BackColor = System.Drawing.Color.White
+        Me.TabPage_arcaneHelmetsEmber.Controls.Add(Me.RadioButton_backdraftHelmet)
+        Me.TabPage_arcaneHelmetsEmber.Controls.Add(Me.RadioButton_phoenixHelmet)
+        Me.TabPage_arcaneHelmetsEmber.Location = New System.Drawing.Point(1, 21)
+        Me.TabPage_arcaneHelmetsEmber.Name = "TabPage_arcaneHelmetsEmber"
+        Me.TabPage_arcaneHelmetsEmber.Size = New System.Drawing.Size(278, 53)
+        Me.TabPage_arcaneHelmetsEmber.TabIndex = 3
+        Me.TabPage_arcaneHelmetsEmber.Text = "Ember"
+        '
+        'RadioButton_backdraftHelmet
+        '
+        Me.RadioButton_backdraftHelmet.AutoSize = True
+        Me.RadioButton_backdraftHelmet.Location = New System.Drawing.Point(140, 25)
+        Me.RadioButton_backdraftHelmet.Name = "RadioButton_backdraftHelmet"
+        Me.RadioButton_backdraftHelmet.Size = New System.Drawing.Size(134, 21)
+        Me.RadioButton_backdraftHelmet.TabIndex = 3
+        Me.RadioButton_backdraftHelmet.Tag = ""
+        Me.RadioButton_backdraftHelmet.Text = "Backdraft Helmet"
+        Me.RadioButton_backdraftHelmet.UseVisualStyleBackColor = True
+        '
+        'RadioButton_phoenixHelmet
+        '
+        Me.RadioButton_phoenixHelmet.AutoSize = True
+        Me.RadioButton_phoenixHelmet.Checked = True
+        Me.RadioButton_phoenixHelmet.Location = New System.Drawing.Point(10, 25)
+        Me.RadioButton_phoenixHelmet.Name = "RadioButton_phoenixHelmet"
+        Me.RadioButton_phoenixHelmet.Size = New System.Drawing.Size(124, 21)
+        Me.RadioButton_phoenixHelmet.TabIndex = 2
+        Me.RadioButton_phoenixHelmet.TabStop = True
+        Me.RadioButton_phoenixHelmet.Tag = ""
+        Me.RadioButton_phoenixHelmet.Text = "Phoenix Helmet"
+        Me.RadioButton_phoenixHelmet.UseVisualStyleBackColor = True
+        '
+        'TabPage_arcaneHelmetsExcalibur
+        '
+        Me.TabPage_arcaneHelmetsExcalibur.BackColor = System.Drawing.Color.White
+        Me.TabPage_arcaneHelmetsExcalibur.Controls.Add(Me.RadioButton_pendragonHelmet)
+        Me.TabPage_arcaneHelmetsExcalibur.Controls.Add(Me.RadioButton_avalonHelmet)
+        Me.TabPage_arcaneHelmetsExcalibur.Location = New System.Drawing.Point(1, 21)
+        Me.TabPage_arcaneHelmetsExcalibur.Name = "TabPage_arcaneHelmetsExcalibur"
+        Me.TabPage_arcaneHelmetsExcalibur.Size = New System.Drawing.Size(278, 53)
+        Me.TabPage_arcaneHelmetsExcalibur.TabIndex = 4
+        Me.TabPage_arcaneHelmetsExcalibur.Text = "Excalibur"
+        '
+        'RadioButton_pendragonHelmet
+        '
+        Me.RadioButton_pendragonHelmet.AutoSize = True
+        Me.RadioButton_pendragonHelmet.Location = New System.Drawing.Point(130, 25)
+        Me.RadioButton_pendragonHelmet.Name = "RadioButton_pendragonHelmet"
+        Me.RadioButton_pendragonHelmet.Size = New System.Drawing.Size(144, 21)
+        Me.RadioButton_pendragonHelmet.TabIndex = 4
+        Me.RadioButton_pendragonHelmet.Tag = ""
+        Me.RadioButton_pendragonHelmet.Text = "Pendragon Helmet"
+        Me.RadioButton_pendragonHelmet.UseVisualStyleBackColor = True
+        '
+        'RadioButton_avalonHelmet
+        '
+        Me.RadioButton_avalonHelmet.AutoSize = True
+        Me.RadioButton_avalonHelmet.Checked = True
+        Me.RadioButton_avalonHelmet.Location = New System.Drawing.Point(10, 25)
+        Me.RadioButton_avalonHelmet.Name = "RadioButton_avalonHelmet"
+        Me.RadioButton_avalonHelmet.Size = New System.Drawing.Size(117, 21)
+        Me.RadioButton_avalonHelmet.TabIndex = 3
+        Me.RadioButton_avalonHelmet.TabStop = True
+        Me.RadioButton_avalonHelmet.Tag = ""
+        Me.RadioButton_avalonHelmet.Text = "Avalon Helmet"
+        Me.RadioButton_avalonHelmet.UseVisualStyleBackColor = True
+        '
+        'TabPage_arcaneHelmetsFrost
+        '
+        Me.TabPage_arcaneHelmetsFrost.BackColor = System.Drawing.Color.White
+        Me.TabPage_arcaneHelmetsFrost.Controls.Add(Me.RadioButton_squallHelmet)
+        Me.TabPage_arcaneHelmetsFrost.Controls.Add(Me.RadioButton_auroraHelmet)
+        Me.TabPage_arcaneHelmetsFrost.Location = New System.Drawing.Point(1, 21)
+        Me.TabPage_arcaneHelmetsFrost.Name = "TabPage_arcaneHelmetsFrost"
+        Me.TabPage_arcaneHelmetsFrost.Size = New System.Drawing.Size(278, 53)
+        Me.TabPage_arcaneHelmetsFrost.TabIndex = 5
+        Me.TabPage_arcaneHelmetsFrost.Text = "Frost"
+        '
+        'RadioButton_squallHelmet
+        '
+        Me.RadioButton_squallHelmet.AutoSize = True
+        Me.RadioButton_squallHelmet.Location = New System.Drawing.Point(132, 25)
+        Me.RadioButton_squallHelmet.Name = "RadioButton_squallHelmet"
+        Me.RadioButton_squallHelmet.Size = New System.Drawing.Size(113, 21)
+        Me.RadioButton_squallHelmet.TabIndex = 5
+        Me.RadioButton_squallHelmet.Tag = ""
+        Me.RadioButton_squallHelmet.Text = "Squall Helmet"
+        Me.RadioButton_squallHelmet.UseVisualStyleBackColor = True
+        '
+        'RadioButton_auroraHelmet
+        '
+        Me.RadioButton_auroraHelmet.AutoSize = True
+        Me.RadioButton_auroraHelmet.Checked = True
+        Me.RadioButton_auroraHelmet.Location = New System.Drawing.Point(9, 25)
+        Me.RadioButton_auroraHelmet.Name = "RadioButton_auroraHelmet"
+        Me.RadioButton_auroraHelmet.Size = New System.Drawing.Size(117, 21)
+        Me.RadioButton_auroraHelmet.TabIndex = 4
+        Me.RadioButton_auroraHelmet.TabStop = True
+        Me.RadioButton_auroraHelmet.Tag = ""
+        Me.RadioButton_auroraHelmet.Text = "Aurora Helmet"
+        Me.RadioButton_auroraHelmet.UseVisualStyleBackColor = True
+        '
+        'TabPage_arcaneHelmetsLoki
+        '
+        Me.TabPage_arcaneHelmetsLoki.BackColor = System.Drawing.Color.White
+        Me.TabPage_arcaneHelmetsLoki.Controls.Add(Me.RadioButton_swindleHelmet)
+        Me.TabPage_arcaneHelmetsLoki.Controls.Add(Me.RadioButton_essenceHelmet)
+        Me.TabPage_arcaneHelmetsLoki.Location = New System.Drawing.Point(1, 21)
+        Me.TabPage_arcaneHelmetsLoki.Name = "TabPage_arcaneHelmetsLoki"
+        Me.TabPage_arcaneHelmetsLoki.Size = New System.Drawing.Size(278, 53)
+        Me.TabPage_arcaneHelmetsLoki.TabIndex = 6
+        Me.TabPage_arcaneHelmetsLoki.Text = "Loki"
+        '
+        'RadioButton_swindleHelmet
+        '
+        Me.RadioButton_swindleHelmet.AutoSize = True
+        Me.RadioButton_swindleHelmet.Location = New System.Drawing.Point(145, 25)
+        Me.RadioButton_swindleHelmet.Name = "RadioButton_swindleHelmet"
+        Me.RadioButton_swindleHelmet.Size = New System.Drawing.Size(122, 21)
+        Me.RadioButton_swindleHelmet.TabIndex = 5
+        Me.RadioButton_swindleHelmet.Tag = ""
+        Me.RadioButton_swindleHelmet.Text = "Swindle Helmet"
+        Me.RadioButton_swindleHelmet.UseVisualStyleBackColor = True
+        '
+        'RadioButton_essenceHelmet
+        '
+        Me.RadioButton_essenceHelmet.AutoSize = True
+        Me.RadioButton_essenceHelmet.Checked = True
+        Me.RadioButton_essenceHelmet.Location = New System.Drawing.Point(11, 25)
+        Me.RadioButton_essenceHelmet.Name = "RadioButton_essenceHelmet"
+        Me.RadioButton_essenceHelmet.Size = New System.Drawing.Size(128, 21)
+        Me.RadioButton_essenceHelmet.TabIndex = 4
+        Me.RadioButton_essenceHelmet.TabStop = True
+        Me.RadioButton_essenceHelmet.Tag = ""
+        Me.RadioButton_essenceHelmet.Text = "Essence Helmet"
+        Me.RadioButton_essenceHelmet.UseVisualStyleBackColor = True
+        '
+        'TabPage_arcaneHelmetsMag
+        '
+        Me.TabPage_arcaneHelmetsMag.BackColor = System.Drawing.Color.White
+        Me.TabPage_arcaneHelmetsMag.Controls.Add(Me.RadioButton_gaussHelmet)
+        Me.TabPage_arcaneHelmetsMag.Controls.Add(Me.RadioButton_coilHelmet)
+        Me.TabPage_arcaneHelmetsMag.Location = New System.Drawing.Point(1, 21)
+        Me.TabPage_arcaneHelmetsMag.Name = "TabPage_arcaneHelmetsMag"
+        Me.TabPage_arcaneHelmetsMag.Size = New System.Drawing.Size(278, 53)
+        Me.TabPage_arcaneHelmetsMag.TabIndex = 7
+        Me.TabPage_arcaneHelmetsMag.Text = "Mag"
+        '
+        'RadioButton_gaussHelmet
+        '
+        Me.RadioButton_gaussHelmet.AutoSize = True
+        Me.RadioButton_gaussHelmet.Location = New System.Drawing.Point(114, 25)
+        Me.RadioButton_gaussHelmet.Name = "RadioButton_gaussHelmet"
+        Me.RadioButton_gaussHelmet.Size = New System.Drawing.Size(115, 21)
+        Me.RadioButton_gaussHelmet.TabIndex = 5
+        Me.RadioButton_gaussHelmet.Tag = ""
+        Me.RadioButton_gaussHelmet.Text = "Gauss Helmet"
+        Me.RadioButton_gaussHelmet.UseVisualStyleBackColor = True
+        '
+        'RadioButton_coilHelmet
+        '
+        Me.RadioButton_coilHelmet.AutoSize = True
+        Me.RadioButton_coilHelmet.Checked = True
+        Me.RadioButton_coilHelmet.Location = New System.Drawing.Point(11, 25)
+        Me.RadioButton_coilHelmet.Name = "RadioButton_coilHelmet"
+        Me.RadioButton_coilHelmet.Size = New System.Drawing.Size(97, 21)
+        Me.RadioButton_coilHelmet.TabIndex = 4
+        Me.RadioButton_coilHelmet.TabStop = True
+        Me.RadioButton_coilHelmet.Tag = ""
+        Me.RadioButton_coilHelmet.Text = "Coil Helmet"
+        Me.RadioButton_coilHelmet.UseVisualStyleBackColor = True
+        '
+        'TabPage_arcaneHelmetsNova
+        '
+        Me.TabPage_arcaneHelmetsNova.BackColor = System.Drawing.Color.White
+        Me.TabPage_arcaneHelmetsNova.Controls.Add(Me.RadioButton_fluxHelmet)
+        Me.TabPage_arcaneHelmetsNova.Location = New System.Drawing.Point(1, 21)
+        Me.TabPage_arcaneHelmetsNova.Name = "TabPage_arcaneHelmetsNova"
+        Me.TabPage_arcaneHelmetsNova.Size = New System.Drawing.Size(278, 53)
+        Me.TabPage_arcaneHelmetsNova.TabIndex = 14
+        Me.TabPage_arcaneHelmetsNova.Text = "Nova"
+        '
+        'RadioButton_fluxHelmet
+        '
+        Me.RadioButton_fluxHelmet.AutoSize = True
+        Me.RadioButton_fluxHelmet.Checked = True
+        Me.RadioButton_fluxHelmet.Location = New System.Drawing.Point(11, 25)
+        Me.RadioButton_fluxHelmet.Name = "RadioButton_fluxHelmet"
+        Me.RadioButton_fluxHelmet.Size = New System.Drawing.Size(99, 21)
+        Me.RadioButton_fluxHelmet.TabIndex = 4
+        Me.RadioButton_fluxHelmet.TabStop = True
+        Me.RadioButton_fluxHelmet.Tag = ""
+        Me.RadioButton_fluxHelmet.Text = "Flux Helmet"
+        Me.RadioButton_fluxHelmet.UseVisualStyleBackColor = True
+        '
+        'TabPage_arcaneHelmetsNyx
+        '
+        Me.TabPage_arcaneHelmetsNyx.BackColor = System.Drawing.Color.White
+        Me.TabPage_arcaneHelmetsNyx.Controls.Add(Me.RadioButton_vespaHelmet)
+        Me.TabPage_arcaneHelmetsNyx.Controls.Add(Me.RadioButton_menticideHelmet)
+        Me.TabPage_arcaneHelmetsNyx.Location = New System.Drawing.Point(1, 21)
+        Me.TabPage_arcaneHelmetsNyx.Name = "TabPage_arcaneHelmetsNyx"
+        Me.TabPage_arcaneHelmetsNyx.Size = New System.Drawing.Size(278, 53)
+        Me.TabPage_arcaneHelmetsNyx.TabIndex = 8
+        Me.TabPage_arcaneHelmetsNyx.Text = "Nyx"
+        '
+        'RadioButton_vespaHelmet
+        '
+        Me.RadioButton_vespaHelmet.AutoSize = True
+        Me.RadioButton_vespaHelmet.Location = New System.Drawing.Point(149, 25)
+        Me.RadioButton_vespaHelmet.Name = "RadioButton_vespaHelmet"
+        Me.RadioButton_vespaHelmet.Size = New System.Drawing.Size(114, 21)
+        Me.RadioButton_vespaHelmet.TabIndex = 5
+        Me.RadioButton_vespaHelmet.Tag = ""
+        Me.RadioButton_vespaHelmet.Text = "Vespa Helmet"
+        Me.RadioButton_vespaHelmet.UseVisualStyleBackColor = True
+        '
+        'RadioButton_menticideHelmet
+        '
+        Me.RadioButton_menticideHelmet.AutoSize = True
+        Me.RadioButton_menticideHelmet.Checked = True
+        Me.RadioButton_menticideHelmet.Location = New System.Drawing.Point(9, 25)
+        Me.RadioButton_menticideHelmet.Name = "RadioButton_menticideHelmet"
+        Me.RadioButton_menticideHelmet.Size = New System.Drawing.Size(134, 21)
+        Me.RadioButton_menticideHelmet.TabIndex = 4
+        Me.RadioButton_menticideHelmet.TabStop = True
+        Me.RadioButton_menticideHelmet.Tag = ""
+        Me.RadioButton_menticideHelmet.Text = "Menticide Helmet"
+        Me.RadioButton_menticideHelmet.UseVisualStyleBackColor = True
+        '
+        'TabPage_arcaneHelmetsRhino
+        '
+        Me.TabPage_arcaneHelmetsRhino.BackColor = System.Drawing.Color.White
+        Me.TabPage_arcaneHelmetsRhino.Controls.Add(Me.RadioButton_vanguardHelmet)
+        Me.TabPage_arcaneHelmetsRhino.Controls.Add(Me.RadioButton_thrak)
+        Me.TabPage_arcaneHelmetsRhino.Location = New System.Drawing.Point(1, 21)
+        Me.TabPage_arcaneHelmetsRhino.Name = "TabPage_arcaneHelmetsRhino"
+        Me.TabPage_arcaneHelmetsRhino.Size = New System.Drawing.Size(278, 53)
+        Me.TabPage_arcaneHelmetsRhino.TabIndex = 9
+        Me.TabPage_arcaneHelmetsRhino.Text = "Rhino"
+        '
+        'RadioButton_vanguardHelmet
+        '
+        Me.RadioButton_vanguardHelmet.AutoSize = True
+        Me.RadioButton_vanguardHelmet.Location = New System.Drawing.Point(128, 25)
+        Me.RadioButton_vanguardHelmet.Name = "RadioButton_vanguardHelmet"
+        Me.RadioButton_vanguardHelmet.Size = New System.Drawing.Size(136, 21)
+        Me.RadioButton_vanguardHelmet.TabIndex = 5
+        Me.RadioButton_vanguardHelmet.Tag = ""
+        Me.RadioButton_vanguardHelmet.Text = "Vanguard Helmet"
+        Me.RadioButton_vanguardHelmet.UseVisualStyleBackColor = True
+        '
+        'RadioButton_thrak
+        '
+        Me.RadioButton_thrak.AutoSize = True
+        Me.RadioButton_thrak.Checked = True
+        Me.RadioButton_thrak.Location = New System.Drawing.Point(11, 25)
+        Me.RadioButton_thrak.Name = "RadioButton_thrak"
+        Me.RadioButton_thrak.Size = New System.Drawing.Size(111, 21)
+        Me.RadioButton_thrak.TabIndex = 4
+        Me.RadioButton_thrak.TabStop = True
+        Me.RadioButton_thrak.Tag = ""
+        Me.RadioButton_thrak.Text = "Thrak Helmet"
+        Me.RadioButton_thrak.UseVisualStyleBackColor = True
+        '
+        'TabPage_arcaneHelmetsSaryn
+        '
+        Me.TabPage_arcaneHelmetsSaryn.BackColor = System.Drawing.Color.White
+        Me.TabPage_arcaneHelmetsSaryn.Controls.Add(Me.RadioButton_hemlockHelmet)
+        Me.TabPage_arcaneHelmetsSaryn.Location = New System.Drawing.Point(1, 21)
+        Me.TabPage_arcaneHelmetsSaryn.Name = "TabPage_arcaneHelmetsSaryn"
+        Me.TabPage_arcaneHelmetsSaryn.Size = New System.Drawing.Size(278, 53)
+        Me.TabPage_arcaneHelmetsSaryn.TabIndex = 10
+        Me.TabPage_arcaneHelmetsSaryn.Text = "Saryn"
+        '
+        'RadioButton_hemlockHelmet
+        '
+        Me.RadioButton_hemlockHelmet.AutoSize = True
+        Me.RadioButton_hemlockHelmet.Checked = True
+        Me.RadioButton_hemlockHelmet.Location = New System.Drawing.Point(9, 25)
+        Me.RadioButton_hemlockHelmet.Name = "RadioButton_hemlockHelmet"
+        Me.RadioButton_hemlockHelmet.Size = New System.Drawing.Size(128, 21)
+        Me.RadioButton_hemlockHelmet.TabIndex = 4
+        Me.RadioButton_hemlockHelmet.TabStop = True
+        Me.RadioButton_hemlockHelmet.Tag = ""
+        Me.RadioButton_hemlockHelmet.Text = "Hemlock Helmet"
+        Me.RadioButton_hemlockHelmet.UseVisualStyleBackColor = True
+        '
+        'TabPage_arcaneHelmetsTrinity
+        '
+        Me.TabPage_arcaneHelmetsTrinity.BackColor = System.Drawing.Color.White
+        Me.TabPage_arcaneHelmetsTrinity.Controls.Add(Me.RadioButton_meridianHelmet)
+        Me.TabPage_arcaneHelmetsTrinity.Controls.Add(Me.RadioButton_auraHelmet)
+        Me.TabPage_arcaneHelmetsTrinity.Location = New System.Drawing.Point(1, 21)
+        Me.TabPage_arcaneHelmetsTrinity.Name = "TabPage_arcaneHelmetsTrinity"
+        Me.TabPage_arcaneHelmetsTrinity.Size = New System.Drawing.Size(278, 53)
+        Me.TabPage_arcaneHelmetsTrinity.TabIndex = 11
+        Me.TabPage_arcaneHelmetsTrinity.Text = "Trinity"
+        '
+        'RadioButton_meridianHelmet
+        '
+        Me.RadioButton_meridianHelmet.AutoSize = True
+        Me.RadioButton_meridianHelmet.Location = New System.Drawing.Point(121, 25)
+        Me.RadioButton_meridianHelmet.Name = "RadioButton_meridianHelmet"
+        Me.RadioButton_meridianHelmet.Size = New System.Drawing.Size(128, 21)
+        Me.RadioButton_meridianHelmet.TabIndex = 5
+        Me.RadioButton_meridianHelmet.Tag = ""
+        Me.RadioButton_meridianHelmet.Text = "Maridian Helmet"
+        Me.RadioButton_meridianHelmet.UseVisualStyleBackColor = True
+        '
+        'RadioButton_auraHelmet
+        '
+        Me.RadioButton_auraHelmet.AutoSize = True
+        Me.RadioButton_auraHelmet.Checked = True
+        Me.RadioButton_auraHelmet.Location = New System.Drawing.Point(11, 25)
+        Me.RadioButton_auraHelmet.Name = "RadioButton_auraHelmet"
+        Me.RadioButton_auraHelmet.Size = New System.Drawing.Size(104, 21)
+        Me.RadioButton_auraHelmet.TabIndex = 4
+        Me.RadioButton_auraHelmet.TabStop = True
+        Me.RadioButton_auraHelmet.Tag = ""
+        Me.RadioButton_auraHelmet.Text = "Aura Helmet"
+        Me.RadioButton_auraHelmet.UseVisualStyleBackColor = True
+        '
+        'TabPage_arcaneHelmetsVauban
+        '
+        Me.TabPage_arcaneHelmetsVauban.BackColor = System.Drawing.Color.White
+        Me.TabPage_arcaneHelmetsVauban.Controls.Add(Me.RadioButton_espritHelmet)
+        Me.TabPage_arcaneHelmetsVauban.Location = New System.Drawing.Point(1, 21)
+        Me.TabPage_arcaneHelmetsVauban.Name = "TabPage_arcaneHelmetsVauban"
+        Me.TabPage_arcaneHelmetsVauban.Size = New System.Drawing.Size(278, 53)
+        Me.TabPage_arcaneHelmetsVauban.TabIndex = 12
+        Me.TabPage_arcaneHelmetsVauban.Text = "Vauban"
+        '
+        'RadioButton_espritHelmet
+        '
+        Me.RadioButton_espritHelmet.AutoSize = True
+        Me.RadioButton_espritHelmet.Checked = True
+        Me.RadioButton_espritHelmet.Location = New System.Drawing.Point(9, 25)
+        Me.RadioButton_espritHelmet.Name = "RadioButton_espritHelmet"
+        Me.RadioButton_espritHelmet.Size = New System.Drawing.Size(110, 21)
+        Me.RadioButton_espritHelmet.TabIndex = 4
+        Me.RadioButton_espritHelmet.TabStop = True
+        Me.RadioButton_espritHelmet.Tag = ""
+        Me.RadioButton_espritHelmet.Text = "Esprit Helmet"
+        Me.RadioButton_espritHelmet.UseVisualStyleBackColor = True
+        '
+        'TabPage_arcaneHelmetsVolt
+        '
+        Me.TabPage_arcaneHelmetsVolt.BackColor = System.Drawing.Color.White
+        Me.TabPage_arcaneHelmetsVolt.Controls.Add(Me.RadioButton_stormHelmet)
+        Me.TabPage_arcaneHelmetsVolt.Controls.Add(Me.RadioButton_pulseHelmet)
+        Me.TabPage_arcaneHelmetsVolt.Location = New System.Drawing.Point(1, 21)
+        Me.TabPage_arcaneHelmetsVolt.Name = "TabPage_arcaneHelmetsVolt"
+        Me.TabPage_arcaneHelmetsVolt.Size = New System.Drawing.Size(278, 53)
+        Me.TabPage_arcaneHelmetsVolt.TabIndex = 13
+        Me.TabPage_arcaneHelmetsVolt.Text = "Volt"
+        '
+        'RadioButton_stormHelmet
+        '
+        Me.RadioButton_stormHelmet.AutoSize = True
+        Me.RadioButton_stormHelmet.Location = New System.Drawing.Point(124, 25)
+        Me.RadioButton_stormHelmet.Name = "RadioButton_stormHelmet"
+        Me.RadioButton_stormHelmet.Size = New System.Drawing.Size(111, 21)
+        Me.RadioButton_stormHelmet.TabIndex = 5
+        Me.RadioButton_stormHelmet.Tag = ""
+        Me.RadioButton_stormHelmet.Text = "Storm Helmet"
+        Me.RadioButton_stormHelmet.UseVisualStyleBackColor = True
+        '
+        'RadioButton_pulseHelmet
+        '
+        Me.RadioButton_pulseHelmet.AutoSize = True
+        Me.RadioButton_pulseHelmet.Checked = True
+        Me.RadioButton_pulseHelmet.Location = New System.Drawing.Point(9, 25)
+        Me.RadioButton_pulseHelmet.Name = "RadioButton_pulseHelmet"
+        Me.RadioButton_pulseHelmet.Size = New System.Drawing.Size(109, 21)
+        Me.RadioButton_pulseHelmet.TabIndex = 4
+        Me.RadioButton_pulseHelmet.TabStop = True
+        Me.RadioButton_pulseHelmet.Tag = ""
+        Me.RadioButton_pulseHelmet.Text = "Pulse Helmet"
+        Me.RadioButton_pulseHelmet.UseVisualStyleBackColor = True
         '
         'CheckBox_specialEffects
         '
@@ -1879,1401 +2353,6 @@ Partial Class Form_main
         Me.CheckBox_isPrime.Text = "Prime"
         Me.CheckBox_isPrime.UseVisualStyleBackColor = True
         '
-        'Panel_Ruler
-        '
-        Me.Panel_Ruler.BackColor = System.Drawing.Color.Transparent
-        Me.Panel_Ruler.Location = New System.Drawing.Point(470, 81)
-        Me.Panel_Ruler.Name = "Panel_Ruler"
-        Me.Panel_Ruler.Size = New System.Drawing.Size(20, 73)
-        Me.Panel_Ruler.TabIndex = 110
-        Me.Panel_Ruler.Visible = False
-        '
-        'GroupBox_focus
-        '
-        Me.GroupBox_focus.Controls.Add(Me.NumericUpDown_stoneSkin)
-        Me.GroupBox_focus.Controls.Add(Me.CheckBox_stoneSkin)
-        Me.GroupBox_focus.Enabled = False
-        Me.GroupBox_focus.Location = New System.Drawing.Point(486, 156)
-        Me.GroupBox_focus.Name = "GroupBox_focus"
-        Me.GroupBox_focus.Size = New System.Drawing.Size(280, 63)
-        Me.GroupBox_focus.TabIndex = 114
-        Me.GroupBox_focus.TabStop = False
-        Me.GroupBox_focus.Text = "  "
-        '
-        'NumericUpDown_stoneSkin
-        '
-        Me.NumericUpDown_stoneSkin.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.NumericUpDown_stoneSkin.Location = New System.Drawing.Point(206, 26)
-        Me.NumericUpDown_stoneSkin.Maximum = New Decimal(New Integer() {3, 0, 0, 0})
-        Me.NumericUpDown_stoneSkin.Name = "NumericUpDown_stoneSkin"
-        Me.NumericUpDown_stoneSkin.Size = New System.Drawing.Size(61, 23)
-        Me.NumericUpDown_stoneSkin.TabIndex = 37
-        '
-        'CheckBox_stoneSkin
-        '
-        Me.CheckBox_stoneSkin.AutoSize = True
-        Me.CheckBox_stoneSkin.Location = New System.Drawing.Point(12, 25)
-        Me.CheckBox_stoneSkin.Name = "CheckBox_stoneSkin"
-        Me.CheckBox_stoneSkin.Size = New System.Drawing.Size(95, 21)
-        Me.CheckBox_stoneSkin.TabIndex = 0
-        Me.CheckBox_stoneSkin.Text = "Stone Skin"
-        Me.CheckBox_stoneSkin.UseVisualStyleBackColor = True
-        '
-        'CheckBox_blocking
-        '
-        Me.CheckBox_blocking.AutoSize = True
-        Me.CheckBox_blocking.Enabled = False
-        Me.CheckBox_blocking.Location = New System.Drawing.Point(259, 498)
-        Me.CheckBox_blocking.Name = "CheckBox_blocking"
-        Me.CheckBox_blocking.Size = New System.Drawing.Size(80, 21)
-        Me.CheckBox_blocking.TabIndex = 121
-        Me.CheckBox_blocking.Tag = "GroupBox_blocking"
-        Me.CheckBox_blocking.Text = "Blocking"
-        Me.CheckBox_blocking.UseVisualStyleBackColor = True
-        '
-        'GroupBox_blocking
-        '
-        Me.GroupBox_blocking.Controls.Add(Me.ComboBox_blocking)
-        Me.GroupBox_blocking.Enabled = False
-        Me.GroupBox_blocking.Location = New System.Drawing.Point(247, 498)
-        Me.GroupBox_blocking.Name = "GroupBox_blocking"
-        Me.GroupBox_blocking.Size = New System.Drawing.Size(233, 85)
-        Me.GroupBox_blocking.TabIndex = 122
-        Me.GroupBox_blocking.TabStop = False
-        Me.GroupBox_blocking.Text = "  "
-        '
-        'ComboBox_blocking
-        '
-        Me.ComboBox_blocking.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox_blocking.FormattingEnabled = True
-        Me.ComboBox_blocking.Items.AddRange(New Object() {"Blocking Damange Reduction", "35%", "60%", "80%", "85%", "90%"})
-        Me.ComboBox_blocking.Location = New System.Drawing.Point(12, 40)
-        Me.ComboBox_blocking.Name = "ComboBox_blocking"
-        Me.ComboBox_blocking.Size = New System.Drawing.Size(207, 24)
-        Me.ComboBox_blocking.TabIndex = 1
-        '
-        'TabPage_companion
-        '
-        Me.TabPage_companion.Controls.Add(Me.Label_companionNotice)
-        Me.TabPage_companion.Controls.Add(Me.GroupBox_companionResults)
-        Me.TabPage_companion.Controls.Add(Me.NumericUpDown_companionStability)
-        Me.TabPage_companion.Controls.Add(Me.Label_companionStability)
-        Me.TabPage_companion.Controls.Add(Me.CheckBox_companionSurvivability)
-        Me.TabPage_companion.Controls.Add(Me.GroupBox_companionSurvivability)
-        Me.TabPage_companion.Controls.Add(Me.CheckBox_companionPrimeCollar)
-        Me.TabPage_companion.Controls.Add(Me.ComboBox_companions)
-        Me.TabPage_companion.ImageKey = "sentinel.png"
-        Me.TabPage_companion.Location = New System.Drawing.Point(4, 29)
-        Me.TabPage_companion.Name = "TabPage_companion"
-        Me.TabPage_companion.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_companion.Size = New System.Drawing.Size(1018, 591)
-        Me.TabPage_companion.TabIndex = 1
-        Me.TabPage_companion.Text = "Companions  "
-        Me.TabPage_companion.UseVisualStyleBackColor = True
-        '
-        'Label_companionNotice
-        '
-        Me.Label_companionNotice.AutoSize = True
-        Me.Label_companionNotice.Location = New System.Drawing.Point(182, 517)
-        Me.Label_companionNotice.Name = "Label_companionNotice"
-        Me.Label_companionNotice.Size = New System.Drawing.Size(637, 17)
-        Me.Label_companionNotice.TabIndex = 111
-        Me.Label_companionNotice.Text = "Notice: Currently Companions are not affected by Warframe abilities this will be " &
-    "added at a later time"
-        '
-        'GroupBox_companionResults
-        '
-        Me.GroupBox_companionResults.Controls.Add(Me.Label_companionEHP)
-        Me.GroupBox_companionResults.Controls.Add(Me.TextBox_companionEHP)
-        Me.GroupBox_companionResults.Controls.Add(Me.TextBox_companionArmor)
-        Me.GroupBox_companionResults.Controls.Add(Me.Label_companionShield)
-        Me.GroupBox_companionResults.Controls.Add(Me.TextBox_companionShield)
-        Me.GroupBox_companionResults.Controls.Add(Me.Label_companionHealth)
-        Me.GroupBox_companionResults.Controls.Add(Me.TextBox_companionHealth)
-        Me.GroupBox_companionResults.Controls.Add(Me.Label_companionArmor)
-        Me.GroupBox_companionResults.Location = New System.Drawing.Point(520, 172)
-        Me.GroupBox_companionResults.Name = "GroupBox_companionResults"
-        Me.GroupBox_companionResults.Size = New System.Drawing.Size(233, 147)
-        Me.GroupBox_companionResults.TabIndex = 110
-        Me.GroupBox_companionResults.TabStop = False
-        '
-        'Label_companionEHP
-        '
-        Me.Label_companionEHP.AutoSize = True
-        Me.Label_companionEHP.Location = New System.Drawing.Point(9, 118)
-        Me.Label_companionEHP.Name = "Label_companionEHP"
-        Me.Label_companionEHP.Size = New System.Drawing.Size(111, 17)
-        Me.Label_companionEHP.TabIndex = 111
-        Me.Label_companionEHP.Text = "Effective Health:"
-        '
-        'TextBox_companionEHP
-        '
-        Me.TextBox_companionEHP.Location = New System.Drawing.Point(121, 115)
-        Me.TextBox_companionEHP.Name = "TextBox_companionEHP"
-        Me.TextBox_companionEHP.ReadOnly = True
-        Me.TextBox_companionEHP.Size = New System.Drawing.Size(102, 23)
-        Me.TextBox_companionEHP.TabIndex = 110
-        Me.TextBox_companionEHP.Text = "-"
-        Me.TextBox_companionEHP.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'TextBox_companionArmor
-        '
-        Me.TextBox_companionArmor.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.TextBox_companionArmor.Location = New System.Drawing.Point(121, 25)
-        Me.TextBox_companionArmor.Name = "TextBox_companionArmor"
-        Me.TextBox_companionArmor.ReadOnly = True
-        Me.TextBox_companionArmor.Size = New System.Drawing.Size(102, 23)
-        Me.TextBox_companionArmor.TabIndex = 105
-        Me.TextBox_companionArmor.Text = "-"
-        Me.TextBox_companionArmor.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'Label_companionShield
-        '
-        Me.Label_companionShield.AutoSize = True
-        Me.Label_companionShield.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.Label_companionShield.Location = New System.Drawing.Point(10, 77)
-        Me.Label_companionShield.Name = "Label_companionShield"
-        Me.Label_companionShield.Size = New System.Drawing.Size(51, 17)
-        Me.Label_companionShield.TabIndex = 107
-        Me.Label_companionShield.Text = "Shield:"
-        '
-        'TextBox_companionShield
-        '
-        Me.TextBox_companionShield.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.TextBox_companionShield.Location = New System.Drawing.Point(121, 77)
-        Me.TextBox_companionShield.Name = "TextBox_companionShield"
-        Me.TextBox_companionShield.ReadOnly = True
-        Me.TextBox_companionShield.Size = New System.Drawing.Size(102, 23)
-        Me.TextBox_companionShield.TabIndex = 109
-        Me.TextBox_companionShield.Text = "-"
-        Me.TextBox_companionShield.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'Label_companionHealth
-        '
-        Me.Label_companionHealth.AutoSize = True
-        Me.Label_companionHealth.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.Label_companionHealth.Location = New System.Drawing.Point(10, 51)
-        Me.Label_companionHealth.Name = "Label_companionHealth"
-        Me.Label_companionHealth.Size = New System.Drawing.Size(53, 17)
-        Me.Label_companionHealth.TabIndex = 106
-        Me.Label_companionHealth.Text = "Health:"
-        '
-        'TextBox_companionHealth
-        '
-        Me.TextBox_companionHealth.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.TextBox_companionHealth.Location = New System.Drawing.Point(121, 51)
-        Me.TextBox_companionHealth.Name = "TextBox_companionHealth"
-        Me.TextBox_companionHealth.ReadOnly = True
-        Me.TextBox_companionHealth.Size = New System.Drawing.Size(102, 23)
-        Me.TextBox_companionHealth.TabIndex = 108
-        Me.TextBox_companionHealth.Text = "-"
-        Me.TextBox_companionHealth.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'Label_companionArmor
-        '
-        Me.Label_companionArmor.AutoSize = True
-        Me.Label_companionArmor.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.Label_companionArmor.Location = New System.Drawing.Point(10, 25)
-        Me.Label_companionArmor.Name = "Label_companionArmor"
-        Me.Label_companionArmor.Size = New System.Drawing.Size(50, 17)
-        Me.Label_companionArmor.TabIndex = 104
-        Me.Label_companionArmor.Text = "Armor:"
-        '
-        'NumericUpDown_companionStability
-        '
-        Me.NumericUpDown_companionStability.Enabled = False
-        Me.NumericUpDown_companionStability.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.NumericUpDown_companionStability.Increment = New Decimal(New Integer() {5, 0, 0, 0})
-        Me.NumericUpDown_companionStability.Location = New System.Drawing.Point(430, 288)
-        Me.NumericUpDown_companionStability.Minimum = New Decimal(New Integer() {95, 0, 0, -2147483648})
-        Me.NumericUpDown_companionStability.Name = "NumericUpDown_companionStability"
-        Me.NumericUpDown_companionStability.Size = New System.Drawing.Size(74, 23)
-        Me.NumericUpDown_companionStability.TabIndex = 103
-        Me.NumericUpDown_companionStability.Value = New Decimal(New Integer() {100, 0, 0, 0})
-        '
-        'Label_companionStability
-        '
-        Me.Label_companionStability.AutoSize = True
-        Me.Label_companionStability.Enabled = False
-        Me.Label_companionStability.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.Label_companionStability.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label_companionStability.Location = New System.Drawing.Point(290, 290)
-        Me.Label_companionStability.Name = "Label_companionStability"
-        Me.Label_companionStability.Size = New System.Drawing.Size(114, 17)
-        Me.Label_companionStability.TabIndex = 102
-        Me.Label_companionStability.Text = "Genetic Stability:"
-        '
-        'CheckBox_companionSurvivability
-        '
-        Me.CheckBox_companionSurvivability.AutoSize = True
-        Me.CheckBox_companionSurvivability.Enabled = False
-        Me.CheckBox_companionSurvivability.Location = New System.Drawing.Point(293, 172)
-        Me.CheckBox_companionSurvivability.Name = "CheckBox_companionSurvivability"
-        Me.CheckBox_companionSurvivability.Size = New System.Drawing.Size(102, 21)
-        Me.CheckBox_companionSurvivability.TabIndex = 100
-        Me.CheckBox_companionSurvivability.Tag = "GroupBox_companionSurvivability"
-        Me.CheckBox_companionSurvivability.Text = "Survivability"
-        Me.CheckBox_companionSurvivability.UseVisualStyleBackColor = True
-        '
-        'GroupBox_companionSurvivability
-        '
-        Me.GroupBox_companionSurvivability.Controls.Add(Me.CheckBox_companionLinkShield)
-        Me.GroupBox_companionSurvivability.Controls.Add(Me.NumericUpDown_companionLinkShield)
-        Me.GroupBox_companionSurvivability.Controls.Add(Me.CheckBox_companionLinkHealth)
-        Me.GroupBox_companionSurvivability.Controls.Add(Me.NumericUpDown_companionLinkHealth)
-        Me.GroupBox_companionSurvivability.Controls.Add(Me.CheckBox_companionLinkArmor)
-        Me.GroupBox_companionSurvivability.Controls.Add(Me.NumericUpDown_companionLinkArmor)
-        Me.GroupBox_companionSurvivability.Enabled = False
-        Me.GroupBox_companionSurvivability.Location = New System.Drawing.Point(281, 172)
-        Me.GroupBox_companionSurvivability.Name = "GroupBox_companionSurvivability"
-        Me.GroupBox_companionSurvivability.Size = New System.Drawing.Size(233, 112)
-        Me.GroupBox_companionSurvivability.TabIndex = 101
-        Me.GroupBox_companionSurvivability.TabStop = False
-        Me.GroupBox_companionSurvivability.Text = "  "
-        '
-        'CheckBox_companionLinkShield
-        '
-        Me.CheckBox_companionLinkShield.AutoSize = True
-        Me.CheckBox_companionLinkShield.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.CheckBox_companionLinkShield.Location = New System.Drawing.Point(12, 79)
-        Me.CheckBox_companionLinkShield.Name = "CheckBox_companionLinkShield"
-        Me.CheckBox_companionLinkShield.Size = New System.Drawing.Size(100, 21)
-        Me.CheckBox_companionLinkShield.TabIndex = 22
-        Me.CheckBox_companionLinkShield.Text = "Shield Link:"
-        Me.CheckBox_companionLinkShield.UseVisualStyleBackColor = True
-        '
-        'NumericUpDown_companionLinkShield
-        '
-        Me.NumericUpDown_companionLinkShield.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.NumericUpDown_companionLinkShield.Location = New System.Drawing.Point(149, 78)
-        Me.NumericUpDown_companionLinkShield.Maximum = New Decimal(New Integer() {10, 0, 0, 0})
-        Me.NumericUpDown_companionLinkShield.Name = "NumericUpDown_companionLinkShield"
-        Me.NumericUpDown_companionLinkShield.Size = New System.Drawing.Size(74, 23)
-        Me.NumericUpDown_companionLinkShield.TabIndex = 21
-        '
-        'CheckBox_companionLinkHealth
-        '
-        Me.CheckBox_companionLinkHealth.AutoSize = True
-        Me.CheckBox_companionLinkHealth.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.CheckBox_companionLinkHealth.Location = New System.Drawing.Point(12, 53)
-        Me.CheckBox_companionLinkHealth.Name = "CheckBox_companionLinkHealth"
-        Me.CheckBox_companionLinkHealth.Size = New System.Drawing.Size(102, 21)
-        Me.CheckBox_companionLinkHealth.TabIndex = 20
-        Me.CheckBox_companionLinkHealth.Text = "Health Link:"
-        Me.CheckBox_companionLinkHealth.UseVisualStyleBackColor = True
-        '
-        'NumericUpDown_companionLinkHealth
-        '
-        Me.NumericUpDown_companionLinkHealth.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.NumericUpDown_companionLinkHealth.Location = New System.Drawing.Point(149, 52)
-        Me.NumericUpDown_companionLinkHealth.Maximum = New Decimal(New Integer() {10, 0, 0, 0})
-        Me.NumericUpDown_companionLinkHealth.Name = "NumericUpDown_companionLinkHealth"
-        Me.NumericUpDown_companionLinkHealth.Size = New System.Drawing.Size(74, 23)
-        Me.NumericUpDown_companionLinkHealth.TabIndex = 19
-        '
-        'CheckBox_companionLinkArmor
-        '
-        Me.CheckBox_companionLinkArmor.AutoSize = True
-        Me.CheckBox_companionLinkArmor.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.CheckBox_companionLinkArmor.Location = New System.Drawing.Point(12, 27)
-        Me.CheckBox_companionLinkArmor.Name = "CheckBox_companionLinkArmor"
-        Me.CheckBox_companionLinkArmor.Size = New System.Drawing.Size(99, 21)
-        Me.CheckBox_companionLinkArmor.TabIndex = 18
-        Me.CheckBox_companionLinkArmor.Text = "Armor Link:"
-        Me.CheckBox_companionLinkArmor.UseVisualStyleBackColor = True
-        '
-        'NumericUpDown_companionLinkArmor
-        '
-        Me.NumericUpDown_companionLinkArmor.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.NumericUpDown_companionLinkArmor.Location = New System.Drawing.Point(149, 26)
-        Me.NumericUpDown_companionLinkArmor.Maximum = New Decimal(New Integer() {10, 0, 0, 0})
-        Me.NumericUpDown_companionLinkArmor.Name = "NumericUpDown_companionLinkArmor"
-        Me.NumericUpDown_companionLinkArmor.Size = New System.Drawing.Size(74, 23)
-        Me.NumericUpDown_companionLinkArmor.TabIndex = 17
-        '
-        'CheckBox_companionPrimeCollar
-        '
-        Me.CheckBox_companionPrimeCollar.AutoSize = True
-        Me.CheckBox_companionPrimeCollar.Enabled = False
-        Me.CheckBox_companionPrimeCollar.Location = New System.Drawing.Point(532, 145)
-        Me.CheckBox_companionPrimeCollar.Name = "CheckBox_companionPrimeCollar"
-        Me.CheckBox_companionPrimeCollar.Size = New System.Drawing.Size(103, 21)
-        Me.CheckBox_companionPrimeCollar.TabIndex = 5
-        Me.CheckBox_companionPrimeCollar.Text = "Prime Collar"
-        Me.CheckBox_companionPrimeCollar.UseVisualStyleBackColor = True
-        '
-        'ComboBox_companions
-        '
-        Me.ComboBox_companions.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox_companions.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.ComboBox_companions.FormattingEnabled = True
-        Me.ComboBox_companions.Items.AddRange(New Object() {"Select a Pet", "Adarza", "Smeeta", "Chesa", "Huras", "Raksa", "Sahasa", "Sunika", "Helminth Charger", "Venari"})
-        Me.ComboBox_companions.Location = New System.Drawing.Point(280, 142)
-        Me.ComboBox_companions.Name = "ComboBox_companions"
-        Me.ComboBox_companions.Size = New System.Drawing.Size(233, 24)
-        Me.ComboBox_companions.TabIndex = 4
-        '
-        'TabPage_archwing
-        '
-        Me.TabPage_archwing.Controls.Add(Me.Label_archwingPlaceholder)
-        Me.TabPage_archwing.ImageKey = "archwing.png"
-        Me.TabPage_archwing.Location = New System.Drawing.Point(4, 29)
-        Me.TabPage_archwing.Name = "TabPage_archwing"
-        Me.TabPage_archwing.Size = New System.Drawing.Size(1018, 591)
-        Me.TabPage_archwing.TabIndex = 3
-        Me.TabPage_archwing.Text = "Archwing  "
-        Me.TabPage_archwing.UseVisualStyleBackColor = True
-        '
-        'Label_archwingPlaceholder
-        '
-        Me.Label_archwingPlaceholder.AutoSize = True
-        Me.Label_archwingPlaceholder.Location = New System.Drawing.Point(460, 229)
-        Me.Label_archwingPlaceholder.Name = "Label_archwingPlaceholder"
-        Me.Label_archwingPlaceholder.Size = New System.Drawing.Size(102, 17)
-        Me.Label_archwingPlaceholder.TabIndex = 115
-        Me.Label_archwingPlaceholder.Text = "Coming Soon™"
-        Me.Label_archwingPlaceholder.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'TabPage_development
-        '
-        Me.TabPage_development.Controls.Add(Me.ComboBox_umbraPower)
-        Me.TabPage_development.Controls.Add(Me.ComboBox_umbraBasePower)
-        Me.TabPage_development.Controls.Add(Me.ComboBox_primePower)
-        Me.TabPage_development.Controls.Add(Me.ComboBox_primeBasePower)
-        Me.TabPage_development.Controls.Add(Me.ComboBox_power)
-        Me.TabPage_development.Controls.Add(Me.ComboBox_basePower)
-        Me.TabPage_development.Controls.Add(Me.Label_devUmbraStats)
-        Me.TabPage_development.Controls.Add(Me.ComboBox_umbraEnergy)
-        Me.TabPage_development.Controls.Add(Me.ComboBox_umbraShield)
-        Me.TabPage_development.Controls.Add(Me.ComboBox_umbraHealth)
-        Me.TabPage_development.Controls.Add(Me.ComboBox_umbraArmor)
-        Me.TabPage_development.Controls.Add(Me.ComboBox_umbraBaseEnergy)
-        Me.TabPage_development.Controls.Add(Me.ComboBox_umbraBaseShield)
-        Me.TabPage_development.Controls.Add(Me.ComboBox_umbraBaseHealth)
-        Me.TabPage_development.Controls.Add(Me.ComboBox_umbraBaseArmor)
-        Me.TabPage_development.Controls.Add(Me.ComboBox_umbras)
-        Me.TabPage_development.Controls.Add(Me.CheckBox1)
-        Me.TabPage_development.Controls.Add(Me.GroupBox1)
-        Me.TabPage_development.Controls.Add(Me.Label_companions)
-        Me.TabPage_development.Controls.Add(Me.Label_devPrimeStats)
-        Me.TabPage_development.Controls.Add(Me.Label_devStats)
-        Me.TabPage_development.Controls.Add(Me.ComboBox_primeEnergy)
-        Me.TabPage_development.Controls.Add(Me.ComboBox_primeShield)
-        Me.TabPage_development.Controls.Add(Me.ComboBox_primeHealth)
-        Me.TabPage_development.Controls.Add(Me.ComboBox_primeArmor)
-        Me.TabPage_development.Controls.Add(Me.ComboBox_primeBaseEnergy)
-        Me.TabPage_development.Controls.Add(Me.ComboBox_primeBaseShield)
-        Me.TabPage_development.Controls.Add(Me.ComboBox_primeBaseHealth)
-        Me.TabPage_development.Controls.Add(Me.ComboBox_primeBaseArmor)
-        Me.TabPage_development.Controls.Add(Me.ComboBox_primes)
-        Me.TabPage_development.Controls.Add(Me.ComboBox_petShield)
-        Me.TabPage_development.Controls.Add(Me.ComboBox_petHealth)
-        Me.TabPage_development.Controls.Add(Me.ComboBox_petArmor)
-        Me.TabPage_development.Controls.Add(Me.ComboBox_energy)
-        Me.TabPage_development.Controls.Add(Me.ComboBox_shield)
-        Me.TabPage_development.Controls.Add(Me.ComboBox_health)
-        Me.TabPage_development.Controls.Add(Me.ComboBox_armor)
-        Me.TabPage_development.Controls.Add(Me.ComboBox_baseEnergy)
-        Me.TabPage_development.Controls.Add(Me.ComboBox_baseShield)
-        Me.TabPage_development.Controls.Add(Me.ComboBox_baseHealth)
-        Me.TabPage_development.Controls.Add(Me.ComboBox_baseArmor)
-        Me.TabPage_development.ImageKey = "alert.png"
-        Me.TabPage_development.Location = New System.Drawing.Point(4, 29)
-        Me.TabPage_development.Name = "TabPage_development"
-        Me.TabPage_development.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_development.Size = New System.Drawing.Size(1018, 591)
-        Me.TabPage_development.TabIndex = 2
-        Me.TabPage_development.Text = "Development  "
-        Me.TabPage_development.UseVisualStyleBackColor = True
-        '
-        'ComboBox_umbraPower
-        '
-        Me.ComboBox_umbraPower.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox_umbraPower.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox_umbraPower.FormattingEnabled = True
-        Me.ComboBox_umbraPower.Items.AddRange(New Object() {"UMBRA POWER", "100_Excalibur"})
-        Me.ComboBox_umbraPower.Location = New System.Drawing.Point(455, 429)
-        Me.ComboBox_umbraPower.Name = "ComboBox_umbraPower"
-        Me.ComboBox_umbraPower.Size = New System.Drawing.Size(120, 24)
-        Me.ComboBox_umbraPower.TabIndex = 115
-        Me.ComboBox_umbraPower.TabStop = False
-        '
-        'ComboBox_umbraBasePower
-        '
-        Me.ComboBox_umbraBasePower.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox_umbraBasePower.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox_umbraBasePower.FormattingEnabled = True
-        Me.ComboBox_umbraBasePower.Items.AddRange(New Object() {"UMBRA BASE POWER", "100_Excalibur"})
-        Me.ComboBox_umbraBasePower.Location = New System.Drawing.Point(329, 429)
-        Me.ComboBox_umbraBasePower.Name = "ComboBox_umbraBasePower"
-        Me.ComboBox_umbraBasePower.Size = New System.Drawing.Size(120, 24)
-        Me.ComboBox_umbraBasePower.TabIndex = 114
-        Me.ComboBox_umbraBasePower.TabStop = False
-        '
-        'ComboBox_primePower
-        '
-        Me.ComboBox_primePower.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox_primePower.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox_primePower.FormattingEnabled = True
-        Me.ComboBox_primePower.Items.AddRange(New Object() {"PRIME POWER", "100_Ash", "100_Banshee", "100_Chroma", "100_Ember", "100_Excalibur", "100_Frost", "100_Hydroid", "100_Limbo", "100_Loki", "100_Mag", "100_Mirage", "100_Nekros", "100_Nova", "100_Nyx", "100_Oberon", "100_Rhino", "100_Saryn", "100_Trinity", "100_Valkyr", "100_Vauban", "100_Volt", "100_Zephyr"})
-        Me.ComboBox_primePower.Location = New System.Drawing.Point(166, 391)
-        Me.ComboBox_primePower.Name = "ComboBox_primePower"
-        Me.ComboBox_primePower.Size = New System.Drawing.Size(120, 24)
-        Me.ComboBox_primePower.TabIndex = 113
-        Me.ComboBox_primePower.TabStop = False
-        '
-        'ComboBox_primeBasePower
-        '
-        Me.ComboBox_primeBasePower.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox_primeBasePower.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox_primeBasePower.FormattingEnabled = True
-        Me.ComboBox_primeBasePower.Items.AddRange(New Object() {"PRIME BASE POWER", "100_Ash", "100_Banshee", "100_Chroma", "100_Ember", "100_Excalibur", "100_Frost", "100_Hydroid", "100_Limbo", "100_Loki", "100_Mag", "100_Mirage", "100_Nekros", "100_Nova", "100_Nyx", "100_Oberon", "100_Rhino", "100_Saryn", "100_Trinity", "100_Valkyr", "100_Vauban", "100_Volt", "100_Zephyr"})
-        Me.ComboBox_primeBasePower.Location = New System.Drawing.Point(40, 391)
-        Me.ComboBox_primeBasePower.Name = "ComboBox_primeBasePower"
-        Me.ComboBox_primeBasePower.Size = New System.Drawing.Size(120, 24)
-        Me.ComboBox_primeBasePower.TabIndex = 112
-        Me.ComboBox_primeBasePower.TabStop = False
-        '
-        'ComboBox_power
-        '
-        Me.ComboBox_power.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox_power.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox_power.FormattingEnabled = True
-        Me.ComboBox_power.Items.AddRange(New Object() {"POWER", "100_Ash", "100_Atlas", "100_Banshee", "100_Baruuk", "100_Chroma", "100_Ember", "100_Equinox", "100_Excalibur", "100_Frost", "100_Gara", "100_Garuda", "100_Harrow", "100_Hydroid", "100_Inaros", "100_Ivara", "100_Khora", "100_Limbo", "100_Loki", "100_Mag", "100_Mesa", "100_Mirage", "100_Nekros", "100_Nezha", "115_Nidus", "100_Nova", "100_Nyx", "100_Oberon", "100_Octavia", "100_Revenant", "100_Rhino", "100_Saryn", "100_Titania", "100_Trinity", "100_Valkyr", "100_Vauban", "100_Volt", "100_Wukong", "100_Zephyr"})
-        Me.ComboBox_power.Location = New System.Drawing.Point(166, 180)
-        Me.ComboBox_power.Name = "ComboBox_power"
-        Me.ComboBox_power.Size = New System.Drawing.Size(120, 24)
-        Me.ComboBox_power.TabIndex = 111
-        Me.ComboBox_power.TabStop = False
-        '
-        'ComboBox_basePower
-        '
-        Me.ComboBox_basePower.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox_basePower.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox_basePower.FormattingEnabled = True
-        Me.ComboBox_basePower.Items.AddRange(New Object() {"BASE POWER", "100_Ash", "100_Atlas", "100_Banshee", "100_Baruuk", "100_Chroma", "100_Ember", "100_Equinox", "100_Excalibur", "100_Frost", "100_Gara", "100_Garuda", "100_Harrow", "100_Hydroid", "100_Inaros", "100_Ivara", "100_Khora", "100_Limbo", "100_Loki", "100_Mag", "100_Mesa", "100_Mirage", "100_Nekros", "100_Nezha", "100_Nidus", "100_Nova", "100_Nyx", "100_Oberon", "100_Octavia", "100_Revenant", "100_Rhino", "100_Saryn", "100_Titania", "100_Trinity", "100_Valkyr", "100_Vauban", "100_Volt", "100_Wukong", "100_Zephyr"})
-        Me.ComboBox_basePower.Location = New System.Drawing.Point(40, 180)
-        Me.ComboBox_basePower.Name = "ComboBox_basePower"
-        Me.ComboBox_basePower.Size = New System.Drawing.Size(120, 24)
-        Me.ComboBox_basePower.TabIndex = 110
-        Me.ComboBox_basePower.TabStop = False
-        '
-        'Label_devUmbraStats
-        '
-        Me.Label_devUmbraStats.AutoSize = True
-        Me.Label_devUmbraStats.Location = New System.Drawing.Point(326, 259)
-        Me.Label_devUmbraStats.Name = "Label_devUmbraStats"
-        Me.Label_devUmbraStats.Size = New System.Drawing.Size(144, 17)
-        Me.Label_devUmbraStats.TabIndex = 109
-        Me.Label_devUmbraStats.Text = "umbra warframe stats"
-        '
-        'ComboBox_umbraEnergy
-        '
-        Me.ComboBox_umbraEnergy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox_umbraEnergy.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox_umbraEnergy.FormattingEnabled = True
-        Me.ComboBox_umbraEnergy.Items.AddRange(New Object() {"UMBRA ENERGY", "150_Excalibur"})
-        Me.ComboBox_umbraEnergy.Location = New System.Drawing.Point(455, 399)
-        Me.ComboBox_umbraEnergy.Name = "ComboBox_umbraEnergy"
-        Me.ComboBox_umbraEnergy.Size = New System.Drawing.Size(120, 24)
-        Me.ComboBox_umbraEnergy.TabIndex = 108
-        Me.ComboBox_umbraEnergy.TabStop = False
-        '
-        'ComboBox_umbraShield
-        '
-        Me.ComboBox_umbraShield.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox_umbraShield.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox_umbraShield.FormattingEnabled = True
-        Me.ComboBox_umbraShield.Items.AddRange(New Object() {"UMBRA SHIELD", "300_Excalibur"})
-        Me.ComboBox_umbraShield.Location = New System.Drawing.Point(455, 369)
-        Me.ComboBox_umbraShield.Name = "ComboBox_umbraShield"
-        Me.ComboBox_umbraShield.Size = New System.Drawing.Size(120, 24)
-        Me.ComboBox_umbraShield.TabIndex = 107
-        Me.ComboBox_umbraShield.TabStop = False
-        '
-        'ComboBox_umbraHealth
-        '
-        Me.ComboBox_umbraHealth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox_umbraHealth.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox_umbraHealth.FormattingEnabled = True
-        Me.ComboBox_umbraHealth.Items.AddRange(New Object() {"UMBRA HEALTH", "300_Excalibur"})
-        Me.ComboBox_umbraHealth.Location = New System.Drawing.Point(455, 339)
-        Me.ComboBox_umbraHealth.Name = "ComboBox_umbraHealth"
-        Me.ComboBox_umbraHealth.Size = New System.Drawing.Size(120, 24)
-        Me.ComboBox_umbraHealth.TabIndex = 106
-        Me.ComboBox_umbraHealth.TabStop = False
-        '
-        'ComboBox_umbraArmor
-        '
-        Me.ComboBox_umbraArmor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox_umbraArmor.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox_umbraArmor.FormattingEnabled = True
-        Me.ComboBox_umbraArmor.Items.AddRange(New Object() {"UMBRA ARMOR", "300_Excalibur"})
-        Me.ComboBox_umbraArmor.Location = New System.Drawing.Point(455, 309)
-        Me.ComboBox_umbraArmor.Name = "ComboBox_umbraArmor"
-        Me.ComboBox_umbraArmor.Size = New System.Drawing.Size(120, 24)
-        Me.ComboBox_umbraArmor.TabIndex = 105
-        Me.ComboBox_umbraArmor.TabStop = False
-        '
-        'ComboBox_umbraBaseEnergy
-        '
-        Me.ComboBox_umbraBaseEnergy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox_umbraBaseEnergy.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox_umbraBaseEnergy.FormattingEnabled = True
-        Me.ComboBox_umbraBaseEnergy.Items.AddRange(New Object() {"UMBRA BASE ENERGY", "100_Excalibur"})
-        Me.ComboBox_umbraBaseEnergy.Location = New System.Drawing.Point(329, 399)
-        Me.ComboBox_umbraBaseEnergy.Name = "ComboBox_umbraBaseEnergy"
-        Me.ComboBox_umbraBaseEnergy.Size = New System.Drawing.Size(120, 24)
-        Me.ComboBox_umbraBaseEnergy.TabIndex = 104
-        Me.ComboBox_umbraBaseEnergy.TabStop = False
-        '
-        'ComboBox_umbraBaseShield
-        '
-        Me.ComboBox_umbraBaseShield.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox_umbraBaseShield.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox_umbraBaseShield.FormattingEnabled = True
-        Me.ComboBox_umbraBaseShield.Items.AddRange(New Object() {"UMBRA BASE SHIELD", "100_Excalibur"})
-        Me.ComboBox_umbraBaseShield.Location = New System.Drawing.Point(329, 369)
-        Me.ComboBox_umbraBaseShield.Name = "ComboBox_umbraBaseShield"
-        Me.ComboBox_umbraBaseShield.Size = New System.Drawing.Size(120, 24)
-        Me.ComboBox_umbraBaseShield.TabIndex = 103
-        Me.ComboBox_umbraBaseShield.TabStop = False
-        '
-        'ComboBox_umbraBaseHealth
-        '
-        Me.ComboBox_umbraBaseHealth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox_umbraBaseHealth.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox_umbraBaseHealth.FormattingEnabled = True
-        Me.ComboBox_umbraBaseHealth.Items.AddRange(New Object() {"UMBRA BASE HEALTH", "100_Excalibur"})
-        Me.ComboBox_umbraBaseHealth.Location = New System.Drawing.Point(329, 339)
-        Me.ComboBox_umbraBaseHealth.Name = "ComboBox_umbraBaseHealth"
-        Me.ComboBox_umbraBaseHealth.Size = New System.Drawing.Size(120, 24)
-        Me.ComboBox_umbraBaseHealth.TabIndex = 102
-        Me.ComboBox_umbraBaseHealth.TabStop = False
-        '
-        'ComboBox_umbraBaseArmor
-        '
-        Me.ComboBox_umbraBaseArmor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox_umbraBaseArmor.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox_umbraBaseArmor.FormattingEnabled = True
-        Me.ComboBox_umbraBaseArmor.Items.AddRange(New Object() {"UMBRA BASE ARMOR", "300_Excalibur"})
-        Me.ComboBox_umbraBaseArmor.Location = New System.Drawing.Point(329, 309)
-        Me.ComboBox_umbraBaseArmor.Name = "ComboBox_umbraBaseArmor"
-        Me.ComboBox_umbraBaseArmor.Size = New System.Drawing.Size(120, 24)
-        Me.ComboBox_umbraBaseArmor.TabIndex = 101
-        Me.ComboBox_umbraBaseArmor.TabStop = False
-        '
-        'ComboBox_umbras
-        '
-        Me.ComboBox_umbras.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox_umbras.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox_umbras.FormattingEnabled = True
-        Me.ComboBox_umbras.Items.AddRange(New Object() {"UMBRAS", "Excalibur"})
-        Me.ComboBox_umbras.Location = New System.Drawing.Point(329, 279)
-        Me.ComboBox_umbras.Name = "ComboBox_umbras"
-        Me.ComboBox_umbras.Size = New System.Drawing.Size(246, 24)
-        Me.ComboBox_umbras.TabIndex = 100
-        Me.ComboBox_umbras.TabStop = False
-        '
-        'CheckBox1
-        '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Enabled = False
-        Me.CheckBox1.Location = New System.Drawing.Point(778, 40)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(66, 21)
-        Me.CheckBox1.TabIndex = 98
-        Me.CheckBox1.Text = "NAME"
-        Me.CheckBox1.UseVisualStyleBackColor = True
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Enabled = False
-        Me.GroupBox1.Location = New System.Drawing.Point(766, 40)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(222, 159)
-        Me.GroupBox1.TabIndex = 99
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "  "
-        '
-        'Label_companions
-        '
-        Me.Label_companions.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Label_companions.AutoSize = True
-        Me.Label_companions.Location = New System.Drawing.Point(326, 129)
-        Me.Label_companions.Name = "Label_companions"
-        Me.Label_companions.Size = New System.Drawing.Size(62, 17)
-        Me.Label_companions.TabIndex = 97
-        Me.Label_companions.Text = "pet stats"
-        '
-        'Label_devPrimeStats
-        '
-        Me.Label_devPrimeStats.AutoSize = True
-        Me.Label_devPrimeStats.Location = New System.Drawing.Point(37, 221)
-        Me.Label_devPrimeStats.Name = "Label_devPrimeStats"
-        Me.Label_devPrimeStats.Size = New System.Drawing.Size(139, 17)
-        Me.Label_devPrimeStats.TabIndex = 96
-        Me.Label_devPrimeStats.Text = "prime warframe stats"
-        '
-        'Label_devStats
-        '
-        Me.Label_devStats.AutoSize = True
-        Me.Label_devStats.Location = New System.Drawing.Point(37, 40)
-        Me.Label_devStats.Name = "Label_devStats"
-        Me.Label_devStats.Size = New System.Drawing.Size(100, 17)
-        Me.Label_devStats.TabIndex = 95
-        Me.Label_devStats.Text = "warframe stats"
-        '
-        'ComboBox_primeEnergy
-        '
-        Me.ComboBox_primeEnergy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox_primeEnergy.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox_primeEnergy.FormattingEnabled = True
-        Me.ComboBox_primeEnergy.Items.AddRange(New Object() {"PRIME ENERGY", "150_Ash", "262.5_Banshee", "300_Chroma", "225_Ember", "150_Excalibur", "150_Frost", "225_Hydroid", "262_Limbo", "262.5_Loki", "262.5_Mag", "225_Mirage", "187.5_Nekros", "262.5_Nova", "225_Nyx", "262.5_Oberon", "150_Rhino", "300_Saryn", "225_Trinity", "225_Valkyr", "225_Vauban", "300_Volt", "225_Zephyr"})
-        Me.ComboBox_primeEnergy.Location = New System.Drawing.Point(166, 361)
-        Me.ComboBox_primeEnergy.Name = "ComboBox_primeEnergy"
-        Me.ComboBox_primeEnergy.Size = New System.Drawing.Size(120, 24)
-        Me.ComboBox_primeEnergy.TabIndex = 94
-        Me.ComboBox_primeEnergy.TabStop = False
-        '
-        'ComboBox_primeShield
-        '
-        Me.ComboBox_primeShield.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox_primeShield.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox_primeShield.FormattingEnabled = True
-        Me.ComboBox_primeShield.Items.AddRange(New Object() {"PRIME SHIELD", "375_Ash", "300_Banshee", "300_Chroma", "375_Ember", "300_Excalibur", "525_Frost", "525_Hydroid", "300_Limbo", "225_Loki", "450_Mag", "330_Mirage", "450_Nekros", "300_Nova", "375_Nyx", "300_Oberon", "450_Rhino", "300_Saryn", "450_Trinity", "150_Valkyr", "300_Vauban", "450_Volt", "450_Zephyr"})
-        Me.ComboBox_primeShield.Location = New System.Drawing.Point(166, 331)
-        Me.ComboBox_primeShield.Name = "ComboBox_primeShield"
-        Me.ComboBox_primeShield.Size = New System.Drawing.Size(120, 24)
-        Me.ComboBox_primeShield.TabIndex = 93
-        Me.ComboBox_primeShield.TabStop = False
-        '
-        'ComboBox_primeHealth
-        '
-        Me.ComboBox_primeHealth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox_primeHealth.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox_primeHealth.FormattingEnabled = True
-        Me.ComboBox_primeHealth.Items.AddRange(New Object() {"PRIME HEALTH", "450_Ash", "300_Banshee", "300_Chroma", "300_Ember", "300_Excalibur", "300_Frost", "300_Hydroid", "300_Limbo", "225_Loki", "300_Mag", "240_Mirage", "300_Nekros", "300_Nova", "300_Nyx", "375_Oberon", "300_Rhino", "375_Saryn", "300_Trinity", "300_Valkyr", "300_Vauban", "300_Volt", "450_Zephyr"})
-        Me.ComboBox_primeHealth.Location = New System.Drawing.Point(166, 301)
-        Me.ComboBox_primeHealth.Name = "ComboBox_primeHealth"
-        Me.ComboBox_primeHealth.Size = New System.Drawing.Size(120, 24)
-        Me.ComboBox_primeHealth.TabIndex = 92
-        Me.ComboBox_primeHealth.TabStop = False
-        '
-        'ComboBox_primeArmor
-        '
-        Me.ComboBox_primeArmor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox_primeArmor.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox_primeArmor.FormattingEnabled = True
-        Me.ComboBox_primeArmor.Items.AddRange(New Object() {"PRIME ARMOR", "150_Ash", "65_Banshee", "425_Chroma", "125_Ember", "300_Excalibur", "300_Frost", "250_Hydroid", "85_Limbo", "65_Loki", "65_Mag", "150_Mirage", "65_Nekros", "65_Nova", "50_Nyx", "225_Oberon", "275_Rhino", "300_Saryn", "15_Trinity", "700_Valkyr", "100_Vauban", "100_Volt", "75_Zephyr"})
-        Me.ComboBox_primeArmor.Location = New System.Drawing.Point(166, 271)
-        Me.ComboBox_primeArmor.Name = "ComboBox_primeArmor"
-        Me.ComboBox_primeArmor.Size = New System.Drawing.Size(120, 24)
-        Me.ComboBox_primeArmor.TabIndex = 91
-        Me.ComboBox_primeArmor.TabStop = False
-        '
-        'ComboBox_primeBaseEnergy
-        '
-        Me.ComboBox_primeBaseEnergy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox_primeBaseEnergy.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox_primeBaseEnergy.FormattingEnabled = True
-        Me.ComboBox_primeBaseEnergy.Items.AddRange(New Object() {"PRIME BASE ENERGY", "100_Ash", "175_Banshee", "200_Chroma", "150_Ember", "100_Excalibur", "100_Frost", "150_Hydroid", "175_Limbo", "175_Loki", "175_Mag", "150_Mirage", "125_Nekros", "175_Nova", "150_Nyx", "175_Oberon", "100_Rhino", "200_Saryn", "150_Trinity", "150_Valkyr", "150_Vauban", "200_Volt", "150_Zephyr"})
-        Me.ComboBox_primeBaseEnergy.Location = New System.Drawing.Point(40, 361)
-        Me.ComboBox_primeBaseEnergy.Name = "ComboBox_primeBaseEnergy"
-        Me.ComboBox_primeBaseEnergy.Size = New System.Drawing.Size(120, 24)
-        Me.ComboBox_primeBaseEnergy.TabIndex = 90
-        Me.ComboBox_primeBaseEnergy.TabStop = False
-        '
-        'ComboBox_primeBaseShield
-        '
-        Me.ComboBox_primeBaseShield.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox_primeBaseShield.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox_primeBaseShield.FormattingEnabled = True
-        Me.ComboBox_primeBaseShield.Items.AddRange(New Object() {"PRIME BASE SHIELD", "125_Ash", "100_Banshee", "100_Chroma", "125_Ember", "100_Excalibur", "175_Frost", "175_Hydroid", "100_Limbo", "75_Loki", "150_Mag", "110_Mirage", "150_Nekros", "100_Nova", "125_Nyx", "100_Oberon", "150_Rhino", "100_Saryn", "150_Trinity", "50_Valkyr", "100_Vauban", "150_Volt", "150_Zephyr"})
-        Me.ComboBox_primeBaseShield.Location = New System.Drawing.Point(40, 331)
-        Me.ComboBox_primeBaseShield.Name = "ComboBox_primeBaseShield"
-        Me.ComboBox_primeBaseShield.Size = New System.Drawing.Size(120, 24)
-        Me.ComboBox_primeBaseShield.TabIndex = 89
-        Me.ComboBox_primeBaseShield.TabStop = False
-        '
-        'ComboBox_primeBaseHealth
-        '
-        Me.ComboBox_primeBaseHealth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox_primeBaseHealth.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox_primeBaseHealth.FormattingEnabled = True
-        Me.ComboBox_primeBaseHealth.Items.AddRange(New Object() {"PRIME BASE HEALTH", "150_Ash", "100_Banshee", "100_Chroma", "100_Ember", "100_Excalibur", "100_Frost", "100_Hydroid", "100_Limbo", "75_Loki", "100_Mag", "80_Mirage", "100_Nekros", "100_Nova", "100_Nyx", "125_Oberon", "100_Rhino", "125_Saryn", "100_Trinity", "100_Valkyr", "100_Vauban", "100_Volt", "150_Zephyr"})
-        Me.ComboBox_primeBaseHealth.Location = New System.Drawing.Point(40, 301)
-        Me.ComboBox_primeBaseHealth.Name = "ComboBox_primeBaseHealth"
-        Me.ComboBox_primeBaseHealth.Size = New System.Drawing.Size(120, 24)
-        Me.ComboBox_primeBaseHealth.TabIndex = 88
-        Me.ComboBox_primeBaseHealth.TabStop = False
-        '
-        'ComboBox_primeBaseArmor
-        '
-        Me.ComboBox_primeBaseArmor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox_primeBaseArmor.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox_primeBaseArmor.FormattingEnabled = True
-        Me.ComboBox_primeBaseArmor.Items.AddRange(New Object() {"PRIME BASE ARMOR", "150_Ash", "65_Banshee", "425_Chroma", "125_Ember", "300_Excalibur", "300_Frost", "250_Hydroid", "85_Limbo", "65_Loki", "65_Mag", "150_Mirage", "65_Nekros", "65_Nova", "50_Nyx", "225_Oberon", "275_Rhino", "300_Saryn", "15_Trinity", "700_Valkyr", "100_Vauban", "100_Volt", "75_Zephyr"})
-        Me.ComboBox_primeBaseArmor.Location = New System.Drawing.Point(40, 271)
-        Me.ComboBox_primeBaseArmor.Name = "ComboBox_primeBaseArmor"
-        Me.ComboBox_primeBaseArmor.Size = New System.Drawing.Size(120, 24)
-        Me.ComboBox_primeBaseArmor.TabIndex = 87
-        Me.ComboBox_primeBaseArmor.TabStop = False
-        '
-        'ComboBox_primes
-        '
-        Me.ComboBox_primes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox_primes.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox_primes.FormattingEnabled = True
-        Me.ComboBox_primes.Items.AddRange(New Object() {"PRIMES", "Ash", "Banshee", "Chroma", "Ember", "Excalibur", "Frost", "Hydroid", "Limbo", "Loki", "Mag", "Mirage", "Nekros", "Nova", "Nyx", "Oberon", "Rhino", "Saryn", "Trinity", "Valkyr", "Vauban", "Volt", "Zephyr"})
-        Me.ComboBox_primes.Location = New System.Drawing.Point(40, 241)
-        Me.ComboBox_primes.Name = "ComboBox_primes"
-        Me.ComboBox_primes.Size = New System.Drawing.Size(246, 24)
-        Me.ComboBox_primes.TabIndex = 75
-        Me.ComboBox_primes.TabStop = False
-        '
-        'ComboBox_petShield
-        '
-        Me.ComboBox_petShield.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.ComboBox_petShield.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox_petShield.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox_petShield.FormattingEnabled = True
-        Me.ComboBox_petShield.Items.AddRange(New Object() {"PET SHIELD", "210_Adarza", "180_Smeeta", "225_Chesa", "375_Huras", "300_Raksa", "225_Sahasa", "270_Sunika", "225_HelminthCharger", "0_Venari"})
-        Me.ComboBox_petShield.Location = New System.Drawing.Point(329, 209)
-        Me.ComboBox_petShield.Name = "ComboBox_petShield"
-        Me.ComboBox_petShield.Size = New System.Drawing.Size(248, 24)
-        Me.ComboBox_petShield.TabIndex = 86
-        Me.ComboBox_petShield.TabStop = False
-        '
-        'ComboBox_petHealth
-        '
-        Me.ComboBox_petHealth.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.ComboBox_petHealth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox_petHealth.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox_petHealth.FormattingEnabled = True
-        Me.ComboBox_petHealth.Items.AddRange(New Object() {"PET HEALTH", "240_Adarza", "300_Smeeta", "375_Chesa", "225_Huras", "300_Raksa", "375_Sahasa", "330_Sunika", "285_HelminthCharger", "900_Venari"})
-        Me.ComboBox_petHealth.Location = New System.Drawing.Point(329, 178)
-        Me.ComboBox_petHealth.Name = "ComboBox_petHealth"
-        Me.ComboBox_petHealth.Size = New System.Drawing.Size(248, 24)
-        Me.ComboBox_petHealth.TabIndex = 85
-        Me.ComboBox_petHealth.TabStop = False
-        '
-        'ComboBox_petArmor
-        '
-        Me.ComboBox_petArmor.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.ComboBox_petArmor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox_petArmor.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox_petArmor.FormattingEnabled = True
-        Me.ComboBox_petArmor.Items.AddRange(New Object() {"PET ARMOR", "50_Adarza", "50_Smeeta", "50_Chesa", "50_Huras", "50_Raksa", "50_Sahasa", "50_Sunika", "50_HelminthCharger", "350_Venari"})
-        Me.ComboBox_petArmor.Location = New System.Drawing.Point(329, 148)
-        Me.ComboBox_petArmor.Name = "ComboBox_petArmor"
-        Me.ComboBox_petArmor.Size = New System.Drawing.Size(248, 24)
-        Me.ComboBox_petArmor.TabIndex = 84
-        Me.ComboBox_petArmor.TabStop = False
-        '
-        'ComboBox_energy
-        '
-        Me.ComboBox_energy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox_energy.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox_energy.FormattingEnabled = True
-        Me.ComboBox_energy.Items.AddRange(New Object() {"ENERGY", "150_Ash", "225_Atlas", "225_Banshee", "300_Baruuk", "225_Chroma", "225_Ember", "225_Equinox", "150_Excalibur", "150_Frost", "225_Gara", "180_Garuda", "150_Harrow", "187.5_Hydroid", "150_Inaros", "262.5_Ivara", "188_Khora", "225_Limbo", "225_Loki", "188_Mag", "150_Mesa", "225_Mirage", "150_Nekros", "225_Nezha", "150_Nidus", "225_Nova", "225_Nyx", "225_Oberon", "225_Octavia", "188_Revenant", "150_Rhino", "225_Saryn", "150_Titania", "225_Trinity", "150_Valkyr", "225_Vauban", "150_Volt", "150_Wukong", "150_Zephyr"})
-        Me.ComboBox_energy.Location = New System.Drawing.Point(166, 150)
-        Me.ComboBox_energy.Name = "ComboBox_energy"
-        Me.ComboBox_energy.Size = New System.Drawing.Size(120, 24)
-        Me.ComboBox_energy.TabIndex = 83
-        Me.ComboBox_energy.TabStop = False
-        '
-        'ComboBox_shield
-        '
-        Me.ComboBox_shield.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox_shield.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox_shield.FormattingEnabled = True
-        Me.ComboBox_shield.Items.AddRange(New Object() {"SHIELD", "300_Ash", "300_Atlas", "300_Banshee", "300_Baruuk", "300_Chroma", "300_Ember", "300_Equinox", "300_Excalibur", "450_Frost", "300_Gara", "300_Garuda", "450_Harrow", "375_Hydroid", "0_Inaros", "300_Ivara", "300_Khora", "225_Limbo", "225_Loki", "450_Mag", "225_Mesa", "240_Mirage", "270_Nekros", "150_Nezha", "0_Nidus", "225_Nova", "300_Nyx", "300_Oberon", "225_Octavia", "675_Revenant", "450_Rhino", "300_Saryn", "300_Titania", "300_Trinity", "150_Valkyr", "225_Vauban", "450_Volt", "375_Wukong", "450_Zephyr"})
-        Me.ComboBox_shield.Location = New System.Drawing.Point(166, 120)
-        Me.ComboBox_shield.Name = "ComboBox_shield"
-        Me.ComboBox_shield.Size = New System.Drawing.Size(120, 24)
-        Me.ComboBox_shield.TabIndex = 82
-        Me.ComboBox_shield.TabStop = False
-        '
-        'ComboBox_health
-        '
-        Me.ComboBox_health.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox_health.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox_health.FormattingEnabled = True
-        Me.ComboBox_health.Items.AddRange(New Object() {"HEALTH", "450_Ash", "300_Atlas", "300_Banshee", "225_Baruuk", "300_Chroma", "300_Ember", "300_Equinox", "300_Excalibur", "300_Frost", "300_Gara", "300_Garuda", "300_Harrow", "300_Hydroid", "2200_Inaros", "225_Ivara", "375_Khora", "300_Limbo", "225_Loki", "225_Mag", "375_Mesa", "240_Mirage", "300_Nekros", "375_Nezha", "450_Nidus", "300_Nova", "300_Nyx", "375_Oberon", "300_Octavia", "300_Revenant", "300_Rhino", "375_Saryn", "300_Titania", "300_Trinity", "300_Valkyr", "300_Vauban", "300_Volt", "300_Wukong", "450_Zephyr"})
-        Me.ComboBox_health.Location = New System.Drawing.Point(166, 90)
-        Me.ComboBox_health.Name = "ComboBox_health"
-        Me.ComboBox_health.Size = New System.Drawing.Size(120, 24)
-        Me.ComboBox_health.TabIndex = 81
-        Me.ComboBox_health.TabStop = False
-        '
-        'ComboBox_armor
-        '
-        Me.ComboBox_armor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox_armor.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox_armor.FormattingEnabled = True
-        Me.ComboBox_armor.Items.AddRange(New Object() {"ARMOR", "65_Ash", "450_Atlas", "15_Banshee", "150_Baruuk", "350_Chroma", "100_Ember", "100_Equinox", "225_Excalibur", "300_Frost", "125_Gara", "300_Garuda", "150_Harrow", "200_Hydroid", "200_Inaros", "65_Ivara", "275_Khora", "65_Limbo", "65_Loki", "65_Mag", "65_Mesa", "65_Mirage", "65_Nekros", "175_Nezha", "450_Nidus", "65_Nova", "15_Nyx", "150_Oberon", "125_Octavia", "105_Revenant", "190_Rhino", "225_Saryn", "65_Titania", "15_Trinity", "600_Valkyr", "50_Vauban", "15_Volt", "225_Wukong", "15_Zephyr"})
-        Me.ComboBox_armor.Location = New System.Drawing.Point(166, 60)
-        Me.ComboBox_armor.Name = "ComboBox_armor"
-        Me.ComboBox_armor.Size = New System.Drawing.Size(120, 24)
-        Me.ComboBox_armor.TabIndex = 80
-        Me.ComboBox_armor.TabStop = False
-        '
-        'ComboBox_baseEnergy
-        '
-        Me.ComboBox_baseEnergy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox_baseEnergy.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox_baseEnergy.FormattingEnabled = True
-        Me.ComboBox_baseEnergy.Items.AddRange(New Object() {"BASE ENERGY", "100_Ash", "150_Atlas", "150_Banshee", "200_Baruuk", "150_Chroma", "150_Ember", "150_Equinox", "100_Excalibur", "100_Frost", "150_Gara", "120_Garuda", "100_Harrow", "100_Hydroid", "100_Inaros", "175_Ivara", "125_Khora", "150_Limbo", "150_Loki", "125_Mag", "100_Mesa", "150_Mirage", "100_Nekros", "150_Nezha", "100_Nidus", "150_Nova", "150_Nyx", "150_Oberon", "150_Octavia", "125_Revenant", "100_Rhino", "150_Saryn", "100_Titania", "150_Trinity", "100_Valkyr", "150_Vauban", "100_Volt", "100_Wukong", "100_Zephyr"})
-        Me.ComboBox_baseEnergy.Location = New System.Drawing.Point(40, 150)
-        Me.ComboBox_baseEnergy.Name = "ComboBox_baseEnergy"
-        Me.ComboBox_baseEnergy.Size = New System.Drawing.Size(120, 24)
-        Me.ComboBox_baseEnergy.TabIndex = 79
-        Me.ComboBox_baseEnergy.TabStop = False
-        '
-        'ComboBox_baseShield
-        '
-        Me.ComboBox_baseShield.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox_baseShield.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox_baseShield.FormattingEnabled = True
-        Me.ComboBox_baseShield.Items.AddRange(New Object() {"BASE SHIELD", "100_Ash", "100_Atlas", "100_Banshee", "100_Baruuk", "100_Chroma", "100_Ember", "100_Equinox", "100_Excalibur", "150_Frost", "100_Gara", "100_Garuda", "150_Harrow", "125_Hydroid", "0_Inaros", "100_Ivara", "100_Khora", "75_Limbo", "75_Loki", "150_Mag", "75_Mesa", "80_Mirage", "90_Nekros", "50_Nezha", "0_Nidus", "75_Nova", "100_Nyx", "100_Oberon", "75_Octavia", "225_Revenant", "150_Rhino", "100_Saryn", "100_Titania", "100_Trinity", "50_Valkyr", "75_Vauban", "150_Volt", "125_Wukong", "150_Zephyr"})
-        Me.ComboBox_baseShield.Location = New System.Drawing.Point(40, 120)
-        Me.ComboBox_baseShield.Name = "ComboBox_baseShield"
-        Me.ComboBox_baseShield.Size = New System.Drawing.Size(120, 24)
-        Me.ComboBox_baseShield.TabIndex = 78
-        Me.ComboBox_baseShield.TabStop = False
-        '
-        'ComboBox_baseHealth
-        '
-        Me.ComboBox_baseHealth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox_baseHealth.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox_baseHealth.FormattingEnabled = True
-        Me.ComboBox_baseHealth.Items.AddRange(New Object() {"BASE HEALTH", "150_Ash", "100_Atlas", "100_Banshee", "75_Baruuk", "100_Chroma", "100_Ember", "100_Equinox", "100_Excalibur", "100_Frost", "100_Gara", "100_Garuda", "100_Harrow", "100_Hydroid", "550_Inaros", "75_Ivara", "125_Khora", "100_Limbo", "75_Loki", "75_Mag", "125_Mesa", "80_Mirage", "100_Nekros", "125_Nezha", "150_Nidus", "100_Nova", "100_Nyx", "125_Oberon", "100_Octavia", "100_Revenant", "100_Rhino", "125_Saryn", "100_Titania", "100_Trinity", "100_Valkyr", "100_Vauban", "100_Volt", "100_Wukong", "150_Zephyr"})
-        Me.ComboBox_baseHealth.Location = New System.Drawing.Point(40, 90)
-        Me.ComboBox_baseHealth.Name = "ComboBox_baseHealth"
-        Me.ComboBox_baseHealth.Size = New System.Drawing.Size(120, 24)
-        Me.ComboBox_baseHealth.TabIndex = 77
-        Me.ComboBox_baseHealth.TabStop = False
-        '
-        'ComboBox_baseArmor
-        '
-        Me.ComboBox_baseArmor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox_baseArmor.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox_baseArmor.FormattingEnabled = True
-        Me.ComboBox_baseArmor.Items.AddRange(New Object() {"BASE ARMOR", "65_Ash", "450_Atlas", "15_Banshee", "150_Baruuk", "350_Chroma", "100_Ember", "100_Equinox", "225_Excalibur", "300_Frost", "125_Gara", "300_Garuda", "150_Harrow", "200_Hydroid", "200_Inaros", "65_Ivara", "275_Khora", "65_Limbo", "65_Loki", "65_Mag", "65_Mesa", "65_Mirage", "65_Nekros", "175_Nezha", "300_Nidus", "65_Nova", "15_Nyx", "150_Oberon", "125_Octavia", "105_Revenant", "190_Rhino", "225_Saryn", "65_Titania", "15_Trinity", "600_Valkyr", "50_Vauban", "15_Volt", "225_Wukong", "15_Zephyr"})
-        Me.ComboBox_baseArmor.Location = New System.Drawing.Point(40, 60)
-        Me.ComboBox_baseArmor.Name = "ComboBox_baseArmor"
-        Me.ComboBox_baseArmor.Size = New System.Drawing.Size(120, 24)
-        Me.ComboBox_baseArmor.TabIndex = 76
-        Me.ComboBox_baseArmor.TabStop = False
-        '
-        'Icons
-        '
-        Me.Icons.ImageStream = CType(resources.GetObject("Icons.ImageStream"), System.Windows.Forms.ImageListStreamer)
-        Me.Icons.TransparentColor = System.Drawing.Color.Transparent
-        Me.Icons.Images.SetKeyName(0, "warframe.png")
-        Me.Icons.Images.SetKeyName(1, "sentinel.png")
-        Me.Icons.Images.SetKeyName(2, "arcane.png")
-        Me.Icons.Images.SetKeyName(3, "archwing.png")
-        Me.Icons.Images.SetKeyName(4, "alert.png")
-        '
-        'Label_author
-        '
-        Me.Label_author.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label_author.AutoSize = True
-        Me.Label_author.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Label_author.Location = New System.Drawing.Point(862, 7)
-        Me.Label_author.Name = "Label_author"
-        Me.Label_author.Size = New System.Drawing.Size(164, 13)
-        Me.Label_author.TabIndex = 1
-        Me.Label_author.Text = "Made with        By /u/xEpicBradx"
-        '
-        'Label_love
-        '
-        Me.Label_love.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label_love.AutoSize = True
-        Me.Label_love.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.Label_love.ForeColor = System.Drawing.Color.Red
-        Me.Label_love.Location = New System.Drawing.Point(915, 6)
-        Me.Label_love.Name = "Label_love"
-        Me.Label_love.Size = New System.Drawing.Size(22, 15)
-        Me.Label_love.TabIndex = 2
-        Me.Label_love.Text = "♥"
-        '
-        'CustomTabControl_arcaneHelmets
-        '
-        Me.CustomTabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsDefault)
-        Me.CustomTabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsAsh)
-        Me.CustomTabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsBanshee)
-        Me.CustomTabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsEmber)
-        Me.CustomTabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsExcalibur)
-        Me.CustomTabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsFrost)
-        Me.CustomTabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsLoki)
-        Me.CustomTabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsMag)
-        Me.CustomTabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsNova)
-        Me.CustomTabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsNyx)
-        Me.CustomTabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsRhino)
-        Me.CustomTabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsSaryn)
-        Me.CustomTabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsTrinity)
-        Me.CustomTabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsVauban)
-        Me.CustomTabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsVolt)
-        Me.CustomTabControl_arcaneHelmets.Enabled = False
-        Me.CustomTabControl_arcaneHelmets.Location = New System.Drawing.Point(487, 373)
-        Me.CustomTabControl_arcaneHelmets.Name = "CustomTabControl_arcaneHelmets"
-        Me.CustomTabControl_arcaneHelmets.SelectedIndex = 0
-        Me.CustomTabControl_arcaneHelmets.Size = New System.Drawing.Size(280, 75)
-        Me.CustomTabControl_arcaneHelmets.TabIndex = 117
-        '
-        'TabPage_arcaneHelmetsDefault
-        '
-        Me.TabPage_arcaneHelmetsDefault.BackColor = System.Drawing.Color.White
-        Me.TabPage_arcaneHelmetsDefault.Controls.Add(Me.Label_arcaneHelmetPlaceholder)
-        Me.TabPage_arcaneHelmetsDefault.Location = New System.Drawing.Point(1, 21)
-        Me.TabPage_arcaneHelmetsDefault.Name = "TabPage_arcaneHelmetsDefault"
-        Me.TabPage_arcaneHelmetsDefault.Size = New System.Drawing.Size(278, 53)
-        Me.TabPage_arcaneHelmetsDefault.TabIndex = 2
-        Me.TabPage_arcaneHelmetsDefault.Text = "Default"
-        '
-        'Label_arcaneHelmetPlaceholder
-        '
-        Me.Label_arcaneHelmetPlaceholder.AutoSize = True
-        Me.Label_arcaneHelmetPlaceholder.Location = New System.Drawing.Point(63, 18)
-        Me.Label_arcaneHelmetPlaceholder.Name = "Label_arcaneHelmetPlaceholder"
-        Me.Label_arcaneHelmetPlaceholder.Size = New System.Drawing.Size(152, 34)
-        Me.Label_arcaneHelmetPlaceholder.TabIndex = 1
-        Me.Label_arcaneHelmetPlaceholder.Text = "This Warframe has no " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Arcane Helmets"
-        Me.Label_arcaneHelmetPlaceholder.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'TabPage_arcaneHelmetsAsh
-        '
-        Me.TabPage_arcaneHelmetsAsh.BackColor = System.Drawing.Color.White
-        Me.TabPage_arcaneHelmetsAsh.Controls.Add(Me.RadioButton_locustHelmet)
-        Me.TabPage_arcaneHelmetsAsh.Location = New System.Drawing.Point(1, 21)
-        Me.TabPage_arcaneHelmetsAsh.Name = "TabPage_arcaneHelmetsAsh"
-        Me.TabPage_arcaneHelmetsAsh.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_arcaneHelmetsAsh.Size = New System.Drawing.Size(278, 53)
-        Me.TabPage_arcaneHelmetsAsh.TabIndex = 0
-        Me.TabPage_arcaneHelmetsAsh.Text = "Ash"
-        '
-        'RadioButton_locustHelmet
-        '
-        Me.RadioButton_locustHelmet.AutoSize = True
-        Me.RadioButton_locustHelmet.Checked = True
-        Me.RadioButton_locustHelmet.Location = New System.Drawing.Point(11, 25)
-        Me.RadioButton_locustHelmet.Name = "RadioButton_locustHelmet"
-        Me.RadioButton_locustHelmet.Size = New System.Drawing.Size(116, 21)
-        Me.RadioButton_locustHelmet.TabIndex = 0
-        Me.RadioButton_locustHelmet.TabStop = True
-        Me.RadioButton_locustHelmet.Text = "Locust Helmet"
-        Me.RadioButton_locustHelmet.UseVisualStyleBackColor = True
-        '
-        'TabPage_arcaneHelmetsBanshee
-        '
-        Me.TabPage_arcaneHelmetsBanshee.BackColor = System.Drawing.Color.White
-        Me.TabPage_arcaneHelmetsBanshee.Controls.Add(Me.RadioButton_reverbHelmet)
-        Me.TabPage_arcaneHelmetsBanshee.Location = New System.Drawing.Point(1, 21)
-        Me.TabPage_arcaneHelmetsBanshee.Name = "TabPage_arcaneHelmetsBanshee"
-        Me.TabPage_arcaneHelmetsBanshee.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_arcaneHelmetsBanshee.Size = New System.Drawing.Size(278, 53)
-        Me.TabPage_arcaneHelmetsBanshee.TabIndex = 1
-        Me.TabPage_arcaneHelmetsBanshee.Text = "Banshee"
-        '
-        'RadioButton_reverbHelmet
-        '
-        Me.RadioButton_reverbHelmet.AutoSize = True
-        Me.RadioButton_reverbHelmet.Checked = True
-        Me.RadioButton_reverbHelmet.Location = New System.Drawing.Point(11, 25)
-        Me.RadioButton_reverbHelmet.Name = "RadioButton_reverbHelmet"
-        Me.RadioButton_reverbHelmet.Size = New System.Drawing.Size(120, 21)
-        Me.RadioButton_reverbHelmet.TabIndex = 1
-        Me.RadioButton_reverbHelmet.TabStop = True
-        Me.RadioButton_reverbHelmet.Text = "Reverb Helmet"
-        Me.RadioButton_reverbHelmet.UseVisualStyleBackColor = True
-        '
-        'TabPage_arcaneHelmetsEmber
-        '
-        Me.TabPage_arcaneHelmetsEmber.BackColor = System.Drawing.Color.White
-        Me.TabPage_arcaneHelmetsEmber.Controls.Add(Me.RadioButton_backdraftHelmet)
-        Me.TabPage_arcaneHelmetsEmber.Controls.Add(Me.RadioButton_phoenixHelmet)
-        Me.TabPage_arcaneHelmetsEmber.Location = New System.Drawing.Point(1, 21)
-        Me.TabPage_arcaneHelmetsEmber.Name = "TabPage_arcaneHelmetsEmber"
-        Me.TabPage_arcaneHelmetsEmber.Size = New System.Drawing.Size(278, 53)
-        Me.TabPage_arcaneHelmetsEmber.TabIndex = 3
-        Me.TabPage_arcaneHelmetsEmber.Text = "Ember"
-        '
-        'RadioButton_backdraftHelmet
-        '
-        Me.RadioButton_backdraftHelmet.AutoSize = True
-        Me.RadioButton_backdraftHelmet.Location = New System.Drawing.Point(140, 25)
-        Me.RadioButton_backdraftHelmet.Name = "RadioButton_backdraftHelmet"
-        Me.RadioButton_backdraftHelmet.Size = New System.Drawing.Size(134, 21)
-        Me.RadioButton_backdraftHelmet.TabIndex = 3
-        Me.RadioButton_backdraftHelmet.Tag = ""
-        Me.RadioButton_backdraftHelmet.Text = "Backdraft Helmet"
-        Me.RadioButton_backdraftHelmet.UseVisualStyleBackColor = True
-        '
-        'RadioButton_phoenixHelmet
-        '
-        Me.RadioButton_phoenixHelmet.AutoSize = True
-        Me.RadioButton_phoenixHelmet.Checked = True
-        Me.RadioButton_phoenixHelmet.Location = New System.Drawing.Point(10, 25)
-        Me.RadioButton_phoenixHelmet.Name = "RadioButton_phoenixHelmet"
-        Me.RadioButton_phoenixHelmet.Size = New System.Drawing.Size(124, 21)
-        Me.RadioButton_phoenixHelmet.TabIndex = 2
-        Me.RadioButton_phoenixHelmet.TabStop = True
-        Me.RadioButton_phoenixHelmet.Tag = ""
-        Me.RadioButton_phoenixHelmet.Text = "Phoenix Helmet"
-        Me.RadioButton_phoenixHelmet.UseVisualStyleBackColor = True
-        '
-        'TabPage_arcaneHelmetsExcalibur
-        '
-        Me.TabPage_arcaneHelmetsExcalibur.BackColor = System.Drawing.Color.White
-        Me.TabPage_arcaneHelmetsExcalibur.Controls.Add(Me.RadioButton_pendragonHelmet)
-        Me.TabPage_arcaneHelmetsExcalibur.Controls.Add(Me.RadioButton_avalonHelmet)
-        Me.TabPage_arcaneHelmetsExcalibur.Location = New System.Drawing.Point(1, 21)
-        Me.TabPage_arcaneHelmetsExcalibur.Name = "TabPage_arcaneHelmetsExcalibur"
-        Me.TabPage_arcaneHelmetsExcalibur.Size = New System.Drawing.Size(278, 53)
-        Me.TabPage_arcaneHelmetsExcalibur.TabIndex = 4
-        Me.TabPage_arcaneHelmetsExcalibur.Text = "Excalibur"
-        '
-        'RadioButton_pendragonHelmet
-        '
-        Me.RadioButton_pendragonHelmet.AutoSize = True
-        Me.RadioButton_pendragonHelmet.Location = New System.Drawing.Point(130, 25)
-        Me.RadioButton_pendragonHelmet.Name = "RadioButton_pendragonHelmet"
-        Me.RadioButton_pendragonHelmet.Size = New System.Drawing.Size(144, 21)
-        Me.RadioButton_pendragonHelmet.TabIndex = 4
-        Me.RadioButton_pendragonHelmet.Tag = ""
-        Me.RadioButton_pendragonHelmet.Text = "Pendragon Helmet"
-        Me.RadioButton_pendragonHelmet.UseVisualStyleBackColor = True
-        '
-        'RadioButton_avalonHelmet
-        '
-        Me.RadioButton_avalonHelmet.AutoSize = True
-        Me.RadioButton_avalonHelmet.Checked = True
-        Me.RadioButton_avalonHelmet.Location = New System.Drawing.Point(10, 25)
-        Me.RadioButton_avalonHelmet.Name = "RadioButton_avalonHelmet"
-        Me.RadioButton_avalonHelmet.Size = New System.Drawing.Size(117, 21)
-        Me.RadioButton_avalonHelmet.TabIndex = 3
-        Me.RadioButton_avalonHelmet.TabStop = True
-        Me.RadioButton_avalonHelmet.Tag = ""
-        Me.RadioButton_avalonHelmet.Text = "Avalon Helmet"
-        Me.RadioButton_avalonHelmet.UseVisualStyleBackColor = True
-        '
-        'TabPage_arcaneHelmetsFrost
-        '
-        Me.TabPage_arcaneHelmetsFrost.BackColor = System.Drawing.Color.White
-        Me.TabPage_arcaneHelmetsFrost.Controls.Add(Me.RadioButton_squallHelmet)
-        Me.TabPage_arcaneHelmetsFrost.Controls.Add(Me.RadioButton_auroraHelmet)
-        Me.TabPage_arcaneHelmetsFrost.Location = New System.Drawing.Point(1, 21)
-        Me.TabPage_arcaneHelmetsFrost.Name = "TabPage_arcaneHelmetsFrost"
-        Me.TabPage_arcaneHelmetsFrost.Size = New System.Drawing.Size(278, 53)
-        Me.TabPage_arcaneHelmetsFrost.TabIndex = 5
-        Me.TabPage_arcaneHelmetsFrost.Text = "Frost"
-        '
-        'RadioButton_squallHelmet
-        '
-        Me.RadioButton_squallHelmet.AutoSize = True
-        Me.RadioButton_squallHelmet.Location = New System.Drawing.Point(132, 25)
-        Me.RadioButton_squallHelmet.Name = "RadioButton_squallHelmet"
-        Me.RadioButton_squallHelmet.Size = New System.Drawing.Size(113, 21)
-        Me.RadioButton_squallHelmet.TabIndex = 5
-        Me.RadioButton_squallHelmet.Tag = ""
-        Me.RadioButton_squallHelmet.Text = "Squall Helmet"
-        Me.RadioButton_squallHelmet.UseVisualStyleBackColor = True
-        '
-        'RadioButton_auroraHelmet
-        '
-        Me.RadioButton_auroraHelmet.AutoSize = True
-        Me.RadioButton_auroraHelmet.Checked = True
-        Me.RadioButton_auroraHelmet.Location = New System.Drawing.Point(9, 25)
-        Me.RadioButton_auroraHelmet.Name = "RadioButton_auroraHelmet"
-        Me.RadioButton_auroraHelmet.Size = New System.Drawing.Size(117, 21)
-        Me.RadioButton_auroraHelmet.TabIndex = 4
-        Me.RadioButton_auroraHelmet.TabStop = True
-        Me.RadioButton_auroraHelmet.Tag = ""
-        Me.RadioButton_auroraHelmet.Text = "Aurora Helmet"
-        Me.RadioButton_auroraHelmet.UseVisualStyleBackColor = True
-        '
-        'TabPage_arcaneHelmetsLoki
-        '
-        Me.TabPage_arcaneHelmetsLoki.BackColor = System.Drawing.Color.White
-        Me.TabPage_arcaneHelmetsLoki.Controls.Add(Me.RadioButton_swindleHelmet)
-        Me.TabPage_arcaneHelmetsLoki.Controls.Add(Me.RadioButton_essenceHelmet)
-        Me.TabPage_arcaneHelmetsLoki.Location = New System.Drawing.Point(1, 21)
-        Me.TabPage_arcaneHelmetsLoki.Name = "TabPage_arcaneHelmetsLoki"
-        Me.TabPage_arcaneHelmetsLoki.Size = New System.Drawing.Size(278, 53)
-        Me.TabPage_arcaneHelmetsLoki.TabIndex = 6
-        Me.TabPage_arcaneHelmetsLoki.Text = "Loki"
-        '
-        'RadioButton_swindleHelmet
-        '
-        Me.RadioButton_swindleHelmet.AutoSize = True
-        Me.RadioButton_swindleHelmet.Location = New System.Drawing.Point(145, 25)
-        Me.RadioButton_swindleHelmet.Name = "RadioButton_swindleHelmet"
-        Me.RadioButton_swindleHelmet.Size = New System.Drawing.Size(122, 21)
-        Me.RadioButton_swindleHelmet.TabIndex = 5
-        Me.RadioButton_swindleHelmet.Tag = ""
-        Me.RadioButton_swindleHelmet.Text = "Swindle Helmet"
-        Me.RadioButton_swindleHelmet.UseVisualStyleBackColor = True
-        '
-        'RadioButton_essenceHelmet
-        '
-        Me.RadioButton_essenceHelmet.AutoSize = True
-        Me.RadioButton_essenceHelmet.Checked = True
-        Me.RadioButton_essenceHelmet.Location = New System.Drawing.Point(11, 25)
-        Me.RadioButton_essenceHelmet.Name = "RadioButton_essenceHelmet"
-        Me.RadioButton_essenceHelmet.Size = New System.Drawing.Size(128, 21)
-        Me.RadioButton_essenceHelmet.TabIndex = 4
-        Me.RadioButton_essenceHelmet.TabStop = True
-        Me.RadioButton_essenceHelmet.Tag = ""
-        Me.RadioButton_essenceHelmet.Text = "Essence Helmet"
-        Me.RadioButton_essenceHelmet.UseVisualStyleBackColor = True
-        '
-        'TabPage_arcaneHelmetsMag
-        '
-        Me.TabPage_arcaneHelmetsMag.BackColor = System.Drawing.Color.White
-        Me.TabPage_arcaneHelmetsMag.Controls.Add(Me.RadioButton_gaussHelmet)
-        Me.TabPage_arcaneHelmetsMag.Controls.Add(Me.RadioButton_coilHelmet)
-        Me.TabPage_arcaneHelmetsMag.Location = New System.Drawing.Point(1, 21)
-        Me.TabPage_arcaneHelmetsMag.Name = "TabPage_arcaneHelmetsMag"
-        Me.TabPage_arcaneHelmetsMag.Size = New System.Drawing.Size(278, 53)
-        Me.TabPage_arcaneHelmetsMag.TabIndex = 7
-        Me.TabPage_arcaneHelmetsMag.Text = "Mag"
-        '
-        'RadioButton_gaussHelmet
-        '
-        Me.RadioButton_gaussHelmet.AutoSize = True
-        Me.RadioButton_gaussHelmet.Location = New System.Drawing.Point(114, 25)
-        Me.RadioButton_gaussHelmet.Name = "RadioButton_gaussHelmet"
-        Me.RadioButton_gaussHelmet.Size = New System.Drawing.Size(115, 21)
-        Me.RadioButton_gaussHelmet.TabIndex = 5
-        Me.RadioButton_gaussHelmet.Tag = ""
-        Me.RadioButton_gaussHelmet.Text = "Gauss Helmet"
-        Me.RadioButton_gaussHelmet.UseVisualStyleBackColor = True
-        '
-        'RadioButton_coilHelmet
-        '
-        Me.RadioButton_coilHelmet.AutoSize = True
-        Me.RadioButton_coilHelmet.Checked = True
-        Me.RadioButton_coilHelmet.Location = New System.Drawing.Point(11, 25)
-        Me.RadioButton_coilHelmet.Name = "RadioButton_coilHelmet"
-        Me.RadioButton_coilHelmet.Size = New System.Drawing.Size(97, 21)
-        Me.RadioButton_coilHelmet.TabIndex = 4
-        Me.RadioButton_coilHelmet.TabStop = True
-        Me.RadioButton_coilHelmet.Tag = ""
-        Me.RadioButton_coilHelmet.Text = "Coil Helmet"
-        Me.RadioButton_coilHelmet.UseVisualStyleBackColor = True
-        '
-        'TabPage_arcaneHelmetsNova
-        '
-        Me.TabPage_arcaneHelmetsNova.BackColor = System.Drawing.Color.White
-        Me.TabPage_arcaneHelmetsNova.Controls.Add(Me.RadioButton_fluxHelmet)
-        Me.TabPage_arcaneHelmetsNova.Location = New System.Drawing.Point(1, 21)
-        Me.TabPage_arcaneHelmetsNova.Name = "TabPage_arcaneHelmetsNova"
-        Me.TabPage_arcaneHelmetsNova.Size = New System.Drawing.Size(278, 53)
-        Me.TabPage_arcaneHelmetsNova.TabIndex = 14
-        Me.TabPage_arcaneHelmetsNova.Text = "Nova"
-        '
-        'RadioButton_fluxHelmet
-        '
-        Me.RadioButton_fluxHelmet.AutoSize = True
-        Me.RadioButton_fluxHelmet.Checked = True
-        Me.RadioButton_fluxHelmet.Location = New System.Drawing.Point(11, 25)
-        Me.RadioButton_fluxHelmet.Name = "RadioButton_fluxHelmet"
-        Me.RadioButton_fluxHelmet.Size = New System.Drawing.Size(99, 21)
-        Me.RadioButton_fluxHelmet.TabIndex = 4
-        Me.RadioButton_fluxHelmet.TabStop = True
-        Me.RadioButton_fluxHelmet.Tag = ""
-        Me.RadioButton_fluxHelmet.Text = "Flux Helmet"
-        Me.RadioButton_fluxHelmet.UseVisualStyleBackColor = True
-        '
-        'TabPage_arcaneHelmetsNyx
-        '
-        Me.TabPage_arcaneHelmetsNyx.BackColor = System.Drawing.Color.White
-        Me.TabPage_arcaneHelmetsNyx.Controls.Add(Me.RadioButton_vespaHelmet)
-        Me.TabPage_arcaneHelmetsNyx.Controls.Add(Me.RadioButton_menticideHelmet)
-        Me.TabPage_arcaneHelmetsNyx.Location = New System.Drawing.Point(1, 21)
-        Me.TabPage_arcaneHelmetsNyx.Name = "TabPage_arcaneHelmetsNyx"
-        Me.TabPage_arcaneHelmetsNyx.Size = New System.Drawing.Size(278, 53)
-        Me.TabPage_arcaneHelmetsNyx.TabIndex = 8
-        Me.TabPage_arcaneHelmetsNyx.Text = "Nyx"
-        '
-        'RadioButton_vespaHelmet
-        '
-        Me.RadioButton_vespaHelmet.AutoSize = True
-        Me.RadioButton_vespaHelmet.Location = New System.Drawing.Point(149, 25)
-        Me.RadioButton_vespaHelmet.Name = "RadioButton_vespaHelmet"
-        Me.RadioButton_vespaHelmet.Size = New System.Drawing.Size(114, 21)
-        Me.RadioButton_vespaHelmet.TabIndex = 5
-        Me.RadioButton_vespaHelmet.Tag = ""
-        Me.RadioButton_vespaHelmet.Text = "Vespa Helmet"
-        Me.RadioButton_vespaHelmet.UseVisualStyleBackColor = True
-        '
-        'RadioButton_menticideHelmet
-        '
-        Me.RadioButton_menticideHelmet.AutoSize = True
-        Me.RadioButton_menticideHelmet.Checked = True
-        Me.RadioButton_menticideHelmet.Location = New System.Drawing.Point(9, 25)
-        Me.RadioButton_menticideHelmet.Name = "RadioButton_menticideHelmet"
-        Me.RadioButton_menticideHelmet.Size = New System.Drawing.Size(134, 21)
-        Me.RadioButton_menticideHelmet.TabIndex = 4
-        Me.RadioButton_menticideHelmet.TabStop = True
-        Me.RadioButton_menticideHelmet.Tag = ""
-        Me.RadioButton_menticideHelmet.Text = "Menticide Helmet"
-        Me.RadioButton_menticideHelmet.UseVisualStyleBackColor = True
-        '
-        'TabPage_arcaneHelmetsRhino
-        '
-        Me.TabPage_arcaneHelmetsRhino.BackColor = System.Drawing.Color.White
-        Me.TabPage_arcaneHelmetsRhino.Controls.Add(Me.RadioButton_vanguardHelmet)
-        Me.TabPage_arcaneHelmetsRhino.Controls.Add(Me.RadioButton_thrak)
-        Me.TabPage_arcaneHelmetsRhino.Location = New System.Drawing.Point(1, 21)
-        Me.TabPage_arcaneHelmetsRhino.Name = "TabPage_arcaneHelmetsRhino"
-        Me.TabPage_arcaneHelmetsRhino.Size = New System.Drawing.Size(278, 53)
-        Me.TabPage_arcaneHelmetsRhino.TabIndex = 9
-        Me.TabPage_arcaneHelmetsRhino.Text = "Rhino"
-        '
-        'RadioButton_vanguardHelmet
-        '
-        Me.RadioButton_vanguardHelmet.AutoSize = True
-        Me.RadioButton_vanguardHelmet.Location = New System.Drawing.Point(128, 25)
-        Me.RadioButton_vanguardHelmet.Name = "RadioButton_vanguardHelmet"
-        Me.RadioButton_vanguardHelmet.Size = New System.Drawing.Size(136, 21)
-        Me.RadioButton_vanguardHelmet.TabIndex = 5
-        Me.RadioButton_vanguardHelmet.Tag = ""
-        Me.RadioButton_vanguardHelmet.Text = "Vanguard Helmet"
-        Me.RadioButton_vanguardHelmet.UseVisualStyleBackColor = True
-        '
-        'RadioButton_thrak
-        '
-        Me.RadioButton_thrak.AutoSize = True
-        Me.RadioButton_thrak.Checked = True
-        Me.RadioButton_thrak.Location = New System.Drawing.Point(11, 25)
-        Me.RadioButton_thrak.Name = "RadioButton_thrak"
-        Me.RadioButton_thrak.Size = New System.Drawing.Size(111, 21)
-        Me.RadioButton_thrak.TabIndex = 4
-        Me.RadioButton_thrak.TabStop = True
-        Me.RadioButton_thrak.Tag = ""
-        Me.RadioButton_thrak.Text = "Thrak Helmet"
-        Me.RadioButton_thrak.UseVisualStyleBackColor = True
-        '
-        'TabPage_arcaneHelmetsSaryn
-        '
-        Me.TabPage_arcaneHelmetsSaryn.BackColor = System.Drawing.Color.White
-        Me.TabPage_arcaneHelmetsSaryn.Controls.Add(Me.RadioButton_hemlockHelmet)
-        Me.TabPage_arcaneHelmetsSaryn.Location = New System.Drawing.Point(1, 21)
-        Me.TabPage_arcaneHelmetsSaryn.Name = "TabPage_arcaneHelmetsSaryn"
-        Me.TabPage_arcaneHelmetsSaryn.Size = New System.Drawing.Size(278, 53)
-        Me.TabPage_arcaneHelmetsSaryn.TabIndex = 10
-        Me.TabPage_arcaneHelmetsSaryn.Text = "Saryn"
-        '
-        'RadioButton_hemlockHelmet
-        '
-        Me.RadioButton_hemlockHelmet.AutoSize = True
-        Me.RadioButton_hemlockHelmet.Checked = True
-        Me.RadioButton_hemlockHelmet.Location = New System.Drawing.Point(9, 25)
-        Me.RadioButton_hemlockHelmet.Name = "RadioButton_hemlockHelmet"
-        Me.RadioButton_hemlockHelmet.Size = New System.Drawing.Size(128, 21)
-        Me.RadioButton_hemlockHelmet.TabIndex = 4
-        Me.RadioButton_hemlockHelmet.TabStop = True
-        Me.RadioButton_hemlockHelmet.Tag = ""
-        Me.RadioButton_hemlockHelmet.Text = "Hemlock Helmet"
-        Me.RadioButton_hemlockHelmet.UseVisualStyleBackColor = True
-        '
-        'TabPage_arcaneHelmetsTrinity
-        '
-        Me.TabPage_arcaneHelmetsTrinity.BackColor = System.Drawing.Color.White
-        Me.TabPage_arcaneHelmetsTrinity.Controls.Add(Me.RadioButton_meridianHelmet)
-        Me.TabPage_arcaneHelmetsTrinity.Controls.Add(Me.RadioButton_auraHelmet)
-        Me.TabPage_arcaneHelmetsTrinity.Location = New System.Drawing.Point(1, 21)
-        Me.TabPage_arcaneHelmetsTrinity.Name = "TabPage_arcaneHelmetsTrinity"
-        Me.TabPage_arcaneHelmetsTrinity.Size = New System.Drawing.Size(278, 53)
-        Me.TabPage_arcaneHelmetsTrinity.TabIndex = 11
-        Me.TabPage_arcaneHelmetsTrinity.Text = "Trinity"
-        '
-        'RadioButton_meridianHelmet
-        '
-        Me.RadioButton_meridianHelmet.AutoSize = True
-        Me.RadioButton_meridianHelmet.Location = New System.Drawing.Point(121, 25)
-        Me.RadioButton_meridianHelmet.Name = "RadioButton_meridianHelmet"
-        Me.RadioButton_meridianHelmet.Size = New System.Drawing.Size(128, 21)
-        Me.RadioButton_meridianHelmet.TabIndex = 5
-        Me.RadioButton_meridianHelmet.Tag = ""
-        Me.RadioButton_meridianHelmet.Text = "Maridian Helmet"
-        Me.RadioButton_meridianHelmet.UseVisualStyleBackColor = True
-        '
-        'RadioButton_auraHelmet
-        '
-        Me.RadioButton_auraHelmet.AutoSize = True
-        Me.RadioButton_auraHelmet.Checked = True
-        Me.RadioButton_auraHelmet.Location = New System.Drawing.Point(11, 25)
-        Me.RadioButton_auraHelmet.Name = "RadioButton_auraHelmet"
-        Me.RadioButton_auraHelmet.Size = New System.Drawing.Size(104, 21)
-        Me.RadioButton_auraHelmet.TabIndex = 4
-        Me.RadioButton_auraHelmet.TabStop = True
-        Me.RadioButton_auraHelmet.Tag = ""
-        Me.RadioButton_auraHelmet.Text = "Aura Helmet"
-        Me.RadioButton_auraHelmet.UseVisualStyleBackColor = True
-        '
-        'TabPage_arcaneHelmetsVauban
-        '
-        Me.TabPage_arcaneHelmetsVauban.BackColor = System.Drawing.Color.White
-        Me.TabPage_arcaneHelmetsVauban.Controls.Add(Me.RadioButton_espritHelmet)
-        Me.TabPage_arcaneHelmetsVauban.Location = New System.Drawing.Point(1, 21)
-        Me.TabPage_arcaneHelmetsVauban.Name = "TabPage_arcaneHelmetsVauban"
-        Me.TabPage_arcaneHelmetsVauban.Size = New System.Drawing.Size(278, 53)
-        Me.TabPage_arcaneHelmetsVauban.TabIndex = 12
-        Me.TabPage_arcaneHelmetsVauban.Text = "Vauban"
-        '
-        'RadioButton_espritHelmet
-        '
-        Me.RadioButton_espritHelmet.AutoSize = True
-        Me.RadioButton_espritHelmet.Checked = True
-        Me.RadioButton_espritHelmet.Location = New System.Drawing.Point(9, 25)
-        Me.RadioButton_espritHelmet.Name = "RadioButton_espritHelmet"
-        Me.RadioButton_espritHelmet.Size = New System.Drawing.Size(110, 21)
-        Me.RadioButton_espritHelmet.TabIndex = 4
-        Me.RadioButton_espritHelmet.TabStop = True
-        Me.RadioButton_espritHelmet.Tag = ""
-        Me.RadioButton_espritHelmet.Text = "Esprit Helmet"
-        Me.RadioButton_espritHelmet.UseVisualStyleBackColor = True
-        '
-        'TabPage_arcaneHelmetsVolt
-        '
-        Me.TabPage_arcaneHelmetsVolt.BackColor = System.Drawing.Color.White
-        Me.TabPage_arcaneHelmetsVolt.Controls.Add(Me.RadioButton_stormHelmet)
-        Me.TabPage_arcaneHelmetsVolt.Controls.Add(Me.RadioButton_pulseHelmet)
-        Me.TabPage_arcaneHelmetsVolt.Location = New System.Drawing.Point(1, 21)
-        Me.TabPage_arcaneHelmetsVolt.Name = "TabPage_arcaneHelmetsVolt"
-        Me.TabPage_arcaneHelmetsVolt.Size = New System.Drawing.Size(278, 53)
-        Me.TabPage_arcaneHelmetsVolt.TabIndex = 13
-        Me.TabPage_arcaneHelmetsVolt.Text = "Volt"
-        '
-        'RadioButton_stormHelmet
-        '
-        Me.RadioButton_stormHelmet.AutoSize = True
-        Me.RadioButton_stormHelmet.Location = New System.Drawing.Point(124, 25)
-        Me.RadioButton_stormHelmet.Name = "RadioButton_stormHelmet"
-        Me.RadioButton_stormHelmet.Size = New System.Drawing.Size(111, 21)
-        Me.RadioButton_stormHelmet.TabIndex = 5
-        Me.RadioButton_stormHelmet.Tag = ""
-        Me.RadioButton_stormHelmet.Text = "Storm Helmet"
-        Me.RadioButton_stormHelmet.UseVisualStyleBackColor = True
-        '
-        'RadioButton_pulseHelmet
-        '
-        Me.RadioButton_pulseHelmet.AutoSize = True
-        Me.RadioButton_pulseHelmet.Checked = True
-        Me.RadioButton_pulseHelmet.Location = New System.Drawing.Point(9, 25)
-        Me.RadioButton_pulseHelmet.Name = "RadioButton_pulseHelmet"
-        Me.RadioButton_pulseHelmet.Size = New System.Drawing.Size(109, 21)
-        Me.RadioButton_pulseHelmet.TabIndex = 4
-        Me.RadioButton_pulseHelmet.TabStop = True
-        Me.RadioButton_pulseHelmet.Tag = ""
-        Me.RadioButton_pulseHelmet.Text = "Pulse Helmet"
-        Me.RadioButton_pulseHelmet.UseVisualStyleBackColor = True
-        '
         'CustomTabControl_abilitys
         '
         Me.CustomTabControl_abilitys.Controls.Add(Me.TabPage_abilitiesDefault)
@@ -3979,6 +3058,927 @@ Partial Class Form_main
         Me.CheckBox_warcry.Text = "Warcry"
         Me.CheckBox_warcry.UseVisualStyleBackColor = True
         '
+        'Panel_Ruler
+        '
+        Me.Panel_Ruler.BackColor = System.Drawing.Color.Transparent
+        Me.Panel_Ruler.Location = New System.Drawing.Point(470, 81)
+        Me.Panel_Ruler.Name = "Panel_Ruler"
+        Me.Panel_Ruler.Size = New System.Drawing.Size(20, 73)
+        Me.Panel_Ruler.TabIndex = 110
+        Me.Panel_Ruler.Visible = False
+        '
+        'GroupBox_focus
+        '
+        Me.GroupBox_focus.Controls.Add(Me.NumericUpDown_stoneSkin)
+        Me.GroupBox_focus.Controls.Add(Me.CheckBox_stoneSkin)
+        Me.GroupBox_focus.Enabled = False
+        Me.GroupBox_focus.Location = New System.Drawing.Point(486, 156)
+        Me.GroupBox_focus.Name = "GroupBox_focus"
+        Me.GroupBox_focus.Size = New System.Drawing.Size(280, 63)
+        Me.GroupBox_focus.TabIndex = 114
+        Me.GroupBox_focus.TabStop = False
+        Me.GroupBox_focus.Text = "  "
+        '
+        'NumericUpDown_stoneSkin
+        '
+        Me.NumericUpDown_stoneSkin.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.NumericUpDown_stoneSkin.Location = New System.Drawing.Point(206, 26)
+        Me.NumericUpDown_stoneSkin.Maximum = New Decimal(New Integer() {3, 0, 0, 0})
+        Me.NumericUpDown_stoneSkin.Name = "NumericUpDown_stoneSkin"
+        Me.NumericUpDown_stoneSkin.Size = New System.Drawing.Size(61, 23)
+        Me.NumericUpDown_stoneSkin.TabIndex = 37
+        '
+        'CheckBox_stoneSkin
+        '
+        Me.CheckBox_stoneSkin.AutoSize = True
+        Me.CheckBox_stoneSkin.Location = New System.Drawing.Point(12, 25)
+        Me.CheckBox_stoneSkin.Name = "CheckBox_stoneSkin"
+        Me.CheckBox_stoneSkin.Size = New System.Drawing.Size(95, 21)
+        Me.CheckBox_stoneSkin.TabIndex = 0
+        Me.CheckBox_stoneSkin.Text = "Stone Skin"
+        Me.CheckBox_stoneSkin.UseVisualStyleBackColor = True
+        '
+        'CheckBox_blocking
+        '
+        Me.CheckBox_blocking.AutoSize = True
+        Me.CheckBox_blocking.Enabled = False
+        Me.CheckBox_blocking.Location = New System.Drawing.Point(259, 498)
+        Me.CheckBox_blocking.Name = "CheckBox_blocking"
+        Me.CheckBox_blocking.Size = New System.Drawing.Size(80, 21)
+        Me.CheckBox_blocking.TabIndex = 121
+        Me.CheckBox_blocking.Tag = "GroupBox_blocking"
+        Me.CheckBox_blocking.Text = "Blocking"
+        Me.CheckBox_blocking.UseVisualStyleBackColor = True
+        '
+        'GroupBox_blocking
+        '
+        Me.GroupBox_blocking.Controls.Add(Me.ComboBox_blocking)
+        Me.GroupBox_blocking.Enabled = False
+        Me.GroupBox_blocking.Location = New System.Drawing.Point(247, 498)
+        Me.GroupBox_blocking.Name = "GroupBox_blocking"
+        Me.GroupBox_blocking.Size = New System.Drawing.Size(233, 85)
+        Me.GroupBox_blocking.TabIndex = 122
+        Me.GroupBox_blocking.TabStop = False
+        Me.GroupBox_blocking.Text = "  "
+        '
+        'ComboBox_blocking
+        '
+        Me.ComboBox_blocking.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox_blocking.FormattingEnabled = True
+        Me.ComboBox_blocking.Items.AddRange(New Object() {"Blocking Damange Reduction", "35%", "60%", "80%", "85%", "90%"})
+        Me.ComboBox_blocking.Location = New System.Drawing.Point(12, 40)
+        Me.ComboBox_blocking.Name = "ComboBox_blocking"
+        Me.ComboBox_blocking.Size = New System.Drawing.Size(207, 24)
+        Me.ComboBox_blocking.TabIndex = 1
+        '
+        'TabPage_companion
+        '
+        Me.TabPage_companion.Controls.Add(Me.Label_companionNotice)
+        Me.TabPage_companion.Controls.Add(Me.GroupBox_companionResults)
+        Me.TabPage_companion.Controls.Add(Me.NumericUpDown_companionStability)
+        Me.TabPage_companion.Controls.Add(Me.Label_companionStability)
+        Me.TabPage_companion.Controls.Add(Me.CheckBox_companionSurvivability)
+        Me.TabPage_companion.Controls.Add(Me.GroupBox_companionSurvivability)
+        Me.TabPage_companion.Controls.Add(Me.CheckBox_companionPrimeCollar)
+        Me.TabPage_companion.Controls.Add(Me.ComboBox_companions)
+        Me.TabPage_companion.ImageKey = "sentinel.png"
+        Me.TabPage_companion.Location = New System.Drawing.Point(4, 29)
+        Me.TabPage_companion.Name = "TabPage_companion"
+        Me.TabPage_companion.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage_companion.Size = New System.Drawing.Size(1018, 591)
+        Me.TabPage_companion.TabIndex = 1
+        Me.TabPage_companion.Text = "Companions  "
+        Me.TabPage_companion.UseVisualStyleBackColor = True
+        '
+        'Label_companionNotice
+        '
+        Me.Label_companionNotice.AutoSize = True
+        Me.Label_companionNotice.Location = New System.Drawing.Point(182, 517)
+        Me.Label_companionNotice.Name = "Label_companionNotice"
+        Me.Label_companionNotice.Size = New System.Drawing.Size(637, 17)
+        Me.Label_companionNotice.TabIndex = 111
+        Me.Label_companionNotice.Text = "Notice: Currently Companions are not affected by Warframe abilities this will be " &
+    "added at a later time"
+        '
+        'GroupBox_companionResults
+        '
+        Me.GroupBox_companionResults.Controls.Add(Me.Label_companionEHP)
+        Me.GroupBox_companionResults.Controls.Add(Me.TextBox_companionEHP)
+        Me.GroupBox_companionResults.Controls.Add(Me.TextBox_companionArmor)
+        Me.GroupBox_companionResults.Controls.Add(Me.Label_companionShield)
+        Me.GroupBox_companionResults.Controls.Add(Me.TextBox_companionShield)
+        Me.GroupBox_companionResults.Controls.Add(Me.Label_companionHealth)
+        Me.GroupBox_companionResults.Controls.Add(Me.TextBox_companionHealth)
+        Me.GroupBox_companionResults.Controls.Add(Me.Label_companionArmor)
+        Me.GroupBox_companionResults.Location = New System.Drawing.Point(520, 172)
+        Me.GroupBox_companionResults.Name = "GroupBox_companionResults"
+        Me.GroupBox_companionResults.Size = New System.Drawing.Size(233, 147)
+        Me.GroupBox_companionResults.TabIndex = 110
+        Me.GroupBox_companionResults.TabStop = False
+        '
+        'Label_companionEHP
+        '
+        Me.Label_companionEHP.AutoSize = True
+        Me.Label_companionEHP.Location = New System.Drawing.Point(9, 118)
+        Me.Label_companionEHP.Name = "Label_companionEHP"
+        Me.Label_companionEHP.Size = New System.Drawing.Size(111, 17)
+        Me.Label_companionEHP.TabIndex = 111
+        Me.Label_companionEHP.Text = "Effective Health:"
+        '
+        'TextBox_companionEHP
+        '
+        Me.TextBox_companionEHP.Location = New System.Drawing.Point(121, 115)
+        Me.TextBox_companionEHP.Name = "TextBox_companionEHP"
+        Me.TextBox_companionEHP.ReadOnly = True
+        Me.TextBox_companionEHP.Size = New System.Drawing.Size(102, 23)
+        Me.TextBox_companionEHP.TabIndex = 110
+        Me.TextBox_companionEHP.Text = "-"
+        Me.TextBox_companionEHP.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'TextBox_companionArmor
+        '
+        Me.TextBox_companionArmor.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.TextBox_companionArmor.Location = New System.Drawing.Point(121, 25)
+        Me.TextBox_companionArmor.Name = "TextBox_companionArmor"
+        Me.TextBox_companionArmor.ReadOnly = True
+        Me.TextBox_companionArmor.Size = New System.Drawing.Size(102, 23)
+        Me.TextBox_companionArmor.TabIndex = 105
+        Me.TextBox_companionArmor.Text = "-"
+        Me.TextBox_companionArmor.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Label_companionShield
+        '
+        Me.Label_companionShield.AutoSize = True
+        Me.Label_companionShield.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.Label_companionShield.Location = New System.Drawing.Point(10, 77)
+        Me.Label_companionShield.Name = "Label_companionShield"
+        Me.Label_companionShield.Size = New System.Drawing.Size(51, 17)
+        Me.Label_companionShield.TabIndex = 107
+        Me.Label_companionShield.Text = "Shield:"
+        '
+        'TextBox_companionShield
+        '
+        Me.TextBox_companionShield.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.TextBox_companionShield.Location = New System.Drawing.Point(121, 77)
+        Me.TextBox_companionShield.Name = "TextBox_companionShield"
+        Me.TextBox_companionShield.ReadOnly = True
+        Me.TextBox_companionShield.Size = New System.Drawing.Size(102, 23)
+        Me.TextBox_companionShield.TabIndex = 109
+        Me.TextBox_companionShield.Text = "-"
+        Me.TextBox_companionShield.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Label_companionHealth
+        '
+        Me.Label_companionHealth.AutoSize = True
+        Me.Label_companionHealth.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.Label_companionHealth.Location = New System.Drawing.Point(10, 51)
+        Me.Label_companionHealth.Name = "Label_companionHealth"
+        Me.Label_companionHealth.Size = New System.Drawing.Size(53, 17)
+        Me.Label_companionHealth.TabIndex = 106
+        Me.Label_companionHealth.Text = "Health:"
+        '
+        'TextBox_companionHealth
+        '
+        Me.TextBox_companionHealth.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.TextBox_companionHealth.Location = New System.Drawing.Point(121, 51)
+        Me.TextBox_companionHealth.Name = "TextBox_companionHealth"
+        Me.TextBox_companionHealth.ReadOnly = True
+        Me.TextBox_companionHealth.Size = New System.Drawing.Size(102, 23)
+        Me.TextBox_companionHealth.TabIndex = 108
+        Me.TextBox_companionHealth.Text = "-"
+        Me.TextBox_companionHealth.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Label_companionArmor
+        '
+        Me.Label_companionArmor.AutoSize = True
+        Me.Label_companionArmor.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.Label_companionArmor.Location = New System.Drawing.Point(10, 25)
+        Me.Label_companionArmor.Name = "Label_companionArmor"
+        Me.Label_companionArmor.Size = New System.Drawing.Size(50, 17)
+        Me.Label_companionArmor.TabIndex = 104
+        Me.Label_companionArmor.Text = "Armor:"
+        '
+        'NumericUpDown_companionStability
+        '
+        Me.NumericUpDown_companionStability.Enabled = False
+        Me.NumericUpDown_companionStability.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.NumericUpDown_companionStability.Increment = New Decimal(New Integer() {5, 0, 0, 0})
+        Me.NumericUpDown_companionStability.Location = New System.Drawing.Point(430, 288)
+        Me.NumericUpDown_companionStability.Minimum = New Decimal(New Integer() {95, 0, 0, -2147483648})
+        Me.NumericUpDown_companionStability.Name = "NumericUpDown_companionStability"
+        Me.NumericUpDown_companionStability.Size = New System.Drawing.Size(74, 23)
+        Me.NumericUpDown_companionStability.TabIndex = 103
+        Me.NumericUpDown_companionStability.Value = New Decimal(New Integer() {100, 0, 0, 0})
+        '
+        'Label_companionStability
+        '
+        Me.Label_companionStability.AutoSize = True
+        Me.Label_companionStability.Enabled = False
+        Me.Label_companionStability.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.Label_companionStability.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label_companionStability.Location = New System.Drawing.Point(290, 290)
+        Me.Label_companionStability.Name = "Label_companionStability"
+        Me.Label_companionStability.Size = New System.Drawing.Size(114, 17)
+        Me.Label_companionStability.TabIndex = 102
+        Me.Label_companionStability.Text = "Genetic Stability:"
+        '
+        'CheckBox_companionSurvivability
+        '
+        Me.CheckBox_companionSurvivability.AutoSize = True
+        Me.CheckBox_companionSurvivability.Enabled = False
+        Me.CheckBox_companionSurvivability.Location = New System.Drawing.Point(293, 172)
+        Me.CheckBox_companionSurvivability.Name = "CheckBox_companionSurvivability"
+        Me.CheckBox_companionSurvivability.Size = New System.Drawing.Size(102, 21)
+        Me.CheckBox_companionSurvivability.TabIndex = 100
+        Me.CheckBox_companionSurvivability.Tag = "GroupBox_companionSurvivability"
+        Me.CheckBox_companionSurvivability.Text = "Survivability"
+        Me.CheckBox_companionSurvivability.UseVisualStyleBackColor = True
+        '
+        'GroupBox_companionSurvivability
+        '
+        Me.GroupBox_companionSurvivability.Controls.Add(Me.CheckBox_companionLinkShield)
+        Me.GroupBox_companionSurvivability.Controls.Add(Me.NumericUpDown_companionLinkShield)
+        Me.GroupBox_companionSurvivability.Controls.Add(Me.CheckBox_companionLinkHealth)
+        Me.GroupBox_companionSurvivability.Controls.Add(Me.NumericUpDown_companionLinkHealth)
+        Me.GroupBox_companionSurvivability.Controls.Add(Me.CheckBox_companionLinkArmor)
+        Me.GroupBox_companionSurvivability.Controls.Add(Me.NumericUpDown_companionLinkArmor)
+        Me.GroupBox_companionSurvivability.Enabled = False
+        Me.GroupBox_companionSurvivability.Location = New System.Drawing.Point(281, 172)
+        Me.GroupBox_companionSurvivability.Name = "GroupBox_companionSurvivability"
+        Me.GroupBox_companionSurvivability.Size = New System.Drawing.Size(233, 112)
+        Me.GroupBox_companionSurvivability.TabIndex = 101
+        Me.GroupBox_companionSurvivability.TabStop = False
+        Me.GroupBox_companionSurvivability.Text = "  "
+        '
+        'CheckBox_companionLinkShield
+        '
+        Me.CheckBox_companionLinkShield.AutoSize = True
+        Me.CheckBox_companionLinkShield.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.CheckBox_companionLinkShield.Location = New System.Drawing.Point(12, 79)
+        Me.CheckBox_companionLinkShield.Name = "CheckBox_companionLinkShield"
+        Me.CheckBox_companionLinkShield.Size = New System.Drawing.Size(100, 21)
+        Me.CheckBox_companionLinkShield.TabIndex = 22
+        Me.CheckBox_companionLinkShield.Text = "Shield Link:"
+        Me.CheckBox_companionLinkShield.UseVisualStyleBackColor = True
+        '
+        'NumericUpDown_companionLinkShield
+        '
+        Me.NumericUpDown_companionLinkShield.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.NumericUpDown_companionLinkShield.Location = New System.Drawing.Point(149, 78)
+        Me.NumericUpDown_companionLinkShield.Maximum = New Decimal(New Integer() {10, 0, 0, 0})
+        Me.NumericUpDown_companionLinkShield.Name = "NumericUpDown_companionLinkShield"
+        Me.NumericUpDown_companionLinkShield.Size = New System.Drawing.Size(74, 23)
+        Me.NumericUpDown_companionLinkShield.TabIndex = 21
+        '
+        'CheckBox_companionLinkHealth
+        '
+        Me.CheckBox_companionLinkHealth.AutoSize = True
+        Me.CheckBox_companionLinkHealth.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.CheckBox_companionLinkHealth.Location = New System.Drawing.Point(12, 53)
+        Me.CheckBox_companionLinkHealth.Name = "CheckBox_companionLinkHealth"
+        Me.CheckBox_companionLinkHealth.Size = New System.Drawing.Size(102, 21)
+        Me.CheckBox_companionLinkHealth.TabIndex = 20
+        Me.CheckBox_companionLinkHealth.Text = "Health Link:"
+        Me.CheckBox_companionLinkHealth.UseVisualStyleBackColor = True
+        '
+        'NumericUpDown_companionLinkHealth
+        '
+        Me.NumericUpDown_companionLinkHealth.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.NumericUpDown_companionLinkHealth.Location = New System.Drawing.Point(149, 52)
+        Me.NumericUpDown_companionLinkHealth.Maximum = New Decimal(New Integer() {10, 0, 0, 0})
+        Me.NumericUpDown_companionLinkHealth.Name = "NumericUpDown_companionLinkHealth"
+        Me.NumericUpDown_companionLinkHealth.Size = New System.Drawing.Size(74, 23)
+        Me.NumericUpDown_companionLinkHealth.TabIndex = 19
+        '
+        'CheckBox_companionLinkArmor
+        '
+        Me.CheckBox_companionLinkArmor.AutoSize = True
+        Me.CheckBox_companionLinkArmor.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.CheckBox_companionLinkArmor.Location = New System.Drawing.Point(12, 27)
+        Me.CheckBox_companionLinkArmor.Name = "CheckBox_companionLinkArmor"
+        Me.CheckBox_companionLinkArmor.Size = New System.Drawing.Size(99, 21)
+        Me.CheckBox_companionLinkArmor.TabIndex = 18
+        Me.CheckBox_companionLinkArmor.Text = "Armor Link:"
+        Me.CheckBox_companionLinkArmor.UseVisualStyleBackColor = True
+        '
+        'NumericUpDown_companionLinkArmor
+        '
+        Me.NumericUpDown_companionLinkArmor.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.NumericUpDown_companionLinkArmor.Location = New System.Drawing.Point(149, 26)
+        Me.NumericUpDown_companionLinkArmor.Maximum = New Decimal(New Integer() {10, 0, 0, 0})
+        Me.NumericUpDown_companionLinkArmor.Name = "NumericUpDown_companionLinkArmor"
+        Me.NumericUpDown_companionLinkArmor.Size = New System.Drawing.Size(74, 23)
+        Me.NumericUpDown_companionLinkArmor.TabIndex = 17
+        '
+        'CheckBox_companionPrimeCollar
+        '
+        Me.CheckBox_companionPrimeCollar.AutoSize = True
+        Me.CheckBox_companionPrimeCollar.Enabled = False
+        Me.CheckBox_companionPrimeCollar.Location = New System.Drawing.Point(532, 145)
+        Me.CheckBox_companionPrimeCollar.Name = "CheckBox_companionPrimeCollar"
+        Me.CheckBox_companionPrimeCollar.Size = New System.Drawing.Size(103, 21)
+        Me.CheckBox_companionPrimeCollar.TabIndex = 5
+        Me.CheckBox_companionPrimeCollar.Text = "Prime Collar"
+        Me.CheckBox_companionPrimeCollar.UseVisualStyleBackColor = True
+        '
+        'ComboBox_companions
+        '
+        Me.ComboBox_companions.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox_companions.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.ComboBox_companions.FormattingEnabled = True
+        Me.ComboBox_companions.Items.AddRange(New Object() {"Select a Pet", "Adarza", "Smeeta", "Chesa", "Huras", "Raksa", "Sahasa", "Sunika", "Helminth Charger", "Venari"})
+        Me.ComboBox_companions.Location = New System.Drawing.Point(280, 142)
+        Me.ComboBox_companions.Name = "ComboBox_companions"
+        Me.ComboBox_companions.Size = New System.Drawing.Size(233, 24)
+        Me.ComboBox_companions.TabIndex = 4
+        '
+        'TabPage_archwing
+        '
+        Me.TabPage_archwing.Controls.Add(Me.Label_archwingPlaceholder)
+        Me.TabPage_archwing.ImageKey = "archwing.png"
+        Me.TabPage_archwing.Location = New System.Drawing.Point(4, 29)
+        Me.TabPage_archwing.Name = "TabPage_archwing"
+        Me.TabPage_archwing.Size = New System.Drawing.Size(1018, 591)
+        Me.TabPage_archwing.TabIndex = 3
+        Me.TabPage_archwing.Text = "Archwing  "
+        Me.TabPage_archwing.UseVisualStyleBackColor = True
+        '
+        'Label_archwingPlaceholder
+        '
+        Me.Label_archwingPlaceholder.AutoSize = True
+        Me.Label_archwingPlaceholder.Location = New System.Drawing.Point(460, 229)
+        Me.Label_archwingPlaceholder.Name = "Label_archwingPlaceholder"
+        Me.Label_archwingPlaceholder.Size = New System.Drawing.Size(102, 17)
+        Me.Label_archwingPlaceholder.TabIndex = 115
+        Me.Label_archwingPlaceholder.Text = "Coming Soon™"
+        Me.Label_archwingPlaceholder.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'TabPage_development
+        '
+        Me.TabPage_development.Controls.Add(Me.ComboBox_umbraPower)
+        Me.TabPage_development.Controls.Add(Me.ComboBox_umbraBasePower)
+        Me.TabPage_development.Controls.Add(Me.ComboBox_primePower)
+        Me.TabPage_development.Controls.Add(Me.ComboBox_primeBasePower)
+        Me.TabPage_development.Controls.Add(Me.ComboBox_power)
+        Me.TabPage_development.Controls.Add(Me.ComboBox_basePower)
+        Me.TabPage_development.Controls.Add(Me.Label_devUmbraStats)
+        Me.TabPage_development.Controls.Add(Me.ComboBox_umbraEnergy)
+        Me.TabPage_development.Controls.Add(Me.ComboBox_umbraShield)
+        Me.TabPage_development.Controls.Add(Me.ComboBox_umbraHealth)
+        Me.TabPage_development.Controls.Add(Me.ComboBox_umbraArmor)
+        Me.TabPage_development.Controls.Add(Me.ComboBox_umbraBaseEnergy)
+        Me.TabPage_development.Controls.Add(Me.ComboBox_umbraBaseShield)
+        Me.TabPage_development.Controls.Add(Me.ComboBox_umbraBaseHealth)
+        Me.TabPage_development.Controls.Add(Me.ComboBox_umbraBaseArmor)
+        Me.TabPage_development.Controls.Add(Me.ComboBox_umbras)
+        Me.TabPage_development.Controls.Add(Me.CheckBox1)
+        Me.TabPage_development.Controls.Add(Me.GroupBox1)
+        Me.TabPage_development.Controls.Add(Me.Label_companions)
+        Me.TabPage_development.Controls.Add(Me.Label_devPrimeStats)
+        Me.TabPage_development.Controls.Add(Me.Label_devStats)
+        Me.TabPage_development.Controls.Add(Me.ComboBox_primeEnergy)
+        Me.TabPage_development.Controls.Add(Me.ComboBox_primeShield)
+        Me.TabPage_development.Controls.Add(Me.ComboBox_primeHealth)
+        Me.TabPage_development.Controls.Add(Me.ComboBox_primeArmor)
+        Me.TabPage_development.Controls.Add(Me.ComboBox_primeBaseEnergy)
+        Me.TabPage_development.Controls.Add(Me.ComboBox_primeBaseShield)
+        Me.TabPage_development.Controls.Add(Me.ComboBox_primeBaseHealth)
+        Me.TabPage_development.Controls.Add(Me.ComboBox_primeBaseArmor)
+        Me.TabPage_development.Controls.Add(Me.ComboBox_primes)
+        Me.TabPage_development.Controls.Add(Me.ComboBox_petShield)
+        Me.TabPage_development.Controls.Add(Me.ComboBox_petHealth)
+        Me.TabPage_development.Controls.Add(Me.ComboBox_petArmor)
+        Me.TabPage_development.Controls.Add(Me.ComboBox_energy)
+        Me.TabPage_development.Controls.Add(Me.ComboBox_shield)
+        Me.TabPage_development.Controls.Add(Me.ComboBox_health)
+        Me.TabPage_development.Controls.Add(Me.ComboBox_armor)
+        Me.TabPage_development.Controls.Add(Me.ComboBox_baseEnergy)
+        Me.TabPage_development.Controls.Add(Me.ComboBox_baseShield)
+        Me.TabPage_development.Controls.Add(Me.ComboBox_baseHealth)
+        Me.TabPage_development.Controls.Add(Me.ComboBox_baseArmor)
+        Me.TabPage_development.ImageKey = "alert.png"
+        Me.TabPage_development.Location = New System.Drawing.Point(4, 29)
+        Me.TabPage_development.Name = "TabPage_development"
+        Me.TabPage_development.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage_development.Size = New System.Drawing.Size(1018, 591)
+        Me.TabPage_development.TabIndex = 2
+        Me.TabPage_development.Text = "Development  "
+        Me.TabPage_development.UseVisualStyleBackColor = True
+        '
+        'ComboBox_umbraPower
+        '
+        Me.ComboBox_umbraPower.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox_umbraPower.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox_umbraPower.FormattingEnabled = True
+        Me.ComboBox_umbraPower.Items.AddRange(New Object() {"UMBRA POWER", "100_Excalibur"})
+        Me.ComboBox_umbraPower.Location = New System.Drawing.Point(455, 429)
+        Me.ComboBox_umbraPower.Name = "ComboBox_umbraPower"
+        Me.ComboBox_umbraPower.Size = New System.Drawing.Size(120, 24)
+        Me.ComboBox_umbraPower.TabIndex = 115
+        Me.ComboBox_umbraPower.TabStop = False
+        '
+        'ComboBox_umbraBasePower
+        '
+        Me.ComboBox_umbraBasePower.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox_umbraBasePower.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox_umbraBasePower.FormattingEnabled = True
+        Me.ComboBox_umbraBasePower.Items.AddRange(New Object() {"UMBRA BASE POWER", "100_Excalibur"})
+        Me.ComboBox_umbraBasePower.Location = New System.Drawing.Point(329, 429)
+        Me.ComboBox_umbraBasePower.Name = "ComboBox_umbraBasePower"
+        Me.ComboBox_umbraBasePower.Size = New System.Drawing.Size(120, 24)
+        Me.ComboBox_umbraBasePower.TabIndex = 114
+        Me.ComboBox_umbraBasePower.TabStop = False
+        '
+        'ComboBox_primePower
+        '
+        Me.ComboBox_primePower.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox_primePower.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox_primePower.FormattingEnabled = True
+        Me.ComboBox_primePower.Items.AddRange(New Object() {"PRIME POWER", "100_Ash", "100_Banshee", "100_Chroma", "100_Ember", "100_Excalibur", "100_Frost", "100_Hydroid", "100_Limbo", "100_Loki", "100_Mag", "100_Mesa", "100_Mirage", "100_Nekros", "100_Nova", "100_Nyx", "100_Oberon", "100_Rhino", "100_Saryn", "100_Trinity", "100_Valkyr", "100_Vauban", "100_Volt", "100_Zephyr"})
+        Me.ComboBox_primePower.Location = New System.Drawing.Point(166, 391)
+        Me.ComboBox_primePower.Name = "ComboBox_primePower"
+        Me.ComboBox_primePower.Size = New System.Drawing.Size(120, 24)
+        Me.ComboBox_primePower.TabIndex = 113
+        Me.ComboBox_primePower.TabStop = False
+        '
+        'ComboBox_primeBasePower
+        '
+        Me.ComboBox_primeBasePower.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox_primeBasePower.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox_primeBasePower.FormattingEnabled = True
+        Me.ComboBox_primeBasePower.Items.AddRange(New Object() {"PRIME BASE POWER", "100_Ash", "100_Banshee", "100_Chroma", "100_Ember", "100_Excalibur", "100_Frost", "100_Hydroid", "100_Limbo", "100_Loki", "100_Mag", "100_Mesa", "100_Mirage", "100_Nekros", "100_Nova", "100_Nyx", "100_Oberon", "100_Rhino", "100_Saryn", "100_Trinity", "100_Valkyr", "100_Vauban", "100_Volt", "100_Zephyr"})
+        Me.ComboBox_primeBasePower.Location = New System.Drawing.Point(40, 391)
+        Me.ComboBox_primeBasePower.Name = "ComboBox_primeBasePower"
+        Me.ComboBox_primeBasePower.Size = New System.Drawing.Size(120, 24)
+        Me.ComboBox_primeBasePower.TabIndex = 112
+        Me.ComboBox_primeBasePower.TabStop = False
+        '
+        'ComboBox_power
+        '
+        Me.ComboBox_power.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox_power.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox_power.FormattingEnabled = True
+        Me.ComboBox_power.Items.AddRange(New Object() {"POWER", "100_Ash", "100_Atlas", "100_Banshee", "100_Baruuk", "100_Chroma", "100_Ember", "100_Equinox", "100_Excalibur", "100_Frost", "100_Gara", "100_Garuda", "100_Harrow", "100_Hydroid", "100_Inaros", "100_Ivara", "100_Khora", "100_Limbo", "100_Loki", "100_Mag", "100_Mesa", "100_Mirage", "100_Nekros", "100_Nezha", "115_Nidus", "100_Nova", "100_Nyx", "100_Oberon", "100_Octavia", "100_Revenant", "100_Rhino", "100_Saryn", "100_Titania", "100_Trinity", "100_Valkyr", "100_Vauban", "100_Volt", "100_Wukong", "100_Zephyr"})
+        Me.ComboBox_power.Location = New System.Drawing.Point(166, 180)
+        Me.ComboBox_power.Name = "ComboBox_power"
+        Me.ComboBox_power.Size = New System.Drawing.Size(120, 24)
+        Me.ComboBox_power.TabIndex = 111
+        Me.ComboBox_power.TabStop = False
+        '
+        'ComboBox_basePower
+        '
+        Me.ComboBox_basePower.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox_basePower.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox_basePower.FormattingEnabled = True
+        Me.ComboBox_basePower.Items.AddRange(New Object() {"BASE POWER", "100_Ash", "100_Atlas", "100_Banshee", "100_Baruuk", "100_Chroma", "100_Ember", "100_Equinox", "100_Excalibur", "100_Frost", "100_Gara", "100_Garuda", "100_Harrow", "100_Hydroid", "100_Inaros", "100_Ivara", "100_Khora", "100_Limbo", "100_Loki", "100_Mag", "100_Mesa", "100_Mirage", "100_Nekros", "100_Nezha", "100_Nidus", "100_Nova", "100_Nyx", "100_Oberon", "100_Octavia", "100_Revenant", "100_Rhino", "100_Saryn", "100_Titania", "100_Trinity", "100_Valkyr", "100_Vauban", "100_Volt", "100_Wukong", "100_Zephyr"})
+        Me.ComboBox_basePower.Location = New System.Drawing.Point(40, 180)
+        Me.ComboBox_basePower.Name = "ComboBox_basePower"
+        Me.ComboBox_basePower.Size = New System.Drawing.Size(120, 24)
+        Me.ComboBox_basePower.TabIndex = 110
+        Me.ComboBox_basePower.TabStop = False
+        '
+        'Label_devUmbraStats
+        '
+        Me.Label_devUmbraStats.AutoSize = True
+        Me.Label_devUmbraStats.Location = New System.Drawing.Point(326, 259)
+        Me.Label_devUmbraStats.Name = "Label_devUmbraStats"
+        Me.Label_devUmbraStats.Size = New System.Drawing.Size(144, 17)
+        Me.Label_devUmbraStats.TabIndex = 109
+        Me.Label_devUmbraStats.Text = "umbra warframe stats"
+        '
+        'ComboBox_umbraEnergy
+        '
+        Me.ComboBox_umbraEnergy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox_umbraEnergy.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox_umbraEnergy.FormattingEnabled = True
+        Me.ComboBox_umbraEnergy.Items.AddRange(New Object() {"UMBRA ENERGY", "150_Excalibur"})
+        Me.ComboBox_umbraEnergy.Location = New System.Drawing.Point(455, 399)
+        Me.ComboBox_umbraEnergy.Name = "ComboBox_umbraEnergy"
+        Me.ComboBox_umbraEnergy.Size = New System.Drawing.Size(120, 24)
+        Me.ComboBox_umbraEnergy.TabIndex = 108
+        Me.ComboBox_umbraEnergy.TabStop = False
+        '
+        'ComboBox_umbraShield
+        '
+        Me.ComboBox_umbraShield.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox_umbraShield.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox_umbraShield.FormattingEnabled = True
+        Me.ComboBox_umbraShield.Items.AddRange(New Object() {"UMBRA SHIELD", "300_Excalibur"})
+        Me.ComboBox_umbraShield.Location = New System.Drawing.Point(455, 369)
+        Me.ComboBox_umbraShield.Name = "ComboBox_umbraShield"
+        Me.ComboBox_umbraShield.Size = New System.Drawing.Size(120, 24)
+        Me.ComboBox_umbraShield.TabIndex = 107
+        Me.ComboBox_umbraShield.TabStop = False
+        '
+        'ComboBox_umbraHealth
+        '
+        Me.ComboBox_umbraHealth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox_umbraHealth.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox_umbraHealth.FormattingEnabled = True
+        Me.ComboBox_umbraHealth.Items.AddRange(New Object() {"UMBRA HEALTH", "300_Excalibur"})
+        Me.ComboBox_umbraHealth.Location = New System.Drawing.Point(455, 339)
+        Me.ComboBox_umbraHealth.Name = "ComboBox_umbraHealth"
+        Me.ComboBox_umbraHealth.Size = New System.Drawing.Size(120, 24)
+        Me.ComboBox_umbraHealth.TabIndex = 106
+        Me.ComboBox_umbraHealth.TabStop = False
+        '
+        'ComboBox_umbraArmor
+        '
+        Me.ComboBox_umbraArmor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox_umbraArmor.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox_umbraArmor.FormattingEnabled = True
+        Me.ComboBox_umbraArmor.Items.AddRange(New Object() {"UMBRA ARMOR", "300_Excalibur"})
+        Me.ComboBox_umbraArmor.Location = New System.Drawing.Point(455, 309)
+        Me.ComboBox_umbraArmor.Name = "ComboBox_umbraArmor"
+        Me.ComboBox_umbraArmor.Size = New System.Drawing.Size(120, 24)
+        Me.ComboBox_umbraArmor.TabIndex = 105
+        Me.ComboBox_umbraArmor.TabStop = False
+        '
+        'ComboBox_umbraBaseEnergy
+        '
+        Me.ComboBox_umbraBaseEnergy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox_umbraBaseEnergy.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox_umbraBaseEnergy.FormattingEnabled = True
+        Me.ComboBox_umbraBaseEnergy.Items.AddRange(New Object() {"UMBRA BASE ENERGY", "100_Excalibur"})
+        Me.ComboBox_umbraBaseEnergy.Location = New System.Drawing.Point(329, 399)
+        Me.ComboBox_umbraBaseEnergy.Name = "ComboBox_umbraBaseEnergy"
+        Me.ComboBox_umbraBaseEnergy.Size = New System.Drawing.Size(120, 24)
+        Me.ComboBox_umbraBaseEnergy.TabIndex = 104
+        Me.ComboBox_umbraBaseEnergy.TabStop = False
+        '
+        'ComboBox_umbraBaseShield
+        '
+        Me.ComboBox_umbraBaseShield.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox_umbraBaseShield.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox_umbraBaseShield.FormattingEnabled = True
+        Me.ComboBox_umbraBaseShield.Items.AddRange(New Object() {"UMBRA BASE SHIELD", "100_Excalibur"})
+        Me.ComboBox_umbraBaseShield.Location = New System.Drawing.Point(329, 369)
+        Me.ComboBox_umbraBaseShield.Name = "ComboBox_umbraBaseShield"
+        Me.ComboBox_umbraBaseShield.Size = New System.Drawing.Size(120, 24)
+        Me.ComboBox_umbraBaseShield.TabIndex = 103
+        Me.ComboBox_umbraBaseShield.TabStop = False
+        '
+        'ComboBox_umbraBaseHealth
+        '
+        Me.ComboBox_umbraBaseHealth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox_umbraBaseHealth.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox_umbraBaseHealth.FormattingEnabled = True
+        Me.ComboBox_umbraBaseHealth.Items.AddRange(New Object() {"UMBRA BASE HEALTH", "100_Excalibur"})
+        Me.ComboBox_umbraBaseHealth.Location = New System.Drawing.Point(329, 339)
+        Me.ComboBox_umbraBaseHealth.Name = "ComboBox_umbraBaseHealth"
+        Me.ComboBox_umbraBaseHealth.Size = New System.Drawing.Size(120, 24)
+        Me.ComboBox_umbraBaseHealth.TabIndex = 102
+        Me.ComboBox_umbraBaseHealth.TabStop = False
+        '
+        'ComboBox_umbraBaseArmor
+        '
+        Me.ComboBox_umbraBaseArmor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox_umbraBaseArmor.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox_umbraBaseArmor.FormattingEnabled = True
+        Me.ComboBox_umbraBaseArmor.Items.AddRange(New Object() {"UMBRA BASE ARMOR", "300_Excalibur"})
+        Me.ComboBox_umbraBaseArmor.Location = New System.Drawing.Point(329, 309)
+        Me.ComboBox_umbraBaseArmor.Name = "ComboBox_umbraBaseArmor"
+        Me.ComboBox_umbraBaseArmor.Size = New System.Drawing.Size(120, 24)
+        Me.ComboBox_umbraBaseArmor.TabIndex = 101
+        Me.ComboBox_umbraBaseArmor.TabStop = False
+        '
+        'ComboBox_umbras
+        '
+        Me.ComboBox_umbras.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox_umbras.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox_umbras.FormattingEnabled = True
+        Me.ComboBox_umbras.Items.AddRange(New Object() {"UMBRAS", "Excalibur"})
+        Me.ComboBox_umbras.Location = New System.Drawing.Point(329, 279)
+        Me.ComboBox_umbras.Name = "ComboBox_umbras"
+        Me.ComboBox_umbras.Size = New System.Drawing.Size(246, 24)
+        Me.ComboBox_umbras.TabIndex = 100
+        Me.ComboBox_umbras.TabStop = False
+        '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Enabled = False
+        Me.CheckBox1.Location = New System.Drawing.Point(778, 40)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(66, 21)
+        Me.CheckBox1.TabIndex = 98
+        Me.CheckBox1.Text = "NAME"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Enabled = False
+        Me.GroupBox1.Location = New System.Drawing.Point(766, 40)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(222, 159)
+        Me.GroupBox1.TabIndex = 99
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "  "
+        '
+        'Label_companions
+        '
+        Me.Label_companions.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label_companions.AutoSize = True
+        Me.Label_companions.Location = New System.Drawing.Point(326, 129)
+        Me.Label_companions.Name = "Label_companions"
+        Me.Label_companions.Size = New System.Drawing.Size(62, 17)
+        Me.Label_companions.TabIndex = 97
+        Me.Label_companions.Text = "pet stats"
+        '
+        'Label_devPrimeStats
+        '
+        Me.Label_devPrimeStats.AutoSize = True
+        Me.Label_devPrimeStats.Location = New System.Drawing.Point(37, 221)
+        Me.Label_devPrimeStats.Name = "Label_devPrimeStats"
+        Me.Label_devPrimeStats.Size = New System.Drawing.Size(139, 17)
+        Me.Label_devPrimeStats.TabIndex = 96
+        Me.Label_devPrimeStats.Text = "prime warframe stats"
+        '
+        'Label_devStats
+        '
+        Me.Label_devStats.AutoSize = True
+        Me.Label_devStats.Location = New System.Drawing.Point(37, 40)
+        Me.Label_devStats.Name = "Label_devStats"
+        Me.Label_devStats.Size = New System.Drawing.Size(100, 17)
+        Me.Label_devStats.TabIndex = 95
+        Me.Label_devStats.Text = "warframe stats"
+        '
+        'ComboBox_primeEnergy
+        '
+        Me.ComboBox_primeEnergy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox_primeEnergy.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox_primeEnergy.FormattingEnabled = True
+        Me.ComboBox_primeEnergy.Items.AddRange(New Object() {"PRIME ENERGY", "150_Ash", "262.5_Banshee", "300_Chroma", "225_Ember", "150_Excalibur", "150_Frost", "225_Hydroid", "262_Limbo", "262.5_Loki", "262.5_Mag", "188_Mesa", "225_Mirage", "187.5_Nekros", "262.5_Nova", "225_Nyx", "262.5_Oberon", "150_Rhino", "300_Saryn", "225_Trinity", "225_Valkyr", "225_Vauban", "300_Volt", "225_Zephyr"})
+        Me.ComboBox_primeEnergy.Location = New System.Drawing.Point(166, 361)
+        Me.ComboBox_primeEnergy.Name = "ComboBox_primeEnergy"
+        Me.ComboBox_primeEnergy.Size = New System.Drawing.Size(120, 24)
+        Me.ComboBox_primeEnergy.TabIndex = 94
+        Me.ComboBox_primeEnergy.TabStop = False
+        '
+        'ComboBox_primeShield
+        '
+        Me.ComboBox_primeShield.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox_primeShield.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox_primeShield.FormattingEnabled = True
+        Me.ComboBox_primeShield.Items.AddRange(New Object() {"PRIME SHIELD", "375_Ash", "300_Banshee", "300_Chroma", "375_Ember", "300_Excalibur", "525_Frost", "525_Hydroid", "300_Limbo", "225_Loki", "450_Mag", "225_Mesa", "330_Mirage", "450_Nekros", "300_Nova", "375_Nyx", "300_Oberon", "450_Rhino", "300_Saryn", "450_Trinity", "150_Valkyr", "300_Vauban", "450_Volt", "450_Zephyr"})
+        Me.ComboBox_primeShield.Location = New System.Drawing.Point(166, 331)
+        Me.ComboBox_primeShield.Name = "ComboBox_primeShield"
+        Me.ComboBox_primeShield.Size = New System.Drawing.Size(120, 24)
+        Me.ComboBox_primeShield.TabIndex = 93
+        Me.ComboBox_primeShield.TabStop = False
+        '
+        'ComboBox_primeHealth
+        '
+        Me.ComboBox_primeHealth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox_primeHealth.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox_primeHealth.FormattingEnabled = True
+        Me.ComboBox_primeHealth.Items.AddRange(New Object() {"PRIME HEALTH", "450_Ash", "300_Banshee", "300_Chroma", "300_Ember", "300_Excalibur", "300_Frost", "300_Hydroid", "300_Limbo", "225_Loki", "300_Mag", "405_Mesa", "240_Mirage", "300_Nekros", "300_Nova", "300_Nyx", "375_Oberon", "300_Rhino", "375_Saryn", "300_Trinity", "300_Valkyr", "300_Vauban", "300_Volt", "450_Zephyr"})
+        Me.ComboBox_primeHealth.Location = New System.Drawing.Point(166, 301)
+        Me.ComboBox_primeHealth.Name = "ComboBox_primeHealth"
+        Me.ComboBox_primeHealth.Size = New System.Drawing.Size(120, 24)
+        Me.ComboBox_primeHealth.TabIndex = 92
+        Me.ComboBox_primeHealth.TabStop = False
+        '
+        'ComboBox_primeArmor
+        '
+        Me.ComboBox_primeArmor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox_primeArmor.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox_primeArmor.FormattingEnabled = True
+        Me.ComboBox_primeArmor.Items.AddRange(New Object() {"PRIME ARMOR", "150_Ash", "65_Banshee", "425_Chroma", "125_Ember", "300_Excalibur", "300_Frost", "250_Hydroid", "85_Limbo", "65_Loki", "65_Mag", "85_Mesa", "150_Mirage", "65_Nekros", "65_Nova", "50_Nyx", "225_Oberon", "275_Rhino", "300_Saryn", "15_Trinity", "700_Valkyr", "100_Vauban", "100_Volt", "75_Zephyr"})
+        Me.ComboBox_primeArmor.Location = New System.Drawing.Point(166, 271)
+        Me.ComboBox_primeArmor.Name = "ComboBox_primeArmor"
+        Me.ComboBox_primeArmor.Size = New System.Drawing.Size(120, 24)
+        Me.ComboBox_primeArmor.TabIndex = 91
+        Me.ComboBox_primeArmor.TabStop = False
+        '
+        'ComboBox_primeBaseEnergy
+        '
+        Me.ComboBox_primeBaseEnergy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox_primeBaseEnergy.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox_primeBaseEnergy.FormattingEnabled = True
+        Me.ComboBox_primeBaseEnergy.Items.AddRange(New Object() {"PRIME BASE ENERGY", "100_Ash", "175_Banshee", "200_Chroma", "150_Ember", "100_Excalibur", "100_Frost", "150_Hydroid", "175_Limbo", "175_Loki", "175_Mag", "125_Mesa", "150_Mirage", "125_Nekros", "175_Nova", "150_Nyx", "175_Oberon", "100_Rhino", "200_Saryn", "150_Trinity", "150_Valkyr", "150_Vauban", "200_Volt", "150_Zephyr"})
+        Me.ComboBox_primeBaseEnergy.Location = New System.Drawing.Point(40, 361)
+        Me.ComboBox_primeBaseEnergy.Name = "ComboBox_primeBaseEnergy"
+        Me.ComboBox_primeBaseEnergy.Size = New System.Drawing.Size(120, 24)
+        Me.ComboBox_primeBaseEnergy.TabIndex = 90
+        Me.ComboBox_primeBaseEnergy.TabStop = False
+        '
+        'ComboBox_primeBaseShield
+        '
+        Me.ComboBox_primeBaseShield.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox_primeBaseShield.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox_primeBaseShield.FormattingEnabled = True
+        Me.ComboBox_primeBaseShield.Items.AddRange(New Object() {"PRIME BASE SHIELD", "125_Ash", "100_Banshee", "100_Chroma", "125_Ember", "100_Excalibur", "175_Frost", "175_Hydroid", "100_Limbo", "75_Loki", "150_Mag", "75_Mesa", "110_Mirage", "150_Nekros", "100_Nova", "125_Nyx", "100_Oberon", "150_Rhino", "100_Saryn", "150_Trinity", "50_Valkyr", "100_Vauban", "150_Volt", "150_Zephyr"})
+        Me.ComboBox_primeBaseShield.Location = New System.Drawing.Point(40, 331)
+        Me.ComboBox_primeBaseShield.Name = "ComboBox_primeBaseShield"
+        Me.ComboBox_primeBaseShield.Size = New System.Drawing.Size(120, 24)
+        Me.ComboBox_primeBaseShield.TabIndex = 89
+        Me.ComboBox_primeBaseShield.TabStop = False
+        '
+        'ComboBox_primeBaseHealth
+        '
+        Me.ComboBox_primeBaseHealth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox_primeBaseHealth.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox_primeBaseHealth.FormattingEnabled = True
+        Me.ComboBox_primeBaseHealth.Items.AddRange(New Object() {"PRIME BASE HEALTH", "150_Ash", "100_Banshee", "100_Chroma", "100_Ember", "100_Excalibur", "100_Frost", "100_Hydroid", "100_Limbo", "75_Loki", "100_Mag", "135_Mesa", "80_Mirage", "100_Nekros", "100_Nova", "100_Nyx", "125_Oberon", "100_Rhino", "125_Saryn", "100_Trinity", "100_Valkyr", "100_Vauban", "100_Volt", "150_Zephyr"})
+        Me.ComboBox_primeBaseHealth.Location = New System.Drawing.Point(40, 301)
+        Me.ComboBox_primeBaseHealth.Name = "ComboBox_primeBaseHealth"
+        Me.ComboBox_primeBaseHealth.Size = New System.Drawing.Size(120, 24)
+        Me.ComboBox_primeBaseHealth.TabIndex = 88
+        Me.ComboBox_primeBaseHealth.TabStop = False
+        '
+        'ComboBox_primeBaseArmor
+        '
+        Me.ComboBox_primeBaseArmor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox_primeBaseArmor.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox_primeBaseArmor.FormattingEnabled = True
+        Me.ComboBox_primeBaseArmor.Items.AddRange(New Object() {"PRIME BASE ARMOR", "150_Ash", "65_Banshee", "425_Chroma", "125_Ember", "300_Excalibur", "300_Frost", "250_Hydroid", "85_Limbo", "65_Loki", "65_Mag", "85_Mesa", "150_Mirage", "65_Nekros", "65_Nova", "50_Nyx", "225_Oberon", "275_Rhino", "300_Saryn", "15_Trinity", "700_Valkyr", "100_Vauban", "100_Volt", "75_Zephyr"})
+        Me.ComboBox_primeBaseArmor.Location = New System.Drawing.Point(40, 271)
+        Me.ComboBox_primeBaseArmor.Name = "ComboBox_primeBaseArmor"
+        Me.ComboBox_primeBaseArmor.Size = New System.Drawing.Size(120, 24)
+        Me.ComboBox_primeBaseArmor.TabIndex = 87
+        Me.ComboBox_primeBaseArmor.TabStop = False
+        '
+        'ComboBox_primes
+        '
+        Me.ComboBox_primes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox_primes.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox_primes.FormattingEnabled = True
+        Me.ComboBox_primes.Items.AddRange(New Object() {"PRIMES", "Ash", "Banshee", "Chroma", "Ember", "Excalibur", "Frost", "Hydroid", "Limbo", "Loki", "Mag", "Mesa", "Mirage", "Nekros", "Nova", "Nyx", "Oberon", "Rhino", "Saryn", "Trinity", "Valkyr", "Vauban", "Volt", "Zephyr"})
+        Me.ComboBox_primes.Location = New System.Drawing.Point(40, 241)
+        Me.ComboBox_primes.Name = "ComboBox_primes"
+        Me.ComboBox_primes.Size = New System.Drawing.Size(246, 24)
+        Me.ComboBox_primes.TabIndex = 75
+        Me.ComboBox_primes.TabStop = False
+        '
+        'ComboBox_petShield
+        '
+        Me.ComboBox_petShield.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.ComboBox_petShield.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox_petShield.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox_petShield.FormattingEnabled = True
+        Me.ComboBox_petShield.Items.AddRange(New Object() {"PET SHIELD", "210_Adarza", "180_Smeeta", "225_Chesa", "375_Huras", "300_Raksa", "225_Sahasa", "270_Sunika", "225_HelminthCharger", "0_Venari"})
+        Me.ComboBox_petShield.Location = New System.Drawing.Point(329, 209)
+        Me.ComboBox_petShield.Name = "ComboBox_petShield"
+        Me.ComboBox_petShield.Size = New System.Drawing.Size(248, 24)
+        Me.ComboBox_petShield.TabIndex = 86
+        Me.ComboBox_petShield.TabStop = False
+        '
+        'ComboBox_petHealth
+        '
+        Me.ComboBox_petHealth.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.ComboBox_petHealth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox_petHealth.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox_petHealth.FormattingEnabled = True
+        Me.ComboBox_petHealth.Items.AddRange(New Object() {"PET HEALTH", "240_Adarza", "300_Smeeta", "375_Chesa", "225_Huras", "300_Raksa", "375_Sahasa", "330_Sunika", "285_HelminthCharger", "900_Venari"})
+        Me.ComboBox_petHealth.Location = New System.Drawing.Point(329, 178)
+        Me.ComboBox_petHealth.Name = "ComboBox_petHealth"
+        Me.ComboBox_petHealth.Size = New System.Drawing.Size(248, 24)
+        Me.ComboBox_petHealth.TabIndex = 85
+        Me.ComboBox_petHealth.TabStop = False
+        '
+        'ComboBox_petArmor
+        '
+        Me.ComboBox_petArmor.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.ComboBox_petArmor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox_petArmor.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox_petArmor.FormattingEnabled = True
+        Me.ComboBox_petArmor.Items.AddRange(New Object() {"PET ARMOR", "50_Adarza", "50_Smeeta", "50_Chesa", "50_Huras", "50_Raksa", "50_Sahasa", "50_Sunika", "50_HelminthCharger", "350_Venari"})
+        Me.ComboBox_petArmor.Location = New System.Drawing.Point(329, 148)
+        Me.ComboBox_petArmor.Name = "ComboBox_petArmor"
+        Me.ComboBox_petArmor.Size = New System.Drawing.Size(248, 24)
+        Me.ComboBox_petArmor.TabIndex = 84
+        Me.ComboBox_petArmor.TabStop = False
+        '
+        'ComboBox_energy
+        '
+        Me.ComboBox_energy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox_energy.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox_energy.FormattingEnabled = True
+        Me.ComboBox_energy.Items.AddRange(New Object() {"ENERGY", "150_Ash", "225_Atlas", "225_Banshee", "300_Baruuk", "225_Chroma", "225_Ember", "225_Equinox", "150_Excalibur", "150_Frost", "225_Gara", "180_Garuda", "150_Harrow", "187.5_Hydroid", "150_Inaros", "262.5_Ivara", "188_Khora", "225_Limbo", "225_Loki", "188_Mag", "150_Mesa", "225_Mirage", "150_Nekros", "225_Nezha", "150_Nidus", "225_Nova", "225_Nyx", "225_Oberon", "225_Octavia", "188_Revenant", "150_Rhino", "225_Saryn", "150_Titania", "225_Trinity", "150_Valkyr", "225_Vauban", "150_Volt", "150_Wukong", "150_Zephyr"})
+        Me.ComboBox_energy.Location = New System.Drawing.Point(166, 150)
+        Me.ComboBox_energy.Name = "ComboBox_energy"
+        Me.ComboBox_energy.Size = New System.Drawing.Size(120, 24)
+        Me.ComboBox_energy.TabIndex = 83
+        Me.ComboBox_energy.TabStop = False
+        '
+        'ComboBox_shield
+        '
+        Me.ComboBox_shield.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox_shield.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox_shield.FormattingEnabled = True
+        Me.ComboBox_shield.Items.AddRange(New Object() {"SHIELD", "300_Ash", "300_Atlas", "300_Banshee", "300_Baruuk", "300_Chroma", "300_Ember", "300_Equinox", "300_Excalibur", "450_Frost", "300_Gara", "300_Garuda", "450_Harrow", "375_Hydroid", "0_Inaros", "300_Ivara", "300_Khora", "225_Limbo", "225_Loki", "450_Mag", "225_Mesa", "240_Mirage", "270_Nekros", "150_Nezha", "0_Nidus", "225_Nova", "300_Nyx", "300_Oberon", "225_Octavia", "675_Revenant", "450_Rhino", "300_Saryn", "300_Titania", "300_Trinity", "150_Valkyr", "225_Vauban", "450_Volt", "375_Wukong", "450_Zephyr"})
+        Me.ComboBox_shield.Location = New System.Drawing.Point(166, 120)
+        Me.ComboBox_shield.Name = "ComboBox_shield"
+        Me.ComboBox_shield.Size = New System.Drawing.Size(120, 24)
+        Me.ComboBox_shield.TabIndex = 82
+        Me.ComboBox_shield.TabStop = False
+        '
+        'ComboBox_health
+        '
+        Me.ComboBox_health.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox_health.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox_health.FormattingEnabled = True
+        Me.ComboBox_health.Items.AddRange(New Object() {"HEALTH", "450_Ash", "300_Atlas", "300_Banshee", "225_Baruuk", "300_Chroma", "300_Ember", "300_Equinox", "300_Excalibur", "300_Frost", "300_Gara", "300_Garuda", "300_Harrow", "300_Hydroid", "2200_Inaros", "225_Ivara", "375_Khora", "300_Limbo", "225_Loki", "225_Mag", "375_Mesa", "240_Mirage", "300_Nekros", "375_Nezha", "450_Nidus", "300_Nova", "300_Nyx", "375_Oberon", "300_Octavia", "300_Revenant", "300_Rhino", "375_Saryn", "300_Titania", "300_Trinity", "300_Valkyr", "300_Vauban", "300_Volt", "300_Wukong", "450_Zephyr"})
+        Me.ComboBox_health.Location = New System.Drawing.Point(166, 90)
+        Me.ComboBox_health.Name = "ComboBox_health"
+        Me.ComboBox_health.Size = New System.Drawing.Size(120, 24)
+        Me.ComboBox_health.TabIndex = 81
+        Me.ComboBox_health.TabStop = False
+        '
+        'ComboBox_armor
+        '
+        Me.ComboBox_armor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox_armor.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox_armor.FormattingEnabled = True
+        Me.ComboBox_armor.Items.AddRange(New Object() {"ARMOR", "65_Ash", "450_Atlas", "15_Banshee", "150_Baruuk", "350_Chroma", "100_Ember", "100_Equinox", "225_Excalibur", "300_Frost", "125_Gara", "300_Garuda", "150_Harrow", "200_Hydroid", "200_Inaros", "65_Ivara", "275_Khora", "65_Limbo", "65_Loki", "65_Mag", "65_Mesa", "65_Mirage", "65_Nekros", "175_Nezha", "450_Nidus", "65_Nova", "15_Nyx", "150_Oberon", "125_Octavia", "105_Revenant", "190_Rhino", "225_Saryn", "65_Titania", "15_Trinity", "600_Valkyr", "50_Vauban", "15_Volt", "225_Wukong", "15_Zephyr"})
+        Me.ComboBox_armor.Location = New System.Drawing.Point(166, 60)
+        Me.ComboBox_armor.Name = "ComboBox_armor"
+        Me.ComboBox_armor.Size = New System.Drawing.Size(120, 24)
+        Me.ComboBox_armor.TabIndex = 80
+        Me.ComboBox_armor.TabStop = False
+        '
+        'ComboBox_baseEnergy
+        '
+        Me.ComboBox_baseEnergy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox_baseEnergy.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox_baseEnergy.FormattingEnabled = True
+        Me.ComboBox_baseEnergy.Items.AddRange(New Object() {"BASE ENERGY", "100_Ash", "150_Atlas", "150_Banshee", "200_Baruuk", "150_Chroma", "150_Ember", "150_Equinox", "100_Excalibur", "100_Frost", "150_Gara", "120_Garuda", "100_Harrow", "100_Hydroid", "100_Inaros", "175_Ivara", "125_Khora", "150_Limbo", "150_Loki", "125_Mag", "100_Mesa", "150_Mirage", "100_Nekros", "150_Nezha", "100_Nidus", "150_Nova", "150_Nyx", "150_Oberon", "150_Octavia", "125_Revenant", "100_Rhino", "150_Saryn", "100_Titania", "150_Trinity", "100_Valkyr", "150_Vauban", "100_Volt", "100_Wukong", "100_Zephyr"})
+        Me.ComboBox_baseEnergy.Location = New System.Drawing.Point(40, 150)
+        Me.ComboBox_baseEnergy.Name = "ComboBox_baseEnergy"
+        Me.ComboBox_baseEnergy.Size = New System.Drawing.Size(120, 24)
+        Me.ComboBox_baseEnergy.TabIndex = 79
+        Me.ComboBox_baseEnergy.TabStop = False
+        '
+        'ComboBox_baseShield
+        '
+        Me.ComboBox_baseShield.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox_baseShield.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox_baseShield.FormattingEnabled = True
+        Me.ComboBox_baseShield.Items.AddRange(New Object() {"BASE SHIELD", "100_Ash", "100_Atlas", "100_Banshee", "100_Baruuk", "100_Chroma", "100_Ember", "100_Equinox", "100_Excalibur", "150_Frost", "100_Gara", "100_Garuda", "150_Harrow", "125_Hydroid", "0_Inaros", "100_Ivara", "100_Khora", "75_Limbo", "75_Loki", "150_Mag", "75_Mesa", "80_Mirage", "90_Nekros", "50_Nezha", "0_Nidus", "75_Nova", "100_Nyx", "100_Oberon", "75_Octavia", "225_Revenant", "150_Rhino", "100_Saryn", "100_Titania", "100_Trinity", "50_Valkyr", "75_Vauban", "150_Volt", "125_Wukong", "150_Zephyr"})
+        Me.ComboBox_baseShield.Location = New System.Drawing.Point(40, 120)
+        Me.ComboBox_baseShield.Name = "ComboBox_baseShield"
+        Me.ComboBox_baseShield.Size = New System.Drawing.Size(120, 24)
+        Me.ComboBox_baseShield.TabIndex = 78
+        Me.ComboBox_baseShield.TabStop = False
+        '
+        'ComboBox_baseHealth
+        '
+        Me.ComboBox_baseHealth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox_baseHealth.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox_baseHealth.FormattingEnabled = True
+        Me.ComboBox_baseHealth.Items.AddRange(New Object() {"BASE HEALTH", "150_Ash", "100_Atlas", "100_Banshee", "75_Baruuk", "100_Chroma", "100_Ember", "100_Equinox", "100_Excalibur", "100_Frost", "100_Gara", "100_Garuda", "100_Harrow", "100_Hydroid", "550_Inaros", "75_Ivara", "125_Khora", "100_Limbo", "75_Loki", "75_Mag", "125_Mesa", "80_Mirage", "100_Nekros", "125_Nezha", "150_Nidus", "100_Nova", "100_Nyx", "125_Oberon", "100_Octavia", "100_Revenant", "100_Rhino", "125_Saryn", "100_Titania", "100_Trinity", "100_Valkyr", "100_Vauban", "100_Volt", "100_Wukong", "150_Zephyr"})
+        Me.ComboBox_baseHealth.Location = New System.Drawing.Point(40, 90)
+        Me.ComboBox_baseHealth.Name = "ComboBox_baseHealth"
+        Me.ComboBox_baseHealth.Size = New System.Drawing.Size(120, 24)
+        Me.ComboBox_baseHealth.TabIndex = 77
+        Me.ComboBox_baseHealth.TabStop = False
+        '
+        'ComboBox_baseArmor
+        '
+        Me.ComboBox_baseArmor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox_baseArmor.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox_baseArmor.FormattingEnabled = True
+        Me.ComboBox_baseArmor.Items.AddRange(New Object() {"BASE ARMOR", "65_Ash", "450_Atlas", "15_Banshee", "150_Baruuk", "350_Chroma", "100_Ember", "100_Equinox", "225_Excalibur", "300_Frost", "125_Gara", "300_Garuda", "150_Harrow", "200_Hydroid", "200_Inaros", "65_Ivara", "275_Khora", "65_Limbo", "65_Loki", "65_Mag", "65_Mesa", "65_Mirage", "65_Nekros", "175_Nezha", "300_Nidus", "65_Nova", "15_Nyx", "150_Oberon", "125_Octavia", "105_Revenant", "190_Rhino", "225_Saryn", "65_Titania", "15_Trinity", "600_Valkyr", "50_Vauban", "15_Volt", "225_Wukong", "15_Zephyr"})
+        Me.ComboBox_baseArmor.Location = New System.Drawing.Point(40, 60)
+        Me.ComboBox_baseArmor.Name = "ComboBox_baseArmor"
+        Me.ComboBox_baseArmor.Size = New System.Drawing.Size(120, 24)
+        Me.ComboBox_baseArmor.TabIndex = 76
+        Me.ComboBox_baseArmor.TabStop = False
+        '
+        'Icons
+        '
+        Me.Icons.ImageStream = CType(resources.GetObject("Icons.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.Icons.TransparentColor = System.Drawing.Color.Transparent
+        Me.Icons.Images.SetKeyName(0, "warframe.png")
+        Me.Icons.Images.SetKeyName(1, "sentinel.png")
+        Me.Icons.Images.SetKeyName(2, "arcane.png")
+        Me.Icons.Images.SetKeyName(3, "archwing.png")
+        Me.Icons.Images.SetKeyName(4, "alert.png")
+        '
+        'Label_author
+        '
+        Me.Label_author.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label_author.AutoSize = True
+        Me.Label_author.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.Label_author.Location = New System.Drawing.Point(862, 7)
+        Me.Label_author.Name = "Label_author"
+        Me.Label_author.Size = New System.Drawing.Size(164, 13)
+        Me.Label_author.TabIndex = 1
+        Me.Label_author.Text = "Made with        By /u/xEpicBradx"
+        '
+        'Label_love
+        '
+        Me.Label_love.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label_love.AutoSize = True
+        Me.Label_love.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.Label_love.ForeColor = System.Drawing.Color.Red
+        Me.Label_love.Location = New System.Drawing.Point(915, 6)
+        Me.Label_love.Name = "Label_love"
+        Me.Label_love.Size = New System.Drawing.Size(22, 15)
+        Me.Label_love.TabIndex = 2
+        Me.Label_love.Text = "♥"
+        '
         'Form_main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -4001,6 +4001,37 @@ Partial Class Form_main
         Me.GroupBox_warframeResults.PerformLayout()
         Me.GroupBox_squadEffects.ResumeLayout(False)
         Me.GroupBox_squadEffects.PerformLayout()
+        Me.CustomTabControl_arcaneHelmets.ResumeLayout(False)
+        Me.TabPage_arcaneHelmetsDefault.ResumeLayout(False)
+        Me.TabPage_arcaneHelmetsDefault.PerformLayout()
+        Me.TabPage_arcaneHelmetsAsh.ResumeLayout(False)
+        Me.TabPage_arcaneHelmetsAsh.PerformLayout()
+        Me.TabPage_arcaneHelmetsBanshee.ResumeLayout(False)
+        Me.TabPage_arcaneHelmetsBanshee.PerformLayout()
+        Me.TabPage_arcaneHelmetsEmber.ResumeLayout(False)
+        Me.TabPage_arcaneHelmetsEmber.PerformLayout()
+        Me.TabPage_arcaneHelmetsExcalibur.ResumeLayout(False)
+        Me.TabPage_arcaneHelmetsExcalibur.PerformLayout()
+        Me.TabPage_arcaneHelmetsFrost.ResumeLayout(False)
+        Me.TabPage_arcaneHelmetsFrost.PerformLayout()
+        Me.TabPage_arcaneHelmetsLoki.ResumeLayout(False)
+        Me.TabPage_arcaneHelmetsLoki.PerformLayout()
+        Me.TabPage_arcaneHelmetsMag.ResumeLayout(False)
+        Me.TabPage_arcaneHelmetsMag.PerformLayout()
+        Me.TabPage_arcaneHelmetsNova.ResumeLayout(False)
+        Me.TabPage_arcaneHelmetsNova.PerformLayout()
+        Me.TabPage_arcaneHelmetsNyx.ResumeLayout(False)
+        Me.TabPage_arcaneHelmetsNyx.PerformLayout()
+        Me.TabPage_arcaneHelmetsRhino.ResumeLayout(False)
+        Me.TabPage_arcaneHelmetsRhino.PerformLayout()
+        Me.TabPage_arcaneHelmetsSaryn.ResumeLayout(False)
+        Me.TabPage_arcaneHelmetsSaryn.PerformLayout()
+        Me.TabPage_arcaneHelmetsTrinity.ResumeLayout(False)
+        Me.TabPage_arcaneHelmetsTrinity.PerformLayout()
+        Me.TabPage_arcaneHelmetsVauban.ResumeLayout(False)
+        Me.TabPage_arcaneHelmetsVauban.PerformLayout()
+        Me.TabPage_arcaneHelmetsVolt.ResumeLayout(False)
+        Me.TabPage_arcaneHelmetsVolt.PerformLayout()
         Me.GroupBox_specialEffects.ResumeLayout(False)
         Me.GroupBox_specialEffects.PerformLayout()
         CType(Me.NumericUpDown_oversheilds, System.ComponentModel.ISupportInitialize).EndInit()
@@ -4049,55 +4080,6 @@ Partial Class Form_main
         CType(Me.NumericUpDown_growingPower, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NumericUpDown_standUnited, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NumericUpDown_physique, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox_focus.ResumeLayout(False)
-        Me.GroupBox_focus.PerformLayout()
-        CType(Me.NumericUpDown_stoneSkin, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox_blocking.ResumeLayout(False)
-        Me.TabPage_companion.ResumeLayout(False)
-        Me.TabPage_companion.PerformLayout()
-        Me.GroupBox_companionResults.ResumeLayout(False)
-        Me.GroupBox_companionResults.PerformLayout()
-        CType(Me.NumericUpDown_companionStability, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox_companionSurvivability.ResumeLayout(False)
-        Me.GroupBox_companionSurvivability.PerformLayout()
-        CType(Me.NumericUpDown_companionLinkShield, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.NumericUpDown_companionLinkHealth, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.NumericUpDown_companionLinkArmor, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabPage_archwing.ResumeLayout(False)
-        Me.TabPage_archwing.PerformLayout()
-        Me.TabPage_development.ResumeLayout(False)
-        Me.TabPage_development.PerformLayout()
-        Me.CustomTabControl_arcaneHelmets.ResumeLayout(False)
-        Me.TabPage_arcaneHelmetsDefault.ResumeLayout(False)
-        Me.TabPage_arcaneHelmetsDefault.PerformLayout()
-        Me.TabPage_arcaneHelmetsAsh.ResumeLayout(False)
-        Me.TabPage_arcaneHelmetsAsh.PerformLayout()
-        Me.TabPage_arcaneHelmetsBanshee.ResumeLayout(False)
-        Me.TabPage_arcaneHelmetsBanshee.PerformLayout()
-        Me.TabPage_arcaneHelmetsEmber.ResumeLayout(False)
-        Me.TabPage_arcaneHelmetsEmber.PerformLayout()
-        Me.TabPage_arcaneHelmetsExcalibur.ResumeLayout(False)
-        Me.TabPage_arcaneHelmetsExcalibur.PerformLayout()
-        Me.TabPage_arcaneHelmetsFrost.ResumeLayout(False)
-        Me.TabPage_arcaneHelmetsFrost.PerformLayout()
-        Me.TabPage_arcaneHelmetsLoki.ResumeLayout(False)
-        Me.TabPage_arcaneHelmetsLoki.PerformLayout()
-        Me.TabPage_arcaneHelmetsMag.ResumeLayout(False)
-        Me.TabPage_arcaneHelmetsMag.PerformLayout()
-        Me.TabPage_arcaneHelmetsNova.ResumeLayout(False)
-        Me.TabPage_arcaneHelmetsNova.PerformLayout()
-        Me.TabPage_arcaneHelmetsNyx.ResumeLayout(False)
-        Me.TabPage_arcaneHelmetsNyx.PerformLayout()
-        Me.TabPage_arcaneHelmetsRhino.ResumeLayout(False)
-        Me.TabPage_arcaneHelmetsRhino.PerformLayout()
-        Me.TabPage_arcaneHelmetsSaryn.ResumeLayout(False)
-        Me.TabPage_arcaneHelmetsSaryn.PerformLayout()
-        Me.TabPage_arcaneHelmetsTrinity.ResumeLayout(False)
-        Me.TabPage_arcaneHelmetsTrinity.PerformLayout()
-        Me.TabPage_arcaneHelmetsVauban.ResumeLayout(False)
-        Me.TabPage_arcaneHelmetsVauban.PerformLayout()
-        Me.TabPage_arcaneHelmetsVolt.ResumeLayout(False)
-        Me.TabPage_arcaneHelmetsVolt.PerformLayout()
         Me.CustomTabControl_abilitys.ResumeLayout(False)
         Me.TabPage_abilitiesDefault.ResumeLayout(False)
         Me.TabPage_abilitiesDefault.PerformLayout()
@@ -4151,6 +4133,24 @@ Partial Class Form_main
         Me.TabPage_abilitiesTrinity.PerformLayout()
         Me.TabPage_abilitiesValkyr.ResumeLayout(False)
         Me.TabPage_abilitiesValkyr.PerformLayout()
+        Me.GroupBox_focus.ResumeLayout(False)
+        Me.GroupBox_focus.PerformLayout()
+        CType(Me.NumericUpDown_stoneSkin, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox_blocking.ResumeLayout(False)
+        Me.TabPage_companion.ResumeLayout(False)
+        Me.TabPage_companion.PerformLayout()
+        Me.GroupBox_companionResults.ResumeLayout(False)
+        Me.GroupBox_companionResults.PerformLayout()
+        CType(Me.NumericUpDown_companionStability, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox_companionSurvivability.ResumeLayout(False)
+        Me.GroupBox_companionSurvivability.PerformLayout()
+        CType(Me.NumericUpDown_companionLinkShield, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.NumericUpDown_companionLinkHealth, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.NumericUpDown_companionLinkArmor, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage_archwing.ResumeLayout(False)
+        Me.TabPage_archwing.PerformLayout()
+        Me.TabPage_development.ResumeLayout(False)
+        Me.TabPage_development.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
