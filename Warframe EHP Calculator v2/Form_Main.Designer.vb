@@ -2336,7 +2336,7 @@ Partial Class Form_main
         '
         Me.ComboBox_warframes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox_warframes.FormattingEnabled = True
-        Me.ComboBox_warframes.Items.AddRange(New Object() {"Select a Warframe", "Ash", "Atlas", "Banshee", "Baruuk", "Chroma", "Ember", "Equinox", "Excalibur", "Frost", "Gara", "Garuda", "Harrow", "Hydroid", "Inaros", "Ivara", "Khora", "Limbo", "Loki", "Mag", "Mesa", "Mirage", "Nekros", "Nezha", "Nidus", "Nova", "Nyx", "Oberon", "Octavia", "Revenant", "Rhino", "Saryn", "Titania", "Trinity", "Valkyr", "Vauban", "Volt", "Wukong", "Zephyr"})
+        Me.ComboBox_warframes.Items.AddRange(New Object() {"Select a Warframe", "Ash", "Atlas", "Banshee", "Baruuk", "Chroma", "Ember", "Equinox", "Excalibur", "Frost", "Gara", "Garuda", "Harrow", "Hildryn", "Hydroid", "Inaros", "Ivara", "Khora", "Limbo", "Loki", "Mag", "Mesa", "Mirage", "Nekros", "Nezha", "Nidus", "Nova", "Nyx", "Oberon", "Octavia", "Revenant", "Rhino", "Saryn", "Titania", "Trinity", "Valkyr", "Vauban", "Volt", "Wukong", "Zephyr"})
         Me.ComboBox_warframes.Location = New System.Drawing.Point(8, 6)
         Me.ComboBox_warframes.Name = "ComboBox_warframes"
         Me.ComboBox_warframes.Size = New System.Drawing.Size(233, 24)
@@ -3518,7 +3518,7 @@ Partial Class Form_main
         Me.ComboBox_power.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox_power.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox_power.FormattingEnabled = True
-        Me.ComboBox_power.Items.AddRange(New Object() {"POWER", "100_Ash", "100_Atlas", "100_Banshee", "100_Baruuk", "100_Chroma", "100_Ember", "100_Equinox", "100_Excalibur", "100_Frost", "100_Gara", "100_Garuda", "100_Harrow", "100_Hydroid", "100_Inaros", "100_Ivara", "100_Khora", "100_Limbo", "100_Loki", "100_Mag", "100_Mesa", "100_Mirage", "100_Nekros", "100_Nezha", "115_Nidus", "100_Nova", "100_Nyx", "100_Oberon", "100_Octavia", "100_Revenant", "100_Rhino", "100_Saryn", "100_Titania", "100_Trinity", "100_Valkyr", "100_Vauban", "100_Volt", "100_Wukong", "100_Zephyr"})
+        Me.ComboBox_power.Items.AddRange(New Object() {"POWER", "100_Ash", "100_Atlas", "100_Banshee", "100_Baruuk", "100_Chroma", "100_Ember", "100_Equinox", "100_Excalibur", "100_Frost", "100_Gara", "100_Garuda", "100_Harrow", "100_Hildryn", "100_Hydroid", "100_Inaros", "100_Ivara", "100_Khora", "100_Limbo", "100_Loki", "100_Mag", "100_Mesa", "100_Mirage", "100_Nekros", "100_Nezha", "115_Nidus", "100_Nova", "100_Nyx", "100_Oberon", "100_Octavia", "100_Revenant", "100_Rhino", "100_Saryn", "100_Titania", "100_Trinity", "100_Valkyr", "100_Vauban", "100_Volt", "100_Wukong", "100_Zephyr"})
         Me.ComboBox_power.Location = New System.Drawing.Point(166, 180)
         Me.ComboBox_power.Name = "ComboBox_power"
         Me.ComboBox_power.Size = New System.Drawing.Size(120, 24)
@@ -3530,7 +3530,7 @@ Partial Class Form_main
         Me.ComboBox_basePower.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox_basePower.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox_basePower.FormattingEnabled = True
-        Me.ComboBox_basePower.Items.AddRange(New Object() {"BASE POWER", "100_Ash", "100_Atlas", "100_Banshee", "100_Baruuk", "100_Chroma", "100_Ember", "100_Equinox", "100_Excalibur", "100_Frost", "100_Gara", "100_Garuda", "100_Harrow", "100_Hydroid", "100_Inaros", "100_Ivara", "100_Khora", "100_Limbo", "100_Loki", "100_Mag", "100_Mesa", "100_Mirage", "100_Nekros", "100_Nezha", "100_Nidus", "100_Nova", "100_Nyx", "100_Oberon", "100_Octavia", "100_Revenant", "100_Rhino", "100_Saryn", "100_Titania", "100_Trinity", "100_Valkyr", "100_Vauban", "100_Volt", "100_Wukong", "100_Zephyr"})
+        Me.ComboBox_basePower.Items.AddRange(New Object() {"BASE POWER", "100_Ash", "100_Atlas", "100_Banshee", "100_Baruuk", "100_Chroma", "100_Ember", "100_Equinox", "100_Excalibur", "100_Frost", "100_Gara", "100_Garuda", "100_Harrow", "100_Hildryn", "100_Hydroid", "100_Inaros", "100_Ivara", "100_Khora", "100_Limbo", "100_Loki", "100_Mag", "100_Mesa", "100_Mirage", "100_Nekros", "100_Nezha", "100_Nidus", "100_Nova", "100_Nyx", "100_Oberon", "100_Octavia", "100_Revenant", "100_Rhino", "100_Saryn", "100_Titania", "100_Trinity", "100_Valkyr", "100_Vauban", "100_Volt", "100_Wukong", "100_Zephyr"})
         Me.ComboBox_basePower.Location = New System.Drawing.Point(40, 180)
         Me.ComboBox_basePower.Name = "ComboBox_basePower"
         Me.ComboBox_basePower.Size = New System.Drawing.Size(120, 24)
@@ -3855,7 +3855,7 @@ Partial Class Form_main
         Me.ComboBox_energy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox_energy.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox_energy.FormattingEnabled = True
-        Me.ComboBox_energy.Items.AddRange(New Object() {"ENERGY", "150_Ash", "225_Atlas", "225_Banshee", "300_Baruuk", "225_Chroma", "225_Ember", "225_Equinox", "150_Excalibur", "150_Frost", "225_Gara", "180_Garuda", "150_Harrow", "187.5_Hydroid", "150_Inaros", "262.5_Ivara", "188_Khora", "225_Limbo", "225_Loki", "188_Mag", "150_Mesa", "225_Mirage", "150_Nekros", "225_Nezha", "150_Nidus", "225_Nova", "225_Nyx", "225_Oberon", "225_Octavia", "188_Revenant", "150_Rhino", "225_Saryn", "150_Titania", "225_Trinity", "150_Valkyr", "225_Vauban", "150_Volt", "150_Wukong", "150_Zephyr"})
+        Me.ComboBox_energy.Items.AddRange(New Object() {"ENERGY", "150_Ash", "225_Atlas", "225_Banshee", "300_Baruuk", "225_Chroma", "225_Ember", "225_Equinox", "150_Excalibur", "150_Frost", "225_Gara", "180_Garuda", "150_Harrow", "0_Hildryn", "187.5_Hydroid", "150_Inaros", "262.5_Ivara", "188_Khora", "225_Limbo", "225_Loki", "188_Mag", "150_Mesa", "225_Mirage", "150_Nekros", "225_Nezha", "150_Nidus", "225_Nova", "225_Nyx", "225_Oberon", "225_Octavia", "188_Revenant", "150_Rhino", "225_Saryn", "150_Titania", "225_Trinity", "150_Valkyr", "225_Vauban", "150_Volt", "150_Wukong", "150_Zephyr"})
         Me.ComboBox_energy.Location = New System.Drawing.Point(166, 150)
         Me.ComboBox_energy.Name = "ComboBox_energy"
         Me.ComboBox_energy.Size = New System.Drawing.Size(120, 24)
@@ -3867,7 +3867,7 @@ Partial Class Form_main
         Me.ComboBox_shield.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox_shield.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox_shield.FormattingEnabled = True
-        Me.ComboBox_shield.Items.AddRange(New Object() {"SHIELD", "300_Ash", "300_Atlas", "300_Banshee", "300_Baruuk", "300_Chroma", "300_Ember", "300_Equinox", "300_Excalibur", "450_Frost", "300_Gara", "300_Garuda", "450_Harrow", "375_Hydroid", "0_Inaros", "300_Ivara", "300_Khora", "225_Limbo", "225_Loki", "450_Mag", "225_Mesa", "240_Mirage", "270_Nekros", "150_Nezha", "0_Nidus", "225_Nova", "300_Nyx", "300_Oberon", "225_Octavia", "675_Revenant", "450_Rhino", "300_Saryn", "300_Titania", "300_Trinity", "150_Valkyr", "225_Vauban", "450_Volt", "375_Wukong", "450_Zephyr"})
+        Me.ComboBox_shield.Items.AddRange(New Object() {"SHIELD", "300_Ash", "300_Atlas", "300_Banshee", "300_Baruuk", "300_Chroma", "300_Ember", "300_Equinox", "300_Excalibur", "450_Frost", "300_Gara", "300_Garuda", "450_Harrow", "1575_Hildryn", "375_Hydroid", "0_Inaros", "300_Ivara", "300_Khora", "225_Limbo", "225_Loki", "450_Mag", "225_Mesa", "240_Mirage", "270_Nekros", "150_Nezha", "0_Nidus", "225_Nova", "300_Nyx", "300_Oberon", "225_Octavia", "675_Revenant", "450_Rhino", "300_Saryn", "300_Titania", "300_Trinity", "150_Valkyr", "225_Vauban", "450_Volt", "375_Wukong", "450_Zephyr"})
         Me.ComboBox_shield.Location = New System.Drawing.Point(166, 120)
         Me.ComboBox_shield.Name = "ComboBox_shield"
         Me.ComboBox_shield.Size = New System.Drawing.Size(120, 24)
@@ -3879,7 +3879,7 @@ Partial Class Form_main
         Me.ComboBox_health.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox_health.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox_health.FormattingEnabled = True
-        Me.ComboBox_health.Items.AddRange(New Object() {"HEALTH", "450_Ash", "300_Atlas", "300_Banshee", "225_Baruuk", "300_Chroma", "300_Ember", "300_Equinox", "300_Excalibur", "300_Frost", "300_Gara", "300_Garuda", "300_Harrow", "300_Hydroid", "2200_Inaros", "225_Ivara", "375_Khora", "300_Limbo", "225_Loki", "225_Mag", "375_Mesa", "240_Mirage", "300_Nekros", "375_Nezha", "450_Nidus", "300_Nova", "300_Nyx", "375_Oberon", "300_Octavia", "300_Revenant", "300_Rhino", "375_Saryn", "300_Titania", "300_Trinity", "300_Valkyr", "300_Vauban", "300_Volt", "300_Wukong", "450_Zephyr"})
+        Me.ComboBox_health.Items.AddRange(New Object() {"HEALTH", "450_Ash", "300_Atlas", "300_Banshee", "225_Baruuk", "300_Chroma", "300_Ember", "300_Equinox", "300_Excalibur", "300_Frost", "300_Gara", "300_Garuda", "300_Harrow", "225_Hildryn", "300_Hydroid", "2200_Inaros", "225_Ivara", "375_Khora", "300_Limbo", "225_Loki", "225_Mag", "375_Mesa", "240_Mirage", "300_Nekros", "375_Nezha", "450_Nidus", "300_Nova", "300_Nyx", "375_Oberon", "300_Octavia", "300_Revenant", "300_Rhino", "375_Saryn", "300_Titania", "300_Trinity", "300_Valkyr", "300_Vauban", "300_Volt", "300_Wukong", "450_Zephyr"})
         Me.ComboBox_health.Location = New System.Drawing.Point(166, 90)
         Me.ComboBox_health.Name = "ComboBox_health"
         Me.ComboBox_health.Size = New System.Drawing.Size(120, 24)
@@ -3891,7 +3891,7 @@ Partial Class Form_main
         Me.ComboBox_armor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox_armor.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox_armor.FormattingEnabled = True
-        Me.ComboBox_armor.Items.AddRange(New Object() {"ARMOR", "65_Ash", "450_Atlas", "15_Banshee", "150_Baruuk", "350_Chroma", "100_Ember", "100_Equinox", "225_Excalibur", "300_Frost", "125_Gara", "300_Garuda", "150_Harrow", "200_Hydroid", "200_Inaros", "65_Ivara", "275_Khora", "65_Limbo", "65_Loki", "65_Mag", "65_Mesa", "65_Mirage", "65_Nekros", "175_Nezha", "450_Nidus", "65_Nova", "15_Nyx", "150_Oberon", "125_Octavia", "105_Revenant", "190_Rhino", "225_Saryn", "65_Titania", "15_Trinity", "600_Valkyr", "50_Vauban", "15_Volt", "225_Wukong", "15_Zephyr"})
+        Me.ComboBox_armor.Items.AddRange(New Object() {"ARMOR", "65_Ash", "450_Atlas", "15_Banshee", "150_Baruuk", "350_Chroma", "100_Ember", "100_Equinox", "225_Excalibur", "300_Frost", "125_Gara", "300_Garuda", "150_Harrow", "300_Hildryn", "200_Hydroid", "200_Inaros", "65_Ivara", "275_Khora", "65_Limbo", "65_Loki", "65_Mag", "65_Mesa", "65_Mirage", "65_Nekros", "175_Nezha", "450_Nidus", "65_Nova", "15_Nyx", "150_Oberon", "125_Octavia", "105_Revenant", "190_Rhino", "225_Saryn", "65_Titania", "15_Trinity", "600_Valkyr", "50_Vauban", "15_Volt", "225_Wukong", "15_Zephyr"})
         Me.ComboBox_armor.Location = New System.Drawing.Point(166, 60)
         Me.ComboBox_armor.Name = "ComboBox_armor"
         Me.ComboBox_armor.Size = New System.Drawing.Size(120, 24)
@@ -3903,7 +3903,7 @@ Partial Class Form_main
         Me.ComboBox_baseEnergy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox_baseEnergy.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox_baseEnergy.FormattingEnabled = True
-        Me.ComboBox_baseEnergy.Items.AddRange(New Object() {"BASE ENERGY", "100_Ash", "150_Atlas", "150_Banshee", "200_Baruuk", "150_Chroma", "150_Ember", "150_Equinox", "100_Excalibur", "100_Frost", "150_Gara", "120_Garuda", "100_Harrow", "100_Hydroid", "100_Inaros", "175_Ivara", "125_Khora", "150_Limbo", "150_Loki", "125_Mag", "100_Mesa", "150_Mirage", "100_Nekros", "150_Nezha", "100_Nidus", "150_Nova", "150_Nyx", "150_Oberon", "150_Octavia", "125_Revenant", "100_Rhino", "150_Saryn", "100_Titania", "150_Trinity", "100_Valkyr", "150_Vauban", "100_Volt", "100_Wukong", "100_Zephyr"})
+        Me.ComboBox_baseEnergy.Items.AddRange(New Object() {"BASE ENERGY", "100_Ash", "150_Atlas", "150_Banshee", "200_Baruuk", "150_Chroma", "150_Ember", "150_Equinox", "100_Excalibur", "100_Frost", "150_Gara", "120_Garuda", "100_Harrow", "0_Hildryn", "100_Hydroid", "100_Inaros", "175_Ivara", "125_Khora", "150_Limbo", "150_Loki", "125_Mag", "100_Mesa", "150_Mirage", "100_Nekros", "150_Nezha", "100_Nidus", "150_Nova", "150_Nyx", "150_Oberon", "150_Octavia", "125_Revenant", "100_Rhino", "150_Saryn", "100_Titania", "150_Trinity", "100_Valkyr", "150_Vauban", "100_Volt", "100_Wukong", "100_Zephyr"})
         Me.ComboBox_baseEnergy.Location = New System.Drawing.Point(40, 150)
         Me.ComboBox_baseEnergy.Name = "ComboBox_baseEnergy"
         Me.ComboBox_baseEnergy.Size = New System.Drawing.Size(120, 24)
@@ -3915,7 +3915,7 @@ Partial Class Form_main
         Me.ComboBox_baseShield.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox_baseShield.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox_baseShield.FormattingEnabled = True
-        Me.ComboBox_baseShield.Items.AddRange(New Object() {"BASE SHIELD", "100_Ash", "100_Atlas", "100_Banshee", "100_Baruuk", "100_Chroma", "100_Ember", "100_Equinox", "100_Excalibur", "150_Frost", "100_Gara", "100_Garuda", "150_Harrow", "125_Hydroid", "0_Inaros", "100_Ivara", "100_Khora", "75_Limbo", "75_Loki", "150_Mag", "75_Mesa", "80_Mirage", "90_Nekros", "50_Nezha", "0_Nidus", "75_Nova", "100_Nyx", "100_Oberon", "75_Octavia", "225_Revenant", "150_Rhino", "100_Saryn", "100_Titania", "100_Trinity", "50_Valkyr", "75_Vauban", "150_Volt", "125_Wukong", "150_Zephyr"})
+        Me.ComboBox_baseShield.Items.AddRange(New Object() {"BASE SHIELD", "100_Ash", "100_Atlas", "100_Banshee", "100_Baruuk", "100_Chroma", "100_Ember", "100_Equinox", "100_Excalibur", "150_Frost", "100_Gara", "100_Garuda", "150_Harrow", "450_Hildryn", "125_Hydroid", "0_Inaros", "100_Ivara", "100_Khora", "75_Limbo", "75_Loki", "150_Mag", "75_Mesa", "80_Mirage", "90_Nekros", "50_Nezha", "0_Nidus", "75_Nova", "100_Nyx", "100_Oberon", "75_Octavia", "225_Revenant", "150_Rhino", "100_Saryn", "100_Titania", "100_Trinity", "50_Valkyr", "75_Vauban", "150_Volt", "125_Wukong", "150_Zephyr"})
         Me.ComboBox_baseShield.Location = New System.Drawing.Point(40, 120)
         Me.ComboBox_baseShield.Name = "ComboBox_baseShield"
         Me.ComboBox_baseShield.Size = New System.Drawing.Size(120, 24)
@@ -3927,7 +3927,7 @@ Partial Class Form_main
         Me.ComboBox_baseHealth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox_baseHealth.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox_baseHealth.FormattingEnabled = True
-        Me.ComboBox_baseHealth.Items.AddRange(New Object() {"BASE HEALTH", "150_Ash", "100_Atlas", "100_Banshee", "75_Baruuk", "100_Chroma", "100_Ember", "100_Equinox", "100_Excalibur", "100_Frost", "100_Gara", "100_Garuda", "100_Harrow", "100_Hydroid", "550_Inaros", "75_Ivara", "125_Khora", "100_Limbo", "75_Loki", "75_Mag", "125_Mesa", "80_Mirage", "100_Nekros", "125_Nezha", "150_Nidus", "100_Nova", "100_Nyx", "125_Oberon", "100_Octavia", "100_Revenant", "100_Rhino", "125_Saryn", "100_Titania", "100_Trinity", "100_Valkyr", "100_Vauban", "100_Volt", "100_Wukong", "150_Zephyr"})
+        Me.ComboBox_baseHealth.Items.AddRange(New Object() {"BASE HEALTH", "150_Ash", "100_Atlas", "100_Banshee", "75_Baruuk", "100_Chroma", "100_Ember", "100_Equinox", "100_Excalibur", "100_Frost", "100_Gara", "100_Garuda", "100_Harrow", "75_Hildryn", "100_Hydroid", "550_Inaros", "75_Ivara", "125_Khora", "100_Limbo", "75_Loki", "75_Mag", "125_Mesa", "80_Mirage", "100_Nekros", "125_Nezha", "150_Nidus", "100_Nova", "100_Nyx", "125_Oberon", "100_Octavia", "100_Revenant", "100_Rhino", "125_Saryn", "100_Titania", "100_Trinity", "100_Valkyr", "100_Vauban", "100_Volt", "100_Wukong", "150_Zephyr"})
         Me.ComboBox_baseHealth.Location = New System.Drawing.Point(40, 90)
         Me.ComboBox_baseHealth.Name = "ComboBox_baseHealth"
         Me.ComboBox_baseHealth.Size = New System.Drawing.Size(120, 24)
@@ -3939,7 +3939,7 @@ Partial Class Form_main
         Me.ComboBox_baseArmor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox_baseArmor.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox_baseArmor.FormattingEnabled = True
-        Me.ComboBox_baseArmor.Items.AddRange(New Object() {"BASE ARMOR", "65_Ash", "450_Atlas", "15_Banshee", "150_Baruuk", "350_Chroma", "100_Ember", "100_Equinox", "225_Excalibur", "300_Frost", "125_Gara", "300_Garuda", "150_Harrow", "200_Hydroid", "200_Inaros", "65_Ivara", "275_Khora", "65_Limbo", "65_Loki", "65_Mag", "65_Mesa", "65_Mirage", "65_Nekros", "175_Nezha", "300_Nidus", "65_Nova", "15_Nyx", "150_Oberon", "125_Octavia", "105_Revenant", "190_Rhino", "225_Saryn", "65_Titania", "15_Trinity", "600_Valkyr", "50_Vauban", "15_Volt", "225_Wukong", "15_Zephyr"})
+        Me.ComboBox_baseArmor.Items.AddRange(New Object() {"BASE ARMOR", "65_Ash", "450_Atlas", "15_Banshee", "150_Baruuk", "350_Chroma", "100_Ember", "100_Equinox", "225_Excalibur", "300_Frost", "125_Gara", "300_Garuda", "150_Harrow", "300_Hildryn", "200_Hydroid", "200_Inaros", "65_Ivara", "275_Khora", "65_Limbo", "65_Loki", "65_Mag", "65_Mesa", "65_Mirage", "65_Nekros", "175_Nezha", "300_Nidus", "65_Nova", "15_Nyx", "150_Oberon", "125_Octavia", "105_Revenant", "190_Rhino", "225_Saryn", "65_Titania", "15_Trinity", "600_Valkyr", "50_Vauban", "15_Volt", "225_Wukong", "15_Zephyr"})
         Me.ComboBox_baseArmor.Location = New System.Drawing.Point(40, 60)
         Me.ComboBox_baseArmor.Name = "ComboBox_baseArmor"
         Me.ComboBox_baseArmor.Size = New System.Drawing.Size(120, 24)

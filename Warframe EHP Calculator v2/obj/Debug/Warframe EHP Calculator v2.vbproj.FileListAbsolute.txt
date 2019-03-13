@@ -1,0 +1,25 @@
+C:\Users\Bradley\Desktop\Warframe-EHP-Calculator-master\Warframe EHP Calculator v2\bin\Debug\Warframe EHP Calculator v2.exe.config
+C:\Users\Bradley\Desktop\Warframe-EHP-Calculator-master\Warframe EHP Calculator v2\bin\Debug\Warframe EHP Calculator v2.exe
+C:\Users\Bradley\Desktop\Warframe-EHP-Calculator-master\Warframe EHP Calculator v2\bin\Debug\Warframe EHP Calculator v2.pdb
+C:\Users\Bradley\Desktop\Warframe-EHP-Calculator-master\Warframe EHP Calculator v2\bin\Debug\Warframe EHP Calculator v2.xml
+C:\Users\Bradley\Desktop\Warframe-EHP-Calculator-master\Warframe EHP Calculator v2\obj\Debug\Warframe_EHP_Calculator_v2.Form_main.resources
+C:\Users\Bradley\Desktop\Warframe-EHP-Calculator-master\Warframe EHP Calculator v2\obj\Debug\Warframe_EHP_Calculator_v2.Form_squadMember.resources
+C:\Users\Bradley\Desktop\Warframe-EHP-Calculator-master\Warframe EHP Calculator v2\obj\Debug\Warframe_EHP_Calculator_v2.Resources.resources
+C:\Users\Bradley\Desktop\Warframe-EHP-Calculator-master\Warframe EHP Calculator v2\obj\Debug\Warframe EHP Calculator v2.vbproj.GenerateResource.Cache
+C:\Users\Bradley\Desktop\Warframe-EHP-Calculator-master\Warframe EHP Calculator v2\obj\Debug\Warframe EHP Calculator v2.exe
+C:\Users\Bradley\Desktop\Warframe-EHP-Calculator-master\Warframe EHP Calculator v2\obj\Debug\Warframe EHP Calculator v2.xml
+C:\Users\Bradley\Desktop\Warframe-EHP-Calculator-master\Warframe EHP Calculator v2\obj\Debug\Warframe EHP Calculator v2.pdb
+D:\Visual Studio\Warframe EHP Calculator\Warframe EHP Calculator v2\bin\Debug\Warframe EHP Calculator v2.exe.config
+D:\Visual Studio\Warframe EHP Calculator\Warframe EHP Calculator v2\bin\Debug\Warframe EHP Calculator v2.exe
+D:\Visual Studio\Warframe EHP Calculator\Warframe EHP Calculator v2\bin\Debug\Warframe EHP Calculator v2.pdb
+D:\Visual Studio\Warframe EHP Calculator\Warframe EHP Calculator v2\bin\Debug\Warframe EHP Calculator v2.xml
+D:\Visual Studio\Warframe EHP Calculator\Warframe EHP Calculator v2\obj\Debug\Warframe_EHP_Calculator_v2.Form_main.resources
+D:\Visual Studio\Warframe EHP Calculator\Warframe EHP Calculator v2\obj\Debug\Warframe_EHP_Calculator_v2.Form_squadMember.resources
+D:\Visual Studio\Warframe EHP Calculator\Warframe EHP Calculator v2\obj\Debug\Warframe_EHP_Calculator_v2.Form_update.resources
+D:\Visual Studio\Warframe EHP Calculator\Warframe EHP Calculator v2\obj\Debug\Warframe_EHP_Calculator_v2.Resources.resources
+D:\Visual Studio\Warframe EHP Calculator\Warframe EHP Calculator v2\obj\Debug\Warframe EHP Calculator v2.vbproj.GenerateResource.Cache
+D:\Visual Studio\Warframe EHP Calculator\Warframe EHP Calculator v2\obj\Debug\Warframe EHP Calculator v2.vbproj.CoreCompileInputs.cache
+D:\Visual Studio\Warframe EHP Calculator\Warframe EHP Calculator v2\obj\Debug\Warframe EHP Calculator v2.exe
+D:\Visual Studio\Warframe EHP Calculator\Warframe EHP Calculator v2\obj\Debug\Warframe EHP Calculator v2.xml
+D:\Visual Studio\Warframe EHP Calculator\Warframe EHP Calculator v2\obj\Debug\Warframe EHP Calculator v2.pdb
+D:\Visual Studio\Warframe EHP Calculator\Warframe EHP Calculator v2\obj\Debug\Warframe EHP Calculator v2.vbprojAssemblyReference.cache

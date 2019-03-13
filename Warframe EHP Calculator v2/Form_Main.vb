@@ -11,7 +11,7 @@ End Module
 
 Public Class Form_main
 
-    Public localVersion As String = "1902"
+    Public localVersion As String = "1903"
     Public liveVersion As String
     Public squadMembers As New Dictionary(Of String, String)
 
@@ -648,7 +648,7 @@ Public Class Form_main
             '
             If CheckBox_aura.Checked Then
                 If RadioButton_physique.Checked Then
-                    Dim physique As Decimal = 0.03 + (NumericUpDown_physique.Value * 0.03)
+                    Dim physique As Decimal = 0.15 + (NumericUpDown_physique.Value * 0.15)
                     If CheckBox_coactionDrift.Checked And CheckBox_miscellaneous.Checked Then
                         '
                         '   Coaction Drift is Strange, it gives you a 0.15 boost to all Auras
