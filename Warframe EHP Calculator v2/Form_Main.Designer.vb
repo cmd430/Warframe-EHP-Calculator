@@ -26,6 +26,7 @@ Partial Class Form_main
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form_main))
         Me.TabControl_main = New System.Windows.Forms.TabControl()
         Me.TabPage_warframe = New System.Windows.Forms.TabPage()
+        Me.CheckBox_DefaultToMax = New System.Windows.Forms.CheckBox()
         Me.CheckBox_sortieModifiers = New System.Windows.Forms.CheckBox()
         Me.GroupBox_sortieModifiers = New System.Windows.Forms.GroupBox()
         Me.RadioButton_sortieFire = New System.Windows.Forms.RadioButton()
@@ -458,6 +459,7 @@ Partial Class Form_main
         '
         'TabPage_warframe
         '
+        Me.TabPage_warframe.Controls.Add(Me.CheckBox_DefaultToMax)
         Me.TabPage_warframe.Controls.Add(Me.CheckBox_sortieModifiers)
         Me.TabPage_warframe.Controls.Add(Me.GroupBox_sortieModifiers)
         Me.TabPage_warframe.Controls.Add(Me.GroupBox_warframeResults)
@@ -495,6 +497,16 @@ Partial Class Form_main
         Me.TabPage_warframe.TabIndex = 0
         Me.TabPage_warframe.Text = "Warframe  "
         Me.TabPage_warframe.UseVisualStyleBackColor = True
+        '
+        'CheckBox_DefaultToMax
+        '
+        Me.CheckBox_DefaultToMax.AutoSize = True
+        Me.CheckBox_DefaultToMax.Location = New System.Drawing.Point(893, 9)
+        Me.CheckBox_DefaultToMax.Name = "CheckBox_DefaultToMax"
+        Me.CheckBox_DefaultToMax.Size = New System.Drawing.Size(117, 21)
+        Me.CheckBox_DefaultToMax.TabIndex = 123
+        Me.CheckBox_DefaultToMax.Text = "Default to Max"
+        Me.CheckBox_DefaultToMax.UseVisualStyleBackColor = True
         '
         'CheckBox_sortieModifiers
         '
@@ -3494,7 +3506,7 @@ Partial Class Form_main
         Me.ComboBox_primePower.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox_primePower.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox_primePower.FormattingEnabled = True
-        Me.ComboBox_primePower.Items.AddRange(New Object() {"PRIME POWER", "100_Ash", "100_Banshee", "100_Chroma", "100_Ember", "100_Excalibur", "100_Frost", "100_Hydroid", "100_Limbo", "100_Loki", "100_Mag", "100_Mesa", "100_Mirage", "100_Nekros", "100_Nova", "100_Nyx", "100_Oberon", "100_Rhino", "100_Saryn", "100_Trinity", "100_Valkyr", "100_Vauban", "100_Volt", "100_Zephyr"})
+        Me.ComboBox_primePower.Items.AddRange(New Object() {"PRIME POWER", "100_Ash", "100_Banshee", "100_Chroma", "100_Ember", "100_Equinox", "100_Excalibur", "100_Frost", "100_Hydroid", "100_Limbo", "100_Loki", "100_Mag", "100_Mesa", "100_Mirage", "100_Nekros", "100_Nova", "100_Nyx", "100_Oberon", "100_Rhino", "100_Saryn", "100_Trinity", "100_Valkyr", "100_Vauban", "100_Volt", "100_Zephyr"})
         Me.ComboBox_primePower.Location = New System.Drawing.Point(166, 391)
         Me.ComboBox_primePower.Name = "ComboBox_primePower"
         Me.ComboBox_primePower.Size = New System.Drawing.Size(120, 24)
@@ -3506,7 +3518,7 @@ Partial Class Form_main
         Me.ComboBox_primeBasePower.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox_primeBasePower.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox_primeBasePower.FormattingEnabled = True
-        Me.ComboBox_primeBasePower.Items.AddRange(New Object() {"PRIME BASE POWER", "100_Ash", "100_Banshee", "100_Chroma", "100_Ember", "100_Excalibur", "100_Frost", "100_Hydroid", "100_Limbo", "100_Loki", "100_Mag", "100_Mesa", "100_Mirage", "100_Nekros", "100_Nova", "100_Nyx", "100_Oberon", "100_Rhino", "100_Saryn", "100_Trinity", "100_Valkyr", "100_Vauban", "100_Volt", "100_Zephyr"})
+        Me.ComboBox_primeBasePower.Items.AddRange(New Object() {"PRIME BASE POWER", "100_Ash", "100_Banshee", "100_Chroma", "100_Ember", "100_Equinox", "100_Excalibur", "100_Frost", "100_Hydroid", "100_Limbo", "100_Loki", "100_Mag", "100_Mesa", "100_Mirage", "100_Nekros", "100_Nova", "100_Nyx", "100_Oberon", "100_Rhino", "100_Saryn", "100_Trinity", "100_Valkyr", "100_Vauban", "100_Volt", "100_Zephyr"})
         Me.ComboBox_primeBasePower.Location = New System.Drawing.Point(40, 391)
         Me.ComboBox_primeBasePower.Name = "ComboBox_primeBasePower"
         Me.ComboBox_primeBasePower.Size = New System.Drawing.Size(120, 24)
@@ -3708,7 +3720,7 @@ Partial Class Form_main
         Me.ComboBox_primeEnergy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox_primeEnergy.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox_primeEnergy.FormattingEnabled = True
-        Me.ComboBox_primeEnergy.Items.AddRange(New Object() {"PRIME ENERGY", "150_Ash", "262.5_Banshee", "300_Chroma", "225_Ember", "150_Excalibur", "150_Frost", "225_Hydroid", "262_Limbo", "262.5_Loki", "262.5_Mag", "188_Mesa", "225_Mirage", "187.5_Nekros", "262.5_Nova", "225_Nyx", "262.5_Oberon", "150_Rhino", "300_Saryn", "225_Trinity", "225_Valkyr", "225_Vauban", "300_Volt", "225_Zephyr"})
+        Me.ComboBox_primeEnergy.Items.AddRange(New Object() {"PRIME ENERGY", "150_Ash", "262.5_Banshee", "300_Chroma", "225_Ember", "248_Equinox", "150_Excalibur", "150_Frost", "225_Hydroid", "262_Limbo", "262.5_Loki", "262.5_Mag", "188_Mesa", "225_Mirage", "187.5_Nekros", "262.5_Nova", "225_Nyx", "262.5_Oberon", "150_Rhino", "300_Saryn", "225_Trinity", "225_Valkyr", "225_Vauban", "300_Volt", "225_Zephyr"})
         Me.ComboBox_primeEnergy.Location = New System.Drawing.Point(166, 361)
         Me.ComboBox_primeEnergy.Name = "ComboBox_primeEnergy"
         Me.ComboBox_primeEnergy.Size = New System.Drawing.Size(120, 24)
@@ -3720,7 +3732,7 @@ Partial Class Form_main
         Me.ComboBox_primeShield.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox_primeShield.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox_primeShield.FormattingEnabled = True
-        Me.ComboBox_primeShield.Items.AddRange(New Object() {"PRIME SHIELD", "375_Ash", "300_Banshee", "300_Chroma", "375_Ember", "300_Excalibur", "525_Frost", "525_Hydroid", "300_Limbo", "225_Loki", "450_Mag", "225_Mesa", "330_Mirage", "450_Nekros", "300_Nova", "375_Nyx", "300_Oberon", "450_Rhino", "300_Saryn", "450_Trinity", "150_Valkyr", "300_Vauban", "450_Volt", "450_Zephyr"})
+        Me.ComboBox_primeShield.Items.AddRange(New Object() {"PRIME SHIELD", "375_Ash", "300_Banshee", "300_Chroma", "375_Ember", "300_Equinox", "300_Excalibur", "525_Frost", "525_Hydroid", "300_Limbo", "225_Loki", "450_Mag", "225_Mesa", "330_Mirage", "450_Nekros", "300_Nova", "375_Nyx", "300_Oberon", "450_Rhino", "300_Saryn", "450_Trinity", "150_Valkyr", "300_Vauban", "450_Volt", "450_Zephyr"})
         Me.ComboBox_primeShield.Location = New System.Drawing.Point(166, 331)
         Me.ComboBox_primeShield.Name = "ComboBox_primeShield"
         Me.ComboBox_primeShield.Size = New System.Drawing.Size(120, 24)
@@ -3732,7 +3744,7 @@ Partial Class Form_main
         Me.ComboBox_primeHealth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox_primeHealth.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox_primeHealth.FormattingEnabled = True
-        Me.ComboBox_primeHealth.Items.AddRange(New Object() {"PRIME HEALTH", "450_Ash", "300_Banshee", "300_Chroma", "300_Ember", "300_Excalibur", "300_Frost", "300_Hydroid", "300_Limbo", "225_Loki", "300_Mag", "405_Mesa", "240_Mirage", "300_Nekros", "300_Nova", "300_Nyx", "375_Oberon", "300_Rhino", "375_Saryn", "300_Trinity", "300_Valkyr", "300_Vauban", "300_Volt", "450_Zephyr"})
+        Me.ComboBox_primeHealth.Items.AddRange(New Object() {"PRIME HEALTH", "450_Ash", "300_Banshee", "300_Chroma", "300_Ember", "375_Equinox", "300_Excalibur", "300_Frost", "300_Hydroid", "300_Limbo", "225_Loki", "300_Mag", "405_Mesa", "240_Mirage", "300_Nekros", "300_Nova", "300_Nyx", "375_Oberon", "300_Rhino", "375_Saryn", "300_Trinity", "300_Valkyr", "300_Vauban", "300_Volt", "450_Zephyr"})
         Me.ComboBox_primeHealth.Location = New System.Drawing.Point(166, 301)
         Me.ComboBox_primeHealth.Name = "ComboBox_primeHealth"
         Me.ComboBox_primeHealth.Size = New System.Drawing.Size(120, 24)
@@ -3744,7 +3756,7 @@ Partial Class Form_main
         Me.ComboBox_primeArmor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox_primeArmor.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox_primeArmor.FormattingEnabled = True
-        Me.ComboBox_primeArmor.Items.AddRange(New Object() {"PRIME ARMOR", "150_Ash", "65_Banshee", "425_Chroma", "125_Ember", "300_Excalibur", "300_Frost", "250_Hydroid", "85_Limbo", "65_Loki", "65_Mag", "85_Mesa", "150_Mirage", "65_Nekros", "65_Nova", "50_Nyx", "225_Oberon", "275_Rhino", "300_Saryn", "15_Trinity", "700_Valkyr", "100_Vauban", "100_Volt", "75_Zephyr"})
+        Me.ComboBox_primeArmor.Items.AddRange(New Object() {"PRIME ARMOR", "150_Ash", "65_Banshee", "425_Chroma", "125_Ember", "120_Equinox", "300_Excalibur", "300_Frost", "250_Hydroid", "85_Limbo", "65_Loki", "65_Mag", "85_Mesa", "150_Mirage", "65_Nekros", "65_Nova", "50_Nyx", "225_Oberon", "275_Rhino", "300_Saryn", "15_Trinity", "700_Valkyr", "100_Vauban", "100_Volt", "75_Zephyr"})
         Me.ComboBox_primeArmor.Location = New System.Drawing.Point(166, 271)
         Me.ComboBox_primeArmor.Name = "ComboBox_primeArmor"
         Me.ComboBox_primeArmor.Size = New System.Drawing.Size(120, 24)
@@ -3756,7 +3768,7 @@ Partial Class Form_main
         Me.ComboBox_primeBaseEnergy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox_primeBaseEnergy.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox_primeBaseEnergy.FormattingEnabled = True
-        Me.ComboBox_primeBaseEnergy.Items.AddRange(New Object() {"PRIME BASE ENERGY", "100_Ash", "175_Banshee", "200_Chroma", "150_Ember", "100_Excalibur", "100_Frost", "150_Hydroid", "175_Limbo", "175_Loki", "175_Mag", "125_Mesa", "150_Mirage", "125_Nekros", "175_Nova", "150_Nyx", "175_Oberon", "100_Rhino", "200_Saryn", "150_Trinity", "150_Valkyr", "150_Vauban", "200_Volt", "150_Zephyr"})
+        Me.ComboBox_primeBaseEnergy.Items.AddRange(New Object() {"PRIME BASE ENERGY", "100_Ash", "175_Banshee", "200_Chroma", "150_Ember", "165_Equinox", "100_Excalibur", "100_Frost", "150_Hydroid", "175_Limbo", "175_Loki", "175_Mag", "125_Mesa", "150_Mirage", "125_Nekros", "175_Nova", "150_Nyx", "175_Oberon", "100_Rhino", "200_Saryn", "150_Trinity", "150_Valkyr", "150_Vauban", "200_Volt", "150_Zephyr"})
         Me.ComboBox_primeBaseEnergy.Location = New System.Drawing.Point(40, 361)
         Me.ComboBox_primeBaseEnergy.Name = "ComboBox_primeBaseEnergy"
         Me.ComboBox_primeBaseEnergy.Size = New System.Drawing.Size(120, 24)
@@ -3768,7 +3780,7 @@ Partial Class Form_main
         Me.ComboBox_primeBaseShield.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox_primeBaseShield.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox_primeBaseShield.FormattingEnabled = True
-        Me.ComboBox_primeBaseShield.Items.AddRange(New Object() {"PRIME BASE SHIELD", "125_Ash", "100_Banshee", "100_Chroma", "125_Ember", "100_Excalibur", "175_Frost", "175_Hydroid", "100_Limbo", "75_Loki", "150_Mag", "75_Mesa", "110_Mirage", "150_Nekros", "100_Nova", "125_Nyx", "100_Oberon", "150_Rhino", "100_Saryn", "150_Trinity", "50_Valkyr", "100_Vauban", "150_Volt", "150_Zephyr"})
+        Me.ComboBox_primeBaseShield.Items.AddRange(New Object() {"PRIME BASE SHIELD", "125_Ash", "100_Banshee", "100_Chroma", "125_Ember", "100_Equinox", "100_Excalibur", "175_Frost", "175_Hydroid", "100_Limbo", "75_Loki", "150_Mag", "75_Mesa", "110_Mirage", "150_Nekros", "100_Nova", "125_Nyx", "100_Oberon", "150_Rhino", "100_Saryn", "150_Trinity", "50_Valkyr", "100_Vauban", "150_Volt", "150_Zephyr"})
         Me.ComboBox_primeBaseShield.Location = New System.Drawing.Point(40, 331)
         Me.ComboBox_primeBaseShield.Name = "ComboBox_primeBaseShield"
         Me.ComboBox_primeBaseShield.Size = New System.Drawing.Size(120, 24)
@@ -3780,7 +3792,7 @@ Partial Class Form_main
         Me.ComboBox_primeBaseHealth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox_primeBaseHealth.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox_primeBaseHealth.FormattingEnabled = True
-        Me.ComboBox_primeBaseHealth.Items.AddRange(New Object() {"PRIME BASE HEALTH", "150_Ash", "100_Banshee", "100_Chroma", "100_Ember", "100_Excalibur", "100_Frost", "100_Hydroid", "100_Limbo", "75_Loki", "100_Mag", "135_Mesa", "80_Mirage", "100_Nekros", "100_Nova", "100_Nyx", "125_Oberon", "100_Rhino", "125_Saryn", "100_Trinity", "100_Valkyr", "100_Vauban", "100_Volt", "150_Zephyr"})
+        Me.ComboBox_primeBaseHealth.Items.AddRange(New Object() {"PRIME BASE HEALTH", "150_Ash", "100_Banshee", "100_Chroma", "100_Ember", "125_Equinox", "100_Excalibur", "100_Frost", "100_Hydroid", "100_Limbo", "75_Loki", "100_Mag", "135_Mesa", "80_Mirage", "100_Nekros", "100_Nova", "100_Nyx", "125_Oberon", "100_Rhino", "125_Saryn", "100_Trinity", "100_Valkyr", "100_Vauban", "100_Volt", "150_Zephyr"})
         Me.ComboBox_primeBaseHealth.Location = New System.Drawing.Point(40, 301)
         Me.ComboBox_primeBaseHealth.Name = "ComboBox_primeBaseHealth"
         Me.ComboBox_primeBaseHealth.Size = New System.Drawing.Size(120, 24)
@@ -3792,7 +3804,7 @@ Partial Class Form_main
         Me.ComboBox_primeBaseArmor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox_primeBaseArmor.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox_primeBaseArmor.FormattingEnabled = True
-        Me.ComboBox_primeBaseArmor.Items.AddRange(New Object() {"PRIME BASE ARMOR", "150_Ash", "65_Banshee", "425_Chroma", "125_Ember", "300_Excalibur", "300_Frost", "250_Hydroid", "85_Limbo", "65_Loki", "65_Mag", "85_Mesa", "150_Mirage", "65_Nekros", "65_Nova", "50_Nyx", "225_Oberon", "275_Rhino", "300_Saryn", "15_Trinity", "700_Valkyr", "100_Vauban", "100_Volt", "75_Zephyr"})
+        Me.ComboBox_primeBaseArmor.Items.AddRange(New Object() {"PRIME BASE ARMOR", "150_Ash", "65_Banshee", "425_Chroma", "125_Ember", "120_Equinox", "300_Excalibur", "300_Frost", "250_Hydroid", "85_Limbo", "65_Loki", "65_Mag", "85_Mesa", "150_Mirage", "65_Nekros", "65_Nova", "50_Nyx", "225_Oberon", "275_Rhino", "300_Saryn", "15_Trinity", "700_Valkyr", "100_Vauban", "100_Volt", "75_Zephyr"})
         Me.ComboBox_primeBaseArmor.Location = New System.Drawing.Point(40, 271)
         Me.ComboBox_primeBaseArmor.Name = "ComboBox_primeBaseArmor"
         Me.ComboBox_primeBaseArmor.Size = New System.Drawing.Size(120, 24)
@@ -3804,7 +3816,7 @@ Partial Class Form_main
         Me.ComboBox_primes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox_primes.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox_primes.FormattingEnabled = True
-        Me.ComboBox_primes.Items.AddRange(New Object() {"PRIMES", "Ash", "Banshee", "Chroma", "Ember", "Excalibur", "Frost", "Hydroid", "Limbo", "Loki", "Mag", "Mesa", "Mirage", "Nekros", "Nova", "Nyx", "Oberon", "Rhino", "Saryn", "Trinity", "Valkyr", "Vauban", "Volt", "Zephyr"})
+        Me.ComboBox_primes.Items.AddRange(New Object() {"PRIMES", "Ash", "Banshee", "Chroma", "Ember", "Equinox", "Excalibur", "Frost", "Hydroid", "Limbo", "Loki", "Mag", "Mesa", "Mirage", "Nekros", "Nova", "Nyx", "Oberon", "Rhino", "Saryn", "Trinity", "Valkyr", "Vauban", "Volt", "Zephyr"})
         Me.ComboBox_primes.Location = New System.Drawing.Point(40, 241)
         Me.ComboBox_primes.Name = "ComboBox_primes"
         Me.ComboBox_primes.Size = New System.Drawing.Size(246, 24)
@@ -4467,4 +4479,5 @@ Partial Class Form_main
     Friend WithEvents CheckBox_restraint As CheckBox
     Friend WithEvents CheckBox_desolateHands As CheckBox
     Friend WithEvents CheckBox_sereneStorm As CheckBox
+    Friend WithEvents CheckBox_DefaultToMax As CheckBox
 End Class

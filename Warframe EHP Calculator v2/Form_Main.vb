@@ -11,7 +11,7 @@ End Module
 
 Public Class Form_main
 
-    Public localVersion As String = "1903"
+    Public localVersion As String = "1904"
     Public liveVersion As String
     Public squadMembers As New Dictionary(Of String, String)
 
@@ -150,6 +150,9 @@ Public Class Form_main
             Else
                 AddHandler NumericUpDown.ValueChanged, AddressOf Companion_Value_Changed
             End If
+            If My.Settings.DefaultToMax = True Then
+                NumericUpDown.Value = NumericUpDown.Maximum
+            End If
         Next
         '
         '   Add Squad Members
@@ -174,6 +177,10 @@ Public Class Form_main
         AddHandler ComboBox_companions.SelectedIndexChanged, AddressOf Companion_Value_Changed
         AddHandler CheckBox_companionSurvivability.CheckedChanged, AddressOf Enable_Disable_Section
         '
+        ' Set Deafult Values to Max
+        '
+        CheckBox_DefaultToMax.Checked = My.Settings.DefaultToMax
+        '
         ' Check for Update
         '
         Try
@@ -184,6 +191,24 @@ Public Class Form_main
         Catch ex As Exception
             'Cant check for updates
         End Try
+    End Sub
+
+    Private Sub CheckBox_DefaultToMax_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox_DefaultToMax.CheckedChanged
+        '
+        '   Set Value to Max Rank when this is set
+        '
+        Dim NumericUpDowns As New List(Of Control)
+        If CheckBox_DefaultToMax.Checked Then
+            My.Settings.DefaultToMax = True
+            For Each NumericUpDown As NumericUpDown In FindControlRecursive(NumericUpDowns, TabControl_main, GetType(NumericUpDown))
+                NumericUpDown.Value = NumericUpDown.Maximum
+            Next
+        Else
+            My.Settings.DefaultToMax = False
+            For Each NumericUpDown As NumericUpDown In FindControlRecursive(NumericUpDowns, TabControl_main, GetType(NumericUpDown))
+                NumericUpDown.Value = NumericUpDown.Minimum
+            Next
+        End If
     End Sub
 
     Public Sub Toggle_Warframe_Type(sender As Object, e As EventArgs)
@@ -302,8 +327,14 @@ Public Class Form_main
         End If
         If ComboBox_warframes.SelectedItem = "Harrow" Then
             NumericUpDown_oversheilds.Maximum = 2400
+            If My.Settings.DefaultToMax = True Then
+                NumericUpDown_oversheilds.Value = NumericUpDown_oversheilds.Maximum
+            End If
         Else
             NumericUpDown_oversheilds.Maximum = 1200
+            If My.Settings.DefaultToMax = True Then
+                NumericUpDown_oversheilds.Value = NumericUpDown_oversheilds.Maximum
+            End If
         End If
         '
         '  Enable/Disable Arcane Helmets selection
