@@ -11,7 +11,7 @@ End Module
 
 Public Class Form_main
 
-    Public localVersion As String = "1904"
+    Public localVersion As String = "1904-1"
     Public liveVersion As String
     Public squadMembers As New Dictionary(Of String, String)
 
@@ -1158,7 +1158,8 @@ Public Class Form_main
             '
             Dim damageReductionArmor As Decimal = Armor / (300 + Armor)
             Dim totalDamageReduction As Decimal = damageReductionArmor + ((1 - damageReductionArmor) * damageReduction)
-            Dim effectiveHealth As Integer = Math.Ceiling((Health / (1 - totalDamageReduction)) + (Shield + damageAbsorbstion))
+            'Dim effectiveHealth As Integer = Math.Ceiling((Health / (1 - totalDamageReduction)) + (Shield + damageAbsorbstion))
+            Dim effectiveHealth As Integer = Math.Ceiling((Health / (1 - totalDamageReduction)) + (Shield / (1 - damageReduction)) + damageAbsorbstion)
             TextBox_warframeEHP.Text = effectiveHealth
         Else
             '
