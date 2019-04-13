@@ -11,7 +11,7 @@ End Module
 
 Public Class Form_main
 
-    Public localVersion As String = "1904-1"
+    Public localVersion As String = "1904-2"
     Public liveVersion As String
     Public squadMembers As New Dictionary(Of String, String)
 
@@ -1132,11 +1132,8 @@ Public Class Form_main
             '   Focus
             '
             If CheckBox_focus.Checked And CheckBox_stoneSkin.Checked Then
-                If NumericUpDown_stoneSkin.Value = 3 Then
-                    Armor = Armor + 60 'stupid not being same formula...
-                Else
-                    Armor = Armor + (20 + (10 * NumericUpDown_stoneSkin.Value))
-                End If
+                ' Memes (Fibonacci Squence - first 2 numbers)
+                Armor = Armor + 10 + (1 / Math.Sqrt(5)) * (Math.Pow((1 + Math.Sqrt(5)) / 2, NumericUpDown_stoneSkin.Value + 2) - Math.Pow((1 - Math.Sqrt(5)) / 2, NumericUpDown_stoneSkin.Value + 2)) * 10
             End If
             '
             '   Dragon Keys
