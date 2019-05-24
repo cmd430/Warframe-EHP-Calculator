@@ -8,10 +8,9 @@ Module NativeMethods
     End Sub
 End Module
 
-
 Public Class Form_main
 
-    Public localVersion As String = "1904-2"
+    Public localVersion As String = "1905"
     Public liveVersion As String
     Public squadMembers As New Dictionary(Of String, String)
 
@@ -81,7 +80,7 @@ Public Class Form_main
         '
         '   Change Warframe select box to the default section
         '   also change all other combo boxs to index 0
-        '   comboboxs that match index are auto updated by the 
+        '   comboboxs that match index are auto updated by the
         '   event handler
         '
         ComboBox_warframes.SelectedIndex = 0
@@ -214,7 +213,7 @@ Public Class Form_main
     Public Sub Toggle_Warframe_Type(sender As Object, e As EventArgs)
         '
         '   Enable Swapping between Normal / Prime / Umbra Frames
-        '   
+        '
         '   Checks for State are inverted because .net gets the state info
         '   from after the click (makes sense)
         '
@@ -258,7 +257,7 @@ Public Class Form_main
 
         '
         '   TODO:\\ Figure out how the fuck the data from the form is to be added to the player
-        '           (some stuff needs to be added before stat calculation [i.e PowerStr additive buffs] 
+        '           (some stuff needs to be added before stat calculation [i.e PowerStr additive buffs]
         '            some stuff after some calculations for before others [i.e PowerStr multiplicitive buffs]
         '            dmg reduction, absorbtion and armor buffs should all be after other calculations
         '
@@ -451,6 +450,9 @@ Public Class Form_main
             Case "Valkyr"
                 CheckBox_abilities.Enabled = True
                 CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesValkyr
+            Case "Wisp"
+                CheckBox_abilities.Enabled = True
+                CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesWisp
             Case Else
                 CheckBox_abilities.Enabled = False
                 CustomTabControl_abilitys.Enabled = False
@@ -1060,6 +1062,11 @@ Public Class Form_main
                         If CheckBox_warcry.Checked Then
                             Dim warcryMultiplier As Decimal = 0.5 * powerStrength
                             armorMultiplier = armorMultiplier + warcryMultiplier
+                        End If
+                    Case "Wisp"
+                        If CheckBox_vitalityMoteReservoirs.Checked Then
+                            Dim vitalityMoteBonus As Decimal = 300 * powerStrength
+                            healthBonus = healthBonus + vitalityMoteBonus
                         End If
                 End Select
             End If
