@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<rank_multipliers>
+  <rank_multiplier name="armor" multiplier="1" />
+  <rank_multiplier name="health" multiplier="3" />
+  <rank_multiplier name="shield" multiplier="3" />
+  <rank_multiplier name="energy" multiplier="1.5" />
+  <rank_multiplier name="strength" multiplier="1" />
+</rank_multipliers>

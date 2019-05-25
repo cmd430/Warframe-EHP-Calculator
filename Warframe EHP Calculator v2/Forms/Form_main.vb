@@ -1,6 +1,8 @@
 ﻿Imports System.IO
+Imports System.Reflection
 Imports System.Net
 Imports System.Runtime.InteropServices
+Imports System.Xml.Serialization
 
 Module NativeMethods
     <DllImport("WinInet.dll", PreserveSig:=True, SetLastError:=True)>
@@ -10,9 +12,11 @@ End Module
 
 Public Class Form_main
 
-    Public localVersion As String = "1905"
+    Public assembly As Assembly
+    Public localVersion As String
     Public liveVersion As String
-    Public squadMembers As New Dictionary(Of String, String)
+    Public Warframes As List(Of Warframe)
+    Public RankMultipliers As List(Of Rank_Multiplier)
 
     Public Shared Function FindControlRecursive(ByVal list As List(Of Control), ByVal parent As Control, ByVal ctrlType As System.Type) As List(Of Control)
         If parent Is Nothing Then Return list
@@ -25,11 +29,9 @@ Public Class Form_main
         Return list
     End Function
 
-    Public Function formatNumber(ByVal Number)
+    Public Function FormatNumber(ByVal Number)
         Dim formatted As Decimal = 0.0
-        If TypeOf Number Is ComboBox Then
-            formatted = Convert.ToDecimal(Number.SelectedItem.ToString().Split("_")(0).Replace("???", "0"), New Globalization.CultureInfo("en-US")) 'Allow placeholder frame values for dev
-        ElseIf TypeOf Number Is TextBox Then
+        If TypeOf Number Is TextBox Then
             If Number.Text = "-" Then
                 formatted = Convert.ToDecimal(0, New Globalization.CultureInfo("en-US"))
             Else
@@ -51,10 +53,27 @@ Public Class Form_main
     End Function
 
     Private Sub Main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        assembly = Assembly.GetExecutingAssembly()
         '
-        ' Add version to title
+        ' Version Info
         '
+        localVersion = New StreamReader(assembly.GetManifestResourceStream("Warframe_EHP_Calculator_v2.version")).ReadToEnd()
         Me.Text = Me.Text & " (v" & localVersion & ")"
+        '
+        ' Load Warframe and Rank Data
+        '
+        Dim serializer As XmlSerializer
+        Using stream As New StreamReader(assembly.GetManifestResourceStream("Warframe_EHP_Calculator_v2.Warframes.xml"))
+            serializer = New XmlSerializer(GetType(List(Of Warframe)), New XmlRootAttribute("warframes"))
+            Warframes = DirectCast(serializer.Deserialize(stream), List(Of Warframe)).OrderBy(Function(x) x.Name).ToList()
+        End Using
+        Using stream As New StreamReader(assembly.GetManifestResourceStream("Warframe_EHP_Calculator_v2.WarframeRankMultipliers.xml"))
+            serializer = New XmlSerializer(GetType(List(Of Rank_Multiplier)), New XmlRootAttribute("rank_multipliers"))
+            RankMultipliers = DirectCast(serializer.Deserialize(stream), List(Of Rank_Multiplier))
+        End Using
+        For Each warframe As Warframe In Warframes
+            ComboBox_warframes.Items.Add(warframe.Name)
+        Next
         '
         '   Hide Debug controls
         '
@@ -84,8 +103,6 @@ Public Class Form_main
         '   event handler
         '
         ComboBox_warframes.SelectedIndex = 0
-        ComboBox_primes.SelectedIndex = 0
-        ComboBox_umbras.SelectedIndex = 0
         ComboBox_companions.SelectedIndex = 0
         ComboBox_blocking.SelectedIndex = 0
         '
@@ -153,23 +170,6 @@ Public Class Form_main
                 NumericUpDown.Value = NumericUpDown.Maximum
             End If
         Next
-        '
-        '   Add Squad Members
-        '
-        squadMembers.Add("One", "One:Chroma:None:None:100")
-        squadMembers.Add("Two", "Two:Chroma:None:None:100")
-        squadMembers.Add("Three", "Three:Chroma:None:None:100")
-        squadMembers.Add("Four", "Four:Chroma:None:None:100")
-        squadMembers.Add("Five", "Five:Chroma:None:None:100")
-        squadMembers.Add("Six", "Six:Chroma:None:None:100")
-        squadMembers.Add("Seven", "Seven:Chroma:None:None:100")
-        AddHandler Button_squadEffectsOne.Click, AddressOf Add_Squad_Member
-        AddHandler Button_squadEffectsTwo.Click, AddressOf Add_Squad_Member
-        AddHandler Button_squadEffectsThree.Click, AddressOf Add_Squad_Member
-        AddHandler Button_squadEffectsFour.Click, AddressOf Add_Squad_Member
-        AddHandler Button_squadEffectsFive.Click, AddressOf Add_Squad_Member
-        AddHandler Button_squadEffectsSix.Click, AddressOf Add_Squad_Member
-        AddHandler Button_squadEffectsSeven.Click, AddressOf Add_Squad_Member
         '
         '   Companions
         '
@@ -247,24 +247,6 @@ Public Class Form_main
         sender.Parent.Controls(sender.tag).Enabled = sender.Checked
     End Sub
 
-    Private Sub Add_Squad_Member(sender As Object, e As EventArgs)
-        Dim SquadMember As String = sender.Name.ToString.Replace("Button_squadEffects", "")
-        Dim SquadDialog As New Form_squadMember(squadMembers.Item(SquadMember))
-        If SquadDialog.ShowDialog() = DialogResult.OK Then
-            squadMembers.Item(SquadMember) = SquadDialog.TextBox_squadInfo.Text
-        End If
-        SquadDialog.Dispose()
-
-        '
-        '   TODO:\\ Figure out how the fuck the data from the form is to be added to the player
-        '           (some stuff needs to be added before stat calculation [i.e PowerStr additive buffs]
-        '            some stuff after some calculations for before others [i.e PowerStr multiplicitive buffs]
-        '            dmg reduction, absorbtion and armor buffs should all be after other calculations
-        '
-
-        Warframe_Value_Changed(sender, e)
-    End Sub
-
     Private Sub Warframe_Value_Changed(sender As Object, e As EventArgs)
         '
         '   Default Stats
@@ -297,174 +279,171 @@ Public Class Form_main
         '   100% absorb x amount dmg
         '
         Dim damageAbsorbstion As Decimal = 0.0
-        '
-        '   Does the frame have a Prime or Umbra version ?
-        '   if so we can enable to checkbox
-        '
-        If ComboBox_primes.Items.Contains(ComboBox_warframes.SelectedItem) Then
-            CheckBox_isPrime.Enabled = True
-        Else
-            CheckBox_isPrime.Enabled = False
-        End If
-        If ComboBox_umbras.Items.Contains(ComboBox_warframes.SelectedItem) Then
-            CheckBox_isUmbra.Enabled = True
-        Else
-            CheckBox_isUmbra.Enabled = False
-        End If
-        '
-        '   Special Modifiers
-        '
-        '   some frames have passives that change fixed things
-        '
-        If ComboBox_warframes.SelectedItem = "Khora" And Not ComboBox_companions.Items.Contains("Venari") Then
-            ComboBox_companions.Items.Add("Venari")
-        ElseIf Not ComboBox_warframes.SelectedItem = "Khora" And ComboBox_companions.Items.Contains("Venari") Then
-            If ComboBox_companions.SelectedItem = "Venari" Then
-                ComboBox_companions.SelectedIndex = 0
-            End If
-            ComboBox_companions.Items.RemoveAt(ComboBox_companions.Items.Count - 1)
-        End If
-        If ComboBox_warframes.SelectedItem = "Harrow" Then
-            NumericUpDown_oversheilds.Maximum = 2400
-            If My.Settings.DefaultToMax = True Then
-                NumericUpDown_oversheilds.Value = NumericUpDown_oversheilds.Maximum
-            End If
-        Else
-            NumericUpDown_oversheilds.Maximum = 1200
-            If My.Settings.DefaultToMax = True Then
-                NumericUpDown_oversheilds.Value = NumericUpDown_oversheilds.Maximum
-            End If
-        End If
-        '
-        '  Enable/Disable Arcane Helmets selection
-        '
-        Select Case ComboBox_warframes.SelectedItem
-            Case "Ash"
-                CheckBox_arcaneHelmets.Enabled = True
-                CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsAsh
-            Case "Banshee"
-                CheckBox_arcaneHelmets.Enabled = True
-                CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsBanshee
-            Case "Ember"
-                CheckBox_arcaneHelmets.Enabled = True
-                CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsEmber
-            Case "Excalibur"
-                CheckBox_arcaneHelmets.Enabled = True
-                CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsExcalibur
-            Case "Frost"
-                CheckBox_arcaneHelmets.Enabled = True
-                CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsFrost
-            Case "Loki"
-                CheckBox_arcaneHelmets.Enabled = True
-                CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsLoki
-            Case "Mag"
-                CheckBox_arcaneHelmets.Enabled = True
-                CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsMag
-            Case "Nova"
-                CheckBox_arcaneHelmets.Enabled = True
-                CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsNova
-            Case "Nyx"
-                CheckBox_arcaneHelmets.Enabled = True
-                CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsNyx
-            Case "Rhino"
-                CheckBox_arcaneHelmets.Enabled = True
-                CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsRhino
-            Case "Saryn"
-                CheckBox_arcaneHelmets.Enabled = True
-                CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsSaryn
-            Case "Trinity"
-                CheckBox_arcaneHelmets.Enabled = True
-                CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsTrinity
-            Case "Vauban"
-                CheckBox_arcaneHelmets.Enabled = True
-                CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsVauban
-            Case "Volt"
-                CheckBox_arcaneHelmets.Enabled = True
-                CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsVolt
-            Case Else
-                CheckBox_arcaneHelmets.Enabled = False
-                CustomTabControl_arcaneHelmets.Enabled = False
-                CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsDefault
-        End Select
-        '
-        '   Enable/Disable Abilities Selection
-        '
-        Select Case ComboBox_warframes.SelectedItem
-            Case "Atlas"
-                CheckBox_abilities.Enabled = True
-                CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesAtlas
-            Case "Baruuk"
-                CheckBox_abilities.Enabled = True
-                CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesBaruuk
-            Case "Chroma"
-                CheckBox_abilities.Enabled = True
-                CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesChroma
-            Case "Excalibur"
-                CheckBox_abilities.Enabled = True
-                CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesExcalibur
-            Case "Frost"
-                CheckBox_abilities.Enabled = True
-                CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesFrost
-            Case "Gara"
-                CheckBox_abilities.Enabled = True
-                CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesGara
-            Case "Harrow"
-                CheckBox_abilities.Enabled = True
-                CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesHarrow
-            Case "Inaros"
-                CheckBox_abilities.Enabled = True
-                CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesInaros
-            Case "Mesa"
-                CheckBox_abilities.Enabled = True
-                CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesMesa
-            Case "Mirage"
-                CheckBox_abilities.Enabled = True
-                CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesMirage
-            Case "Nekros"
-                CheckBox_abilities.Enabled = True
-                CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesNekros
-            Case "Nezha"
-                CheckBox_abilities.Enabled = True
-                CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesNezha
-            Case "Nidus"
-                CheckBox_abilities.Enabled = True
-                CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesNidus
-            Case "Nova"
-                CheckBox_abilities.Enabled = True
-                CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesNova
-            Case "Oberon"
-                CheckBox_abilities.Enabled = True
-                CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesOberon
-            Case "Octavia"
-                CheckBox_abilities.Enabled = True
-                CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesOctavia
-            Case "Rhino"
-                CheckBox_abilities.Enabled = True
-                CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesRhino
-            Case "Titania"
-                CheckBox_abilities.Enabled = True
-                CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesTrinity
-            Case "Trinity"
-                CheckBox_abilities.Enabled = True
-                CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesTrinity
-            Case "Valkyr"
-                CheckBox_abilities.Enabled = True
-                CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesValkyr
-            Case "Wisp"
-                CheckBox_abilities.Enabled = True
-                CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesWisp
-            Case Else
-                CheckBox_abilities.Enabled = False
-                CustomTabControl_abilitys.Enabled = False
-                CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesDefault
-        End Select
         If ComboBox_warframes.SelectedIndex > 0 Then
+            Dim currentWarframe As Warframe = Warframes.Find(Function(wf) wf.Name = ComboBox_warframes.SelectedItem)
+            Dim hasPrime As Boolean = Not currentWarframe.Variants.Find(Function(var) var.Name = "prime") Is Nothing
+            Dim hasUmbra As Boolean = Not currentWarframe.Variants.Find(Function(var) var.Name = "umbra") Is Nothing
             '
-            '   Special test for Squad Checkboxs to enable/disbale buttons
+            '   Does the frame have a Prime or Umbra version ?
+            '   if so we can enable to checkbox
             '
-            If sender.Name.ToString.Contains("CheckBox_squadEffects") Then
-                sender.Parent.Controls(sender.tag).Enabled = sender.Checked
+            If hasPrime Then
+                CheckBox_isPrime.Enabled = True
+            Else
+                CheckBox_isPrime.Enabled = False
             End If
+            If hasUmbra Then
+                CheckBox_isUmbra.Enabled = True
+            Else
+                CheckBox_isUmbra.Enabled = False
+            End If
+            '
+            '   Special Modifiers
+            '
+            '   some frames have passives that change fixed things
+            '
+            If currentWarframe.Name = "Khora" And Not ComboBox_companions.Items.Contains("Venari") Then
+                ComboBox_companions.Items.Add("Venari")
+            ElseIf Not currentWarframe.Name = "Khora" And ComboBox_companions.Items.Contains("Venari") Then
+                If ComboBox_companions.SelectedItem = "Venari" Then
+                    ComboBox_companions.SelectedIndex = 0
+                End If
+                ComboBox_companions.Items.RemoveAt(ComboBox_companions.Items.Count - 1)
+            End If
+            If currentWarframe.Name = "Harrow" Then
+                NumericUpDown_oversheilds.Maximum = 2400
+                If My.Settings.DefaultToMax = True Then
+                    NumericUpDown_oversheilds.Value = NumericUpDown_oversheilds.Maximum
+                End If
+            Else
+                NumericUpDown_oversheilds.Maximum = 1200
+                If My.Settings.DefaultToMax = True Then
+                    NumericUpDown_oversheilds.Value = NumericUpDown_oversheilds.Maximum
+                End If
+            End If
+            '
+            '  Enable/Disable Arcane Helmets selection
+            '
+            Select Case currentWarframe.Name
+                Case "Ash"
+                    CheckBox_arcaneHelmets.Enabled = True
+                    CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsAsh
+                Case "Banshee"
+                    CheckBox_arcaneHelmets.Enabled = True
+                    CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsBanshee
+                Case "Ember"
+                    CheckBox_arcaneHelmets.Enabled = True
+                    CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsEmber
+                Case "Excalibur"
+                    CheckBox_arcaneHelmets.Enabled = True
+                    CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsExcalibur
+                Case "Frost"
+                    CheckBox_arcaneHelmets.Enabled = True
+                    CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsFrost
+                Case "Loki"
+                    CheckBox_arcaneHelmets.Enabled = True
+                    CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsLoki
+                Case "Mag"
+                    CheckBox_arcaneHelmets.Enabled = True
+                    CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsMag
+                Case "Nova"
+                    CheckBox_arcaneHelmets.Enabled = True
+                    CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsNova
+                Case "Nyx"
+                    CheckBox_arcaneHelmets.Enabled = True
+                    CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsNyx
+                Case "Rhino"
+                    CheckBox_arcaneHelmets.Enabled = True
+                    CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsRhino
+                Case "Saryn"
+                    CheckBox_arcaneHelmets.Enabled = True
+                    CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsSaryn
+                Case "Trinity"
+                    CheckBox_arcaneHelmets.Enabled = True
+                    CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsTrinity
+                Case "Vauban"
+                    CheckBox_arcaneHelmets.Enabled = True
+                    CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsVauban
+                Case "Volt"
+                    CheckBox_arcaneHelmets.Enabled = True
+                    CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsVolt
+                Case Else
+                    CheckBox_arcaneHelmets.Enabled = False
+                    CustomTabControl_arcaneHelmets.Enabled = False
+                    CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsDefault
+            End Select
+            '
+            '   Enable/Disable Abilities Selection
+            '
+            Select Case currentWarframe.Name
+                Case "Atlas"
+                    CheckBox_abilities.Enabled = True
+                    CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesAtlas
+                Case "Baruuk"
+                    CheckBox_abilities.Enabled = True
+                    CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesBaruuk
+                Case "Chroma"
+                    CheckBox_abilities.Enabled = True
+                    CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesChroma
+                Case "Excalibur"
+                    CheckBox_abilities.Enabled = True
+                    CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesExcalibur
+                Case "Frost"
+                    CheckBox_abilities.Enabled = True
+                    CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesFrost
+                Case "Gara"
+                    CheckBox_abilities.Enabled = True
+                    CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesGara
+                Case "Harrow"
+                    CheckBox_abilities.Enabled = True
+                    CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesHarrow
+                Case "Inaros"
+                    CheckBox_abilities.Enabled = True
+                    CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesInaros
+                Case "Mesa"
+                    CheckBox_abilities.Enabled = True
+                    CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesMesa
+                Case "Mirage"
+                    CheckBox_abilities.Enabled = True
+                    CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesMirage
+                Case "Nekros"
+                    CheckBox_abilities.Enabled = True
+                    CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesNekros
+                Case "Nezha"
+                    CheckBox_abilities.Enabled = True
+                    CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesNezha
+                Case "Nidus"
+                    CheckBox_abilities.Enabled = True
+                    CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesNidus
+                Case "Nova"
+                    CheckBox_abilities.Enabled = True
+                    CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesNova
+                Case "Oberon"
+                    CheckBox_abilities.Enabled = True
+                    CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesOberon
+                Case "Octavia"
+                    CheckBox_abilities.Enabled = True
+                    CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesOctavia
+                Case "Rhino"
+                    CheckBox_abilities.Enabled = True
+                    CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesRhino
+                Case "Titania"
+                    CheckBox_abilities.Enabled = True
+                    CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesTrinity
+                Case "Trinity"
+                    CheckBox_abilities.Enabled = True
+                    CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesTrinity
+                Case "Valkyr"
+                    CheckBox_abilities.Enabled = True
+                    CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesValkyr
+                Case "Wisp"
+                    CheckBox_abilities.Enabled = True
+                    CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesWisp
+                Case Else
+                    CheckBox_abilities.Enabled = False
+                    CustomTabControl_abilitys.Enabled = False
+                    CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesDefault
+            End Select
             '
             '   Enable Selections
             '
@@ -484,93 +463,52 @@ Public Class Form_main
             GroupBox_blocking.Enabled = CheckBox_blocking.Checked
             CheckBox_focus.Enabled = True
             GroupBox_focus.Enabled = CheckBox_focus.Checked
-            '
             CheckBox_specialEffects.Enabled = True
             GroupBox_specialEffects.Enabled = CheckBox_specialEffects.Checked
             CheckBox_sortieModifiers.Enabled = True
             GroupBox_sortieModifiers.Enabled = CheckBox_sortieModifiers.Checked
             CustomTabControl_abilitys.Enabled = CheckBox_abilities.Checked
             CustomTabControl_arcaneHelmets.Enabled = CheckBox_arcaneHelmets.Checked
-            CheckBox_squadEffects.Enabled = True
-            GroupBox_squadEffects.Enabled = CheckBox_squadEffects.Checked
-
+            '
+            ' Stats
+            '
+            Dim currentVariant As [Variant]
             If CheckBox_isPrime.Checked And CheckBox_isPrime.Enabled Then
-                '
-                '   Prime Warframe stats
-                '
-                ComboBox_primes.SelectedIndex = ComboBox_primes.Items.IndexOf(ComboBox_warframes.SelectedItem)
-                ComboBox_primeBaseArmor.SelectedIndex = ComboBox_primes.SelectedIndex
-                ComboBox_primeArmor.SelectedIndex = ComboBox_primes.SelectedIndex
-                ComboBox_primeBaseHealth.SelectedIndex = ComboBox_primes.SelectedIndex
-                ComboBox_primeHealth.SelectedIndex = ComboBox_primes.SelectedIndex
-                ComboBox_primeBaseShield.SelectedIndex = ComboBox_primes.SelectedIndex
-                ComboBox_primeShield.SelectedIndex = ComboBox_primes.SelectedIndex
-                ComboBox_primeBaseEnergy.SelectedIndex = ComboBox_primes.SelectedIndex
-                ComboBox_primeEnergy.SelectedIndex = ComboBox_primes.SelectedIndex
-                ComboBox_primeBasePower.SelectedIndex = ComboBox_primes.SelectedIndex
-                ComboBox_primePower.SelectedIndex = ComboBox_primes.SelectedIndex
-
-                baseArmor = formatNumber(ComboBox_primeBaseArmor)
-                Armor = formatNumber(ComboBox_primeArmor)
-                baseHealth = formatNumber(ComboBox_primeBaseHealth)
-                Health = formatNumber(ComboBox_primeHealth)
-                baseShield = formatNumber(ComboBox_primeBaseShield)
-                Shield = formatNumber(ComboBox_primeShield)
-                baseEnergy = formatNumber(ComboBox_primeBaseEnergy)
-                Energy = formatNumber(ComboBox_primeEnergy)
-                basePowerStrength = formatNumber(ComboBox_primeBasePower) / 100
-                powerStrength = formatNumber(ComboBox_primePower) / 100
+                currentVariant = currentWarframe.Variants.Find(Function(var) var.Name = "prime")
             ElseIf CheckBox_isUmbra.Checked And CheckBox_isUmbra.Enabled Then
-                '
-                '   Umbra Warframe stats
-                '
-                ComboBox_umbras.SelectedIndex = ComboBox_umbras.Items.IndexOf(ComboBox_warframes.SelectedItem)
-                ComboBox_umbraBaseArmor.SelectedIndex = ComboBox_umbras.SelectedIndex
-                ComboBox_umbraArmor.SelectedIndex = ComboBox_umbras.SelectedIndex
-                ComboBox_umbraBaseHealth.SelectedIndex = ComboBox_umbras.SelectedIndex
-                ComboBox_umbraHealth.SelectedIndex = ComboBox_umbras.SelectedIndex
-                ComboBox_umbraBaseShield.SelectedIndex = ComboBox_umbras.SelectedIndex
-                ComboBox_umbraShield.SelectedIndex = ComboBox_umbras.SelectedIndex
-                ComboBox_umbraBaseEnergy.SelectedIndex = ComboBox_umbras.SelectedIndex
-                ComboBox_umbraEnergy.SelectedIndex = ComboBox_umbras.SelectedIndex
-                ComboBox_umbraBasePower.SelectedIndex = ComboBox_umbras.SelectedIndex
-                ComboBox_umbraPower.SelectedIndex = ComboBox_umbras.SelectedIndex
-
-                baseArmor = formatNumber(ComboBox_umbraBaseArmor)
-                Armor = formatNumber(ComboBox_umbraArmor)
-                baseHealth = formatNumber(ComboBox_umbraBaseHealth)
-                Health = formatNumber(ComboBox_umbraHealth)
-                baseShield = formatNumber(ComboBox_umbraBaseShield)
-                Shield = formatNumber(ComboBox_umbraShield)
-                baseEnergy = formatNumber(ComboBox_umbraBaseEnergy)
-                Energy = formatNumber(ComboBox_umbraEnergy)
-                basePowerStrength = formatNumber(ComboBox_umbraBasePower) / 100
-                powerStrength = formatNumber(ComboBox_umbraPower) / 100
+                currentVariant = currentWarframe.Variants.Find(Function(var) var.Name = "umbra")
             Else
-                '
-                '   Normal Warframe stats
-                '
-                ComboBox_baseArmor.SelectedIndex = ComboBox_warframes.SelectedIndex
-                ComboBox_armor.SelectedIndex = ComboBox_warframes.SelectedIndex
-                ComboBox_baseHealth.SelectedIndex = ComboBox_warframes.SelectedIndex
-                ComboBox_health.SelectedIndex = ComboBox_warframes.SelectedIndex
-                ComboBox_baseShield.SelectedIndex = ComboBox_warframes.SelectedIndex
-                ComboBox_shield.SelectedIndex = ComboBox_warframes.SelectedIndex
-                ComboBox_baseEnergy.SelectedIndex = ComboBox_warframes.SelectedIndex
-                ComboBox_energy.SelectedIndex = ComboBox_warframes.SelectedIndex
-                ComboBox_basePower.SelectedIndex = ComboBox_warframes.SelectedIndex
-                ComboBox_power.SelectedIndex = ComboBox_warframes.SelectedIndex
-
-                baseArmor = formatNumber(ComboBox_baseArmor)
-                Armor = formatNumber(ComboBox_armor)
-                baseHealth = formatNumber(ComboBox_baseHealth)
-                Health = formatNumber(ComboBox_health)
-                baseShield = formatNumber(ComboBox_baseShield)
-                Shield = formatNumber(ComboBox_shield)
-                baseEnergy = formatNumber(ComboBox_baseEnergy)
-                Energy = formatNumber(ComboBox_energy)
-                basePowerStrength = formatNumber(ComboBox_basePower) / 100
-                powerStrength = formatNumber(ComboBox_power) / 100
+                currentVariant = currentWarframe.Variants.Find(Function(var) var.Name = "base")
+            End If
+            baseArmor = currentVariant.Armor
+            baseHealth = currentVariant.Health
+            baseShield = currentVariant.Shield
+            baseEnergy = currentVariant.Energy
+            basePowerStrength = currentVariant.strength / 100
+            If Not currentWarframe.Rank_Multipliers.Find(Function(rm) rm.Name = "armor") Is Nothing Then
+                Armor = baseArmor * currentWarframe.Rank_Multipliers.Find(Function(rm) rm.Name = "armor").Multiplier
+            Else
+                Armor = baseArmor * RankMultipliers.Find(Function(m) m.Name = "armor").Multiplier
+            End If
+            If Not currentWarframe.Rank_Multipliers.Find(Function(rm) rm.Name = "health") Is Nothing Then
+                Health = baseHealth * currentWarframe.Rank_Multipliers.Find(Function(rm) rm.Name = "health").Multiplier
+            Else
+                Health = baseHealth * RankMultipliers.Find(Function(m) m.Name = "health").Multiplier
+            End If
+            If Not currentWarframe.Rank_Multipliers.Find(Function(rm) rm.Name = "shield") Is Nothing Then
+                Shield = baseShield * currentWarframe.Rank_Multipliers.Find(Function(rm) rm.Name = "shield").Multiplier
+            Else
+                Shield = baseShield * RankMultipliers.Find(Function(m) m.Name = "shield").Multiplier
+            End If
+            If Not currentWarframe.Rank_Multipliers.Find(Function(rm) rm.Name = "energy") Is Nothing Then
+                Energy = baseEnergy * currentWarframe.Rank_Multipliers.Find(Function(rm) rm.Name = "energy").Multiplier
+            Else
+                Energy = baseEnergy * RankMultipliers.Find(Function(m) m.Name = "energy").Multiplier
+            End If
+            If Not currentWarframe.Rank_Multipliers.Find(Function(rm) rm.Name = "strength") Is Nothing Then
+                powerStrength = basePowerStrength * currentWarframe.Rank_Multipliers.Find(Function(rm) rm.Name = "strength").Multiplier
+            Else
+                powerStrength = basePowerStrength * RankMultipliers.Find(Function(m) m.Name = "strength").Multiplier
             End If
             '
             ' Overshields
@@ -582,7 +520,7 @@ Public Class Form_main
             '   Arcane Helmets
             '
             If CheckBox_arcaneHelmets.Checked Then
-                Select Case ComboBox_warframes.SelectedItem
+                Select Case currentWarframe.Name
                     Case "Ash"
                         If RadioButton_locustHelmet.Checked Then
                             Energy = Energy + (baseEnergy * 0.2)
@@ -715,7 +653,7 @@ Public Class Form_main
                     powerStrength = powerStrength - powerDonation
                     ' End If
                 End If
-        End If
+            End If
             '
             '   RadioButton Function for Umbral Mods
             '
@@ -885,7 +823,7 @@ Public Class Form_main
             '   Abilities
             '
             If CheckBox_abilities.Checked Then
-                Select Case ComboBox_warframes.SelectedItem
+                Select Case currentWarframe.Name
                     Case "Atlas"
                         If CheckBox_rubble.Checked Then
                             Dim rubble As Decimal = NumericUpDown_rubble.Value
@@ -924,7 +862,7 @@ Public Class Form_main
                                 shieldMultiplier = shieldMultiplier + elementalWard
                             End If
                         End If
-                        If CheckBox_vexArmor.Checked And ComboBox_warframes.SelectedItem = "Chroma" And CheckBox_abilities.Checked Then
+                        If CheckBox_vexArmor.Checked And currentWarframe.Name = "Chroma" And CheckBox_abilities.Checked Then
                             Dim vexArmor As Decimal = 3.5 * powerStrength
                             armorMultiplier = armorMultiplier + vexArmor
                         End If
@@ -1191,8 +1129,6 @@ Public Class Form_main
             CustomTabControl_abilitys.Enabled = False
             CheckBox_arcaneHelmets.Enabled = False
             CustomTabControl_arcaneHelmets.Enabled = False
-            CheckBox_squadEffects.Enabled = False
-            GroupBox_squadEffects.Enabled = False
             '
             '   No Warframe selected, display values should be set to default
             '
@@ -1207,6 +1143,7 @@ Public Class Form_main
     End Sub
 
     Private Sub Companion_Value_Changed(sender As Object, e As EventArgs)
+        Dim currentWarframe As Warframe = Warframes.Find(Function(wf) wf.Name = ComboBox_warframes.SelectedItem)
         '   Pet Stats
         Dim Armor As Decimal = 0.0
         Dim Health As Decimal = 0.0
@@ -1226,14 +1163,14 @@ Public Class Form_main
         If ComboBox_companions.SelectedIndex > 0 Then
             CheckBox_companionSurvivability.Enabled = True
             GroupBox_companionSurvivability.Enabled = CheckBox_companionSurvivability.Checked
-            Armor = formatNumber(ComboBox_petArmor)
-            Health = formatNumber(ComboBox_petHealth)
-            Shield = formatNumber(ComboBox_petShield)
+            Armor = FormatNumber(ComboBox_petArmor)
+            Health = FormatNumber(ComboBox_petHealth)
+            Shield = FormatNumber(ComboBox_petShield)
             If NumericUpDown_companionStability.Enabled = True Then
                 'genetic stability
                 Health = Health * (1 + (NumericUpDown_companionStability.Value / 100))
             End If
-            If ComboBox_warframes.SelectedItem = "Oberon" Then
+            If currentWarframe.Name = "Oberon" Then
                 'Oberon Passive
                 Armor = Armor + 75
                 Health = Math.Floor(Health + (Health * 0.25))
@@ -1246,13 +1183,13 @@ Public Class Form_main
             End If
             If CheckBox_companionSurvivability.Checked Then
                 If CheckBox_companionLinkArmor.Checked = True Then
-                    Armor = Math.Floor(Armor + (formatNumber(TextBox_warframeArmor) * ((NumericUpDown_companionLinkArmor.Value + 1) * 0.1)))
+                    Armor = Math.Floor(Armor + (FormatNumber(TextBox_warframeArmor) * ((NumericUpDown_companionLinkArmor.Value + 1) * 0.1)))
                 End If
                 If CheckBox_companionLinkHealth.Checked = True Then
-                    Health = Math.Floor(Health + (formatNumber(TextBox_warframeHealth) * ((NumericUpDown_companionLinkHealth.Value + 1) * 0.15)))
+                    Health = Math.Floor(Health + (FormatNumber(TextBox_warframeHealth) * ((NumericUpDown_companionLinkHealth.Value + 1) * 0.15)))
                 End If
                 If CheckBox_companionLinkShield.Checked = True Then
-                    Shield = Math.Floor(Shield + (formatNumber(TextBox_warframeShield) * ((NumericUpDown_companionLinkShield.Value + 1) * 0.1)))
+                    Shield = Math.Floor(Shield + (FormatNumber(TextBox_warframeShield) * ((NumericUpDown_companionLinkShield.Value + 1) * 0.1)))
                 End If
             End If
             Dim damageReductionArmor = Armor / (300 + Armor)

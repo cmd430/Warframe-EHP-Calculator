@@ -94,26 +94,20 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomTabControl.vb">
+    <Compile Include="Controls\CustomTabControl.vb">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Form_main.vb">
+    <Compile Include="Forms\Form_main.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_main.Designer.vb">
+    <Compile Include="Forms\Form_main.Designer.vb">
       <DependentUpon>Form_main.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_squadMember.Designer.vb">
-      <DependentUpon>Form_squadMember.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Form_squadMember.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form_update.Designer.vb">
+    <Compile Include="Forms\Form_update.Designer.vb">
       <DependentUpon>Form_update.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form_update.vb">
+    <Compile Include="Forms\Form_update.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -131,15 +125,13 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Modules\WarframeData.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form_main.resx">
+    <EmbeddedResource Include="Forms\Form_main.resx">
       <DependentUpon>Form_main.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_squadMember.resx">
-      <DependentUpon>Form_squadMember.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form_update.resx">
+    <EmbeddedResource Include="Forms\Form_update.resx">
       <DependentUpon>Form_update.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -164,8 +156,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\Debug\Warframe EHP Calculator v2.exe" />
-    <Content Include="latest_changes" />
-    <Content Include="version" />
+    <EmbeddedResource Include="latest_changes" />
+    <EmbeddedResource Include="version" />
+    <EmbeddedResource Include="Data\WarframeRankMultipliers.xml" />
+    <EmbeddedResource Include="Data\Warframes.xml" />
     <Content Include="Warframe.ico" />
   </ItemGroup>
   <ItemGroup>
@@ -180,7 +174,11 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>node "$(ProjectDir)\Util\Wikia Scraper\index.js"</PreBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

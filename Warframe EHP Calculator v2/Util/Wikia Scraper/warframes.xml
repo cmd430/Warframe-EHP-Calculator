@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<warframes>
+  <warframe name="Ash">
+    <variants>
+      <variant name="base" armor="65" health="150" shield="100" energy="100" strength="100" />
+      <variant name="prime" armor="150" health="150" shield="125" energy="100" strength="100" />
+    </variants>
+  </warframe>
+  <warframe name="Atlas">
+    <variants>
+      <variant name="base" armor="450" health="100" shield="100" energy="150" strength="100" />
+    </variants>
+  </warframe>
+  <warframe name="Banshee">
+    <variants>
+      <variant name="base" armor="15" health="100" shield="100" energy="150" strength="100" />
+      <variant name="prime" armor="65" health="100" shield="100" energy="175" strength="100" />
+    </variants>
+  </warframe>
+  <warframe name="Baruuk">
+    <variants>
+      <variant name="base" armor="150" health="75" shield="100" energy="200" strength="100" />
+    </variants>
+  </warframe>
+  <warframe name="Chroma">
+    <variants>
+      <variant name="base" armor="350" health="100" shield="100" energy="150" strength="100" />
+      <variant name="prime" armor="425" health="100" shield="100" energy="200" strength="100" />
+    </variants>
+  </warframe>
+  <warframe name="Ember">
+    <variants>
+      <variant name="base" armor="100" health="100" shield="100" energy="150" strength="100" />
+      <variant name="prime" armor="125" health="100" shield="125" energy="150" strength="100" />
+    </variants>
+  </warframe>
+  <warframe name="Equinox">
+    <variants>
+      <variant name="base" armor="100" health="100" shield="100" energy="150" strength="100" />
+      <variant name="prime" armor="120" health="125" shield="100" energy="165" strength="100" />
+    </variants>
+  </warframe>
+  <warframe name="Excalibur">
+    <variants>
+      <variant name="base" armor="225" health="100" shield="100" energy="100" strength="100" />
+      <variant name="prime" armor="300" health="100" shield="100" energy="150" strength="100" />
+      <variant name="umbra" armor="300" health="100" shield="100" energy="150" strength="100" />
+    </variants>
+  </warframe>
+  <warframe name="Frost">
+    <variants>
+      <variant name="base" armor="300" health="100" shield="150" energy="100" strength="100" />
+      <variant name="prime" armor="300" health="100" shield="175" energy="100" strength="100" />
+    </variants>
+  </warframe>
+  <warframe name="Gara">
+    <variants>
+      <variant name="base" armor="125" health="100" shield="100" energy="150" strength="100" />
+    </variants>
+  </warframe>
+  <warframe name="Garuda">
+    <variants>
+      <variant name="base" armor="300" health="100" shield="100" energy="120" strength="100" />
+    </variants>
+    <rank_multipliers>
+      <rank_multiplier name="energy" multiplier="2.25">
+    </rank_multipliers>
+  </warframe>
+  <warframe name="Harrow">
+    <variants>
+      <variant name="base" armor="150" health="100" shield="150" energy="100" strength="100" />
+    </variants>
+  </warframe>
+  <warframe name="Hildryn">
+    <variants>
+      <variant name="base" armor="300" health="75" shield="450" energy="0" strength="100" />
+    </variants>
+    <rank_multipliers>
+      <rank_multiplier name="shield" multiplier="3.5">
+    </rank_multipliers>
+  </warframe>
+  <warframe name="Hydroid">
+    <variants>
+      <variant name="base" armor="200" health="100" shield="125" energy="125" strength="100" />
+      <variant name="prime" armor="250" health="100" shield="175" energy="150" strength="100" />
+    </variants>
+    <rank_multipliers>
+      <rank_multiplier name="energy" multiplier="1.504">
+    </rank_multipliers>
+  </warframe>
+  <warframe name="Inaros">
+    <variants>
+      <variant name="base" armor="200" health="550" shield="0" energy="100" strength="100" />
+    </variants>
+    <rank_multipliers>
+      <rank_multiplier name="health" multiplier="4">
+    </rank_multipliers>
+  </warframe>
+  <warframe name="Ivara">
+    <variants>
+      <variant name="base" armor="65" health="75" shield="100" energy="175" strength="100" />
+    </variants>
+    <rank_multipliers>
+      <rank_multiplier name="energy" multiplier="1.497142857142857">
+    </rank_multipliers>
+  </warframe>
+  <warframe name="Khora">
+    <variants>
+      <variant name="base" armor="275" health="125" shield="100" energy="125" strength="100" />
+    </variants>
+    <rank_multipliers>
+      <rank_multiplier name="energy" multiplier="1.504">
+    </rank_multipliers>
+  </warframe>
+  <warframe name="Limbo">
+    <variants>
+      <variant name="base" armor="65" health="100" shield="75" energy="150" strength="100" />
+      <variant name="prime" armor="85" health="100" shield="100" energy="175" strength="100" />
+    </variants>
+  </warframe>
+  <warframe name="Loki">
+    <variants>
+      <variant name="base" armor="65" health="75" shield="75" energy="150" strength="100" />
+      <variant name="prime" armor="65" health="75" shield="75" energy="175" strength="100" />
+    </variants>
+  </warframe>
+  <warframe name="Mag">
+    <variants>
+      <variant name="base" armor="65" health="75" shield="150" energy="125" strength="100" />
+      <variant name="prime" armor="65" health="100" shield="150" energy="175" strength="100" />
+    </variants>
+    <rank_multipliers>
+      <rank_multiplier name="energy" multiplier="1.504">
+    </rank_multipliers>
+  </warframe>
+  <warframe name="Mesa">
+    <variants>
+      <variant name="base" armor="65" health="125" shield="75" energy="100" strength="100" />
+      <variant name="prime" armor="85" health="135" shield="75" energy="125" strength="100" />
+    </variants>
+  </warframe>
+  <warframe name="Mirage">
+    <variants>
+      <variant name="base" armor="65" health="80" shield="80" energy="150" strength="100" />
+      <variant name="prime" armor="150" health="80" shield="110" energy="150" strength="100" />
+    </variants>
+  </warframe>
+  <warframe name="Nekros">
+    <variants>
+      <variant name="base" armor="65" health="100" shield="90" energy="100" strength="100" />
+      <variant name="prime" armor="65" health="100" shield="150" energy="125" strength="100" />
+    </variants>
+  </warframe>
+  <warframe name="Nezha">
+    <variants>
+      <variant name="base" armor="175" health="125" shield="50" energy="150" strength="100" />
+    </variants>
+  </warframe>
+  <warframe name="Nidus">
+    <variants>
+      <variant name="base" armor="300" health="150" shield="0" energy="100" strength="100" />
+    </variants>
+    <rank_multipliers>
+      <rank_multiplier name="armor" multiplier="1.5">
+      <rank_multiplier name="strength" multiplier="1.15">
+    </rank_multipliers>
+  </warframe>
+  <warframe name="Nova">
+    <variants>
+      <variant name="base" armor="65" health="100" shield="75" energy="150" strength="100" />
+      <variant name="prime" armor="65" health="100" shield="100" energy="175" strength="100" />
+    </variants>
+  </warframe>
+  <warframe name="Nyx">
+    <variants>
+      <variant name="base" armor="15" health="100" shield="100" energy="150" strength="100" />
+      <variant name="prime" armor="50" health="100" shield="125" energy="150" strength="100" />
+    </variants>
+  </warframe>
+  <warframe name="Oberon">
+    <variants>
+      <variant name="base" armor="150" health="125" shield="100" energy="150" strength="100" />
+      <variant name="prime" armor="225" health="125" shield="100" energy="175" strength="100" />
+    </variants>
+  </warframe>
+  <warframe name="Octavia">
+    <variants>
+      <variant name="base" armor="125" health="100" shield="75" energy="150" strength="100" />
+    </variants>
+  </warframe>
+  <warframe name="Revenant">
+    <variants>
+      <variant name="base" armor="105" health="100" shield="225" energy="125" strength="100" />
+    </variants>
+    <rank_multipliers>
+      <rank_multiplier name="energy" multiplier="1.504">
+    </rank_multipliers>
+  </warframe>
+  <warframe name="Rhino">
+    <variants>
+      <variant name="base" armor="190" health="100" shield="150" energy="100" strength="100" />
+      <variant name="prime" armor="275" health="100" shield="150" energy="100" strength="100" />
+    </variants>
+  </warframe>
+  <warframe name="Saryn">
+    <variants>
+      <variant name="base" armor="225" health="125" shield="100" energy="150" strength="100" />
+      <variant name="prime" armor="300" health="125" shield="100" energy="200" strength="100" />
+    </variants>
+  </warframe>
+  <warframe name="Titania">
+    <variants>
+      <variant name="base" armor="65" health="100" shield="100" energy="150" strength="100" />
+    </variants>
+  </warframe>
+  <warframe name="Trinity">
+    <variants>
+      <variant name="base" armor="15" health="100" shield="100" energy="150" strength="100" />
+      <variant name="prime" armor="15" health="100" shield="150" energy="150" strength="100" />
+    </variants>
+  </warframe>
+  <warframe name="Valkyr">
+    <variants>
+      <variant name="base" armor="600" health="100" shield="50" energy="100" strength="100" />
+      <variant name="prime" armor="700" health="100" shield="50" energy="150" strength="100" />
+    </variants>
+  </warframe>
+  <warframe name="Vauban">
+    <variants>
+      <variant name="base" armor="50" health="100" shield="75" energy="150" strength="100" />
+      <variant name="prime" armor="100" health="100" shield="100" energy="150" strength="100" />
+    </variants>
+  </warframe>
+  <warframe name="Volt">
+    <variants>
+      <variant name="base" armor="15" health="100" shield="150" energy="100" strength="100" />
+      <variant name="prime" armor="100" health="100" shield="150" energy="200" strength="100" />
+    </variants>
+  </warframe>
+  <warframe name="Wisp">
+    <variants>
+      <variant name="base" armor="150" health="100" shield="75" energy="200" strength="100" />
+    </variants>
+  </warframe>
+  <warframe name="Wukong">
+    <variants>
+      <variant name="base" armor="225" health="100" shield="125" energy="100" strength="100" />
+    </variants>
+  </warframe>
+  <warframe name="Zephyr">
+    <variants>
+      <variant name="base" armor="15" health="150" shield="150" energy="100" strength="100" />
+      <variant name="prime" armor="75" health="150" shield="150" energy="150" strength="100" />
+    </variants>
+  </warframe>
+</warframes>
