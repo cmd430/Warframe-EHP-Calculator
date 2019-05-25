@@ -514,7 +514,7 @@ Public Class Form_main
             ' Overshields
             '
             If CheckBox_specialEffects.Checked And CheckBox_overshields.Checked Then
-                shieldBonus = shieldBonus + NumericUpDown_oversheilds.Value
+                shieldBonus += NumericUpDown_oversheilds.Value
             End If
             '
             '   Arcane Helmets
@@ -523,84 +523,84 @@ Public Class Form_main
                 Select Case currentWarframe.Name
                     Case "Ash"
                         If RadioButton_locustHelmet.Checked Then
-                            Energy = Energy + (baseEnergy * 0.2)
+                            Energy += baseEnergy * 0.2
                         End If
                     Case "Banshee"
                         If RadioButton_reverbHelmet.Checked Then
-                            Health = Health - (baseHealth * 0.05)
-                            Energy = Energy + (baseEnergy * 0.1)
+                            Health -= baseHealth * 0.05
+                            Energy += baseEnergy * 0.1
                         End If
                     Case "Ember"
                         If RadioButton_phoenixHelmet.Checked Then
-                            Shield = Shield + (baseShield * 0.05)
-                            Energy = Energy + (baseEnergy * 0.25)
+                            Shield += baseShield * 0.05
+                            Energy += baseEnergy * 0.25
                         ElseIf RadioButton_backdraftHelmet.Checked Then
-                            Health = Health + (baseHealth * 0.15)
+                            Health += baseHealth * 0.15
                         End If
                     Case "Excalibur"
                         If RadioButton_avalonHelmet.Checked Then
-                            Health = Health - (baseHealth * 0.05)
-                            Shield = Shield + (baseShield * 0.25)
+                            Health -= baseHealth * 0.05
+                            Shield += baseShield * 0.25
                         ElseIf RadioButton_pendragonHelmet.Checked Then
-                            Armor = Armor - (baseArmor * 0.05)
-                            powerStrength = powerStrength + (powerStrength * 0.15)
+                            Armor -= baseArmor * 0.05
+                            powerStrength += powerStrength * 0.15
                         End If
                     Case "Frost"
                         If RadioButton_auroraHelmet.Checked Then
-                            Health = Health - (baseHealth * 0.05)
-                            Armor = Armor + (baseArmor * 0.25)
+                            Health -= baseHealth * 0.05
+                            Armor += baseArmor * 0.25
                         ElseIf RadioButton_squallHelmet.Checked Then
-                            Shield = Shield - (baseShield * 0.05)
-                            powerStrength = powerStrength + (powerStrength * 0.15)
+                            Shield -= baseShield * 0.05
+                            powerStrength += powerStrength * 0.15
                         End If
                     Case "Loki"
                         If RadioButton_essenceHelmet.Checked Then
-                            Armor = Armor - (baseArmor * 0.05)
+                            Armor -= baseArmor * 0.05
                         ElseIf RadioButton_swindleHelmet.Checked Then
-                            Health = Health - (baseHealth * 0.05)
+                            Health -= baseHealth * 0.05
                         End If
                     Case "Mag"
                         If RadioButton_coilHelmet.Checked Then
-                            Shield = Shield - (baseShield * 0.05)
+                            Shield -= baseShield * 0.05
                         ElseIf RadioButton_gaussHelmet.Checked Then
-                            Energy = Energy + (baseEnergy * 0.25)
+                            Energy += baseEnergy * 0.25
                         End If
                     Case "Nova"
                         If RadioButton_fluxHelmet.Checked Then
-                            Health = Health - (baseHealth * 0.05)
+                            Health -= baseHealth * 0.05
                         End If
                     Case "Nyx"
                         If RadioButton_menticideHelmet.Checked Then
-                            Shield = Shield - (baseShield * 0.05)
+                            Shield -= baseShield * 0.05
                         ElseIf RadioButton_vespaHelmet.Checked Then
-                            Armor = Armor - (baseArmor * 0.05)
+                            Armor -= baseArmor * 0.05
                         End If
                     Case "Rhino"
                         If RadioButton_thrak.Checked Then
-                            Health = Health + (baseHealth * 0.25)
+                            Health += baseHealth * 0.25
                         ElseIf RadioButton_vanguardHelmet.Checked Then
-                            powerStrength = powerStrength - (powerStrength * 0.05)
+                            powerStrength -= powerStrength * 0.05
                         End If
                     Case "Saryn"
                         If RadioButton_hemlockHelmet.Checked Then
-                            Health = Health - (baseHealth * 0.05)
+                            Health -= baseHealth * 0.05
                         End If
                     Case "Trinity"
                         If RadioButton_auraHelmet.Checked Then
-                            Health = Health - (baseHealth * 0.05)
+                            Health -= baseHealth * 0.05
                         ElseIf RadioButton_meridianHelmet.Checked Then
-                            Shield = Shield + (baseShield * 0.15)
+                            Shield += baseShield * 0.15
                         End If
                     Case "Vauban"
                         If RadioButton_espritHelmet.Checked Then
-                            Shield = Shield - (baseShield * 0.1)
-                            Energy = Energy + (baseEnergy * 0.1)
+                            Shield -= baseShield * 0.1
+                            Energy += baseEnergy * 0.1
                         End If
                     Case "Volt"
                         If RadioButton_pulseHelmet.Checked Then
-                            Shield = Shield - (baseShield * 0.05)
+                            Shield -= baseShield * 0.05
                         ElseIf RadioButton_stormHelmet.Checked Then
-                            powerStrength = powerStrength + (powerStrength * 0.1)
+                            powerStrength += powerStrength * 0.1
                         End If
                 End Select
             End If
@@ -609,9 +609,9 @@ Public Class Form_main
             '
             If CheckBox_sortieModifiers.Checked Then
                 If RadioButton_sortieCryogenicLeakage.Checked Then
-                    Shield = Shield - (baseShield * 0.5)
+                    Shield -= baseShield * 0.5
                 ElseIf RadioButton_sortieFire.Checked Then
-                    Health = Health - (baseHealth * 0.5)
+                    Health -= baseHealth * 0.5
                 End If
             End If
             '
@@ -627,17 +627,17 @@ Public Class Form_main
                         '   of 0.15 * (1 + 0.15) + 0.15 = 0.3225 (values are for max rank mod)
                         '
                         Dim coactionDrit As Decimal = 0.025 + (0.025 * NumericUpDown_coactionDrift.Value)
-                        healthMultiplier = healthMultiplier + (physique + (physique * (coactionDrit * (1 + coactionDrit) + coactionDrit)))
+                        healthMultiplier += physique + (physique * (coactionDrit * (1 + coactionDrit) + coactionDrit))
                     Else
-                        healthMultiplier = healthMultiplier + physique
+                        healthMultiplier += physique
                     End If
                 ElseIf RadioButton_standUnited.Checked Then
                     Dim standUnited As Decimal = 0.0425 + (NumericUpDown_standUnited.Value * 0.0425)
                     If CheckBox_coactionDrift.Checked And CheckBox_miscellaneous.Checked Then
                         Dim coactionDrit As Decimal = 0.025 + (0.025 * NumericUpDown_coactionDrift.Value)
-                        armorMultiplier = armorMultiplier + (standUnited + (standUnited * (coactionDrit * (1 + coactionDrit) + coactionDrit)))
+                        armorMultiplier += standUnited + (standUnited * (coactionDrit * (1 + coactionDrit) + coactionDrit))
                     Else
-                        armorMultiplier = armorMultiplier + standUnited
+                        armorMultiplier += standUnited
                     End If
                 ElseIf RadioButton_growingPower.Checked Then
                     Dim growingPower As Decimal = basePowerStrength * (0.04166666667 + (NumericUpDown_growingPower.Value * 0.04166666667))
@@ -645,12 +645,12 @@ Public Class Form_main
                     'Dim coactionDrit As Decimal = 0.025 + (0.025 * NumericUpDown_coactionDrift.Value)
                     'powerStrength = powerStrength + (growingPower + (growingPower * (coactionDrit * (1 + coactionDrit) + coactionDrit)))
                     'Else
-                    powerStrength = powerStrength + growingPower
+                    powerStrength += growingPower
                     ' End If
                 ElseIf RadioButton_powerDonation.Checked Then
                     'Note: PowerLineStatus Donation does not seem to be affected by co-action drift at this time.
                     Dim powerDonation As Decimal = basePowerStrength * (0.05 + (NumericUpDown_powerDonation.Value * 0.05))
-                    powerStrength = powerStrength - powerDonation
+                    powerStrength -= powerDonation
                     ' End If
                 End If
             End If
@@ -693,37 +693,37 @@ Public Class Form_main
             If CheckBox_survivability.Checked Then
                 'Armor
                 If CheckBox_steelFiber.Checked Then
-                    armorMultiplier = armorMultiplier + (0.1 + (NumericUpDown_steelFiber.Value * 0.1))
+                    armorMultiplier += 0.1 + (NumericUpDown_steelFiber.Value * 0.1)
                 End If
                 If CheckBox_armoredAgility.Checked Then
-                    armorMultiplier = armorMultiplier + (0.075 + (NumericUpDown_armoredAgility.Value * 0.075))
+                    armorMultiplier += 0.075 + (NumericUpDown_armoredAgility.Value * 0.075)
                 End If
                 If CheckBox_healthConversion.Checked Then
-                    armorBonus = (armorBonus + ((75 + (NumericUpDown_healthConversion.Value * 75)) * NumericUpDown_healthConversionStacks.Value))
+                    armorBonus = armorBonus + ((75 + (NumericUpDown_healthConversion.Value * 75)) * NumericUpDown_healthConversionStacks.Value)
                 End If
                 If CheckBox_gladiatorAegis.Checked Then
-                    armorMultiplier = armorMultiplier + (0.075 + (NumericUpDown_gladiatorAegis.Value * 0.075))
+                    armorMultiplier += 0.075 + (NumericUpDown_gladiatorAegis.Value * 0.075)
                 End If
                 'health
                 If CheckBox_vitality.Checked Then
-                    healthMultiplier = healthMultiplier + (0.4 + (NumericUpDown_vitality.Value * 0.4))
+                    healthMultiplier += 0.4 + (NumericUpDown_vitality.Value * 0.4)
                 End If
                 If CheckBox_gladiatorResolve.Checked Then
-                    healthMultiplier = healthMultiplier + (0.3 + (NumericUpDown_gladiatorResolve.Value * 0.3))
+                    healthMultiplier += 0.3 + (NumericUpDown_gladiatorResolve.Value * 0.3)
                 End If
                 'quickthinking moved.
                 'gladiator finesse moved.
                 'shields
                 If CheckBox_redirection.Checked Then
-                    shieldMultiplier = shieldMultiplier + (0.4 + (NumericUpDown_redirection.Value * 0.4))
+                    shieldMultiplier += 0.4 + (NumericUpDown_redirection.Value * 0.4)
                 End If
                 If CheckBox_augurAccord.Checked Then
-                    shieldMultiplier = shieldMultiplier + (0.3 + (NumericUpDown_augurAccord.Value * 0.3))
+                    shieldMultiplier += 0.3 + (NumericUpDown_augurAccord.Value * 0.3)
                 End If
                 'dual
                 If CheckBox_vigor.Checked Then
-                    healthMultiplier = healthMultiplier + (0.2 + (NumericUpDown_vigor.Value * 0.2))
-                    shieldMultiplier = shieldMultiplier + (0.2 + (NumericUpDown_vigor.Value * 0.2))
+                    healthMultiplier += 0.2 + (NumericUpDown_vigor.Value * 0.2)
+                    shieldMultiplier += 0.2 + (NumericUpDown_vigor.Value * 0.2)
                 End If
             End If
             '
@@ -731,10 +731,10 @@ Public Class Form_main
             '
             If CheckBox_miscellaneous.Checked Then
                 If CheckBox_enduranceDrift.Checked Then
-                    energyMultiplier = energyMultiplier + (0.025 + (NumericUpDown_enduranceDrift.Value * 0.025))
+                    energyMultiplier += 0.025 + (NumericUpDown_enduranceDrift.Value * 0.025)
                 End If
                 If CheckBox_flow.Checked Then
-                    energyMultiplier = energyMultiplier + (0.25 + (NumericUpDown_flow.Value * 0.25))
+                    energyMultiplier += 0.25 + (NumericUpDown_flow.Value * 0.25)
                 End If
             End If
             '
@@ -742,25 +742,25 @@ Public Class Form_main
             '
             If CheckBox_power.Checked Then
                 If CheckBox_overextended.Checked Then
-                    powerStrength = powerStrength - (basePowerStrength * (0.1 + (NumericUpDown_overextended.Value * 0.1)))
+                    powerStrength -= basePowerStrength * (0.1 + (NumericUpDown_overextended.Value * 0.1))
                 End If
                 If CheckBox_blindRage.Checked Then
-                    powerStrength = powerStrength + (basePowerStrength * (0.09 + (NumericUpDown_blindRage.Value * 0.09)))
+                    powerStrength += basePowerStrength * (0.09 + (NumericUpDown_blindRage.Value * 0.09))
                 End If
                 If CheckBox_energyConversion.Checked Then
-                    powerStrength = powerStrength + (basePowerStrength * (0.08333333333 + (NumericUpDown_energyConversion.Value * 0.08333333333)))
+                    powerStrength += basePowerStrength * (0.08333333333 + (NumericUpDown_energyConversion.Value * 0.08333333333))
                 End If
                 If CheckBox_intensify.Checked Then
-                    powerStrength = powerStrength + (basePowerStrength * (0.05 + (NumericUpDown_intensify.Value * 0.05)))
+                    powerStrength += basePowerStrength * (0.05 + (NumericUpDown_intensify.Value * 0.05))
                 End If
                 If CheckBox_transientFortitude.Checked Then
-                    powerStrength = powerStrength + (basePowerStrength * (0.05 + (NumericUpDown_transientFortitude.Value * 0.05)))
+                    powerStrength += basePowerStrength * (0.05 + (NumericUpDown_transientFortitude.Value * 0.05))
                 End If
                 If CheckBox_powerDrift.Checked Then
-                    powerStrength = powerStrength + (basePowerStrength * (0.025 + (NumericUpDown_powerDrift.Value * 0.025)))
+                    powerStrength += basePowerStrength * (0.025 + (NumericUpDown_powerDrift.Value * 0.025))
                 End If
                 If CheckBox_augurSecrets.Checked Then
-                    powerStrength = powerStrength + (basePowerStrength * (0.04 + (NumericUpDown_augurSecrets.Value * 0.04)))
+                    powerStrength += basePowerStrength * (0.04 + (NumericUpDown_augurSecrets.Value * 0.04))
                 End If
             End If
             '
@@ -769,34 +769,34 @@ Public Class Form_main
             Dim UmbralModifiy As Integer = 0
             If CheckBox_survivability.Checked Then
                 If CheckBox_umbraFiber.Checked Then
-                    UmbralModifiy = UmbralModifiy + 1
+                    UmbralModifiy += 1
                 End If
                 If CheckBox_umbraVitality.Checked Then
-                    UmbralModifiy = UmbralModifiy + 1
+                    UmbralModifiy += 1
                 End If
             End If
             If CheckBox_power.Checked And CheckBox_umbraIntensify.Checked Then
-                UmbralModifiy = UmbralModifiy + 1
+                UmbralModifiy += 1
             End If
             If CheckBox_survivability.Checked Then
                 'Armor
                 If CheckBox_umbraFiber.Checked Then
                     If UmbralModifiy = 1 Then
-                        armorMultiplier = armorMultiplier + (0.1 + (NumericUpDown_umbraFiber.Value * 0.1))
+                        armorMultiplier += 0.1 + (NumericUpDown_umbraFiber.Value * 0.1)
                     ElseIf UmbralModifiy = 2 Then
-                        armorMultiplier = armorMultiplier + (0.125 + (NumericUpDown_umbraFiber.Value * 0.125))
+                        armorMultiplier += 0.125 + (NumericUpDown_umbraFiber.Value * 0.125)
                     ElseIf UmbralModifiy = 3 Then
-                        armorMultiplier = armorMultiplier + (0.175 + (NumericUpDown_umbraFiber.Value * 0.175))
+                        armorMultiplier += 0.175 + (NumericUpDown_umbraFiber.Value * 0.175)
                     End If
                 End If
                 'Health
                 If CheckBox_umbraVitality.Checked Then
                     If UmbralModifiy = 1 Then
-                        healthMultiplier = healthMultiplier + (0.4 + (NumericUpDown_umbraVitality.Value * 0.4))
+                        healthMultiplier += 0.4 + (NumericUpDown_umbraVitality.Value * 0.4)
                     ElseIf UmbralModifiy = 2 Then
-                        healthMultiplier = healthMultiplier + (0.5 + (NumericUpDown_umbraVitality.Value * 0.5))
+                        healthMultiplier += 0.5 + (NumericUpDown_umbraVitality.Value * 0.5)
                     ElseIf UmbralModifiy = 3 Then
-                        healthMultiplier = healthMultiplier + (0.7 + (NumericUpDown_umbraVitality.Value * 0.7))
+                        healthMultiplier += 0.7 + (NumericUpDown_umbraVitality.Value * 0.7)
                     End If
                 End If
             End If
@@ -804,11 +804,11 @@ Public Class Form_main
                 'Power
                 If CheckBox_umbraIntensify.Checked Then
                     If UmbralModifiy = 1 Then
-                        powerStrength = powerStrength + (basePowerStrength * (0.04 + (NumericUpDown_umbraIntensify.Value * 0.04)))
+                        powerStrength += basePowerStrength * (0.04 + (NumericUpDown_umbraIntensify.Value * 0.04))
                     ElseIf UmbralModifiy = 2 Then
-                        powerStrength = powerStrength + (basePowerStrength * (0.05 + (NumericUpDown_umbraIntensify.Value * 0.05)))
+                        powerStrength += basePowerStrength * (0.05 + (NumericUpDown_umbraIntensify.Value * 0.05))
                     ElseIf UmbralModifiy = 3 Then
-                        powerStrength = powerStrength + (basePowerStrength * (0.06 + (NumericUpDown_umbraIntensify.Value * 0.06)))
+                        powerStrength += basePowerStrength * (0.06 + (NumericUpDown_umbraIntensify.Value * 0.06))
                     End If
 
                 End If
@@ -817,7 +817,7 @@ Public Class Form_main
             '   Reactant Buff | Void Fissures
             '
             If CheckBox_specialEffects.Checked And CheckBox_corruptedBuff.Checked Then
-                powerStrength = powerStrength * 2
+                powerStrength *= 2
             End If
             '
             '   Abilities
@@ -827,10 +827,10 @@ Public Class Form_main
                     Case "Atlas"
                         If CheckBox_rubble.Checked Then
                             Dim rubble As Decimal = NumericUpDown_rubble.Value
-                            armorBonus = armorBonus + rubble
+                            armorBonus += rubble
                         End If
                     Case "Baruuk"
-                        Dim restraint As Decimal = (0.5 * (1 - (NumericUpDown_restraint.Value / 100)))
+                        Dim restraint As Decimal = 0.5 * (1 - (NumericUpDown_restraint.Value / 100))
                         Dim desolateHands As Decimal = 0.8 * powerStrength
                         If desolateHands > 0.9 Then
                             desolateHands = 0.9
@@ -840,41 +840,41 @@ Public Class Form_main
                             sereneStorm = 0.4
                         End If
                         If CheckBox_restraint.Checked Then
-                            damageReduction = damageReduction + ((1 - damageReduction) * restraint)
+                            damageReduction += (1 - damageReduction) * restraint
                         End If
                         If CheckBox_desolateHands.Checked Then
-                            damageReduction = damageReduction + ((1 - damageReduction) * desolateHands)
+                            damageReduction += (1 - damageReduction) * desolateHands
                         End If
                         If CheckBox_sereneStorm.Checked Then
-                            damageReduction = damageReduction + ((1 - damageReduction) * sereneStorm)
+                            damageReduction += (1 - damageReduction) * sereneStorm
                         End If
                     Case "Chroma"
                         If CheckBox_elementalWard.Checked Then
                             Dim elementalWard As Decimal = 0.0
                             If RadioButton_iceChroma.Checked Then
                                 elementalWard = 1.5 * powerStrength
-                                armorMultiplier = armorMultiplier + elementalWard
+                                armorMultiplier += elementalWard
                             ElseIf RadioButton_fireChroma.Checked Then
                                 elementalWard = 2.0 * powerStrength
-                                healthMultiplier = healthMultiplier + elementalWard
+                                healthMultiplier += elementalWard
                             ElseIf RadioButton_electricChroma.Checked Then
                                 elementalWard = 1.0 * powerStrength
-                                shieldMultiplier = shieldMultiplier + elementalWard
+                                shieldMultiplier += elementalWard
                             End If
                         End If
                         If CheckBox_vexArmor.Checked And currentWarframe.Name = "Chroma" And CheckBox_abilities.Checked Then
                             Dim vexArmor As Decimal = 3.5 * powerStrength
-                            armorMultiplier = armorMultiplier + vexArmor
+                            armorMultiplier += vexArmor
                         End If
                     Case "Excalibur"
                         If CheckBox_exaltedBlade.Checked Then
                             Dim exaltedBlade As Decimal = 0.6
-                            damageReduction = damageReduction + exaltedBlade
+                            damageReduction += exaltedBlade
                         End If
                     Case "Frost"
                         If CheckBox_icyAvalanche.Checked Then
-                            Dim icyAvalance As Decimal = (0.6 * powerStrength) * NumericUpDown_icyAvalanche.Value
-                            damageAbsorbstion = damageAbsorbstion + icyAvalance
+                            Dim icyAvalance As Decimal = 0.6 * powerStrength * NumericUpDown_icyAvalanche.Value
+                            damageAbsorbstion += icyAvalance
                         End If
                     Case "Gara"
                         If CheckBox_splinterStorm.Checked Then
@@ -882,7 +882,7 @@ Public Class Form_main
                             If splinterStorm > 0.9 Then
                                 splinterStorm = 0.9
                             End If
-                            damageReduction = damageReduction + splinterStorm
+                            damageReduction += splinterStorm
                         End If
                     Case "Harrow"
                         If CheckBox_wardingThurible.Checked Then
@@ -890,12 +890,12 @@ Public Class Form_main
                             If wardingThurible > 0.9 Then
                                 wardingThurible = 0.9
                             End If
-                            damageReduction = damageReduction + wardingThurible
+                            damageReduction += wardingThurible
                         End If
                     Case "Inaros"
                         If CheckBox_scarabSwarm.Checked Then
                             Dim scarabSwarm As Decimal = 2 * NumericUpDown_scarabSwarm.Value
-                            armorBonus = armorBonus + scarabSwarm
+                            armorBonus += scarabSwarm
                         End If
                     Case "Mesa"
                         If CheckBox_shatterShield.Checked Then
@@ -903,10 +903,10 @@ Public Class Form_main
                             If shatterShield > 0.95 Then
                                 shatterShield = 0.95
                             End If
-                            damageReduction = damageReduction + shatterShield
+                            damageReduction += shatterShield
                         End If
                         If CheckBox_marksmansDexterity.Checked Then
-                            healthBonus = healthBonus + 50
+                            healthBonus += 50
                         End If
                     Case "Mirage"
                         If CheckBox_eclipse.Checked Then
@@ -914,32 +914,32 @@ Public Class Form_main
                             If eclipse > 0.95 Then
                                 eclipse = 0.95
                             End If
-                            damageReduction = damageReduction + eclipse
+                            damageReduction += eclipse
                         End If
                     Case "Nekros"
                         If CheckBox_shieldOfShadows.Checked Then
-                            Dim shieldOfShadows As Decimal = (0.06 * powerStrength) * NumericUpDown_shieldOfShadows.Value
+                            Dim shieldOfShadows As Decimal = 0.06 * powerStrength * NumericUpDown_shieldOfShadows.Value
                             If shieldOfShadows > 0.9 Then
                                 shieldOfShadows = 0.9
                             End If
-                            damageReduction = damageReduction + shieldOfShadows
+                            damageReduction += shieldOfShadows
                         End If
                     Case "Nezha"
                         If CheckBox_wardingHalo.Checked Then
                             Dim wardingHalo As Decimal = 0.9
-                            damageReduction = damageReduction + wardingHalo
+                            damageReduction += wardingHalo
                         End If
                     Case "Nidus"
                         If CheckBox_mutationStacks.Checked Then
                             Dim validStacks As Decimal = Math.Floor(NumericUpDown_mutationStacks.Value / 5)
-                            armorBonus = armorBonus + (20 * validStacks)
+                            armorBonus += 20 * validStacks
                         End If
                         If CheckBox_parasiticLink.Checked Then
                             Dim parasiticLink As Decimal = 0.5 * powerStrength
                             If parasiticLink > 0.9 Then
                                 parasiticLink = 0.9
                             End If
-                            damageReduction = damageReduction + parasiticLink
+                            damageReduction += parasiticLink
                         End If
                     Case "Nova"
                         If CheckBox_nullStar.Checked Then
@@ -948,63 +948,63 @@ Public Class Form_main
                             If nullStar > 0.9 Then
                                 nullStar = 0.9
                             End If
-                            damageReduction = damageReduction + nullStar
+                            damageReduction += nullStar
                         End If
                     Case "Oberon"
                         If CheckBox_ironRenewal.Checked Then
                             Dim ironRenewal As Decimal = 200 * powerStrength
-                            armorBonus = armorBonus + ironRenewal
+                            armorBonus += ironRenewal
                         End If
                         If CheckBox_hallowedReckoning.Checked Then
                             Dim hallowedReckoning As Decimal = 250
-                            armorBonus = armorBonus + hallowedReckoning
+                            armorBonus += hallowedReckoning
                         End If
                     Case "Octavia"
                         If CheckBox_metronome.Checked Then
                             Dim metronome As Decimal = 0.35 * powerStrength
-                            armorMultiplier = armorMultiplier + metronome
+                            armorMultiplier += metronome
                         End If
                     Case "Rhino"
                         If CheckBox_ironcladCharge.Checked Then
-                            Dim ironcladCharge As Decimal = (0.5 * powerStrength) * NumericUpDown_ironcladCharge.Value
-                            armorMultiplier = armorMultiplier + ironcladCharge
+                            Dim ironcladCharge As Decimal = 0.5 * powerStrength * NumericUpDown_ironcladCharge.Value
+                            armorMultiplier += ironcladCharge
                         End If
                         If CheckBox_ironSkin.Checked Then
                             Dim ironSkinArmor As Decimal = 2.5 * Armor * (1 + armorMultiplier)
                             Dim ironSkinHealth As Decimal = 1200
                             Dim ironSkin As Decimal = ((ironSkinHealth + ironSkinArmor) * powerStrength) + NumericUpDown_ironSkin.Value
-                            damageAbsorbstion = damageAbsorbstion + ironSkin
+                            damageAbsorbstion += ironSkin
                         End If
                     Case "Titania"
                         If CheckBox_thorns.Checked Then
                             Dim thorns As Decimal = Math.Floor(NumericUpDown_thorns.Value / 5) * 0.05
-                            damageReduction = damageReduction + thorns
+                            damageReduction += thorns
                         End If
                     Case "Trinity"
                         Dim link As Decimal = 0.75
                         Dim blessing As Decimal = 0.5 * powerStrength
                         If CheckBox_link.Checked And Not CheckBox_blessing.Checked Then
-                            damageReduction = damageReduction + link
+                            damageReduction += link
                         ElseIf CheckBox_blessing.Checked And Not CheckBox_link.Checked Then
                             If blessing > 0.75 Then
                                 blessing = 0.75
                             End If
-                            damageReduction = damageReduction + blessing
+                            damageReduction += blessing
                         ElseIf CheckBox_link.Checked And CheckBox_blessing.Checked Then
                             If blessing > 0.75 Then
                                 blessing = 0.75
                             End If
-                            damageReduction = damageReduction + (blessing + ((1 - blessing) * link))
+                            damageReduction += blessing + ((1 - blessing) * link)
                         End If
                     Case "Valkyr"
                         If CheckBox_warcry.Checked Then
                             Dim warcryMultiplier As Decimal = 0.5 * powerStrength
-                            armorMultiplier = armorMultiplier + warcryMultiplier
+                            armorMultiplier += warcryMultiplier
                         End If
                     Case "Wisp"
                         If CheckBox_vitalityMoteReservoirs.Checked Then
                             Dim vitalityMoteBonus As Decimal = 300 * powerStrength
-                            healthBonus = healthBonus + vitalityMoteBonus
+                            healthBonus += vitalityMoteBonus
                         End If
                 End Select
             End If
@@ -1014,24 +1014,24 @@ Public Class Form_main
             If CheckBox_blocking.Checked Then
                 If ComboBox_blocking.SelectedIndex > 0 Then
                     Dim BlockSTR As String = "0." & ComboBox_blocking.SelectedItem.ToString.Replace("%", "")
-                    damageReduction = damageReduction + ((1 - damageReduction) * Convert.ToDecimal(BlockSTR, New Globalization.CultureInfo("en-US")))
+                    damageReduction += (1 - damageReduction) * Convert.ToDecimal(BlockSTR, New Globalization.CultureInfo("en-US"))
                 End If
             End If
             '
             '   Calculate Values (with special support for Vex armor, Quickthinking and Gladiator Finesse)
             '
-            Armor = ((baseArmor * (1 + armorMultiplier)) + (Armor - baseArmor)) + armorBonus
+            Armor = (baseArmor * (1 + armorMultiplier)) + (Armor - baseArmor) + armorBonus
             Energy = Math.Ceiling(Energy) + Math.Floor((baseEnergy * energyMultiplier) + energyBonus)
             If CheckBox_survivability.Checked Then
                 If CheckBox_quickThinking.Checked Then
-                    healthBonus = healthBonus + ((0.4 * (1 + NumericUpDown_quickThinking.Value)) * Energy)
+                    healthBonus += 0.4 * (1 + NumericUpDown_quickThinking.Value) * Energy
                 End If
                 If CheckBox_gladiatorFinesse.Checked Then
-                    healthBonus = healthBonus + ((0.1 * (1 + NumericUpDown_gladiatorFinesse.Value)) * Energy)
+                    healthBonus += 0.1 * (1 + NumericUpDown_gladiatorFinesse.Value) * Energy
                 End If
             End If
-            Health = ((baseHealth * (1 + healthMultiplier)) + (Health - baseHealth)) + healthBonus
-            Shield = ((baseShield * (1 + shieldMultiplier)) + (Shield - baseShield)) + shieldBonus
+            Health = (baseHealth * (1 + healthMultiplier)) + (Health - baseHealth) + healthBonus
+            Shield = (baseShield * (1 + shieldMultiplier)) + (Shield - baseShield) + shieldBonus
             '
             '   Arcanes
             '
@@ -1061,16 +1061,16 @@ Public Class Form_main
                 '   Arcane Effects
                 '
                 If CheckBox_arcaneGuardian.Checked Then
-                    Armor = Armor + (150 + (150 * NumericUpDown_arcaneGuardian.Value))
+                    Armor += 150 + (150 * NumericUpDown_arcaneGuardian.Value)
                 End If
                 If CheckBox_arcaneGuardian2.Checked Then
-                    Armor = Armor + (150 + (150 * NumericUpDown_arcaneGuardian2.Value))
+                    Armor += 150 + (150 * NumericUpDown_arcaneGuardian2.Value)
                 End If
                 If CheckBox_arcaneUltimatum.Checked Then
-                    Armor = Armor + (150 + (150 * NumericUpDown_arcaneUltimatum.Value))
+                    Armor += 150 + (150 * NumericUpDown_arcaneUltimatum.Value)
                 End If
                 If CheckBox_arcaneUltimatum2.Checked Then
-                    Armor = Armor + (150 + (150 * NumericUpDown_arcaneUltimatum2.Value))
+                    Armor += 150 + (150 * NumericUpDown_arcaneUltimatum2.Value)
                 End If
             End If
             '
@@ -1078,16 +1078,16 @@ Public Class Form_main
             '
             If CheckBox_focus.Checked And CheckBox_stoneSkin.Checked Then
                 ' Memes (Fibonacci Squence - first 2 numbers)
-                Armor = Armor + 10 + (1 / Math.Sqrt(5)) * (Math.Pow((1 + Math.Sqrt(5)) / 2, NumericUpDown_stoneSkin.Value + 2) - Math.Pow((1 - Math.Sqrt(5)) / 2, NumericUpDown_stoneSkin.Value + 2)) * 10
+                Armor = Armor + 10 + 1 / Math.Sqrt(5) * (Math.Pow((1 + Math.Sqrt(5)) / 2, NumericUpDown_stoneSkin.Value + 2) - Math.Pow((1 - Math.Sqrt(5)) / 2, NumericUpDown_stoneSkin.Value + 2)) * 10
             End If
             '
             '   Dragon Keys
             '
             If CheckBox_dragonKeys.Checked Then
                 If RadioButton_bleedingKey.Checked Then
-                    Health = Health * 0.25
+                    Health *= 0.25
                 ElseIf RadioButton_decayingKey.Checked Then
-                    Shield = Shield * 0.25
+                    Shield *= 0.25
                 End If
             End If
             TextBox_warframeArmor.Text = Math.Floor(Armor)
@@ -1168,18 +1168,18 @@ Public Class Form_main
             Shield = FormatNumber(ComboBox_petShield)
             If NumericUpDown_companionStability.Enabled = True Then
                 'genetic stability
-                Health = Health * (1 + (NumericUpDown_companionStability.Value / 100))
+                Health *= 1 + (NumericUpDown_companionStability.Value / 100)
             End If
             If currentWarframe.Name = "Oberon" Then
                 'Oberon Passive
-                Armor = Armor + 75
+                Armor += 75
                 Health = Math.Floor(Health + (Health * 0.25))
                 Shield = Math.Floor(Shield + (Shield * 0.25))
             End If
             If CheckBox_companionPrimeCollar.Enabled And CheckBox_companionPrimeCollar.Checked Then
-                Armor = Armor + 100
-                Health = Health + 10
-                Shield = Shield + 10
+                Armor += 100
+                Health += 10
+                Shield += 10
             End If
             If CheckBox_companionSurvivability.Checked Then
                 If CheckBox_companionLinkArmor.Checked = True Then
