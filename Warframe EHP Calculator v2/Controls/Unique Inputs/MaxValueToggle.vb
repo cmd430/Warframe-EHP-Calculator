@@ -39,8 +39,8 @@ Public Class MaxValueToggle
 
     Public Event CheckedChanged As EventHandler
     Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
-        Dim parentControl As Control = Parent
-        If parentControl Is Nothing Then Return
+        Dim Parent As Control = ParentForm
+        If Parent Is Nothing Then Return
         If Checked Then
             For Each _control As Control In Parent.GetAll(GetType(RadioInput)).ToList
                 Dim control = DirectCast(_control, RadioInput)

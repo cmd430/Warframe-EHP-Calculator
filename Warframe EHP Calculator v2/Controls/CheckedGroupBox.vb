@@ -31,7 +31,8 @@ Public Class CheckedGroupBox
 #Region "Internal Functions / Events"
 
     Private Sub DoLayout()
-        For Each control As Control In Controls
+        For Each control As Control In Controls.Cast(Of Control).OrderBy(Function(c) c.TabIndex)
+            ' loop though in the tab order so we can keep our authored order when added to the flowlayout
             If Not control.Equals(HeaderCheckBox) And Not control.Equals(FlowLayout) Then
                 If Not DesignMode Then            'prevent vs crash in designer
                     control.Parent = FlowLayout   'set the control parent to the flowlayout
@@ -40,7 +41,7 @@ Public Class CheckedGroupBox
                 End If
                 TryAddCheckEventListener(control) 'for limits
             End If
-        Next
+        Next control
     End Sub
 
     Private Sub EnableDisableControls(ByVal sender As Object, ByVal e As EventArgs)

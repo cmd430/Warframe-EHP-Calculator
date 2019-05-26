@@ -84,23 +84,21 @@ Public Class Form_main
         '
         TabControl_main.TabPages.Remove(TabPage_development)
         '
+        '   Hide Tab Headers for Abilities and Arcane Helmets
+        '
+        Panel_abilitiesTabHider.Size = New Size(181, 109)
+        TabControl_abilities.Location = New Point(-4, -22)
+        TabControl_abilities.Size = New Size(189, 134)
+        Panel_arcaneHelmetsTabHider.Size = New Size(181, 109)
+        TabControl_arcaneHelmets.Location = New Point(-4, -22)
+        TabControl_arcaneHelmets.Size = New Size(189, 134)
+
+        '
         '   This should let the math not explode for non English OS's
         '   But just incase i also use the function `formatNumber` to be safe
         '
         Threading.Thread.CurrentThread.CurrentCulture = Globalization.CultureInfo.CreateSpecificCulture("en-US")
         Threading.Thread.CurrentThread.CurrentUICulture = Globalization.CultureInfo.CreateSpecificCulture("en-US")
-        '
-        '   Remove Tab Headers for Abilities
-        '
-        CustomTabControl_abilitys.Appearance = TabAppearance.FlatButtons
-        CustomTabControl_abilitys.ItemSize = New Size(0, 1)
-        CustomTabControl_abilitys.SizeMode = TabSizeMode.Fixed
-        '
-        '   Remove Tab Headers for Arcane Helmets
-        '
-        CustomTabControl_arcaneHelmets.Appearance = TabAppearance.FlatButtons
-        CustomTabControl_arcaneHelmets.ItemSize = New Size(0, 1)
-        CustomTabControl_arcaneHelmets.SizeMode = TabSizeMode.Fixed
         '
         '   Change Warframe select box to the default section
         '   also change all other combo boxs to index 0
@@ -113,32 +111,32 @@ Public Class Form_main
         '
         '   Abilities and Focus
         '
-        AddHandler CheckBox_abilities.CheckedChanged, AddressOf Enable_Disable_Section
-        AddHandler CheckBox_focus.CheckedChanged, AddressOf Enable_Disable_Section
+        AddHandler CheckedGroupBox_abilities.CheckedChanged, AddressOf Enable_Disable_Section
+        AddHandler CheckedGroupBox_focus.CheckedChanged, AddressOf Enable_Disable_Section
         '
         '   Mod Sections
         '
         AddHandler CheckedGroupBox_aura.CheckedChanged, AddressOf Enable_Disable_Section
-        AddHandler CheckBox_survivability.CheckedChanged, AddressOf Enable_Disable_Section
-        AddHandler CheckBox_power.CheckedChanged, AddressOf Enable_Disable_Section
-        AddHandler CheckBox_miscellaneous.CheckedChanged, AddressOf Enable_Disable_Section
+        AddHandler CheckedGroupBox_survivability.CheckedChanged, AddressOf Enable_Disable_Section
+        AddHandler CheckedGroupBox_powerStrength.CheckedChanged, AddressOf Enable_Disable_Section
+        AddHandler CheckedGroupBox_miscellaneous.CheckedChanged, AddressOf Enable_Disable_Section
         '
         '   Arcanes and Keys
         '
-        AddHandler CheckBox_arcanes.CheckedChanged, AddressOf Enable_Disable_Section
-        AddHandler CheckBox_dragonKeys.CheckedChanged, AddressOf Enable_Disable_Section
+        AddHandler CheckedGroupBox_arcanes.CheckedChanged, AddressOf Enable_Disable_Section
+        AddHandler CheckedGroupBox_dragonKeys.CheckedChanged, AddressOf Enable_Disable_Section
         '
         '   Special Effects
         '
-        AddHandler CheckBox_specialEffects.CheckedChanged, AddressOf Enable_Disable_Section
+        AddHandler CheckedGroupBox_specialEffects.CheckedChanged, AddressOf Enable_Disable_Section
         '
         '   Sortie Modifiers
         '
-        AddHandler CheckBox_sortieModifiers.CheckedChanged, AddressOf Enable_Disable_Section
+        AddHandler CheckedGroupBox_missionModifiers.CheckedChanged, AddressOf Enable_Disable_Section
         '
         '   Arcane Helmets
         '
-        AddHandler CheckBox_arcaneHelmets.CheckedChanged, AddressOf Enable_Disable_Section
+        AddHandler CheckedGroupBox_arcaneHelmets.CheckedChanged, AddressOf Enable_Disable_Section
         '
         '   Frame Type
         '
@@ -191,11 +189,12 @@ Public Class Form_main
         Catch ex As Exception
             'Cant check for updates
         End Try
+        Me.Size = New Size(FlowLayoutPanel1.Size.Width + 32, FlowLayoutPanel1.Size.Height + TableLayoutPanel1.Size.Height + 82)
     End Sub
 
     Public Sub Enable_Disable_Section(sender As Object, e As EventArgs)
         '
-        '   Enable and disable GroupBoxes/CustomTabControls based on its checkbox
+        '   Enable and disable GroupBoxes/TabControls based on its checkbox
         '
         Try
             sender.Parent.Controls(sender.tag).Enabled = sender.Checked
@@ -266,156 +265,100 @@ Public Class Form_main
                 ComboBox_companions.Items.RemoveAt(ComboBox_companions.Items.Count - 1)
             End If
             If currentWarframe.Name = "Harrow" Then
-                NumericUpDown_oversheilds.Maximum = 2400
+                CheckedInput_overshields.Maximum = 2400
+                If MaxValueToggle1.Checked Then
+                    CheckedInput_overshields.Value = CheckedInput_overshields.Maximum
+                End If
             Else
-                NumericUpDown_oversheilds.Maximum = 1200
+                CheckedInput_overshields.Maximum = 1200
+                If MaxValueToggle1.Checked Then
+                    CheckedInput_overshields.Value = CheckedInput_overshields.Maximum
+                End If
             End If
             '
             '  Enable/Disable Arcane Helmets selection
             '
             Select Case currentWarframe.Name
                 Case "Ash"
-                    CheckBox_arcaneHelmets.Enabled = True
-                    CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsAsh
+                    TabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsAsh
                 Case "Banshee"
-                    CheckBox_arcaneHelmets.Enabled = True
-                    CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsBanshee
+                    TabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsBanshee
                 Case "Ember"
-                    CheckBox_arcaneHelmets.Enabled = True
-                    CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsEmber
+                    TabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsEmber
                 Case "Excalibur"
-                    CheckBox_arcaneHelmets.Enabled = True
-                    CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsExcalibur
+                    TabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsExcalibur
                 Case "Frost"
-                    CheckBox_arcaneHelmets.Enabled = True
-                    CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsFrost
+                    TabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsFrost
                 Case "Loki"
-                    CheckBox_arcaneHelmets.Enabled = True
-                    CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsLoki
+                    TabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsLoki
                 Case "Mag"
-                    CheckBox_arcaneHelmets.Enabled = True
-                    CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsMag
+                    TabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsMag
                 Case "Nova"
-                    CheckBox_arcaneHelmets.Enabled = True
-                    CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsNova
+                    TabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsNova
                 Case "Nyx"
-                    CheckBox_arcaneHelmets.Enabled = True
-                    CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsNyx
+                    TabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsNyx
                 Case "Rhino"
-                    CheckBox_arcaneHelmets.Enabled = True
-                    CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsRhino
+                    TabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsRhino
                 Case "Saryn"
-                    CheckBox_arcaneHelmets.Enabled = True
-                    CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsSaryn
+                    TabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsSaryn
                 Case "Trinity"
-                    CheckBox_arcaneHelmets.Enabled = True
-                    CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsTrinity
+                    TabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsTrinity
                 Case "Vauban"
-                    CheckBox_arcaneHelmets.Enabled = True
-                    CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsVauban
+                    TabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsVauban
                 Case "Volt"
-                    CheckBox_arcaneHelmets.Enabled = True
-                    CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsVolt
+                    TabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsVolt
                 Case Else
-                    CheckBox_arcaneHelmets.Enabled = False
-                    CustomTabControl_arcaneHelmets.Enabled = False
-                    CustomTabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsDefault
+                    TabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsDefault
             End Select
             '
             '   Enable/Disable Abilities Selection
             '
             Select Case currentWarframe.Name
                 Case "Atlas"
-                    CheckBox_abilities.Enabled = True
-                    CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesAtlas
+                    TabControl_abilities.SelectedTab = TabPage_abilitiesAtlas
                 Case "Baruuk"
-                    CheckBox_abilities.Enabled = True
-                    CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesBaruuk
+                    TabControl_abilities.SelectedTab = TabPage_abilitiesBaruuk
                 Case "Chroma"
-                    CheckBox_abilities.Enabled = True
-                    CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesChroma
+                    TabControl_abilities.SelectedTab = TabPage_abilitiesChroma
                 Case "Excalibur"
-                    CheckBox_abilities.Enabled = True
-                    CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesExcalibur
+                    TabControl_abilities.SelectedTab = TabPage_abilitiesExcalibur
                 Case "Frost"
-                    CheckBox_abilities.Enabled = True
-                    CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesFrost
+                    TabControl_abilities.SelectedTab = TabPage_abilitiesFrost
                 Case "Gara"
-                    CheckBox_abilities.Enabled = True
-                    CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesGara
+                    TabControl_abilities.SelectedTab = TabPage_abilitiesGara
                 Case "Harrow"
-                    CheckBox_abilities.Enabled = True
-                    CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesHarrow
+                    TabControl_abilities.SelectedTab = TabPage_abilitiesHarrow
                 Case "Inaros"
-                    CheckBox_abilities.Enabled = True
-                    CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesInaros
+                    TabControl_abilities.SelectedTab = TabPage_abilitiesInaros
                 Case "Mesa"
-                    CheckBox_abilities.Enabled = True
-                    CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesMesa
+                    TabControl_abilities.SelectedTab = TabPage_abilitiesMesa
                 Case "Mirage"
-                    CheckBox_abilities.Enabled = True
-                    CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesMirage
+                    TabControl_abilities.SelectedTab = TabPage_abilitiesMirage
                 Case "Nekros"
-                    CheckBox_abilities.Enabled = True
-                    CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesNekros
+                    TabControl_abilities.SelectedTab = TabPage_abilitiesNekros
                 Case "Nezha"
-                    CheckBox_abilities.Enabled = True
-                    CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesNezha
+                    TabControl_abilities.SelectedTab = TabPage_abilitiesNezha
                 Case "Nidus"
-                    CheckBox_abilities.Enabled = True
-                    CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesNidus
+                    TabControl_abilities.SelectedTab = TabPage_abilitiesNidus
                 Case "Nova"
-                    CheckBox_abilities.Enabled = True
-                    CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesNova
+                    TabControl_abilities.SelectedTab = TabPage_abilitiesNova
                 Case "Oberon"
-                    CheckBox_abilities.Enabled = True
-                    CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesOberon
+                    TabControl_abilities.SelectedTab = TabPage_abilitiesOberon
                 Case "Octavia"
-                    CheckBox_abilities.Enabled = True
-                    CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesOctavia
+                    TabControl_abilities.SelectedTab = TabPage_abilitiesOctavia
                 Case "Rhino"
-                    CheckBox_abilities.Enabled = True
-                    CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesRhino
+                    TabControl_abilities.SelectedTab = TabPage_abilitiesRhino
                 Case "Titania"
-                    CheckBox_abilities.Enabled = True
-                    CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesTrinity
+                    TabControl_abilities.SelectedTab = TabPage_abilitiesTrinity
                 Case "Trinity"
-                    CheckBox_abilities.Enabled = True
-                    CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesTrinity
+                    TabControl_abilities.SelectedTab = TabPage_abilitiesTrinity
                 Case "Valkyr"
-                    CheckBox_abilities.Enabled = True
-                    CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesValkyr
+                    TabControl_abilities.SelectedTab = TabPage_abilitiesValkyr
                 Case "Wisp"
-                    CheckBox_abilities.Enabled = True
-                    CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesWisp
+                    TabControl_abilities.SelectedTab = TabPage_abilitiesWisp
                 Case Else
-                    CheckBox_abilities.Enabled = False
-                    CustomTabControl_abilitys.Enabled = False
-                    CustomTabControl_abilitys.SelectedTab = TabPage_abilitiesDefault
+                    TabControl_abilities.SelectedTab = TabPage_abilitiesDefault
             End Select
-            '
-            '   Enable Selections
-            '
-            CheckBox_survivability.Enabled = True
-            GroupBox_survivability.Enabled = CheckBox_survivability.Checked
-            CheckBox_miscellaneous.Enabled = True
-            GroupBox_miscellaneous.Enabled = CheckBox_miscellaneous.Checked
-            CheckBox_power.Enabled = True
-            GroupBox_power.Enabled = CheckBox_power.Checked
-            CheckBox_arcanes.Enabled = True
-            GroupBox_arcanes.Enabled = CheckBox_arcanes.Checked
-            CheckBox_dragonKeys.Enabled = True
-            GroupBox_dragonKeys.Enabled = CheckBox_dragonKeys.Checked
-            CheckBox_blocking.Enabled = True
-            GroupBox_blocking.Enabled = CheckBox_blocking.Checked
-            CheckBox_focus.Enabled = True
-            GroupBox_focus.Enabled = CheckBox_focus.Checked
-            CheckBox_specialEffects.Enabled = True
-            GroupBox_specialEffects.Enabled = CheckBox_specialEffects.Checked
-            CheckBox_sortieModifiers.Enabled = True
-            GroupBox_sortieModifiers.Enabled = CheckBox_sortieModifiers.Checked
-            CustomTabControl_abilitys.Enabled = CheckBox_abilities.Checked
-            CustomTabControl_arcaneHelmets.Enabled = CheckBox_arcaneHelmets.Checked
             '
             ' Stats
             '
@@ -453,13 +396,13 @@ Public Class Form_main
             '
             ' Overshields
             '
-            If CheckBox_specialEffects.Checked And CheckBox_overshields.Checked Then
-                shieldBonus += NumericUpDown_oversheilds.Value
+            If CheckedGroupBox_specialEffects.Checked And CheckedInput_overshields.Checked Then
+                shieldBonus += CheckedInput_overshields.Value
             End If
             '
             '   Arcane Helmets
             '
-            If CheckBox_arcaneHelmets.Checked Then
+            If CheckedGroupBox_arcaneHelmets.Checked Then
                 Select Case currentWarframe.Name
                     Case "Ash"
                         If RadioButton_locustHelmet.Checked Then
@@ -545,12 +488,12 @@ Public Class Form_main
                 End Select
             End If
             '
-            '   Sortie Modifiers
+            '   Mission Modifiers
             '
-            If CheckBox_sortieModifiers.Checked Then
-                If RadioButton_sortieCryogenicLeakage.Checked Then
+            If CheckedGroupBox_missionModifiers.Checked Then
+                If RadioButton_missionCryogenicLeakage.Checked Then
                     Shield -= baseShield * 0.5
-                ElseIf RadioButton_sortieFire.Checked Then
+                ElseIf RadioButton_missionFire.Checked Then
                     Health -= baseHealth * 0.5
                 End If
             End If
@@ -560,21 +503,21 @@ Public Class Form_main
             If CheckedGroupBox_aura.Checked Then
                 If RadioInput_physique.Checked Then
                     Dim physique As Decimal = 0.15 + (RadioInput_physique.Value * 0.15)
-                    If CheckBox_coactionDrift.Checked And CheckBox_miscellaneous.Checked Then
+                    If CheckedInput_coactionDrift.Checked And CheckedGroupBox_miscellaneous.Checked Then
                         '
                         '   Coaction Drift is Strange, it gives you a 0.15 boost to all Auras
                         '   and another 0.15 boost to your Aura ontop of the other for a total
                         '   of 0.15 * (1 + 0.15) + 0.15 = 0.3225 (values are for max rank mod)
                         '
-                        Dim coactionDrit As Decimal = 0.025 + (0.025 * NumericUpDown_coactionDrift.Value)
+                        Dim coactionDrit As Decimal = 0.025 + (0.025 * CheckedInput_coactionDrift.Value)
                         healthMultiplier += physique + (physique * (coactionDrit * (1 + coactionDrit) + coactionDrit))
                     Else
                         healthMultiplier += physique
                     End If
                 ElseIf RadioInput_standUnited.Checked Then
                     Dim standUnited As Decimal = 0.0425 + (RadioInput_standUnited.Value * 0.0425)
-                    If CheckBox_coactionDrift.Checked And CheckBox_miscellaneous.Checked Then
-                        Dim coactionDrit As Decimal = 0.025 + (0.025 * NumericUpDown_coactionDrift.Value)
+                    If CheckedInput_coactionDrift.Checked And CheckedGroupBox_miscellaneous.Checked Then
+                        Dim coactionDrit As Decimal = 0.025 + (0.025 * CheckedInput_coactionDrift.Value)
                         armorMultiplier += standUnited + (standUnited * (coactionDrit * (1 + coactionDrit) + coactionDrit))
                     Else
                         armorMultiplier += standUnited
@@ -588,10 +531,9 @@ Public Class Form_main
                     powerStrength += growingPower
                     ' End If
                 ElseIf RadioInput_powerDonation.Checked Then
-                    'Note: PowerLineStatus Donation does not seem to be affected by co-action drift at this time.
+                    'Note: Power Donation does not seem to be affected by co-action drift at this time.
                     Dim powerDonation As Decimal = basePowerStrength * (0.05 + (RadioInput_powerDonation.Value * 0.05))
                     powerStrength -= powerDonation
-                    ' End If
                 End If
             End If
             '
@@ -599,156 +541,156 @@ Public Class Form_main
             '
             If sender.Name = "CheckBox_umbraFiber" Then
                 If sender.Checked Then
-                    CheckBox_steelFiber.Checked = False
+                    CheckedInput_steelFiber.Checked = False
                 End If
             End If
             If sender.Name = "CheckBox_umbraVitality" Then
                 If sender.Checked Then
-                    CheckBox_vitality.Checked = False
+                    CheckedInput_vitality.Checked = False
                 End If
             End If
             If sender.Name = "CheckBox_umbraIntensify" Then
                 If sender.Checked Then
-                    CheckBox_intensify.Checked = False
+                    CheckedInput_intensify.Checked = False
                 End If
             End If
             If sender.Name = "CheckBox_steelFiber" Then
                 If sender.Checked Then
-                    CheckBox_umbraFiber.Checked = False
+                    CheckedInput_umbralFiber.Checked = False
                 End If
             End If
             If sender.Name = "CheckBox_vitality" Then
                 If sender.Checked Then
-                    CheckBox_umbraVitality.Checked = False
+                    CheckedInput_umbralVitality.Checked = False
                 End If
             End If
             If sender.Name = "CheckBox_intensify" Then
                 If sender.Checked Then
-                    CheckBox_umbraIntensify.Checked = False
+                    CheckedInput_umbralIntensify.Checked = False
                 End If
             End If
             '
             '   Armor / Health / Shield Mods
             '
-            If CheckBox_survivability.Checked Then
+            If CheckedGroupBox_survivability.Checked Then
                 'Armor
-                If CheckBox_steelFiber.Checked Then
-                    armorMultiplier += 0.1 + (NumericUpDown_steelFiber.Value * 0.1)
+                If CheckedInput_steelFiber.Checked Then
+                    armorMultiplier += 0.1 + (CheckedInput_steelFiber.Value * 0.1)
                 End If
-                If CheckBox_armoredAgility.Checked Then
-                    armorMultiplier += 0.075 + (NumericUpDown_armoredAgility.Value * 0.075)
+                If CheckedInput_armoredAgility.Checked Then
+                    armorMultiplier += 0.075 + (CheckedInput_armoredAgility.Value * 0.075)
                 End If
-                If CheckBox_healthConversion.Checked Then
-                    armorBonus = armorBonus + ((75 + (NumericUpDown_healthConversion.Value * 75)) * NumericUpDown_healthConversionStacks.Value)
+                If CheckedDualInput_healthConversion.Checked Then
+                    armorBonus = armorBonus + ((75 + (CheckedDualInput_healthConversion.Value * 75)) * CheckedDualInput_healthConversion.Secondary_Value)
                 End If
-                If CheckBox_gladiatorAegis.Checked Then
-                    armorMultiplier += 0.075 + (NumericUpDown_gladiatorAegis.Value * 0.075)
+                If CheckedInput_gladiatorAegis.Checked Then
+                    armorMultiplier += 0.075 + (CheckedInput_gladiatorAegis.Value * 0.075)
                 End If
                 'health
-                If CheckBox_vitality.Checked Then
-                    healthMultiplier += 0.4 + (NumericUpDown_vitality.Value * 0.4)
+                If CheckedInput_vitality.Checked Then
+                    healthMultiplier += 0.4 + (CheckedInput_vitality.Value * 0.4)
                 End If
-                If CheckBox_gladiatorResolve.Checked Then
-                    healthMultiplier += 0.3 + (NumericUpDown_gladiatorResolve.Value * 0.3)
+                If CheckedInput_gladiatorResolve.Checked Then
+                    healthMultiplier += 0.3 + (CheckedInput_gladiatorResolve.Value * 0.3)
                 End If
                 'quickthinking moved.
                 'gladiator finesse moved.
                 'shields
-                If CheckBox_redirection.Checked Then
-                    shieldMultiplier += 0.4 + (NumericUpDown_redirection.Value * 0.4)
+                If CheckedInput_redirection.Checked Then
+                    shieldMultiplier += 0.4 + (CheckedInput_redirection.Value * 0.4)
                 End If
-                If CheckBox_augurAccord.Checked Then
-                    shieldMultiplier += 0.3 + (NumericUpDown_augurAccord.Value * 0.3)
+                If CheckedInput_augurAccord.Checked Then
+                    shieldMultiplier += 0.3 + (CheckedInput_augurAccord.Value * 0.3)
                 End If
                 'dual
-                If CheckBox_vigor.Checked Then
-                    healthMultiplier += 0.2 + (NumericUpDown_vigor.Value * 0.2)
-                    shieldMultiplier += 0.2 + (NumericUpDown_vigor.Value * 0.2)
+                If CheckedInput_vigor.Checked Then
+                    healthMultiplier += 0.2 + (CheckedInput_vigor.Value * 0.2)
+                    shieldMultiplier += 0.2 + (CheckedInput_vigor.Value * 0.2)
                 End If
             End If
             '
             '   Energy Mods
             '
-            If CheckBox_miscellaneous.Checked Then
-                If CheckBox_enduranceDrift.Checked Then
-                    energyMultiplier += 0.025 + (NumericUpDown_enduranceDrift.Value * 0.025)
+            If CheckedGroupBox_miscellaneous.Checked Then
+                If CheckedInput_enduranceDrift.Checked Then
+                    energyMultiplier += 0.025 + (CheckedInput_enduranceDrift.Value * 0.025)
                 End If
-                If CheckBox_flow.Checked Then
-                    energyMultiplier += 0.25 + (NumericUpDown_flow.Value * 0.25)
+                If CheckedInput_flow.Checked Then
+                    energyMultiplier += 0.25 + (CheckedInput_flow.Value * 0.25)
                 End If
             End If
             '
             '   Power Strength Mods
             '
-            If CheckBox_power.Checked Then
-                If CheckBox_overextended.Checked Then
-                    powerStrength -= basePowerStrength * (0.1 + (NumericUpDown_overextended.Value * 0.1))
+            If CheckedGroupBox_powerStrength.Checked Then
+                If CheckedInput_overextended.Checked Then
+                    powerStrength -= basePowerStrength * (0.1 + (CheckedInput_overextended.Value * 0.1))
                 End If
-                If CheckBox_blindRage.Checked Then
-                    powerStrength += basePowerStrength * (0.09 + (NumericUpDown_blindRage.Value * 0.09))
+                If CheckedInput_blindRage.Checked Then
+                    powerStrength += basePowerStrength * (0.09 + (CheckedInput_blindRage.Value * 0.09))
                 End If
-                If CheckBox_energyConversion.Checked Then
-                    powerStrength += basePowerStrength * (0.08333333333 + (NumericUpDown_energyConversion.Value * 0.08333333333))
+                If CheckedInput_energyConversion.Checked Then
+                    powerStrength += basePowerStrength * (0.08333333333 + (CheckedInput_energyConversion.Value * 0.08333333333))
                 End If
-                If CheckBox_intensify.Checked Then
-                    powerStrength += basePowerStrength * (0.05 + (NumericUpDown_intensify.Value * 0.05))
+                If CheckedInput_intensify.Checked Then
+                    powerStrength += basePowerStrength * (0.05 + (CheckedInput_intensify.Value * 0.05))
                 End If
-                If CheckBox_transientFortitude.Checked Then
-                    powerStrength += basePowerStrength * (0.05 + (NumericUpDown_transientFortitude.Value * 0.05))
+                If CheckedInput_transientFortitude.Checked Then
+                    powerStrength += basePowerStrength * (0.05 + (CheckedInput_transientFortitude.Value * 0.05))
                 End If
-                If CheckBox_powerDrift.Checked Then
-                    powerStrength += basePowerStrength * (0.025 + (NumericUpDown_powerDrift.Value * 0.025))
+                If CheckedInput_powerDrift.Checked Then
+                    powerStrength += basePowerStrength * (0.025 + (CheckedInput_powerDrift.Value * 0.025))
                 End If
-                If CheckBox_augurSecrets.Checked Then
-                    powerStrength += basePowerStrength * (0.04 + (NumericUpDown_augurSecrets.Value * 0.04))
+                If CheckedInput_augurSecrets.Checked Then
+                    powerStrength += basePowerStrength * (0.04 + (CheckedInput_augurSecrets.Value * 0.04))
                 End If
             End If
             '
             '   Umbral Mods
             '
             Dim UmbralModifiy As Integer = 0
-            If CheckBox_survivability.Checked Then
-                If CheckBox_umbraFiber.Checked Then
+            If CheckedGroupBox_survivability.Checked Then
+                If CheckedInput_umbralFiber.Checked Then
                     UmbralModifiy += 1
                 End If
-                If CheckBox_umbraVitality.Checked Then
+                If CheckedInput_umbralVitality.Checked Then
                     UmbralModifiy += 1
                 End If
             End If
-            If CheckBox_power.Checked And CheckBox_umbraIntensify.Checked Then
+            If CheckedGroupBox_powerStrength.Checked And CheckedInput_umbralIntensify.Checked Then
                 UmbralModifiy += 1
             End If
-            If CheckBox_survivability.Checked Then
+            If CheckedGroupBox_survivability.Checked Then
                 'Armor
-                If CheckBox_umbraFiber.Checked Then
+                If CheckedInput_umbralFiber.Checked Then
                     If UmbralModifiy = 1 Then
-                        armorMultiplier += 0.1 + (NumericUpDown_umbraFiber.Value * 0.1)
+                        armorMultiplier += 0.1 + (CheckedInput_umbralFiber.Value * 0.1)
                     ElseIf UmbralModifiy = 2 Then
-                        armorMultiplier += 0.125 + (NumericUpDown_umbraFiber.Value * 0.125)
+                        armorMultiplier += 0.125 + (CheckedInput_umbralFiber.Value * 0.125)
                     ElseIf UmbralModifiy = 3 Then
-                        armorMultiplier += 0.175 + (NumericUpDown_umbraFiber.Value * 0.175)
+                        armorMultiplier += 0.175 + (CheckedInput_umbralFiber.Value * 0.175)
                     End If
                 End If
                 'Health
-                If CheckBox_umbraVitality.Checked Then
+                If CheckedInput_umbralVitality.Checked Then
                     If UmbralModifiy = 1 Then
-                        healthMultiplier += 0.4 + (NumericUpDown_umbraVitality.Value * 0.4)
+                        healthMultiplier += 0.4 + (CheckedInput_umbralVitality.Value * 0.4)
                     ElseIf UmbralModifiy = 2 Then
-                        healthMultiplier += 0.5 + (NumericUpDown_umbraVitality.Value * 0.5)
+                        healthMultiplier += 0.5 + (CheckedInput_umbralVitality.Value * 0.5)
                     ElseIf UmbralModifiy = 3 Then
-                        healthMultiplier += 0.7 + (NumericUpDown_umbraVitality.Value * 0.7)
+                        healthMultiplier += 0.7 + (CheckedInput_umbralVitality.Value * 0.7)
                     End If
                 End If
             End If
-            If CheckBox_power.Checked Then
+            If CheckedGroupBox_powerStrength.Checked Then
                 'Power
-                If CheckBox_umbraIntensify.Checked Then
+                If CheckedInput_umbralIntensify.Checked Then
                     If UmbralModifiy = 1 Then
-                        powerStrength += basePowerStrength * (0.04 + (NumericUpDown_umbraIntensify.Value * 0.04))
+                        powerStrength += basePowerStrength * (0.04 + (CheckedInput_umbralIntensify.Value * 0.04))
                     ElseIf UmbralModifiy = 2 Then
-                        powerStrength += basePowerStrength * (0.05 + (NumericUpDown_umbraIntensify.Value * 0.05))
+                        powerStrength += basePowerStrength * (0.05 + (CheckedInput_umbralIntensify.Value * 0.05))
                     ElseIf UmbralModifiy = 3 Then
-                        powerStrength += basePowerStrength * (0.06 + (NumericUpDown_umbraIntensify.Value * 0.06))
+                        powerStrength += basePowerStrength * (0.06 + (CheckedInput_umbralIntensify.Value * 0.06))
                     End If
 
                 End If
@@ -756,13 +698,13 @@ Public Class Form_main
             '
             '   Reactant Buff | Void Fissures
             '
-            If CheckBox_specialEffects.Checked And CheckBox_corruptedBuff.Checked Then
+            If CheckedGroupBox_specialEffects.Checked And CheckBox_corruptedBuff.Checked Then
                 powerStrength *= 2
             End If
             '
             '   Abilities
             '
-            If CheckBox_abilities.Checked Then
+            If CheckedGroupBox_abilities.Checked Then
                 Select Case currentWarframe.Name
                     Case "Atlas"
                         If CheckBox_rubble.Checked Then
@@ -802,7 +744,7 @@ Public Class Form_main
                                 shieldMultiplier += elementalWard
                             End If
                         End If
-                        If CheckBox_vexArmor.Checked And currentWarframe.Name = "Chroma" And CheckBox_abilities.Checked Then
+                        If CheckBox_vexArmor.Checked And currentWarframe.Name = "Chroma" And CheckedGroupBox_abilities.Checked Then
                             Dim vexArmor As Decimal = 3.5 * powerStrength
                             armorMultiplier += vexArmor
                         End If
@@ -951,23 +893,23 @@ Public Class Form_main
             '
             '   Blocking
             '
-            If CheckBox_blocking.Checked Then
+            If CheckedGroupBox_blocking.Checked Then
                 If ComboBox_blocking.SelectedIndex > 0 Then
                     Dim BlockSTR As String = "0." & ComboBox_blocking.SelectedItem.ToString.Replace("%", "")
                     damageReduction += (1 - damageReduction) * Convert.ToDecimal(BlockSTR, New Globalization.CultureInfo("en-US"))
                 End If
             End If
             '
-            '   Calculate Values (with special support for Vex armor, Quickthinking and Gladiator Finesse)
+            '   Calculate Values (with special support for Quickthinking and Gladiator Finesse)
             '
             Armor = (baseArmor * (1 + armorMultiplier)) + (Armor - baseArmor) + armorBonus
             Energy = Math.Ceiling(Energy) + Math.Floor((baseEnergy * energyMultiplier) + energyBonus)
-            If CheckBox_survivability.Checked Then
-                If CheckBox_quickThinking.Checked Then
-                    healthBonus += 0.4 * (1 + NumericUpDown_quickThinking.Value) * Energy
+            If CheckedGroupBox_survivability.Checked Then
+                If CheckedInput_quickThinking.Checked Then
+                    healthBonus += 0.4 * (1 + CheckedInput_quickThinking.Value) * Energy
                 End If
-                If CheckBox_gladiatorFinesse.Checked Then
-                    healthBonus += 0.1 * (1 + NumericUpDown_gladiatorFinesse.Value) * Energy
+                If CheckedInput_gladiatorFinesse.Checked Then
+                    healthBonus += 0.1 * (1 + CheckedInput_gladiatorFinesse.Value) * Energy
                 End If
             End If
             Health = (baseHealth * (1 + healthMultiplier)) + (Health - baseHealth) + healthBonus
@@ -975,58 +917,38 @@ Public Class Form_main
             '
             '   Arcanes
             '
-            If CheckBox_arcanes.Checked Then
-                '
-                '   Only allow 2 Arcanes max
-                '
-                Dim arcanes As New List(Of Control)
-                Dim activeArcanes As Int16 = 0
-                For Each arcane As CheckBox In FindControlRecursive(arcanes, GroupBox_arcanes, GetType(CheckBox))
-                    If arcane.Checked Then
-                        activeArcanes += 1
-                    End If
-                Next
-                If activeArcanes = 2 Then
-                    For Each arcane As CheckBox In FindControlRecursive(arcanes, GroupBox_arcanes, GetType(CheckBox))
-                        If Not arcane.Checked Then
-                            arcane.Enabled = False
-                        End If
-                    Next
-                Else
-                    For Each arcane As CheckBox In FindControlRecursive(arcanes, GroupBox_arcanes, GetType(CheckBox))
-                        arcane.Enabled = True
-                    Next
-                End If
+            If CheckedGroupBox_arcanes.Checked Then
                 '
                 '   Arcane Effects
                 '
-                If CheckBox_arcaneGuardian.Checked Then
-                    Armor += 150 + (150 * NumericUpDown_arcaneGuardian.Value)
+                If CheckedInput_arcaneGuardian.Checked Then
+                    Armor += 150 + (150 * CheckedInput_arcaneGuardian.Value)
                 End If
-                If CheckBox_arcaneGuardian2.Checked Then
-                    Armor += 150 + (150 * NumericUpDown_arcaneGuardian2.Value)
+                If CheckedInput_arcaneGuardian2.Checked Then
+                    Armor += 150 + (150 * CheckedInput_arcaneGuardian2.Value)
                 End If
-                If CheckBox_arcaneUltimatum.Checked Then
-                    Armor += 150 + (150 * NumericUpDown_arcaneUltimatum.Value)
+                If CheckedInput_arcaneUltimatum.Checked Then
+                    Armor += 150 + (150 * CheckedInput_arcaneUltimatum.Value)
                 End If
-                If CheckBox_arcaneUltimatum2.Checked Then
-                    Armor += 150 + (150 * NumericUpDown_arcaneUltimatum2.Value)
+                If CheckedInput_arcaneUltimatum2.Checked Then
+                    Armor += 150 + (150 * CheckedInput_arcaneUltimatum2.Value)
                 End If
             End If
             '
             '   Focus
             '
-            If CheckBox_focus.Checked And CheckBox_stoneSkin.Checked Then
+            If CheckedGroupBox_focus.Checked And CheckedInput_stoneSkin.Checked Then
                 ' Memes (Fibonacci Squence - first 2 numbers)
-                Armor = Armor + 10 + 1 / Math.Sqrt(5) * (Math.Pow((1 + Math.Sqrt(5)) / 2, NumericUpDown_stoneSkin.Value + 2) - Math.Pow((1 - Math.Sqrt(5)) / 2, NumericUpDown_stoneSkin.Value + 2)) * 10
+                Armor = Armor + 10 + 1 / Math.Sqrt(5) * (Math.Pow((1 + Math.Sqrt(5)) / 2, CheckedInput_stoneSkin.Value + 2) - Math.Pow((1 - Math.Sqrt(5)) / 2, CheckedInput_stoneSkin.Value + 2)) * 10
             End If
             '
             '   Dragon Keys
             '
-            If CheckBox_dragonKeys.Checked Then
-                If RadioButton_bleedingKey.Checked Then
+            If CheckedGroupBox_dragonKeys.Checked Then
+                If CheckBox_bleedingKey.Checked Then
                     Health *= 0.25
-                ElseIf RadioButton_decayingKey.Checked Then
+                End If
+                If CheckBox_decayingKey.Checked Then
                     Shield *= 0.25
                 End If
             End If
@@ -1044,29 +966,6 @@ Public Class Form_main
             Dim effectiveHealth As Integer = Math.Ceiling((Health / (1 - totalDamageReduction)) + (Shield / (1 - damageReduction)) + damageAbsorbstion)
             StatBox_warframeEHP.Value = effectiveHealth
         Else
-            '
-            '   Disable Selections
-            '
-            CheckBox_survivability.Enabled = False
-            GroupBox_survivability.Enabled = False
-            CheckBox_miscellaneous.Enabled = False
-            GroupBox_miscellaneous.Enabled = False
-            CheckBox_power.Enabled = False
-            GroupBox_power.Enabled = False
-            CheckBox_arcanes.Enabled = False
-            GroupBox_arcanes.Enabled = False
-            CheckBox_dragonKeys.Enabled = False
-            GroupBox_dragonKeys.Enabled = False
-            CheckBox_focus.Enabled = False
-            GroupBox_focus.Enabled = False
-            CheckBox_specialEffects.Enabled = False
-            GroupBox_specialEffects.Enabled = False
-            CheckBox_sortieModifiers.Enabled = False
-            GroupBox_sortieModifiers.Enabled = False
-            CheckBox_abilities.Enabled = False
-            CustomTabControl_abilitys.Enabled = False
-            CheckBox_arcaneHelmets.Enabled = False
-            CustomTabControl_arcaneHelmets.Enabled = False
             '
             '   No Warframe selected, display values should be set to default
             '

@@ -99,9 +99,6 @@
     <Compile Include="Controls\CheckedGroupBox.vb">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Controls\CustomTabControl.vb">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Controls\General Inputs\CheckedInput.Designer.vb">
       <DependentUpon>CheckedInput.vb</DependentUpon>
     </Compile>

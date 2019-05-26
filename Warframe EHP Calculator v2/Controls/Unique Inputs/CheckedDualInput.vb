@@ -18,7 +18,7 @@ Public Class CheckedDualInput
             Return CheckBox1.Text.TrimEnd(":")
         End Get
         Set(ByVal Value As String)
-            CheckBox1.Text = Value & ":"
+            CheckBox1.Text = Value.TrimEnd(":") & ":"
         End Set
     End Property
 
@@ -27,10 +27,10 @@ Public Class CheckedDualInput
     <Browsable(True)>
     Public Property Secondary_Text As String
         Get
-            Return Label1.Text
+            Return Label1.Text.TrimEnd(":")
         End Get
         Set(ByVal Value As String)
-            Label1.Text = Value & ":"
+            Label1.Text = Value.TrimEnd(":") & ":"
         End Set
     End Property
 
