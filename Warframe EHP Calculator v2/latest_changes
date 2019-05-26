@@ -1,2 +1,4 @@
-1905
-+ added wisp
+<VERSION HERE>
+* application requires dotnet runtime 4.7.2
+	https://dotnet.microsoft.com/download/dotnet-framework/net472
+* rewrote parts of the app for better performance and maintainability 

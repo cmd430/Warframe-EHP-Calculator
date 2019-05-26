@@ -3,6 +3,7 @@ Imports System.Reflection
 Imports System.Net
 Imports System.Runtime.InteropServices
 Imports System.Xml.Serialization
+Imports System.ComponentModel
 
 Module NativeMethods
     <DllImport("WinInet.dll", PreserveSig:=True, SetLastError:=True)>
@@ -51,6 +52,10 @@ Public Class Form_main
             Return responseText
         End Using
     End Function
+
+    Private Sub Main_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+        My.Settings.DefaultToMax = MaxValueToggle1.Checked
+    End Sub
 
     Private Sub Main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         assembly = Assembly.GetExecutingAssembly()
@@ -111,14 +116,9 @@ Public Class Form_main
         AddHandler CheckBox_abilities.CheckedChanged, AddressOf Enable_Disable_Section
         AddHandler CheckBox_focus.CheckedChanged, AddressOf Enable_Disable_Section
         '
-        '   Frame Type
-        '
-        AddHandler CheckBox_isPrime.CheckedChanged, AddressOf Toggle_Warframe_Type
-        AddHandler CheckBox_isUmbra.CheckedChanged, AddressOf Toggle_Warframe_Type
-        '
         '   Mod Sections
         '
-        AddHandler CheckBox_aura.CheckedChanged, AddressOf Enable_Disable_Section
+        AddHandler CheckedGroupBox_aura.CheckedChanged, AddressOf Enable_Disable_Section
         AddHandler CheckBox_survivability.CheckedChanged, AddressOf Enable_Disable_Section
         AddHandler CheckBox_power.CheckedChanged, AddressOf Enable_Disable_Section
         AddHandler CheckBox_miscellaneous.CheckedChanged, AddressOf Enable_Disable_Section
@@ -139,6 +139,10 @@ Public Class Form_main
         '   Arcane Helmets
         '
         AddHandler CheckBox_arcaneHelmets.CheckedChanged, AddressOf Enable_Disable_Section
+        '
+        '   Frame Type
+        '
+        AddHandler VariantSelection1.SelectedVariantChanged, AddressOf Warframe_Value_Changed
         '
         '   UI Update on warframe change - ability and helmet enabling
         '   and recalc EHP on stat change (pretty much everything is linked in here)
@@ -166,9 +170,6 @@ Public Class Form_main
             Else
                 AddHandler NumericUpDown.ValueChanged, AddressOf Companion_Value_Changed
             End If
-            If My.Settings.DefaultToMax = True Then
-                NumericUpDown.Value = NumericUpDown.Maximum
-            End If
         Next
         '
         '   Companions
@@ -178,7 +179,7 @@ Public Class Form_main
         '
         ' Set Deafult Values to Max
         '
-        CheckBox_DefaultToMax.Checked = My.Settings.DefaultToMax
+        MaxValueToggle1.Checked = My.Settings.DefaultToMax
         '
         ' Check for Update
         '
@@ -192,59 +193,14 @@ Public Class Form_main
         End Try
     End Sub
 
-    Private Sub CheckBox_DefaultToMax_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox_DefaultToMax.CheckedChanged
-        '
-        '   Set Value to Max Rank when this is set
-        '
-        Dim NumericUpDowns As New List(Of Control)
-        If CheckBox_DefaultToMax.Checked Then
-            My.Settings.DefaultToMax = True
-            For Each NumericUpDown As NumericUpDown In FindControlRecursive(NumericUpDowns, TabControl_main, GetType(NumericUpDown))
-                NumericUpDown.Value = NumericUpDown.Maximum
-            Next
-        Else
-            My.Settings.DefaultToMax = False
-            For Each NumericUpDown As NumericUpDown In FindControlRecursive(NumericUpDowns, TabControl_main, GetType(NumericUpDown))
-                NumericUpDown.Value = NumericUpDown.Minimum
-            Next
-        End If
-    End Sub
-
-    Public Sub Toggle_Warframe_Type(sender As Object, e As EventArgs)
-        '
-        '   Enable Swapping between Normal / Prime / Umbra Frames
-        '
-        '   Checks for State are inverted because .net gets the state info
-        '   from after the click (makes sense)
-        '
-        RemoveHandler CheckBox_isPrime.CheckedChanged, AddressOf Toggle_Warframe_Type
-        RemoveHandler CheckBox_isUmbra.CheckedChanged, AddressOf Toggle_Warframe_Type
-        Dim Prime As CheckBox = TabPage_warframe.Controls("CheckBox_isPrime")
-        Dim Umbra As CheckBox = TabPage_warframe.Controls("CheckBox_isUmbra")
-        If sender.Name = Prime.Name Then
-            If Not Prime.Checked Then
-                Prime.Checked = False
-            Else
-                Prime.Checked = True
-                Umbra.Checked = False
-            End If
-        ElseIf sender.Name = Umbra.Name Then
-            If Not Umbra.Checked Then
-                Umbra.Checked = False
-            Else
-                Umbra.Checked = True
-                Prime.Checked = False
-            End If
-        End If
-        AddHandler CheckBox_isPrime.CheckedChanged, AddressOf Toggle_Warframe_Type
-        AddHandler CheckBox_isUmbra.CheckedChanged, AddressOf Toggle_Warframe_Type
-    End Sub
-
     Public Sub Enable_Disable_Section(sender As Object, e As EventArgs)
         '
         '   Enable and disable GroupBoxes/CustomTabControls based on its checkbox
         '
-        sender.Parent.Controls(sender.tag).Enabled = sender.Checked
+        Try
+            sender.Parent.Controls(sender.tag).Enabled = sender.Checked
+        Catch ex As Exception
+        End Try
     End Sub
 
     Private Sub Warframe_Value_Changed(sender As Object, e As EventArgs)
@@ -287,15 +243,14 @@ Public Class Form_main
             '   Does the frame have a Prime or Umbra version ?
             '   if so we can enable to checkbox
             '
-            If hasPrime Then
-                CheckBox_isPrime.Enabled = True
+            If hasPrime And hasUmbra Then
+                VariantSelection1.AvailableVariants = "prime_umbra"
+            ElseIf hasPrime Then
+                VariantSelection1.AvailableVariants = "prime"
+            ElseIf hasUmbra Then
+                VariantSelection1.AvailableVariants = "umbra"
             Else
-                CheckBox_isPrime.Enabled = False
-            End If
-            If hasUmbra Then
-                CheckBox_isUmbra.Enabled = True
-            Else
-                CheckBox_isUmbra.Enabled = False
+                VariantSelection1.AvailableVariants = "base"
             End If
             '
             '   Special Modifiers
@@ -312,14 +267,8 @@ Public Class Form_main
             End If
             If currentWarframe.Name = "Harrow" Then
                 NumericUpDown_oversheilds.Maximum = 2400
-                If My.Settings.DefaultToMax = True Then
-                    NumericUpDown_oversheilds.Value = NumericUpDown_oversheilds.Maximum
-                End If
             Else
                 NumericUpDown_oversheilds.Maximum = 1200
-                If My.Settings.DefaultToMax = True Then
-                    NumericUpDown_oversheilds.Value = NumericUpDown_oversheilds.Maximum
-                End If
             End If
             '
             '  Enable/Disable Arcane Helmets selection
@@ -447,8 +396,6 @@ Public Class Form_main
             '
             '   Enable Selections
             '
-            CheckBox_aura.Enabled = True
-            GroupBox_aura.Enabled = CheckBox_aura.Checked
             CheckBox_survivability.Enabled = True
             GroupBox_survivability.Enabled = CheckBox_survivability.Checked
             CheckBox_miscellaneous.Enabled = True
@@ -472,14 +419,7 @@ Public Class Form_main
             '
             ' Stats
             '
-            Dim currentVariant As [Variant]
-            If CheckBox_isPrime.Checked And CheckBox_isPrime.Enabled Then
-                currentVariant = currentWarframe.Variants.Find(Function(var) var.Name = "prime")
-            ElseIf CheckBox_isUmbra.Checked And CheckBox_isUmbra.Enabled Then
-                currentVariant = currentWarframe.Variants.Find(Function(var) var.Name = "umbra")
-            Else
-                currentVariant = currentWarframe.Variants.Find(Function(var) var.Name = "base")
-            End If
+            Dim currentVariant As [Variant] = currentWarframe.Variants.Find(Function(var) var.Name = VariantSelection1.SelectedVariant)
             baseArmor = currentVariant.Armor
             baseHealth = currentVariant.Health
             baseShield = currentVariant.Shield
@@ -617,9 +557,9 @@ Public Class Form_main
             '
             '   Aura Mods
             '
-            If CheckBox_aura.Checked Then
-                If RadioButton_physique.Checked Then
-                    Dim physique As Decimal = 0.15 + (NumericUpDown_physique.Value * 0.15)
+            If CheckedGroupBox_aura.Checked Then
+                If RadioInput_physique.Checked Then
+                    Dim physique As Decimal = 0.15 + (RadioInput_physique.Value * 0.15)
                     If CheckBox_coactionDrift.Checked And CheckBox_miscellaneous.Checked Then
                         '
                         '   Coaction Drift is Strange, it gives you a 0.15 boost to all Auras
@@ -631,25 +571,25 @@ Public Class Form_main
                     Else
                         healthMultiplier += physique
                     End If
-                ElseIf RadioButton_standUnited.Checked Then
-                    Dim standUnited As Decimal = 0.0425 + (NumericUpDown_standUnited.Value * 0.0425)
+                ElseIf RadioInput_standUnited.Checked Then
+                    Dim standUnited As Decimal = 0.0425 + (RadioInput_standUnited.Value * 0.0425)
                     If CheckBox_coactionDrift.Checked And CheckBox_miscellaneous.Checked Then
                         Dim coactionDrit As Decimal = 0.025 + (0.025 * NumericUpDown_coactionDrift.Value)
                         armorMultiplier += standUnited + (standUnited * (coactionDrit * (1 + coactionDrit) + coactionDrit))
                     Else
                         armorMultiplier += standUnited
                     End If
-                ElseIf RadioButton_growingPower.Checked Then
-                    Dim growingPower As Decimal = basePowerStrength * (0.04166666667 + (NumericUpDown_growingPower.Value * 0.04166666667))
+                ElseIf RadioInput_growingPower.Checked Then
+                    Dim growingPower As Decimal = basePowerStrength * (0.04166666667 + (RadioInput_growingPower.Value * 0.04166666667))
                     'If CheckBox_coactionDrift.Checked And CheckBox_miscellaneous.Checked Then
                     'Dim coactionDrit As Decimal = 0.025 + (0.025 * NumericUpDown_coactionDrift.Value)
                     'powerStrength = powerStrength + (growingPower + (growingPower * (coactionDrit * (1 + coactionDrit) + coactionDrit)))
                     'Else
                     powerStrength += growingPower
                     ' End If
-                ElseIf RadioButton_powerDonation.Checked Then
+                ElseIf RadioInput_powerDonation.Checked Then
                     'Note: PowerLineStatus Donation does not seem to be affected by co-action drift at this time.
-                    Dim powerDonation As Decimal = basePowerStrength * (0.05 + (NumericUpDown_powerDonation.Value * 0.05))
+                    Dim powerDonation As Decimal = basePowerStrength * (0.05 + (RadioInput_powerDonation.Value * 0.05))
                     powerStrength -= powerDonation
                     ' End If
                 End If
@@ -1090,11 +1030,11 @@ Public Class Form_main
                     Shield *= 0.25
                 End If
             End If
-            TextBox_warframeArmor.Text = Math.Floor(Armor)
-            TextBox_warframeHealth.Text = Math.Floor(Health)
-            TextBox_warframeShield.Text = Math.Floor(Shield)
-            TextBox_warframeEnergy.Text = Math.Floor(Energy)
-            TextBox_warframePowerStrength.Text = Math.Floor(powerStrength * 100)
+            StatBox_warframeArmor.Value = Math.Floor(Armor)
+            StatBox_warframeHealth.Value = Math.Floor(Health)
+            StatBox_warframeShield.Value = Math.Floor(Shield)
+            StatBox_warframeEnergy.Value = Math.Floor(Energy)
+            StatBox_warframePowerStrength.Value = Math.Floor(powerStrength * 100)
             '
             '   Calculate EHP
             '
@@ -1102,13 +1042,11 @@ Public Class Form_main
             Dim totalDamageReduction As Decimal = damageReductionArmor + ((1 - damageReductionArmor) * damageReduction)
             'Dim effectiveHealth As Integer = Math.Ceiling((Health / (1 - totalDamageReduction)) + (Shield + damageAbsorbstion))
             Dim effectiveHealth As Integer = Math.Ceiling((Health / (1 - totalDamageReduction)) + (Shield / (1 - damageReduction)) + damageAbsorbstion)
-            TextBox_warframeEHP.Text = effectiveHealth
+            StatBox_warframeEHP.Value = effectiveHealth
         Else
             '
             '   Disable Selections
             '
-            CheckBox_aura.Enabled = False
-            GroupBox_aura.Enabled = False
             CheckBox_survivability.Enabled = False
             GroupBox_survivability.Enabled = False
             CheckBox_miscellaneous.Enabled = False
@@ -1132,12 +1070,12 @@ Public Class Form_main
             '
             '   No Warframe selected, display values should be set to default
             '
-            TextBox_warframeArmor.Text = "-"
-            TextBox_warframeHealth.Text = "-"
-            TextBox_warframeShield.Text = "-"
-            TextBox_warframeEnergy.Text = "-"
-            TextBox_warframePowerStrength.Text = "-"
-            TextBox_warframeEHP.Text = "-"
+            StatBox_warframeArmor.Value = Nothing
+            StatBox_warframeHealth.Value = Nothing
+            StatBox_warframeShield.Value = Nothing
+            StatBox_warframeEnergy.Value = Nothing
+            StatBox_warframePowerStrength.Value = Nothing
+            StatBox_warframeEHP.Value = Nothing
         End If
         Companion_Value_Changed(sender, e)
     End Sub
@@ -1183,13 +1121,13 @@ Public Class Form_main
             End If
             If CheckBox_companionSurvivability.Checked Then
                 If CheckBox_companionLinkArmor.Checked = True Then
-                    Armor = Math.Floor(Armor + (FormatNumber(TextBox_warframeArmor) * ((NumericUpDown_companionLinkArmor.Value + 1) * 0.1)))
+                    Armor = Math.Floor(Armor + (StatBox_warframeArmor.Value * ((NumericUpDown_companionLinkArmor.Value + 1) * 0.1)))
                 End If
                 If CheckBox_companionLinkHealth.Checked = True Then
-                    Health = Math.Floor(Health + (FormatNumber(TextBox_warframeHealth) * ((NumericUpDown_companionLinkHealth.Value + 1) * 0.15)))
+                    Health = Math.Floor(Health + (StatBox_warframeHealth.Value * ((NumericUpDown_companionLinkHealth.Value + 1) * 0.15)))
                 End If
                 If CheckBox_companionLinkShield.Checked = True Then
-                    Shield = Math.Floor(Shield + (FormatNumber(TextBox_warframeShield) * ((NumericUpDown_companionLinkShield.Value + 1) * 0.1)))
+                    Shield = Math.Floor(Shield + (StatBox_warframeShield.Value * ((NumericUpDown_companionLinkShield.Value + 1) * 0.1)))
                 End If
             End If
             Dim damageReductionArmor = Armor / (300 + Armor)
