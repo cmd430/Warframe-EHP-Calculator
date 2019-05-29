@@ -27,3 +27,4 @@ D:\Visual Studio\Warframe EHP Calculator\Warframe EHP Calculator v2\obj\Debug\Wa
 D:\Visual Studio\Warframe EHP Calculator\Warframe EHP Calculator v2\obj\Debug\Warframe EHP Calculator v2.exe
 D:\Visual Studio\Warframe EHP Calculator\Warframe EHP Calculator v2\obj\Debug\Warframe EHP Calculator v2.xml
 D:\Visual Studio\Warframe EHP Calculator\Warframe EHP Calculator v2\obj\Debug\Warframe EHP Calculator v2.pdb
+D:\Visual Studio\Warframe EHP Calculator\Warframe EHP Calculator v2\obj\Debug\Warframe EHP Calculator v2.vbprojAssemblyReference.cache

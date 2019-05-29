@@ -84,15 +84,26 @@ Public Class Form_main
         '
         TabControl_main.TabPages.Remove(TabPage_development)
         '
-        '   Hide Tab Headers for Abilities and Arcane Helmets
+        '   Abilities and Arcane Helmets
         '
-        Panel_abilitiesTabHider.Size = New Size(181, 109)
-        TabControl_abilities.Location = New Point(-4, -22)
-        TabControl_abilities.Size = New Size(189, 134)
-        Panel_arcaneHelmetsTabHider.Size = New Size(181, 109)
-        TabControl_arcaneHelmets.Location = New Point(-4, -22)
-        TabControl_arcaneHelmets.Size = New Size(189, 134)
-
+        For Each Tab As TabPage In TabControl_abilities.TabPages
+            For Each Flow As Control In Tab.Controls
+                If TypeOf Flow Is FlowLayoutPanel Then
+                    Flow.Visible = False
+                    Flow.Parent = CheckedGroupBox_abilities
+                End If
+            Next
+        Next
+        FlowLayoutPanel_defaultAbilities.Visible = True
+        For Each Tab As TabPage In TabControl_arcaneHelmets.TabPages
+            For Each Flow As Control In Tab.Controls
+                If TypeOf Flow Is FlowLayoutPanel Then
+                    Flow.Visible = False
+                    Flow.Parent = CheckedGroupBox_arcaneHelmets
+                End If
+            Next
+        Next
+        FlowLayoutPanel_defaultArcaneHelmets.Visible = True
         '
         '   This should let the math not explode for non English OS's
         '   But just incase i also use the function `formatNumber` to be safe
@@ -189,7 +200,7 @@ Public Class Form_main
         Catch ex As Exception
             'Cant check for updates
         End Try
-        Me.Size = New Size(FlowLayoutPanel1.Size.Width + 32, FlowLayoutPanel1.Size.Height + TableLayoutPanel1.Size.Height + 82)
+        Me.Size = New Size(FlowLayoutPanel_warframeMainLayout.Size.Width + 32, FlowLayoutPanel_warframeMainLayout.Size.Height + TableLayoutPanel_warframeTopLayout.Size.Height + 82)
     End Sub
 
     Public Sub Enable_Disable_Section(sender As Object, e As EventArgs)
@@ -278,87 +289,35 @@ Public Class Form_main
             '
             '  Enable/Disable Arcane Helmets selection
             '
-            Select Case currentWarframe.Name
-                Case "Ash"
-                    TabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsAsh
-                Case "Banshee"
-                    TabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsBanshee
-                Case "Ember"
-                    TabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsEmber
-                Case "Excalibur"
-                    TabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsExcalibur
-                Case "Frost"
-                    TabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsFrost
-                Case "Loki"
-                    TabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsLoki
-                Case "Mag"
-                    TabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsMag
-                Case "Nova"
-                    TabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsNova
-                Case "Nyx"
-                    TabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsNyx
-                Case "Rhino"
-                    TabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsRhino
-                Case "Saryn"
-                    TabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsSaryn
-                Case "Trinity"
-                    TabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsTrinity
-                Case "Vauban"
-                    TabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsVauban
-                Case "Volt"
-                    TabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsVolt
-                Case Else
-                    TabControl_arcaneHelmets.SelectedTab = TabPage_arcaneHelmetsDefault
-            End Select
+            FlowLayoutPanel_defaultArcaneHelmets.Visible = True
+            For Each Flow As Control In CheckedGroupBox_arcaneHelmets.FlowLayout.Controls
+                If TypeOf Flow Is FlowLayoutPanel Then
+                    If Not Flow.Name.Contains("default") Then
+                        If Not Flow.Name.Contains(currentWarframe.Name.ToLower) Then
+                            Flow.Visible = False
+                        Else
+                            Flow.Visible = True
+                            FlowLayoutPanel_defaultArcaneHelmets.Visible = False
+                        End If
+                    End If
+                End If
+            Next
             '
             '   Enable/Disable Abilities Selection
             '
-            Select Case currentWarframe.Name
-                Case "Atlas"
-                    TabControl_abilities.SelectedTab = TabPage_abilitiesAtlas
-                Case "Baruuk"
-                    TabControl_abilities.SelectedTab = TabPage_abilitiesBaruuk
-                Case "Chroma"
-                    TabControl_abilities.SelectedTab = TabPage_abilitiesChroma
-                Case "Excalibur"
-                    TabControl_abilities.SelectedTab = TabPage_abilitiesExcalibur
-                Case "Frost"
-                    TabControl_abilities.SelectedTab = TabPage_abilitiesFrost
-                Case "Gara"
-                    TabControl_abilities.SelectedTab = TabPage_abilitiesGara
-                Case "Harrow"
-                    TabControl_abilities.SelectedTab = TabPage_abilitiesHarrow
-                Case "Inaros"
-                    TabControl_abilities.SelectedTab = TabPage_abilitiesInaros
-                Case "Mesa"
-                    TabControl_abilities.SelectedTab = TabPage_abilitiesMesa
-                Case "Mirage"
-                    TabControl_abilities.SelectedTab = TabPage_abilitiesMirage
-                Case "Nekros"
-                    TabControl_abilities.SelectedTab = TabPage_abilitiesNekros
-                Case "Nezha"
-                    TabControl_abilities.SelectedTab = TabPage_abilitiesNezha
-                Case "Nidus"
-                    TabControl_abilities.SelectedTab = TabPage_abilitiesNidus
-                Case "Nova"
-                    TabControl_abilities.SelectedTab = TabPage_abilitiesNova
-                Case "Oberon"
-                    TabControl_abilities.SelectedTab = TabPage_abilitiesOberon
-                Case "Octavia"
-                    TabControl_abilities.SelectedTab = TabPage_abilitiesOctavia
-                Case "Rhino"
-                    TabControl_abilities.SelectedTab = TabPage_abilitiesRhino
-                Case "Titania"
-                    TabControl_abilities.SelectedTab = TabPage_abilitiesTrinity
-                Case "Trinity"
-                    TabControl_abilities.SelectedTab = TabPage_abilitiesTrinity
-                Case "Valkyr"
-                    TabControl_abilities.SelectedTab = TabPage_abilitiesValkyr
-                Case "Wisp"
-                    TabControl_abilities.SelectedTab = TabPage_abilitiesWisp
-                Case Else
-                    TabControl_abilities.SelectedTab = TabPage_abilitiesDefault
-            End Select
+            FlowLayoutPanel_defaultAbilities.Visible = True
+            For Each Flow As Control In CheckedGroupBox_abilities.FlowLayout.Controls
+                If TypeOf Flow Is FlowLayoutPanel Then
+                    If Not Flow.Name.Contains("default") Then
+                        If Not Flow.Name.Contains(currentWarframe.Name.ToLower) Then
+                            Flow.Visible = False
+                        Else
+                            Flow.Visible = True
+                            FlowLayoutPanel_defaultAbilities.Visible = False
+                        End If
+                    End If
+                End If
+            Next
             '
             ' Stats
             '
@@ -707,8 +666,8 @@ Public Class Form_main
             If CheckedGroupBox_abilities.Checked Then
                 Select Case currentWarframe.Name
                     Case "Atlas"
-                        If CheckBox_rubble.Checked Then
-                            Dim rubble As Decimal = NumericUpDown_rubble.Value
+                        If CheckedInput_rubble.Checked Then
+                            Dim rubble As Decimal = CheckedInput_rubble.Value
                             armorBonus += rubble
                         End If
                     Case "Baruuk"
@@ -975,6 +934,22 @@ Public Class Form_main
             StatBox_warframeEnergy.Value = Nothing
             StatBox_warframePowerStrength.Value = Nothing
             StatBox_warframeEHP.Value = Nothing
+            FlowLayoutPanel_defaultArcaneHelmets.Visible = True
+            For Each Flow As Control In CheckedGroupBox_arcaneHelmets.FlowLayout.Controls
+                If TypeOf Flow Is FlowLayoutPanel Then
+                    If Not Flow.Name.Contains("default") Then
+                        Flow.Visible = False
+                    End If
+                End If
+            Next
+            FlowLayoutPanel_defaultAbilities.Visible = True
+            For Each Flow As Control In CheckedGroupBox_abilities.FlowLayout.Controls
+                If TypeOf Flow Is FlowLayoutPanel Then
+                    If Not Flow.Name.Contains("default") Then
+                        Flow.Visible = False
+                    End If
+                End If
+            Next
         End If
         Companion_Value_Changed(sender, e)
     End Sub
