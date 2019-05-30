@@ -671,7 +671,7 @@ Public Class Form_main
                             armorBonus += rubble
                         End If
                     Case "Baruuk"
-                        Dim restraint As Decimal = 0.5 * (1 - (NumericUpDown_restraint.Value / 100))
+                        Dim restraint As Decimal = 0.5 * (1 - (CheckedInput_restraint.Value / 100))
                         Dim desolateHands As Decimal = 0.8 * powerStrength
                         If desolateHands > 0.9 Then
                             desolateHands = 0.9
@@ -680,7 +680,7 @@ Public Class Form_main
                         If sereneStorm > 0.4 Then
                             sereneStorm = 0.4
                         End If
-                        If CheckBox_restraint.Checked Then
+                        If CheckedInput_restraint.Checked Then
                             damageReduction += (1 - damageReduction) * restraint
                         End If
                         If CheckBox_desolateHands.Checked Then
@@ -713,8 +713,8 @@ Public Class Form_main
                             damageReduction += exaltedBlade
                         End If
                     Case "Frost"
-                        If CheckBox_icyAvalanche.Checked Then
-                            Dim icyAvalance As Decimal = 0.6 * powerStrength * NumericUpDown_icyAvalanche.Value
+                        If CheckedInput_icyAvalanche.Checked Then
+                            Dim icyAvalance As Decimal = 0.6 * powerStrength * CheckedInput_icyAvalanche.Value
                             damageAbsorbstion += icyAvalance
                         End If
                     Case "Gara"
@@ -734,8 +734,8 @@ Public Class Form_main
                             damageReduction += wardingThurible
                         End If
                     Case "Inaros"
-                        If CheckBox_scarabSwarm.Checked Then
-                            Dim scarabSwarm As Decimal = 2 * NumericUpDown_scarabSwarm.Value
+                        If CheckedInput_scarabSwarm.Checked Then
+                            Dim scarabSwarm As Decimal = 2 * CheckedInput_scarabSwarm.Value
                             armorBonus += scarabSwarm
                         End If
                     Case "Mesa"
@@ -758,8 +758,8 @@ Public Class Form_main
                             damageReduction += eclipse
                         End If
                     Case "Nekros"
-                        If CheckBox_shieldOfShadows.Checked Then
-                            Dim shieldOfShadows As Decimal = 0.06 * powerStrength * NumericUpDown_shieldOfShadows.Value
+                        If CheckedInput_shieldOfShadows.Checked Then
+                            Dim shieldOfShadows As Decimal = 0.06 * powerStrength * CheckedInput_shieldOfShadows.Value
                             If shieldOfShadows > 0.9 Then
                                 shieldOfShadows = 0.9
                             End If
@@ -771,10 +771,6 @@ Public Class Form_main
                             damageReduction += wardingHalo
                         End If
                     Case "Nidus"
-                        If CheckBox_mutationStacks.Checked Then
-                            Dim validStacks As Decimal = Math.Floor(NumericUpDown_mutationStacks.Value / 5)
-                            armorBonus += 20 * validStacks
-                        End If
                         If CheckBox_parasiticLink.Checked Then
                             Dim parasiticLink As Decimal = 0.5 * powerStrength
                             If parasiticLink > 0.9 Then
@@ -783,8 +779,8 @@ Public Class Form_main
                             damageReduction += parasiticLink
                         End If
                     Case "Nova"
-                        If CheckBox_nullStar.Checked Then
-                            Dim particles As Decimal = NumericUpDown_nullStar.Value
+                        If CheckedInput_nullStar.Checked Then
+                            Dim particles As Decimal = CheckedInput_nullStar.Value
                             Dim nullStar As Decimal = 0.05 * particles
                             If nullStar > 0.9 Then
                                 nullStar = 0.9
@@ -806,19 +802,19 @@ Public Class Form_main
                             armorMultiplier += metronome
                         End If
                     Case "Rhino"
-                        If CheckBox_ironcladCharge.Checked Then
-                            Dim ironcladCharge As Decimal = 0.5 * powerStrength * NumericUpDown_ironcladCharge.Value
+                        If CheckedInput_ironcladCharge.Checked Then
+                            Dim ironcladCharge As Decimal = 0.5 * powerStrength * CheckedInput_ironcladCharge.Value
                             armorMultiplier += ironcladCharge
                         End If
-                        If CheckBox_ironSkin.Checked Then
+                        If CheckedInput_ironSkin.Checked Then
                             Dim ironSkinArmor As Decimal = 2.5 * Armor * (1 + armorMultiplier)
                             Dim ironSkinHealth As Decimal = 1200
-                            Dim ironSkin As Decimal = ((ironSkinHealth + ironSkinArmor) * powerStrength) + NumericUpDown_ironSkin.Value
+                            Dim ironSkin As Decimal = ((ironSkinHealth + ironSkinArmor) * powerStrength) + CheckedInput_ironSkin.Value
                             damageAbsorbstion += ironSkin
                         End If
                     Case "Titania"
-                        If CheckBox_thorns.Checked Then
-                            Dim thorns As Decimal = Math.Floor(NumericUpDown_thorns.Value / 5) * 0.05
+                        If CheckedInput_thorns.Checked Then
+                            Dim thorns As Decimal = Math.Floor(CheckedInput_thorns.Value / 5) * 0.05
                             damageReduction += thorns
                         End If
                     Case "Trinity"
@@ -911,11 +907,12 @@ Public Class Form_main
                     Shield *= 0.25
                 End If
             End If
-            StatBox_warframeArmor.Value = Math.Floor(Armor)
-            StatBox_warframeHealth.Value = Math.Floor(Health)
-            StatBox_warframeShield.Value = Math.Floor(Shield)
-            StatBox_warframeEnergy.Value = Math.Floor(Energy)
-            StatBox_warframePowerStrength.Value = Math.Floor(powerStrength * 100)
+            StatBox_warframeArmor.Value = Armor
+            StatBox_warframeHealth.Value = Health
+            StatBox_warframeShield.Value = Shield
+            StatBox_warframeEnergy.Value = Energy
+            StatBox_warframePowerStrength.Value = powerStrength * 100
+            StatBox_damageReduction.Value = damageReduction * 100
             '
             '   Calculate EHP
             '
@@ -934,6 +931,7 @@ Public Class Form_main
             StatBox_warframeEnergy.Value = Nothing
             StatBox_warframePowerStrength.Value = Nothing
             StatBox_warframeEHP.Value = Nothing
+            StatBox_damageReduction.Value = Nothing
             FlowLayoutPanel_defaultArcaneHelmets.Visible = True
             For Each Flow As Control In CheckedGroupBox_arcaneHelmets.FlowLayout.Controls
                 If TypeOf Flow Is FlowLayoutPanel Then
@@ -960,6 +958,7 @@ Public Class Form_main
         Dim Armor As Decimal = 0.0
         Dim Health As Decimal = 0.0
         Dim Shield As Decimal = 0.0
+        Dim DamageReduction As Decimal = 0.0
         ComboBox_petArmor.SelectedIndex = ComboBox_companions.SelectedIndex
         ComboBox_petHealth.SelectedIndex = ComboBox_companions.SelectedIndex
         ComboBox_petShield.SelectedIndex = ComboBox_companions.SelectedIndex
@@ -978,15 +977,18 @@ Public Class Form_main
             Armor = FormatNumber(ComboBox_petArmor)
             Health = FormatNumber(ComboBox_petHealth)
             Shield = FormatNumber(ComboBox_petShield)
+            DamageReduction = StatBox_damageReduction.Value / 100
             If NumericUpDown_companionStability.Enabled = True Then
                 'genetic stability
                 Health *= 1 + (NumericUpDown_companionStability.Value / 100)
             End If
-            If currentWarframe.Name = "Oberon" Then
-                'Oberon Passive
-                Armor += 75
-                Health = Math.Floor(Health + (Health * 0.25))
-                Shield = Math.Floor(Shield + (Shield * 0.25))
+            If currentWarframe IsNot Nothing Then
+                If currentWarframe.Name = "Oberon" Then
+                    'Oberon Passive
+                    Armor += 75
+                    Health = Math.Floor(Health + (Health * 0.25))
+                    Shield = Math.Floor(Shield + (Shield * 0.25))
+                End If
             End If
             If CheckBox_companionPrimeCollar.Enabled And CheckBox_companionPrimeCollar.Checked Then
                 Armor += 100
@@ -998,14 +1000,15 @@ Public Class Form_main
                     Armor = Math.Floor(Armor + (StatBox_warframeArmor.Value * ((NumericUpDown_companionLinkArmor.Value + 1) * 0.1)))
                 End If
                 If CheckBox_companionLinkHealth.Checked = True Then
-                    Health = Math.Floor(Health + (StatBox_warframeHealth.Value * ((NumericUpDown_companionLinkHealth.Value + 1) * 0.15)))
-                End If
+                        Health = Math.Floor(Health + (StatBox_warframeHealth.Value * ((NumericUpDown_companionLinkHealth.Value + 1) * 0.15)))
+                    End If
                 If CheckBox_companionLinkShield.Checked = True Then
                     Shield = Math.Floor(Shield + (StatBox_warframeShield.Value * ((NumericUpDown_companionLinkShield.Value + 1) * 0.1)))
                 End If
             End If
             Dim damageReductionArmor = Armor / (300 + Armor)
-            Dim effectiveHealth = (Health / (1 - damageReductionArmor)) + Shield
+            Dim totalDamageReduction = damageReductionArmor + ((1 - damageReductionArmor) * DamageReduction)
+            Dim effectiveHealth = (Health / (1 - totalDamageReduction)) + Shield
             TextBox_companionEHP.Text = Math.Ceiling(effectiveHealth)
             TextBox_companionArmor.Text = Math.Floor(Armor)
             TextBox_companionHealth.Text = Math.Floor(Health)

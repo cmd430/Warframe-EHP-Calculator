@@ -212,7 +212,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\Debug\Warframe EHP Calculator v2.exe" />
-    <EmbeddedResource Include="latest_changes" />
+    <None Include="latest_changes" />
     <EmbeddedResource Include="version" />
     <EmbeddedResource Include="Data\WarframeRankMultipliers.xml" />
     <EmbeddedResource Include="Data\Warframes.xml" />
