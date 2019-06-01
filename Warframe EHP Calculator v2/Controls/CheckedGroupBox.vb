@@ -89,7 +89,7 @@ Public Class CheckedGroupBox
 
     Public Event CheckedChanged As EventHandler
     Private Sub HeaderCheckBox_CheckedChanged(sender As Object, e As EventArgs) Handles HeaderCheckBox.CheckedChanged
-        
+        RaiseEvent CheckedChanged(sender, e)
     End Sub
 
 #End Region

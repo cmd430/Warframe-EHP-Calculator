@@ -39,7 +39,8 @@ Public Class MaxValueToggle
 
     Public Event CheckedChanged As EventHandler
     Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
-        Dim Parent As Control = ParentForm
+        'Dim Parent As Control = ParentForm
+        Dim Parent As Control = Me.Parent.Parent
         If Parent Is Nothing Then Return
         If Checked Then
             For Each _control As Control In Parent.GetAll(GetType(RadioInput)).ToList
@@ -55,6 +56,10 @@ Public Class MaxValueToggle
                 control.Value = control.Maximum
                 control.Secondary_Value = control.Secondary_Maximum
             Next
+            For Each _control As Control In Parent.GetAll(GetType(NumericInput)).ToList
+                Dim control = DirectCast(_control, NumericInput)
+                control.Value = control.Maximum
+            Next
         Else
             For Each _control As Control In Parent.GetAll(GetType(RadioInput)).ToList
                 Dim control = DirectCast(_control, RadioInput)
@@ -68,6 +73,10 @@ Public Class MaxValueToggle
                 Dim control = DirectCast(_control, CheckedDualInput)
                 control.Value = control.Minimum
                 control.Secondary_Value = control.Secondary_Minimum
+            Next
+            For Each _control As Control In Parent.GetAll(GetType(NumericInput)).ToList
+                Dim control = DirectCast(_control, NumericInput)
+                control.Value = control.Minimum
             Next
         End If
         RaiseEvent CheckedChanged(sender, e)

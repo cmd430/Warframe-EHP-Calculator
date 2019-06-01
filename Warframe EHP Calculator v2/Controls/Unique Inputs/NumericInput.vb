@@ -1,6 +1,6 @@
 ﻿Imports System.ComponentModel
 
-Public Class CheckedInput
+Public Class NumericInput
     Inherits UserControl
 
     Public Sub New()
@@ -15,22 +15,10 @@ Public Class CheckedInput
     <Category("!Properties")>
     Public Overrides Property Text As String
         Get
-            Return CheckBox1.Text.TrimEnd(":")
+            Return Label1.Text.TrimEnd(":")
         End Get
         Set(ByVal Value As String)
-            CheckBox1.Text = Value & ":"
-        End Set
-    End Property
-
-    <Category("!Properties")>
-    <DefaultValue(False)>
-    <Browsable(True)>
-    Public Property Checked As Boolean
-        Get
-            Return CheckBox1.Checked
-        End Get
-        Set(ByVal Value As Boolean)
-            CheckBox1.Checked = Value
+            Label1.Text = Value & ":"
         End Set
     End Property
 
@@ -84,15 +72,10 @@ Public Class CheckedInput
 
 #Region "Events"
 
-    Public Event CheckedChanged As EventHandler
-    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
-        Checked = sender.Checked
-        RaiseEvent CheckedChanged(Me, e)
-    End Sub
 
     Public Event ValueChanged As EventHandler
     Private Sub NumericUpDown1_ValueChanged(sender As Object, e As EventArgs) Handles NumericUpDown1.ValueChanged
-        RaiseEvent ValueChanged(Me, e)
+        RaiseEvent ValueChanged(sender, e)
     End Sub
 
 #End Region

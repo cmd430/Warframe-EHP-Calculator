@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<companions>
+  <companion name="Adarza" type="kavat">
+    <variants>
+      <variant name="base" armor="50" health="40" shield="70" />
+    </variants>
+  </companion>
+  <companion name="Smeeta" type="kavat">
+    <variants>
+      <variant name="base" armor="65" health="50" shield="60" />
+    </variants>
+  </companion>
+  <companion name="Venari" type="kavat">
+    <variants>
+      <variant name="base" armor="350" health="300" shield="0" />
+    </variants>
+  </companion>
+  <companion name="Chesa" type="kubrow">
+    <variants>
+      <variant name="base" armor="50" health="125 " shield="75" />
+    </variants>
+  </companion>
+  <companion name="Huras" type="kubrow">
+    <variants>
+      <variant name="base" armor="50" health="75" shield="125" />
+    </variants>
+  </companion>
+  <companion name="Raksa" type="kubrow">
+    <variants>
+      <variant name="base" armor="50" health="100" shield="100" />
+    </variants>
+  </companion>
+  <companion name="Sahasa" type="kubrow">
+    <variants>
+      <variant name="base" armor="50" health="125" shield="75" />
+    </variants>
+  </companion>
+  <companion name="Sunika" type="kubrow">
+    <variants>
+      <variant name="base" armor="50" health="110" shield="90" />
+    </variants>
+  </companion>
+  <companion name="Helminth Charger" type="helminth">
+    <variants>
+      <variant name="base" armor="50" health="95" shield="85" />
+    </variants>
+  </companion>
+</companions>

@@ -123,6 +123,12 @@
     <Compile Include="Controls\Unique Inputs\CheckedDualInput.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Controls\Unique Inputs\NumericInput.Designer.vb">
+      <DependentUpon>NumericInput.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Unique Inputs\NumericInput.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Controls\Unique Inputs\MaxValueToggle.Designer.vb">
       <DependentUpon>MaxValueToggle.vb</DependentUpon>
     </Compile>
@@ -148,6 +154,8 @@
     <Compile Include="Forms\Form_update.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Modules\CompanionData.vb" />
+    <Compile Include="Modules\SharedData.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -177,6 +185,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\Unique Inputs\CheckedDualInput.resx">
       <DependentUpon>CheckedDualInput.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Unique Inputs\NumericInput.resx">
+      <DependentUpon>NumericInput.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\Unique Inputs\MaxValueToggle.resx">
       <DependentUpon>MaxValueToggle.vb</DependentUpon>
@@ -214,8 +225,9 @@
     <Content Include="bin\Debug\Warframe EHP Calculator v2.exe" />
     <None Include="latest_changes" />
     <EmbeddedResource Include="version" />
-    <EmbeddedResource Include="Data\WarframeRankMultipliers.xml" />
+    <EmbeddedResource Include="Data\DefaultRankMultipliers.xml" />
     <EmbeddedResource Include="Data\Warframes.xml" />
+    <EmbeddedResource Include="Data\Companions.xml" />
     <Content Include="Warframe.ico" />
   </ItemGroup>
   <ItemGroup>

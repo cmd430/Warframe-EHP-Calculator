@@ -17,30 +17,8 @@ Public Class Form_main
     Public localVersion As String
     Public liveVersion As String
     Public Warframes As List(Of Warframe)
-    Public RankMultipliers As List(Of Rank_Multiplier)
-
-    Public Shared Function FindControlRecursive(ByVal list As List(Of Control), ByVal parent As Control, ByVal ctrlType As System.Type) As List(Of Control)
-        If parent Is Nothing Then Return list
-        If parent.GetType Is ctrlType Then
-            list.Add(parent)
-        End If
-        For Each child As Control In parent.Controls
-            FindControlRecursive(list, child, ctrlType)
-        Next
-        Return list
-    End Function
-
-    Public Function FormatNumber(ByVal Number)
-        Dim formatted As Decimal = 0.0
-        If TypeOf Number Is TextBox Then
-            If Number.Text = "-" Then
-                formatted = Convert.ToDecimal(0, New Globalization.CultureInfo("en-US"))
-            Else
-                formatted = Convert.ToDecimal(Number.Text, New Globalization.CultureInfo("en-US"))
-            End If
-        End If
-        Return formatted
-    End Function
+    Public Companions As List(Of Companion)
+    Public DefaultRankMultipliers As List(Of Rank_Multiplier)
 
     Public Shared Function GetResponseNoCache(ByVal url As String) As String
         DeleteUrlCacheEntry(url)
@@ -54,33 +32,46 @@ Public Class Form_main
     End Function
 
     Private Sub Main_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
-        My.Settings.DefaultToMax = MaxValueToggle1.Checked
+        My.Settings.DefaultToMax = MaxValueToggle_warframes.Checked
+        My.Settings.DefaultToMax_companions = MaxValueToggle_compainions.Checked
     End Sub
 
     Private Sub Main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         assembly = Assembly.GetExecutingAssembly()
+        '
+        '   This should let the math not explode for non English OS's
+        '
+        Threading.Thread.CurrentThread.CurrentCulture = Globalization.CultureInfo.CreateSpecificCulture("en-US")
+        Threading.Thread.CurrentThread.CurrentUICulture = Globalization.CultureInfo.CreateSpecificCulture("en-US")
         '
         ' Version Info
         '
         localVersion = New StreamReader(assembly.GetManifestResourceStream("Warframe_EHP_Calculator_v2.version")).ReadToEnd()
         Me.Text = Me.Text & " (v" & localVersion & ")"
         '
-        ' Load Warframe and Rank Data
+        ' Load Warframe/Companion and Rank Data
         '
         Dim serializer As XmlSerializer
+        Using stream As New StreamReader(assembly.GetManifestResourceStream("Warframe_EHP_Calculator_v2.DefaultRankMultipliers.xml"))
+            serializer = New XmlSerializer(GetType(List(Of Rank_Multiplier)), New XmlRootAttribute("rank_multipliers"))
+            DefaultRankMultipliers = DirectCast(serializer.Deserialize(stream), List(Of Rank_Multiplier))
+        End Using
         Using stream As New StreamReader(assembly.GetManifestResourceStream("Warframe_EHP_Calculator_v2.Warframes.xml"))
             serializer = New XmlSerializer(GetType(List(Of Warframe)), New XmlRootAttribute("warframes"))
             Warframes = DirectCast(serializer.Deserialize(stream), List(Of Warframe)).OrderBy(Function(x) x.Name).ToList()
         End Using
-        Using stream As New StreamReader(assembly.GetManifestResourceStream("Warframe_EHP_Calculator_v2.WarframeRankMultipliers.xml"))
-            serializer = New XmlSerializer(GetType(List(Of Rank_Multiplier)), New XmlRootAttribute("rank_multipliers"))
-            RankMultipliers = DirectCast(serializer.Deserialize(stream), List(Of Rank_Multiplier))
+        Using stream As New StreamReader(assembly.GetManifestResourceStream("Warframe_EHP_Calculator_v2.Companions.xml"))
+            serializer = New XmlSerializer(GetType(List(Of Companion)), New XmlRootAttribute("companions"))
+            Companions = DirectCast(serializer.Deserialize(stream), List(Of Companion))
         End Using
         For Each warframe As Warframe In Warframes
             ComboBox_warframes.Items.Add(warframe.Name)
         Next
+        For Each companion As Companion In Companions
+            ComboBox_companions.Items.Add(companion.Name)
+        Next
         '
-        '   Hide Debug controls
+        '   Hide Debug/Dev controls
         '
         TabControl_main.TabPages.Remove(TabPage_development)
         '
@@ -105,12 +96,6 @@ Public Class Form_main
         Next
         FlowLayoutPanel_defaultArcaneHelmets.Visible = True
         '
-        '   This should let the math not explode for non English OS's
-        '   But just incase i also use the function `formatNumber` to be safe
-        '
-        Threading.Thread.CurrentThread.CurrentCulture = Globalization.CultureInfo.CreateSpecificCulture("en-US")
-        Threading.Thread.CurrentThread.CurrentUICulture = Globalization.CultureInfo.CreateSpecificCulture("en-US")
-        '
         '   Change Warframe select box to the default section
         '   also change all other combo boxs to index 0
         '   comboboxs that match index are auto updated by the
@@ -120,75 +105,65 @@ Public Class Form_main
         ComboBox_companions.SelectedIndex = 0
         ComboBox_blocking.SelectedIndex = 0
         '
-        '   Abilities and Focus
-        '
-        AddHandler CheckedGroupBox_abilities.CheckedChanged, AddressOf Enable_Disable_Section
-        AddHandler CheckedGroupBox_focus.CheckedChanged, AddressOf Enable_Disable_Section
-        '
-        '   Mod Sections
-        '
-        AddHandler CheckedGroupBox_aura.CheckedChanged, AddressOf Enable_Disable_Section
-        AddHandler CheckedGroupBox_survivability.CheckedChanged, AddressOf Enable_Disable_Section
-        AddHandler CheckedGroupBox_powerStrength.CheckedChanged, AddressOf Enable_Disable_Section
-        AddHandler CheckedGroupBox_miscellaneous.CheckedChanged, AddressOf Enable_Disable_Section
-        '
-        '   Arcanes and Keys
-        '
-        AddHandler CheckedGroupBox_arcanes.CheckedChanged, AddressOf Enable_Disable_Section
-        AddHandler CheckedGroupBox_dragonKeys.CheckedChanged, AddressOf Enable_Disable_Section
-        '
-        '   Special Effects
-        '
-        AddHandler CheckedGroupBox_specialEffects.CheckedChanged, AddressOf Enable_Disable_Section
-        '
-        '   Sortie Modifiers
-        '
-        AddHandler CheckedGroupBox_missionModifiers.CheckedChanged, AddressOf Enable_Disable_Section
-        '
-        '   Arcane Helmets
-        '
-        AddHandler CheckedGroupBox_arcaneHelmets.CheckedChanged, AddressOf Enable_Disable_Section
-        '
-        '   Frame Type
-        '
-        AddHandler VariantSelection1.SelectedVariantChanged, AddressOf Warframe_Value_Changed
-        '
         '   UI Update on warframe change - ability and helmet enabling
         '   and recalc EHP on stat change (pretty much everything is linked in here)
         '   Since there are so many things to addHandler for im going to do it at runtime
         '   with loops to make my life easier
         '
         AddHandler ComboBox_warframes.SelectedIndexChanged, AddressOf Warframe_Value_Changed
+        AddHandler VariantSelection1.SelectedVariantChanged, AddressOf Warframe_Value_Changed
         AddHandler ComboBox_blocking.SelectedIndexChanged, AddressOf Warframe_Value_Changed
-        Dim CheckBoxs As New List(Of Control)
-        For Each CheckBox As CheckBox In FindControlRecursive(CheckBoxs, TabControl_main, GetType(CheckBox))
-            If Not CheckBox.Name.Contains("companion") Then
-                AddHandler CheckBox.CheckedChanged, AddressOf Warframe_Value_Changed
-            Else
-                AddHandler CheckBox.CheckedChanged, AddressOf Companion_Value_Changed
-            End If
-        Next
-        Dim RadioButtons As New List(Of Control)
-        For Each RadioButton As RadioButton In FindControlRecursive(RadioButtons, TabControl_main, GetType(RadioButton))
-            AddHandler RadioButton.CheckedChanged, AddressOf Warframe_Value_Changed
-        Next
-        Dim NumericUpDowns As New List(Of Control)
-        For Each NumericUpDown As NumericUpDown In FindControlRecursive(NumericUpDowns, TabControl_main, GetType(NumericUpDown))
-            If Not NumericUpDown.Name.Contains("companion") Then
-                AddHandler NumericUpDown.ValueChanged, AddressOf Warframe_Value_Changed
-            Else
-                AddHandler NumericUpDown.ValueChanged, AddressOf Companion_Value_Changed
+        For Each Group As Control In FlowLayoutPanel_warframeMainLayout.Controls
+            If TypeOf Group Is CheckedGroupBox Then
+                For Each Control As Control In CType(Group, CheckedGroupBox).FlowLayout.Controls
+                    If TypeOf Control Is CheckedInput Then
+                        AddHandler CType(Control, CheckedInput).CheckedChanged, AddressOf Warframe_Value_Changed
+                        AddHandler CType(Control, CheckedInput).ValueChanged, AddressOf Warframe_Value_Changed
+                    ElseIf TypeOf Control Is CheckedDualInput Then
+                        AddHandler CType(Control, CheckedDualInput).CheckedChanged, AddressOf Warframe_Value_Changed
+                        AddHandler CType(Control, CheckedDualInput).ValueChanged, AddressOf Warframe_Value_Changed
+                    ElseIf TypeOf Control Is NumericInput Then
+                        AddHandler CType(Control, NumericInput).ValueChanged, AddressOf Warframe_Value_Changed
+                    ElseIf TypeOf Control Is CheckBox Then
+                        AddHandler CType(Control, CheckBox).CheckedChanged, AddressOf Warframe_Value_Changed
+                    ElseIf TypeOf Control Is RadioButton Then
+                        AddHandler CType(Control, RadioButton).CheckedChanged, AddressOf Warframe_Value_Changed
+                    End If
+                Next
+                AddHandler CType(Group, CheckedGroupBox).CheckedChanged, AddressOf Warframe_Value_Changed
             End If
         Next
         '
         '   Companions
         '
         AddHandler ComboBox_companions.SelectedIndexChanged, AddressOf Companion_Value_Changed
-        AddHandler CheckBox_companionSurvivability.CheckedChanged, AddressOf Enable_Disable_Section
+        AddHandler CheckBox_companionPrimeCollar.CheckedChanged, AddressOf Companion_Value_Changed
+        AddHandler NumericInput_companionStability.ValueChanged, AddressOf Companion_Value_Changed
+        For Each Group As Control In FlowLayoutPanel_compainionMainLayout.Controls
+            If TypeOf Group Is CheckedGroupBox Then
+                For Each Control As Control In CType(Group, CheckedGroupBox).FlowLayout.Controls
+                    If TypeOf Control Is CheckedInput Then
+                        AddHandler CType(Control, CheckedInput).CheckedChanged, AddressOf Companion_Value_Changed
+                        AddHandler CType(Control, CheckedInput).ValueChanged, AddressOf Companion_Value_Changed
+                    ElseIf TypeOf Control Is CheckedDualInput Then
+                        AddHandler CType(Control, CheckedDualInput).CheckedChanged, AddressOf Companion_Value_Changed
+                        AddHandler CType(Control, CheckedDualInput).ValueChanged, AddressOf Companion_Value_Changed
+                    ElseIf TypeOf Control Is NumericInput Then
+                        AddHandler CType(Control, NumericInput).ValueChanged, AddressOf Companion_Value_Changed
+                    ElseIf TypeOf Control Is CheckBox Then
+                        AddHandler CType(Control, CheckBox).CheckedChanged, AddressOf Companion_Value_Changed
+                    ElseIf TypeOf Control Is RadioButton Then
+                        AddHandler CType(Control, RadioButton).CheckedChanged, AddressOf Companion_Value_Changed
+                    End If
+                Next
+                AddHandler CType(Group, CheckedGroupBox).CheckedChanged, AddressOf Companion_Value_Changed
+            End If
+        Next
         '
         ' Set Deafult Values to Max
         '
-        MaxValueToggle1.Checked = My.Settings.DefaultToMax
+        MaxValueToggle_warframes.Checked = My.Settings.DefaultToMax
+        MaxValueToggle_compainions.Checked = My.Settings.DefaultToMax_companions
         '
         ' Check for Update
         '
@@ -201,16 +176,6 @@ Public Class Form_main
             'Cant check for updates
         End Try
         Me.Size = New Size(FlowLayoutPanel_warframeMainLayout.Size.Width + 32, FlowLayoutPanel_warframeMainLayout.Size.Height + TableLayoutPanel_warframeTopLayout.Size.Height + 82)
-    End Sub
-
-    Public Sub Enable_Disable_Section(sender As Object, e As EventArgs)
-        '
-        '   Enable and disable GroupBoxes/TabControls based on its checkbox
-        '
-        Try
-            sender.Parent.Controls(sender.tag).Enabled = sender.Checked
-        Catch ex As Exception
-        End Try
     End Sub
 
     Private Sub Warframe_Value_Changed(sender As Object, e As EventArgs)
@@ -237,8 +202,8 @@ Public Class Form_main
         Dim energyMultiplier As Decimal = 0.0
         Dim armorBonus As Decimal = 0.0
         Dim healthBonus As Decimal = 0.0
-        Dim shieldBonus As Decimal = 0.0 'unused
-        Dim energyBonus As Decimal = 0.0 'unused
+        Dim shieldBonus As Decimal = 0.0
+        Dim energyBonus As Decimal = 0.0
         Dim damageReduction As Decimal = 0.0
         '
         '   Sepical Hidden stat for abilities that
@@ -277,12 +242,12 @@ Public Class Form_main
             End If
             If currentWarframe.Name = "Harrow" Then
                 CheckedInput_overshields.Maximum = 2400
-                If MaxValueToggle1.Checked Then
+                If MaxValueToggle_warframes.Checked Then
                     CheckedInput_overshields.Value = CheckedInput_overshields.Maximum
                 End If
             Else
                 CheckedInput_overshields.Maximum = 1200
-                If MaxValueToggle1.Checked Then
+                If MaxValueToggle_warframes.Checked Then
                     CheckedInput_overshields.Value = CheckedInput_overshields.Maximum
                 End If
             End If
@@ -330,27 +295,27 @@ Public Class Form_main
             If Not currentWarframe.Rank_Multipliers.Find(Function(rm) rm.Name = "armor") Is Nothing Then
                 Armor = baseArmor * currentWarframe.Rank_Multipliers.Find(Function(rm) rm.Name = "armor").Multiplier
             Else
-                Armor = baseArmor * RankMultipliers.Find(Function(m) m.Name = "armor").Multiplier
+                Armor = baseArmor * DefaultRankMultipliers.Find(Function(m) m.Name = "armor").Multiplier
             End If
             If Not currentWarframe.Rank_Multipliers.Find(Function(rm) rm.Name = "health") Is Nothing Then
                 Health = baseHealth * currentWarframe.Rank_Multipliers.Find(Function(rm) rm.Name = "health").Multiplier
             Else
-                Health = baseHealth * RankMultipliers.Find(Function(m) m.Name = "health").Multiplier
+                Health = baseHealth * DefaultRankMultipliers.Find(Function(m) m.Name = "health").Multiplier
             End If
             If Not currentWarframe.Rank_Multipliers.Find(Function(rm) rm.Name = "shield") Is Nothing Then
                 Shield = baseShield * currentWarframe.Rank_Multipliers.Find(Function(rm) rm.Name = "shield").Multiplier
             Else
-                Shield = baseShield * RankMultipliers.Find(Function(m) m.Name = "shield").Multiplier
+                Shield = baseShield * DefaultRankMultipliers.Find(Function(m) m.Name = "shield").Multiplier
             End If
             If Not currentWarframe.Rank_Multipliers.Find(Function(rm) rm.Name = "energy") Is Nothing Then
                 Energy = baseEnergy * currentWarframe.Rank_Multipliers.Find(Function(rm) rm.Name = "energy").Multiplier
             Else
-                Energy = baseEnergy * RankMultipliers.Find(Function(m) m.Name = "energy").Multiplier
+                Energy = baseEnergy * DefaultRankMultipliers.Find(Function(m) m.Name = "energy").Multiplier
             End If
             If Not currentWarframe.Rank_Multipliers.Find(Function(rm) rm.Name = "strength") Is Nothing Then
                 powerStrength = basePowerStrength * currentWarframe.Rank_Multipliers.Find(Function(rm) rm.Name = "strength").Multiplier
             Else
-                powerStrength = basePowerStrength * RankMultipliers.Find(Function(m) m.Name = "strength").Multiplier
+                powerStrength = basePowerStrength * DefaultRankMultipliers.Find(Function(m) m.Name = "strength").Multiplier
             End If
             '
             ' Overshields
@@ -493,39 +458,6 @@ Public Class Form_main
                     'Note: Power Donation does not seem to be affected by co-action drift at this time.
                     Dim powerDonation As Decimal = basePowerStrength * (0.05 + (RadioInput_powerDonation.Value * 0.05))
                     powerStrength -= powerDonation
-                End If
-            End If
-            '
-            '   RadioButton Function for Umbral Mods
-            '
-            If sender.Name = "CheckBox_umbraFiber" Then
-                If sender.Checked Then
-                    CheckedInput_steelFiber.Checked = False
-                End If
-            End If
-            If sender.Name = "CheckBox_umbraVitality" Then
-                If sender.Checked Then
-                    CheckedInput_vitality.Checked = False
-                End If
-            End If
-            If sender.Name = "CheckBox_umbraIntensify" Then
-                If sender.Checked Then
-                    CheckedInput_intensify.Checked = False
-                End If
-            End If
-            If sender.Name = "CheckBox_steelFiber" Then
-                If sender.Checked Then
-                    CheckedInput_umbralFiber.Checked = False
-                End If
-            End If
-            If sender.Name = "CheckBox_vitality" Then
-                If sender.Checked Then
-                    CheckedInput_umbralVitality.Checked = False
-                End If
-            End If
-            If sender.Name = "CheckBox_intensify" Then
-                If sender.Checked Then
-                    CheckedInput_umbralIntensify.Checked = False
                 End If
             End If
             '
@@ -949,77 +881,179 @@ Public Class Form_main
                 End If
             Next
         End If
+        '
+        '   RadioButton Function for Umbral Mods
+        '
+        If sender.Name = "CheckedInput_umbralFiber" Then
+            If sender.Checked Then
+                CheckedInput_steelFiber.Checked = False
+            End If
+        End If
+        If sender.Name = "CheckedInput_umbralVitality" Then
+            If sender.Checked Then
+                CheckedInput_vitality.Checked = False
+            End If
+        End If
+        If sender.Name = "CheckedInput_umbralIntensify" Then
+            If sender.Checked Then
+                CheckedInput_intensify.Checked = False
+            End If
+        End If
+        If sender.Name = "CheckedInput_steelFiber" Then
+            If sender.Checked Then
+                CheckedInput_umbralFiber.Checked = False
+            End If
+        End If
+        If sender.Name = "CheckedInput_vitality" Then
+            If sender.Checked Then
+                CheckedInput_umbralVitality.Checked = False
+            End If
+        End If
+        If sender.Name = "CheckedInput_intensify" Then
+            If sender.Checked Then
+                CheckedInput_umbralIntensify.Checked = False
+            End If
+        End If
         Companion_Value_Changed(sender, e)
     End Sub
 
     Private Sub Companion_Value_Changed(sender As Object, e As EventArgs)
         Dim currentWarframe As Warframe = Warframes.Find(Function(wf) wf.Name = ComboBox_warframes.SelectedItem)
+        Dim currentCompanion As Companion = Companions.Find(Function(c) c.Name = ComboBox_companions.SelectedItem)
         '   Pet Stats
+        Dim baseArmor As Decimal = 0.0
         Dim Armor As Decimal = 0.0
+        Dim baseHealth As Decimal = 0.0
         Dim Health As Decimal = 0.0
+        Dim baseShield As Decimal = 0.0
         Dim Shield As Decimal = 0.0
-        Dim DamageReduction As Decimal = 0.0
-        ComboBox_petArmor.SelectedIndex = ComboBox_companions.SelectedIndex
-        ComboBox_petHealth.SelectedIndex = ComboBox_companions.SelectedIndex
-        ComboBox_petShield.SelectedIndex = ComboBox_companions.SelectedIndex
-        If ComboBox_companions.SelectedIndex > 2 And Not ComboBox_companions.SelectedItem = "Venari" Then
-            CheckBox_companionPrimeCollar.Enabled = True
-            NumericUpDown_companionStability.Enabled = True
-            Label_companionStability.Enabled = True
-        Else
-            CheckBox_companionPrimeCollar.Enabled = False
-            NumericUpDown_companionStability.Enabled = False
-            Label_companionStability.Enabled = False
-        End If
-        If ComboBox_companions.SelectedIndex > 0 Then
-            CheckBox_companionSurvivability.Enabled = True
-            GroupBox_companionSurvivability.Enabled = CheckBox_companionSurvivability.Checked
-            Armor = FormatNumber(ComboBox_petArmor)
-            Health = FormatNumber(ComboBox_petHealth)
-            Shield = FormatNumber(ComboBox_petShield)
-            DamageReduction = StatBox_damageReduction.Value / 100
-            If NumericUpDown_companionStability.Enabled = True Then
+        '   mods
+        Dim armorMultiplier As Decimal = 0.0
+        Dim healthMultiplier As Decimal = 0.0
+        Dim shieldMultiplier As Decimal = 0.0
+        Dim armorBonus As Decimal = 0.0
+        Dim healthBonus As Decimal = 0.0
+        Dim shieldBonus As Decimal = 0.0
+        Dim energyBonus As Decimal = 0.0
+        Dim damageReduction As Decimal = 0.0
+
+        If currentCompanion IsNot Nothing Then
+            If currentCompanion.Type = "kubrow" Or currentCompanion.Type = "helminth" Then
+                CheckBox_companionPrimeCollar.Enabled = True
+                NumericInput_companionStability.Enabled = True
+            Else
+                CheckBox_companionPrimeCollar.Enabled = False
+                NumericInput_companionStability.Enabled = False
+            End If
+            ' Currently we dont have more than 1 variant so hard coded, this will change with adding sentinals
+            baseArmor = currentCompanion.Variants(0).Armor
+            baseHealth = currentCompanion.Variants(0).Health
+            baseShield = currentCompanion.Variants(0).Shield
+            If Not currentCompanion.Rank_Multipliers.Find(Function(rm) rm.Name = "armor") Is Nothing Then
+                Armor = baseArmor * currentCompanion.Rank_Multipliers.Find(Function(rm) rm.Name = "armor").Multiplier
+            Else
+                Armor = baseArmor * DefaultRankMultipliers.Find(Function(m) m.Name = "armor").Multiplier
+            End If
+            If Not currentCompanion.Rank_Multipliers.Find(Function(rm) rm.Name = "health") Is Nothing Then
+                Health = baseHealth * currentCompanion.Rank_Multipliers.Find(Function(rm) rm.Name = "health").Multiplier
+            Else
+                Health = baseHealth * DefaultRankMultipliers.Find(Function(m) m.Name = "health").Multiplier
+            End If
+            If Not currentCompanion.Rank_Multipliers.Find(Function(rm) rm.Name = "shield") Is Nothing Then
+                Shield = baseShield * currentCompanion.Rank_Multipliers.Find(Function(rm) rm.Name = "shield").Multiplier
+            Else
+                Shield = baseShield * DefaultRankMultipliers.Find(Function(m) m.Name = "shield").Multiplier
+            End If
+            damageReduction = StatBox_damageReduction.Value / 100
+            If NumericInput_companionStability.Enabled = True Then
                 'genetic stability
-                Health *= 1 + (NumericUpDown_companionStability.Value / 100)
+                baseHealth *= 1 + (NumericInput_companionStability.Value / 100)
             End If
             If currentWarframe IsNot Nothing Then
                 If currentWarframe.Name = "Oberon" Then
                     'Oberon Passive
-                    Armor += 75
-                    Health = Math.Floor(Health + (Health * 0.25))
-                    Shield = Math.Floor(Shield + (Shield * 0.25))
+                    armorBonus += StatBox_warframeArmor.Value * 0.25
+                    Health += StatBox_warframeHealth.Value * 0.25
+                    Shield += StatBox_warframeShield.Value * 0.25
                 End If
             End If
             If CheckBox_companionPrimeCollar.Enabled And CheckBox_companionPrimeCollar.Checked Then
-                Armor += 100
-                Health += 10
-                Shield += 10
+                armorBonus += 100
+                healthBonus += 10
+                shieldBonus += 10
             End If
-            If CheckBox_companionSurvivability.Checked Then
-                If CheckBox_companionLinkArmor.Checked = True Then
-                    Armor = Math.Floor(Armor + (StatBox_warframeArmor.Value * ((NumericUpDown_companionLinkArmor.Value + 1) * 0.1)))
+            If CheckedGroupBox_companionSurvivability.Checked Then
+                If CheckedInput_companionLinkArmor.Checked = True Then
+                    armorBonus += StatBox_warframeArmor.Value * ((CheckedInput_companionLinkArmor.Value + 1) * 0.1)
                 End If
-                If CheckBox_companionLinkHealth.Checked = True Then
-                        Health = Math.Floor(Health + (StatBox_warframeHealth.Value * ((NumericUpDown_companionLinkHealth.Value + 1) * 0.15)))
-                    End If
-                If CheckBox_companionLinkShield.Checked = True Then
-                    Shield = Math.Floor(Shield + (StatBox_warframeShield.Value * ((NumericUpDown_companionLinkShield.Value + 1) * 0.1)))
+                If CheckedInput_companionLinkHealth.Checked = True Then
+                    healthBonus += StatBox_warframeHealth.Value * ((CheckedInput_companionLinkHealth.Value + 1) * 0.15)
+                End If
+                If CheckedInput_companionLinkShield.Checked = True Then
+                    shieldBonus += StatBox_warframeShield.Value * ((CheckedInput_companionLinkShield.Value + 1) * 0.1)
+                End If
+                If CheckedInput_companionMetalFiber.Checked = True Then
+                    armorMultiplier += (CheckedInput_companionLinkArmor.Value + 1) * 0.1
+                End If
+                If CheckedInput_companionEnhancedVitality.Checked = True Then
+                    healthMultiplier += (CheckedInput_companionLinkHealth.Value + 1) * 0.2
+                End If
+                If CheckedInput_companionCalculatedRedirection.Checked = True Then
+                    shieldMultiplier += (CheckedInput_companionLinkShield.Value + 1) * 0.25
                 End If
             End If
+
+            Armor = (baseArmor * (1 + armorMultiplier)) + (Armor - baseArmor) + armorBonus
+            Health = (baseHealth * (1 + healthMultiplier)) + (Health - baseHealth) + healthBonus
+            Shield = (baseShield * (1 + shieldMultiplier)) + (Shield - baseShield) + shieldBonus
+
             Dim damageReductionArmor = Armor / (300 + Armor)
-            Dim totalDamageReduction = damageReductionArmor + ((1 - damageReductionArmor) * DamageReduction)
+            Dim totalDamageReduction = damageReductionArmor + ((1 - damageReductionArmor) * damageReduction)
             Dim effectiveHealth = (Health / (1 - totalDamageReduction)) + Shield
-            TextBox_companionEHP.Text = Math.Ceiling(effectiveHealth)
-            TextBox_companionArmor.Text = Math.Floor(Armor)
-            TextBox_companionHealth.Text = Math.Floor(Health)
-            TextBox_companionShield.Text = Math.Floor(Shield)
+            StatBox_companionArmor.Value = Armor
+            StatBox_companionHealth.Value = Health
+            StatBox_companionShield.Value = Shield
+            StatBox_companionDamageReduction.Value = damageReduction
+            StatBox_companionEHP.Value = effectiveHealth
         Else
-            CheckBox_companionSurvivability.Enabled = False
-            GroupBox_companionSurvivability.Enabled = False
-            TextBox_companionArmor.Text = "-"
-            TextBox_companionHealth.Text = "-"
-            TextBox_companionShield.Text = "-"
-            TextBox_companionEHP.Text = "-"
+            StatBox_companionArmor.Value = Nothing
+            StatBox_companionHealth.Value = Nothing
+            StatBox_companionShield.Value = Nothing
+            StatBox_companionDamageReduction.Value = Nothing
+            StatBox_companionEHP.Value = Nothing
+        End If
+        '
+        ' Radio Button Effect for 'same' mods
+        '
+        If sender.Name = "CheckedInput_companionLinkArmor" Then
+            If sender.Checked Then
+                CheckedInput_companionMetalFiber.Checked = False
+            End If
+        End If
+        If sender.Name = "CheckedInput_companionLinkHealth" Then
+            If sender.Checked Then
+                CheckedInput_companionEnhancedVitality.Checked = False
+            End If
+        End If
+        If sender.Name = "CheckedInput_companionLinkShield" Then
+            If sender.Checked Then
+                CheckedInput_companionCalculatedRedirection.Checked = False
+            End If
+        End If
+        If sender.Name = "CheckedInput_companionMetalFiber" Then
+            If sender.Checked Then
+                CheckedInput_companionLinkArmor.Checked = False
+            End If
+        End If
+        If sender.Name = "CheckedInput_companionEnhancedVitality" Then
+            If sender.Checked Then
+                CheckedInput_companionLinkHealth.Checked = False
+            End If
+        End If
+        If sender.Name = "CheckedInput_companionCalculatedRedirection" Then
+            If sender.Checked Then
+                CheckedInput_companionLinkShield.Checked = False
+            End If
         End If
     End Sub
 

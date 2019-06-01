@@ -1,10 +1,12 @@
 ﻿
 Imports System.Xml.Serialization
 
-<XmlType(TypeName:="warframe")>
-Public Class Warframe
+<XmlType(TypeName:="companion")>
+Public Class Companion
     <XmlAttribute("name")>
     Public Property Name As String
+    <XmlAttribute("type")>
+    Public Property Type As String
     <XmlArray("variants")>
     Public Property Variants As New List(Of [Variant])
     <XmlArray("rank_multipliers")>

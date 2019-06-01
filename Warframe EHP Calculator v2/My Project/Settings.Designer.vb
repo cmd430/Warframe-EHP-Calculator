@@ -65,6 +65,18 @@ Namespace My
                 Me("DefaultToMax") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
+        Public Property DefaultToMax_companions() As Boolean
+            Get
+                Return CType(Me("DefaultToMax_companions"),Boolean)
+            End Get
+            Set
+                Me("DefaultToMax_companions") = value
+            End Set
+        End Property
     End Class
 End Namespace
 
