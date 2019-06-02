@@ -5,12 +5,6 @@ Imports System.Runtime.InteropServices
 Imports System.Xml.Serialization
 Imports System.ComponentModel
 
-Module NativeMethods
-    <DllImport("WinInet.dll", PreserveSig:=True, SetLastError:=True)>
-    Sub DeleteUrlCacheEntry(ByVal url As String)
-    End Sub
-End Module
-
 Public Class Form_main
 
     Public assembly As Assembly
@@ -19,17 +13,7 @@ Public Class Form_main
     Public Warframes As List(Of Warframe)
     Public Companions As List(Of Companion)
     Public DefaultRankMultipliers As List(Of Rank_Multiplier)
-
-    Public Shared Function GetResponseNoCache(ByVal url As String) As String
-        DeleteUrlCacheEntry(url)
-        Dim request As WebRequest = WebRequest.Create(New Uri(url))
-        request.CachePolicy = New Cache.RequestCachePolicy(Cache.RequestCacheLevel.NoCacheNoStore)
-        Dim response As WebResponse = request.GetResponse()
-        Using reader = New StreamReader(response.GetResponseStream())
-            Dim responseText As String = reader.ReadToEnd().Trim()
-            Return responseText
-        End Using
-    End Function
+    Public DefaultRankMultipliers_Sentinels As List(Of Rank_Multiplier)
 
     Private Sub Main_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
         My.Settings.DefaultToMax = MaxValueToggle_warframes.Checked
@@ -56,13 +40,17 @@ Public Class Form_main
             serializer = New XmlSerializer(GetType(List(Of Rank_Multiplier)), New XmlRootAttribute("rank_multipliers"))
             DefaultRankMultipliers = DirectCast(serializer.Deserialize(stream), List(Of Rank_Multiplier))
         End Using
+        Using stream As New StreamReader(assembly.GetManifestResourceStream("Warframe_EHP_Calculator_v2.DefaultRankMultipliersSentinels.xml"))
+            serializer = New XmlSerializer(GetType(List(Of Rank_Multiplier)), New XmlRootAttribute("rank_multipliers"))
+            DefaultRankMultipliers_Sentinels = DirectCast(serializer.Deserialize(stream), List(Of Rank_Multiplier))
+        End Using
         Using stream As New StreamReader(assembly.GetManifestResourceStream("Warframe_EHP_Calculator_v2.Warframes.xml"))
             serializer = New XmlSerializer(GetType(List(Of Warframe)), New XmlRootAttribute("warframes"))
-            Warframes = DirectCast(serializer.Deserialize(stream), List(Of Warframe)).OrderBy(Function(x) x.Name).ToList()
+            Warframes = DirectCast(serializer.Deserialize(stream), List(Of Warframe)).OrderBy(Function(wf) wf.Name).ToList()
         End Using
         Using stream As New StreamReader(assembly.GetManifestResourceStream("Warframe_EHP_Calculator_v2.Companions.xml"))
             serializer = New XmlSerializer(GetType(List(Of Companion)), New XmlRootAttribute("companions"))
-            Companions = DirectCast(serializer.Deserialize(stream), List(Of Companion))
+            Companions = DirectCast(serializer.Deserialize(stream), List(Of Companion)).OrderBy(Function(c) c.Sort).ThenBy(Function(c) c.Name).ToList()
         End Using
         For Each warframe As Warframe In Warframes
             ComboBox_warframes.Items.Add(warframe.Name)
@@ -137,6 +125,7 @@ Public Class Form_main
         '   Companions
         '
         AddHandler ComboBox_companions.SelectedIndexChanged, AddressOf Companion_Value_Changed
+        AddHandler CompanionVariantSelection1.SelectedVariantChanged, AddressOf Companion_Value_Changed
         AddHandler CheckBox_companionPrimeCollar.CheckedChanged, AddressOf Companion_Value_Changed
         AddHandler NumericInput_companionStability.ValueChanged, AddressOf Companion_Value_Changed
         For Each Group As Control In FlowLayoutPanel_compainionMainLayout.Controls
@@ -168,7 +157,8 @@ Public Class Form_main
         ' Check for Update
         '
         Try
-            liveVersion = GetResponseNoCache("https://raw.githubusercontent.com/cmd430/Warframe-EHP-Calculator/master/Warframe%20EHP%20Calculator%20v2/version")
+            Dim WebClient = New WebClient
+            liveVersion = WebClient.DownloadString("https://raw.githubusercontent.com/cmd430/Warframe-EHP-Calculator/master/Warframe%20EHP%20Calculator%20v2/version")
             If Not liveVersion = localVersion Then
                 Form_update.ShowDialog()
             End If
@@ -938,37 +928,71 @@ Public Class Form_main
         Dim damageReduction As Decimal = 0.0
 
         If currentCompanion IsNot Nothing Then
+            Dim hasPrime As Boolean = Not currentCompanion.Variants.Find(Function(var) var.Name = "prime") Is Nothing
+            Dim hasPrisma As Boolean = Not currentCompanion.Variants.Find(Function(var) var.Name = "prisma") Is Nothing
+            '
+            '   Does the companion have a Prime or Prisma version ?
+            '   if so we can enable to checkbox
+            '
+            If hasPrime And hasPrisma Then
+                CompanionVariantSelection1.AvailableVariants = "prime_prisma"
+            ElseIf hasPrime Then
+                CompanionVariantSelection1.AvailableVariants = "prime"
+            ElseIf hasPrisma Then
+                CompanionVariantSelection1.AvailableVariants = "prisma"
+            Else
+                CompanionVariantSelection1.AvailableVariants = "base"
+            End If
             If currentCompanion.Type = "kubrow" Or currentCompanion.Type = "helminth" Then
                 CheckBox_companionPrimeCollar.Enabled = True
-                NumericInput_companionStability.Enabled = True
             Else
                 CheckBox_companionPrimeCollar.Enabled = False
-                NumericInput_companionStability.Enabled = False
             End If
-            ' Currently we dont have more than 1 variant so hard coded, this will change with adding sentinals
-            baseArmor = currentCompanion.Variants(0).Armor
-            baseHealth = currentCompanion.Variants(0).Health
-            baseShield = currentCompanion.Variants(0).Shield
+            If currentCompanion.Type = "sentinel" Then
+                CheckedInput_companionLinkArmor.Visible = False
+                CheckedInput_companionLinkHealth.Visible = False
+                CheckedInput_companionLinkShield.Visible = False
+                NumericInput_companionStability.Enabled = False
+            Else
+                CheckedInput_companionLinkArmor.Visible = True
+                CheckedInput_companionLinkHealth.Visible = True
+                CheckedInput_companionLinkShield.Visible = True
+                NumericInput_companionStability.Enabled = True
+            End If
+
+            Dim currentVariant As [Variant] = currentCompanion.Variants.Find(Function(var) var.Name = CompanionVariantSelection1.SelectedVariant)
+            baseArmor = currentVariant.Armor
+            baseHealth = currentVariant.Health
+            baseShield = currentVariant.Shield
+
             If Not currentCompanion.Rank_Multipliers.Find(Function(rm) rm.Name = "armor") Is Nothing Then
                 Armor = baseArmor * currentCompanion.Rank_Multipliers.Find(Function(rm) rm.Name = "armor").Multiplier
             Else
-                Armor = baseArmor * DefaultRankMultipliers.Find(Function(m) m.Name = "armor").Multiplier
+                If currentCompanion.Type = "sentinel" Then
+                    Armor = baseArmor * DefaultRankMultipliers_Sentinels.Find(Function(m) m.Name = "armor").Multiplier
+                Else
+                    Armor = baseArmor * DefaultRankMultipliers.Find(Function(m) m.Name = "armor").Multiplier
+                End If
             End If
             If Not currentCompanion.Rank_Multipliers.Find(Function(rm) rm.Name = "health") Is Nothing Then
                 Health = baseHealth * currentCompanion.Rank_Multipliers.Find(Function(rm) rm.Name = "health").Multiplier
             Else
-                Health = baseHealth * DefaultRankMultipliers.Find(Function(m) m.Name = "health").Multiplier
+                If currentCompanion.Type = "sentinel" Then
+                    Health = baseHealth * DefaultRankMultipliers_Sentinels.Find(Function(m) m.Name = "health").Multiplier
+                Else
+                    Health = baseHealth * DefaultRankMultipliers.Find(Function(m) m.Name = "health").Multiplier
+                End If
             End If
             If Not currentCompanion.Rank_Multipliers.Find(Function(rm) rm.Name = "shield") Is Nothing Then
                 Shield = baseShield * currentCompanion.Rank_Multipliers.Find(Function(rm) rm.Name = "shield").Multiplier
             Else
-                Shield = baseShield * DefaultRankMultipliers.Find(Function(m) m.Name = "shield").Multiplier
+                If currentCompanion.Type = "sentinel" Then
+                    Shield = baseShield * DefaultRankMultipliers_Sentinels.Find(Function(m) m.Name = "shield").Multiplier
+                Else
+                    Shield = baseShield * DefaultRankMultipliers.Find(Function(m) m.Name = "shield").Multiplier
+                End If
             End If
             damageReduction = StatBox_damageReduction.Value / 100
-            If NumericInput_companionStability.Enabled = True Then
-                'genetic stability
-                baseHealth *= 1 + (NumericInput_companionStability.Value / 100)
-            End If
             If currentWarframe IsNot Nothing Then
                 If currentWarframe.Name = "Oberon" Then
                     'Oberon Passive
@@ -983,14 +1007,16 @@ Public Class Form_main
                 shieldBonus += 10
             End If
             If CheckedGroupBox_companionSurvivability.Checked Then
-                If CheckedInput_companionLinkArmor.Checked = True Then
-                    armorBonus += StatBox_warframeArmor.Value * ((CheckedInput_companionLinkArmor.Value + 1) * 0.1)
-                End If
-                If CheckedInput_companionLinkHealth.Checked = True Then
-                    healthBonus += StatBox_warframeHealth.Value * ((CheckedInput_companionLinkHealth.Value + 1) * 0.15)
-                End If
-                If CheckedInput_companionLinkShield.Checked = True Then
-                    shieldBonus += StatBox_warframeShield.Value * ((CheckedInput_companionLinkShield.Value + 1) * 0.1)
+                If Not currentCompanion.Type = "sentinel" Then
+                    If CheckedInput_companionLinkArmor.Checked = True Then
+                        armorBonus += StatBox_warframeArmor.Value * ((CheckedInput_companionLinkArmor.Value + 1) * 0.1)
+                    End If
+                    If CheckedInput_companionLinkHealth.Checked = True Then
+                        healthBonus += StatBox_warframeHealth.Value * ((CheckedInput_companionLinkHealth.Value + 1) * 0.15)
+                    End If
+                    If CheckedInput_companionLinkShield.Checked = True Then
+                        shieldBonus += StatBox_warframeShield.Value * ((CheckedInput_companionLinkShield.Value + 1) * 0.1)
+                    End If
                 End If
                 If CheckedInput_companionMetalFiber.Checked = True Then
                     armorMultiplier += (CheckedInput_companionLinkArmor.Value + 1) * 0.1
@@ -1006,6 +1032,10 @@ Public Class Form_main
             Armor = (baseArmor * (1 + armorMultiplier)) + (Armor - baseArmor) + armorBonus
             Health = (baseHealth * (1 + healthMultiplier)) + (Health - baseHealth) + healthBonus
             Shield = (baseShield * (1 + shieldMultiplier)) + (Shield - baseShield) + shieldBonus
+            If NumericInput_companionStability.Enabled = True Then
+                'genetic stability
+                Health *= 1 + (NumericInput_companionStability.Value / 100)
+            End If
 
             Dim damageReductionArmor = Armor / (300 + Armor)
             Dim totalDamageReduction = damageReductionArmor + ((1 - damageReductionArmor) * damageReduction)

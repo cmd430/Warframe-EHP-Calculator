@@ -135,6 +135,12 @@
     <Compile Include="Controls\Unique Inputs\MaxValueToggle.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Controls\Unique Inputs\CompanionVariantSelection.Designer.vb">
+      <DependentUpon>CompanionVariantSelection.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Unique Inputs\CompanionVariantSelection.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Controls\Unique Inputs\VariantSelection.Designer.vb">
       <DependentUpon>VariantSelection.vb</DependentUpon>
     </Compile>
@@ -192,6 +198,9 @@
     <EmbeddedResource Include="Controls\Unique Inputs\MaxValueToggle.resx">
       <DependentUpon>MaxValueToggle.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Unique Inputs\CompanionVariantSelection.resx">
+      <DependentUpon>CompanionVariantSelection.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\Unique Inputs\VariantSelection.resx">
       <DependentUpon>VariantSelection.vb</DependentUpon>
     </EmbeddedResource>
@@ -228,6 +237,7 @@
     <EmbeddedResource Include="Data\DefaultRankMultipliers.xml" />
     <EmbeddedResource Include="Data\Warframes.xml" />
     <EmbeddedResource Include="Data\Companions.xml" />
+    <EmbeddedResource Include="Data\DefaultRankMultipliersSentinels.xml" />
     <Content Include="Warframe.ico" />
   </ItemGroup>
   <ItemGroup>
