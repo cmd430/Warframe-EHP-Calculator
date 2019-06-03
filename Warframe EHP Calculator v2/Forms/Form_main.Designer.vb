@@ -556,6 +556,7 @@ Partial Class Form_main
         Me.CheckedInput_umbralVitality.Name = "CheckedInput_umbralVitality"
         Me.CheckedInput_umbralVitality.Size = New System.Drawing.Size(175, 20)
         Me.CheckedInput_umbralVitality.TabIndex = 14
+        Me.CheckedInput_umbralVitality.Tag = "vitality"
         Me.CheckedInput_umbralVitality.Text = "Umbral Vitality"
         Me.CheckedInput_umbralVitality.Value = 5
         '
@@ -568,6 +569,7 @@ Partial Class Form_main
         Me.CheckedInput_umbralFiber.Name = "CheckedInput_umbralFiber"
         Me.CheckedInput_umbralFiber.Size = New System.Drawing.Size(175, 20)
         Me.CheckedInput_umbralFiber.TabIndex = 13
+        Me.CheckedInput_umbralFiber.Tag = "steelFiber"
         Me.CheckedInput_umbralFiber.Text = "Umbral Fiber"
         Me.CheckedInput_umbralFiber.Value = 5
         '
@@ -678,6 +680,7 @@ Partial Class Form_main
         Me.CheckedInput_vitality.Name = "CheckedInput_vitality"
         Me.CheckedInput_vitality.Size = New System.Drawing.Size(175, 20)
         Me.CheckedInput_vitality.TabIndex = 3
+        Me.CheckedInput_vitality.Tag = "vitality"
         Me.CheckedInput_vitality.Text = "Vitality"
         '
         'CheckedInput_steelFiber
@@ -688,6 +691,7 @@ Partial Class Form_main
         Me.CheckedInput_steelFiber.Name = "CheckedInput_steelFiber"
         Me.CheckedInput_steelFiber.Size = New System.Drawing.Size(175, 20)
         Me.CheckedInput_steelFiber.TabIndex = 2
+        Me.CheckedInput_steelFiber.Tag = "steelFiber"
         Me.CheckedInput_steelFiber.Text = "Steel Fiber"
         '
         'CheckedGroupBox_miscellaneous
@@ -762,6 +766,7 @@ Partial Class Form_main
         Me.CheckedInput_umbralIntensify.Name = "CheckedInput_umbralIntensify"
         Me.CheckedInput_umbralIntensify.Size = New System.Drawing.Size(175, 20)
         Me.CheckedInput_umbralIntensify.TabIndex = 9
+        Me.CheckedInput_umbralIntensify.Tag = "intensity"
         Me.CheckedInput_umbralIntensify.Text = "Umbral Intensify"
         Me.CheckedInput_umbralIntensify.Value = 5
         '
@@ -817,6 +822,7 @@ Partial Class Form_main
         Me.CheckedInput_intensify.Name = "CheckedInput_intensify"
         Me.CheckedInput_intensify.Size = New System.Drawing.Size(175, 20)
         Me.CheckedInput_intensify.TabIndex = 4
+        Me.CheckedInput_intensify.Tag = "intensity"
         Me.CheckedInput_intensify.Text = "Intensify"
         '
         'CheckedInput_energyConversion
@@ -1238,6 +1244,7 @@ Partial Class Form_main
         Me.CheckedInput_companionCalculatedRedirection.Name = "CheckedInput_companionCalculatedRedirection"
         Me.CheckedInput_companionCalculatedRedirection.Size = New System.Drawing.Size(175, 20)
         Me.CheckedInput_companionCalculatedRedirection.TabIndex = 7
+        Me.CheckedInput_companionCalculatedRedirection.Tag = "calculatedRedirection"
         Me.CheckedInput_companionCalculatedRedirection.Text = "Calculated Redirection"
         '
         'CheckedInput_companionEnhancedVitality
@@ -1248,6 +1255,7 @@ Partial Class Form_main
         Me.CheckedInput_companionEnhancedVitality.Name = "CheckedInput_companionEnhancedVitality"
         Me.CheckedInput_companionEnhancedVitality.Size = New System.Drawing.Size(175, 20)
         Me.CheckedInput_companionEnhancedVitality.TabIndex = 6
+        Me.CheckedInput_companionEnhancedVitality.Tag = "enhancedVitality"
         Me.CheckedInput_companionEnhancedVitality.Text = "Enhanced Vitality"
         '
         'CheckedInput_companionMetalFiber
@@ -1258,6 +1266,7 @@ Partial Class Form_main
         Me.CheckedInput_companionMetalFiber.Name = "CheckedInput_companionMetalFiber"
         Me.CheckedInput_companionMetalFiber.Size = New System.Drawing.Size(175, 20)
         Me.CheckedInput_companionMetalFiber.TabIndex = 5
+        Me.CheckedInput_companionMetalFiber.Tag = "metalFiber"
         Me.CheckedInput_companionMetalFiber.Text = "Metal Fiber"
         '
         'CheckedInput_companionLinkShield
@@ -1268,6 +1277,7 @@ Partial Class Form_main
         Me.CheckedInput_companionLinkShield.Name = "CheckedInput_companionLinkShield"
         Me.CheckedInput_companionLinkShield.Size = New System.Drawing.Size(175, 20)
         Me.CheckedInput_companionLinkShield.TabIndex = 4
+        Me.CheckedInput_companionLinkShield.Tag = "calculatedRedirection"
         Me.CheckedInput_companionLinkShield.Text = "Link Shields"
         '
         'CheckedInput_companionLinkHealth
@@ -1278,6 +1288,7 @@ Partial Class Form_main
         Me.CheckedInput_companionLinkHealth.Name = "CheckedInput_companionLinkHealth"
         Me.CheckedInput_companionLinkHealth.Size = New System.Drawing.Size(175, 20)
         Me.CheckedInput_companionLinkHealth.TabIndex = 3
+        Me.CheckedInput_companionLinkHealth.Tag = "enhancedVitality"
         Me.CheckedInput_companionLinkHealth.Text = "Link Health"
         '
         'CheckedInput_companionLinkArmor
@@ -1288,6 +1299,7 @@ Partial Class Form_main
         Me.CheckedInput_companionLinkArmor.Name = "CheckedInput_companionLinkArmor"
         Me.CheckedInput_companionLinkArmor.Size = New System.Drawing.Size(175, 20)
         Me.CheckedInput_companionLinkArmor.TabIndex = 2
+        Me.CheckedInput_companionLinkArmor.Tag = "metalFiber"
         Me.CheckedInput_companionLinkArmor.Text = "Link Armor"
         '
         'GroupBox1
@@ -1470,6 +1482,7 @@ Partial Class Form_main
         Me.NumericInput_companionStability.Size = New System.Drawing.Size(175, 20)
         Me.NumericInput_companionStability.TabIndex = 131
         Me.NumericInput_companionStability.Text = "Genetic Stability"
+        Me.NumericInput_companionStability.Value = New Decimal(New Integer() {0, 0, 0, 0})
         '
         'TabPage_archwing
         '
@@ -2252,13 +2265,12 @@ Partial Class Form_main
         Me.FlowLayoutPanel_atlasAbilities.Margin = New System.Windows.Forms.Padding(0)
         Me.FlowLayoutPanel_atlasAbilities.MinimumSize = New System.Drawing.Size(181, 26)
         Me.FlowLayoutPanel_atlasAbilities.Name = "FlowLayoutPanel_atlasAbilities"
-        Me.FlowLayoutPanel_atlasAbilities.Size = New System.Drawing.Size(183, 28)
+        Me.FlowLayoutPanel_atlasAbilities.Size = New System.Drawing.Size(181, 26)
         Me.FlowLayoutPanel_atlasAbilities.TabIndex = 40
         '
         'CheckedInput_rubble
         '
-        Me.CheckedInput_rubble.Location = New System.Drawing.Point(4, 4)
-        Me.CheckedInput_rubble.Margin = New System.Windows.Forms.Padding(4)
+        Me.CheckedInput_rubble.Location = New System.Drawing.Point(3, 3)
         Me.CheckedInput_rubble.Maximum = 1500
         Me.CheckedInput_rubble.MaximumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_rubble.MinimumSize = New System.Drawing.Size(175, 20)
@@ -3060,7 +3072,7 @@ Partial Class Form_main
         Me.RichTextBox1.Name = "RichTextBox1"
         Me.RichTextBox1.Size = New System.Drawing.Size(517, 239)
         Me.RichTextBox1.TabIndex = 98
-        Me.RichTextBox1.Text = resources.GetString("RichTextBox1.Text")
+        Me.RichTextBox1.Text = "TODO:" & Global.Microsoft.VisualBasic.ChrW(10) & "  -  Add missing mods" & Global.Microsoft.VisualBasic.ChrW(10) & "  -  Add Moa Pets" & Global.Microsoft.VisualBasic.ChrW(10) & "  -  Archwing"
         '
         'Label_companions
         '

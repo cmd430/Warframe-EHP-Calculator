@@ -87,6 +87,14 @@ Public Class CheckedInput
     Public Event CheckedChanged As EventHandler
     Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
         Checked = sender.Checked
+        ' Allow tag to disable 'same' mods
+        If Tag IsNot Nothing And Checked Then
+            For Each control In Parent.Controls.OfType(Of CheckedInput).Where(Function(ci) ci.Tag = Tag)
+                If Not control.Name = Name And control.Checked = True Then
+                    control.Checked = False
+                End If
+            Next
+        End If
         RaiseEvent CheckedChanged(Me, e)
     End Sub
 

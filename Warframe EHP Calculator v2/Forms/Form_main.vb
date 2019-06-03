@@ -1,7 +1,6 @@
 ﻿Imports System.IO
 Imports System.Reflection
 Imports System.Net
-Imports System.Runtime.InteropServices
 Imports System.Xml.Serialization
 Imports System.ComponentModel
 
@@ -12,8 +11,8 @@ Public Class Form_main
     Public liveVersion As String
     Public Warframes As List(Of Warframe)
     Public Companions As List(Of Companion)
-    Public DefaultRankMultipliers As List(Of Rank_Multiplier)
-    Public DefaultRankMultipliers_Sentinels As List(Of Rank_Multiplier)
+    Public Archwings As List(Of Archwing)
+    Public DefaultRankMultipliers As Rank_Multipliers
 
     Private Sub Main_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
         My.Settings.DefaultToMax = MaxValueToggle_warframes.Checked
@@ -37,12 +36,8 @@ Public Class Form_main
         '
         Dim serializer As XmlSerializer
         Using stream As New StreamReader(assembly.GetManifestResourceStream("Warframe_EHP_Calculator_v2.DefaultRankMultipliers.xml"))
-            serializer = New XmlSerializer(GetType(List(Of Rank_Multiplier)), New XmlRootAttribute("rank_multipliers"))
-            DefaultRankMultipliers = DirectCast(serializer.Deserialize(stream), List(Of Rank_Multiplier))
-        End Using
-        Using stream As New StreamReader(assembly.GetManifestResourceStream("Warframe_EHP_Calculator_v2.DefaultRankMultipliersSentinels.xml"))
-            serializer = New XmlSerializer(GetType(List(Of Rank_Multiplier)), New XmlRootAttribute("rank_multipliers"))
-            DefaultRankMultipliers_Sentinels = DirectCast(serializer.Deserialize(stream), List(Of Rank_Multiplier))
+            serializer = New XmlSerializer(GetType(Rank_Multipliers), New XmlRootAttribute("rank_multipliers"))
+            DefaultRankMultipliers = DirectCast(serializer.Deserialize(stream), Rank_Multipliers)
         End Using
         Using stream As New StreamReader(assembly.GetManifestResourceStream("Warframe_EHP_Calculator_v2.Warframes.xml"))
             serializer = New XmlSerializer(GetType(List(Of Warframe)), New XmlRootAttribute("warframes"))
@@ -52,11 +47,19 @@ Public Class Form_main
             serializer = New XmlSerializer(GetType(List(Of Companion)), New XmlRootAttribute("companions"))
             Companions = DirectCast(serializer.Deserialize(stream), List(Of Companion)).OrderBy(Function(c) c.Sort).ThenBy(Function(c) c.Name).ToList()
         End Using
+        Using stream As New StreamReader(assembly.GetManifestResourceStream("Warframe_EHP_Calculator_v2.Archwings.xml"))
+            serializer = New XmlSerializer(GetType(List(Of Archwing)), New XmlRootAttribute("archwings"))
+            Archwings = DirectCast(serializer.Deserialize(stream), List(Of Archwing)).OrderBy(Function(aw) aw.Name).ToList()
+        End Using
         For Each warframe As Warframe In Warframes
             ComboBox_warframes.Items.Add(warframe.Name)
         Next
         For Each companion As Companion In Companions
             ComboBox_companions.Items.Add(companion.Name)
+        Next
+        For Each archwing As Archwing In Archwings
+            ' TODO: UI for Archwings
+            'ComboBox_archwings.Items.Add(archwing.Name)
         Next
         '
         '   Hide Debug/Dev controls
@@ -285,27 +288,27 @@ Public Class Form_main
             If Not currentWarframe.Rank_Multipliers.Find(Function(rm) rm.Name = "armor") Is Nothing Then
                 Armor = baseArmor * currentWarframe.Rank_Multipliers.Find(Function(rm) rm.Name = "armor").Multiplier
             Else
-                Armor = baseArmor * DefaultRankMultipliers.Find(Function(m) m.Name = "armor").Multiplier
+                Armor = baseArmor * DefaultRankMultipliers.Warframes.Find(Function(m) m.Name = "armor").Multiplier
             End If
             If Not currentWarframe.Rank_Multipliers.Find(Function(rm) rm.Name = "health") Is Nothing Then
                 Health = baseHealth * currentWarframe.Rank_Multipliers.Find(Function(rm) rm.Name = "health").Multiplier
             Else
-                Health = baseHealth * DefaultRankMultipliers.Find(Function(m) m.Name = "health").Multiplier
+                Health = baseHealth * DefaultRankMultipliers.Warframes.Find(Function(m) m.Name = "health").Multiplier
             End If
             If Not currentWarframe.Rank_Multipliers.Find(Function(rm) rm.Name = "shield") Is Nothing Then
                 Shield = baseShield * currentWarframe.Rank_Multipliers.Find(Function(rm) rm.Name = "shield").Multiplier
             Else
-                Shield = baseShield * DefaultRankMultipliers.Find(Function(m) m.Name = "shield").Multiplier
+                Shield = baseShield * DefaultRankMultipliers.Warframes.Find(Function(m) m.Name = "shield").Multiplier
             End If
             If Not currentWarframe.Rank_Multipliers.Find(Function(rm) rm.Name = "energy") Is Nothing Then
                 Energy = baseEnergy * currentWarframe.Rank_Multipliers.Find(Function(rm) rm.Name = "energy").Multiplier
             Else
-                Energy = baseEnergy * DefaultRankMultipliers.Find(Function(m) m.Name = "energy").Multiplier
+                Energy = baseEnergy * DefaultRankMultipliers.Warframes.Find(Function(m) m.Name = "energy").Multiplier
             End If
             If Not currentWarframe.Rank_Multipliers.Find(Function(rm) rm.Name = "strength") Is Nothing Then
                 powerStrength = basePowerStrength * currentWarframe.Rank_Multipliers.Find(Function(rm) rm.Name = "strength").Multiplier
             Else
-                powerStrength = basePowerStrength * DefaultRankMultipliers.Find(Function(m) m.Name = "strength").Multiplier
+                powerStrength = basePowerStrength * DefaultRankMultipliers.Warframes.Find(Function(m) m.Name = "strength").Multiplier
             End If
             '
             ' Overshields
@@ -871,39 +874,6 @@ Public Class Form_main
                 End If
             Next
         End If
-        '
-        '   RadioButton Function for Umbral Mods
-        '
-        If sender.Name = "CheckedInput_umbralFiber" Then
-            If sender.Checked Then
-                CheckedInput_steelFiber.Checked = False
-            End If
-        End If
-        If sender.Name = "CheckedInput_umbralVitality" Then
-            If sender.Checked Then
-                CheckedInput_vitality.Checked = False
-            End If
-        End If
-        If sender.Name = "CheckedInput_umbralIntensify" Then
-            If sender.Checked Then
-                CheckedInput_intensify.Checked = False
-            End If
-        End If
-        If sender.Name = "CheckedInput_steelFiber" Then
-            If sender.Checked Then
-                CheckedInput_umbralFiber.Checked = False
-            End If
-        End If
-        If sender.Name = "CheckedInput_vitality" Then
-            If sender.Checked Then
-                CheckedInput_umbralVitality.Checked = False
-            End If
-        End If
-        If sender.Name = "CheckedInput_intensify" Then
-            If sender.Checked Then
-                CheckedInput_umbralIntensify.Checked = False
-            End If
-        End If
         Companion_Value_Changed(sender, e)
     End Sub
 
@@ -969,27 +939,27 @@ Public Class Form_main
                 Armor = baseArmor * currentCompanion.Rank_Multipliers.Find(Function(rm) rm.Name = "armor").Multiplier
             Else
                 If currentCompanion.Type = "sentinel" Then
-                    Armor = baseArmor * DefaultRankMultipliers_Sentinels.Find(Function(m) m.Name = "armor").Multiplier
+                    Armor = baseArmor * DefaultRankMultipliers.Sentinels.Find(Function(m) m.Name = "armor").Multiplier
                 Else
-                    Armor = baseArmor * DefaultRankMultipliers.Find(Function(m) m.Name = "armor").Multiplier
+                    Armor = baseArmor * DefaultRankMultipliers.Companions.Find(Function(m) m.Name = "armor").Multiplier
                 End If
             End If
             If Not currentCompanion.Rank_Multipliers.Find(Function(rm) rm.Name = "health") Is Nothing Then
                 Health = baseHealth * currentCompanion.Rank_Multipliers.Find(Function(rm) rm.Name = "health").Multiplier
             Else
                 If currentCompanion.Type = "sentinel" Then
-                    Health = baseHealth * DefaultRankMultipliers_Sentinels.Find(Function(m) m.Name = "health").Multiplier
+                    Health = baseHealth * DefaultRankMultipliers.Sentinels.Find(Function(m) m.Name = "health").Multiplier
                 Else
-                    Health = baseHealth * DefaultRankMultipliers.Find(Function(m) m.Name = "health").Multiplier
+                    Health = baseHealth * DefaultRankMultipliers.Companions.Find(Function(m) m.Name = "health").Multiplier
                 End If
             End If
             If Not currentCompanion.Rank_Multipliers.Find(Function(rm) rm.Name = "shield") Is Nothing Then
                 Shield = baseShield * currentCompanion.Rank_Multipliers.Find(Function(rm) rm.Name = "shield").Multiplier
             Else
                 If currentCompanion.Type = "sentinel" Then
-                    Shield = baseShield * DefaultRankMultipliers_Sentinels.Find(Function(m) m.Name = "shield").Multiplier
+                    Shield = baseShield * DefaultRankMultipliers.Sentinels.Find(Function(m) m.Name = "shield").Multiplier
                 Else
-                    Shield = baseShield * DefaultRankMultipliers.Find(Function(m) m.Name = "shield").Multiplier
+                    Shield = baseShield * DefaultRankMultipliers.Companions.Find(Function(m) m.Name = "shield").Multiplier
                 End If
             End If
             damageReduction = StatBox_damageReduction.Value / 100
@@ -1051,39 +1021,6 @@ Public Class Form_main
             StatBox_companionShield.Value = Nothing
             StatBox_companionDamageReduction.Value = Nothing
             StatBox_companionEHP.Value = Nothing
-        End If
-        '
-        ' Radio Button Effect for 'same' mods
-        '
-        If sender.Name = "CheckedInput_companionLinkArmor" Then
-            If sender.Checked Then
-                CheckedInput_companionMetalFiber.Checked = False
-            End If
-        End If
-        If sender.Name = "CheckedInput_companionLinkHealth" Then
-            If sender.Checked Then
-                CheckedInput_companionEnhancedVitality.Checked = False
-            End If
-        End If
-        If sender.Name = "CheckedInput_companionLinkShield" Then
-            If sender.Checked Then
-                CheckedInput_companionCalculatedRedirection.Checked = False
-            End If
-        End If
-        If sender.Name = "CheckedInput_companionMetalFiber" Then
-            If sender.Checked Then
-                CheckedInput_companionLinkArmor.Checked = False
-            End If
-        End If
-        If sender.Name = "CheckedInput_companionEnhancedVitality" Then
-            If sender.Checked Then
-                CheckedInput_companionLinkHealth.Checked = False
-            End If
-        End If
-        If sender.Name = "CheckedInput_companionCalculatedRedirection" Then
-            If sender.Checked Then
-                CheckedInput_companionLinkShield.Checked = False
-            End If
         End If
     End Sub
 

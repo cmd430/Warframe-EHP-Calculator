@@ -16,6 +16,16 @@ Public Class [Variant]
     Public Property strength As Decimal
 End Class
 
+<XmlType(TypeName:="rank_multipliers")>
+Public Class Rank_Multipliers
+    <XmlArray("warframes")>
+    Public Property Warframes As New List(Of Rank_Multiplier)
+    <XmlArray("companions")>
+    Public Property Companions As New List(Of Rank_Multiplier)
+    <XmlArray("sentinels")>
+    Public Property Sentinels As New List(Of Rank_Multiplier)
+End Class
+
 <XmlType(TypeName:="rank_multiplier")>
 Public Class Rank_Multiplier
     <XmlAttribute("name")>
