@@ -57,12 +57,12 @@ Namespace My
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
-        Public Property DefaultToMax() As Boolean
+        Public Property DefaultToMax_warframes() As Boolean
             Get
-                Return CType(Me("DefaultToMax"),Boolean)
+                Return CType(Me("DefaultToMax_warframes"),Boolean)
             End Get
             Set
-                Me("DefaultToMax") = value
+                Me("DefaultToMax_warframes") = value
             End Set
         End Property
         
@@ -75,6 +75,18 @@ Namespace My
             End Get
             Set
                 Me("DefaultToMax_companions") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
+        Public Property DefaultToMax_archwings() As Boolean
+            Get
+                Return CType(Me("DefaultToMax_archwings"),Boolean)
+            End Get
+            Set
+                Me("DefaultToMax_archwings") = value
             End Set
         End Property
     End Class

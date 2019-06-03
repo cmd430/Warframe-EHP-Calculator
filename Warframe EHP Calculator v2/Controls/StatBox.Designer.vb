@@ -40,6 +40,7 @@ Partial Class StatBox
         Me.StatValue.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.StatValue.Cursor = System.Windows.Forms.Cursors.Default
+        Me.StatValue.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.251!)
         Me.StatValue.Location = New System.Drawing.Point(90, 0)
         Me.StatValue.Name = "StatValue"
         Me.StatValue.ReadOnly = True

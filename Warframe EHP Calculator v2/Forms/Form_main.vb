@@ -14,9 +14,21 @@ Public Class Form_main
     Public Archwings As List(Of Archwing)
     Public DefaultRankMultipliers As Rank_Multipliers
 
+    '
+    ' Fix Laggy Resize Events
+    ' Only redraw on end resize
+    '
+    Private Sub Main_ResizeBegin(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.ResizeBegin
+        SuspendLayout()
+    End Sub
+    Private Sub Main_ResizeEnd(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.ResizeEnd
+        ResumeLayout()
+    End Sub
+
     Private Sub Main_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
-        My.Settings.DefaultToMax = MaxValueToggle_warframes.Checked
+        My.Settings.DefaultToMax_warframes = MaxValueToggle_warframes.Checked
         My.Settings.DefaultToMax_companions = MaxValueToggle_compainions.Checked
+        My.Settings.DefaultToMax_archwings = MaxValueToggle_archwings.Checked
     End Sub
 
     Private Sub Main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -58,8 +70,7 @@ Public Class Form_main
             ComboBox_companions.Items.Add(companion.Name)
         Next
         For Each archwing As Archwing In Archwings
-            ' TODO: UI for Archwings
-            'ComboBox_archwings.Items.Add(archwing.Name)
+            ComboBox_archwings.Items.Add(archwing.Name)
         Next
         '
         '   Hide Debug/Dev controls
@@ -94,6 +105,7 @@ Public Class Form_main
         '
         ComboBox_warframes.SelectedIndex = 0
         ComboBox_companions.SelectedIndex = 0
+        ComboBox_archwings.SelectedIndex = 0
         ComboBox_blocking.SelectedIndex = 0
         '
         '   UI Update on warframe change - ability and helmet enabling
@@ -102,9 +114,9 @@ Public Class Form_main
         '   with loops to make my life easier
         '
         AddHandler ComboBox_warframes.SelectedIndexChanged, AddressOf Warframe_Value_Changed
-        AddHandler VariantSelection1.SelectedVariantChanged, AddressOf Warframe_Value_Changed
+        AddHandler VariantSelection_warframes.SelectedVariantChanged, AddressOf Warframe_Value_Changed
         AddHandler ComboBox_blocking.SelectedIndexChanged, AddressOf Warframe_Value_Changed
-        For Each Group As Control In FlowLayoutPanel_warframeMainLayout.Controls
+        For Each Group As Control In FlowLayoutPanel_warframeModsLayout.Controls
             If TypeOf Group Is CheckedGroupBox Then
                 For Each Control As Control In CType(Group, CheckedGroupBox).FlowLayout.Controls
                     If TypeOf Control Is CheckedInput Then
@@ -131,7 +143,7 @@ Public Class Form_main
         AddHandler CompanionVariantSelection1.SelectedVariantChanged, AddressOf Companion_Value_Changed
         AddHandler CheckBox_companionPrimeCollar.CheckedChanged, AddressOf Companion_Value_Changed
         AddHandler NumericInput_companionStability.ValueChanged, AddressOf Companion_Value_Changed
-        For Each Group As Control In FlowLayoutPanel_compainionMainLayout.Controls
+        For Each Group As Control In FlowLayoutPanel_compainionModsLayout.Controls
             If TypeOf Group Is CheckedGroupBox Then
                 For Each Control As Control In CType(Group, CheckedGroupBox).FlowLayout.Controls
                     If TypeOf Control Is CheckedInput Then
@@ -154,8 +166,9 @@ Public Class Form_main
         '
         ' Set Deafult Values to Max
         '
-        MaxValueToggle_warframes.Checked = My.Settings.DefaultToMax
+        MaxValueToggle_warframes.Checked = My.Settings.DefaultToMax_warframes
         MaxValueToggle_compainions.Checked = My.Settings.DefaultToMax_companions
+        MaxValueToggle_archwings.Checked = My.Settings.DefaultToMax_archwings
         '
         ' Check for Update
         '
@@ -168,7 +181,7 @@ Public Class Form_main
         Catch ex As Exception
             'Cant check for updates
         End Try
-        Me.Size = New Size(FlowLayoutPanel_warframeMainLayout.Size.Width + 32, FlowLayoutPanel_warframeMainLayout.Size.Height + TableLayoutPanel_warframeTopLayout.Size.Height + 82)
+        'Me.Size = New Size(TableLayoutPanel_warframeMainLayout.Size.Width + 26, TableLayoutPanel_warframeMainLayout.Size.Height + TableLayoutPanel_warframeTopLayout.Size.Height + 81)
     End Sub
 
     Private Sub Warframe_Value_Changed(sender As Object, e As EventArgs)
@@ -212,13 +225,13 @@ Public Class Form_main
             '   if so we can enable to checkbox
             '
             If hasPrime And hasUmbra Then
-                VariantSelection1.AvailableVariants = "prime_umbra"
+                VariantSelection_warframes.AvailableVariants = "prime_umbra"
             ElseIf hasPrime Then
-                VariantSelection1.AvailableVariants = "prime"
+                VariantSelection_warframes.AvailableVariants = "prime"
             ElseIf hasUmbra Then
-                VariantSelection1.AvailableVariants = "umbra"
+                VariantSelection_warframes.AvailableVariants = "umbra"
             Else
-                VariantSelection1.AvailableVariants = "base"
+                VariantSelection_warframes.AvailableVariants = "base"
             End If
             '
             '   Special Modifiers
@@ -279,7 +292,7 @@ Public Class Form_main
             '
             ' Stats
             '
-            Dim currentVariant As [Variant] = currentWarframe.Variants.Find(Function(var) var.Name = VariantSelection1.SelectedVariant)
+            Dim currentVariant As [Variant] = currentWarframe.Variants.Find(Function(var) var.Name = VariantSelection_warframes.SelectedVariant)
             baseArmor = currentVariant.Armor
             baseHealth = currentVariant.Health
             baseShield = currentVariant.Shield

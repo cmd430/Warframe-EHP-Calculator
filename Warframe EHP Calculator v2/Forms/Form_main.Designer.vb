@@ -26,11 +26,16 @@ Partial Class Form_main
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form_main))
         Me.TabControl_main = New System.Windows.Forms.TabControl()
         Me.TabPage_warframe = New System.Windows.Forms.TabPage()
-        Me.TableLayoutPanel_warframeTopLayout = New System.Windows.Forms.TableLayoutPanel()
-        Me.ComboBox_warframes = New System.Windows.Forms.ComboBox()
-        Me.VariantSelection1 = New Warframe_EHP_Calculator_v2.VariantSelection()
-        Me.MaxValueToggle_warframes = New Warframe_EHP_Calculator_v2.MaxValueToggle()
-        Me.FlowLayoutPanel_warframeMainLayout = New System.Windows.Forms.FlowLayoutPanel()
+        Me.TableLayoutPanel_warframeMainLayout = New System.Windows.Forms.TableLayoutPanel()
+        Me.GroupBox_stats = New System.Windows.Forms.GroupBox()
+        Me.FlowLayoutPanel_warframeStatsLayout = New System.Windows.Forms.FlowLayoutPanel()
+        Me.StatBox_warframeArmor = New Warframe_EHP_Calculator_v2.StatBox()
+        Me.StatBox_warframeHealth = New Warframe_EHP_Calculator_v2.StatBox()
+        Me.StatBox_warframeShield = New Warframe_EHP_Calculator_v2.StatBox()
+        Me.StatBox_warframeEnergy = New Warframe_EHP_Calculator_v2.StatBox()
+        Me.StatBox_warframePowerStrength = New Warframe_EHP_Calculator_v2.StatBox()
+        Me.StatBox_warframeEHP = New Warframe_EHP_Calculator_v2.StatBox()
+        Me.FlowLayoutPanel_warframeModsLayout = New System.Windows.Forms.FlowLayoutPanel()
         Me.CheckedGroupBox_aura = New Warframe_EHP_Calculator_v2.CheckedGroupBox()
         Me.RadioInput_growingPower = New Warframe_EHP_Calculator_v2.RadioInput()
         Me.RadioInput_standUnited = New Warframe_EHP_Calculator_v2.RadioInput()
@@ -83,18 +88,13 @@ Partial Class Form_main
         Me.CheckedInput_arcaneGuardian = New Warframe_EHP_Calculator_v2.CheckedInput()
         Me.CheckedGroupBox_abilities = New Warframe_EHP_Calculator_v2.CheckedGroupBox()
         Me.CheckedGroupBox_arcaneHelmets = New Warframe_EHP_Calculator_v2.CheckedGroupBox()
-        Me.GroupBox_stats = New System.Windows.Forms.GroupBox()
-        Me.FlowLayoutPanel_warframeStatsLayout = New System.Windows.Forms.FlowLayoutPanel()
-        Me.StatBox_warframeArmor = New Warframe_EHP_Calculator_v2.StatBox()
-        Me.StatBox_warframeHealth = New Warframe_EHP_Calculator_v2.StatBox()
-        Me.StatBox_warframeShield = New Warframe_EHP_Calculator_v2.StatBox()
-        Me.StatBox_warframeEnergy = New Warframe_EHP_Calculator_v2.StatBox()
-        Me.StatBox_warframePowerStrength = New Warframe_EHP_Calculator_v2.StatBox()
-        Me.Panel_warframeStatsSpacer = New System.Windows.Forms.Panel()
-        Me.StatBox_damageReduction = New Warframe_EHP_Calculator_v2.StatBox()
-        Me.StatBox_warframeEHP = New Warframe_EHP_Calculator_v2.StatBox()
+        Me.TableLayoutPanel_warframeTopLayout = New System.Windows.Forms.TableLayoutPanel()
+        Me.ComboBox_warframes = New System.Windows.Forms.ComboBox()
+        Me.VariantSelection_warframes = New Warframe_EHP_Calculator_v2.VariantSelection()
+        Me.MaxValueToggle_warframes = New Warframe_EHP_Calculator_v2.MaxValueToggle()
         Me.TabPage_companion = New System.Windows.Forms.TabPage()
-        Me.FlowLayoutPanel_compainionMainLayout = New System.Windows.Forms.FlowLayoutPanel()
+        Me.TableLayoutPanel_compainionMainLayout = New System.Windows.Forms.TableLayoutPanel()
+        Me.FlowLayoutPanel_compainionModsLayout = New System.Windows.Forms.FlowLayoutPanel()
         Me.CheckedGroupBox_companionSurvivability = New Warframe_EHP_Calculator_v2.CheckedGroupBox()
         Me.CheckedInput_companionCalculatedRedirection = New Warframe_EHP_Calculator_v2.CheckedInput()
         Me.CheckedInput_companionEnhancedVitality = New Warframe_EHP_Calculator_v2.CheckedInput()
@@ -102,13 +102,11 @@ Partial Class Form_main
         Me.CheckedInput_companionLinkShield = New Warframe_EHP_Calculator_v2.CheckedInput()
         Me.CheckedInput_companionLinkHealth = New Warframe_EHP_Calculator_v2.CheckedInput()
         Me.CheckedInput_companionLinkArmor = New Warframe_EHP_Calculator_v2.CheckedInput()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox_companionStats = New System.Windows.Forms.GroupBox()
         Me.FlowLayoutPanel_companionStatsLayout = New System.Windows.Forms.FlowLayoutPanel()
         Me.StatBox_companionArmor = New Warframe_EHP_Calculator_v2.StatBox()
         Me.StatBox_companionHealth = New Warframe_EHP_Calculator_v2.StatBox()
         Me.StatBox_companionShield = New Warframe_EHP_Calculator_v2.StatBox()
-        Me.Panel_compainionStatSpacer = New System.Windows.Forms.Panel()
-        Me.StatBox_companionDamageReduction = New Warframe_EHP_Calculator_v2.StatBox()
         Me.StatBox_companionEHP = New Warframe_EHP_Calculator_v2.StatBox()
         Me.TableLayoutPanel_companionTopLayout = New System.Windows.Forms.TableLayoutPanel()
         Me.ComboBox_companions = New System.Windows.Forms.ComboBox()
@@ -118,6 +116,22 @@ Partial Class Form_main
         Me.NumericInput_companionStability = New Warframe_EHP_Calculator_v2.NumericInput()
         Me.TabPage_archwing = New System.Windows.Forms.TabPage()
         Me.Label_archwingPlaceholder = New System.Windows.Forms.Label()
+        Me.TableLayoutPanel_archwingMainLayout = New System.Windows.Forms.TableLayoutPanel()
+        Me.GroupBox_archwingStats = New System.Windows.Forms.GroupBox()
+        Me.FlowLayoutPanel_archwingStatsLayout = New System.Windows.Forms.FlowLayoutPanel()
+        Me.StatBox_archwingArmor = New Warframe_EHP_Calculator_v2.StatBox()
+        Me.StatBox_archwingHealth = New Warframe_EHP_Calculator_v2.StatBox()
+        Me.StatBox_archwingShield = New Warframe_EHP_Calculator_v2.StatBox()
+        Me.StatBox_archwingEHP = New Warframe_EHP_Calculator_v2.StatBox()
+        Me.FlowLayoutPanel_archwingModsLayout = New System.Windows.Forms.FlowLayoutPanel()
+        Me.CheckedGroupBox_archwingSurvivability = New Warframe_EHP_Calculator_v2.CheckedGroupBox()
+        Me.CheckedInput_energyInversion = New Warframe_EHP_Calculator_v2.CheckedInput()
+        Me.CheckedInput_enhancedDurability = New Warframe_EHP_Calculator_v2.CheckedInput()
+        Me.CheckedInput_argonPlating = New Warframe_EHP_Calculator_v2.CheckedInput()
+        Me.TableLayoutPanel_archwingTopLayout = New System.Windows.Forms.TableLayoutPanel()
+        Me.ComboBox_archwings = New System.Windows.Forms.ComboBox()
+        Me.VariantSelection_archwings = New Warframe_EHP_Calculator_v2.VariantSelection()
+        Me.MaxValueToggle_archwings = New Warframe_EHP_Calculator_v2.MaxValueToggle()
         Me.TabPage_development = New System.Windows.Forms.TabPage()
         Me.TabControl_arcaneHelmets = New System.Windows.Forms.TabControl()
         Me.TabPage_arcaneHelmetsDefault = New System.Windows.Forms.TabPage()
@@ -257,10 +271,15 @@ Partial Class Form_main
         Me.Icons = New System.Windows.Forms.ImageList(Me.components)
         Me.Label_author = New System.Windows.Forms.Label()
         Me.Label_love = New System.Windows.Forms.Label()
+        Me.StatBox_companionDamageReduction = New Warframe_EHP_Calculator_v2.StatBox()
+        Me.StatBox_damageReduction = New Warframe_EHP_Calculator_v2.StatBox()
+        Me.StatBox_archwingDamageReduction = New Warframe_EHP_Calculator_v2.StatBox()
         Me.TabControl_main.SuspendLayout()
         Me.TabPage_warframe.SuspendLayout()
-        Me.TableLayoutPanel_warframeTopLayout.SuspendLayout()
-        Me.FlowLayoutPanel_warframeMainLayout.SuspendLayout()
+        Me.TableLayoutPanel_warframeMainLayout.SuspendLayout()
+        Me.GroupBox_stats.SuspendLayout()
+        Me.FlowLayoutPanel_warframeStatsLayout.SuspendLayout()
+        Me.FlowLayoutPanel_warframeModsLayout.SuspendLayout()
         Me.CheckedGroupBox_aura.SuspendLayout()
         Me.CheckedGroupBox_survivability.SuspendLayout()
         Me.CheckedGroupBox_miscellaneous.SuspendLayout()
@@ -271,17 +290,21 @@ Partial Class Form_main
         Me.CheckedGroupBox_focus.SuspendLayout()
         Me.CheckedGroupBox_specialEffects.SuspendLayout()
         Me.CheckedGroupBox_arcanes.SuspendLayout()
-        Me.GroupBox_stats.SuspendLayout()
-        Me.FlowLayoutPanel_warframeStatsLayout.SuspendLayout()
-        Me.Panel_warframeStatsSpacer.SuspendLayout()
+        Me.TableLayoutPanel_warframeTopLayout.SuspendLayout()
         Me.TabPage_companion.SuspendLayout()
-        Me.FlowLayoutPanel_compainionMainLayout.SuspendLayout()
+        Me.TableLayoutPanel_compainionMainLayout.SuspendLayout()
+        Me.FlowLayoutPanel_compainionModsLayout.SuspendLayout()
         Me.CheckedGroupBox_companionSurvivability.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
+        Me.GroupBox_companionStats.SuspendLayout()
         Me.FlowLayoutPanel_companionStatsLayout.SuspendLayout()
-        Me.Panel_compainionStatSpacer.SuspendLayout()
         Me.TableLayoutPanel_companionTopLayout.SuspendLayout()
         Me.TabPage_archwing.SuspendLayout()
+        Me.TableLayoutPanel_archwingMainLayout.SuspendLayout()
+        Me.GroupBox_archwingStats.SuspendLayout()
+        Me.FlowLayoutPanel_archwingStatsLayout.SuspendLayout()
+        Me.FlowLayoutPanel_archwingModsLayout.SuspendLayout()
+        Me.CheckedGroupBox_archwingSurvivability.SuspendLayout()
+        Me.TableLayoutPanel_archwingTopLayout.SuspendLayout()
         Me.TabPage_development.SuspendLayout()
         Me.TabControl_arcaneHelmets.SuspendLayout()
         Me.TabPage_arcaneHelmetsDefault.SuspendLayout()
@@ -368,106 +391,174 @@ Partial Class Form_main
         Me.TabControl_main.Controls.Add(Me.TabPage_archwing)
         Me.TabControl_main.Controls.Add(Me.TabPage_development)
         Me.TabControl_main.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControl_main.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabControl_main.ImageList = Me.Icons
         Me.TabControl_main.ItemSize = New System.Drawing.Size(115, 25)
         Me.TabControl_main.Location = New System.Drawing.Point(0, 0)
         Me.TabControl_main.Name = "TabControl_main"
         Me.TabControl_main.SelectedIndex = 0
-        Me.TabControl_main.Size = New System.Drawing.Size(788, 604)
+        Me.TabControl_main.Size = New System.Drawing.Size(787, 607)
         Me.TabControl_main.TabIndex = 0
         '
         'TabPage_warframe
         '
         Me.TabPage_warframe.BackColor = System.Drawing.Color.White
+        Me.TabPage_warframe.Controls.Add(Me.TableLayoutPanel_warframeMainLayout)
         Me.TabPage_warframe.Controls.Add(Me.TableLayoutPanel_warframeTopLayout)
-        Me.TabPage_warframe.Controls.Add(Me.FlowLayoutPanel_warframeMainLayout)
         Me.TabPage_warframe.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabPage_warframe.ForeColor = System.Drawing.Color.Black
         Me.TabPage_warframe.ImageIndex = 0
         Me.TabPage_warframe.Location = New System.Drawing.Point(4, 29)
         Me.TabPage_warframe.Name = "TabPage_warframe"
         Me.TabPage_warframe.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_warframe.Size = New System.Drawing.Size(780, 571)
+        Me.TabPage_warframe.Size = New System.Drawing.Size(779, 574)
         Me.TabPage_warframe.TabIndex = 0
         Me.TabPage_warframe.Text = "Warframe  "
         '
-        'TableLayoutPanel_warframeTopLayout
+        'TableLayoutPanel_warframeMainLayout
         '
-        Me.TableLayoutPanel_warframeTopLayout.ColumnCount = 3
-        Me.TableLayoutPanel_warframeTopLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 196.0!))
-        Me.TableLayoutPanel_warframeTopLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 127.0!))
-        Me.TableLayoutPanel_warframeTopLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
-        Me.TableLayoutPanel_warframeTopLayout.Controls.Add(Me.ComboBox_warframes, 0, 0)
-        Me.TableLayoutPanel_warframeTopLayout.Controls.Add(Me.VariantSelection1, 1, 0)
-        Me.TableLayoutPanel_warframeTopLayout.Controls.Add(Me.MaxValueToggle_warframes, 2, 0)
-        Me.TableLayoutPanel_warframeTopLayout.Dock = System.Windows.Forms.DockStyle.Top
-        Me.TableLayoutPanel_warframeTopLayout.Location = New System.Drawing.Point(3, 3)
-        Me.TableLayoutPanel_warframeTopLayout.Name = "TableLayoutPanel_warframeTopLayout"
-        Me.TableLayoutPanel_warframeTopLayout.RowCount = 1
-        Me.TableLayoutPanel_warframeTopLayout.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel_warframeTopLayout.Size = New System.Drawing.Size(774, 27)
-        Me.TableLayoutPanel_warframeTopLayout.TabIndex = 128
+        Me.TableLayoutPanel_warframeMainLayout.ColumnCount = 2
+        Me.TableLayoutPanel_warframeMainLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel_warframeMainLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 196.0!))
+        Me.TableLayoutPanel_warframeMainLayout.Controls.Add(Me.GroupBox_stats, 1, 0)
+        Me.TableLayoutPanel_warframeMainLayout.Controls.Add(Me.FlowLayoutPanel_warframeModsLayout, 0, 0)
+        Me.TableLayoutPanel_warframeMainLayout.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel_warframeMainLayout.Location = New System.Drawing.Point(3, 30)
+        Me.TableLayoutPanel_warframeMainLayout.Margin = New System.Windows.Forms.Padding(0)
+        Me.TableLayoutPanel_warframeMainLayout.Name = "TableLayoutPanel_warframeMainLayout"
+        Me.TableLayoutPanel_warframeMainLayout.RowCount = 1
+        Me.TableLayoutPanel_warframeMainLayout.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel_warframeMainLayout.Size = New System.Drawing.Size(773, 541)
+        Me.TableLayoutPanel_warframeMainLayout.TabIndex = 129
         '
-        'ComboBox_warframes
+        'GroupBox_stats
         '
-        Me.ComboBox_warframes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox_warframes.FormattingEnabled = True
-        Me.ComboBox_warframes.Items.AddRange(New Object() {"Select a Warframe"})
-        Me.ComboBox_warframes.Location = New System.Drawing.Point(3, 3)
-        Me.ComboBox_warframes.Name = "ComboBox_warframes"
-        Me.ComboBox_warframes.Size = New System.Drawing.Size(187, 21)
-        Me.ComboBox_warframes.TabIndex = 0
+        Me.GroupBox_stats.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox_stats.Controls.Add(Me.FlowLayoutPanel_warframeStatsLayout)
+        Me.GroupBox_stats.Controls.Add(Me.StatBox_warframeEHP)
+        Me.GroupBox_stats.Location = New System.Drawing.Point(582, 3)
+        Me.GroupBox_stats.Name = "GroupBox_stats"
+        Me.GroupBox_stats.Size = New System.Drawing.Size(188, 535)
+        Me.GroupBox_stats.TabIndex = 130
+        Me.GroupBox_stats.TabStop = False
+        Me.GroupBox_stats.Text = "Stats "
         '
-        'VariantSelection1
+        'FlowLayoutPanel_warframeStatsLayout
         '
-        Me.VariantSelection1.AvailableVariants = "base"
-        Me.VariantSelection1.Location = New System.Drawing.Point(199, 3)
-        Me.VariantSelection1.MaximumSize = New System.Drawing.Size(121, 21)
-        Me.VariantSelection1.MinimumSize = New System.Drawing.Size(121, 21)
-        Me.VariantSelection1.Name = "VariantSelection1"
-        Me.VariantSelection1.SelectedVariant = "base"
-        Me.VariantSelection1.Size = New System.Drawing.Size(121, 21)
-        Me.VariantSelection1.TabIndex = 126
+        Me.FlowLayoutPanel_warframeStatsLayout.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.FlowLayoutPanel_warframeStatsLayout.AutoSize = True
+        Me.FlowLayoutPanel_warframeStatsLayout.Controls.Add(Me.StatBox_warframeArmor)
+        Me.FlowLayoutPanel_warframeStatsLayout.Controls.Add(Me.StatBox_warframeHealth)
+        Me.FlowLayoutPanel_warframeStatsLayout.Controls.Add(Me.StatBox_warframeShield)
+        Me.FlowLayoutPanel_warframeStatsLayout.Controls.Add(Me.StatBox_warframeEnergy)
+        Me.FlowLayoutPanel_warframeStatsLayout.Controls.Add(Me.StatBox_warframePowerStrength)
+        Me.FlowLayoutPanel_warframeStatsLayout.Controls.Add(Me.StatBox_damageReduction)
+        Me.FlowLayoutPanel_warframeStatsLayout.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
+        Me.FlowLayoutPanel_warframeStatsLayout.Location = New System.Drawing.Point(4, 14)
+        Me.FlowLayoutPanel_warframeStatsLayout.Name = "FlowLayoutPanel_warframeStatsLayout"
+        Me.FlowLayoutPanel_warframeStatsLayout.Size = New System.Drawing.Size(181, 489)
+        Me.FlowLayoutPanel_warframeStatsLayout.TabIndex = 129
         '
-        'MaxValueToggle_warframes
+        'StatBox_warframeArmor
         '
-        Me.MaxValueToggle_warframes.Dock = System.Windows.Forms.DockStyle.Right
-        Me.MaxValueToggle_warframes.Location = New System.Drawing.Point(641, 5)
-        Me.MaxValueToggle_warframes.Margin = New System.Windows.Forms.Padding(3, 5, 3, 3)
-        Me.MaxValueToggle_warframes.MaximumSize = New System.Drawing.Size(130, 17)
-        Me.MaxValueToggle_warframes.MinimumSize = New System.Drawing.Size(130, 17)
-        Me.MaxValueToggle_warframes.Name = "MaxValueToggle_warframes"
-        Me.MaxValueToggle_warframes.Size = New System.Drawing.Size(130, 17)
-        Me.MaxValueToggle_warframes.TabIndex = 125
-        Me.MaxValueToggle_warframes.Text = "Default to Max Values"
+        Me.StatBox_warframeArmor.Location = New System.Drawing.Point(3, 3)
+        Me.StatBox_warframeArmor.MaximumSize = New System.Drawing.Size(175, 20)
+        Me.StatBox_warframeArmor.MinimumSize = New System.Drawing.Size(175, 20)
+        Me.StatBox_warframeArmor.Name = "StatBox_warframeArmor"
+        Me.StatBox_warframeArmor.Rounding = Warframe_EHP_Calculator_v2.StatBox.RoundingValues.Floor
+        Me.StatBox_warframeArmor.Size = New System.Drawing.Size(175, 20)
+        Me.StatBox_warframeArmor.TabIndex = 12
+        Me.StatBox_warframeArmor.Text = "Armor"
+        Me.StatBox_warframeArmor.Value = "0"
         '
-        'FlowLayoutPanel_warframeMainLayout
+        'StatBox_warframeHealth
         '
-        Me.FlowLayoutPanel_warframeMainLayout.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.StatBox_warframeHealth.Location = New System.Drawing.Point(3, 29)
+        Me.StatBox_warframeHealth.MaximumSize = New System.Drawing.Size(175, 20)
+        Me.StatBox_warframeHealth.MinimumSize = New System.Drawing.Size(175, 20)
+        Me.StatBox_warframeHealth.Name = "StatBox_warframeHealth"
+        Me.StatBox_warframeHealth.Rounding = Warframe_EHP_Calculator_v2.StatBox.RoundingValues.Floor
+        Me.StatBox_warframeHealth.Size = New System.Drawing.Size(175, 20)
+        Me.StatBox_warframeHealth.TabIndex = 13
+        Me.StatBox_warframeHealth.Text = "Health"
+        Me.StatBox_warframeHealth.Value = "0"
+        '
+        'StatBox_warframeShield
+        '
+        Me.StatBox_warframeShield.Location = New System.Drawing.Point(3, 55)
+        Me.StatBox_warframeShield.MaximumSize = New System.Drawing.Size(175, 20)
+        Me.StatBox_warframeShield.MinimumSize = New System.Drawing.Size(175, 20)
+        Me.StatBox_warframeShield.Name = "StatBox_warframeShield"
+        Me.StatBox_warframeShield.Rounding = Warframe_EHP_Calculator_v2.StatBox.RoundingValues.Floor
+        Me.StatBox_warframeShield.Size = New System.Drawing.Size(175, 20)
+        Me.StatBox_warframeShield.TabIndex = 14
+        Me.StatBox_warframeShield.Text = "Shield"
+        Me.StatBox_warframeShield.Value = "0"
+        '
+        'StatBox_warframeEnergy
+        '
+        Me.StatBox_warframeEnergy.Location = New System.Drawing.Point(3, 81)
+        Me.StatBox_warframeEnergy.MaximumSize = New System.Drawing.Size(175, 20)
+        Me.StatBox_warframeEnergy.MinimumSize = New System.Drawing.Size(175, 20)
+        Me.StatBox_warframeEnergy.Name = "StatBox_warframeEnergy"
+        Me.StatBox_warframeEnergy.Rounding = Warframe_EHP_Calculator_v2.StatBox.RoundingValues.Floor
+        Me.StatBox_warframeEnergy.Size = New System.Drawing.Size(175, 20)
+        Me.StatBox_warframeEnergy.TabIndex = 15
+        Me.StatBox_warframeEnergy.Text = "Energy"
+        Me.StatBox_warframeEnergy.Value = "0"
+        '
+        'StatBox_warframePowerStrength
+        '
+        Me.StatBox_warframePowerStrength.Location = New System.Drawing.Point(3, 107)
+        Me.StatBox_warframePowerStrength.MaximumSize = New System.Drawing.Size(175, 20)
+        Me.StatBox_warframePowerStrength.MinimumSize = New System.Drawing.Size(175, 20)
+        Me.StatBox_warframePowerStrength.Name = "StatBox_warframePowerStrength"
+        Me.StatBox_warframePowerStrength.Rounding = Warframe_EHP_Calculator_v2.StatBox.RoundingValues.Floor
+        Me.StatBox_warframePowerStrength.Size = New System.Drawing.Size(175, 20)
+        Me.StatBox_warframePowerStrength.TabIndex = 16
+        Me.StatBox_warframePowerStrength.Text = "Power Strength"
+        Me.StatBox_warframePowerStrength.Value = "0"
+        '
+        'StatBox_warframeEHP
+        '
+        Me.StatBox_warframeEHP.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.StatBox_warframeEHP.Location = New System.Drawing.Point(7, 509)
+        Me.StatBox_warframeEHP.MaximumSize = New System.Drawing.Size(175, 20)
+        Me.StatBox_warframeEHP.MinimumSize = New System.Drawing.Size(175, 20)
+        Me.StatBox_warframeEHP.Name = "StatBox_warframeEHP"
+        Me.StatBox_warframeEHP.Rounding = Warframe_EHP_Calculator_v2.StatBox.RoundingValues.Ceiling
+        Me.StatBox_warframeEHP.Size = New System.Drawing.Size(175, 20)
+        Me.StatBox_warframeEHP.TabIndex = 17
+        Me.StatBox_warframeEHP.Text = "Effective Health"
+        Me.StatBox_warframeEHP.Value = "0"
+        '
+        'FlowLayoutPanel_warframeModsLayout
+        '
+        Me.FlowLayoutPanel_warframeModsLayout.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.FlowLayoutPanel_warframeMainLayout.AutoSize = True
-        Me.FlowLayoutPanel_warframeMainLayout.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.FlowLayoutPanel_warframeMainLayout.BackColor = System.Drawing.Color.White
-        Me.FlowLayoutPanel_warframeMainLayout.Controls.Add(Me.CheckedGroupBox_aura)
-        Me.FlowLayoutPanel_warframeMainLayout.Controls.Add(Me.CheckedGroupBox_survivability)
-        Me.FlowLayoutPanel_warframeMainLayout.Controls.Add(Me.CheckedGroupBox_miscellaneous)
-        Me.FlowLayoutPanel_warframeMainLayout.Controls.Add(Me.CheckedGroupBox_powerStrength)
-        Me.FlowLayoutPanel_warframeMainLayout.Controls.Add(Me.CheckedGroupBox_dragonKeys)
-        Me.FlowLayoutPanel_warframeMainLayout.Controls.Add(Me.CheckedGroupBox_missionModifiers)
-        Me.FlowLayoutPanel_warframeMainLayout.Controls.Add(Me.CheckedGroupBox_blocking)
-        Me.FlowLayoutPanel_warframeMainLayout.Controls.Add(Me.CheckedGroupBox_focus)
-        Me.FlowLayoutPanel_warframeMainLayout.Controls.Add(Me.CheckedGroupBox_specialEffects)
-        Me.FlowLayoutPanel_warframeMainLayout.Controls.Add(Me.CheckedGroupBox_arcanes)
-        Me.FlowLayoutPanel_warframeMainLayout.Controls.Add(Me.CheckedGroupBox_abilities)
-        Me.FlowLayoutPanel_warframeMainLayout.Controls.Add(Me.CheckedGroupBox_arcaneHelmets)
-        Me.FlowLayoutPanel_warframeMainLayout.Controls.Add(Me.GroupBox_stats)
-        Me.FlowLayoutPanel_warframeMainLayout.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
-        Me.FlowLayoutPanel_warframeMainLayout.Location = New System.Drawing.Point(3, 33)
-        Me.FlowLayoutPanel_warframeMainLayout.Name = "FlowLayoutPanel_warframeMainLayout"
-        Me.FlowLayoutPanel_warframeMainLayout.Size = New System.Drawing.Size(773, 534)
-        Me.FlowLayoutPanel_warframeMainLayout.TabIndex = 127
+        Me.FlowLayoutPanel_warframeModsLayout.AutoSize = True
+        Me.FlowLayoutPanel_warframeModsLayout.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.FlowLayoutPanel_warframeModsLayout.BackColor = System.Drawing.Color.White
+        Me.FlowLayoutPanel_warframeModsLayout.Controls.Add(Me.CheckedGroupBox_aura)
+        Me.FlowLayoutPanel_warframeModsLayout.Controls.Add(Me.CheckedGroupBox_survivability)
+        Me.FlowLayoutPanel_warframeModsLayout.Controls.Add(Me.CheckedGroupBox_miscellaneous)
+        Me.FlowLayoutPanel_warframeModsLayout.Controls.Add(Me.CheckedGroupBox_powerStrength)
+        Me.FlowLayoutPanel_warframeModsLayout.Controls.Add(Me.CheckedGroupBox_dragonKeys)
+        Me.FlowLayoutPanel_warframeModsLayout.Controls.Add(Me.CheckedGroupBox_missionModifiers)
+        Me.FlowLayoutPanel_warframeModsLayout.Controls.Add(Me.CheckedGroupBox_blocking)
+        Me.FlowLayoutPanel_warframeModsLayout.Controls.Add(Me.CheckedGroupBox_focus)
+        Me.FlowLayoutPanel_warframeModsLayout.Controls.Add(Me.CheckedGroupBox_specialEffects)
+        Me.FlowLayoutPanel_warframeModsLayout.Controls.Add(Me.CheckedGroupBox_arcanes)
+        Me.FlowLayoutPanel_warframeModsLayout.Controls.Add(Me.CheckedGroupBox_abilities)
+        Me.FlowLayoutPanel_warframeModsLayout.Controls.Add(Me.CheckedGroupBox_arcaneHelmets)
+        Me.FlowLayoutPanel_warframeModsLayout.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
+        Me.FlowLayoutPanel_warframeModsLayout.Location = New System.Drawing.Point(0, 0)
+        Me.FlowLayoutPanel_warframeModsLayout.Margin = New System.Windows.Forms.Padding(0)
+        Me.FlowLayoutPanel_warframeModsLayout.Name = "FlowLayoutPanel_warframeModsLayout"
+        Me.FlowLayoutPanel_warframeModsLayout.Size = New System.Drawing.Size(577, 541)
+        Me.FlowLayoutPanel_warframeModsLayout.TabIndex = 127
         '
         'CheckedGroupBox_aura
         '
@@ -1065,159 +1156,99 @@ Partial Class Form_main
         Me.CheckedGroupBox_arcaneHelmets.TabStop = False
         Me.CheckedGroupBox_arcaneHelmets.Text = "Arcane Helmets"
         '
-        'GroupBox_stats
+        'TableLayoutPanel_warframeTopLayout
         '
-        Me.GroupBox_stats.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.GroupBox_stats.Controls.Add(Me.FlowLayoutPanel_warframeStatsLayout)
-        Me.GroupBox_stats.Location = New System.Drawing.Point(582, 3)
-        Me.GroupBox_stats.Name = "GroupBox_stats"
-        Me.GroupBox_stats.Size = New System.Drawing.Size(188, 528)
-        Me.GroupBox_stats.TabIndex = 130
-        Me.GroupBox_stats.TabStop = False
-        Me.GroupBox_stats.Text = "Stats "
+        Me.TableLayoutPanel_warframeTopLayout.ColumnCount = 3
+        Me.TableLayoutPanel_warframeTopLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 196.0!))
+        Me.TableLayoutPanel_warframeTopLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 127.0!))
+        Me.TableLayoutPanel_warframeTopLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
+        Me.TableLayoutPanel_warframeTopLayout.Controls.Add(Me.ComboBox_warframes, 0, 0)
+        Me.TableLayoutPanel_warframeTopLayout.Controls.Add(Me.VariantSelection_warframes, 1, 0)
+        Me.TableLayoutPanel_warframeTopLayout.Controls.Add(Me.MaxValueToggle_warframes, 2, 0)
+        Me.TableLayoutPanel_warframeTopLayout.Dock = System.Windows.Forms.DockStyle.Top
+        Me.TableLayoutPanel_warframeTopLayout.Location = New System.Drawing.Point(3, 3)
+        Me.TableLayoutPanel_warframeTopLayout.Name = "TableLayoutPanel_warframeTopLayout"
+        Me.TableLayoutPanel_warframeTopLayout.RowCount = 1
+        Me.TableLayoutPanel_warframeTopLayout.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel_warframeTopLayout.Size = New System.Drawing.Size(773, 27)
+        Me.TableLayoutPanel_warframeTopLayout.TabIndex = 128
         '
-        'FlowLayoutPanel_warframeStatsLayout
+        'ComboBox_warframes
         '
-        Me.FlowLayoutPanel_warframeStatsLayout.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.FlowLayoutPanel_warframeStatsLayout.AutoSize = True
-        Me.FlowLayoutPanel_warframeStatsLayout.Controls.Add(Me.StatBox_warframeArmor)
-        Me.FlowLayoutPanel_warframeStatsLayout.Controls.Add(Me.StatBox_warframeHealth)
-        Me.FlowLayoutPanel_warframeStatsLayout.Controls.Add(Me.StatBox_warframeShield)
-        Me.FlowLayoutPanel_warframeStatsLayout.Controls.Add(Me.StatBox_warframeEnergy)
-        Me.FlowLayoutPanel_warframeStatsLayout.Controls.Add(Me.StatBox_warframePowerStrength)
-        Me.FlowLayoutPanel_warframeStatsLayout.Controls.Add(Me.Panel_warframeStatsSpacer)
-        Me.FlowLayoutPanel_warframeStatsLayout.Controls.Add(Me.StatBox_warframeEHP)
-        Me.FlowLayoutPanel_warframeStatsLayout.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
-        Me.FlowLayoutPanel_warframeStatsLayout.Location = New System.Drawing.Point(4, 13)
-        Me.FlowLayoutPanel_warframeStatsLayout.Name = "FlowLayoutPanel_warframeStatsLayout"
-        Me.FlowLayoutPanel_warframeStatsLayout.Size = New System.Drawing.Size(181, 509)
-        Me.FlowLayoutPanel_warframeStatsLayout.TabIndex = 129
+        Me.ComboBox_warframes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox_warframes.FormattingEnabled = True
+        Me.ComboBox_warframes.Items.AddRange(New Object() {"Select a Warframe"})
+        Me.ComboBox_warframes.Location = New System.Drawing.Point(3, 3)
+        Me.ComboBox_warframes.Name = "ComboBox_warframes"
+        Me.ComboBox_warframes.Size = New System.Drawing.Size(187, 21)
+        Me.ComboBox_warframes.TabIndex = 0
         '
-        'StatBox_warframeArmor
+        'VariantSelection_warframes
         '
-        Me.StatBox_warframeArmor.Location = New System.Drawing.Point(3, 3)
-        Me.StatBox_warframeArmor.MaximumSize = New System.Drawing.Size(175, 20)
-        Me.StatBox_warframeArmor.MinimumSize = New System.Drawing.Size(175, 20)
-        Me.StatBox_warframeArmor.Name = "StatBox_warframeArmor"
-        Me.StatBox_warframeArmor.Rounding = Warframe_EHP_Calculator_v2.StatBox.RoundingValues.Floor
-        Me.StatBox_warframeArmor.Size = New System.Drawing.Size(175, 20)
-        Me.StatBox_warframeArmor.TabIndex = 12
-        Me.StatBox_warframeArmor.Text = "Armor"
-        Me.StatBox_warframeArmor.Value = "0"
+        Me.VariantSelection_warframes.AvailableVariants = "base"
+        Me.VariantSelection_warframes.Location = New System.Drawing.Point(199, 3)
+        Me.VariantSelection_warframes.MaximumSize = New System.Drawing.Size(121, 21)
+        Me.VariantSelection_warframes.MinimumSize = New System.Drawing.Size(121, 21)
+        Me.VariantSelection_warframes.Name = "VariantSelection_warframes"
+        Me.VariantSelection_warframes.SelectedVariant = "base"
+        Me.VariantSelection_warframes.Size = New System.Drawing.Size(121, 21)
+        Me.VariantSelection_warframes.TabIndex = 126
         '
-        'StatBox_warframeHealth
+        'MaxValueToggle_warframes
         '
-        Me.StatBox_warframeHealth.Location = New System.Drawing.Point(3, 29)
-        Me.StatBox_warframeHealth.MaximumSize = New System.Drawing.Size(175, 20)
-        Me.StatBox_warframeHealth.MinimumSize = New System.Drawing.Size(175, 20)
-        Me.StatBox_warframeHealth.Name = "StatBox_warframeHealth"
-        Me.StatBox_warframeHealth.Rounding = Warframe_EHP_Calculator_v2.StatBox.RoundingValues.Floor
-        Me.StatBox_warframeHealth.Size = New System.Drawing.Size(175, 20)
-        Me.StatBox_warframeHealth.TabIndex = 13
-        Me.StatBox_warframeHealth.Text = "Health"
-        Me.StatBox_warframeHealth.Value = "0"
-        '
-        'StatBox_warframeShield
-        '
-        Me.StatBox_warframeShield.Location = New System.Drawing.Point(3, 55)
-        Me.StatBox_warframeShield.MaximumSize = New System.Drawing.Size(175, 20)
-        Me.StatBox_warframeShield.MinimumSize = New System.Drawing.Size(175, 20)
-        Me.StatBox_warframeShield.Name = "StatBox_warframeShield"
-        Me.StatBox_warframeShield.Rounding = Warframe_EHP_Calculator_v2.StatBox.RoundingValues.Floor
-        Me.StatBox_warframeShield.Size = New System.Drawing.Size(175, 20)
-        Me.StatBox_warframeShield.TabIndex = 14
-        Me.StatBox_warframeShield.Text = "Shield"
-        Me.StatBox_warframeShield.Value = "0"
-        '
-        'StatBox_warframeEnergy
-        '
-        Me.StatBox_warframeEnergy.Location = New System.Drawing.Point(3, 81)
-        Me.StatBox_warframeEnergy.MaximumSize = New System.Drawing.Size(175, 20)
-        Me.StatBox_warframeEnergy.MinimumSize = New System.Drawing.Size(175, 20)
-        Me.StatBox_warframeEnergy.Name = "StatBox_warframeEnergy"
-        Me.StatBox_warframeEnergy.Rounding = Warframe_EHP_Calculator_v2.StatBox.RoundingValues.Floor
-        Me.StatBox_warframeEnergy.Size = New System.Drawing.Size(175, 20)
-        Me.StatBox_warframeEnergy.TabIndex = 15
-        Me.StatBox_warframeEnergy.Text = "Energy"
-        Me.StatBox_warframeEnergy.Value = "0"
-        '
-        'StatBox_warframePowerStrength
-        '
-        Me.StatBox_warframePowerStrength.Location = New System.Drawing.Point(3, 107)
-        Me.StatBox_warframePowerStrength.MaximumSize = New System.Drawing.Size(175, 20)
-        Me.StatBox_warframePowerStrength.MinimumSize = New System.Drawing.Size(175, 20)
-        Me.StatBox_warframePowerStrength.Name = "StatBox_warframePowerStrength"
-        Me.StatBox_warframePowerStrength.Rounding = Warframe_EHP_Calculator_v2.StatBox.RoundingValues.Floor
-        Me.StatBox_warframePowerStrength.Size = New System.Drawing.Size(175, 20)
-        Me.StatBox_warframePowerStrength.TabIndex = 16
-        Me.StatBox_warframePowerStrength.Text = "Power Strength"
-        Me.StatBox_warframePowerStrength.Value = "0"
-        '
-        'Panel_warframeStatsSpacer
-        '
-        Me.Panel_warframeStatsSpacer.BackColor = System.Drawing.Color.Transparent
-        Me.Panel_warframeStatsSpacer.Controls.Add(Me.StatBox_damageReduction)
-        Me.Panel_warframeStatsSpacer.Location = New System.Drawing.Point(3, 133)
-        Me.Panel_warframeStatsSpacer.Name = "Panel_warframeStatsSpacer"
-        Me.Panel_warframeStatsSpacer.Size = New System.Drawing.Size(175, 343)
-        Me.Panel_warframeStatsSpacer.TabIndex = 17
-        '
-        'StatBox_damageReduction
-        '
-        Me.StatBox_damageReduction.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.StatBox_damageReduction.Location = New System.Drawing.Point(0, 1)
-        Me.StatBox_damageReduction.MaximumSize = New System.Drawing.Size(175, 18)
-        Me.StatBox_damageReduction.MinimumSize = New System.Drawing.Size(175, 18)
-        Me.StatBox_damageReduction.Name = "StatBox_damageReduction"
-        Me.StatBox_damageReduction.Rounding = Warframe_EHP_Calculator_v2.StatBox.RoundingValues.Ceiling
-        Me.StatBox_damageReduction.Size = New System.Drawing.Size(175, 18)
-        Me.StatBox_damageReduction.TabIndex = 19
-        Me.StatBox_damageReduction.Text = "Damage Reduction"
-        Me.StatBox_damageReduction.Value = "0"
-        Me.StatBox_damageReduction.Visible = False
-        '
-        'StatBox_warframeEHP
-        '
-        Me.StatBox_warframeEHP.Location = New System.Drawing.Point(3, 482)
-        Me.StatBox_warframeEHP.MaximumSize = New System.Drawing.Size(175, 20)
-        Me.StatBox_warframeEHP.MinimumSize = New System.Drawing.Size(175, 20)
-        Me.StatBox_warframeEHP.Name = "StatBox_warframeEHP"
-        Me.StatBox_warframeEHP.Rounding = Warframe_EHP_Calculator_v2.StatBox.RoundingValues.Ceiling
-        Me.StatBox_warframeEHP.Size = New System.Drawing.Size(175, 20)
-        Me.StatBox_warframeEHP.TabIndex = 17
-        Me.StatBox_warframeEHP.Text = "Effective Health"
-        Me.StatBox_warframeEHP.Value = "0"
+        Me.MaxValueToggle_warframes.Dock = System.Windows.Forms.DockStyle.Right
+        Me.MaxValueToggle_warframes.Location = New System.Drawing.Point(640, 5)
+        Me.MaxValueToggle_warframes.Margin = New System.Windows.Forms.Padding(3, 5, 3, 3)
+        Me.MaxValueToggle_warframes.MaximumSize = New System.Drawing.Size(130, 17)
+        Me.MaxValueToggle_warframes.MinimumSize = New System.Drawing.Size(130, 17)
+        Me.MaxValueToggle_warframes.Name = "MaxValueToggle_warframes"
+        Me.MaxValueToggle_warframes.Size = New System.Drawing.Size(130, 17)
+        Me.MaxValueToggle_warframes.TabIndex = 125
+        Me.MaxValueToggle_warframes.Text = "Default to Max Values"
         '
         'TabPage_companion
         '
         Me.TabPage_companion.BackColor = System.Drawing.Color.White
-        Me.TabPage_companion.Controls.Add(Me.FlowLayoutPanel_compainionMainLayout)
+        Me.TabPage_companion.Controls.Add(Me.TableLayoutPanel_compainionMainLayout)
         Me.TabPage_companion.Controls.Add(Me.TableLayoutPanel_companionTopLayout)
         Me.TabPage_companion.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.TabPage_companion.ImageIndex = 1
         Me.TabPage_companion.Location = New System.Drawing.Point(4, 29)
         Me.TabPage_companion.Name = "TabPage_companion"
         Me.TabPage_companion.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_companion.Size = New System.Drawing.Size(780, 571)
+        Me.TabPage_companion.Size = New System.Drawing.Size(779, 574)
         Me.TabPage_companion.TabIndex = 1
         Me.TabPage_companion.Text = "Companions  "
         '
-        'FlowLayoutPanel_compainionMainLayout
+        'TableLayoutPanel_compainionMainLayout
         '
-        Me.FlowLayoutPanel_compainionMainLayout.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.TableLayoutPanel_compainionMainLayout.ColumnCount = 2
+        Me.TableLayoutPanel_compainionMainLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel_compainionMainLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 196.0!))
+        Me.TableLayoutPanel_compainionMainLayout.Controls.Add(Me.FlowLayoutPanel_compainionModsLayout, 0, 0)
+        Me.TableLayoutPanel_compainionMainLayout.Controls.Add(Me.GroupBox_companionStats, 1, 0)
+        Me.TableLayoutPanel_compainionMainLayout.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel_compainionMainLayout.Location = New System.Drawing.Point(3, 30)
+        Me.TableLayoutPanel_compainionMainLayout.Name = "TableLayoutPanel_compainionMainLayout"
+        Me.TableLayoutPanel_compainionMainLayout.RowCount = 1
+        Me.TableLayoutPanel_compainionMainLayout.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel_compainionMainLayout.Size = New System.Drawing.Size(773, 541)
+        Me.TableLayoutPanel_compainionMainLayout.TabIndex = 132
+        '
+        'FlowLayoutPanel_compainionModsLayout
+        '
+        Me.FlowLayoutPanel_compainionModsLayout.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.FlowLayoutPanel_compainionMainLayout.AutoSize = True
-        Me.FlowLayoutPanel_compainionMainLayout.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.FlowLayoutPanel_compainionMainLayout.Controls.Add(Me.CheckedGroupBox_companionSurvivability)
-        Me.FlowLayoutPanel_compainionMainLayout.Controls.Add(Me.GroupBox1)
-        Me.FlowLayoutPanel_compainionMainLayout.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
-        Me.FlowLayoutPanel_compainionMainLayout.Location = New System.Drawing.Point(3, 33)
-        Me.FlowLayoutPanel_compainionMainLayout.Name = "FlowLayoutPanel_compainionMainLayout"
-        Me.FlowLayoutPanel_compainionMainLayout.Size = New System.Drawing.Size(194, 402)
-        Me.FlowLayoutPanel_compainionMainLayout.TabIndex = 130
+        Me.FlowLayoutPanel_compainionModsLayout.AutoSize = True
+        Me.FlowLayoutPanel_compainionModsLayout.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.FlowLayoutPanel_compainionModsLayout.Controls.Add(Me.CheckedGroupBox_companionSurvivability)
+        Me.FlowLayoutPanel_compainionModsLayout.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
+        Me.FlowLayoutPanel_compainionModsLayout.Location = New System.Drawing.Point(0, 0)
+        Me.FlowLayoutPanel_compainionModsLayout.Margin = New System.Windows.Forms.Padding(0)
+        Me.FlowLayoutPanel_compainionModsLayout.Name = "FlowLayoutPanel_compainionModsLayout"
+        Me.FlowLayoutPanel_compainionModsLayout.Size = New System.Drawing.Size(577, 541)
+        Me.FlowLayoutPanel_compainionModsLayout.TabIndex = 130
         '
         'CheckedGroupBox_companionSurvivability
         '
@@ -1302,18 +1333,19 @@ Partial Class Form_main
         Me.CheckedInput_companionLinkArmor.Tag = "metalFiber"
         Me.CheckedInput_companionLinkArmor.Text = "Link Armor"
         '
-        'GroupBox1
+        'GroupBox_companionStats
         '
-        Me.GroupBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.GroupBox_companionStats.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.GroupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.GroupBox1.Controls.Add(Me.FlowLayoutPanel_companionStatsLayout)
-        Me.GroupBox1.Location = New System.Drawing.Point(3, 193)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(188, 206)
-        Me.GroupBox1.TabIndex = 131
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Stats "
+        Me.GroupBox_companionStats.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.GroupBox_companionStats.Controls.Add(Me.FlowLayoutPanel_companionStatsLayout)
+        Me.GroupBox_companionStats.Controls.Add(Me.StatBox_companionEHP)
+        Me.GroupBox_companionStats.Location = New System.Drawing.Point(582, 3)
+        Me.GroupBox_companionStats.Name = "GroupBox_companionStats"
+        Me.GroupBox_companionStats.Size = New System.Drawing.Size(188, 535)
+        Me.GroupBox_companionStats.TabIndex = 131
+        Me.GroupBox_companionStats.TabStop = False
+        Me.GroupBox_companionStats.Text = "Stats "
         '
         'FlowLayoutPanel_companionStatsLayout
         '
@@ -1322,12 +1354,11 @@ Partial Class Form_main
         Me.FlowLayoutPanel_companionStatsLayout.Controls.Add(Me.StatBox_companionArmor)
         Me.FlowLayoutPanel_companionStatsLayout.Controls.Add(Me.StatBox_companionHealth)
         Me.FlowLayoutPanel_companionStatsLayout.Controls.Add(Me.StatBox_companionShield)
-        Me.FlowLayoutPanel_companionStatsLayout.Controls.Add(Me.Panel_compainionStatSpacer)
-        Me.FlowLayoutPanel_companionStatsLayout.Controls.Add(Me.StatBox_companionEHP)
+        Me.FlowLayoutPanel_companionStatsLayout.Controls.Add(Me.StatBox_companionDamageReduction)
         Me.FlowLayoutPanel_companionStatsLayout.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
-        Me.FlowLayoutPanel_companionStatsLayout.Location = New System.Drawing.Point(4, 13)
+        Me.FlowLayoutPanel_companionStatsLayout.Location = New System.Drawing.Point(4, 14)
         Me.FlowLayoutPanel_companionStatsLayout.Name = "FlowLayoutPanel_companionStatsLayout"
-        Me.FlowLayoutPanel_companionStatsLayout.Size = New System.Drawing.Size(181, 187)
+        Me.FlowLayoutPanel_companionStatsLayout.Size = New System.Drawing.Size(181, 490)
         Me.FlowLayoutPanel_companionStatsLayout.TabIndex = 129
         '
         'StatBox_companionArmor
@@ -1366,32 +1397,10 @@ Partial Class Form_main
         Me.StatBox_companionShield.Text = "Shield"
         Me.StatBox_companionShield.Value = "0"
         '
-        'Panel_compainionStatSpacer
-        '
-        Me.Panel_compainionStatSpacer.BackColor = System.Drawing.Color.Transparent
-        Me.Panel_compainionStatSpacer.Controls.Add(Me.StatBox_companionDamageReduction)
-        Me.Panel_compainionStatSpacer.Location = New System.Drawing.Point(3, 81)
-        Me.Panel_compainionStatSpacer.Name = "Panel_compainionStatSpacer"
-        Me.Panel_compainionStatSpacer.Size = New System.Drawing.Size(175, 76)
-        Me.Panel_compainionStatSpacer.TabIndex = 17
-        '
-        'StatBox_companionDamageReduction
-        '
-        Me.StatBox_companionDamageReduction.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.StatBox_companionDamageReduction.Location = New System.Drawing.Point(0, 1)
-        Me.StatBox_companionDamageReduction.MaximumSize = New System.Drawing.Size(175, 18)
-        Me.StatBox_companionDamageReduction.MinimumSize = New System.Drawing.Size(175, 18)
-        Me.StatBox_companionDamageReduction.Name = "StatBox_companionDamageReduction"
-        Me.StatBox_companionDamageReduction.Rounding = Warframe_EHP_Calculator_v2.StatBox.RoundingValues.Ceiling
-        Me.StatBox_companionDamageReduction.Size = New System.Drawing.Size(175, 18)
-        Me.StatBox_companionDamageReduction.TabIndex = 19
-        Me.StatBox_companionDamageReduction.Text = "Damage Reduction"
-        Me.StatBox_companionDamageReduction.Value = "0"
-        Me.StatBox_companionDamageReduction.Visible = False
-        '
         'StatBox_companionEHP
         '
-        Me.StatBox_companionEHP.Location = New System.Drawing.Point(3, 163)
+        Me.StatBox_companionEHP.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.StatBox_companionEHP.Location = New System.Drawing.Point(7, 509)
         Me.StatBox_companionEHP.MaximumSize = New System.Drawing.Size(175, 20)
         Me.StatBox_companionEHP.MinimumSize = New System.Drawing.Size(175, 20)
         Me.StatBox_companionEHP.Name = "StatBox_companionEHP"
@@ -1419,7 +1428,7 @@ Partial Class Form_main
         Me.TableLayoutPanel_companionTopLayout.Name = "TableLayoutPanel_companionTopLayout"
         Me.TableLayoutPanel_companionTopLayout.RowCount = 1
         Me.TableLayoutPanel_companionTopLayout.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel_companionTopLayout.Size = New System.Drawing.Size(774, 27)
+        Me.TableLayoutPanel_companionTopLayout.Size = New System.Drawing.Size(773, 27)
         Me.TableLayoutPanel_companionTopLayout.TabIndex = 129
         '
         'ComboBox_companions
@@ -1461,7 +1470,7 @@ Partial Class Form_main
         'MaxValueToggle_compainions
         '
         Me.MaxValueToggle_compainions.Dock = System.Windows.Forms.DockStyle.Right
-        Me.MaxValueToggle_compainions.Location = New System.Drawing.Point(641, 5)
+        Me.MaxValueToggle_compainions.Location = New System.Drawing.Point(640, 5)
         Me.MaxValueToggle_compainions.Margin = New System.Windows.Forms.Padding(3, 5, 3, 3)
         Me.MaxValueToggle_compainions.MaximumSize = New System.Drawing.Size(130, 17)
         Me.MaxValueToggle_compainions.MinimumSize = New System.Drawing.Size(130, 17)
@@ -1479,6 +1488,7 @@ Partial Class Form_main
         Me.NumericInput_companionStability.Minimum = New Decimal(New Integer() {0, 0, 0, 0})
         Me.NumericInput_companionStability.MinimumSize = New System.Drawing.Size(175, 20)
         Me.NumericInput_companionStability.Name = "NumericInput_companionStability"
+        Me.NumericInput_companionStability.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
         Me.NumericInput_companionStability.Size = New System.Drawing.Size(175, 20)
         Me.NumericInput_companionStability.TabIndex = 131
         Me.NumericInput_companionStability.Text = "Genetic Stability"
@@ -1486,24 +1496,234 @@ Partial Class Form_main
         '
         'TabPage_archwing
         '
+        Me.TabPage_archwing.BackColor = System.Drawing.Color.White
         Me.TabPage_archwing.Controls.Add(Me.Label_archwingPlaceholder)
+        Me.TabPage_archwing.Controls.Add(Me.TableLayoutPanel_archwingMainLayout)
+        Me.TabPage_archwing.Controls.Add(Me.TableLayoutPanel_archwingTopLayout)
         Me.TabPage_archwing.ImageIndex = 3
         Me.TabPage_archwing.Location = New System.Drawing.Point(4, 29)
         Me.TabPage_archwing.Name = "TabPage_archwing"
-        Me.TabPage_archwing.Size = New System.Drawing.Size(780, 571)
+        Me.TabPage_archwing.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage_archwing.Size = New System.Drawing.Size(779, 574)
         Me.TabPage_archwing.TabIndex = 3
         Me.TabPage_archwing.Text = "Archwing  "
-        Me.TabPage_archwing.UseVisualStyleBackColor = True
         '
         'Label_archwingPlaceholder
         '
         Me.Label_archwingPlaceholder.AutoSize = True
-        Me.Label_archwingPlaceholder.Location = New System.Drawing.Point(24, 32)
+        Me.Label_archwingPlaceholder.Location = New System.Drawing.Point(344, 277)
         Me.Label_archwingPlaceholder.Name = "Label_archwingPlaceholder"
-        Me.Label_archwingPlaceholder.Size = New System.Drawing.Size(102, 17)
+        Me.Label_archwingPlaceholder.Size = New System.Drawing.Size(79, 13)
         Me.Label_archwingPlaceholder.TabIndex = 115
         Me.Label_archwingPlaceholder.Text = "Coming Soon™"
         Me.Label_archwingPlaceholder.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'TableLayoutPanel_archwingMainLayout
+        '
+        Me.TableLayoutPanel_archwingMainLayout.ColumnCount = 2
+        Me.TableLayoutPanel_archwingMainLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel_archwingMainLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 196.0!))
+        Me.TableLayoutPanel_archwingMainLayout.Controls.Add(Me.GroupBox_archwingStats, 1, 0)
+        Me.TableLayoutPanel_archwingMainLayout.Controls.Add(Me.FlowLayoutPanel_archwingModsLayout, 0, 0)
+        Me.TableLayoutPanel_archwingMainLayout.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel_archwingMainLayout.Location = New System.Drawing.Point(3, 30)
+        Me.TableLayoutPanel_archwingMainLayout.Name = "TableLayoutPanel_archwingMainLayout"
+        Me.TableLayoutPanel_archwingMainLayout.RowCount = 1
+        Me.TableLayoutPanel_archwingMainLayout.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel_archwingMainLayout.Size = New System.Drawing.Size(773, 541)
+        Me.TableLayoutPanel_archwingMainLayout.TabIndex = 132
+        '
+        'GroupBox_archwingStats
+        '
+        Me.GroupBox_archwingStats.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox_archwingStats.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.GroupBox_archwingStats.Controls.Add(Me.FlowLayoutPanel_archwingStatsLayout)
+        Me.GroupBox_archwingStats.Controls.Add(Me.StatBox_archwingEHP)
+        Me.GroupBox_archwingStats.Location = New System.Drawing.Point(582, 3)
+        Me.GroupBox_archwingStats.Name = "GroupBox_archwingStats"
+        Me.GroupBox_archwingStats.Size = New System.Drawing.Size(188, 535)
+        Me.GroupBox_archwingStats.TabIndex = 131
+        Me.GroupBox_archwingStats.TabStop = False
+        Me.GroupBox_archwingStats.Text = "Stats "
+        '
+        'FlowLayoutPanel_archwingStatsLayout
+        '
+        Me.FlowLayoutPanel_archwingStatsLayout.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.FlowLayoutPanel_archwingStatsLayout.Controls.Add(Me.StatBox_archwingArmor)
+        Me.FlowLayoutPanel_archwingStatsLayout.Controls.Add(Me.StatBox_archwingHealth)
+        Me.FlowLayoutPanel_archwingStatsLayout.Controls.Add(Me.StatBox_archwingShield)
+        Me.FlowLayoutPanel_archwingStatsLayout.Controls.Add(Me.StatBox_archwingDamageReduction)
+        Me.FlowLayoutPanel_archwingStatsLayout.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
+        Me.FlowLayoutPanel_archwingStatsLayout.Location = New System.Drawing.Point(4, 14)
+        Me.FlowLayoutPanel_archwingStatsLayout.Name = "FlowLayoutPanel_archwingStatsLayout"
+        Me.FlowLayoutPanel_archwingStatsLayout.Size = New System.Drawing.Size(181, 489)
+        Me.FlowLayoutPanel_archwingStatsLayout.TabIndex = 129
+        '
+        'StatBox_archwingArmor
+        '
+        Me.StatBox_archwingArmor.Location = New System.Drawing.Point(3, 3)
+        Me.StatBox_archwingArmor.MaximumSize = New System.Drawing.Size(175, 20)
+        Me.StatBox_archwingArmor.MinimumSize = New System.Drawing.Size(175, 20)
+        Me.StatBox_archwingArmor.Name = "StatBox_archwingArmor"
+        Me.StatBox_archwingArmor.Rounding = Warframe_EHP_Calculator_v2.StatBox.RoundingValues.Floor
+        Me.StatBox_archwingArmor.Size = New System.Drawing.Size(175, 20)
+        Me.StatBox_archwingArmor.TabIndex = 12
+        Me.StatBox_archwingArmor.Text = "Armor"
+        Me.StatBox_archwingArmor.Value = "0"
+        '
+        'StatBox_archwingHealth
+        '
+        Me.StatBox_archwingHealth.Location = New System.Drawing.Point(3, 29)
+        Me.StatBox_archwingHealth.MaximumSize = New System.Drawing.Size(175, 20)
+        Me.StatBox_archwingHealth.MinimumSize = New System.Drawing.Size(175, 20)
+        Me.StatBox_archwingHealth.Name = "StatBox_archwingHealth"
+        Me.StatBox_archwingHealth.Rounding = Warframe_EHP_Calculator_v2.StatBox.RoundingValues.Floor
+        Me.StatBox_archwingHealth.Size = New System.Drawing.Size(175, 20)
+        Me.StatBox_archwingHealth.TabIndex = 13
+        Me.StatBox_archwingHealth.Text = "Health"
+        Me.StatBox_archwingHealth.Value = "0"
+        '
+        'StatBox_archwingShield
+        '
+        Me.StatBox_archwingShield.Location = New System.Drawing.Point(3, 55)
+        Me.StatBox_archwingShield.MaximumSize = New System.Drawing.Size(175, 20)
+        Me.StatBox_archwingShield.MinimumSize = New System.Drawing.Size(175, 20)
+        Me.StatBox_archwingShield.Name = "StatBox_archwingShield"
+        Me.StatBox_archwingShield.Rounding = Warframe_EHP_Calculator_v2.StatBox.RoundingValues.Floor
+        Me.StatBox_archwingShield.Size = New System.Drawing.Size(175, 20)
+        Me.StatBox_archwingShield.TabIndex = 14
+        Me.StatBox_archwingShield.Text = "Shield"
+        Me.StatBox_archwingShield.Value = "0"
+        '
+        'StatBox_archwingEHP
+        '
+        Me.StatBox_archwingEHP.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.StatBox_archwingEHP.Location = New System.Drawing.Point(7, 509)
+        Me.StatBox_archwingEHP.MaximumSize = New System.Drawing.Size(175, 20)
+        Me.StatBox_archwingEHP.MinimumSize = New System.Drawing.Size(175, 20)
+        Me.StatBox_archwingEHP.Name = "StatBox_archwingEHP"
+        Me.StatBox_archwingEHP.Rounding = Warframe_EHP_Calculator_v2.StatBox.RoundingValues.Ceiling
+        Me.StatBox_archwingEHP.Size = New System.Drawing.Size(175, 20)
+        Me.StatBox_archwingEHP.TabIndex = 17
+        Me.StatBox_archwingEHP.Text = "Effective Health"
+        Me.StatBox_archwingEHP.Value = "0"
+        '
+        'FlowLayoutPanel_archwingModsLayout
+        '
+        Me.FlowLayoutPanel_archwingModsLayout.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.FlowLayoutPanel_archwingModsLayout.AutoSize = True
+        Me.FlowLayoutPanel_archwingModsLayout.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.FlowLayoutPanel_archwingModsLayout.Controls.Add(Me.CheckedGroupBox_archwingSurvivability)
+        Me.FlowLayoutPanel_archwingModsLayout.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
+        Me.FlowLayoutPanel_archwingModsLayout.Location = New System.Drawing.Point(0, 0)
+        Me.FlowLayoutPanel_archwingModsLayout.Margin = New System.Windows.Forms.Padding(0)
+        Me.FlowLayoutPanel_archwingModsLayout.Name = "FlowLayoutPanel_archwingModsLayout"
+        Me.FlowLayoutPanel_archwingModsLayout.Size = New System.Drawing.Size(577, 541)
+        Me.FlowLayoutPanel_archwingModsLayout.TabIndex = 131
+        '
+        'CheckedGroupBox_archwingSurvivability
+        '
+        Me.CheckedGroupBox_archwingSurvivability.AutoSize = True
+        Me.CheckedGroupBox_archwingSurvivability.Controls.Add(Me.CheckedInput_energyInversion)
+        Me.CheckedGroupBox_archwingSurvivability.Controls.Add(Me.CheckedInput_enhancedDurability)
+        Me.CheckedGroupBox_archwingSurvivability.Controls.Add(Me.CheckedInput_argonPlating)
+        Me.CheckedGroupBox_archwingSurvivability.Location = New System.Drawing.Point(3, 3)
+        Me.CheckedGroupBox_archwingSurvivability.Name = "CheckedGroupBox_archwingSurvivability"
+        Me.CheckedGroupBox_archwingSurvivability.Size = New System.Drawing.Size(187, 110)
+        Me.CheckedGroupBox_archwingSurvivability.TabIndex = 0
+        Me.CheckedGroupBox_archwingSurvivability.TabStop = False
+        Me.CheckedGroupBox_archwingSurvivability.Text = "Survivability"
+        '
+        'CheckedInput_energyInversion
+        '
+        Me.CheckedInput_energyInversion.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.CheckedInput_energyInversion.Location = New System.Drawing.Point(6, 71)
+        Me.CheckedInput_energyInversion.Maximum = 5
+        Me.CheckedInput_energyInversion.MaximumSize = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_energyInversion.MinimumSize = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_energyInversion.Name = "CheckedInput_energyInversion"
+        Me.CheckedInput_energyInversion.Size = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_energyInversion.TabIndex = 7
+        Me.CheckedInput_energyInversion.Tag = ""
+        Me.CheckedInput_energyInversion.Text = "Energy Inversion"
+        '
+        'CheckedInput_enhancedDurability
+        '
+        Me.CheckedInput_enhancedDurability.Location = New System.Drawing.Point(6, 45)
+        Me.CheckedInput_enhancedDurability.Maximum = 5
+        Me.CheckedInput_enhancedDurability.MaximumSize = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_enhancedDurability.MinimumSize = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_enhancedDurability.Name = "CheckedInput_enhancedDurability"
+        Me.CheckedInput_enhancedDurability.Size = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_enhancedDurability.TabIndex = 6
+        Me.CheckedInput_enhancedDurability.Tag = ""
+        Me.CheckedInput_enhancedDurability.Text = "Enhanced Durability"
+        '
+        'CheckedInput_argonPlating
+        '
+        Me.CheckedInput_argonPlating.Location = New System.Drawing.Point(6, 19)
+        Me.CheckedInput_argonPlating.Maximum = 5
+        Me.CheckedInput_argonPlating.MaximumSize = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_argonPlating.MinimumSize = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_argonPlating.Name = "CheckedInput_argonPlating"
+        Me.CheckedInput_argonPlating.Size = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_argonPlating.TabIndex = 5
+        Me.CheckedInput_argonPlating.Tag = ""
+        Me.CheckedInput_argonPlating.Text = "Argon Plating"
+        '
+        'TableLayoutPanel_archwingTopLayout
+        '
+        Me.TableLayoutPanel_archwingTopLayout.ColumnCount = 3
+        Me.TableLayoutPanel_archwingTopLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 196.0!))
+        Me.TableLayoutPanel_archwingTopLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 127.0!))
+        Me.TableLayoutPanel_archwingTopLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
+        Me.TableLayoutPanel_archwingTopLayout.Controls.Add(Me.ComboBox_archwings, 0, 0)
+        Me.TableLayoutPanel_archwingTopLayout.Controls.Add(Me.VariantSelection_archwings, 1, 0)
+        Me.TableLayoutPanel_archwingTopLayout.Controls.Add(Me.MaxValueToggle_archwings, 2, 0)
+        Me.TableLayoutPanel_archwingTopLayout.Dock = System.Windows.Forms.DockStyle.Top
+        Me.TableLayoutPanel_archwingTopLayout.Location = New System.Drawing.Point(3, 3)
+        Me.TableLayoutPanel_archwingTopLayout.Name = "TableLayoutPanel_archwingTopLayout"
+        Me.TableLayoutPanel_archwingTopLayout.RowCount = 1
+        Me.TableLayoutPanel_archwingTopLayout.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel_archwingTopLayout.Size = New System.Drawing.Size(773, 27)
+        Me.TableLayoutPanel_archwingTopLayout.TabIndex = 129
+        '
+        'ComboBox_archwings
+        '
+        Me.ComboBox_archwings.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox_archwings.FormattingEnabled = True
+        Me.ComboBox_archwings.Items.AddRange(New Object() {"Select an Archwing"})
+        Me.ComboBox_archwings.Location = New System.Drawing.Point(3, 3)
+        Me.ComboBox_archwings.Name = "ComboBox_archwings"
+        Me.ComboBox_archwings.Size = New System.Drawing.Size(187, 21)
+        Me.ComboBox_archwings.TabIndex = 0
+        '
+        'VariantSelection_archwings
+        '
+        Me.VariantSelection_archwings.AvailableVariants = "base"
+        Me.VariantSelection_archwings.Location = New System.Drawing.Point(199, 3)
+        Me.VariantSelection_archwings.MaximumSize = New System.Drawing.Size(121, 21)
+        Me.VariantSelection_archwings.MinimumSize = New System.Drawing.Size(121, 21)
+        Me.VariantSelection_archwings.Name = "VariantSelection_archwings"
+        Me.VariantSelection_archwings.SelectedVariant = "base"
+        Me.VariantSelection_archwings.Size = New System.Drawing.Size(121, 21)
+        Me.VariantSelection_archwings.TabIndex = 126
+        '
+        'MaxValueToggle_archwings
+        '
+        Me.MaxValueToggle_archwings.Dock = System.Windows.Forms.DockStyle.Right
+        Me.MaxValueToggle_archwings.Location = New System.Drawing.Point(640, 5)
+        Me.MaxValueToggle_archwings.Margin = New System.Windows.Forms.Padding(3, 5, 3, 3)
+        Me.MaxValueToggle_archwings.MaximumSize = New System.Drawing.Size(130, 17)
+        Me.MaxValueToggle_archwings.MinimumSize = New System.Drawing.Size(130, 17)
+        Me.MaxValueToggle_archwings.Name = "MaxValueToggle_archwings"
+        Me.MaxValueToggle_archwings.Size = New System.Drawing.Size(130, 17)
+        Me.MaxValueToggle_archwings.TabIndex = 125
+        Me.MaxValueToggle_archwings.Text = "Default to Max Values"
         '
         'TabPage_development
         '
@@ -1517,7 +1737,7 @@ Partial Class Form_main
         Me.TabPage_development.Location = New System.Drawing.Point(4, 29)
         Me.TabPage_development.Name = "TabPage_development"
         Me.TabPage_development.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_development.Size = New System.Drawing.Size(780, 571)
+        Me.TabPage_development.Size = New System.Drawing.Size(779, 574)
         Me.TabPage_development.TabIndex = 2
         Me.TabPage_development.Text = "Development  "
         Me.TabPage_development.UseVisualStyleBackColor = True
@@ -1546,7 +1766,7 @@ Partial Class Form_main
         Me.TabControl_arcaneHelmets.Location = New System.Drawing.Point(8, 248)
         Me.TabControl_arcaneHelmets.Name = "TabControl_arcaneHelmets"
         Me.TabControl_arcaneHelmets.SelectedIndex = 0
-        Me.TabControl_arcaneHelmets.Size = New System.Drawing.Size(769, 152)
+        Me.TabControl_arcaneHelmets.Size = New System.Drawing.Size(768, 155)
         Me.TabControl_arcaneHelmets.TabIndex = 118
         '
         'TabPage_arcaneHelmetsDefault
@@ -1555,7 +1775,7 @@ Partial Class Form_main
         Me.TabPage_arcaneHelmetsDefault.Controls.Add(Me.FlowLayoutPanel_defaultArcaneHelmets)
         Me.TabPage_arcaneHelmetsDefault.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_arcaneHelmetsDefault.Name = "TabPage_arcaneHelmetsDefault"
-        Me.TabPage_arcaneHelmetsDefault.Size = New System.Drawing.Size(761, 126)
+        Me.TabPage_arcaneHelmetsDefault.Size = New System.Drawing.Size(760, 129)
         Me.TabPage_arcaneHelmetsDefault.TabIndex = 2
         Me.TabPage_arcaneHelmetsDefault.Text = "Default"
         '
@@ -1592,7 +1812,7 @@ Partial Class Form_main
         Me.TabPage_ashArcaneHelmets.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_ashArcaneHelmets.Name = "TabPage_ashArcaneHelmets"
         Me.TabPage_ashArcaneHelmets.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_ashArcaneHelmets.Size = New System.Drawing.Size(761, 126)
+        Me.TabPage_ashArcaneHelmets.Size = New System.Drawing.Size(760, 129)
         Me.TabPage_ashArcaneHelmets.TabIndex = 0
         Me.TabPage_ashArcaneHelmets.Text = "Ash"
         '
@@ -1627,7 +1847,7 @@ Partial Class Form_main
         Me.TabPage_arcaneHelmetsBanshee.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_arcaneHelmetsBanshee.Name = "TabPage_arcaneHelmetsBanshee"
         Me.TabPage_arcaneHelmetsBanshee.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_arcaneHelmetsBanshee.Size = New System.Drawing.Size(761, 126)
+        Me.TabPage_arcaneHelmetsBanshee.Size = New System.Drawing.Size(760, 129)
         Me.TabPage_arcaneHelmetsBanshee.TabIndex = 1
         Me.TabPage_arcaneHelmetsBanshee.Text = "Banshee"
         '
@@ -1661,7 +1881,7 @@ Partial Class Form_main
         Me.TabPage_arcaneHelmetsEmber.Controls.Add(Me.FlowLayoutPanel_emberArcaneHelmets)
         Me.TabPage_arcaneHelmetsEmber.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_arcaneHelmetsEmber.Name = "TabPage_arcaneHelmetsEmber"
-        Me.TabPage_arcaneHelmetsEmber.Size = New System.Drawing.Size(761, 126)
+        Me.TabPage_arcaneHelmetsEmber.Size = New System.Drawing.Size(760, 129)
         Me.TabPage_arcaneHelmetsEmber.TabIndex = 3
         Me.TabPage_arcaneHelmetsEmber.Text = "Ember"
         '
@@ -1707,7 +1927,7 @@ Partial Class Form_main
         Me.TabPage_arcaneHelmetsExcalibur.Controls.Add(Me.FlowLayoutPanel_excaliburArcaneHelmets)
         Me.TabPage_arcaneHelmetsExcalibur.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_arcaneHelmetsExcalibur.Name = "TabPage_arcaneHelmetsExcalibur"
-        Me.TabPage_arcaneHelmetsExcalibur.Size = New System.Drawing.Size(761, 126)
+        Me.TabPage_arcaneHelmetsExcalibur.Size = New System.Drawing.Size(760, 129)
         Me.TabPage_arcaneHelmetsExcalibur.TabIndex = 4
         Me.TabPage_arcaneHelmetsExcalibur.Text = "Excalibur"
         '
@@ -1753,7 +1973,7 @@ Partial Class Form_main
         Me.TabPage_arcaneHelmetsFrost.Controls.Add(Me.FlowLayoutPanel_frostArcaneHelmets)
         Me.TabPage_arcaneHelmetsFrost.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_arcaneHelmetsFrost.Name = "TabPage_arcaneHelmetsFrost"
-        Me.TabPage_arcaneHelmetsFrost.Size = New System.Drawing.Size(761, 126)
+        Me.TabPage_arcaneHelmetsFrost.Size = New System.Drawing.Size(760, 129)
         Me.TabPage_arcaneHelmetsFrost.TabIndex = 5
         Me.TabPage_arcaneHelmetsFrost.Text = "Frost"
         '
@@ -1799,7 +2019,7 @@ Partial Class Form_main
         Me.TabPage_arcaneHelmetsLoki.Controls.Add(Me.FlowLayoutPanel_lokiArcaneHelmets)
         Me.TabPage_arcaneHelmetsLoki.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_arcaneHelmetsLoki.Name = "TabPage_arcaneHelmetsLoki"
-        Me.TabPage_arcaneHelmetsLoki.Size = New System.Drawing.Size(761, 126)
+        Me.TabPage_arcaneHelmetsLoki.Size = New System.Drawing.Size(760, 129)
         Me.TabPage_arcaneHelmetsLoki.TabIndex = 6
         Me.TabPage_arcaneHelmetsLoki.Text = "Loki"
         '
@@ -1845,7 +2065,7 @@ Partial Class Form_main
         Me.TabPage_arcaneHelmetsMag.Controls.Add(Me.FlowLayoutPanel_magArcaneHelmets)
         Me.TabPage_arcaneHelmetsMag.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_arcaneHelmetsMag.Name = "TabPage_arcaneHelmetsMag"
-        Me.TabPage_arcaneHelmetsMag.Size = New System.Drawing.Size(761, 126)
+        Me.TabPage_arcaneHelmetsMag.Size = New System.Drawing.Size(760, 129)
         Me.TabPage_arcaneHelmetsMag.TabIndex = 7
         Me.TabPage_arcaneHelmetsMag.Text = "Mag"
         '
@@ -1891,7 +2111,7 @@ Partial Class Form_main
         Me.TabPage_arcaneHelmetsNova.Controls.Add(Me.FlowLayoutPanel_novaArcaneHelmets)
         Me.TabPage_arcaneHelmetsNova.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_arcaneHelmetsNova.Name = "TabPage_arcaneHelmetsNova"
-        Me.TabPage_arcaneHelmetsNova.Size = New System.Drawing.Size(761, 126)
+        Me.TabPage_arcaneHelmetsNova.Size = New System.Drawing.Size(760, 129)
         Me.TabPage_arcaneHelmetsNova.TabIndex = 14
         Me.TabPage_arcaneHelmetsNova.Text = "Nova"
         '
@@ -1926,7 +2146,7 @@ Partial Class Form_main
         Me.TabPage_arcaneHelmetsNyx.Controls.Add(Me.FlowLayoutPanel_nyxArcaneHelmets)
         Me.TabPage_arcaneHelmetsNyx.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_arcaneHelmetsNyx.Name = "TabPage_arcaneHelmetsNyx"
-        Me.TabPage_arcaneHelmetsNyx.Size = New System.Drawing.Size(761, 126)
+        Me.TabPage_arcaneHelmetsNyx.Size = New System.Drawing.Size(760, 129)
         Me.TabPage_arcaneHelmetsNyx.TabIndex = 8
         Me.TabPage_arcaneHelmetsNyx.Text = "Nyx"
         '
@@ -1972,7 +2192,7 @@ Partial Class Form_main
         Me.TabPage_arcaneHelmetsRhino.Controls.Add(Me.FlowLayoutPanel_rhinoArcaneHelmets)
         Me.TabPage_arcaneHelmetsRhino.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_arcaneHelmetsRhino.Name = "TabPage_arcaneHelmetsRhino"
-        Me.TabPage_arcaneHelmetsRhino.Size = New System.Drawing.Size(761, 126)
+        Me.TabPage_arcaneHelmetsRhino.Size = New System.Drawing.Size(760, 129)
         Me.TabPage_arcaneHelmetsRhino.TabIndex = 9
         Me.TabPage_arcaneHelmetsRhino.Text = "Rhino"
         '
@@ -2018,7 +2238,7 @@ Partial Class Form_main
         Me.TabPage_arcaneHelmetsSaryn.Controls.Add(Me.FlowLayoutPanel_sarynArcanHelmets)
         Me.TabPage_arcaneHelmetsSaryn.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_arcaneHelmetsSaryn.Name = "TabPage_arcaneHelmetsSaryn"
-        Me.TabPage_arcaneHelmetsSaryn.Size = New System.Drawing.Size(761, 126)
+        Me.TabPage_arcaneHelmetsSaryn.Size = New System.Drawing.Size(760, 129)
         Me.TabPage_arcaneHelmetsSaryn.TabIndex = 10
         Me.TabPage_arcaneHelmetsSaryn.Text = "Saryn"
         '
@@ -2053,7 +2273,7 @@ Partial Class Form_main
         Me.TabPage_arcaneHelmetsTrinity.Controls.Add(Me.FlowLayoutPanel_trinityArcaneHelmets)
         Me.TabPage_arcaneHelmetsTrinity.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_arcaneHelmetsTrinity.Name = "TabPage_arcaneHelmetsTrinity"
-        Me.TabPage_arcaneHelmetsTrinity.Size = New System.Drawing.Size(761, 126)
+        Me.TabPage_arcaneHelmetsTrinity.Size = New System.Drawing.Size(760, 129)
         Me.TabPage_arcaneHelmetsTrinity.TabIndex = 11
         Me.TabPage_arcaneHelmetsTrinity.Text = "Trinity"
         '
@@ -2099,7 +2319,7 @@ Partial Class Form_main
         Me.TabPage_arcaneHelmetsVauban.Controls.Add(Me.FlowLayoutPanel_vaubanArcaneHelmets)
         Me.TabPage_arcaneHelmetsVauban.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_arcaneHelmetsVauban.Name = "TabPage_arcaneHelmetsVauban"
-        Me.TabPage_arcaneHelmetsVauban.Size = New System.Drawing.Size(761, 126)
+        Me.TabPage_arcaneHelmetsVauban.Size = New System.Drawing.Size(760, 129)
         Me.TabPage_arcaneHelmetsVauban.TabIndex = 12
         Me.TabPage_arcaneHelmetsVauban.Text = "Vauban"
         '
@@ -2134,7 +2354,7 @@ Partial Class Form_main
         Me.TabPage_arcaneHelmetsVolt.Controls.Add(Me.FlowLayoutPanel_voltArcaneHelmets)
         Me.TabPage_arcaneHelmetsVolt.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_arcaneHelmetsVolt.Name = "TabPage_arcaneHelmetsVolt"
-        Me.TabPage_arcaneHelmetsVolt.Size = New System.Drawing.Size(761, 126)
+        Me.TabPage_arcaneHelmetsVolt.Size = New System.Drawing.Size(760, 129)
         Me.TabPage_arcaneHelmetsVolt.TabIndex = 13
         Me.TabPage_arcaneHelmetsVolt.Text = "Volt"
         '
@@ -2204,7 +2424,7 @@ Partial Class Form_main
         Me.TabControl_abilities.Location = New System.Drawing.Point(8, 406)
         Me.TabControl_abilities.Name = "TabControl_abilities"
         Me.TabControl_abilities.SelectedIndex = 0
-        Me.TabControl_abilities.Size = New System.Drawing.Size(768, 177)
+        Me.TabControl_abilities.Size = New System.Drawing.Size(767, 180)
         Me.TabControl_abilities.TabIndex = 101
         '
         'TabPage_abilitiesDefault
@@ -2214,7 +2434,7 @@ Partial Class Form_main
         Me.TabPage_abilitiesDefault.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_abilitiesDefault.Name = "TabPage_abilitiesDefault"
         Me.TabPage_abilitiesDefault.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_abilitiesDefault.Size = New System.Drawing.Size(760, 151)
+        Me.TabPage_abilitiesDefault.Size = New System.Drawing.Size(759, 154)
         Me.TabPage_abilitiesDefault.TabIndex = 24
         Me.TabPage_abilitiesDefault.Text = "Default"
         '
@@ -2251,7 +2471,7 @@ Partial Class Form_main
         Me.TabPage_abilitiesAtlas.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_abilitiesAtlas.Name = "TabPage_abilitiesAtlas"
         Me.TabPage_abilitiesAtlas.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_abilitiesAtlas.Size = New System.Drawing.Size(760, 151)
+        Me.TabPage_abilitiesAtlas.Size = New System.Drawing.Size(759, 154)
         Me.TabPage_abilitiesAtlas.TabIndex = 18
         Me.TabPage_abilitiesAtlas.Text = "Atlas"
         '
@@ -2285,7 +2505,7 @@ Partial Class Form_main
         Me.TabPage_abilitiesBaruuk.Controls.Add(Me.FlowLayoutPanel_baruukAbilities)
         Me.TabPage_abilitiesBaruuk.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_abilitiesBaruuk.Name = "TabPage_abilitiesBaruuk"
-        Me.TabPage_abilitiesBaruuk.Size = New System.Drawing.Size(760, 151)
+        Me.TabPage_abilitiesBaruuk.Size = New System.Drawing.Size(759, 154)
         Me.TabPage_abilitiesBaruuk.TabIndex = 22
         Me.TabPage_abilitiesBaruuk.Text = "Baruuk"
         '
@@ -2341,7 +2561,7 @@ Partial Class Form_main
         Me.TabPage_abilitiesChroma.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_abilitiesChroma.Name = "TabPage_abilitiesChroma"
         Me.TabPage_abilitiesChroma.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_abilitiesChroma.Size = New System.Drawing.Size(760, 151)
+        Me.TabPage_abilitiesChroma.Size = New System.Drawing.Size(759, 154)
         Me.TabPage_abilitiesChroma.TabIndex = 0
         Me.TabPage_abilitiesChroma.Text = "Chroma"
         '
@@ -2415,7 +2635,7 @@ Partial Class Form_main
         Me.TabPage_abilitiesExcalibur.Controls.Add(Me.FlowLayoutPanel_excaliburAbilities)
         Me.TabPage_abilitiesExcalibur.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_abilitiesExcalibur.Name = "TabPage_abilitiesExcalibur"
-        Me.TabPage_abilitiesExcalibur.Size = New System.Drawing.Size(760, 151)
+        Me.TabPage_abilitiesExcalibur.Size = New System.Drawing.Size(759, 154)
         Me.TabPage_abilitiesExcalibur.TabIndex = 19
         Me.TabPage_abilitiesExcalibur.Text = "Excalibur"
         '
@@ -2448,7 +2668,7 @@ Partial Class Form_main
         Me.TabPage_abilitiesFrost.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_abilitiesFrost.Name = "TabPage_abilitiesFrost"
         Me.TabPage_abilitiesFrost.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_abilitiesFrost.Size = New System.Drawing.Size(760, 151)
+        Me.TabPage_abilitiesFrost.Size = New System.Drawing.Size(759, 154)
         Me.TabPage_abilitiesFrost.TabIndex = 2
         Me.TabPage_abilitiesFrost.Text = "Frost"
         '
@@ -2483,7 +2703,7 @@ Partial Class Form_main
         Me.TabPage_abilitiesGara.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_abilitiesGara.Name = "TabPage_abilitiesGara"
         Me.TabPage_abilitiesGara.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_abilitiesGara.Size = New System.Drawing.Size(760, 151)
+        Me.TabPage_abilitiesGara.Size = New System.Drawing.Size(759, 154)
         Me.TabPage_abilitiesGara.TabIndex = 17
         Me.TabPage_abilitiesGara.Text = "Gara"
         '
@@ -2515,7 +2735,7 @@ Partial Class Form_main
         Me.TabPage_abilitiesHarrow.Controls.Add(Me.FlowLayoutPanel_harrowAbilities)
         Me.TabPage_abilitiesHarrow.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_abilitiesHarrow.Name = "TabPage_abilitiesHarrow"
-        Me.TabPage_abilitiesHarrow.Size = New System.Drawing.Size(760, 151)
+        Me.TabPage_abilitiesHarrow.Size = New System.Drawing.Size(759, 154)
         Me.TabPage_abilitiesHarrow.TabIndex = 21
         Me.TabPage_abilitiesHarrow.Text = "Harrow"
         '
@@ -2548,7 +2768,7 @@ Partial Class Form_main
         Me.TabPage_abilitiesInaros.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_abilitiesInaros.Name = "TabPage_abilitiesInaros"
         Me.TabPage_abilitiesInaros.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_abilitiesInaros.Size = New System.Drawing.Size(760, 151)
+        Me.TabPage_abilitiesInaros.Size = New System.Drawing.Size(759, 154)
         Me.TabPage_abilitiesInaros.TabIndex = 3
         Me.TabPage_abilitiesInaros.Text = "Inaros"
         '
@@ -2583,7 +2803,7 @@ Partial Class Form_main
         Me.TabPage_abilitiesMesa.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_abilitiesMesa.Name = "TabPage_abilitiesMesa"
         Me.TabPage_abilitiesMesa.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_abilitiesMesa.Size = New System.Drawing.Size(760, 151)
+        Me.TabPage_abilitiesMesa.Size = New System.Drawing.Size(759, 154)
         Me.TabPage_abilitiesMesa.TabIndex = 6
         Me.TabPage_abilitiesMesa.Text = "Mesa"
         '
@@ -2625,7 +2845,7 @@ Partial Class Form_main
         Me.TabPage_abilitiesMirage.Controls.Add(Me.FlowLayoutPanel_mirageAbilities)
         Me.TabPage_abilitiesMirage.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_abilitiesMirage.Name = "TabPage_abilitiesMirage"
-        Me.TabPage_abilitiesMirage.Size = New System.Drawing.Size(760, 151)
+        Me.TabPage_abilitiesMirage.Size = New System.Drawing.Size(759, 154)
         Me.TabPage_abilitiesMirage.TabIndex = 13
         Me.TabPage_abilitiesMirage.Text = "Mirage"
         '
@@ -2658,7 +2878,7 @@ Partial Class Form_main
         Me.TabPage_abilitiesNekros.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_abilitiesNekros.Name = "TabPage_abilitiesNekros"
         Me.TabPage_abilitiesNekros.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_abilitiesNekros.Size = New System.Drawing.Size(760, 151)
+        Me.TabPage_abilitiesNekros.Size = New System.Drawing.Size(759, 154)
         Me.TabPage_abilitiesNekros.TabIndex = 11
         Me.TabPage_abilitiesNekros.Text = "Nekros"
         '
@@ -2693,7 +2913,7 @@ Partial Class Form_main
         Me.TabPage_abilitiesNezha.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_abilitiesNezha.Name = "TabPage_abilitiesNezha"
         Me.TabPage_abilitiesNezha.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_abilitiesNezha.Size = New System.Drawing.Size(760, 151)
+        Me.TabPage_abilitiesNezha.Size = New System.Drawing.Size(759, 154)
         Me.TabPage_abilitiesNezha.TabIndex = 4
         Me.TabPage_abilitiesNezha.Text = "Nezha"
         '
@@ -2726,7 +2946,7 @@ Partial Class Form_main
         Me.TabPage_abilitiesNidus.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_abilitiesNidus.Name = "TabPage_abilitiesNidus"
         Me.TabPage_abilitiesNidus.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_abilitiesNidus.Size = New System.Drawing.Size(760, 151)
+        Me.TabPage_abilitiesNidus.Size = New System.Drawing.Size(759, 154)
         Me.TabPage_abilitiesNidus.TabIndex = 9
         Me.TabPage_abilitiesNidus.Text = "Nidus"
         '
@@ -2759,7 +2979,7 @@ Partial Class Form_main
         Me.TabPage_abilitiesNova.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_abilitiesNova.Name = "TabPage_abilitiesNova"
         Me.TabPage_abilitiesNova.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_abilitiesNova.Size = New System.Drawing.Size(760, 151)
+        Me.TabPage_abilitiesNova.Size = New System.Drawing.Size(759, 154)
         Me.TabPage_abilitiesNova.TabIndex = 20
         Me.TabPage_abilitiesNova.Text = "Nova"
         '
@@ -2794,7 +3014,7 @@ Partial Class Form_main
         Me.TabPage_abilitiesOberon.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_abilitiesOberon.Name = "TabPage_abilitiesOberon"
         Me.TabPage_abilitiesOberon.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_abilitiesOberon.Size = New System.Drawing.Size(760, 151)
+        Me.TabPage_abilitiesOberon.Size = New System.Drawing.Size(759, 154)
         Me.TabPage_abilitiesOberon.TabIndex = 5
         Me.TabPage_abilitiesOberon.Text = "Oberon"
         '
@@ -2837,7 +3057,7 @@ Partial Class Form_main
         Me.TabPage_abilitiesOctavia.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_abilitiesOctavia.Name = "TabPage_abilitiesOctavia"
         Me.TabPage_abilitiesOctavia.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_abilitiesOctavia.Size = New System.Drawing.Size(760, 151)
+        Me.TabPage_abilitiesOctavia.Size = New System.Drawing.Size(759, 154)
         Me.TabPage_abilitiesOctavia.TabIndex = 15
         Me.TabPage_abilitiesOctavia.Text = "Octavia"
         '
@@ -2870,7 +3090,7 @@ Partial Class Form_main
         Me.TabPage_abilitiesRhino.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_abilitiesRhino.Name = "TabPage_abilitiesRhino"
         Me.TabPage_abilitiesRhino.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_abilitiesRhino.Size = New System.Drawing.Size(760, 151)
+        Me.TabPage_abilitiesRhino.Size = New System.Drawing.Size(759, 154)
         Me.TabPage_abilitiesRhino.TabIndex = 7
         Me.TabPage_abilitiesRhino.Text = "Rhino"
         '
@@ -2916,7 +3136,7 @@ Partial Class Form_main
         Me.TabPage_abilitiesTitania.Controls.Add(Me.FlowLayoutPanel_titaniaAbilities)
         Me.TabPage_abilitiesTitania.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_abilitiesTitania.Name = "TabPage_abilitiesTitania"
-        Me.TabPage_abilitiesTitania.Size = New System.Drawing.Size(760, 151)
+        Me.TabPage_abilitiesTitania.Size = New System.Drawing.Size(759, 154)
         Me.TabPage_abilitiesTitania.TabIndex = 16
         Me.TabPage_abilitiesTitania.Text = "Titania"
         '
@@ -2950,7 +3170,7 @@ Partial Class Form_main
         Me.TabPage_abilitiesTrinity.Controls.Add(Me.FlowLayoutPanel_trinityAbilities)
         Me.TabPage_abilitiesTrinity.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_abilitiesTrinity.Name = "TabPage_abilitiesTrinity"
-        Me.TabPage_abilitiesTrinity.Size = New System.Drawing.Size(760, 151)
+        Me.TabPage_abilitiesTrinity.Size = New System.Drawing.Size(759, 154)
         Me.TabPage_abilitiesTrinity.TabIndex = 12
         Me.TabPage_abilitiesTrinity.Text = "Trinity"
         '
@@ -2993,7 +3213,7 @@ Partial Class Form_main
         Me.TabPage_abilitiesValkyr.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_abilitiesValkyr.Name = "TabPage_abilitiesValkyr"
         Me.TabPage_abilitiesValkyr.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_abilitiesValkyr.Size = New System.Drawing.Size(760, 151)
+        Me.TabPage_abilitiesValkyr.Size = New System.Drawing.Size(759, 154)
         Me.TabPage_abilitiesValkyr.TabIndex = 8
         Me.TabPage_abilitiesValkyr.Text = "Valkyr"
         '
@@ -3025,7 +3245,7 @@ Partial Class Form_main
         Me.TabPage_abilitiesWisp.Controls.Add(Me.FlowLayoutPanel_wispAbilities)
         Me.TabPage_abilitiesWisp.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_abilitiesWisp.Name = "TabPage_abilitiesWisp"
-        Me.TabPage_abilitiesWisp.Size = New System.Drawing.Size(760, 151)
+        Me.TabPage_abilitiesWisp.Size = New System.Drawing.Size(759, 154)
         Me.TabPage_abilitiesWisp.TabIndex = 23
         Me.TabPage_abilitiesWisp.Text = "Wisp"
         '
@@ -3057,7 +3277,7 @@ Partial Class Form_main
         Me.FlowLayoutPanel_abilitiesPanelTemplate.AutoSize = True
         Me.FlowLayoutPanel_abilitiesPanelTemplate.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.FlowLayoutPanel_abilitiesPanelTemplate.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
-        Me.FlowLayoutPanel_abilitiesPanelTemplate.Location = New System.Drawing.Point(562, 18)
+        Me.FlowLayoutPanel_abilitiesPanelTemplate.Location = New System.Drawing.Point(561, 18)
         Me.FlowLayoutPanel_abilitiesPanelTemplate.Margin = New System.Windows.Forms.Padding(0)
         Me.FlowLayoutPanel_abilitiesPanelTemplate.MinimumSize = New System.Drawing.Size(181, 26)
         Me.FlowLayoutPanel_abilitiesPanelTemplate.Name = "FlowLayoutPanel_abilitiesPanelTemplate"
@@ -3070,7 +3290,7 @@ Partial Class Form_main
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.RichTextBox1.Location = New System.Drawing.Point(3, 3)
         Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(517, 239)
+        Me.RichTextBox1.Size = New System.Drawing.Size(516, 239)
         Me.RichTextBox1.TabIndex = 98
         Me.RichTextBox1.Text = "TODO:" & Global.Microsoft.VisualBasic.ChrW(10) & "  -  Add missing mods" & Global.Microsoft.VisualBasic.ChrW(10) & "  -  Add Moa Pets" & Global.Microsoft.VisualBasic.ChrW(10) & "  -  Archwing"
         '
@@ -3078,7 +3298,7 @@ Partial Class Form_main
         '
         Me.Label_companions.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Label_companions.AutoSize = True
-        Me.Label_companions.Location = New System.Drawing.Point(326, -1431)
+        Me.Label_companions.Location = New System.Drawing.Point(326, -1428)
         Me.Label_companions.Name = "Label_companions"
         Me.Label_companions.Size = New System.Drawing.Size(47, 13)
         Me.Label_companions.TabIndex = 97
@@ -3099,7 +3319,7 @@ Partial Class Form_main
         Me.Label_author.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label_author.AutoSize = True
         Me.Label_author.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Label_author.Location = New System.Drawing.Point(616, 7)
+        Me.Label_author.Location = New System.Drawing.Point(615, 7)
         Me.Label_author.Name = "Label_author"
         Me.Label_author.Size = New System.Drawing.Size(164, 13)
         Me.Label_author.TabIndex = 1
@@ -3111,31 +3331,72 @@ Partial Class Form_main
         Me.Label_love.AutoSize = True
         Me.Label_love.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.Label_love.ForeColor = System.Drawing.Color.Red
-        Me.Label_love.Location = New System.Drawing.Point(669, 6)
+        Me.Label_love.Location = New System.Drawing.Point(668, 6)
         Me.Label_love.Name = "Label_love"
         Me.Label_love.Size = New System.Drawing.Size(22, 15)
         Me.Label_love.TabIndex = 2
         Me.Label_love.Text = "♥"
         '
+        'StatBox_companionDamageReduction
+        '
+        Me.StatBox_companionDamageReduction.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!)
+        Me.StatBox_companionDamageReduction.Location = New System.Drawing.Point(3, 81)
+        Me.StatBox_companionDamageReduction.MaximumSize = New System.Drawing.Size(175, 20)
+        Me.StatBox_companionDamageReduction.MinimumSize = New System.Drawing.Size(175, 20)
+        Me.StatBox_companionDamageReduction.Name = "StatBox_companionDamageReduction"
+        Me.StatBox_companionDamageReduction.Size = New System.Drawing.Size(175, 20)
+        Me.StatBox_companionDamageReduction.TabIndex = 20
+        Me.StatBox_companionDamageReduction.Text = "Damage Reduction"
+        Me.StatBox_companionDamageReduction.Value = "0"
+        Me.StatBox_companionDamageReduction.Visible = False
+        '
+        'StatBox_damageReduction
+        '
+        Me.StatBox_damageReduction.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!)
+        Me.StatBox_damageReduction.Location = New System.Drawing.Point(3, 133)
+        Me.StatBox_damageReduction.MaximumSize = New System.Drawing.Size(175, 20)
+        Me.StatBox_damageReduction.MinimumSize = New System.Drawing.Size(175, 20)
+        Me.StatBox_damageReduction.Name = "StatBox_damageReduction"
+        Me.StatBox_damageReduction.Size = New System.Drawing.Size(175, 20)
+        Me.StatBox_damageReduction.TabIndex = 22
+        Me.StatBox_damageReduction.Text = "Damage Reduction"
+        Me.StatBox_damageReduction.Value = "0"
+        Me.StatBox_damageReduction.Visible = False
+        '
+        'StatBox_archwingDamageReduction
+        '
+        Me.StatBox_archwingDamageReduction.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!)
+        Me.StatBox_archwingDamageReduction.Location = New System.Drawing.Point(3, 81)
+        Me.StatBox_archwingDamageReduction.MaximumSize = New System.Drawing.Size(175, 20)
+        Me.StatBox_archwingDamageReduction.MinimumSize = New System.Drawing.Size(175, 20)
+        Me.StatBox_archwingDamageReduction.Name = "StatBox_archwingDamageReduction"
+        Me.StatBox_archwingDamageReduction.Size = New System.Drawing.Size(175, 20)
+        Me.StatBox_archwingDamageReduction.TabIndex = 21
+        Me.StatBox_archwingDamageReduction.Text = "Damage Reduction"
+        Me.StatBox_archwingDamageReduction.Value = "0"
+        Me.StatBox_archwingDamageReduction.Visible = False
+        '
         'Form_main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(788, 604)
+        Me.ClientSize = New System.Drawing.Size(787, 607)
         Me.Controls.Add(Me.Label_love)
         Me.Controls.Add(Me.Label_author)
         Me.Controls.Add(Me.TabControl_main)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "Form_main"
         Me.Text = "Warframe EHP Calculator"
         Me.TabControl_main.ResumeLayout(False)
         Me.TabPage_warframe.ResumeLayout(False)
-        Me.TabPage_warframe.PerformLayout()
-        Me.TableLayoutPanel_warframeTopLayout.ResumeLayout(False)
-        Me.FlowLayoutPanel_warframeMainLayout.ResumeLayout(False)
-        Me.FlowLayoutPanel_warframeMainLayout.PerformLayout()
+        Me.TableLayoutPanel_warframeMainLayout.ResumeLayout(False)
+        Me.TableLayoutPanel_warframeMainLayout.PerformLayout()
+        Me.GroupBox_stats.ResumeLayout(False)
+        Me.GroupBox_stats.PerformLayout()
+        Me.FlowLayoutPanel_warframeStatsLayout.ResumeLayout(False)
+        Me.FlowLayoutPanel_warframeModsLayout.ResumeLayout(False)
+        Me.FlowLayoutPanel_warframeModsLayout.PerformLayout()
         Me.CheckedGroupBox_aura.ResumeLayout(False)
         Me.CheckedGroupBox_aura.PerformLayout()
         Me.CheckedGroupBox_survivability.ResumeLayout(False)
@@ -3156,23 +3417,29 @@ Partial Class Form_main
         Me.CheckedGroupBox_specialEffects.PerformLayout()
         Me.CheckedGroupBox_arcanes.ResumeLayout(False)
         Me.CheckedGroupBox_arcanes.PerformLayout()
-        Me.GroupBox_stats.ResumeLayout(False)
-        Me.GroupBox_stats.PerformLayout()
-        Me.FlowLayoutPanel_warframeStatsLayout.ResumeLayout(False)
-        Me.Panel_warframeStatsSpacer.ResumeLayout(False)
+        Me.TableLayoutPanel_warframeTopLayout.ResumeLayout(False)
         Me.TabPage_companion.ResumeLayout(False)
-        Me.TabPage_companion.PerformLayout()
-        Me.FlowLayoutPanel_compainionMainLayout.ResumeLayout(False)
-        Me.FlowLayoutPanel_compainionMainLayout.PerformLayout()
+        Me.TableLayoutPanel_compainionMainLayout.ResumeLayout(False)
+        Me.TableLayoutPanel_compainionMainLayout.PerformLayout()
+        Me.FlowLayoutPanel_compainionModsLayout.ResumeLayout(False)
+        Me.FlowLayoutPanel_compainionModsLayout.PerformLayout()
         Me.CheckedGroupBox_companionSurvivability.ResumeLayout(False)
         Me.CheckedGroupBox_companionSurvivability.PerformLayout()
-        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox_companionStats.ResumeLayout(False)
         Me.FlowLayoutPanel_companionStatsLayout.ResumeLayout(False)
-        Me.Panel_compainionStatSpacer.ResumeLayout(False)
         Me.TableLayoutPanel_companionTopLayout.ResumeLayout(False)
         Me.TableLayoutPanel_companionTopLayout.PerformLayout()
         Me.TabPage_archwing.ResumeLayout(False)
         Me.TabPage_archwing.PerformLayout()
+        Me.TableLayoutPanel_archwingMainLayout.ResumeLayout(False)
+        Me.TableLayoutPanel_archwingMainLayout.PerformLayout()
+        Me.GroupBox_archwingStats.ResumeLayout(False)
+        Me.FlowLayoutPanel_archwingStatsLayout.ResumeLayout(False)
+        Me.FlowLayoutPanel_archwingModsLayout.ResumeLayout(False)
+        Me.FlowLayoutPanel_archwingModsLayout.PerformLayout()
+        Me.CheckedGroupBox_archwingSurvivability.ResumeLayout(False)
+        Me.CheckedGroupBox_archwingSurvivability.PerformLayout()
+        Me.TableLayoutPanel_archwingTopLayout.ResumeLayout(False)
         Me.TabPage_development.ResumeLayout(False)
         Me.TabPage_development.PerformLayout()
         Me.TabControl_arcaneHelmets.ResumeLayout(False)
@@ -3315,7 +3582,7 @@ Partial Class Form_main
     Friend WithEvents CheckBox_beastshield As CheckBox
     Friend WithEvents ComboBox_blocking As ComboBox
     Friend WithEvents MaxValueToggle_warframes As MaxValueToggle
-    Friend WithEvents VariantSelection1 As VariantSelection
+    Friend WithEvents VariantSelection_warframes As VariantSelection
     Friend WithEvents CheckedGroupBox_aura As CheckedGroupBox
     Friend WithEvents RadioInput_growingPower As RadioInput
     Friend WithEvents RadioInput_powerDonation As RadioInput
@@ -3328,7 +3595,7 @@ Partial Class Form_main
     Friend WithEvents StatBox_warframeHealth As StatBox
     Friend WithEvents StatBox_warframeArmor As StatBox
     Friend WithEvents TableLayoutPanel_warframeTopLayout As TableLayoutPanel
-    Friend WithEvents FlowLayoutPanel_warframeMainLayout As FlowLayoutPanel
+    Friend WithEvents FlowLayoutPanel_warframeModsLayout As FlowLayoutPanel
     Friend WithEvents CheckedGroupBox_survivability As CheckedGroupBox
     Friend WithEvents CheckedDualInput_healthConversion As CheckedDualInput
     Friend WithEvents CheckedInput_quickThinking As CheckedInput
@@ -3344,7 +3611,6 @@ Partial Class Form_main
     Friend WithEvents CheckedInput_umbralVitality As CheckedInput
     Friend WithEvents CheckedInput_umbralFiber As CheckedInput
     Friend WithEvents FlowLayoutPanel_warframeStatsLayout As FlowLayoutPanel
-    Friend WithEvents Panel_warframeStatsSpacer As Panel
     Friend WithEvents CheckedGroupBox_miscellaneous As CheckedGroupBox
     Friend WithEvents CheckedInput_coactionDrift As CheckedInput
     Friend WithEvents CheckedInput_enduranceDrift As CheckedInput
@@ -3510,17 +3776,14 @@ Partial Class Form_main
     Friend WithEvents FlowLayoutPanel_trinityAbilities As FlowLayoutPanel
     Friend WithEvents FlowLayoutPanel_valkyrAbilities As FlowLayoutPanel
     Friend WithEvents FlowLayoutPanel_wispAbilities As FlowLayoutPanel
-    Friend WithEvents StatBox_damageReduction As StatBox
     Friend WithEvents TableLayoutPanel_companionTopLayout As TableLayoutPanel
-    Friend WithEvents FlowLayoutPanel_compainionMainLayout As FlowLayoutPanel
+    Friend WithEvents FlowLayoutPanel_compainionModsLayout As FlowLayoutPanel
     Friend WithEvents CheckedGroupBox_companionSurvivability As CheckedGroupBox
-    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents GroupBox_companionStats As GroupBox
     Friend WithEvents FlowLayoutPanel_companionStatsLayout As FlowLayoutPanel
     Friend WithEvents StatBox_companionArmor As StatBox
     Friend WithEvents StatBox_companionHealth As StatBox
     Friend WithEvents StatBox_companionShield As StatBox
-    Friend WithEvents Panel_compainionStatSpacer As Panel
-    Friend WithEvents StatBox_companionDamageReduction As StatBox
     Friend WithEvents StatBox_companionEHP As StatBox
     Friend WithEvents CheckedInput_companionLinkShield As CheckedInput
     Friend WithEvents CheckedInput_companionLinkHealth As CheckedInput
@@ -3531,4 +3794,25 @@ Partial Class Form_main
     Friend WithEvents CheckedInput_companionEnhancedVitality As CheckedInput
     Friend WithEvents CheckedInput_companionCalculatedRedirection As CheckedInput
     Friend WithEvents CompanionVariantSelection1 As CompanionVariantSelection
+    Friend WithEvents TableLayoutPanel_archwingTopLayout As TableLayoutPanel
+    Friend WithEvents ComboBox_archwings As ComboBox
+    Friend WithEvents VariantSelection_archwings As VariantSelection
+    Friend WithEvents MaxValueToggle_archwings As MaxValueToggle
+    Friend WithEvents FlowLayoutPanel_archwingModsLayout As FlowLayoutPanel
+    Friend WithEvents CheckedGroupBox_archwingSurvivability As CheckedGroupBox
+    Friend WithEvents CheckedInput_energyInversion As CheckedInput
+    Friend WithEvents CheckedInput_enhancedDurability As CheckedInput
+    Friend WithEvents CheckedInput_argonPlating As CheckedInput
+    Friend WithEvents GroupBox_archwingStats As GroupBox
+    Friend WithEvents FlowLayoutPanel_archwingStatsLayout As FlowLayoutPanel
+    Friend WithEvents StatBox_archwingArmor As StatBox
+    Friend WithEvents StatBox_archwingHealth As StatBox
+    Friend WithEvents StatBox_archwingShield As StatBox
+    Friend WithEvents StatBox_archwingEHP As StatBox
+    Friend WithEvents TableLayoutPanel_warframeMainLayout As TableLayoutPanel
+    Friend WithEvents TableLayoutPanel_compainionMainLayout As TableLayoutPanel
+    Friend WithEvents TableLayoutPanel_archwingMainLayout As TableLayoutPanel
+    Friend WithEvents StatBox_companionDamageReduction As StatBox
+    Friend WithEvents StatBox_damageReduction As StatBox
+    Friend WithEvents StatBox_archwingDamageReduction As StatBox
 End Class
