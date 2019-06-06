@@ -69,6 +69,7 @@ Public Class Form_main
         For Each companion As Companion In Companions
             ComboBox_companions.Items.Add(companion.Name)
         Next
+        ComboBox_companions.Items.Remove("Venari")
         For Each archwing As Archwing In Archwings
             ComboBox_archwings.Items.Add(archwing.Name)
         Next
@@ -164,6 +165,31 @@ Public Class Form_main
             End If
         Next
         '
+        '   Archwings
+        '
+        AddHandler ComboBox_archwings.SelectedIndexChanged, AddressOf Archwing_Value_Changed
+        AddHandler CheckBox_archwingPrime.CheckedChanged, AddressOf Archwing_Value_Changed
+        For Each Group As Control In FlowLayoutPanel_archwingModsLayout.Controls
+            If TypeOf Group Is CheckedGroupBox Then
+                For Each Control As Control In CType(Group, CheckedGroupBox).FlowLayout.Controls
+                    If TypeOf Control Is CheckedInput Then
+                        AddHandler CType(Control, CheckedInput).CheckedChanged, AddressOf Archwing_Value_Changed
+                        AddHandler CType(Control, CheckedInput).ValueChanged, AddressOf Archwing_Value_Changed
+                    ElseIf TypeOf Control Is CheckedDualInput Then
+                        AddHandler CType(Control, CheckedDualInput).CheckedChanged, AddressOf Archwing_Value_Changed
+                        AddHandler CType(Control, CheckedDualInput).ValueChanged, AddressOf Archwing_Value_Changed
+                    ElseIf TypeOf Control Is NumericInput Then
+                        AddHandler CType(Control, NumericInput).ValueChanged, AddressOf Archwing_Value_Changed
+                    ElseIf TypeOf Control Is CheckBox Then
+                        AddHandler CType(Control, CheckBox).CheckedChanged, AddressOf Archwing_Value_Changed
+                    ElseIf TypeOf Control Is RadioButton Then
+                        AddHandler CType(Control, RadioButton).CheckedChanged, AddressOf Archwing_Value_Changed
+                    End If
+                Next
+                AddHandler CType(Group, CheckedGroupBox).CheckedChanged, AddressOf Archwing_Value_Changed
+            End If
+        Next
+        '
         ' Set Deafult Values to Max
         '
         MaxValueToggle_warframes.Checked = My.Settings.DefaultToMax_warframes
@@ -239,12 +265,12 @@ Public Class Form_main
             '   some frames have passives that change fixed things
             '
             If currentWarframe.Name = "Khora" And Not ComboBox_companions.Items.Contains("Venari") Then
-                ComboBox_companions.Items.Add("Venari")
+                ComboBox_companions.Items.Insert(3, "Venari")
             ElseIf Not currentWarframe.Name = "Khora" And ComboBox_companions.Items.Contains("Venari") Then
                 If ComboBox_companions.SelectedItem = "Venari" Then
                     ComboBox_companions.SelectedIndex = 0
                 End If
-                ComboBox_companions.Items.RemoveAt(ComboBox_companions.Items.Count - 1)
+                ComboBox_companions.Items.Remove("Venari")
             End If
             If currentWarframe.Name = "Harrow" Then
                 CheckedInput_overshields.Maximum = 2400
@@ -850,7 +876,7 @@ Public Class Form_main
             StatBox_warframeShield.Value = Shield
             StatBox_warframeEnergy.Value = Energy
             StatBox_warframePowerStrength.Value = powerStrength * 100
-            StatBox_damageReduction.Value = damageReduction * 100
+            StatBox_warframeDamageReduction.Value = damageReduction * 100
             '
             '   Calculate EHP
             '
@@ -869,7 +895,7 @@ Public Class Form_main
             StatBox_warframeEnergy.Value = Nothing
             StatBox_warframePowerStrength.Value = Nothing
             StatBox_warframeEHP.Value = Nothing
-            StatBox_damageReduction.Value = Nothing
+            StatBox_warframeDamageReduction.Value = Nothing
             FlowLayoutPanel_defaultArcaneHelmets.Visible = True
             For Each Flow As Control In CheckedGroupBox_arcaneHelmets.FlowLayout.Controls
                 If TypeOf Flow Is FlowLayoutPanel Then
@@ -975,7 +1001,7 @@ Public Class Form_main
                     Shield = baseShield * DefaultRankMultipliers.Companions.Find(Function(m) m.Name = "shield").Multiplier
                 End If
             End If
-            damageReduction = StatBox_damageReduction.Value / 100
+            damageReduction = StatBox_warframeDamageReduction.Value / 100
             If currentWarframe IsNot Nothing Then
                 If currentWarframe.Name = "Oberon" Then
                     'Oberon Passive
@@ -1034,6 +1060,110 @@ Public Class Form_main
             StatBox_companionShield.Value = Nothing
             StatBox_companionDamageReduction.Value = Nothing
             StatBox_companionEHP.Value = Nothing
+        End If
+    End Sub
+
+    Private Sub Archwing_Value_Changed(sender As Object, e As EventArgs)
+        '
+        '   Default Stats
+        '
+        Dim baseArmor As Decimal = 0.0
+        Dim Armor As Decimal = 0.0
+        Dim baseHealth As Decimal = 0.0
+        Dim Health As Decimal = 0.0
+        Dim baseShield As Decimal = 0.0
+        Dim Shield As Decimal = 0.0
+        Dim baseEnergy As Decimal = 0.0
+        Dim Energy As Decimal = 0.0
+        Dim basePowerStrength As Decimal = 0.0
+        Dim powerStrength As Decimal = 0.0
+        '
+        '   Default Multipliers (From Mods)
+        '   and bonus added armor
+        '
+        Dim armorMultiplier As Decimal = 0.0
+        Dim healthMultiplier As Decimal = 0.0
+        Dim shieldMultiplier As Decimal = 0.0
+        Dim energyMultiplier As Decimal = 0.0
+        Dim armorBonus As Decimal = 0.0
+        Dim healthBonus As Decimal = 0.0
+        Dim shieldBonus As Decimal = 0.0
+        Dim energyBonus As Decimal = 0.0
+        Dim damageReduction As Decimal = 0.0
+        '
+        '   Sepical Hidden stat for abilities that
+        '   100% absorb x amount dmg
+        '
+        Dim damageAbsorbstion As Decimal = 0.0
+        If ComboBox_archwings.SelectedIndex > 0 Then
+            Dim currentArchwing As Archwing = Archwings.Find(Function(aw) aw.Name = ComboBox_archwings.SelectedItem)
+            Dim hasPrime As Boolean = Not currentArchwing.Variants.Find(Function(var) var.Name = "prime") Is Nothing
+            If hasPrime Then
+                CheckBox_archwingPrime.Enabled = True
+            Else
+                CheckBox_archwingPrime.Enabled = False
+            End If
+            '
+            ' Stats
+            '
+            Dim currentVariant As [Variant] = currentArchwing.Variants.Find(Function(var) var.Name = If(CheckBox_archwingPrime.Enabled And CheckBox_archwingPrime.Checked, "prime", "base"))
+            baseArmor = currentVariant.Armor
+            baseHealth = currentVariant.Health
+            baseShield = currentVariant.Shield
+            baseEnergy = currentVariant.Energy
+            basePowerStrength = currentVariant.strength / 100
+            If Not currentArchwing.Rank_Multipliers.Find(Function(rm) rm.Name = "armor") Is Nothing Then
+                Armor = baseArmor * currentArchwing.Rank_Multipliers.Find(Function(rm) rm.Name = "armor").Multiplier
+            Else
+                Armor = baseArmor * DefaultRankMultipliers.Archwings.Find(Function(m) m.Name = "armor").Multiplier
+            End If
+            If Not currentArchwing.Rank_Multipliers.Find(Function(rm) rm.Name = "health") Is Nothing Then
+                Health = baseHealth * currentArchwing.Rank_Multipliers.Find(Function(rm) rm.Name = "health").Multiplier
+            Else
+                Health = baseHealth * DefaultRankMultipliers.Archwings.Find(Function(m) m.Name = "health").Multiplier
+            End If
+            If Not currentArchwing.Rank_Multipliers.Find(Function(rm) rm.Name = "shield") Is Nothing Then
+                Shield = baseShield * currentArchwing.Rank_Multipliers.Find(Function(rm) rm.Name = "shield").Multiplier
+            Else
+                Shield = baseShield * DefaultRankMultipliers.Archwings.Find(Function(m) m.Name = "shield").Multiplier
+            End If
+            If Not currentArchwing.Rank_Multipliers.Find(Function(rm) rm.Name = "energy") Is Nothing Then
+                Energy = baseEnergy * currentArchwing.Rank_Multipliers.Find(Function(rm) rm.Name = "energy").Multiplier
+            Else
+                Energy = baseEnergy * DefaultRankMultipliers.Archwings.Find(Function(m) m.Name = "energy").Multiplier
+            End If
+            If Not currentArchwing.Rank_Multipliers.Find(Function(rm) rm.Name = "strength") Is Nothing Then
+                powerStrength = basePowerStrength * currentArchwing.Rank_Multipliers.Find(Function(rm) rm.Name = "strength").Multiplier
+            Else
+                powerStrength = basePowerStrength * DefaultRankMultipliers.Archwings.Find(Function(m) m.Name = "strength").Multiplier
+            End If
+            '
+            '   Display Stats
+            '
+            StatBox_archwingArmor.Value = Armor
+            StatBox_archwingHealth.Value = Health
+            StatBox_archwingShield.Value = Shield
+            StatBox_archwingEnergy.Value = Energy
+            StatBox_archwingPowerStrength.Value = powerStrength * 100
+            StatBox_archwingDamageReduction.Value = damageReduction * 100
+            '
+            '   Calculate EHP
+            '
+            Dim damageReductionArmor As Decimal = Armor / (300 + Armor)
+            Dim totalDamageReduction As Decimal = damageReductionArmor + ((1 - damageReductionArmor) * damageReduction)
+            Dim effectiveHealth As Integer = Math.Ceiling((Health / (1 - totalDamageReduction)) + (Shield / (1 - damageReduction)) + damageAbsorbstion)
+            StatBox_archwingEHP.Value = effectiveHealth
+        Else
+            '
+            '   No Archwing selected, display values should be set to default
+            '
+            StatBox_archwingArmor.Value = Nothing
+            StatBox_archwingHealth.Value = Nothing
+            StatBox_archwingShield.Value = Nothing
+            StatBox_archwingEnergy.Value = Nothing
+            StatBox_archwingPowerStrength.Value = Nothing
+            StatBox_archwingEHP.Value = Nothing
+            StatBox_archwingDamageReduction.Value = Nothing
         End If
     End Sub
 

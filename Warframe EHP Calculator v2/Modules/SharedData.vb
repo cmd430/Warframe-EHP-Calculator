@@ -24,6 +24,8 @@ Public Class Rank_Multipliers
     Public Property Companions As New List(Of Rank_Multiplier)
     <XmlArray("sentinels")>
     Public Property Sentinels As New List(Of Rank_Multiplier)
+    <XmlArray("archwings")>
+    Public Property Archwings As New List(Of Rank_Multiplier)
 End Class
 
 <XmlType(TypeName:="rank_multiplier")>
