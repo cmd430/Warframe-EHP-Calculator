@@ -6,8 +6,10 @@
 * fixed companion calculations not using base stats
 * fixed oberon passive being outof date for companion calculations
 * fixed companion genetic stability being outof date now calculates correctly
+* updated wukong
 + added missing companion armor, health and shield mods
 	# moas comming later
 + damage reduction from abilities now affects companions
 + sentinels added to companion calculator
 + archwings added to calculator
+	# not completed yet
