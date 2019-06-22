@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<archwings>
+  <archwing name="Amesha">
+    <variants>
+      <variant name="base" armor="200" health="400" shield="200" energy="200" strength="100" />
+    </variants>
+  </archwing>
+  <archwing name="Elytron">
+    <variants>
+      <variant name="base" armor="150" health="450" shield="450" energy="125" strength="100" />
+    </variants>
+  </archwing>
+  <archwing name="Itzal">
+    <variants>
+      <variant name="base" armor="50" health="200" shield="200" energy="200" strength="100" />
+    </variants>
+  </archwing>
+  <archwing name="Odonata">
+    <variants>
+      <variant name="base" armor="100" health="300" shield="300" energy="100" strength="100" />
+      <variant name="prime" armor="100" health="400" shield="400" energy="100" strength="100" />
+    </variants>
+  </archwing>
+</archwings>

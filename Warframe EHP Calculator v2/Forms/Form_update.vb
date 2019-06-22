@@ -1,16 +1,19 @@
-﻿Public NotInheritable Class Form_update
+﻿Imports System.Net
 
-    Private Sub Form_update_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+Public NotInheritable Class Form_update
+
+    Private Sub Form_update_Load(ByVal sender As Object, ByVal e As EventArgs) Handles MyBase.Load
         Label_updateAvailable.Text = "Update" & Form_main.liveVersion & " is available for download"
         Try
-            TextBox_changes.Text = Form_main.GetResponseNoCache("https://raw.githubusercontent.com/cmd430/Warframe-EHP-Calculator/master/Warframe%20EHP%20Calculator%20v2/latest_changes")
+            Dim WebClient = New WebClient
+            TextBox_changes.Text = WebClient.DownloadString("https://raw.githubusercontent.com/cmd430/Warframe-EHP-Calculator/master/Warframe%20EHP%20Calculator%20v2/latest_changes")
         Catch ex As Exception
             TextBox_changes.Text = "Error Loading Changes"
         End Try
     End Sub
 
     Private Sub Button_ignore_Click(sender As Object, e As EventArgs) Handles Button_ignore.Click
-        Me.Close()
+        Close()
     End Sub
 
     Private Sub Button_download_Click(sender As Object, e As EventArgs) Handles Button_download.Click

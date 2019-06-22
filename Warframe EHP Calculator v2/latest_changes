@@ -1,2 +1,15 @@
-1905
-+ added wisp
+1906
+* application requires dotnet runtime 4.7.2
+  https://dotnet.microsoft.com/download/dotnet-framework/net472
+* rewrote parts of the app for better performance and maintainability
+	# stats are now stored in xml for ease of updating
+* fixed companion calculations not using base stats
+* fixed oberon passive being outof date for companion calculations
+* fixed companion genetic stability being outof date now calculates correctly
+* updated wukong
++ added missing companion armor, health and shield mods
+	# moas comming later
++ damage reduction from abilities now affects companions
++ sentinels added to companion calculator
++ archwings added to calculator
+	# not completed yet

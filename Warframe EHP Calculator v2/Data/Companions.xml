@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<companions>
+  <companion name="Adarza" type="kavat" sort="0">
+    <variants>
+      <variant name="base" armor="50" health="40" shield="70" />
+    </variants>
+  </companion>
+  <companion name="Smeeta" type="kavat" sort="0">
+    <variants>
+      <variant name="base" armor="65" health="50" shield="60" />
+    </variants>
+  </companion>
+  <companion name="Venari" type="kavat" sort="0">
+    <variants>
+      <variant name="base" armor="350" health="300" shield="0" />
+    </variants>
+  </companion>
+  <companion name="Chesa" type="kubrow" sort="10">
+    <variants>
+      <variant name="base" armor="50" health="125 " shield="75" />
+    </variants>
+  </companion>
+  <companion name="Huras" type="kubrow" sort="10">
+    <variants>
+      <variant name="base" armor="50" health="75" shield="125" />
+    </variants>
+  </companion>
+  <companion name="Raksa" type="kubrow" sort="10">
+    <variants>
+      <variant name="base" armor="50" health="100" shield="100" />
+    </variants>
+  </companion>
+  <companion name="Sahasa" type="kubrow" sort="10">
+    <variants>
+      <variant name="base" armor="50" health="125" shield="75" />
+    </variants>
+  </companion>
+  <companion name="Sunika" type="kubrow" sort="10">
+    <variants>
+      <variant name="base" armor="50" health="110" shield="90" />
+    </variants>
+  </companion>
+  <companion name="Helminth Charger" type="helminth" sort="20">
+    <variants>
+      <variant name="base" armor="50" health="95" shield="85" />
+    </variants>
+  </companion>
+  <companion name="Carrier" type="sentinel" sort="30">
+    <variants>
+      <variant name="base" armor="50" health="200" shield="100" />
+      <variant name="prime" armor="150" health="400" shield="100" />
+    </variants>
+  </companion>
+  <companion name="Dethcube" type="sentinel" sort="30">
+    <variants>
+      <variant name="base" armor="50" health="200" shield="100" />
+    </variants>
+  </companion>
+  <companion name="Diriga" type="sentinel" sort="30">
+    <variants>
+      <variant name="base" armor="50" health="350" shield="50" />
+    </variants>
+  </companion>
+  <companion name="Djinn" type="sentinel" sort="30">
+    <variants>
+      <variant name="base" armor="50" health="200" shield="100" />
+    </variants>
+  </companion>
+  <companion name="Helios" type="sentinel" sort="30">
+    <variants>
+      <variant name="base" armor="50" health="200" shield="100" />
+      <variant name="prime" armor="100" health="250" shield="100" />
+    </variants>
+  </companion>
+  <companion name="Oxylus" type="sentinel" sort="30">
+    <variants>
+      <variant name="base" armor="50" health="200" shield="100" />
+    </variants>
+  </companion>
+  <companion name="Shade" type="sentinel" sort="30">
+    <variants>
+      <variant name="base" armor="50" health="350" shield="50" />
+      <variant name="prisma" armor="75" health="350" shield="100" />
+    </variants>
+  </companion>
+  <companion name="Taxon" type="sentinel" sort="30">
+    <variants>
+      <variant name="base" armor="50" health="200" shield="100" />
+    </variants>
+  </companion>
+  <companion name="Wyrm" type="sentinel" sort="30">
+    <variants>
+      <variant name="base" armor="50" health="200" shield="100" />
+      <variant name="prime" armor="150" health="225" shield="300" />
+    </variants>
+  </companion>
+</companions>

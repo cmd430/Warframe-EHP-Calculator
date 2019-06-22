@@ -11,7 +11,7 @@
     <AssemblyName>Warframe EHP Calculator v2</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
@@ -39,6 +39,7 @@
     <OutputPath>bin\Debug\</OutputPath>
     <DocumentationFile>Warframe EHP Calculator v2.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -72,6 +73,7 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
@@ -94,28 +96,73 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomTabControl.vb">
+    <Compile Include="Controls\CheckedGroupBox.vb">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Form_main.vb">
+    <Compile Include="Controls\General Inputs\CheckedInput.Designer.vb">
+      <DependentUpon>CheckedInput.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\General Inputs\CheckedInput.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\General Inputs\RadioInput.Designer.vb">
+      <DependentUpon>RadioInput.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\General Inputs\RadioInput.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\StatBox.Designer.vb">
+      <DependentUpon>StatBox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\StatBox.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Unique Inputs\CheckedDualInput.Designer.vb">
+      <DependentUpon>CheckedDualInput.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Unique Inputs\CheckedDualInput.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Unique Inputs\NumericInput.Designer.vb">
+      <DependentUpon>NumericInput.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Unique Inputs\NumericInput.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Unique Inputs\MaxValueToggle.Designer.vb">
+      <DependentUpon>MaxValueToggle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Unique Inputs\MaxValueToggle.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Unique Inputs\CompanionVariantSelection.Designer.vb">
+      <DependentUpon>CompanionVariantSelection.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Unique Inputs\CompanionVariantSelection.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Unique Inputs\VariantSelection.Designer.vb">
+      <DependentUpon>VariantSelection.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Unique Inputs\VariantSelection.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_main.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_main.Designer.vb">
+    <Compile Include="Forms\Form_main.Designer.vb">
       <DependentUpon>Form_main.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_squadMember.Designer.vb">
-      <DependentUpon>Form_squadMember.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Form_squadMember.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form_update.Designer.vb">
+    <Compile Include="Forms\Form_update.Designer.vb">
       <DependentUpon>Form_update.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form_update.vb">
+    <Compile Include="Forms\Form_update.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Modules\CompanionData.vb" />
+    <Compile Include="Modules\SharedData.vb" />
+    <Compile Include="Modules\ArchwingData.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -131,15 +178,37 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Modules\WarframeData.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form_main.resx">
+    <EmbeddedResource Include="Controls\General Inputs\CheckedInput.resx">
+      <DependentUpon>CheckedInput.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\General Inputs\RadioInput.resx">
+      <DependentUpon>RadioInput.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\StatBox.resx">
+      <DependentUpon>StatBox.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Unique Inputs\CheckedDualInput.resx">
+      <DependentUpon>CheckedDualInput.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Unique Inputs\NumericInput.resx">
+      <DependentUpon>NumericInput.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Unique Inputs\MaxValueToggle.resx">
+      <DependentUpon>MaxValueToggle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Unique Inputs\CompanionVariantSelection.resx">
+      <DependentUpon>CompanionVariantSelection.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Unique Inputs\VariantSelection.resx">
+      <DependentUpon>VariantSelection.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_main.resx">
       <DependentUpon>Form_main.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_squadMember.resx">
-      <DependentUpon>Form_squadMember.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form_update.resx">
+    <EmbeddedResource Include="Forms\Form_update.resx">
       <DependentUpon>Form_update.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -164,8 +233,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\Debug\Warframe EHP Calculator v2.exe" />
-    <Content Include="latest_changes" />
-    <Content Include="version" />
+    <None Include="latest_changes" />
+    <EmbeddedResource Include="version" />
+    <EmbeddedResource Include="Data\DefaultRankMultipliers.xml" />
+    <EmbeddedResource Include="Data\Warframes.xml" />
+    <EmbeddedResource Include="Data\Companions.xml" />
+    <EmbeddedResource Include="Data\Archwings.xml" />
     <Content Include="Warframe.ico" />
   </ItemGroup>
   <ItemGroup>
@@ -180,7 +253,11 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>node "$(ProjectDir)\Util\Wikia Scraper\index.js"</PreBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
