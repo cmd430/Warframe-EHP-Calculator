@@ -244,7 +244,7 @@
   </warframe>
   <warframe name="Wukong">
     <variants>
-      <variant name="base" armor="225" health="100" shield="125" energy="100" strength="100" />
+      <variant name="base" armor="250" health="150" shield="100" energy="120" strength="100" />
     </variants>
   </warframe>
   <warframe name="Zephyr">

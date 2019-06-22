@@ -1,8 +1,8 @@
 const tabletojson = require('tabletojson')
 const fs = require('fs')
 
-console.log('Updating Warframe Data from \'https://warframe.fandom.com/wiki/Warframes_Comparison/Stats\'')
-tabletojson.convertUrl('https://warframe.fandom.com/wiki/Warframes_Comparison/Stats', {
+console.log('Updating Warframe Data from \'https://warframe.fandom.com/wiki/Warframes_Comparison\'')
+tabletojson.convertUrl('https://warframe.fandom.com/wiki/Warframes_Comparison', {
     useFirstRowForHeadings: true
   },
   function(tablesAsJson) {
