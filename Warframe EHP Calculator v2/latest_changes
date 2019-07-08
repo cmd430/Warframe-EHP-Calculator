@@ -1,3 +1,6 @@
+1907-1
+* fix version being incorrectly cast to integer
+
 1907
 * fixed auras not updating the EHP
 + finished archwing mods

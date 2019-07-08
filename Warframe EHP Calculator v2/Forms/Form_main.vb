@@ -230,7 +230,7 @@ Public Class Form_main
         Dim vParts As String() = v.Split("-")
         Dim vMain As String = vParts(0)
         Dim vPatch As String = vParts(1)
-        Return CType(vMain & "." & vPatch, Integer)
+        Return vMain & "." & vPatch
     End Function
 
     Private Sub Warframe_Value_Changed(sender As Object, e As EventArgs)
