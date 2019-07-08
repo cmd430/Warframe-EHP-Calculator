@@ -57,23 +57,31 @@ Public Class CheckedGroupBox
     Private Sub ChildControlCheckChanged(ByVal sender As Object, ByVal e As EventArgs)
         Dim _Controls As ControlCollection = FlowLayout.Controls
         If Limited Then
-            Dim checkedControls As Integer = 0
+            Dim Tags As New Dictionary(Of String, Integer)
             For Each control In _Controls.OfType(Of CheckedInput)
+                If control.Tag Is Nothing Or Not LimitUsesTags Then
+                    control.Tag = "limitGroup_untagged"
+                End If
+                If Not Tags.ContainsKey(control.Tag) Then
+                    Tags.Add(control.Tag, 0)
+                End If
                 If control.Checked Then
-                    checkedControls += 1
+                    Tags.Item(control.Tag) += 1
                 End If
             Next
-            If checkedControls = Limit Then
-                For Each control In _Controls.OfType(Of CheckedInput)
-                    If Not control.Checked Then
-                        control.Enabled = False
-                    End If
-                Next
-            Else
-                For Each control In _Controls.OfType(Of CheckedInput)
-                    control.Enabled = True
-                Next
-            End If
+            For Each _tag In Tags
+                If (_tag.Value = Limit And _tag.Key = "limitGroup_untagged") Or _tag.Value = _tag.Key.Split("_").Last() Then
+                    For Each control In _Controls.OfType(Of CheckedInput).Where(Function(x) x.Tag = _tag.Key)
+                        If Not control.Checked Then
+                            control.Enabled = False
+                        End If
+                    Next
+                Else
+                    For Each control In _Controls.OfType(Of CheckedInput).Where(Function(x) x.Tag = _tag.Key)
+                        control.Enabled = True
+                    Next
+                End If
+            Next
         End If
     End Sub
 
@@ -129,5 +137,10 @@ Public Class CheckedGroupBox
     <DefaultValue(2)>
     <Browsable(True)>
     Public Property Limit As Integer = 2
+    <Category("!Properties")>
+    <Description("Only allow 'Limit' Items Checked Per 'tag'; Tags should be formatted as 'limitGroup_<tag (string)>_<limit (integer)>'; NOTE this disables the Limit property (untagged items will still respect it however), group limits are se by the number at the end of the group")>
+    <DefaultValue(False)>
+    <Browsable(True)>
+    Public Property LimitUsesTags As Boolean = False
 
 End Class

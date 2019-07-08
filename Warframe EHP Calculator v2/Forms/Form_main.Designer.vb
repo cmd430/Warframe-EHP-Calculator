@@ -29,114 +29,24 @@ Partial Class Form_main
         Me.TableLayoutPanel_warframeMainLayout = New System.Windows.Forms.TableLayoutPanel()
         Me.GroupBox_stats = New System.Windows.Forms.GroupBox()
         Me.FlowLayoutPanel_warframeStatsLayout = New System.Windows.Forms.FlowLayoutPanel()
-        Me.StatBox_warframeArmor = New Warframe_EHP_Calculator_v2.StatBox()
-        Me.StatBox_warframeHealth = New Warframe_EHP_Calculator_v2.StatBox()
-        Me.StatBox_warframeShield = New Warframe_EHP_Calculator_v2.StatBox()
-        Me.StatBox_warframeEnergy = New Warframe_EHP_Calculator_v2.StatBox()
-        Me.StatBox_warframePowerStrength = New Warframe_EHP_Calculator_v2.StatBox()
-        Me.StatBox_warframeDamageReduction = New Warframe_EHP_Calculator_v2.StatBox()
-        Me.StatBox_warframeEHP = New Warframe_EHP_Calculator_v2.StatBox()
         Me.FlowLayoutPanel_warframeModsLayout = New System.Windows.Forms.FlowLayoutPanel()
-        Me.CheckedGroupBox_aura = New Warframe_EHP_Calculator_v2.CheckedGroupBox()
-        Me.RadioInput_growingPower = New Warframe_EHP_Calculator_v2.RadioInput()
-        Me.RadioInput_standUnited = New Warframe_EHP_Calculator_v2.RadioInput()
-        Me.RadioInput_physique = New Warframe_EHP_Calculator_v2.RadioInput()
-        Me.RadioInput_powerDonation = New Warframe_EHP_Calculator_v2.RadioInput()
-        Me.CheckedGroupBox_survivability = New Warframe_EHP_Calculator_v2.CheckedGroupBox()
-        Me.CheckedInput_umbralVitality = New Warframe_EHP_Calculator_v2.CheckedInput()
-        Me.CheckedInput_umbralFiber = New Warframe_EHP_Calculator_v2.CheckedInput()
-        Me.CheckedInput_gladiatorFinesse = New Warframe_EHP_Calculator_v2.CheckedInput()
-        Me.CheckedInput_augurAccord = New Warframe_EHP_Calculator_v2.CheckedInput()
-        Me.CheckedInput_gladiatorResolve = New Warframe_EHP_Calculator_v2.CheckedInput()
-        Me.CheckedInput_gladiatorAegis = New Warframe_EHP_Calculator_v2.CheckedInput()
-        Me.CheckedDualInput_healthConversion = New Warframe_EHP_Calculator_v2.CheckedDualInput()
-        Me.CheckedInput_quickThinking = New Warframe_EHP_Calculator_v2.CheckedInput()
-        Me.CheckedInput_armoredAgility = New Warframe_EHP_Calculator_v2.CheckedInput()
-        Me.CheckedInput_vigor = New Warframe_EHP_Calculator_v2.CheckedInput()
-        Me.CheckedInput_redirection = New Warframe_EHP_Calculator_v2.CheckedInput()
-        Me.CheckedInput_vitality = New Warframe_EHP_Calculator_v2.CheckedInput()
-        Me.CheckedInput_steelFiber = New Warframe_EHP_Calculator_v2.CheckedInput()
-        Me.CheckedGroupBox_miscellaneous = New Warframe_EHP_Calculator_v2.CheckedGroupBox()
-        Me.CheckedInput_flow = New Warframe_EHP_Calculator_v2.CheckedInput()
-        Me.CheckedInput_enduranceDrift = New Warframe_EHP_Calculator_v2.CheckedInput()
-        Me.CheckedInput_coactionDrift = New Warframe_EHP_Calculator_v2.CheckedInput()
-        Me.CheckedGroupBox_powerStrength = New Warframe_EHP_Calculator_v2.CheckedGroupBox()
-        Me.CheckedInput_umbralIntensify = New Warframe_EHP_Calculator_v2.CheckedInput()
-        Me.CheckedInput_augurSecrets = New Warframe_EHP_Calculator_v2.CheckedInput()
-        Me.CheckedInput_powerDrift = New Warframe_EHP_Calculator_v2.CheckedInput()
-        Me.CheckedInput_overextended = New Warframe_EHP_Calculator_v2.CheckedInput()
-        Me.CheckedInput_transientFortitude = New Warframe_EHP_Calculator_v2.CheckedInput()
-        Me.CheckedInput_intensify = New Warframe_EHP_Calculator_v2.CheckedInput()
-        Me.CheckedInput_energyConversion = New Warframe_EHP_Calculator_v2.CheckedInput()
-        Me.CheckedInput_blindRage = New Warframe_EHP_Calculator_v2.CheckedInput()
-        Me.CheckedGroupBox_dragonKeys = New Warframe_EHP_Calculator_v2.CheckedGroupBox()
-        Me.CheckBox_decayingKey = New System.Windows.Forms.CheckBox()
-        Me.CheckBox_bleedingKey = New System.Windows.Forms.CheckBox()
-        Me.CheckedGroupBox_missionModifiers = New Warframe_EHP_Calculator_v2.CheckedGroupBox()
-        Me.RadioButton_missionFire = New System.Windows.Forms.RadioButton()
-        Me.RadioButton_missionCryogenicLeakage = New System.Windows.Forms.RadioButton()
-        Me.CheckedGroupBox_blocking = New Warframe_EHP_Calculator_v2.CheckedGroupBox()
-        Me.ComboBox_blocking = New System.Windows.Forms.ComboBox()
-        Me.CheckedGroupBox_focus = New Warframe_EHP_Calculator_v2.CheckedGroupBox()
-        Me.CheckedInput_stoneSkin = New Warframe_EHP_Calculator_v2.CheckedInput()
-        Me.CheckedGroupBox_specialEffects = New Warframe_EHP_Calculator_v2.CheckedGroupBox()
-        Me.CheckBox_corruptedBuff = New System.Windows.Forms.CheckBox()
-        Me.CheckedInput_overshields = New Warframe_EHP_Calculator_v2.CheckedInput()
-        Me.CheckedGroupBox_arcanes = New Warframe_EHP_Calculator_v2.CheckedGroupBox()
-        Me.CheckedInput_arcaneUltimatum2 = New Warframe_EHP_Calculator_v2.CheckedInput()
-        Me.CheckedInput_arcaneUltimatum = New Warframe_EHP_Calculator_v2.CheckedInput()
-        Me.CheckedInput_arcaneGuardian2 = New Warframe_EHP_Calculator_v2.CheckedInput()
-        Me.CheckedInput_arcaneGuardian = New Warframe_EHP_Calculator_v2.CheckedInput()
-        Me.CheckedGroupBox_abilities = New Warframe_EHP_Calculator_v2.CheckedGroupBox()
-        Me.CheckedGroupBox_arcaneHelmets = New Warframe_EHP_Calculator_v2.CheckedGroupBox()
         Me.TableLayoutPanel_warframeTopLayout = New System.Windows.Forms.TableLayoutPanel()
         Me.ComboBox_warframes = New System.Windows.Forms.ComboBox()
-        Me.VariantSelection_warframes = New Warframe_EHP_Calculator_v2.VariantSelection()
-        Me.MaxValueToggle_warframes = New Warframe_EHP_Calculator_v2.MaxValueToggle()
         Me.TabPage_companion = New System.Windows.Forms.TabPage()
         Me.TableLayoutPanel_compainionMainLayout = New System.Windows.Forms.TableLayoutPanel()
         Me.FlowLayoutPanel_compainionModsLayout = New System.Windows.Forms.FlowLayoutPanel()
-        Me.CheckedGroupBox_companionSurvivability = New Warframe_EHP_Calculator_v2.CheckedGroupBox()
-        Me.CheckedInput_companionCalculatedRedirection = New Warframe_EHP_Calculator_v2.CheckedInput()
-        Me.CheckedInput_companionEnhancedVitality = New Warframe_EHP_Calculator_v2.CheckedInput()
-        Me.CheckedInput_companionMetalFiber = New Warframe_EHP_Calculator_v2.CheckedInput()
-        Me.CheckedInput_companionLinkShield = New Warframe_EHP_Calculator_v2.CheckedInput()
-        Me.CheckedInput_companionLinkHealth = New Warframe_EHP_Calculator_v2.CheckedInput()
-        Me.CheckedInput_companionLinkArmor = New Warframe_EHP_Calculator_v2.CheckedInput()
         Me.GroupBox_companionStats = New System.Windows.Forms.GroupBox()
         Me.FlowLayoutPanel_companionStatsLayout = New System.Windows.Forms.FlowLayoutPanel()
-        Me.StatBox_companionArmor = New Warframe_EHP_Calculator_v2.StatBox()
-        Me.StatBox_companionHealth = New Warframe_EHP_Calculator_v2.StatBox()
-        Me.StatBox_companionShield = New Warframe_EHP_Calculator_v2.StatBox()
-        Me.StatBox_companionDamageReduction = New Warframe_EHP_Calculator_v2.StatBox()
-        Me.StatBox_companionEHP = New Warframe_EHP_Calculator_v2.StatBox()
         Me.TableLayoutPanel_companionTopLayout = New System.Windows.Forms.TableLayoutPanel()
         Me.ComboBox_companions = New System.Windows.Forms.ComboBox()
-        Me.CompanionVariantSelection1 = New Warframe_EHP_Calculator_v2.CompanionVariantSelection()
         Me.CheckBox_companionPrimeCollar = New System.Windows.Forms.CheckBox()
-        Me.MaxValueToggle_compainions = New Warframe_EHP_Calculator_v2.MaxValueToggle()
-        Me.NumericInput_companionStability = New Warframe_EHP_Calculator_v2.NumericInput()
         Me.TabPage_archwing = New System.Windows.Forms.TabPage()
         Me.TableLayoutPanel_archwingMainLayout = New System.Windows.Forms.TableLayoutPanel()
         Me.GroupBox_archwingStats = New System.Windows.Forms.GroupBox()
         Me.FlowLayoutPanel_archwingStatsLayout = New System.Windows.Forms.FlowLayoutPanel()
-        Me.StatBox_archwingArmor = New Warframe_EHP_Calculator_v2.StatBox()
-        Me.StatBox_archwingHealth = New Warframe_EHP_Calculator_v2.StatBox()
-        Me.StatBox_archwingShield = New Warframe_EHP_Calculator_v2.StatBox()
-        Me.StatBox_archwingEnergy = New Warframe_EHP_Calculator_v2.StatBox()
-        Me.StatBox_archwingPowerStrength = New Warframe_EHP_Calculator_v2.StatBox()
-        Me.StatBox_archwingDamageReduction = New Warframe_EHP_Calculator_v2.StatBox()
-        Me.StatBox_archwingEHP = New Warframe_EHP_Calculator_v2.StatBox()
         Me.FlowLayoutPanel_archwingModsLayout = New System.Windows.Forms.FlowLayoutPanel()
-        Me.CheckedGroupBox_archwingAura = New Warframe_EHP_Calculator_v2.CheckedGroupBox()
-        Me.RadioInput_archwingStandUnited = New Warframe_EHP_Calculator_v2.RadioInput()
-        Me.RadioInput_archwingPhysique = New Warframe_EHP_Calculator_v2.RadioInput()
-        Me.CheckedGroupBox_archwingSurvivability = New Warframe_EHP_Calculator_v2.CheckedGroupBox()
-        Me.CheckedGroupBox_archwingMiscellaneous = New Warframe_EHP_Calculator_v2.CheckedGroupBox()
-        Me.CheckedInput_archwingCoactionDrift = New Warframe_EHP_Calculator_v2.CheckedInput()
         Me.TableLayoutPanel_archwingTopLayout = New System.Windows.Forms.TableLayoutPanel()
         Me.ComboBox_archwings = New System.Windows.Forms.ComboBox()
-        Me.MaxValueToggle_archwings = New Warframe_EHP_Calculator_v2.MaxValueToggle()
         Me.CheckBox_archwingPrime = New System.Windows.Forms.CheckBox()
         Me.TabPage_development = New System.Windows.Forms.TabPage()
         Me.TabControl_arcaneHelmets = New System.Windows.Forms.TabControl()
@@ -200,10 +110,8 @@ Partial Class Form_main
         Me.Label_abilityPlaceholder = New System.Windows.Forms.Label()
         Me.TabPage_abilitiesAtlas = New System.Windows.Forms.TabPage()
         Me.FlowLayoutPanel_atlasAbilities = New System.Windows.Forms.FlowLayoutPanel()
-        Me.CheckedInput_rubble = New Warframe_EHP_Calculator_v2.CheckedInput()
         Me.TabPage_abilitiesBaruuk = New System.Windows.Forms.TabPage()
         Me.FlowLayoutPanel_baruukAbilities = New System.Windows.Forms.FlowLayoutPanel()
-        Me.CheckedInput_restraint = New Warframe_EHP_Calculator_v2.CheckedInput()
         Me.CheckBox_desolateHands = New System.Windows.Forms.CheckBox()
         Me.CheckBox_sereneStorm = New System.Windows.Forms.CheckBox()
         Me.TabPage_abilitiesChroma = New System.Windows.Forms.TabPage()
@@ -218,7 +126,6 @@ Partial Class Form_main
         Me.CheckBox_exaltedBlade = New System.Windows.Forms.CheckBox()
         Me.TabPage_abilitiesFrost = New System.Windows.Forms.TabPage()
         Me.FlowLayoutPanel_frostAbilities = New System.Windows.Forms.FlowLayoutPanel()
-        Me.CheckedInput_icyAvalanche = New Warframe_EHP_Calculator_v2.CheckedInput()
         Me.TabPage_abilitiesGara = New System.Windows.Forms.TabPage()
         Me.FlowLayoutPanel_garaAbilities = New System.Windows.Forms.FlowLayoutPanel()
         Me.CheckBox_splinterStorm = New System.Windows.Forms.CheckBox()
@@ -227,7 +134,6 @@ Partial Class Form_main
         Me.CheckBox_wardingThurible = New System.Windows.Forms.CheckBox()
         Me.TabPage_abilitiesInaros = New System.Windows.Forms.TabPage()
         Me.FlowLayoutPanel_inarosAbilities = New System.Windows.Forms.FlowLayoutPanel()
-        Me.CheckedInput_scarabSwarm = New Warframe_EHP_Calculator_v2.CheckedInput()
         Me.TabPage_abilitiesMesa = New System.Windows.Forms.TabPage()
         Me.FlowLayoutPanel_mesaAbilities = New System.Windows.Forms.FlowLayoutPanel()
         Me.CheckBox_shatterShield = New System.Windows.Forms.CheckBox()
@@ -237,7 +143,6 @@ Partial Class Form_main
         Me.CheckBox_eclipse = New System.Windows.Forms.CheckBox()
         Me.TabPage_abilitiesNekros = New System.Windows.Forms.TabPage()
         Me.FlowLayoutPanel_nekrosAbilities = New System.Windows.Forms.FlowLayoutPanel()
-        Me.CheckedInput_shieldOfShadows = New Warframe_EHP_Calculator_v2.CheckedInput()
         Me.TabPage_abilitiesNezha = New System.Windows.Forms.TabPage()
         Me.FlowLayoutPanel_nezhaAbilities = New System.Windows.Forms.FlowLayoutPanel()
         Me.CheckBox_wardingHalo = New System.Windows.Forms.CheckBox()
@@ -246,7 +151,6 @@ Partial Class Form_main
         Me.CheckBox_parasiticLink = New System.Windows.Forms.CheckBox()
         Me.TabPage_abilitiesNova = New System.Windows.Forms.TabPage()
         Me.FlowLayoutPanel_novaAbilities = New System.Windows.Forms.FlowLayoutPanel()
-        Me.CheckedInput_nullStar = New Warframe_EHP_Calculator_v2.CheckedInput()
         Me.TabPage_abilitiesOberon = New System.Windows.Forms.TabPage()
         Me.FlowLayoutPanel_oberonAbilities = New System.Windows.Forms.FlowLayoutPanel()
         Me.CheckBox_ironRenewal = New System.Windows.Forms.CheckBox()
@@ -256,11 +160,8 @@ Partial Class Form_main
         Me.CheckBox_metronome = New System.Windows.Forms.CheckBox()
         Me.TabPage_abilitiesRhino = New System.Windows.Forms.TabPage()
         Me.FlowLayoutPanel_rhinoAbilities = New System.Windows.Forms.FlowLayoutPanel()
-        Me.CheckedInput_ironSkin = New Warframe_EHP_Calculator_v2.CheckedInput()
-        Me.CheckedInput_ironcladCharge = New Warframe_EHP_Calculator_v2.CheckedInput()
         Me.TabPage_abilitiesTitania = New System.Windows.Forms.TabPage()
         Me.FlowLayoutPanel_titaniaAbilities = New System.Windows.Forms.FlowLayoutPanel()
-        Me.CheckedInput_thorns = New Warframe_EHP_Calculator_v2.CheckedInput()
         Me.TabPage_abilitiesTrinity = New System.Windows.Forms.TabPage()
         Me.FlowLayoutPanel_trinityAbilities = New System.Windows.Forms.FlowLayoutPanel()
         Me.CheckBox_link = New System.Windows.Forms.CheckBox()
@@ -277,30 +178,130 @@ Partial Class Form_main
         Me.Icons = New System.Windows.Forms.ImageList(Me.components)
         Me.Label_author = New System.Windows.Forms.Label()
         Me.Label_love = New System.Windows.Forms.Label()
+        Me.StatBox_warframeArmor = New Warframe_EHP_Calculator_v2.StatBox()
+        Me.StatBox_warframeHealth = New Warframe_EHP_Calculator_v2.StatBox()
+        Me.StatBox_warframeShield = New Warframe_EHP_Calculator_v2.StatBox()
+        Me.StatBox_warframeEnergy = New Warframe_EHP_Calculator_v2.StatBox()
+        Me.StatBox_warframePowerStrength = New Warframe_EHP_Calculator_v2.StatBox()
+        Me.StatBox_warframeDamageReduction = New Warframe_EHP_Calculator_v2.StatBox()
+        Me.StatBox_warframeEHP = New Warframe_EHP_Calculator_v2.StatBox()
+        Me.CheckedGroupBox_aura = New Warframe_EHP_Calculator_v2.CheckedGroupBox()
+        Me.RadioInput_growingPower = New Warframe_EHP_Calculator_v2.RadioInput()
+        Me.RadioInput_standUnited = New Warframe_EHP_Calculator_v2.RadioInput()
+        Me.RadioInput_physique = New Warframe_EHP_Calculator_v2.RadioInput()
+        Me.RadioInput_powerDonation = New Warframe_EHP_Calculator_v2.RadioInput()
+        Me.CheckedGroupBox_survivability = New Warframe_EHP_Calculator_v2.CheckedGroupBox()
+        Me.CheckBox_adaptation = New System.Windows.Forms.CheckBox()
+        Me.CheckedDualInput_mechaPulse = New Warframe_EHP_Calculator_v2.CheckedDualInput()
+        Me.CheckedInput_protonSet = New Warframe_EHP_Calculator_v2.CheckedInput()
+        Me.CheckedInput_aviator = New Warframe_EHP_Calculator_v2.CheckedInput()
+        Me.CheckedInput_agilityDrift = New Warframe_EHP_Calculator_v2.CheckedInput()
+        Me.CheckedInput_focusedDefense = New Warframe_EHP_Calculator_v2.CheckedInput()
+        Me.CheckedInput_umbralVitality = New Warframe_EHP_Calculator_v2.CheckedInput()
+        Me.CheckedInput_umbralFiber = New Warframe_EHP_Calculator_v2.CheckedInput()
+        Me.CheckedInput_gladiatorFinesse = New Warframe_EHP_Calculator_v2.CheckedInput()
+        Me.CheckedInput_augurAccord = New Warframe_EHP_Calculator_v2.CheckedInput()
+        Me.CheckedInput_gladiatorResolve = New Warframe_EHP_Calculator_v2.CheckedInput()
+        Me.CheckedInput_gladiatorAegis = New Warframe_EHP_Calculator_v2.CheckedInput()
+        Me.CheckedDualInput_healthConversion = New Warframe_EHP_Calculator_v2.CheckedDualInput()
+        Me.CheckedInput_quickThinking = New Warframe_EHP_Calculator_v2.CheckedInput()
+        Me.CheckedInput_armoredAgility = New Warframe_EHP_Calculator_v2.CheckedInput()
+        Me.CheckedInput_vigor = New Warframe_EHP_Calculator_v2.CheckedInput()
+        Me.CheckedInput_redirection = New Warframe_EHP_Calculator_v2.CheckedInput()
+        Me.CheckedInput_vitality = New Warframe_EHP_Calculator_v2.CheckedInput()
+        Me.CheckedInput_steelFiber = New Warframe_EHP_Calculator_v2.CheckedInput()
+        Me.CheckedGroupBox_miscellaneous = New Warframe_EHP_Calculator_v2.CheckedGroupBox()
+        Me.CheckedInput_flow = New Warframe_EHP_Calculator_v2.CheckedInput()
+        Me.CheckedInput_enduranceDrift = New Warframe_EHP_Calculator_v2.CheckedInput()
+        Me.CheckedInput_coactionDrift = New Warframe_EHP_Calculator_v2.CheckedInput()
+        Me.CheckedGroupBox_powerStrength = New Warframe_EHP_Calculator_v2.CheckedGroupBox()
+        Me.CheckedInput_umbralIntensify = New Warframe_EHP_Calculator_v2.CheckedInput()
+        Me.CheckedInput_augurSecrets = New Warframe_EHP_Calculator_v2.CheckedInput()
+        Me.CheckedInput_powerDrift = New Warframe_EHP_Calculator_v2.CheckedInput()
+        Me.CheckedInput_overextended = New Warframe_EHP_Calculator_v2.CheckedInput()
+        Me.CheckedInput_transientFortitude = New Warframe_EHP_Calculator_v2.CheckedInput()
+        Me.CheckedInput_intensify = New Warframe_EHP_Calculator_v2.CheckedInput()
+        Me.CheckedInput_energyConversion = New Warframe_EHP_Calculator_v2.CheckedInput()
+        Me.CheckedInput_blindRage = New Warframe_EHP_Calculator_v2.CheckedInput()
+        Me.CheckedGroupBox_dragonKeys = New Warframe_EHP_Calculator_v2.CheckedGroupBox()
+        Me.CheckBox_decayingKey = New System.Windows.Forms.CheckBox()
+        Me.CheckBox_bleedingKey = New System.Windows.Forms.CheckBox()
+        Me.CheckedGroupBox_missionModifiers = New Warframe_EHP_Calculator_v2.CheckedGroupBox()
+        Me.RadioButton_missionFire = New System.Windows.Forms.RadioButton()
+        Me.RadioButton_missionCryogenicLeakage = New System.Windows.Forms.RadioButton()
+        Me.CheckedGroupBox_blocking = New Warframe_EHP_Calculator_v2.CheckedGroupBox()
+        Me.ComboBox_blocking = New System.Windows.Forms.ComboBox()
+        Me.CheckedGroupBox_focus = New Warframe_EHP_Calculator_v2.CheckedGroupBox()
+        Me.CheckedInput_stoneSkin = New Warframe_EHP_Calculator_v2.CheckedInput()
+        Me.CheckedGroupBox_specialEffects = New Warframe_EHP_Calculator_v2.CheckedGroupBox()
+        Me.CheckBox_steelMeridianBuff = New System.Windows.Forms.CheckBox()
+        Me.CheckBox_perrinSequenceBuff = New System.Windows.Forms.CheckBox()
+        Me.CheckBox_newLokaBuff = New System.Windows.Forms.CheckBox()
+        Me.CheckBox_cepholonSudaBuff = New System.Windows.Forms.CheckBox()
+        Me.CheckBox_arbitrationBuff = New System.Windows.Forms.CheckBox()
+        Me.CheckBox_corruptedBuff = New System.Windows.Forms.CheckBox()
+        Me.CheckedInput_overshields = New Warframe_EHP_Calculator_v2.CheckedInput()
+        Me.CheckedGroupBox_arcanes = New Warframe_EHP_Calculator_v2.CheckedGroupBox()
+        Me.CheckedInput_arcanePaxBolt = New Warframe_EHP_Calculator_v2.CheckedInput()
+        Me.CheckedInput_arcaneUltimatum2 = New Warframe_EHP_Calculator_v2.CheckedInput()
+        Me.CheckedInput_arcaneUltimatum = New Warframe_EHP_Calculator_v2.CheckedInput()
+        Me.CheckedInput_arcaneGuardian2 = New Warframe_EHP_Calculator_v2.CheckedInput()
+        Me.CheckedInput_arcaneGuardian = New Warframe_EHP_Calculator_v2.CheckedInput()
+        Me.CheckedGroupBox_abilities = New Warframe_EHP_Calculator_v2.CheckedGroupBox()
+        Me.CheckedGroupBox_arcaneHelmets = New Warframe_EHP_Calculator_v2.CheckedGroupBox()
+        Me.VariantSelection_warframes = New Warframe_EHP_Calculator_v2.VariantSelection()
+        Me.MaxValueToggle_warframes = New Warframe_EHP_Calculator_v2.MaxValueToggle()
+        Me.CheckedGroupBox_companionSurvivability = New Warframe_EHP_Calculator_v2.CheckedGroupBox()
+        Me.CheckedInput_companionCalculatedRedirection = New Warframe_EHP_Calculator_v2.CheckedInput()
+        Me.CheckedInput_companionEnhancedVitality = New Warframe_EHP_Calculator_v2.CheckedInput()
+        Me.CheckedInput_companionMetalFiber = New Warframe_EHP_Calculator_v2.CheckedInput()
+        Me.CheckedInput_companionLinkShield = New Warframe_EHP_Calculator_v2.CheckedInput()
+        Me.CheckedInput_companionLinkHealth = New Warframe_EHP_Calculator_v2.CheckedInput()
+        Me.CheckedInput_companionLinkArmor = New Warframe_EHP_Calculator_v2.CheckedInput()
+        Me.StatBox_companionArmor = New Warframe_EHP_Calculator_v2.StatBox()
+        Me.StatBox_companionHealth = New Warframe_EHP_Calculator_v2.StatBox()
+        Me.StatBox_companionShield = New Warframe_EHP_Calculator_v2.StatBox()
+        Me.StatBox_companionDamageReduction = New Warframe_EHP_Calculator_v2.StatBox()
+        Me.StatBox_companionEHP = New Warframe_EHP_Calculator_v2.StatBox()
+        Me.CompanionVariantSelection1 = New Warframe_EHP_Calculator_v2.CompanionVariantSelection()
+        Me.MaxValueToggle_compainions = New Warframe_EHP_Calculator_v2.MaxValueToggle()
+        Me.NumericInput_companionStability = New Warframe_EHP_Calculator_v2.NumericInput()
+        Me.StatBox_archwingArmor = New Warframe_EHP_Calculator_v2.StatBox()
+        Me.StatBox_archwingHealth = New Warframe_EHP_Calculator_v2.StatBox()
+        Me.StatBox_archwingShield = New Warframe_EHP_Calculator_v2.StatBox()
+        Me.StatBox_archwingEnergy = New Warframe_EHP_Calculator_v2.StatBox()
+        Me.StatBox_archwingPowerStrength = New Warframe_EHP_Calculator_v2.StatBox()
+        Me.StatBox_archwingDamageReduction = New Warframe_EHP_Calculator_v2.StatBox()
+        Me.StatBox_archwingEHP = New Warframe_EHP_Calculator_v2.StatBox()
+        Me.CheckedGroupBox_archwingAura = New Warframe_EHP_Calculator_v2.CheckedGroupBox()
+        Me.RadioInput_archwingStandUnited = New Warframe_EHP_Calculator_v2.RadioInput()
+        Me.RadioInput_archwingPhysique = New Warframe_EHP_Calculator_v2.RadioInput()
+        Me.CheckedGroupBox_archwingSurvivability = New Warframe_EHP_Calculator_v2.CheckedGroupBox()
         Me.CheckedInput_argonPlating = New Warframe_EHP_Calculator_v2.CheckedInput()
         Me.CheckedInput_enhancedDurability = New Warframe_EHP_Calculator_v2.CheckedInput()
         Me.CheckedInput_energyInversion = New Warframe_EHP_Calculator_v2.CheckedInput()
+        Me.CheckedGroupBox_archwingMiscellaneous = New Warframe_EHP_Calculator_v2.CheckedGroupBox()
+        Me.CheckedInput_archwingCoactionDrift = New Warframe_EHP_Calculator_v2.CheckedInput()
+        Me.MaxValueToggle_archwings = New Warframe_EHP_Calculator_v2.MaxValueToggle()
+        Me.CheckedInput_rubble = New Warframe_EHP_Calculator_v2.CheckedInput()
+        Me.CheckedInput_restraint = New Warframe_EHP_Calculator_v2.CheckedInput()
+        Me.CheckedInput_icyAvalanche = New Warframe_EHP_Calculator_v2.CheckedInput()
+        Me.CheckedInput_scarabSwarm = New Warframe_EHP_Calculator_v2.CheckedInput()
+        Me.CheckedInput_shieldOfShadows = New Warframe_EHP_Calculator_v2.CheckedInput()
+        Me.CheckedInput_nullStar = New Warframe_EHP_Calculator_v2.CheckedInput()
+        Me.CheckedInput_ironSkin = New Warframe_EHP_Calculator_v2.CheckedInput()
+        Me.CheckedInput_ironcladCharge = New Warframe_EHP_Calculator_v2.CheckedInput()
+        Me.CheckedInput_thorns = New Warframe_EHP_Calculator_v2.CheckedInput()
         Me.TabControl_main.SuspendLayout()
         Me.TabPage_warframe.SuspendLayout()
         Me.TableLayoutPanel_warframeMainLayout.SuspendLayout()
         Me.GroupBox_stats.SuspendLayout()
         Me.FlowLayoutPanel_warframeStatsLayout.SuspendLayout()
         Me.FlowLayoutPanel_warframeModsLayout.SuspendLayout()
-        Me.CheckedGroupBox_aura.SuspendLayout()
-        Me.CheckedGroupBox_survivability.SuspendLayout()
-        Me.CheckedGroupBox_miscellaneous.SuspendLayout()
-        Me.CheckedGroupBox_powerStrength.SuspendLayout()
-        Me.CheckedGroupBox_dragonKeys.SuspendLayout()
-        Me.CheckedGroupBox_missionModifiers.SuspendLayout()
-        Me.CheckedGroupBox_blocking.SuspendLayout()
-        Me.CheckedGroupBox_focus.SuspendLayout()
-        Me.CheckedGroupBox_specialEffects.SuspendLayout()
-        Me.CheckedGroupBox_arcanes.SuspendLayout()
         Me.TableLayoutPanel_warframeTopLayout.SuspendLayout()
         Me.TabPage_companion.SuspendLayout()
         Me.TableLayoutPanel_compainionMainLayout.SuspendLayout()
         Me.FlowLayoutPanel_compainionModsLayout.SuspendLayout()
-        Me.CheckedGroupBox_companionSurvivability.SuspendLayout()
         Me.GroupBox_companionStats.SuspendLayout()
         Me.FlowLayoutPanel_companionStatsLayout.SuspendLayout()
         Me.TableLayoutPanel_companionTopLayout.SuspendLayout()
@@ -309,9 +310,6 @@ Partial Class Form_main
         Me.GroupBox_archwingStats.SuspendLayout()
         Me.FlowLayoutPanel_archwingStatsLayout.SuspendLayout()
         Me.FlowLayoutPanel_archwingModsLayout.SuspendLayout()
-        Me.CheckedGroupBox_archwingAura.SuspendLayout()
-        Me.CheckedGroupBox_archwingSurvivability.SuspendLayout()
-        Me.CheckedGroupBox_archwingMiscellaneous.SuspendLayout()
         Me.TableLayoutPanel_archwingTopLayout.SuspendLayout()
         Me.TabPage_development.SuspendLayout()
         Me.TabControl_arcaneHelmets.SuspendLayout()
@@ -390,6 +388,20 @@ Partial Class Form_main
         Me.FlowLayoutPanel_valkyrAbilities.SuspendLayout()
         Me.TabPage_abilitiesWisp.SuspendLayout()
         Me.FlowLayoutPanel_wispAbilities.SuspendLayout()
+        Me.CheckedGroupBox_aura.SuspendLayout()
+        Me.CheckedGroupBox_survivability.SuspendLayout()
+        Me.CheckedGroupBox_miscellaneous.SuspendLayout()
+        Me.CheckedGroupBox_powerStrength.SuspendLayout()
+        Me.CheckedGroupBox_dragonKeys.SuspendLayout()
+        Me.CheckedGroupBox_missionModifiers.SuspendLayout()
+        Me.CheckedGroupBox_blocking.SuspendLayout()
+        Me.CheckedGroupBox_focus.SuspendLayout()
+        Me.CheckedGroupBox_specialEffects.SuspendLayout()
+        Me.CheckedGroupBox_arcanes.SuspendLayout()
+        Me.CheckedGroupBox_companionSurvivability.SuspendLayout()
+        Me.CheckedGroupBox_archwingAura.SuspendLayout()
+        Me.CheckedGroupBox_archwingSurvivability.SuspendLayout()
+        Me.CheckedGroupBox_archwingMiscellaneous.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl_main
@@ -404,7 +416,7 @@ Partial Class Form_main
         Me.TabControl_main.Location = New System.Drawing.Point(0, 0)
         Me.TabControl_main.Name = "TabControl_main"
         Me.TabControl_main.SelectedIndex = 0
-        Me.TabControl_main.Size = New System.Drawing.Size(787, 607)
+        Me.TabControl_main.Size = New System.Drawing.Size(787, 751)
         Me.TabControl_main.TabIndex = 0
         '
         'TabPage_warframe
@@ -418,7 +430,7 @@ Partial Class Form_main
         Me.TabPage_warframe.Location = New System.Drawing.Point(4, 29)
         Me.TabPage_warframe.Name = "TabPage_warframe"
         Me.TabPage_warframe.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_warframe.Size = New System.Drawing.Size(779, 574)
+        Me.TabPage_warframe.Size = New System.Drawing.Size(779, 718)
         Me.TabPage_warframe.TabIndex = 0
         Me.TabPage_warframe.Text = "Warframe  "
         '
@@ -435,7 +447,7 @@ Partial Class Form_main
         Me.TableLayoutPanel_warframeMainLayout.Name = "TableLayoutPanel_warframeMainLayout"
         Me.TableLayoutPanel_warframeMainLayout.RowCount = 1
         Me.TableLayoutPanel_warframeMainLayout.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel_warframeMainLayout.Size = New System.Drawing.Size(773, 541)
+        Me.TableLayoutPanel_warframeMainLayout.Size = New System.Drawing.Size(773, 685)
         Me.TableLayoutPanel_warframeMainLayout.TabIndex = 129
         '
         'GroupBox_stats
@@ -446,7 +458,7 @@ Partial Class Form_main
         Me.GroupBox_stats.Controls.Add(Me.StatBox_warframeEHP)
         Me.GroupBox_stats.Location = New System.Drawing.Point(582, 3)
         Me.GroupBox_stats.Name = "GroupBox_stats"
-        Me.GroupBox_stats.Size = New System.Drawing.Size(188, 535)
+        Me.GroupBox_stats.Size = New System.Drawing.Size(188, 679)
         Me.GroupBox_stats.TabIndex = 130
         Me.GroupBox_stats.TabStop = False
         Me.GroupBox_stats.Text = "Stats "
@@ -465,8 +477,1803 @@ Partial Class Form_main
         Me.FlowLayoutPanel_warframeStatsLayout.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
         Me.FlowLayoutPanel_warframeStatsLayout.Location = New System.Drawing.Point(4, 14)
         Me.FlowLayoutPanel_warframeStatsLayout.Name = "FlowLayoutPanel_warframeStatsLayout"
-        Me.FlowLayoutPanel_warframeStatsLayout.Size = New System.Drawing.Size(181, 489)
+        Me.FlowLayoutPanel_warframeStatsLayout.Size = New System.Drawing.Size(181, 633)
         Me.FlowLayoutPanel_warframeStatsLayout.TabIndex = 129
+        '
+        'FlowLayoutPanel_warframeModsLayout
+        '
+        Me.FlowLayoutPanel_warframeModsLayout.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.FlowLayoutPanel_warframeModsLayout.AutoSize = True
+        Me.FlowLayoutPanel_warframeModsLayout.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.FlowLayoutPanel_warframeModsLayout.BackColor = System.Drawing.Color.White
+        Me.FlowLayoutPanel_warframeModsLayout.Controls.Add(Me.CheckedGroupBox_aura)
+        Me.FlowLayoutPanel_warframeModsLayout.Controls.Add(Me.CheckedGroupBox_survivability)
+        Me.FlowLayoutPanel_warframeModsLayout.Controls.Add(Me.CheckedGroupBox_miscellaneous)
+        Me.FlowLayoutPanel_warframeModsLayout.Controls.Add(Me.CheckedGroupBox_powerStrength)
+        Me.FlowLayoutPanel_warframeModsLayout.Controls.Add(Me.CheckedGroupBox_dragonKeys)
+        Me.FlowLayoutPanel_warframeModsLayout.Controls.Add(Me.CheckedGroupBox_missionModifiers)
+        Me.FlowLayoutPanel_warframeModsLayout.Controls.Add(Me.CheckedGroupBox_blocking)
+        Me.FlowLayoutPanel_warframeModsLayout.Controls.Add(Me.CheckedGroupBox_focus)
+        Me.FlowLayoutPanel_warframeModsLayout.Controls.Add(Me.CheckedGroupBox_specialEffects)
+        Me.FlowLayoutPanel_warframeModsLayout.Controls.Add(Me.CheckedGroupBox_arcanes)
+        Me.FlowLayoutPanel_warframeModsLayout.Controls.Add(Me.CheckedGroupBox_abilities)
+        Me.FlowLayoutPanel_warframeModsLayout.Controls.Add(Me.CheckedGroupBox_arcaneHelmets)
+        Me.FlowLayoutPanel_warframeModsLayout.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
+        Me.FlowLayoutPanel_warframeModsLayout.Location = New System.Drawing.Point(0, 0)
+        Me.FlowLayoutPanel_warframeModsLayout.Margin = New System.Windows.Forms.Padding(0)
+        Me.FlowLayoutPanel_warframeModsLayout.Name = "FlowLayoutPanel_warframeModsLayout"
+        Me.FlowLayoutPanel_warframeModsLayout.Size = New System.Drawing.Size(577, 685)
+        Me.FlowLayoutPanel_warframeModsLayout.TabIndex = 127
+        '
+        'TableLayoutPanel_warframeTopLayout
+        '
+        Me.TableLayoutPanel_warframeTopLayout.ColumnCount = 3
+        Me.TableLayoutPanel_warframeTopLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 196.0!))
+        Me.TableLayoutPanel_warframeTopLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 127.0!))
+        Me.TableLayoutPanel_warframeTopLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
+        Me.TableLayoutPanel_warframeTopLayout.Controls.Add(Me.ComboBox_warframes, 0, 0)
+        Me.TableLayoutPanel_warframeTopLayout.Controls.Add(Me.VariantSelection_warframes, 1, 0)
+        Me.TableLayoutPanel_warframeTopLayout.Controls.Add(Me.MaxValueToggle_warframes, 2, 0)
+        Me.TableLayoutPanel_warframeTopLayout.Dock = System.Windows.Forms.DockStyle.Top
+        Me.TableLayoutPanel_warframeTopLayout.Location = New System.Drawing.Point(3, 3)
+        Me.TableLayoutPanel_warframeTopLayout.Name = "TableLayoutPanel_warframeTopLayout"
+        Me.TableLayoutPanel_warframeTopLayout.RowCount = 1
+        Me.TableLayoutPanel_warframeTopLayout.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel_warframeTopLayout.Size = New System.Drawing.Size(773, 27)
+        Me.TableLayoutPanel_warframeTopLayout.TabIndex = 128
+        '
+        'ComboBox_warframes
+        '
+        Me.ComboBox_warframes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox_warframes.FormattingEnabled = True
+        Me.ComboBox_warframes.Items.AddRange(New Object() {"Select a Warframe"})
+        Me.ComboBox_warframes.Location = New System.Drawing.Point(3, 3)
+        Me.ComboBox_warframes.Name = "ComboBox_warframes"
+        Me.ComboBox_warframes.Size = New System.Drawing.Size(187, 21)
+        Me.ComboBox_warframes.TabIndex = 0
+        '
+        'TabPage_companion
+        '
+        Me.TabPage_companion.BackColor = System.Drawing.Color.White
+        Me.TabPage_companion.Controls.Add(Me.TableLayoutPanel_compainionMainLayout)
+        Me.TabPage_companion.Controls.Add(Me.TableLayoutPanel_companionTopLayout)
+        Me.TabPage_companion.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.TabPage_companion.ImageIndex = 1
+        Me.TabPage_companion.Location = New System.Drawing.Point(4, 29)
+        Me.TabPage_companion.Name = "TabPage_companion"
+        Me.TabPage_companion.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage_companion.Size = New System.Drawing.Size(779, 718)
+        Me.TabPage_companion.TabIndex = 1
+        Me.TabPage_companion.Text = "Companions  "
+        '
+        'TableLayoutPanel_compainionMainLayout
+        '
+        Me.TableLayoutPanel_compainionMainLayout.ColumnCount = 2
+        Me.TableLayoutPanel_compainionMainLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel_compainionMainLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 196.0!))
+        Me.TableLayoutPanel_compainionMainLayout.Controls.Add(Me.FlowLayoutPanel_compainionModsLayout, 0, 0)
+        Me.TableLayoutPanel_compainionMainLayout.Controls.Add(Me.GroupBox_companionStats, 1, 0)
+        Me.TableLayoutPanel_compainionMainLayout.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel_compainionMainLayout.Location = New System.Drawing.Point(3, 30)
+        Me.TableLayoutPanel_compainionMainLayout.Name = "TableLayoutPanel_compainionMainLayout"
+        Me.TableLayoutPanel_compainionMainLayout.RowCount = 1
+        Me.TableLayoutPanel_compainionMainLayout.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel_compainionMainLayout.Size = New System.Drawing.Size(773, 685)
+        Me.TableLayoutPanel_compainionMainLayout.TabIndex = 132
+        '
+        'FlowLayoutPanel_compainionModsLayout
+        '
+        Me.FlowLayoutPanel_compainionModsLayout.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.FlowLayoutPanel_compainionModsLayout.AutoSize = True
+        Me.FlowLayoutPanel_compainionModsLayout.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.FlowLayoutPanel_compainionModsLayout.Controls.Add(Me.CheckedGroupBox_companionSurvivability)
+        Me.FlowLayoutPanel_compainionModsLayout.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
+        Me.FlowLayoutPanel_compainionModsLayout.Location = New System.Drawing.Point(0, 0)
+        Me.FlowLayoutPanel_compainionModsLayout.Margin = New System.Windows.Forms.Padding(0)
+        Me.FlowLayoutPanel_compainionModsLayout.Name = "FlowLayoutPanel_compainionModsLayout"
+        Me.FlowLayoutPanel_compainionModsLayout.Size = New System.Drawing.Size(577, 685)
+        Me.FlowLayoutPanel_compainionModsLayout.TabIndex = 130
+        '
+        'GroupBox_companionStats
+        '
+        Me.GroupBox_companionStats.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox_companionStats.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.GroupBox_companionStats.Controls.Add(Me.FlowLayoutPanel_companionStatsLayout)
+        Me.GroupBox_companionStats.Controls.Add(Me.StatBox_companionEHP)
+        Me.GroupBox_companionStats.Location = New System.Drawing.Point(582, 3)
+        Me.GroupBox_companionStats.Name = "GroupBox_companionStats"
+        Me.GroupBox_companionStats.Size = New System.Drawing.Size(188, 679)
+        Me.GroupBox_companionStats.TabIndex = 131
+        Me.GroupBox_companionStats.TabStop = False
+        Me.GroupBox_companionStats.Text = "Stats "
+        '
+        'FlowLayoutPanel_companionStatsLayout
+        '
+        Me.FlowLayoutPanel_companionStatsLayout.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.FlowLayoutPanel_companionStatsLayout.Controls.Add(Me.StatBox_companionArmor)
+        Me.FlowLayoutPanel_companionStatsLayout.Controls.Add(Me.StatBox_companionHealth)
+        Me.FlowLayoutPanel_companionStatsLayout.Controls.Add(Me.StatBox_companionShield)
+        Me.FlowLayoutPanel_companionStatsLayout.Controls.Add(Me.StatBox_companionDamageReduction)
+        Me.FlowLayoutPanel_companionStatsLayout.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
+        Me.FlowLayoutPanel_companionStatsLayout.Location = New System.Drawing.Point(4, 14)
+        Me.FlowLayoutPanel_companionStatsLayout.Name = "FlowLayoutPanel_companionStatsLayout"
+        Me.FlowLayoutPanel_companionStatsLayout.Size = New System.Drawing.Size(181, 634)
+        Me.FlowLayoutPanel_companionStatsLayout.TabIndex = 129
+        '
+        'TableLayoutPanel_companionTopLayout
+        '
+        Me.TableLayoutPanel_companionTopLayout.ColumnCount = 5
+        Me.TableLayoutPanel_companionTopLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 196.0!))
+        Me.TableLayoutPanel_companionTopLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 127.0!))
+        Me.TableLayoutPanel_companionTopLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 90.0!))
+        Me.TableLayoutPanel_companionTopLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 180.0!))
+        Me.TableLayoutPanel_companionTopLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
+        Me.TableLayoutPanel_companionTopLayout.Controls.Add(Me.ComboBox_companions, 0, 0)
+        Me.TableLayoutPanel_companionTopLayout.Controls.Add(Me.CompanionVariantSelection1, 1, 0)
+        Me.TableLayoutPanel_companionTopLayout.Controls.Add(Me.CheckBox_companionPrimeCollar, 2, 0)
+        Me.TableLayoutPanel_companionTopLayout.Controls.Add(Me.MaxValueToggle_compainions, 4, 0)
+        Me.TableLayoutPanel_companionTopLayout.Controls.Add(Me.NumericInput_companionStability, 3, 0)
+        Me.TableLayoutPanel_companionTopLayout.Dock = System.Windows.Forms.DockStyle.Top
+        Me.TableLayoutPanel_companionTopLayout.Location = New System.Drawing.Point(3, 3)
+        Me.TableLayoutPanel_companionTopLayout.Name = "TableLayoutPanel_companionTopLayout"
+        Me.TableLayoutPanel_companionTopLayout.RowCount = 1
+        Me.TableLayoutPanel_companionTopLayout.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel_companionTopLayout.Size = New System.Drawing.Size(773, 27)
+        Me.TableLayoutPanel_companionTopLayout.TabIndex = 129
+        '
+        'ComboBox_companions
+        '
+        Me.ComboBox_companions.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox_companions.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox_companions.FormattingEnabled = True
+        Me.ComboBox_companions.Items.AddRange(New Object() {"Select a Companion"})
+        Me.ComboBox_companions.Location = New System.Drawing.Point(3, 3)
+        Me.ComboBox_companions.Name = "ComboBox_companions"
+        Me.ComboBox_companions.Size = New System.Drawing.Size(187, 21)
+        Me.ComboBox_companions.TabIndex = 4
+        '
+        'CheckBox_companionPrimeCollar
+        '
+        Me.CheckBox_companionPrimeCollar.AutoSize = True
+        Me.CheckBox_companionPrimeCollar.Enabled = False
+        Me.CheckBox_companionPrimeCollar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox_companionPrimeCollar.Location = New System.Drawing.Point(326, 6)
+        Me.CheckBox_companionPrimeCollar.Margin = New System.Windows.Forms.Padding(3, 6, 3, 3)
+        Me.CheckBox_companionPrimeCollar.Name = "CheckBox_companionPrimeCollar"
+        Me.CheckBox_companionPrimeCollar.Padding = New System.Windows.Forms.Padding(3, 0, 0, 0)
+        Me.CheckBox_companionPrimeCollar.Size = New System.Drawing.Size(84, 17)
+        Me.CheckBox_companionPrimeCollar.TabIndex = 5
+        Me.CheckBox_companionPrimeCollar.Text = "Prime Collar"
+        Me.CheckBox_companionPrimeCollar.UseVisualStyleBackColor = True
+        '
+        'TabPage_archwing
+        '
+        Me.TabPage_archwing.BackColor = System.Drawing.Color.White
+        Me.TabPage_archwing.Controls.Add(Me.TableLayoutPanel_archwingMainLayout)
+        Me.TabPage_archwing.Controls.Add(Me.TableLayoutPanel_archwingTopLayout)
+        Me.TabPage_archwing.ImageIndex = 3
+        Me.TabPage_archwing.Location = New System.Drawing.Point(4, 29)
+        Me.TabPage_archwing.Name = "TabPage_archwing"
+        Me.TabPage_archwing.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage_archwing.Size = New System.Drawing.Size(779, 718)
+        Me.TabPage_archwing.TabIndex = 3
+        Me.TabPage_archwing.Text = "Archwing  "
+        '
+        'TableLayoutPanel_archwingMainLayout
+        '
+        Me.TableLayoutPanel_archwingMainLayout.ColumnCount = 2
+        Me.TableLayoutPanel_archwingMainLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel_archwingMainLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 196.0!))
+        Me.TableLayoutPanel_archwingMainLayout.Controls.Add(Me.GroupBox_archwingStats, 1, 0)
+        Me.TableLayoutPanel_archwingMainLayout.Controls.Add(Me.FlowLayoutPanel_archwingModsLayout, 0, 0)
+        Me.TableLayoutPanel_archwingMainLayout.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel_archwingMainLayout.Location = New System.Drawing.Point(3, 30)
+        Me.TableLayoutPanel_archwingMainLayout.Name = "TableLayoutPanel_archwingMainLayout"
+        Me.TableLayoutPanel_archwingMainLayout.RowCount = 1
+        Me.TableLayoutPanel_archwingMainLayout.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel_archwingMainLayout.Size = New System.Drawing.Size(773, 685)
+        Me.TableLayoutPanel_archwingMainLayout.TabIndex = 132
+        '
+        'GroupBox_archwingStats
+        '
+        Me.GroupBox_archwingStats.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox_archwingStats.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.GroupBox_archwingStats.Controls.Add(Me.FlowLayoutPanel_archwingStatsLayout)
+        Me.GroupBox_archwingStats.Controls.Add(Me.StatBox_archwingEHP)
+        Me.GroupBox_archwingStats.Location = New System.Drawing.Point(582, 3)
+        Me.GroupBox_archwingStats.Name = "GroupBox_archwingStats"
+        Me.GroupBox_archwingStats.Size = New System.Drawing.Size(188, 679)
+        Me.GroupBox_archwingStats.TabIndex = 131
+        Me.GroupBox_archwingStats.TabStop = False
+        Me.GroupBox_archwingStats.Text = "Stats "
+        '
+        'FlowLayoutPanel_archwingStatsLayout
+        '
+        Me.FlowLayoutPanel_archwingStatsLayout.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.FlowLayoutPanel_archwingStatsLayout.Controls.Add(Me.StatBox_archwingArmor)
+        Me.FlowLayoutPanel_archwingStatsLayout.Controls.Add(Me.StatBox_archwingHealth)
+        Me.FlowLayoutPanel_archwingStatsLayout.Controls.Add(Me.StatBox_archwingShield)
+        Me.FlowLayoutPanel_archwingStatsLayout.Controls.Add(Me.StatBox_archwingEnergy)
+        Me.FlowLayoutPanel_archwingStatsLayout.Controls.Add(Me.StatBox_archwingPowerStrength)
+        Me.FlowLayoutPanel_archwingStatsLayout.Controls.Add(Me.StatBox_archwingDamageReduction)
+        Me.FlowLayoutPanel_archwingStatsLayout.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
+        Me.FlowLayoutPanel_archwingStatsLayout.Location = New System.Drawing.Point(4, 14)
+        Me.FlowLayoutPanel_archwingStatsLayout.Name = "FlowLayoutPanel_archwingStatsLayout"
+        Me.FlowLayoutPanel_archwingStatsLayout.Size = New System.Drawing.Size(181, 633)
+        Me.FlowLayoutPanel_archwingStatsLayout.TabIndex = 129
+        '
+        'FlowLayoutPanel_archwingModsLayout
+        '
+        Me.FlowLayoutPanel_archwingModsLayout.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.FlowLayoutPanel_archwingModsLayout.AutoSize = True
+        Me.FlowLayoutPanel_archwingModsLayout.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.FlowLayoutPanel_archwingModsLayout.Controls.Add(Me.CheckedGroupBox_archwingAura)
+        Me.FlowLayoutPanel_archwingModsLayout.Controls.Add(Me.CheckedGroupBox_archwingSurvivability)
+        Me.FlowLayoutPanel_archwingModsLayout.Controls.Add(Me.CheckedGroupBox_archwingMiscellaneous)
+        Me.FlowLayoutPanel_archwingModsLayout.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
+        Me.FlowLayoutPanel_archwingModsLayout.Location = New System.Drawing.Point(0, 0)
+        Me.FlowLayoutPanel_archwingModsLayout.Margin = New System.Windows.Forms.Padding(0)
+        Me.FlowLayoutPanel_archwingModsLayout.Name = "FlowLayoutPanel_archwingModsLayout"
+        Me.FlowLayoutPanel_archwingModsLayout.Size = New System.Drawing.Size(577, 685)
+        Me.FlowLayoutPanel_archwingModsLayout.TabIndex = 131
+        '
+        'TableLayoutPanel_archwingTopLayout
+        '
+        Me.TableLayoutPanel_archwingTopLayout.ColumnCount = 3
+        Me.TableLayoutPanel_archwingTopLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 196.0!))
+        Me.TableLayoutPanel_archwingTopLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 127.0!))
+        Me.TableLayoutPanel_archwingTopLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
+        Me.TableLayoutPanel_archwingTopLayout.Controls.Add(Me.ComboBox_archwings, 0, 0)
+        Me.TableLayoutPanel_archwingTopLayout.Controls.Add(Me.MaxValueToggle_archwings, 2, 0)
+        Me.TableLayoutPanel_archwingTopLayout.Controls.Add(Me.CheckBox_archwingPrime, 1, 0)
+        Me.TableLayoutPanel_archwingTopLayout.Dock = System.Windows.Forms.DockStyle.Top
+        Me.TableLayoutPanel_archwingTopLayout.Location = New System.Drawing.Point(3, 3)
+        Me.TableLayoutPanel_archwingTopLayout.Name = "TableLayoutPanel_archwingTopLayout"
+        Me.TableLayoutPanel_archwingTopLayout.RowCount = 1
+        Me.TableLayoutPanel_archwingTopLayout.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel_archwingTopLayout.Size = New System.Drawing.Size(773, 27)
+        Me.TableLayoutPanel_archwingTopLayout.TabIndex = 129
+        '
+        'ComboBox_archwings
+        '
+        Me.ComboBox_archwings.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox_archwings.FormattingEnabled = True
+        Me.ComboBox_archwings.Items.AddRange(New Object() {"Select an Archwing"})
+        Me.ComboBox_archwings.Location = New System.Drawing.Point(3, 3)
+        Me.ComboBox_archwings.Name = "ComboBox_archwings"
+        Me.ComboBox_archwings.Size = New System.Drawing.Size(187, 21)
+        Me.ComboBox_archwings.TabIndex = 0
+        '
+        'CheckBox_archwingPrime
+        '
+        Me.CheckBox_archwingPrime.Enabled = False
+        Me.CheckBox_archwingPrime.Location = New System.Drawing.Point(202, 5)
+        Me.CheckBox_archwingPrime.Margin = New System.Windows.Forms.Padding(6, 5, 3, 3)
+        Me.CheckBox_archwingPrime.Name = "CheckBox_archwingPrime"
+        Me.CheckBox_archwingPrime.Size = New System.Drawing.Size(118, 19)
+        Me.CheckBox_archwingPrime.TabIndex = 3
+        Me.CheckBox_archwingPrime.Text = "Prime"
+        Me.CheckBox_archwingPrime.UseVisualStyleBackColor = True
+        '
+        'TabPage_development
+        '
+        Me.TabPage_development.Controls.Add(Me.TabControl_arcaneHelmets)
+        Me.TabPage_development.Controls.Add(Me.TabControl_abilities)
+        Me.TabPage_development.Controls.Add(Me.FlowLayoutPanel_abilitiesPanelTemplate)
+        Me.TabPage_development.Controls.Add(Me.RichTextBox1)
+        Me.TabPage_development.Controls.Add(Me.Label_companions)
+        Me.TabPage_development.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.TabPage_development.ImageIndex = 4
+        Me.TabPage_development.Location = New System.Drawing.Point(4, 29)
+        Me.TabPage_development.Name = "TabPage_development"
+        Me.TabPage_development.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage_development.Size = New System.Drawing.Size(779, 718)
+        Me.TabPage_development.TabIndex = 2
+        Me.TabPage_development.Text = "Development  "
+        Me.TabPage_development.UseVisualStyleBackColor = True
+        '
+        'TabControl_arcaneHelmets
+        '
+        Me.TabControl_arcaneHelmets.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsDefault)
+        Me.TabControl_arcaneHelmets.Controls.Add(Me.TabPage_ashArcaneHelmets)
+        Me.TabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsBanshee)
+        Me.TabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsEmber)
+        Me.TabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsExcalibur)
+        Me.TabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsFrost)
+        Me.TabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsLoki)
+        Me.TabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsMag)
+        Me.TabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsNova)
+        Me.TabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsNyx)
+        Me.TabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsRhino)
+        Me.TabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsSaryn)
+        Me.TabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsTrinity)
+        Me.TabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsVauban)
+        Me.TabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsVolt)
+        Me.TabControl_arcaneHelmets.Enabled = False
+        Me.TabControl_arcaneHelmets.Location = New System.Drawing.Point(8, 248)
+        Me.TabControl_arcaneHelmets.Name = "TabControl_arcaneHelmets"
+        Me.TabControl_arcaneHelmets.SelectedIndex = 0
+        Me.TabControl_arcaneHelmets.Size = New System.Drawing.Size(768, 152)
+        Me.TabControl_arcaneHelmets.TabIndex = 118
+        '
+        'TabPage_arcaneHelmetsDefault
+        '
+        Me.TabPage_arcaneHelmetsDefault.BackColor = System.Drawing.Color.White
+        Me.TabPage_arcaneHelmetsDefault.Controls.Add(Me.FlowLayoutPanel_defaultArcaneHelmets)
+        Me.TabPage_arcaneHelmetsDefault.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage_arcaneHelmetsDefault.Name = "TabPage_arcaneHelmetsDefault"
+        Me.TabPage_arcaneHelmetsDefault.Size = New System.Drawing.Size(760, 126)
+        Me.TabPage_arcaneHelmetsDefault.TabIndex = 2
+        Me.TabPage_arcaneHelmetsDefault.Text = "Default"
+        '
+        'FlowLayoutPanel_defaultArcaneHelmets
+        '
+        Me.FlowLayoutPanel_defaultArcaneHelmets.AutoSize = True
+        Me.FlowLayoutPanel_defaultArcaneHelmets.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.FlowLayoutPanel_defaultArcaneHelmets.Controls.Add(Me.Label_arcaneHelmetPlaceholder)
+        Me.FlowLayoutPanel_defaultArcaneHelmets.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
+        Me.FlowLayoutPanel_defaultArcaneHelmets.Location = New System.Drawing.Point(6, 5)
+        Me.FlowLayoutPanel_defaultArcaneHelmets.Margin = New System.Windows.Forms.Padding(0)
+        Me.FlowLayoutPanel_defaultArcaneHelmets.MinimumSize = New System.Drawing.Size(181, 26)
+        Me.FlowLayoutPanel_defaultArcaneHelmets.Name = "FlowLayoutPanel_defaultArcaneHelmets"
+        Me.FlowLayoutPanel_defaultArcaneHelmets.Size = New System.Drawing.Size(181, 32)
+        Me.FlowLayoutPanel_defaultArcaneHelmets.TabIndex = 101
+        '
+        'Label_arcaneHelmetPlaceholder
+        '
+        Me.Label_arcaneHelmetPlaceholder.AutoSize = True
+        Me.Label_arcaneHelmetPlaceholder.BackColor = System.Drawing.Color.Transparent
+        Me.Label_arcaneHelmetPlaceholder.Location = New System.Drawing.Point(1, 3)
+        Me.Label_arcaneHelmetPlaceholder.Margin = New System.Windows.Forms.Padding(1, 3, 1, 3)
+        Me.Label_arcaneHelmetPlaceholder.MinimumSize = New System.Drawing.Size(179, 0)
+        Me.Label_arcaneHelmetPlaceholder.Name = "Label_arcaneHelmetPlaceholder"
+        Me.Label_arcaneHelmetPlaceholder.Size = New System.Drawing.Size(179, 26)
+        Me.Label_arcaneHelmetPlaceholder.TabIndex = 0
+        Me.Label_arcaneHelmetPlaceholder.Text = "This Warframe has no " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Arcane Helmets"
+        Me.Label_arcaneHelmetPlaceholder.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'TabPage_ashArcaneHelmets
+        '
+        Me.TabPage_ashArcaneHelmets.BackColor = System.Drawing.Color.White
+        Me.TabPage_ashArcaneHelmets.Controls.Add(Me.FlowLayoutPanel_ashAbilities)
+        Me.TabPage_ashArcaneHelmets.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage_ashArcaneHelmets.Name = "TabPage_ashArcaneHelmets"
+        Me.TabPage_ashArcaneHelmets.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage_ashArcaneHelmets.Size = New System.Drawing.Size(760, 126)
+        Me.TabPage_ashArcaneHelmets.TabIndex = 0
+        Me.TabPage_ashArcaneHelmets.Text = "Ash"
+        '
+        'FlowLayoutPanel_ashAbilities
+        '
+        Me.FlowLayoutPanel_ashAbilities.AutoSize = True
+        Me.FlowLayoutPanel_ashAbilities.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.FlowLayoutPanel_ashAbilities.Controls.Add(Me.RadioButton_locustHelmet)
+        Me.FlowLayoutPanel_ashAbilities.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
+        Me.FlowLayoutPanel_ashAbilities.Location = New System.Drawing.Point(5, 7)
+        Me.FlowLayoutPanel_ashAbilities.Margin = New System.Windows.Forms.Padding(0)
+        Me.FlowLayoutPanel_ashAbilities.MinimumSize = New System.Drawing.Size(181, 26)
+        Me.FlowLayoutPanel_ashAbilities.Name = "FlowLayoutPanel_ashAbilities"
+        Me.FlowLayoutPanel_ashAbilities.Size = New System.Drawing.Size(181, 27)
+        Me.FlowLayoutPanel_ashAbilities.TabIndex = 100
+        '
+        'RadioButton_locustHelmet
+        '
+        Me.RadioButton_locustHelmet.Checked = True
+        Me.RadioButton_locustHelmet.Location = New System.Drawing.Point(3, 3)
+        Me.RadioButton_locustHelmet.Name = "RadioButton_locustHelmet"
+        Me.RadioButton_locustHelmet.Size = New System.Drawing.Size(175, 21)
+        Me.RadioButton_locustHelmet.TabIndex = 0
+        Me.RadioButton_locustHelmet.TabStop = True
+        Me.RadioButton_locustHelmet.Text = "Locust Helmet"
+        Me.RadioButton_locustHelmet.UseVisualStyleBackColor = True
+        '
+        'TabPage_arcaneHelmetsBanshee
+        '
+        Me.TabPage_arcaneHelmetsBanshee.BackColor = System.Drawing.Color.White
+        Me.TabPage_arcaneHelmetsBanshee.Controls.Add(Me.FlowLayoutPanel_bansheeArcaneHelmets)
+        Me.TabPage_arcaneHelmetsBanshee.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage_arcaneHelmetsBanshee.Name = "TabPage_arcaneHelmetsBanshee"
+        Me.TabPage_arcaneHelmetsBanshee.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage_arcaneHelmetsBanshee.Size = New System.Drawing.Size(760, 126)
+        Me.TabPage_arcaneHelmetsBanshee.TabIndex = 1
+        Me.TabPage_arcaneHelmetsBanshee.Text = "Banshee"
+        '
+        'FlowLayoutPanel_bansheeArcaneHelmets
+        '
+        Me.FlowLayoutPanel_bansheeArcaneHelmets.AutoSize = True
+        Me.FlowLayoutPanel_bansheeArcaneHelmets.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.FlowLayoutPanel_bansheeArcaneHelmets.Controls.Add(Me.RadioButton_reverbHelmet)
+        Me.FlowLayoutPanel_bansheeArcaneHelmets.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
+        Me.FlowLayoutPanel_bansheeArcaneHelmets.Location = New System.Drawing.Point(10, 13)
+        Me.FlowLayoutPanel_bansheeArcaneHelmets.Margin = New System.Windows.Forms.Padding(0)
+        Me.FlowLayoutPanel_bansheeArcaneHelmets.MinimumSize = New System.Drawing.Size(181, 26)
+        Me.FlowLayoutPanel_bansheeArcaneHelmets.Name = "FlowLayoutPanel_bansheeArcaneHelmets"
+        Me.FlowLayoutPanel_bansheeArcaneHelmets.Size = New System.Drawing.Size(181, 27)
+        Me.FlowLayoutPanel_bansheeArcaneHelmets.TabIndex = 100
+        '
+        'RadioButton_reverbHelmet
+        '
+        Me.RadioButton_reverbHelmet.Checked = True
+        Me.RadioButton_reverbHelmet.Location = New System.Drawing.Point(3, 3)
+        Me.RadioButton_reverbHelmet.Name = "RadioButton_reverbHelmet"
+        Me.RadioButton_reverbHelmet.Size = New System.Drawing.Size(175, 21)
+        Me.RadioButton_reverbHelmet.TabIndex = 1
+        Me.RadioButton_reverbHelmet.TabStop = True
+        Me.RadioButton_reverbHelmet.Text = "Reverb Helmet"
+        Me.RadioButton_reverbHelmet.UseVisualStyleBackColor = True
+        '
+        'TabPage_arcaneHelmetsEmber
+        '
+        Me.TabPage_arcaneHelmetsEmber.BackColor = System.Drawing.Color.White
+        Me.TabPage_arcaneHelmetsEmber.Controls.Add(Me.FlowLayoutPanel_emberArcaneHelmets)
+        Me.TabPage_arcaneHelmetsEmber.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage_arcaneHelmetsEmber.Name = "TabPage_arcaneHelmetsEmber"
+        Me.TabPage_arcaneHelmetsEmber.Size = New System.Drawing.Size(760, 126)
+        Me.TabPage_arcaneHelmetsEmber.TabIndex = 3
+        Me.TabPage_arcaneHelmetsEmber.Text = "Ember"
+        '
+        'FlowLayoutPanel_emberArcaneHelmets
+        '
+        Me.FlowLayoutPanel_emberArcaneHelmets.AutoSize = True
+        Me.FlowLayoutPanel_emberArcaneHelmets.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.FlowLayoutPanel_emberArcaneHelmets.Controls.Add(Me.RadioButton_phoenixHelmet)
+        Me.FlowLayoutPanel_emberArcaneHelmets.Controls.Add(Me.RadioButton_backdraftHelmet)
+        Me.FlowLayoutPanel_emberArcaneHelmets.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
+        Me.FlowLayoutPanel_emberArcaneHelmets.Location = New System.Drawing.Point(6, 10)
+        Me.FlowLayoutPanel_emberArcaneHelmets.Margin = New System.Windows.Forms.Padding(0)
+        Me.FlowLayoutPanel_emberArcaneHelmets.MinimumSize = New System.Drawing.Size(181, 26)
+        Me.FlowLayoutPanel_emberArcaneHelmets.Name = "FlowLayoutPanel_emberArcaneHelmets"
+        Me.FlowLayoutPanel_emberArcaneHelmets.Size = New System.Drawing.Size(181, 54)
+        Me.FlowLayoutPanel_emberArcaneHelmets.TabIndex = 100
+        '
+        'RadioButton_phoenixHelmet
+        '
+        Me.RadioButton_phoenixHelmet.Checked = True
+        Me.RadioButton_phoenixHelmet.Location = New System.Drawing.Point(3, 3)
+        Me.RadioButton_phoenixHelmet.Name = "RadioButton_phoenixHelmet"
+        Me.RadioButton_phoenixHelmet.Size = New System.Drawing.Size(175, 21)
+        Me.RadioButton_phoenixHelmet.TabIndex = 2
+        Me.RadioButton_phoenixHelmet.TabStop = True
+        Me.RadioButton_phoenixHelmet.Tag = ""
+        Me.RadioButton_phoenixHelmet.Text = "Phoenix Helmet"
+        Me.RadioButton_phoenixHelmet.UseVisualStyleBackColor = True
+        '
+        'RadioButton_backdraftHelmet
+        '
+        Me.RadioButton_backdraftHelmet.Location = New System.Drawing.Point(3, 30)
+        Me.RadioButton_backdraftHelmet.Name = "RadioButton_backdraftHelmet"
+        Me.RadioButton_backdraftHelmet.Size = New System.Drawing.Size(175, 21)
+        Me.RadioButton_backdraftHelmet.TabIndex = 3
+        Me.RadioButton_backdraftHelmet.Tag = ""
+        Me.RadioButton_backdraftHelmet.Text = "Backdraft Helmet"
+        Me.RadioButton_backdraftHelmet.UseVisualStyleBackColor = True
+        '
+        'TabPage_arcaneHelmetsExcalibur
+        '
+        Me.TabPage_arcaneHelmetsExcalibur.BackColor = System.Drawing.Color.White
+        Me.TabPage_arcaneHelmetsExcalibur.Controls.Add(Me.FlowLayoutPanel_excaliburArcaneHelmets)
+        Me.TabPage_arcaneHelmetsExcalibur.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage_arcaneHelmetsExcalibur.Name = "TabPage_arcaneHelmetsExcalibur"
+        Me.TabPage_arcaneHelmetsExcalibur.Size = New System.Drawing.Size(760, 126)
+        Me.TabPage_arcaneHelmetsExcalibur.TabIndex = 4
+        Me.TabPage_arcaneHelmetsExcalibur.Text = "Excalibur"
+        '
+        'FlowLayoutPanel_excaliburArcaneHelmets
+        '
+        Me.FlowLayoutPanel_excaliburArcaneHelmets.AutoSize = True
+        Me.FlowLayoutPanel_excaliburArcaneHelmets.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.FlowLayoutPanel_excaliburArcaneHelmets.Controls.Add(Me.RadioButton_avalonHelmet)
+        Me.FlowLayoutPanel_excaliburArcaneHelmets.Controls.Add(Me.RadioButton_pendragonHelmet)
+        Me.FlowLayoutPanel_excaliburArcaneHelmets.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
+        Me.FlowLayoutPanel_excaliburArcaneHelmets.Location = New System.Drawing.Point(10, 9)
+        Me.FlowLayoutPanel_excaliburArcaneHelmets.Margin = New System.Windows.Forms.Padding(0)
+        Me.FlowLayoutPanel_excaliburArcaneHelmets.MinimumSize = New System.Drawing.Size(181, 26)
+        Me.FlowLayoutPanel_excaliburArcaneHelmets.Name = "FlowLayoutPanel_excaliburArcaneHelmets"
+        Me.FlowLayoutPanel_excaliburArcaneHelmets.Size = New System.Drawing.Size(181, 54)
+        Me.FlowLayoutPanel_excaliburArcaneHelmets.TabIndex = 100
+        '
+        'RadioButton_avalonHelmet
+        '
+        Me.RadioButton_avalonHelmet.Checked = True
+        Me.RadioButton_avalonHelmet.Location = New System.Drawing.Point(3, 3)
+        Me.RadioButton_avalonHelmet.Name = "RadioButton_avalonHelmet"
+        Me.RadioButton_avalonHelmet.Size = New System.Drawing.Size(175, 21)
+        Me.RadioButton_avalonHelmet.TabIndex = 3
+        Me.RadioButton_avalonHelmet.TabStop = True
+        Me.RadioButton_avalonHelmet.Tag = ""
+        Me.RadioButton_avalonHelmet.Text = "Avalon Helmet"
+        Me.RadioButton_avalonHelmet.UseVisualStyleBackColor = True
+        '
+        'RadioButton_pendragonHelmet
+        '
+        Me.RadioButton_pendragonHelmet.Location = New System.Drawing.Point(3, 30)
+        Me.RadioButton_pendragonHelmet.Name = "RadioButton_pendragonHelmet"
+        Me.RadioButton_pendragonHelmet.Size = New System.Drawing.Size(175, 21)
+        Me.RadioButton_pendragonHelmet.TabIndex = 4
+        Me.RadioButton_pendragonHelmet.Tag = ""
+        Me.RadioButton_pendragonHelmet.Text = "Pendragon Helmet"
+        Me.RadioButton_pendragonHelmet.UseVisualStyleBackColor = True
+        '
+        'TabPage_arcaneHelmetsFrost
+        '
+        Me.TabPage_arcaneHelmetsFrost.BackColor = System.Drawing.Color.White
+        Me.TabPage_arcaneHelmetsFrost.Controls.Add(Me.FlowLayoutPanel_frostArcaneHelmets)
+        Me.TabPage_arcaneHelmetsFrost.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage_arcaneHelmetsFrost.Name = "TabPage_arcaneHelmetsFrost"
+        Me.TabPage_arcaneHelmetsFrost.Size = New System.Drawing.Size(760, 126)
+        Me.TabPage_arcaneHelmetsFrost.TabIndex = 5
+        Me.TabPage_arcaneHelmetsFrost.Text = "Frost"
+        '
+        'FlowLayoutPanel_frostArcaneHelmets
+        '
+        Me.FlowLayoutPanel_frostArcaneHelmets.AutoSize = True
+        Me.FlowLayoutPanel_frostArcaneHelmets.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.FlowLayoutPanel_frostArcaneHelmets.Controls.Add(Me.RadioButton_auroraHelmet)
+        Me.FlowLayoutPanel_frostArcaneHelmets.Controls.Add(Me.RadioButton_squallHelmet)
+        Me.FlowLayoutPanel_frostArcaneHelmets.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
+        Me.FlowLayoutPanel_frostArcaneHelmets.Location = New System.Drawing.Point(6, 9)
+        Me.FlowLayoutPanel_frostArcaneHelmets.Margin = New System.Windows.Forms.Padding(0)
+        Me.FlowLayoutPanel_frostArcaneHelmets.MinimumSize = New System.Drawing.Size(181, 26)
+        Me.FlowLayoutPanel_frostArcaneHelmets.Name = "FlowLayoutPanel_frostArcaneHelmets"
+        Me.FlowLayoutPanel_frostArcaneHelmets.Size = New System.Drawing.Size(181, 54)
+        Me.FlowLayoutPanel_frostArcaneHelmets.TabIndex = 100
+        '
+        'RadioButton_auroraHelmet
+        '
+        Me.RadioButton_auroraHelmet.Checked = True
+        Me.RadioButton_auroraHelmet.Location = New System.Drawing.Point(3, 3)
+        Me.RadioButton_auroraHelmet.Name = "RadioButton_auroraHelmet"
+        Me.RadioButton_auroraHelmet.Size = New System.Drawing.Size(175, 21)
+        Me.RadioButton_auroraHelmet.TabIndex = 4
+        Me.RadioButton_auroraHelmet.TabStop = True
+        Me.RadioButton_auroraHelmet.Tag = ""
+        Me.RadioButton_auroraHelmet.Text = "Aurora Helmet"
+        Me.RadioButton_auroraHelmet.UseVisualStyleBackColor = True
+        '
+        'RadioButton_squallHelmet
+        '
+        Me.RadioButton_squallHelmet.Location = New System.Drawing.Point(3, 30)
+        Me.RadioButton_squallHelmet.Name = "RadioButton_squallHelmet"
+        Me.RadioButton_squallHelmet.Size = New System.Drawing.Size(175, 21)
+        Me.RadioButton_squallHelmet.TabIndex = 5
+        Me.RadioButton_squallHelmet.Tag = ""
+        Me.RadioButton_squallHelmet.Text = "Squall Helmet"
+        Me.RadioButton_squallHelmet.UseVisualStyleBackColor = True
+        '
+        'TabPage_arcaneHelmetsLoki
+        '
+        Me.TabPage_arcaneHelmetsLoki.BackColor = System.Drawing.Color.White
+        Me.TabPage_arcaneHelmetsLoki.Controls.Add(Me.FlowLayoutPanel_lokiArcaneHelmets)
+        Me.TabPage_arcaneHelmetsLoki.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage_arcaneHelmetsLoki.Name = "TabPage_arcaneHelmetsLoki"
+        Me.TabPage_arcaneHelmetsLoki.Size = New System.Drawing.Size(760, 126)
+        Me.TabPage_arcaneHelmetsLoki.TabIndex = 6
+        Me.TabPage_arcaneHelmetsLoki.Text = "Loki"
+        '
+        'FlowLayoutPanel_lokiArcaneHelmets
+        '
+        Me.FlowLayoutPanel_lokiArcaneHelmets.AutoSize = True
+        Me.FlowLayoutPanel_lokiArcaneHelmets.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.FlowLayoutPanel_lokiArcaneHelmets.Controls.Add(Me.RadioButton_essenceHelmet)
+        Me.FlowLayoutPanel_lokiArcaneHelmets.Controls.Add(Me.RadioButton_swindleHelmet)
+        Me.FlowLayoutPanel_lokiArcaneHelmets.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
+        Me.FlowLayoutPanel_lokiArcaneHelmets.Location = New System.Drawing.Point(6, 9)
+        Me.FlowLayoutPanel_lokiArcaneHelmets.Margin = New System.Windows.Forms.Padding(0)
+        Me.FlowLayoutPanel_lokiArcaneHelmets.MinimumSize = New System.Drawing.Size(181, 26)
+        Me.FlowLayoutPanel_lokiArcaneHelmets.Name = "FlowLayoutPanel_lokiArcaneHelmets"
+        Me.FlowLayoutPanel_lokiArcaneHelmets.Size = New System.Drawing.Size(181, 54)
+        Me.FlowLayoutPanel_lokiArcaneHelmets.TabIndex = 100
+        '
+        'RadioButton_essenceHelmet
+        '
+        Me.RadioButton_essenceHelmet.Checked = True
+        Me.RadioButton_essenceHelmet.Location = New System.Drawing.Point(3, 3)
+        Me.RadioButton_essenceHelmet.Name = "RadioButton_essenceHelmet"
+        Me.RadioButton_essenceHelmet.Size = New System.Drawing.Size(175, 21)
+        Me.RadioButton_essenceHelmet.TabIndex = 4
+        Me.RadioButton_essenceHelmet.TabStop = True
+        Me.RadioButton_essenceHelmet.Tag = ""
+        Me.RadioButton_essenceHelmet.Text = "Essence Helmet"
+        Me.RadioButton_essenceHelmet.UseVisualStyleBackColor = True
+        '
+        'RadioButton_swindleHelmet
+        '
+        Me.RadioButton_swindleHelmet.Location = New System.Drawing.Point(3, 30)
+        Me.RadioButton_swindleHelmet.Name = "RadioButton_swindleHelmet"
+        Me.RadioButton_swindleHelmet.Size = New System.Drawing.Size(175, 21)
+        Me.RadioButton_swindleHelmet.TabIndex = 5
+        Me.RadioButton_swindleHelmet.Tag = ""
+        Me.RadioButton_swindleHelmet.Text = "Swindle Helmet"
+        Me.RadioButton_swindleHelmet.UseVisualStyleBackColor = True
+        '
+        'TabPage_arcaneHelmetsMag
+        '
+        Me.TabPage_arcaneHelmetsMag.BackColor = System.Drawing.Color.White
+        Me.TabPage_arcaneHelmetsMag.Controls.Add(Me.FlowLayoutPanel_magArcaneHelmets)
+        Me.TabPage_arcaneHelmetsMag.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage_arcaneHelmetsMag.Name = "TabPage_arcaneHelmetsMag"
+        Me.TabPage_arcaneHelmetsMag.Size = New System.Drawing.Size(760, 126)
+        Me.TabPage_arcaneHelmetsMag.TabIndex = 7
+        Me.TabPage_arcaneHelmetsMag.Text = "Mag"
+        '
+        'FlowLayoutPanel_magArcaneHelmets
+        '
+        Me.FlowLayoutPanel_magArcaneHelmets.AutoSize = True
+        Me.FlowLayoutPanel_magArcaneHelmets.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.FlowLayoutPanel_magArcaneHelmets.Controls.Add(Me.RadioButton_coilHelmet)
+        Me.FlowLayoutPanel_magArcaneHelmets.Controls.Add(Me.RadioButton_gaussHelmet)
+        Me.FlowLayoutPanel_magArcaneHelmets.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
+        Me.FlowLayoutPanel_magArcaneHelmets.Location = New System.Drawing.Point(10, 13)
+        Me.FlowLayoutPanel_magArcaneHelmets.Margin = New System.Windows.Forms.Padding(0)
+        Me.FlowLayoutPanel_magArcaneHelmets.MinimumSize = New System.Drawing.Size(181, 26)
+        Me.FlowLayoutPanel_magArcaneHelmets.Name = "FlowLayoutPanel_magArcaneHelmets"
+        Me.FlowLayoutPanel_magArcaneHelmets.Size = New System.Drawing.Size(181, 54)
+        Me.FlowLayoutPanel_magArcaneHelmets.TabIndex = 100
+        '
+        'RadioButton_coilHelmet
+        '
+        Me.RadioButton_coilHelmet.Checked = True
+        Me.RadioButton_coilHelmet.Location = New System.Drawing.Point(3, 3)
+        Me.RadioButton_coilHelmet.Name = "RadioButton_coilHelmet"
+        Me.RadioButton_coilHelmet.Size = New System.Drawing.Size(175, 21)
+        Me.RadioButton_coilHelmet.TabIndex = 4
+        Me.RadioButton_coilHelmet.TabStop = True
+        Me.RadioButton_coilHelmet.Tag = ""
+        Me.RadioButton_coilHelmet.Text = "Coil Helmet"
+        Me.RadioButton_coilHelmet.UseVisualStyleBackColor = True
+        '
+        'RadioButton_gaussHelmet
+        '
+        Me.RadioButton_gaussHelmet.Location = New System.Drawing.Point(3, 30)
+        Me.RadioButton_gaussHelmet.Name = "RadioButton_gaussHelmet"
+        Me.RadioButton_gaussHelmet.Size = New System.Drawing.Size(175, 21)
+        Me.RadioButton_gaussHelmet.TabIndex = 5
+        Me.RadioButton_gaussHelmet.Tag = ""
+        Me.RadioButton_gaussHelmet.Text = "Gauss Helmet"
+        Me.RadioButton_gaussHelmet.UseVisualStyleBackColor = True
+        '
+        'TabPage_arcaneHelmetsNova
+        '
+        Me.TabPage_arcaneHelmetsNova.BackColor = System.Drawing.Color.White
+        Me.TabPage_arcaneHelmetsNova.Controls.Add(Me.FlowLayoutPanel_novaArcaneHelmets)
+        Me.TabPage_arcaneHelmetsNova.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage_arcaneHelmetsNova.Name = "TabPage_arcaneHelmetsNova"
+        Me.TabPage_arcaneHelmetsNova.Size = New System.Drawing.Size(760, 126)
+        Me.TabPage_arcaneHelmetsNova.TabIndex = 14
+        Me.TabPage_arcaneHelmetsNova.Text = "Nova"
+        '
+        'FlowLayoutPanel_novaArcaneHelmets
+        '
+        Me.FlowLayoutPanel_novaArcaneHelmets.AutoSize = True
+        Me.FlowLayoutPanel_novaArcaneHelmets.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.FlowLayoutPanel_novaArcaneHelmets.Controls.Add(Me.RadioButton_fluxHelmet)
+        Me.FlowLayoutPanel_novaArcaneHelmets.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
+        Me.FlowLayoutPanel_novaArcaneHelmets.Location = New System.Drawing.Point(10, 18)
+        Me.FlowLayoutPanel_novaArcaneHelmets.Margin = New System.Windows.Forms.Padding(0)
+        Me.FlowLayoutPanel_novaArcaneHelmets.MinimumSize = New System.Drawing.Size(181, 26)
+        Me.FlowLayoutPanel_novaArcaneHelmets.Name = "FlowLayoutPanel_novaArcaneHelmets"
+        Me.FlowLayoutPanel_novaArcaneHelmets.Size = New System.Drawing.Size(181, 27)
+        Me.FlowLayoutPanel_novaArcaneHelmets.TabIndex = 100
+        '
+        'RadioButton_fluxHelmet
+        '
+        Me.RadioButton_fluxHelmet.Checked = True
+        Me.RadioButton_fluxHelmet.Location = New System.Drawing.Point(3, 3)
+        Me.RadioButton_fluxHelmet.Name = "RadioButton_fluxHelmet"
+        Me.RadioButton_fluxHelmet.Size = New System.Drawing.Size(175, 21)
+        Me.RadioButton_fluxHelmet.TabIndex = 4
+        Me.RadioButton_fluxHelmet.TabStop = True
+        Me.RadioButton_fluxHelmet.Tag = ""
+        Me.RadioButton_fluxHelmet.Text = "Flux Helmet"
+        Me.RadioButton_fluxHelmet.UseVisualStyleBackColor = True
+        '
+        'TabPage_arcaneHelmetsNyx
+        '
+        Me.TabPage_arcaneHelmetsNyx.BackColor = System.Drawing.Color.White
+        Me.TabPage_arcaneHelmetsNyx.Controls.Add(Me.FlowLayoutPanel_nyxArcaneHelmets)
+        Me.TabPage_arcaneHelmetsNyx.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage_arcaneHelmetsNyx.Name = "TabPage_arcaneHelmetsNyx"
+        Me.TabPage_arcaneHelmetsNyx.Size = New System.Drawing.Size(760, 126)
+        Me.TabPage_arcaneHelmetsNyx.TabIndex = 8
+        Me.TabPage_arcaneHelmetsNyx.Text = "Nyx"
+        '
+        'FlowLayoutPanel_nyxArcaneHelmets
+        '
+        Me.FlowLayoutPanel_nyxArcaneHelmets.AutoSize = True
+        Me.FlowLayoutPanel_nyxArcaneHelmets.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.FlowLayoutPanel_nyxArcaneHelmets.Controls.Add(Me.RadioButton_menticideHelmet)
+        Me.FlowLayoutPanel_nyxArcaneHelmets.Controls.Add(Me.RadioButton_vespaHelmet)
+        Me.FlowLayoutPanel_nyxArcaneHelmets.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
+        Me.FlowLayoutPanel_nyxArcaneHelmets.Location = New System.Drawing.Point(10, 9)
+        Me.FlowLayoutPanel_nyxArcaneHelmets.Margin = New System.Windows.Forms.Padding(0)
+        Me.FlowLayoutPanel_nyxArcaneHelmets.MinimumSize = New System.Drawing.Size(181, 26)
+        Me.FlowLayoutPanel_nyxArcaneHelmets.Name = "FlowLayoutPanel_nyxArcaneHelmets"
+        Me.FlowLayoutPanel_nyxArcaneHelmets.Size = New System.Drawing.Size(181, 54)
+        Me.FlowLayoutPanel_nyxArcaneHelmets.TabIndex = 100
+        '
+        'RadioButton_menticideHelmet
+        '
+        Me.RadioButton_menticideHelmet.Checked = True
+        Me.RadioButton_menticideHelmet.Location = New System.Drawing.Point(3, 3)
+        Me.RadioButton_menticideHelmet.Name = "RadioButton_menticideHelmet"
+        Me.RadioButton_menticideHelmet.Size = New System.Drawing.Size(175, 21)
+        Me.RadioButton_menticideHelmet.TabIndex = 4
+        Me.RadioButton_menticideHelmet.TabStop = True
+        Me.RadioButton_menticideHelmet.Tag = ""
+        Me.RadioButton_menticideHelmet.Text = "Menticide Helmet"
+        Me.RadioButton_menticideHelmet.UseVisualStyleBackColor = True
+        '
+        'RadioButton_vespaHelmet
+        '
+        Me.RadioButton_vespaHelmet.Location = New System.Drawing.Point(3, 30)
+        Me.RadioButton_vespaHelmet.Name = "RadioButton_vespaHelmet"
+        Me.RadioButton_vespaHelmet.Size = New System.Drawing.Size(175, 21)
+        Me.RadioButton_vespaHelmet.TabIndex = 5
+        Me.RadioButton_vespaHelmet.Tag = ""
+        Me.RadioButton_vespaHelmet.Text = "Vespa Helmet"
+        Me.RadioButton_vespaHelmet.UseVisualStyleBackColor = True
+        '
+        'TabPage_arcaneHelmetsRhino
+        '
+        Me.TabPage_arcaneHelmetsRhino.BackColor = System.Drawing.Color.White
+        Me.TabPage_arcaneHelmetsRhino.Controls.Add(Me.FlowLayoutPanel_rhinoArcaneHelmets)
+        Me.TabPage_arcaneHelmetsRhino.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage_arcaneHelmetsRhino.Name = "TabPage_arcaneHelmetsRhino"
+        Me.TabPage_arcaneHelmetsRhino.Size = New System.Drawing.Size(760, 126)
+        Me.TabPage_arcaneHelmetsRhino.TabIndex = 9
+        Me.TabPage_arcaneHelmetsRhino.Text = "Rhino"
+        '
+        'FlowLayoutPanel_rhinoArcaneHelmets
+        '
+        Me.FlowLayoutPanel_rhinoArcaneHelmets.AutoSize = True
+        Me.FlowLayoutPanel_rhinoArcaneHelmets.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.FlowLayoutPanel_rhinoArcaneHelmets.Controls.Add(Me.RadioButton_thrak)
+        Me.FlowLayoutPanel_rhinoArcaneHelmets.Controls.Add(Me.RadioButton_vanguardHelmet)
+        Me.FlowLayoutPanel_rhinoArcaneHelmets.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
+        Me.FlowLayoutPanel_rhinoArcaneHelmets.Location = New System.Drawing.Point(10, 9)
+        Me.FlowLayoutPanel_rhinoArcaneHelmets.Margin = New System.Windows.Forms.Padding(0)
+        Me.FlowLayoutPanel_rhinoArcaneHelmets.MinimumSize = New System.Drawing.Size(181, 26)
+        Me.FlowLayoutPanel_rhinoArcaneHelmets.Name = "FlowLayoutPanel_rhinoArcaneHelmets"
+        Me.FlowLayoutPanel_rhinoArcaneHelmets.Size = New System.Drawing.Size(181, 54)
+        Me.FlowLayoutPanel_rhinoArcaneHelmets.TabIndex = 100
+        '
+        'RadioButton_thrak
+        '
+        Me.RadioButton_thrak.Checked = True
+        Me.RadioButton_thrak.Location = New System.Drawing.Point(3, 3)
+        Me.RadioButton_thrak.Name = "RadioButton_thrak"
+        Me.RadioButton_thrak.Size = New System.Drawing.Size(175, 21)
+        Me.RadioButton_thrak.TabIndex = 4
+        Me.RadioButton_thrak.TabStop = True
+        Me.RadioButton_thrak.Tag = ""
+        Me.RadioButton_thrak.Text = "Thrak Helmet"
+        Me.RadioButton_thrak.UseVisualStyleBackColor = True
+        '
+        'RadioButton_vanguardHelmet
+        '
+        Me.RadioButton_vanguardHelmet.Location = New System.Drawing.Point(3, 30)
+        Me.RadioButton_vanguardHelmet.Name = "RadioButton_vanguardHelmet"
+        Me.RadioButton_vanguardHelmet.Size = New System.Drawing.Size(175, 21)
+        Me.RadioButton_vanguardHelmet.TabIndex = 5
+        Me.RadioButton_vanguardHelmet.Tag = ""
+        Me.RadioButton_vanguardHelmet.Text = "Vanguard Helmet"
+        Me.RadioButton_vanguardHelmet.UseVisualStyleBackColor = True
+        '
+        'TabPage_arcaneHelmetsSaryn
+        '
+        Me.TabPage_arcaneHelmetsSaryn.BackColor = System.Drawing.Color.White
+        Me.TabPage_arcaneHelmetsSaryn.Controls.Add(Me.FlowLayoutPanel_sarynArcanHelmets)
+        Me.TabPage_arcaneHelmetsSaryn.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage_arcaneHelmetsSaryn.Name = "TabPage_arcaneHelmetsSaryn"
+        Me.TabPage_arcaneHelmetsSaryn.Size = New System.Drawing.Size(760, 126)
+        Me.TabPage_arcaneHelmetsSaryn.TabIndex = 10
+        Me.TabPage_arcaneHelmetsSaryn.Text = "Saryn"
+        '
+        'FlowLayoutPanel_sarynArcanHelmets
+        '
+        Me.FlowLayoutPanel_sarynArcanHelmets.AutoSize = True
+        Me.FlowLayoutPanel_sarynArcanHelmets.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.FlowLayoutPanel_sarynArcanHelmets.Controls.Add(Me.RadioButton_hemlockHelmet)
+        Me.FlowLayoutPanel_sarynArcanHelmets.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
+        Me.FlowLayoutPanel_sarynArcanHelmets.Location = New System.Drawing.Point(10, 13)
+        Me.FlowLayoutPanel_sarynArcanHelmets.Margin = New System.Windows.Forms.Padding(0)
+        Me.FlowLayoutPanel_sarynArcanHelmets.MinimumSize = New System.Drawing.Size(181, 26)
+        Me.FlowLayoutPanel_sarynArcanHelmets.Name = "FlowLayoutPanel_sarynArcanHelmets"
+        Me.FlowLayoutPanel_sarynArcanHelmets.Size = New System.Drawing.Size(181, 27)
+        Me.FlowLayoutPanel_sarynArcanHelmets.TabIndex = 100
+        '
+        'RadioButton_hemlockHelmet
+        '
+        Me.RadioButton_hemlockHelmet.Checked = True
+        Me.RadioButton_hemlockHelmet.Location = New System.Drawing.Point(3, 3)
+        Me.RadioButton_hemlockHelmet.Name = "RadioButton_hemlockHelmet"
+        Me.RadioButton_hemlockHelmet.Size = New System.Drawing.Size(175, 21)
+        Me.RadioButton_hemlockHelmet.TabIndex = 4
+        Me.RadioButton_hemlockHelmet.TabStop = True
+        Me.RadioButton_hemlockHelmet.Tag = ""
+        Me.RadioButton_hemlockHelmet.Text = "Hemlock Helmet"
+        Me.RadioButton_hemlockHelmet.UseVisualStyleBackColor = True
+        '
+        'TabPage_arcaneHelmetsTrinity
+        '
+        Me.TabPage_arcaneHelmetsTrinity.BackColor = System.Drawing.Color.White
+        Me.TabPage_arcaneHelmetsTrinity.Controls.Add(Me.FlowLayoutPanel_trinityArcaneHelmets)
+        Me.TabPage_arcaneHelmetsTrinity.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage_arcaneHelmetsTrinity.Name = "TabPage_arcaneHelmetsTrinity"
+        Me.TabPage_arcaneHelmetsTrinity.Size = New System.Drawing.Size(760, 126)
+        Me.TabPage_arcaneHelmetsTrinity.TabIndex = 11
+        Me.TabPage_arcaneHelmetsTrinity.Text = "Trinity"
+        '
+        'FlowLayoutPanel_trinityArcaneHelmets
+        '
+        Me.FlowLayoutPanel_trinityArcaneHelmets.AutoSize = True
+        Me.FlowLayoutPanel_trinityArcaneHelmets.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.FlowLayoutPanel_trinityArcaneHelmets.Controls.Add(Me.RadioButton_auraHelmet)
+        Me.FlowLayoutPanel_trinityArcaneHelmets.Controls.Add(Me.RadioButton_meridianHelmet)
+        Me.FlowLayoutPanel_trinityArcaneHelmets.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
+        Me.FlowLayoutPanel_trinityArcaneHelmets.Location = New System.Drawing.Point(6, 9)
+        Me.FlowLayoutPanel_trinityArcaneHelmets.Margin = New System.Windows.Forms.Padding(0)
+        Me.FlowLayoutPanel_trinityArcaneHelmets.MinimumSize = New System.Drawing.Size(181, 26)
+        Me.FlowLayoutPanel_trinityArcaneHelmets.Name = "FlowLayoutPanel_trinityArcaneHelmets"
+        Me.FlowLayoutPanel_trinityArcaneHelmets.Size = New System.Drawing.Size(181, 54)
+        Me.FlowLayoutPanel_trinityArcaneHelmets.TabIndex = 100
+        '
+        'RadioButton_auraHelmet
+        '
+        Me.RadioButton_auraHelmet.Checked = True
+        Me.RadioButton_auraHelmet.Location = New System.Drawing.Point(3, 3)
+        Me.RadioButton_auraHelmet.Name = "RadioButton_auraHelmet"
+        Me.RadioButton_auraHelmet.Size = New System.Drawing.Size(175, 21)
+        Me.RadioButton_auraHelmet.TabIndex = 4
+        Me.RadioButton_auraHelmet.TabStop = True
+        Me.RadioButton_auraHelmet.Tag = ""
+        Me.RadioButton_auraHelmet.Text = "Aura Helmet"
+        Me.RadioButton_auraHelmet.UseVisualStyleBackColor = True
+        '
+        'RadioButton_meridianHelmet
+        '
+        Me.RadioButton_meridianHelmet.Location = New System.Drawing.Point(3, 30)
+        Me.RadioButton_meridianHelmet.Name = "RadioButton_meridianHelmet"
+        Me.RadioButton_meridianHelmet.Size = New System.Drawing.Size(175, 21)
+        Me.RadioButton_meridianHelmet.TabIndex = 5
+        Me.RadioButton_meridianHelmet.Tag = ""
+        Me.RadioButton_meridianHelmet.Text = "Maridian Helmet"
+        Me.RadioButton_meridianHelmet.UseVisualStyleBackColor = True
+        '
+        'TabPage_arcaneHelmetsVauban
+        '
+        Me.TabPage_arcaneHelmetsVauban.BackColor = System.Drawing.Color.White
+        Me.TabPage_arcaneHelmetsVauban.Controls.Add(Me.FlowLayoutPanel_vaubanArcaneHelmets)
+        Me.TabPage_arcaneHelmetsVauban.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage_arcaneHelmetsVauban.Name = "TabPage_arcaneHelmetsVauban"
+        Me.TabPage_arcaneHelmetsVauban.Size = New System.Drawing.Size(760, 126)
+        Me.TabPage_arcaneHelmetsVauban.TabIndex = 12
+        Me.TabPage_arcaneHelmetsVauban.Text = "Vauban"
+        '
+        'FlowLayoutPanel_vaubanArcaneHelmets
+        '
+        Me.FlowLayoutPanel_vaubanArcaneHelmets.AutoSize = True
+        Me.FlowLayoutPanel_vaubanArcaneHelmets.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.FlowLayoutPanel_vaubanArcaneHelmets.Controls.Add(Me.RadioButton_espritHelmet)
+        Me.FlowLayoutPanel_vaubanArcaneHelmets.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
+        Me.FlowLayoutPanel_vaubanArcaneHelmets.Location = New System.Drawing.Point(10, 15)
+        Me.FlowLayoutPanel_vaubanArcaneHelmets.Margin = New System.Windows.Forms.Padding(0)
+        Me.FlowLayoutPanel_vaubanArcaneHelmets.MinimumSize = New System.Drawing.Size(181, 26)
+        Me.FlowLayoutPanel_vaubanArcaneHelmets.Name = "FlowLayoutPanel_vaubanArcaneHelmets"
+        Me.FlowLayoutPanel_vaubanArcaneHelmets.Size = New System.Drawing.Size(181, 27)
+        Me.FlowLayoutPanel_vaubanArcaneHelmets.TabIndex = 100
+        '
+        'RadioButton_espritHelmet
+        '
+        Me.RadioButton_espritHelmet.Checked = True
+        Me.RadioButton_espritHelmet.Location = New System.Drawing.Point(3, 3)
+        Me.RadioButton_espritHelmet.Name = "RadioButton_espritHelmet"
+        Me.RadioButton_espritHelmet.Size = New System.Drawing.Size(175, 21)
+        Me.RadioButton_espritHelmet.TabIndex = 4
+        Me.RadioButton_espritHelmet.TabStop = True
+        Me.RadioButton_espritHelmet.Tag = ""
+        Me.RadioButton_espritHelmet.Text = "Esprit Helmet"
+        Me.RadioButton_espritHelmet.UseVisualStyleBackColor = True
+        '
+        'TabPage_arcaneHelmetsVolt
+        '
+        Me.TabPage_arcaneHelmetsVolt.BackColor = System.Drawing.Color.White
+        Me.TabPage_arcaneHelmetsVolt.Controls.Add(Me.FlowLayoutPanel_voltArcaneHelmets)
+        Me.TabPage_arcaneHelmetsVolt.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage_arcaneHelmetsVolt.Name = "TabPage_arcaneHelmetsVolt"
+        Me.TabPage_arcaneHelmetsVolt.Size = New System.Drawing.Size(760, 126)
+        Me.TabPage_arcaneHelmetsVolt.TabIndex = 13
+        Me.TabPage_arcaneHelmetsVolt.Text = "Volt"
+        '
+        'FlowLayoutPanel_voltArcaneHelmets
+        '
+        Me.FlowLayoutPanel_voltArcaneHelmets.AutoSize = True
+        Me.FlowLayoutPanel_voltArcaneHelmets.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.FlowLayoutPanel_voltArcaneHelmets.Controls.Add(Me.RadioButton_pulseHelmet)
+        Me.FlowLayoutPanel_voltArcaneHelmets.Controls.Add(Me.RadioButton_stormHelmet)
+        Me.FlowLayoutPanel_voltArcaneHelmets.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
+        Me.FlowLayoutPanel_voltArcaneHelmets.Location = New System.Drawing.Point(10, 12)
+        Me.FlowLayoutPanel_voltArcaneHelmets.Margin = New System.Windows.Forms.Padding(0)
+        Me.FlowLayoutPanel_voltArcaneHelmets.MinimumSize = New System.Drawing.Size(181, 26)
+        Me.FlowLayoutPanel_voltArcaneHelmets.Name = "FlowLayoutPanel_voltArcaneHelmets"
+        Me.FlowLayoutPanel_voltArcaneHelmets.Size = New System.Drawing.Size(181, 54)
+        Me.FlowLayoutPanel_voltArcaneHelmets.TabIndex = 100
+        '
+        'RadioButton_pulseHelmet
+        '
+        Me.RadioButton_pulseHelmet.Checked = True
+        Me.RadioButton_pulseHelmet.Location = New System.Drawing.Point(3, 3)
+        Me.RadioButton_pulseHelmet.Name = "RadioButton_pulseHelmet"
+        Me.RadioButton_pulseHelmet.Size = New System.Drawing.Size(175, 21)
+        Me.RadioButton_pulseHelmet.TabIndex = 4
+        Me.RadioButton_pulseHelmet.TabStop = True
+        Me.RadioButton_pulseHelmet.Tag = ""
+        Me.RadioButton_pulseHelmet.Text = "Pulse Helmet"
+        Me.RadioButton_pulseHelmet.UseVisualStyleBackColor = True
+        '
+        'RadioButton_stormHelmet
+        '
+        Me.RadioButton_stormHelmet.Location = New System.Drawing.Point(3, 30)
+        Me.RadioButton_stormHelmet.Name = "RadioButton_stormHelmet"
+        Me.RadioButton_stormHelmet.Size = New System.Drawing.Size(175, 21)
+        Me.RadioButton_stormHelmet.TabIndex = 5
+        Me.RadioButton_stormHelmet.Tag = ""
+        Me.RadioButton_stormHelmet.Text = "Storm Helmet"
+        Me.RadioButton_stormHelmet.UseVisualStyleBackColor = True
+        '
+        'TabControl_abilities
+        '
+        Me.TabControl_abilities.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TabControl_abilities.Controls.Add(Me.TabPage_abilitiesDefault)
+        Me.TabControl_abilities.Controls.Add(Me.TabPage_abilitiesAtlas)
+        Me.TabControl_abilities.Controls.Add(Me.TabPage_abilitiesBaruuk)
+        Me.TabControl_abilities.Controls.Add(Me.TabPage_abilitiesChroma)
+        Me.TabControl_abilities.Controls.Add(Me.TabPage_abilitiesExcalibur)
+        Me.TabControl_abilities.Controls.Add(Me.TabPage_abilitiesFrost)
+        Me.TabControl_abilities.Controls.Add(Me.TabPage_abilitiesGara)
+        Me.TabControl_abilities.Controls.Add(Me.TabPage_abilitiesHarrow)
+        Me.TabControl_abilities.Controls.Add(Me.TabPage_abilitiesInaros)
+        Me.TabControl_abilities.Controls.Add(Me.TabPage_abilitiesMesa)
+        Me.TabControl_abilities.Controls.Add(Me.TabPage_abilitiesMirage)
+        Me.TabControl_abilities.Controls.Add(Me.TabPage_abilitiesNekros)
+        Me.TabControl_abilities.Controls.Add(Me.TabPage_abilitiesNezha)
+        Me.TabControl_abilities.Controls.Add(Me.TabPage_abilitiesNidus)
+        Me.TabControl_abilities.Controls.Add(Me.TabPage_abilitiesNova)
+        Me.TabControl_abilities.Controls.Add(Me.TabPage_abilitiesOberon)
+        Me.TabControl_abilities.Controls.Add(Me.TabPage_abilitiesOctavia)
+        Me.TabControl_abilities.Controls.Add(Me.TabPage_abilitiesRhino)
+        Me.TabControl_abilities.Controls.Add(Me.TabPage_abilitiesTitania)
+        Me.TabControl_abilities.Controls.Add(Me.TabPage_abilitiesTrinity)
+        Me.TabControl_abilities.Controls.Add(Me.TabPage_abilitiesValkyr)
+        Me.TabControl_abilities.Controls.Add(Me.TabPage_abilitiesWisp)
+        Me.TabControl_abilities.Location = New System.Drawing.Point(6, 425)
+        Me.TabControl_abilities.Name = "TabControl_abilities"
+        Me.TabControl_abilities.SelectedIndex = 0
+        Me.TabControl_abilities.Size = New System.Drawing.Size(767, 212)
+        Me.TabControl_abilities.TabIndex = 101
+        '
+        'TabPage_abilitiesDefault
+        '
+        Me.TabPage_abilitiesDefault.BackColor = System.Drawing.Color.White
+        Me.TabPage_abilitiesDefault.Controls.Add(Me.FlowLayoutPanel_defaultAbilities)
+        Me.TabPage_abilitiesDefault.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage_abilitiesDefault.Name = "TabPage_abilitiesDefault"
+        Me.TabPage_abilitiesDefault.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage_abilitiesDefault.Size = New System.Drawing.Size(759, 186)
+        Me.TabPage_abilitiesDefault.TabIndex = 24
+        Me.TabPage_abilitiesDefault.Text = "Default"
+        '
+        'FlowLayoutPanel_defaultAbilities
+        '
+        Me.FlowLayoutPanel_defaultAbilities.AutoSize = True
+        Me.FlowLayoutPanel_defaultAbilities.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.FlowLayoutPanel_defaultAbilities.Controls.Add(Me.Label_abilityPlaceholder)
+        Me.FlowLayoutPanel_defaultAbilities.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
+        Me.FlowLayoutPanel_defaultAbilities.Location = New System.Drawing.Point(6, 6)
+        Me.FlowLayoutPanel_defaultAbilities.Margin = New System.Windows.Forms.Padding(0)
+        Me.FlowLayoutPanel_defaultAbilities.MinimumSize = New System.Drawing.Size(181, 26)
+        Me.FlowLayoutPanel_defaultAbilities.Name = "FlowLayoutPanel_defaultAbilities"
+        Me.FlowLayoutPanel_defaultAbilities.Size = New System.Drawing.Size(181, 32)
+        Me.FlowLayoutPanel_defaultAbilities.TabIndex = 100
+        '
+        'Label_abilityPlaceholder
+        '
+        Me.Label_abilityPlaceholder.AutoSize = True
+        Me.Label_abilityPlaceholder.BackColor = System.Drawing.Color.Transparent
+        Me.Label_abilityPlaceholder.Location = New System.Drawing.Point(1, 3)
+        Me.Label_abilityPlaceholder.Margin = New System.Windows.Forms.Padding(1, 3, 1, 3)
+        Me.Label_abilityPlaceholder.MinimumSize = New System.Drawing.Size(179, 0)
+        Me.Label_abilityPlaceholder.Name = "Label_abilityPlaceholder"
+        Me.Label_abilityPlaceholder.Size = New System.Drawing.Size(179, 26)
+        Me.Label_abilityPlaceholder.TabIndex = 0
+        Me.Label_abilityPlaceholder.Text = "This Warframe has no " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "EHP affecting Abilities"
+        Me.Label_abilityPlaceholder.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'TabPage_abilitiesAtlas
+        '
+        Me.TabPage_abilitiesAtlas.BackColor = System.Drawing.Color.White
+        Me.TabPage_abilitiesAtlas.Controls.Add(Me.FlowLayoutPanel_atlasAbilities)
+        Me.TabPage_abilitiesAtlas.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage_abilitiesAtlas.Name = "TabPage_abilitiesAtlas"
+        Me.TabPage_abilitiesAtlas.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage_abilitiesAtlas.Size = New System.Drawing.Size(759, 186)
+        Me.TabPage_abilitiesAtlas.TabIndex = 18
+        Me.TabPage_abilitiesAtlas.Text = "Atlas"
+        '
+        'FlowLayoutPanel_atlasAbilities
+        '
+        Me.FlowLayoutPanel_atlasAbilities.AutoSize = True
+        Me.FlowLayoutPanel_atlasAbilities.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.FlowLayoutPanel_atlasAbilities.Controls.Add(Me.CheckedInput_rubble)
+        Me.FlowLayoutPanel_atlasAbilities.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
+        Me.FlowLayoutPanel_atlasAbilities.Location = New System.Drawing.Point(6, 6)
+        Me.FlowLayoutPanel_atlasAbilities.Margin = New System.Windows.Forms.Padding(0)
+        Me.FlowLayoutPanel_atlasAbilities.MinimumSize = New System.Drawing.Size(181, 26)
+        Me.FlowLayoutPanel_atlasAbilities.Name = "FlowLayoutPanel_atlasAbilities"
+        Me.FlowLayoutPanel_atlasAbilities.Size = New System.Drawing.Size(181, 26)
+        Me.FlowLayoutPanel_atlasAbilities.TabIndex = 40
+        '
+        'TabPage_abilitiesBaruuk
+        '
+        Me.TabPage_abilitiesBaruuk.BackColor = System.Drawing.Color.White
+        Me.TabPage_abilitiesBaruuk.Controls.Add(Me.FlowLayoutPanel_baruukAbilities)
+        Me.TabPage_abilitiesBaruuk.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage_abilitiesBaruuk.Name = "TabPage_abilitiesBaruuk"
+        Me.TabPage_abilitiesBaruuk.Size = New System.Drawing.Size(759, 186)
+        Me.TabPage_abilitiesBaruuk.TabIndex = 22
+        Me.TabPage_abilitiesBaruuk.Text = "Baruuk"
+        '
+        'FlowLayoutPanel_baruukAbilities
+        '
+        Me.FlowLayoutPanel_baruukAbilities.AutoSize = True
+        Me.FlowLayoutPanel_baruukAbilities.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.FlowLayoutPanel_baruukAbilities.Controls.Add(Me.CheckedInput_restraint)
+        Me.FlowLayoutPanel_baruukAbilities.Controls.Add(Me.CheckBox_desolateHands)
+        Me.FlowLayoutPanel_baruukAbilities.Controls.Add(Me.CheckBox_sereneStorm)
+        Me.FlowLayoutPanel_baruukAbilities.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
+        Me.FlowLayoutPanel_baruukAbilities.Location = New System.Drawing.Point(8, 12)
+        Me.FlowLayoutPanel_baruukAbilities.Margin = New System.Windows.Forms.Padding(0)
+        Me.FlowLayoutPanel_baruukAbilities.MinimumSize = New System.Drawing.Size(181, 26)
+        Me.FlowLayoutPanel_baruukAbilities.Name = "FlowLayoutPanel_baruukAbilities"
+        Me.FlowLayoutPanel_baruukAbilities.Size = New System.Drawing.Size(181, 80)
+        Me.FlowLayoutPanel_baruukAbilities.TabIndex = 100
+        '
+        'CheckBox_desolateHands
+        '
+        Me.CheckBox_desolateHands.Location = New System.Drawing.Point(3, 29)
+        Me.CheckBox_desolateHands.Name = "CheckBox_desolateHands"
+        Me.CheckBox_desolateHands.Size = New System.Drawing.Size(175, 21)
+        Me.CheckBox_desolateHands.TabIndex = 42
+        Me.CheckBox_desolateHands.Text = "Desolate Hands"
+        Me.CheckBox_desolateHands.UseVisualStyleBackColor = True
+        '
+        'CheckBox_sereneStorm
+        '
+        Me.CheckBox_sereneStorm.Location = New System.Drawing.Point(3, 56)
+        Me.CheckBox_sereneStorm.Name = "CheckBox_sereneStorm"
+        Me.CheckBox_sereneStorm.Size = New System.Drawing.Size(175, 21)
+        Me.CheckBox_sereneStorm.TabIndex = 43
+        Me.CheckBox_sereneStorm.Text = "Serene Storm"
+        Me.CheckBox_sereneStorm.UseVisualStyleBackColor = True
+        '
+        'TabPage_abilitiesChroma
+        '
+        Me.TabPage_abilitiesChroma.BackColor = System.Drawing.Color.White
+        Me.TabPage_abilitiesChroma.Controls.Add(Me.FlowLayoutPanel_chromaAbilities)
+        Me.TabPage_abilitiesChroma.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage_abilitiesChroma.Name = "TabPage_abilitiesChroma"
+        Me.TabPage_abilitiesChroma.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage_abilitiesChroma.Size = New System.Drawing.Size(759, 186)
+        Me.TabPage_abilitiesChroma.TabIndex = 0
+        Me.TabPage_abilitiesChroma.Text = "Chroma"
+        '
+        'FlowLayoutPanel_chromaAbilities
+        '
+        Me.FlowLayoutPanel_chromaAbilities.AutoSize = True
+        Me.FlowLayoutPanel_chromaAbilities.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.FlowLayoutPanel_chromaAbilities.Controls.Add(Me.RadioButton_electricChroma)
+        Me.FlowLayoutPanel_chromaAbilities.Controls.Add(Me.RadioButton_fireChroma)
+        Me.FlowLayoutPanel_chromaAbilities.Controls.Add(Me.RadioButton_iceChroma)
+        Me.FlowLayoutPanel_chromaAbilities.Controls.Add(Me.CheckBox_vexArmor)
+        Me.FlowLayoutPanel_chromaAbilities.Controls.Add(Me.CheckBox_elementalWard)
+        Me.FlowLayoutPanel_chromaAbilities.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
+        Me.FlowLayoutPanel_chromaAbilities.Location = New System.Drawing.Point(7, 8)
+        Me.FlowLayoutPanel_chromaAbilities.Margin = New System.Windows.Forms.Padding(0)
+        Me.FlowLayoutPanel_chromaAbilities.MinimumSize = New System.Drawing.Size(181, 26)
+        Me.FlowLayoutPanel_chromaAbilities.Name = "FlowLayoutPanel_chromaAbilities"
+        Me.FlowLayoutPanel_chromaAbilities.Size = New System.Drawing.Size(181, 135)
+        Me.FlowLayoutPanel_chromaAbilities.TabIndex = 100
+        '
+        'RadioButton_electricChroma
+        '
+        Me.RadioButton_electricChroma.Location = New System.Drawing.Point(3, 3)
+        Me.RadioButton_electricChroma.Name = "RadioButton_electricChroma"
+        Me.RadioButton_electricChroma.Size = New System.Drawing.Size(175, 21)
+        Me.RadioButton_electricChroma.TabIndex = 16
+        Me.RadioButton_electricChroma.Text = "Electric Chroma"
+        Me.RadioButton_electricChroma.UseVisualStyleBackColor = True
+        '
+        'RadioButton_fireChroma
+        '
+        Me.RadioButton_fireChroma.Checked = True
+        Me.RadioButton_fireChroma.Location = New System.Drawing.Point(3, 30)
+        Me.RadioButton_fireChroma.Name = "RadioButton_fireChroma"
+        Me.RadioButton_fireChroma.Size = New System.Drawing.Size(175, 21)
+        Me.RadioButton_fireChroma.TabIndex = 14
+        Me.RadioButton_fireChroma.TabStop = True
+        Me.RadioButton_fireChroma.Text = "Fire Chroma"
+        Me.RadioButton_fireChroma.UseVisualStyleBackColor = True
+        '
+        'RadioButton_iceChroma
+        '
+        Me.RadioButton_iceChroma.Location = New System.Drawing.Point(3, 57)
+        Me.RadioButton_iceChroma.Name = "RadioButton_iceChroma"
+        Me.RadioButton_iceChroma.Size = New System.Drawing.Size(175, 21)
+        Me.RadioButton_iceChroma.TabIndex = 15
+        Me.RadioButton_iceChroma.Text = "Ice Chroma"
+        Me.RadioButton_iceChroma.UseVisualStyleBackColor = True
+        '
+        'CheckBox_vexArmor
+        '
+        Me.CheckBox_vexArmor.Location = New System.Drawing.Point(3, 84)
+        Me.CheckBox_vexArmor.Name = "CheckBox_vexArmor"
+        Me.CheckBox_vexArmor.Size = New System.Drawing.Size(175, 21)
+        Me.CheckBox_vexArmor.TabIndex = 18
+        Me.CheckBox_vexArmor.Text = "Vex Armor"
+        Me.CheckBox_vexArmor.UseVisualStyleBackColor = True
+        '
+        'CheckBox_elementalWard
+        '
+        Me.CheckBox_elementalWard.Location = New System.Drawing.Point(3, 111)
+        Me.CheckBox_elementalWard.Name = "CheckBox_elementalWard"
+        Me.CheckBox_elementalWard.Size = New System.Drawing.Size(175, 21)
+        Me.CheckBox_elementalWard.TabIndex = 17
+        Me.CheckBox_elementalWard.Text = "Elemental Ward"
+        Me.CheckBox_elementalWard.UseVisualStyleBackColor = True
+        '
+        'TabPage_abilitiesExcalibur
+        '
+        Me.TabPage_abilitiesExcalibur.BackColor = System.Drawing.Color.White
+        Me.TabPage_abilitiesExcalibur.Controls.Add(Me.FlowLayoutPanel_excaliburAbilities)
+        Me.TabPage_abilitiesExcalibur.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage_abilitiesExcalibur.Name = "TabPage_abilitiesExcalibur"
+        Me.TabPage_abilitiesExcalibur.Size = New System.Drawing.Size(759, 186)
+        Me.TabPage_abilitiesExcalibur.TabIndex = 19
+        Me.TabPage_abilitiesExcalibur.Text = "Excalibur"
+        '
+        'FlowLayoutPanel_excaliburAbilities
+        '
+        Me.FlowLayoutPanel_excaliburAbilities.AutoSize = True
+        Me.FlowLayoutPanel_excaliburAbilities.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.FlowLayoutPanel_excaliburAbilities.Controls.Add(Me.CheckBox_exaltedBlade)
+        Me.FlowLayoutPanel_excaliburAbilities.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
+        Me.FlowLayoutPanel_excaliburAbilities.Location = New System.Drawing.Point(8, 10)
+        Me.FlowLayoutPanel_excaliburAbilities.Margin = New System.Windows.Forms.Padding(0)
+        Me.FlowLayoutPanel_excaliburAbilities.MinimumSize = New System.Drawing.Size(181, 26)
+        Me.FlowLayoutPanel_excaliburAbilities.Name = "FlowLayoutPanel_excaliburAbilities"
+        Me.FlowLayoutPanel_excaliburAbilities.Size = New System.Drawing.Size(181, 27)
+        Me.FlowLayoutPanel_excaliburAbilities.TabIndex = 100
+        '
+        'CheckBox_exaltedBlade
+        '
+        Me.CheckBox_exaltedBlade.Location = New System.Drawing.Point(3, 3)
+        Me.CheckBox_exaltedBlade.Name = "CheckBox_exaltedBlade"
+        Me.CheckBox_exaltedBlade.Size = New System.Drawing.Size(175, 21)
+        Me.CheckBox_exaltedBlade.TabIndex = 39
+        Me.CheckBox_exaltedBlade.Text = "Exalted Blade"
+        Me.CheckBox_exaltedBlade.UseVisualStyleBackColor = True
+        '
+        'TabPage_abilitiesFrost
+        '
+        Me.TabPage_abilitiesFrost.BackColor = System.Drawing.Color.White
+        Me.TabPage_abilitiesFrost.Controls.Add(Me.FlowLayoutPanel_frostAbilities)
+        Me.TabPage_abilitiesFrost.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage_abilitiesFrost.Name = "TabPage_abilitiesFrost"
+        Me.TabPage_abilitiesFrost.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage_abilitiesFrost.Size = New System.Drawing.Size(759, 186)
+        Me.TabPage_abilitiesFrost.TabIndex = 2
+        Me.TabPage_abilitiesFrost.Text = "Frost"
+        '
+        'FlowLayoutPanel_frostAbilities
+        '
+        Me.FlowLayoutPanel_frostAbilities.AutoSize = True
+        Me.FlowLayoutPanel_frostAbilities.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.FlowLayoutPanel_frostAbilities.Controls.Add(Me.CheckedInput_icyAvalanche)
+        Me.FlowLayoutPanel_frostAbilities.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
+        Me.FlowLayoutPanel_frostAbilities.Location = New System.Drawing.Point(8, 12)
+        Me.FlowLayoutPanel_frostAbilities.Margin = New System.Windows.Forms.Padding(0)
+        Me.FlowLayoutPanel_frostAbilities.MinimumSize = New System.Drawing.Size(181, 26)
+        Me.FlowLayoutPanel_frostAbilities.Name = "FlowLayoutPanel_frostAbilities"
+        Me.FlowLayoutPanel_frostAbilities.Size = New System.Drawing.Size(181, 26)
+        Me.FlowLayoutPanel_frostAbilities.TabIndex = 100
+        '
+        'TabPage_abilitiesGara
+        '
+        Me.TabPage_abilitiesGara.BackColor = System.Drawing.Color.White
+        Me.TabPage_abilitiesGara.Controls.Add(Me.FlowLayoutPanel_garaAbilities)
+        Me.TabPage_abilitiesGara.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage_abilitiesGara.Name = "TabPage_abilitiesGara"
+        Me.TabPage_abilitiesGara.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage_abilitiesGara.Size = New System.Drawing.Size(759, 186)
+        Me.TabPage_abilitiesGara.TabIndex = 17
+        Me.TabPage_abilitiesGara.Text = "Gara"
+        '
+        'FlowLayoutPanel_garaAbilities
+        '
+        Me.FlowLayoutPanel_garaAbilities.AutoSize = True
+        Me.FlowLayoutPanel_garaAbilities.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.FlowLayoutPanel_garaAbilities.Controls.Add(Me.CheckBox_splinterStorm)
+        Me.FlowLayoutPanel_garaAbilities.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
+        Me.FlowLayoutPanel_garaAbilities.Location = New System.Drawing.Point(8, 15)
+        Me.FlowLayoutPanel_garaAbilities.Margin = New System.Windows.Forms.Padding(0)
+        Me.FlowLayoutPanel_garaAbilities.MinimumSize = New System.Drawing.Size(181, 26)
+        Me.FlowLayoutPanel_garaAbilities.Name = "FlowLayoutPanel_garaAbilities"
+        Me.FlowLayoutPanel_garaAbilities.Size = New System.Drawing.Size(181, 27)
+        Me.FlowLayoutPanel_garaAbilities.TabIndex = 100
+        '
+        'CheckBox_splinterStorm
+        '
+        Me.CheckBox_splinterStorm.Location = New System.Drawing.Point(3, 3)
+        Me.CheckBox_splinterStorm.Name = "CheckBox_splinterStorm"
+        Me.CheckBox_splinterStorm.Size = New System.Drawing.Size(175, 21)
+        Me.CheckBox_splinterStorm.TabIndex = 1
+        Me.CheckBox_splinterStorm.Text = "Splinter Storm"
+        Me.CheckBox_splinterStorm.UseVisualStyleBackColor = True
+        '
+        'TabPage_abilitiesHarrow
+        '
+        Me.TabPage_abilitiesHarrow.BackColor = System.Drawing.Color.White
+        Me.TabPage_abilitiesHarrow.Controls.Add(Me.FlowLayoutPanel_harrowAbilities)
+        Me.TabPage_abilitiesHarrow.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage_abilitiesHarrow.Name = "TabPage_abilitiesHarrow"
+        Me.TabPage_abilitiesHarrow.Size = New System.Drawing.Size(759, 186)
+        Me.TabPage_abilitiesHarrow.TabIndex = 21
+        Me.TabPage_abilitiesHarrow.Text = "Harrow"
+        '
+        'FlowLayoutPanel_harrowAbilities
+        '
+        Me.FlowLayoutPanel_harrowAbilities.AutoSize = True
+        Me.FlowLayoutPanel_harrowAbilities.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.FlowLayoutPanel_harrowAbilities.Controls.Add(Me.CheckBox_wardingThurible)
+        Me.FlowLayoutPanel_harrowAbilities.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
+        Me.FlowLayoutPanel_harrowAbilities.Location = New System.Drawing.Point(8, 10)
+        Me.FlowLayoutPanel_harrowAbilities.Margin = New System.Windows.Forms.Padding(0)
+        Me.FlowLayoutPanel_harrowAbilities.MinimumSize = New System.Drawing.Size(181, 26)
+        Me.FlowLayoutPanel_harrowAbilities.Name = "FlowLayoutPanel_harrowAbilities"
+        Me.FlowLayoutPanel_harrowAbilities.Size = New System.Drawing.Size(181, 27)
+        Me.FlowLayoutPanel_harrowAbilities.TabIndex = 100
+        '
+        'CheckBox_wardingThurible
+        '
+        Me.CheckBox_wardingThurible.Location = New System.Drawing.Point(3, 3)
+        Me.CheckBox_wardingThurible.Name = "CheckBox_wardingThurible"
+        Me.CheckBox_wardingThurible.Size = New System.Drawing.Size(175, 21)
+        Me.CheckBox_wardingThurible.TabIndex = 2
+        Me.CheckBox_wardingThurible.Text = "Warding Thurible"
+        Me.CheckBox_wardingThurible.UseVisualStyleBackColor = True
+        '
+        'TabPage_abilitiesInaros
+        '
+        Me.TabPage_abilitiesInaros.BackColor = System.Drawing.Color.White
+        Me.TabPage_abilitiesInaros.Controls.Add(Me.FlowLayoutPanel_inarosAbilities)
+        Me.TabPage_abilitiesInaros.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage_abilitiesInaros.Name = "TabPage_abilitiesInaros"
+        Me.TabPage_abilitiesInaros.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage_abilitiesInaros.Size = New System.Drawing.Size(759, 186)
+        Me.TabPage_abilitiesInaros.TabIndex = 3
+        Me.TabPage_abilitiesInaros.Text = "Inaros"
+        '
+        'FlowLayoutPanel_inarosAbilities
+        '
+        Me.FlowLayoutPanel_inarosAbilities.AutoSize = True
+        Me.FlowLayoutPanel_inarosAbilities.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.FlowLayoutPanel_inarosAbilities.Controls.Add(Me.CheckedInput_scarabSwarm)
+        Me.FlowLayoutPanel_inarosAbilities.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
+        Me.FlowLayoutPanel_inarosAbilities.Location = New System.Drawing.Point(8, 12)
+        Me.FlowLayoutPanel_inarosAbilities.Margin = New System.Windows.Forms.Padding(0)
+        Me.FlowLayoutPanel_inarosAbilities.MinimumSize = New System.Drawing.Size(181, 26)
+        Me.FlowLayoutPanel_inarosAbilities.Name = "FlowLayoutPanel_inarosAbilities"
+        Me.FlowLayoutPanel_inarosAbilities.Size = New System.Drawing.Size(181, 26)
+        Me.FlowLayoutPanel_inarosAbilities.TabIndex = 100
+        '
+        'TabPage_abilitiesMesa
+        '
+        Me.TabPage_abilitiesMesa.BackColor = System.Drawing.Color.White
+        Me.TabPage_abilitiesMesa.Controls.Add(Me.FlowLayoutPanel_mesaAbilities)
+        Me.TabPage_abilitiesMesa.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage_abilitiesMesa.Name = "TabPage_abilitiesMesa"
+        Me.TabPage_abilitiesMesa.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage_abilitiesMesa.Size = New System.Drawing.Size(759, 186)
+        Me.TabPage_abilitiesMesa.TabIndex = 6
+        Me.TabPage_abilitiesMesa.Text = "Mesa"
+        '
+        'FlowLayoutPanel_mesaAbilities
+        '
+        Me.FlowLayoutPanel_mesaAbilities.AutoSize = True
+        Me.FlowLayoutPanel_mesaAbilities.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.FlowLayoutPanel_mesaAbilities.Controls.Add(Me.CheckBox_shatterShield)
+        Me.FlowLayoutPanel_mesaAbilities.Controls.Add(Me.CheckBox_marksmansDexterity)
+        Me.FlowLayoutPanel_mesaAbilities.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
+        Me.FlowLayoutPanel_mesaAbilities.Location = New System.Drawing.Point(8, 12)
+        Me.FlowLayoutPanel_mesaAbilities.Margin = New System.Windows.Forms.Padding(0)
+        Me.FlowLayoutPanel_mesaAbilities.MinimumSize = New System.Drawing.Size(181, 26)
+        Me.FlowLayoutPanel_mesaAbilities.Name = "FlowLayoutPanel_mesaAbilities"
+        Me.FlowLayoutPanel_mesaAbilities.Size = New System.Drawing.Size(181, 54)
+        Me.FlowLayoutPanel_mesaAbilities.TabIndex = 100
+        '
+        'CheckBox_shatterShield
+        '
+        Me.CheckBox_shatterShield.Location = New System.Drawing.Point(3, 3)
+        Me.CheckBox_shatterShield.Name = "CheckBox_shatterShield"
+        Me.CheckBox_shatterShield.Size = New System.Drawing.Size(175, 21)
+        Me.CheckBox_shatterShield.TabIndex = 2
+        Me.CheckBox_shatterShield.Text = "Shatter Shield"
+        Me.CheckBox_shatterShield.UseVisualStyleBackColor = True
+        '
+        'CheckBox_marksmansDexterity
+        '
+        Me.CheckBox_marksmansDexterity.Location = New System.Drawing.Point(3, 30)
+        Me.CheckBox_marksmansDexterity.Name = "CheckBox_marksmansDexterity"
+        Me.CheckBox_marksmansDexterity.Size = New System.Drawing.Size(175, 21)
+        Me.CheckBox_marksmansDexterity.TabIndex = 3
+        Me.CheckBox_marksmansDexterity.Text = "Marksman's Dexterity"
+        Me.CheckBox_marksmansDexterity.UseVisualStyleBackColor = True
+        '
+        'TabPage_abilitiesMirage
+        '
+        Me.TabPage_abilitiesMirage.BackColor = System.Drawing.Color.White
+        Me.TabPage_abilitiesMirage.Controls.Add(Me.FlowLayoutPanel_mirageAbilities)
+        Me.TabPage_abilitiesMirage.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage_abilitiesMirage.Name = "TabPage_abilitiesMirage"
+        Me.TabPage_abilitiesMirage.Size = New System.Drawing.Size(759, 186)
+        Me.TabPage_abilitiesMirage.TabIndex = 13
+        Me.TabPage_abilitiesMirage.Text = "Mirage"
+        '
+        'FlowLayoutPanel_mirageAbilities
+        '
+        Me.FlowLayoutPanel_mirageAbilities.AutoSize = True
+        Me.FlowLayoutPanel_mirageAbilities.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.FlowLayoutPanel_mirageAbilities.Controls.Add(Me.CheckBox_eclipse)
+        Me.FlowLayoutPanel_mirageAbilities.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
+        Me.FlowLayoutPanel_mirageAbilities.Location = New System.Drawing.Point(8, 9)
+        Me.FlowLayoutPanel_mirageAbilities.Margin = New System.Windows.Forms.Padding(0)
+        Me.FlowLayoutPanel_mirageAbilities.MinimumSize = New System.Drawing.Size(181, 26)
+        Me.FlowLayoutPanel_mirageAbilities.Name = "FlowLayoutPanel_mirageAbilities"
+        Me.FlowLayoutPanel_mirageAbilities.Size = New System.Drawing.Size(181, 27)
+        Me.FlowLayoutPanel_mirageAbilities.TabIndex = 100
+        '
+        'CheckBox_eclipse
+        '
+        Me.CheckBox_eclipse.Location = New System.Drawing.Point(3, 3)
+        Me.CheckBox_eclipse.Name = "CheckBox_eclipse"
+        Me.CheckBox_eclipse.Size = New System.Drawing.Size(175, 21)
+        Me.CheckBox_eclipse.TabIndex = 3
+        Me.CheckBox_eclipse.Text = "Eclipse"
+        Me.CheckBox_eclipse.UseVisualStyleBackColor = True
+        '
+        'TabPage_abilitiesNekros
+        '
+        Me.TabPage_abilitiesNekros.BackColor = System.Drawing.Color.White
+        Me.TabPage_abilitiesNekros.Controls.Add(Me.FlowLayoutPanel_nekrosAbilities)
+        Me.TabPage_abilitiesNekros.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage_abilitiesNekros.Name = "TabPage_abilitiesNekros"
+        Me.TabPage_abilitiesNekros.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage_abilitiesNekros.Size = New System.Drawing.Size(759, 186)
+        Me.TabPage_abilitiesNekros.TabIndex = 11
+        Me.TabPage_abilitiesNekros.Text = "Nekros"
+        '
+        'FlowLayoutPanel_nekrosAbilities
+        '
+        Me.FlowLayoutPanel_nekrosAbilities.AutoSize = True
+        Me.FlowLayoutPanel_nekrosAbilities.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.FlowLayoutPanel_nekrosAbilities.Controls.Add(Me.CheckedInput_shieldOfShadows)
+        Me.FlowLayoutPanel_nekrosAbilities.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
+        Me.FlowLayoutPanel_nekrosAbilities.Location = New System.Drawing.Point(8, 12)
+        Me.FlowLayoutPanel_nekrosAbilities.Margin = New System.Windows.Forms.Padding(0)
+        Me.FlowLayoutPanel_nekrosAbilities.MinimumSize = New System.Drawing.Size(181, 26)
+        Me.FlowLayoutPanel_nekrosAbilities.Name = "FlowLayoutPanel_nekrosAbilities"
+        Me.FlowLayoutPanel_nekrosAbilities.Size = New System.Drawing.Size(181, 26)
+        Me.FlowLayoutPanel_nekrosAbilities.TabIndex = 100
+        '
+        'TabPage_abilitiesNezha
+        '
+        Me.TabPage_abilitiesNezha.BackColor = System.Drawing.Color.White
+        Me.TabPage_abilitiesNezha.Controls.Add(Me.FlowLayoutPanel_nezhaAbilities)
+        Me.TabPage_abilitiesNezha.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage_abilitiesNezha.Name = "TabPage_abilitiesNezha"
+        Me.TabPage_abilitiesNezha.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage_abilitiesNezha.Size = New System.Drawing.Size(759, 186)
+        Me.TabPage_abilitiesNezha.TabIndex = 4
+        Me.TabPage_abilitiesNezha.Text = "Nezha"
+        '
+        'FlowLayoutPanel_nezhaAbilities
+        '
+        Me.FlowLayoutPanel_nezhaAbilities.AutoSize = True
+        Me.FlowLayoutPanel_nezhaAbilities.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.FlowLayoutPanel_nezhaAbilities.Controls.Add(Me.CheckBox_wardingHalo)
+        Me.FlowLayoutPanel_nezhaAbilities.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
+        Me.FlowLayoutPanel_nezhaAbilities.Location = New System.Drawing.Point(8, 14)
+        Me.FlowLayoutPanel_nezhaAbilities.Margin = New System.Windows.Forms.Padding(0)
+        Me.FlowLayoutPanel_nezhaAbilities.MinimumSize = New System.Drawing.Size(181, 26)
+        Me.FlowLayoutPanel_nezhaAbilities.Name = "FlowLayoutPanel_nezhaAbilities"
+        Me.FlowLayoutPanel_nezhaAbilities.Size = New System.Drawing.Size(181, 27)
+        Me.FlowLayoutPanel_nezhaAbilities.TabIndex = 100
+        '
+        'CheckBox_wardingHalo
+        '
+        Me.CheckBox_wardingHalo.Location = New System.Drawing.Point(3, 3)
+        Me.CheckBox_wardingHalo.Name = "CheckBox_wardingHalo"
+        Me.CheckBox_wardingHalo.Size = New System.Drawing.Size(175, 21)
+        Me.CheckBox_wardingHalo.TabIndex = 2
+        Me.CheckBox_wardingHalo.Text = "Warding Halo"
+        Me.CheckBox_wardingHalo.UseVisualStyleBackColor = True
+        '
+        'TabPage_abilitiesNidus
+        '
+        Me.TabPage_abilitiesNidus.BackColor = System.Drawing.Color.White
+        Me.TabPage_abilitiesNidus.Controls.Add(Me.FlowLayoutPanel_nidusAbilities)
+        Me.TabPage_abilitiesNidus.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage_abilitiesNidus.Name = "TabPage_abilitiesNidus"
+        Me.TabPage_abilitiesNidus.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage_abilitiesNidus.Size = New System.Drawing.Size(759, 186)
+        Me.TabPage_abilitiesNidus.TabIndex = 9
+        Me.TabPage_abilitiesNidus.Text = "Nidus"
+        '
+        'FlowLayoutPanel_nidusAbilities
+        '
+        Me.FlowLayoutPanel_nidusAbilities.AutoSize = True
+        Me.FlowLayoutPanel_nidusAbilities.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.FlowLayoutPanel_nidusAbilities.Controls.Add(Me.CheckBox_parasiticLink)
+        Me.FlowLayoutPanel_nidusAbilities.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
+        Me.FlowLayoutPanel_nidusAbilities.Location = New System.Drawing.Point(8, 15)
+        Me.FlowLayoutPanel_nidusAbilities.Margin = New System.Windows.Forms.Padding(0)
+        Me.FlowLayoutPanel_nidusAbilities.MinimumSize = New System.Drawing.Size(181, 26)
+        Me.FlowLayoutPanel_nidusAbilities.Name = "FlowLayoutPanel_nidusAbilities"
+        Me.FlowLayoutPanel_nidusAbilities.Size = New System.Drawing.Size(181, 27)
+        Me.FlowLayoutPanel_nidusAbilities.TabIndex = 100
+        '
+        'CheckBox_parasiticLink
+        '
+        Me.CheckBox_parasiticLink.Location = New System.Drawing.Point(3, 3)
+        Me.CheckBox_parasiticLink.Name = "CheckBox_parasiticLink"
+        Me.CheckBox_parasiticLink.Size = New System.Drawing.Size(175, 21)
+        Me.CheckBox_parasiticLink.TabIndex = 38
+        Me.CheckBox_parasiticLink.Text = "Parasitic Link"
+        Me.CheckBox_parasiticLink.UseVisualStyleBackColor = True
+        '
+        'TabPage_abilitiesNova
+        '
+        Me.TabPage_abilitiesNova.BackColor = System.Drawing.Color.White
+        Me.TabPage_abilitiesNova.Controls.Add(Me.FlowLayoutPanel_novaAbilities)
+        Me.TabPage_abilitiesNova.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage_abilitiesNova.Name = "TabPage_abilitiesNova"
+        Me.TabPage_abilitiesNova.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage_abilitiesNova.Size = New System.Drawing.Size(759, 186)
+        Me.TabPage_abilitiesNova.TabIndex = 20
+        Me.TabPage_abilitiesNova.Text = "Nova"
+        '
+        'FlowLayoutPanel_novaAbilities
+        '
+        Me.FlowLayoutPanel_novaAbilities.AutoSize = True
+        Me.FlowLayoutPanel_novaAbilities.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.FlowLayoutPanel_novaAbilities.Controls.Add(Me.CheckedInput_nullStar)
+        Me.FlowLayoutPanel_novaAbilities.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
+        Me.FlowLayoutPanel_novaAbilities.Location = New System.Drawing.Point(8, 14)
+        Me.FlowLayoutPanel_novaAbilities.Margin = New System.Windows.Forms.Padding(0)
+        Me.FlowLayoutPanel_novaAbilities.MinimumSize = New System.Drawing.Size(181, 26)
+        Me.FlowLayoutPanel_novaAbilities.Name = "FlowLayoutPanel_novaAbilities"
+        Me.FlowLayoutPanel_novaAbilities.Size = New System.Drawing.Size(181, 26)
+        Me.FlowLayoutPanel_novaAbilities.TabIndex = 100
+        '
+        'TabPage_abilitiesOberon
+        '
+        Me.TabPage_abilitiesOberon.BackColor = System.Drawing.Color.White
+        Me.TabPage_abilitiesOberon.Controls.Add(Me.FlowLayoutPanel_oberonAbilities)
+        Me.TabPage_abilitiesOberon.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage_abilitiesOberon.Name = "TabPage_abilitiesOberon"
+        Me.TabPage_abilitiesOberon.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage_abilitiesOberon.Size = New System.Drawing.Size(759, 186)
+        Me.TabPage_abilitiesOberon.TabIndex = 5
+        Me.TabPage_abilitiesOberon.Text = "Oberon"
+        '
+        'FlowLayoutPanel_oberonAbilities
+        '
+        Me.FlowLayoutPanel_oberonAbilities.AutoSize = True
+        Me.FlowLayoutPanel_oberonAbilities.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.FlowLayoutPanel_oberonAbilities.Controls.Add(Me.CheckBox_ironRenewal)
+        Me.FlowLayoutPanel_oberonAbilities.Controls.Add(Me.CheckBox_hallowedReckoning)
+        Me.FlowLayoutPanel_oberonAbilities.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
+        Me.FlowLayoutPanel_oberonAbilities.Location = New System.Drawing.Point(8, 14)
+        Me.FlowLayoutPanel_oberonAbilities.Margin = New System.Windows.Forms.Padding(0)
+        Me.FlowLayoutPanel_oberonAbilities.MinimumSize = New System.Drawing.Size(181, 26)
+        Me.FlowLayoutPanel_oberonAbilities.Name = "FlowLayoutPanel_oberonAbilities"
+        Me.FlowLayoutPanel_oberonAbilities.Size = New System.Drawing.Size(181, 54)
+        Me.FlowLayoutPanel_oberonAbilities.TabIndex = 100
+        '
+        'CheckBox_ironRenewal
+        '
+        Me.CheckBox_ironRenewal.Location = New System.Drawing.Point(3, 3)
+        Me.CheckBox_ironRenewal.Name = "CheckBox_ironRenewal"
+        Me.CheckBox_ironRenewal.Size = New System.Drawing.Size(175, 21)
+        Me.CheckBox_ironRenewal.TabIndex = 3
+        Me.CheckBox_ironRenewal.Text = "Iron Renewal"
+        Me.CheckBox_ironRenewal.UseVisualStyleBackColor = True
+        '
+        'CheckBox_hallowedReckoning
+        '
+        Me.CheckBox_hallowedReckoning.Location = New System.Drawing.Point(3, 30)
+        Me.CheckBox_hallowedReckoning.Name = "CheckBox_hallowedReckoning"
+        Me.CheckBox_hallowedReckoning.Size = New System.Drawing.Size(175, 21)
+        Me.CheckBox_hallowedReckoning.TabIndex = 4
+        Me.CheckBox_hallowedReckoning.Text = "Hallowed Reckoning"
+        Me.CheckBox_hallowedReckoning.UseVisualStyleBackColor = True
+        '
+        'TabPage_abilitiesOctavia
+        '
+        Me.TabPage_abilitiesOctavia.BackColor = System.Drawing.Color.White
+        Me.TabPage_abilitiesOctavia.Controls.Add(Me.FlowLayoutPanel_octaviaAbilities)
+        Me.TabPage_abilitiesOctavia.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage_abilitiesOctavia.Name = "TabPage_abilitiesOctavia"
+        Me.TabPage_abilitiesOctavia.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage_abilitiesOctavia.Size = New System.Drawing.Size(759, 186)
+        Me.TabPage_abilitiesOctavia.TabIndex = 15
+        Me.TabPage_abilitiesOctavia.Text = "Octavia"
+        '
+        'FlowLayoutPanel_octaviaAbilities
+        '
+        Me.FlowLayoutPanel_octaviaAbilities.AutoSize = True
+        Me.FlowLayoutPanel_octaviaAbilities.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.FlowLayoutPanel_octaviaAbilities.Controls.Add(Me.CheckBox_metronome)
+        Me.FlowLayoutPanel_octaviaAbilities.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
+        Me.FlowLayoutPanel_octaviaAbilities.Location = New System.Drawing.Point(8, 15)
+        Me.FlowLayoutPanel_octaviaAbilities.Margin = New System.Windows.Forms.Padding(0)
+        Me.FlowLayoutPanel_octaviaAbilities.MinimumSize = New System.Drawing.Size(181, 26)
+        Me.FlowLayoutPanel_octaviaAbilities.Name = "FlowLayoutPanel_octaviaAbilities"
+        Me.FlowLayoutPanel_octaviaAbilities.Size = New System.Drawing.Size(181, 27)
+        Me.FlowLayoutPanel_octaviaAbilities.TabIndex = 100
+        '
+        'CheckBox_metronome
+        '
+        Me.CheckBox_metronome.Location = New System.Drawing.Point(3, 3)
+        Me.CheckBox_metronome.Name = "CheckBox_metronome"
+        Me.CheckBox_metronome.Size = New System.Drawing.Size(175, 21)
+        Me.CheckBox_metronome.TabIndex = 4
+        Me.CheckBox_metronome.Text = "Metronome"
+        Me.CheckBox_metronome.UseVisualStyleBackColor = True
+        '
+        'TabPage_abilitiesRhino
+        '
+        Me.TabPage_abilitiesRhino.BackColor = System.Drawing.Color.White
+        Me.TabPage_abilitiesRhino.Controls.Add(Me.FlowLayoutPanel_rhinoAbilities)
+        Me.TabPage_abilitiesRhino.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage_abilitiesRhino.Name = "TabPage_abilitiesRhino"
+        Me.TabPage_abilitiesRhino.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage_abilitiesRhino.Size = New System.Drawing.Size(759, 186)
+        Me.TabPage_abilitiesRhino.TabIndex = 7
+        Me.TabPage_abilitiesRhino.Text = "Rhino"
+        '
+        'FlowLayoutPanel_rhinoAbilities
+        '
+        Me.FlowLayoutPanel_rhinoAbilities.AutoSize = True
+        Me.FlowLayoutPanel_rhinoAbilities.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.FlowLayoutPanel_rhinoAbilities.Controls.Add(Me.CheckedInput_ironSkin)
+        Me.FlowLayoutPanel_rhinoAbilities.Controls.Add(Me.CheckedInput_ironcladCharge)
+        Me.FlowLayoutPanel_rhinoAbilities.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
+        Me.FlowLayoutPanel_rhinoAbilities.Location = New System.Drawing.Point(8, 14)
+        Me.FlowLayoutPanel_rhinoAbilities.Margin = New System.Windows.Forms.Padding(0)
+        Me.FlowLayoutPanel_rhinoAbilities.MinimumSize = New System.Drawing.Size(181, 26)
+        Me.FlowLayoutPanel_rhinoAbilities.Name = "FlowLayoutPanel_rhinoAbilities"
+        Me.FlowLayoutPanel_rhinoAbilities.Size = New System.Drawing.Size(181, 52)
+        Me.FlowLayoutPanel_rhinoAbilities.TabIndex = 100
+        '
+        'TabPage_abilitiesTitania
+        '
+        Me.TabPage_abilitiesTitania.BackColor = System.Drawing.Color.White
+        Me.TabPage_abilitiesTitania.Controls.Add(Me.FlowLayoutPanel_titaniaAbilities)
+        Me.TabPage_abilitiesTitania.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage_abilitiesTitania.Name = "TabPage_abilitiesTitania"
+        Me.TabPage_abilitiesTitania.Size = New System.Drawing.Size(759, 186)
+        Me.TabPage_abilitiesTitania.TabIndex = 16
+        Me.TabPage_abilitiesTitania.Text = "Titania"
+        '
+        'FlowLayoutPanel_titaniaAbilities
+        '
+        Me.FlowLayoutPanel_titaniaAbilities.AutoSize = True
+        Me.FlowLayoutPanel_titaniaAbilities.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.FlowLayoutPanel_titaniaAbilities.Controls.Add(Me.CheckedInput_thorns)
+        Me.FlowLayoutPanel_titaniaAbilities.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
+        Me.FlowLayoutPanel_titaniaAbilities.Location = New System.Drawing.Point(8, 11)
+        Me.FlowLayoutPanel_titaniaAbilities.Margin = New System.Windows.Forms.Padding(0)
+        Me.FlowLayoutPanel_titaniaAbilities.MinimumSize = New System.Drawing.Size(181, 26)
+        Me.FlowLayoutPanel_titaniaAbilities.Name = "FlowLayoutPanel_titaniaAbilities"
+        Me.FlowLayoutPanel_titaniaAbilities.Size = New System.Drawing.Size(181, 26)
+        Me.FlowLayoutPanel_titaniaAbilities.TabIndex = 100
+        '
+        'TabPage_abilitiesTrinity
+        '
+        Me.TabPage_abilitiesTrinity.BackColor = System.Drawing.Color.White
+        Me.TabPage_abilitiesTrinity.Controls.Add(Me.FlowLayoutPanel_trinityAbilities)
+        Me.TabPage_abilitiesTrinity.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage_abilitiesTrinity.Name = "TabPage_abilitiesTrinity"
+        Me.TabPage_abilitiesTrinity.Size = New System.Drawing.Size(759, 186)
+        Me.TabPage_abilitiesTrinity.TabIndex = 12
+        Me.TabPage_abilitiesTrinity.Text = "Trinity"
+        '
+        'FlowLayoutPanel_trinityAbilities
+        '
+        Me.FlowLayoutPanel_trinityAbilities.AutoSize = True
+        Me.FlowLayoutPanel_trinityAbilities.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.FlowLayoutPanel_trinityAbilities.Controls.Add(Me.CheckBox_link)
+        Me.FlowLayoutPanel_trinityAbilities.Controls.Add(Me.CheckBox_blessing)
+        Me.FlowLayoutPanel_trinityAbilities.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
+        Me.FlowLayoutPanel_trinityAbilities.Location = New System.Drawing.Point(8, 14)
+        Me.FlowLayoutPanel_trinityAbilities.Margin = New System.Windows.Forms.Padding(0)
+        Me.FlowLayoutPanel_trinityAbilities.MinimumSize = New System.Drawing.Size(181, 26)
+        Me.FlowLayoutPanel_trinityAbilities.Name = "FlowLayoutPanel_trinityAbilities"
+        Me.FlowLayoutPanel_trinityAbilities.Size = New System.Drawing.Size(181, 54)
+        Me.FlowLayoutPanel_trinityAbilities.TabIndex = 100
+        '
+        'CheckBox_link
+        '
+        Me.CheckBox_link.Location = New System.Drawing.Point(3, 3)
+        Me.CheckBox_link.Name = "CheckBox_link"
+        Me.CheckBox_link.Size = New System.Drawing.Size(175, 21)
+        Me.CheckBox_link.TabIndex = 39
+        Me.CheckBox_link.Text = "Link"
+        Me.CheckBox_link.UseVisualStyleBackColor = True
+        '
+        'CheckBox_blessing
+        '
+        Me.CheckBox_blessing.Location = New System.Drawing.Point(3, 30)
+        Me.CheckBox_blessing.Name = "CheckBox_blessing"
+        Me.CheckBox_blessing.Size = New System.Drawing.Size(175, 21)
+        Me.CheckBox_blessing.TabIndex = 41
+        Me.CheckBox_blessing.Text = "Blessing"
+        Me.CheckBox_blessing.UseVisualStyleBackColor = True
+        '
+        'TabPage_abilitiesValkyr
+        '
+        Me.TabPage_abilitiesValkyr.BackColor = System.Drawing.Color.White
+        Me.TabPage_abilitiesValkyr.Controls.Add(Me.FlowLayoutPanel_valkyrAbilities)
+        Me.TabPage_abilitiesValkyr.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage_abilitiesValkyr.Name = "TabPage_abilitiesValkyr"
+        Me.TabPage_abilitiesValkyr.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage_abilitiesValkyr.Size = New System.Drawing.Size(759, 186)
+        Me.TabPage_abilitiesValkyr.TabIndex = 8
+        Me.TabPage_abilitiesValkyr.Text = "Valkyr"
+        '
+        'FlowLayoutPanel_valkyrAbilities
+        '
+        Me.FlowLayoutPanel_valkyrAbilities.AutoSize = True
+        Me.FlowLayoutPanel_valkyrAbilities.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.FlowLayoutPanel_valkyrAbilities.Controls.Add(Me.CheckBox_warcry)
+        Me.FlowLayoutPanel_valkyrAbilities.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
+        Me.FlowLayoutPanel_valkyrAbilities.Location = New System.Drawing.Point(8, 15)
+        Me.FlowLayoutPanel_valkyrAbilities.Margin = New System.Windows.Forms.Padding(0)
+        Me.FlowLayoutPanel_valkyrAbilities.MinimumSize = New System.Drawing.Size(181, 26)
+        Me.FlowLayoutPanel_valkyrAbilities.Name = "FlowLayoutPanel_valkyrAbilities"
+        Me.FlowLayoutPanel_valkyrAbilities.Size = New System.Drawing.Size(181, 27)
+        Me.FlowLayoutPanel_valkyrAbilities.TabIndex = 100
+        '
+        'CheckBox_warcry
+        '
+        Me.CheckBox_warcry.Location = New System.Drawing.Point(3, 3)
+        Me.CheckBox_warcry.Name = "CheckBox_warcry"
+        Me.CheckBox_warcry.Size = New System.Drawing.Size(175, 21)
+        Me.CheckBox_warcry.TabIndex = 5
+        Me.CheckBox_warcry.Text = "Warcry"
+        Me.CheckBox_warcry.UseVisualStyleBackColor = True
+        '
+        'TabPage_abilitiesWisp
+        '
+        Me.TabPage_abilitiesWisp.BackColor = System.Drawing.Color.White
+        Me.TabPage_abilitiesWisp.Controls.Add(Me.FlowLayoutPanel_wispAbilities)
+        Me.TabPage_abilitiesWisp.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage_abilitiesWisp.Name = "TabPage_abilitiesWisp"
+        Me.TabPage_abilitiesWisp.Size = New System.Drawing.Size(759, 186)
+        Me.TabPage_abilitiesWisp.TabIndex = 23
+        Me.TabPage_abilitiesWisp.Text = "Wisp"
+        '
+        'FlowLayoutPanel_wispAbilities
+        '
+        Me.FlowLayoutPanel_wispAbilities.AutoSize = True
+        Me.FlowLayoutPanel_wispAbilities.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.FlowLayoutPanel_wispAbilities.Controls.Add(Me.CheckBox_vitalityMoteReservoirs)
+        Me.FlowLayoutPanel_wispAbilities.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
+        Me.FlowLayoutPanel_wispAbilities.Location = New System.Drawing.Point(8, 12)
+        Me.FlowLayoutPanel_wispAbilities.Margin = New System.Windows.Forms.Padding(0)
+        Me.FlowLayoutPanel_wispAbilities.MinimumSize = New System.Drawing.Size(181, 26)
+        Me.FlowLayoutPanel_wispAbilities.Name = "FlowLayoutPanel_wispAbilities"
+        Me.FlowLayoutPanel_wispAbilities.Size = New System.Drawing.Size(181, 27)
+        Me.FlowLayoutPanel_wispAbilities.TabIndex = 100
+        '
+        'CheckBox_vitalityMoteReservoirs
+        '
+        Me.CheckBox_vitalityMoteReservoirs.Location = New System.Drawing.Point(3, 3)
+        Me.CheckBox_vitalityMoteReservoirs.Name = "CheckBox_vitalityMoteReservoirs"
+        Me.CheckBox_vitalityMoteReservoirs.Size = New System.Drawing.Size(175, 21)
+        Me.CheckBox_vitalityMoteReservoirs.TabIndex = 6
+        Me.CheckBox_vitalityMoteReservoirs.Text = "Vitality Mote"
+        Me.CheckBox_vitalityMoteReservoirs.UseVisualStyleBackColor = True
+        '
+        'FlowLayoutPanel_abilitiesPanelTemplate
+        '
+        Me.FlowLayoutPanel_abilitiesPanelTemplate.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.FlowLayoutPanel_abilitiesPanelTemplate.AutoSize = True
+        Me.FlowLayoutPanel_abilitiesPanelTemplate.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.FlowLayoutPanel_abilitiesPanelTemplate.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
+        Me.FlowLayoutPanel_abilitiesPanelTemplate.Location = New System.Drawing.Point(561, 18)
+        Me.FlowLayoutPanel_abilitiesPanelTemplate.Margin = New System.Windows.Forms.Padding(0)
+        Me.FlowLayoutPanel_abilitiesPanelTemplate.MinimumSize = New System.Drawing.Size(181, 26)
+        Me.FlowLayoutPanel_abilitiesPanelTemplate.Name = "FlowLayoutPanel_abilitiesPanelTemplate"
+        Me.FlowLayoutPanel_abilitiesPanelTemplate.Size = New System.Drawing.Size(181, 26)
+        Me.FlowLayoutPanel_abilitiesPanelTemplate.TabIndex = 99
+        '
+        'RichTextBox1
+        '
+        Me.RichTextBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.RichTextBox1.Location = New System.Drawing.Point(3, 3)
+        Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.Size = New System.Drawing.Size(516, 239)
+        Me.RichTextBox1.TabIndex = 98
+        Me.RichTextBox1.Text = "TODO:" & Global.Microsoft.VisualBasic.ChrW(10) & "  -  Add missing mods" & Global.Microsoft.VisualBasic.ChrW(10) & "  -  Add Moa Pets" & Global.Microsoft.VisualBasic.ChrW(10) & "  -  Archwing"
+        '
+        'Label_companions
+        '
+        Me.Label_companions.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label_companions.AutoSize = True
+        Me.Label_companions.Location = New System.Drawing.Point(326, -1284)
+        Me.Label_companions.Name = "Label_companions"
+        Me.Label_companions.Size = New System.Drawing.Size(47, 13)
+        Me.Label_companions.TabIndex = 97
+        Me.Label_companions.Text = "pet stats"
+        '
+        'Icons
+        '
+        Me.Icons.ImageStream = CType(resources.GetObject("Icons.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.Icons.TransparentColor = System.Drawing.Color.Transparent
+        Me.Icons.Images.SetKeyName(0, "warframe.png")
+        Me.Icons.Images.SetKeyName(1, "sentinel.png")
+        Me.Icons.Images.SetKeyName(2, "arcane.png")
+        Me.Icons.Images.SetKeyName(3, "archwing.png")
+        Me.Icons.Images.SetKeyName(4, "alert.png")
+        '
+        'Label_author
+        '
+        Me.Label_author.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label_author.AutoSize = True
+        Me.Label_author.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.Label_author.Location = New System.Drawing.Point(615, 7)
+        Me.Label_author.Name = "Label_author"
+        Me.Label_author.Size = New System.Drawing.Size(164, 13)
+        Me.Label_author.TabIndex = 1
+        Me.Label_author.Text = "Made with        By /u/xEpicBradx"
+        '
+        'Label_love
+        '
+        Me.Label_love.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label_love.AutoSize = True
+        Me.Label_love.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.Label_love.ForeColor = System.Drawing.Color.Red
+        Me.Label_love.Location = New System.Drawing.Point(668, 6)
+        Me.Label_love.Name = "Label_love"
+        Me.Label_love.Size = New System.Drawing.Size(22, 15)
+        Me.Label_love.TabIndex = 2
+        Me.Label_love.Text = "♥"
         '
         'StatBox_warframeArmor
         '
@@ -544,7 +2351,7 @@ Partial Class Form_main
         'StatBox_warframeEHP
         '
         Me.StatBox_warframeEHP.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.StatBox_warframeEHP.Location = New System.Drawing.Point(7, 509)
+        Me.StatBox_warframeEHP.Location = New System.Drawing.Point(7, 653)
         Me.StatBox_warframeEHP.MaximumSize = New System.Drawing.Size(175, 20)
         Me.StatBox_warframeEHP.MinimumSize = New System.Drawing.Size(175, 20)
         Me.StatBox_warframeEHP.Name = "StatBox_warframeEHP"
@@ -553,33 +2360,6 @@ Partial Class Form_main
         Me.StatBox_warframeEHP.TabIndex = 17
         Me.StatBox_warframeEHP.Text = "Effective Health"
         Me.StatBox_warframeEHP.Value = "0"
-        '
-        'FlowLayoutPanel_warframeModsLayout
-        '
-        Me.FlowLayoutPanel_warframeModsLayout.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.FlowLayoutPanel_warframeModsLayout.AutoSize = True
-        Me.FlowLayoutPanel_warframeModsLayout.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.FlowLayoutPanel_warframeModsLayout.BackColor = System.Drawing.Color.White
-        Me.FlowLayoutPanel_warframeModsLayout.Controls.Add(Me.CheckedGroupBox_aura)
-        Me.FlowLayoutPanel_warframeModsLayout.Controls.Add(Me.CheckedGroupBox_survivability)
-        Me.FlowLayoutPanel_warframeModsLayout.Controls.Add(Me.CheckedGroupBox_miscellaneous)
-        Me.FlowLayoutPanel_warframeModsLayout.Controls.Add(Me.CheckedGroupBox_powerStrength)
-        Me.FlowLayoutPanel_warframeModsLayout.Controls.Add(Me.CheckedGroupBox_dragonKeys)
-        Me.FlowLayoutPanel_warframeModsLayout.Controls.Add(Me.CheckedGroupBox_missionModifiers)
-        Me.FlowLayoutPanel_warframeModsLayout.Controls.Add(Me.CheckedGroupBox_blocking)
-        Me.FlowLayoutPanel_warframeModsLayout.Controls.Add(Me.CheckedGroupBox_focus)
-        Me.FlowLayoutPanel_warframeModsLayout.Controls.Add(Me.CheckedGroupBox_specialEffects)
-        Me.FlowLayoutPanel_warframeModsLayout.Controls.Add(Me.CheckedGroupBox_arcanes)
-        Me.FlowLayoutPanel_warframeModsLayout.Controls.Add(Me.CheckedGroupBox_abilities)
-        Me.FlowLayoutPanel_warframeModsLayout.Controls.Add(Me.CheckedGroupBox_arcaneHelmets)
-        Me.FlowLayoutPanel_warframeModsLayout.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
-        Me.FlowLayoutPanel_warframeModsLayout.Location = New System.Drawing.Point(0, 0)
-        Me.FlowLayoutPanel_warframeModsLayout.Margin = New System.Windows.Forms.Padding(0)
-        Me.FlowLayoutPanel_warframeModsLayout.Name = "FlowLayoutPanel_warframeModsLayout"
-        Me.FlowLayoutPanel_warframeModsLayout.Size = New System.Drawing.Size(577, 541)
-        Me.FlowLayoutPanel_warframeModsLayout.TabIndex = 127
         '
         'CheckedGroupBox_aura
         '
@@ -639,6 +2419,12 @@ Partial Class Form_main
         'CheckedGroupBox_survivability
         '
         Me.CheckedGroupBox_survivability.AutoSize = True
+        Me.CheckedGroupBox_survivability.Controls.Add(Me.CheckBox_adaptation)
+        Me.CheckedGroupBox_survivability.Controls.Add(Me.CheckedDualInput_mechaPulse)
+        Me.CheckedGroupBox_survivability.Controls.Add(Me.CheckedInput_protonSet)
+        Me.CheckedGroupBox_survivability.Controls.Add(Me.CheckedInput_aviator)
+        Me.CheckedGroupBox_survivability.Controls.Add(Me.CheckedInput_agilityDrift)
+        Me.CheckedGroupBox_survivability.Controls.Add(Me.CheckedInput_focusedDefense)
         Me.CheckedGroupBox_survivability.Controls.Add(Me.CheckedInput_umbralVitality)
         Me.CheckedGroupBox_survivability.Controls.Add(Me.CheckedInput_umbralFiber)
         Me.CheckedGroupBox_survivability.Controls.Add(Me.CheckedInput_gladiatorFinesse)
@@ -654,10 +2440,79 @@ Partial Class Form_main
         Me.CheckedGroupBox_survivability.Controls.Add(Me.CheckedInput_steelFiber)
         Me.CheckedGroupBox_survivability.Location = New System.Drawing.Point(3, 139)
         Me.CheckedGroupBox_survivability.Name = "CheckedGroupBox_survivability"
-        Me.CheckedGroupBox_survivability.Size = New System.Drawing.Size(187, 355)
+        Me.CheckedGroupBox_survivability.Size = New System.Drawing.Size(187, 515)
         Me.CheckedGroupBox_survivability.TabIndex = 13
         Me.CheckedGroupBox_survivability.TabStop = False
         Me.CheckedGroupBox_survivability.Text = "Survivability"
+        '
+        'CheckBox_adaptation
+        '
+        Me.CheckBox_adaptation.Location = New System.Drawing.Point(6, 479)
+        Me.CheckBox_adaptation.Name = "CheckBox_adaptation"
+        Me.CheckBox_adaptation.Size = New System.Drawing.Size(175, 17)
+        Me.CheckBox_adaptation.TabIndex = 129
+        Me.CheckBox_adaptation.Tag = ""
+        Me.CheckBox_adaptation.Text = "Adaptation (Capped)"
+        Me.CheckBox_adaptation.UseVisualStyleBackColor = True
+        '
+        'CheckedDualInput_mechaPulse
+        '
+        Me.CheckedDualInput_mechaPulse.Location = New System.Drawing.Point(6, 435)
+        Me.CheckedDualInput_mechaPulse.Maximum = 3
+        Me.CheckedDualInput_mechaPulse.MaximumSize = New System.Drawing.Size(175, 39)
+        Me.CheckedDualInput_mechaPulse.MinimumSize = New System.Drawing.Size(175, 39)
+        Me.CheckedDualInput_mechaPulse.Name = "CheckedDualInput_mechaPulse"
+        Me.CheckedDualInput_mechaPulse.Secondary_Maximum = 20
+        Me.CheckedDualInput_mechaPulse.Secondary_Text = "Enemies in 30m"
+        Me.CheckedDualInput_mechaPulse.Size = New System.Drawing.Size(175, 39)
+        Me.CheckedDualInput_mechaPulse.TabIndex = 19
+        Me.CheckedDualInput_mechaPulse.Text = "Mecha Pulse"
+        '
+        'CheckedInput_protonSet
+        '
+        Me.CheckedInput_protonSet.Location = New System.Drawing.Point(6, 411)
+        Me.CheckedInput_protonSet.Maximum = 3
+        Me.CheckedInput_protonSet.MaximumSize = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_protonSet.Minimum = 1
+        Me.CheckedInput_protonSet.MinimumSize = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_protonSet.Name = "CheckedInput_protonSet"
+        Me.CheckedInput_protonSet.Size = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_protonSet.TabIndex = 18
+        Me.CheckedInput_protonSet.Text = "Proton Set Bonus"
+        Me.CheckedInput_protonSet.Value = 1
+        '
+        'CheckedInput_aviator
+        '
+        Me.CheckedInput_aviator.Location = New System.Drawing.Point(6, 387)
+        Me.CheckedInput_aviator.Maximum = 3
+        Me.CheckedInput_aviator.MaximumSize = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_aviator.MinimumSize = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_aviator.Name = "CheckedInput_aviator"
+        Me.CheckedInput_aviator.Size = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_aviator.TabIndex = 17
+        Me.CheckedInput_aviator.Text = "Aviator"
+        '
+        'CheckedInput_agilityDrift
+        '
+        Me.CheckedInput_agilityDrift.Location = New System.Drawing.Point(6, 363)
+        Me.CheckedInput_agilityDrift.Maximum = 5
+        Me.CheckedInput_agilityDrift.MaximumSize = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_agilityDrift.MinimumSize = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_agilityDrift.Name = "CheckedInput_agilityDrift"
+        Me.CheckedInput_agilityDrift.Size = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_agilityDrift.TabIndex = 16
+        Me.CheckedInput_agilityDrift.Text = "Agility Drift"
+        '
+        'CheckedInput_focusedDefense
+        '
+        Me.CheckedInput_focusedDefense.Location = New System.Drawing.Point(6, 339)
+        Me.CheckedInput_focusedDefense.Maximum = 3
+        Me.CheckedInput_focusedDefense.MaximumSize = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_focusedDefense.MinimumSize = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_focusedDefense.Name = "CheckedInput_focusedDefense"
+        Me.CheckedInput_focusedDefense.Size = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_focusedDefense.TabIndex = 15
+        Me.CheckedInput_focusedDefense.Text = "Focused Defense"
         '
         'CheckedInput_umbralVitality
         '
@@ -1024,7 +2879,7 @@ Partial Class Form_main
         '
         Me.CheckedGroupBox_blocking.AutoSize = True
         Me.CheckedGroupBox_blocking.Controls.Add(Me.ComboBox_blocking)
-        Me.CheckedGroupBox_blocking.Location = New System.Drawing.Point(389, 3)
+        Me.CheckedGroupBox_blocking.Location = New System.Drawing.Point(196, 491)
         Me.CheckedGroupBox_blocking.Name = "CheckedGroupBox_blocking"
         Me.CheckedGroupBox_blocking.Size = New System.Drawing.Size(187, 59)
         Me.CheckedGroupBox_blocking.TabIndex = 18
@@ -1045,7 +2900,7 @@ Partial Class Form_main
         '
         Me.CheckedGroupBox_focus.AutoSize = True
         Me.CheckedGroupBox_focus.Controls.Add(Me.CheckedInput_stoneSkin)
-        Me.CheckedGroupBox_focus.Location = New System.Drawing.Point(389, 68)
+        Me.CheckedGroupBox_focus.Location = New System.Drawing.Point(196, 556)
         Me.CheckedGroupBox_focus.Name = "CheckedGroupBox_focus"
         Me.CheckedGroupBox_focus.Size = New System.Drawing.Size(187, 56)
         Me.CheckedGroupBox_focus.TabIndex = 19
@@ -1066,14 +2921,69 @@ Partial Class Form_main
         'CheckedGroupBox_specialEffects
         '
         Me.CheckedGroupBox_specialEffects.AutoSize = True
+        Me.CheckedGroupBox_specialEffects.Controls.Add(Me.CheckBox_steelMeridianBuff)
+        Me.CheckedGroupBox_specialEffects.Controls.Add(Me.CheckBox_perrinSequenceBuff)
+        Me.CheckedGroupBox_specialEffects.Controls.Add(Me.CheckBox_newLokaBuff)
+        Me.CheckedGroupBox_specialEffects.Controls.Add(Me.CheckBox_cepholonSudaBuff)
+        Me.CheckedGroupBox_specialEffects.Controls.Add(Me.CheckBox_arbitrationBuff)
         Me.CheckedGroupBox_specialEffects.Controls.Add(Me.CheckBox_corruptedBuff)
         Me.CheckedGroupBox_specialEffects.Controls.Add(Me.CheckedInput_overshields)
-        Me.CheckedGroupBox_specialEffects.Location = New System.Drawing.Point(389, 130)
+        Me.CheckedGroupBox_specialEffects.Location = New System.Drawing.Point(389, 3)
         Me.CheckedGroupBox_specialEffects.Name = "CheckedGroupBox_specialEffects"
-        Me.CheckedGroupBox_specialEffects.Size = New System.Drawing.Size(187, 76)
+        Me.CheckedGroupBox_specialEffects.Size = New System.Drawing.Size(187, 171)
         Me.CheckedGroupBox_specialEffects.TabIndex = 20
         Me.CheckedGroupBox_specialEffects.TabStop = False
         Me.CheckedGroupBox_specialEffects.Text = "Special Effects"
+        '
+        'CheckBox_steelMeridianBuff
+        '
+        Me.CheckBox_steelMeridianBuff.Location = New System.Drawing.Point(6, 135)
+        Me.CheckBox_steelMeridianBuff.Name = "CheckBox_steelMeridianBuff"
+        Me.CheckBox_steelMeridianBuff.Size = New System.Drawing.Size(175, 17)
+        Me.CheckBox_steelMeridianBuff.TabIndex = 128
+        Me.CheckBox_steelMeridianBuff.Tag = ""
+        Me.CheckBox_steelMeridianBuff.Text = "Steel Meridian Buff"
+        Me.CheckBox_steelMeridianBuff.UseVisualStyleBackColor = True
+        '
+        'CheckBox_perrinSequenceBuff
+        '
+        Me.CheckBox_perrinSequenceBuff.Location = New System.Drawing.Point(6, 116)
+        Me.CheckBox_perrinSequenceBuff.Name = "CheckBox_perrinSequenceBuff"
+        Me.CheckBox_perrinSequenceBuff.Size = New System.Drawing.Size(175, 17)
+        Me.CheckBox_perrinSequenceBuff.TabIndex = 127
+        Me.CheckBox_perrinSequenceBuff.Tag = ""
+        Me.CheckBox_perrinSequenceBuff.Text = "The Perrin Sequence Buff"
+        Me.CheckBox_perrinSequenceBuff.UseVisualStyleBackColor = True
+        '
+        'CheckBox_newLokaBuff
+        '
+        Me.CheckBox_newLokaBuff.Location = New System.Drawing.Point(6, 97)
+        Me.CheckBox_newLokaBuff.Name = "CheckBox_newLokaBuff"
+        Me.CheckBox_newLokaBuff.Size = New System.Drawing.Size(175, 17)
+        Me.CheckBox_newLokaBuff.TabIndex = 126
+        Me.CheckBox_newLokaBuff.Tag = ""
+        Me.CheckBox_newLokaBuff.Text = "New Loka Buff"
+        Me.CheckBox_newLokaBuff.UseVisualStyleBackColor = True
+        '
+        'CheckBox_cepholonSudaBuff
+        '
+        Me.CheckBox_cepholonSudaBuff.Location = New System.Drawing.Point(6, 78)
+        Me.CheckBox_cepholonSudaBuff.Name = "CheckBox_cepholonSudaBuff"
+        Me.CheckBox_cepholonSudaBuff.Size = New System.Drawing.Size(175, 17)
+        Me.CheckBox_cepholonSudaBuff.TabIndex = 125
+        Me.CheckBox_cepholonSudaBuff.Tag = ""
+        Me.CheckBox_cepholonSudaBuff.Text = "Cepholon Suda Buff"
+        Me.CheckBox_cepholonSudaBuff.UseVisualStyleBackColor = True
+        '
+        'CheckBox_arbitrationBuff
+        '
+        Me.CheckBox_arbitrationBuff.Location = New System.Drawing.Point(6, 59)
+        Me.CheckBox_arbitrationBuff.Name = "CheckBox_arbitrationBuff"
+        Me.CheckBox_arbitrationBuff.Size = New System.Drawing.Size(175, 17)
+        Me.CheckBox_arbitrationBuff.TabIndex = 124
+        Me.CheckBox_arbitrationBuff.Tag = ""
+        Me.CheckBox_arbitrationBuff.Text = "Arbitration Buff"
+        Me.CheckBox_arbitrationBuff.UseVisualStyleBackColor = True
         '
         'CheckBox_corruptedBuff
         '
@@ -1099,17 +3009,32 @@ Partial Class Form_main
         'CheckedGroupBox_arcanes
         '
         Me.CheckedGroupBox_arcanes.AutoSize = True
+        Me.CheckedGroupBox_arcanes.Controls.Add(Me.CheckedInput_arcanePaxBolt)
         Me.CheckedGroupBox_arcanes.Controls.Add(Me.CheckedInput_arcaneUltimatum2)
         Me.CheckedGroupBox_arcanes.Controls.Add(Me.CheckedInput_arcaneUltimatum)
         Me.CheckedGroupBox_arcanes.Controls.Add(Me.CheckedInput_arcaneGuardian2)
         Me.CheckedGroupBox_arcanes.Controls.Add(Me.CheckedInput_arcaneGuardian)
+        Me.CheckedGroupBox_arcanes.Limit = 1
         Me.CheckedGroupBox_arcanes.Limited = True
-        Me.CheckedGroupBox_arcanes.Location = New System.Drawing.Point(389, 212)
+        Me.CheckedGroupBox_arcanes.LimitUsesTags = True
+        Me.CheckedGroupBox_arcanes.Location = New System.Drawing.Point(389, 180)
         Me.CheckedGroupBox_arcanes.Name = "CheckedGroupBox_arcanes"
-        Me.CheckedGroupBox_arcanes.Size = New System.Drawing.Size(187, 129)
+        Me.CheckedGroupBox_arcanes.Size = New System.Drawing.Size(187, 153)
         Me.CheckedGroupBox_arcanes.TabIndex = 21
         Me.CheckedGroupBox_arcanes.TabStop = False
         Me.CheckedGroupBox_arcanes.Text = "Arcanes"
+        '
+        'CheckedInput_arcanePaxBolt
+        '
+        Me.CheckedInput_arcanePaxBolt.Location = New System.Drawing.Point(6, 114)
+        Me.CheckedInput_arcanePaxBolt.Maximum = 3
+        Me.CheckedInput_arcanePaxBolt.MaximumSize = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_arcanePaxBolt.MinimumSize = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_arcanePaxBolt.Name = "CheckedInput_arcanePaxBolt"
+        Me.CheckedInput_arcanePaxBolt.Size = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_arcanePaxBolt.TabIndex = 6
+        Me.CheckedInput_arcanePaxBolt.Tag = "limitGroup_kitgun_1"
+        Me.CheckedInput_arcanePaxBolt.Text = "Pax Bolt"
         '
         'CheckedInput_arcaneUltimatum2
         '
@@ -1120,6 +3045,7 @@ Partial Class Form_main
         Me.CheckedInput_arcaneUltimatum2.Name = "CheckedInput_arcaneUltimatum2"
         Me.CheckedInput_arcaneUltimatum2.Size = New System.Drawing.Size(175, 20)
         Me.CheckedInput_arcaneUltimatum2.TabIndex = 5
+        Me.CheckedInput_arcaneUltimatum2.Tag = "limitGroup_warframe_2"
         Me.CheckedInput_arcaneUltimatum2.Text = "Arcane Ultimatum"
         '
         'CheckedInput_arcaneUltimatum
@@ -1131,6 +3057,7 @@ Partial Class Form_main
         Me.CheckedInput_arcaneUltimatum.Name = "CheckedInput_arcaneUltimatum"
         Me.CheckedInput_arcaneUltimatum.Size = New System.Drawing.Size(175, 20)
         Me.CheckedInput_arcaneUltimatum.TabIndex = 4
+        Me.CheckedInput_arcaneUltimatum.Tag = "limitGroup_warframe_2"
         Me.CheckedInput_arcaneUltimatum.Text = "Arcane Ultimatum"
         '
         'CheckedInput_arcaneGuardian2
@@ -1142,6 +3069,7 @@ Partial Class Form_main
         Me.CheckedInput_arcaneGuardian2.Name = "CheckedInput_arcaneGuardian2"
         Me.CheckedInput_arcaneGuardian2.Size = New System.Drawing.Size(175, 20)
         Me.CheckedInput_arcaneGuardian2.TabIndex = 3
+        Me.CheckedInput_arcaneGuardian2.Tag = "limitGroup_warframe_2"
         Me.CheckedInput_arcaneGuardian2.Text = "Arcane Guardian"
         '
         'CheckedInput_arcaneGuardian
@@ -1153,12 +3081,13 @@ Partial Class Form_main
         Me.CheckedInput_arcaneGuardian.Name = "CheckedInput_arcaneGuardian"
         Me.CheckedInput_arcaneGuardian.Size = New System.Drawing.Size(175, 20)
         Me.CheckedInput_arcaneGuardian.TabIndex = 2
+        Me.CheckedInput_arcaneGuardian.Tag = "limitGroup_warframe_2"
         Me.CheckedInput_arcaneGuardian.Text = "Arcane Guardian"
         '
         'CheckedGroupBox_abilities
         '
         Me.CheckedGroupBox_abilities.AutoSize = True
-        Me.CheckedGroupBox_abilities.Location = New System.Drawing.Point(389, 347)
+        Me.CheckedGroupBox_abilities.Location = New System.Drawing.Point(389, 339)
         Me.CheckedGroupBox_abilities.MinimumSize = New System.Drawing.Size(187, 25)
         Me.CheckedGroupBox_abilities.Name = "CheckedGroupBox_abilities"
         Me.CheckedGroupBox_abilities.Size = New System.Drawing.Size(187, 35)
@@ -1169,40 +3098,13 @@ Partial Class Form_main
         'CheckedGroupBox_arcaneHelmets
         '
         Me.CheckedGroupBox_arcaneHelmets.AutoSize = True
-        Me.CheckedGroupBox_arcaneHelmets.Location = New System.Drawing.Point(389, 388)
+        Me.CheckedGroupBox_arcaneHelmets.Location = New System.Drawing.Point(389, 380)
         Me.CheckedGroupBox_arcaneHelmets.MinimumSize = New System.Drawing.Size(187, 25)
         Me.CheckedGroupBox_arcaneHelmets.Name = "CheckedGroupBox_arcaneHelmets"
         Me.CheckedGroupBox_arcaneHelmets.Size = New System.Drawing.Size(187, 35)
         Me.CheckedGroupBox_arcaneHelmets.TabIndex = 23
         Me.CheckedGroupBox_arcaneHelmets.TabStop = False
         Me.CheckedGroupBox_arcaneHelmets.Text = "Arcane Helmets"
-        '
-        'TableLayoutPanel_warframeTopLayout
-        '
-        Me.TableLayoutPanel_warframeTopLayout.ColumnCount = 3
-        Me.TableLayoutPanel_warframeTopLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 196.0!))
-        Me.TableLayoutPanel_warframeTopLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 127.0!))
-        Me.TableLayoutPanel_warframeTopLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
-        Me.TableLayoutPanel_warframeTopLayout.Controls.Add(Me.ComboBox_warframes, 0, 0)
-        Me.TableLayoutPanel_warframeTopLayout.Controls.Add(Me.VariantSelection_warframes, 1, 0)
-        Me.TableLayoutPanel_warframeTopLayout.Controls.Add(Me.MaxValueToggle_warframes, 2, 0)
-        Me.TableLayoutPanel_warframeTopLayout.Dock = System.Windows.Forms.DockStyle.Top
-        Me.TableLayoutPanel_warframeTopLayout.Location = New System.Drawing.Point(3, 3)
-        Me.TableLayoutPanel_warframeTopLayout.Name = "TableLayoutPanel_warframeTopLayout"
-        Me.TableLayoutPanel_warframeTopLayout.RowCount = 1
-        Me.TableLayoutPanel_warframeTopLayout.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel_warframeTopLayout.Size = New System.Drawing.Size(773, 27)
-        Me.TableLayoutPanel_warframeTopLayout.TabIndex = 128
-        '
-        'ComboBox_warframes
-        '
-        Me.ComboBox_warframes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox_warframes.FormattingEnabled = True
-        Me.ComboBox_warframes.Items.AddRange(New Object() {"Select a Warframe"})
-        Me.ComboBox_warframes.Location = New System.Drawing.Point(3, 3)
-        Me.ComboBox_warframes.Name = "ComboBox_warframes"
-        Me.ComboBox_warframes.Size = New System.Drawing.Size(187, 21)
-        Me.ComboBox_warframes.TabIndex = 0
         '
         'VariantSelection_warframes
         '
@@ -1226,50 +3128,6 @@ Partial Class Form_main
         Me.MaxValueToggle_warframes.Size = New System.Drawing.Size(130, 17)
         Me.MaxValueToggle_warframes.TabIndex = 125
         Me.MaxValueToggle_warframes.Text = "Default to Max Values"
-        '
-        'TabPage_companion
-        '
-        Me.TabPage_companion.BackColor = System.Drawing.Color.White
-        Me.TabPage_companion.Controls.Add(Me.TableLayoutPanel_compainionMainLayout)
-        Me.TabPage_companion.Controls.Add(Me.TableLayoutPanel_companionTopLayout)
-        Me.TabPage_companion.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.TabPage_companion.ImageIndex = 1
-        Me.TabPage_companion.Location = New System.Drawing.Point(4, 29)
-        Me.TabPage_companion.Name = "TabPage_companion"
-        Me.TabPage_companion.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_companion.Size = New System.Drawing.Size(779, 574)
-        Me.TabPage_companion.TabIndex = 1
-        Me.TabPage_companion.Text = "Companions  "
-        '
-        'TableLayoutPanel_compainionMainLayout
-        '
-        Me.TableLayoutPanel_compainionMainLayout.ColumnCount = 2
-        Me.TableLayoutPanel_compainionMainLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel_compainionMainLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 196.0!))
-        Me.TableLayoutPanel_compainionMainLayout.Controls.Add(Me.FlowLayoutPanel_compainionModsLayout, 0, 0)
-        Me.TableLayoutPanel_compainionMainLayout.Controls.Add(Me.GroupBox_companionStats, 1, 0)
-        Me.TableLayoutPanel_compainionMainLayout.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel_compainionMainLayout.Location = New System.Drawing.Point(3, 30)
-        Me.TableLayoutPanel_compainionMainLayout.Name = "TableLayoutPanel_compainionMainLayout"
-        Me.TableLayoutPanel_compainionMainLayout.RowCount = 1
-        Me.TableLayoutPanel_compainionMainLayout.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel_compainionMainLayout.Size = New System.Drawing.Size(773, 541)
-        Me.TableLayoutPanel_compainionMainLayout.TabIndex = 132
-        '
-        'FlowLayoutPanel_compainionModsLayout
-        '
-        Me.FlowLayoutPanel_compainionModsLayout.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.FlowLayoutPanel_compainionModsLayout.AutoSize = True
-        Me.FlowLayoutPanel_compainionModsLayout.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.FlowLayoutPanel_compainionModsLayout.Controls.Add(Me.CheckedGroupBox_companionSurvivability)
-        Me.FlowLayoutPanel_compainionModsLayout.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
-        Me.FlowLayoutPanel_compainionModsLayout.Location = New System.Drawing.Point(0, 0)
-        Me.FlowLayoutPanel_compainionModsLayout.Margin = New System.Windows.Forms.Padding(0)
-        Me.FlowLayoutPanel_compainionModsLayout.Name = "FlowLayoutPanel_compainionModsLayout"
-        Me.FlowLayoutPanel_compainionModsLayout.Size = New System.Drawing.Size(577, 541)
-        Me.FlowLayoutPanel_compainionModsLayout.TabIndex = 130
         '
         'CheckedGroupBox_companionSurvivability
         '
@@ -1354,34 +3212,6 @@ Partial Class Form_main
         Me.CheckedInput_companionLinkArmor.Tag = "metalFiber"
         Me.CheckedInput_companionLinkArmor.Text = "Link Armor"
         '
-        'GroupBox_companionStats
-        '
-        Me.GroupBox_companionStats.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.GroupBox_companionStats.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.GroupBox_companionStats.Controls.Add(Me.FlowLayoutPanel_companionStatsLayout)
-        Me.GroupBox_companionStats.Controls.Add(Me.StatBox_companionEHP)
-        Me.GroupBox_companionStats.Location = New System.Drawing.Point(582, 3)
-        Me.GroupBox_companionStats.Name = "GroupBox_companionStats"
-        Me.GroupBox_companionStats.Size = New System.Drawing.Size(188, 535)
-        Me.GroupBox_companionStats.TabIndex = 131
-        Me.GroupBox_companionStats.TabStop = False
-        Me.GroupBox_companionStats.Text = "Stats "
-        '
-        'FlowLayoutPanel_companionStatsLayout
-        '
-        Me.FlowLayoutPanel_companionStatsLayout.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.FlowLayoutPanel_companionStatsLayout.Controls.Add(Me.StatBox_companionArmor)
-        Me.FlowLayoutPanel_companionStatsLayout.Controls.Add(Me.StatBox_companionHealth)
-        Me.FlowLayoutPanel_companionStatsLayout.Controls.Add(Me.StatBox_companionShield)
-        Me.FlowLayoutPanel_companionStatsLayout.Controls.Add(Me.StatBox_companionDamageReduction)
-        Me.FlowLayoutPanel_companionStatsLayout.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
-        Me.FlowLayoutPanel_companionStatsLayout.Location = New System.Drawing.Point(4, 14)
-        Me.FlowLayoutPanel_companionStatsLayout.Name = "FlowLayoutPanel_companionStatsLayout"
-        Me.FlowLayoutPanel_companionStatsLayout.Size = New System.Drawing.Size(181, 490)
-        Me.FlowLayoutPanel_companionStatsLayout.TabIndex = 129
-        '
         'StatBox_companionArmor
         '
         Me.StatBox_companionArmor.Location = New System.Drawing.Point(3, 3)
@@ -1434,7 +3264,7 @@ Partial Class Form_main
         'StatBox_companionEHP
         '
         Me.StatBox_companionEHP.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.StatBox_companionEHP.Location = New System.Drawing.Point(7, 509)
+        Me.StatBox_companionEHP.Location = New System.Drawing.Point(7, 653)
         Me.StatBox_companionEHP.MaximumSize = New System.Drawing.Size(175, 20)
         Me.StatBox_companionEHP.MinimumSize = New System.Drawing.Size(175, 20)
         Me.StatBox_companionEHP.Name = "StatBox_companionEHP"
@@ -1443,38 +3273,6 @@ Partial Class Form_main
         Me.StatBox_companionEHP.TabIndex = 17
         Me.StatBox_companionEHP.Text = "Effective Health"
         Me.StatBox_companionEHP.Value = "0"
-        '
-        'TableLayoutPanel_companionTopLayout
-        '
-        Me.TableLayoutPanel_companionTopLayout.ColumnCount = 5
-        Me.TableLayoutPanel_companionTopLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 196.0!))
-        Me.TableLayoutPanel_companionTopLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 127.0!))
-        Me.TableLayoutPanel_companionTopLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 90.0!))
-        Me.TableLayoutPanel_companionTopLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 180.0!))
-        Me.TableLayoutPanel_companionTopLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
-        Me.TableLayoutPanel_companionTopLayout.Controls.Add(Me.ComboBox_companions, 0, 0)
-        Me.TableLayoutPanel_companionTopLayout.Controls.Add(Me.CompanionVariantSelection1, 1, 0)
-        Me.TableLayoutPanel_companionTopLayout.Controls.Add(Me.CheckBox_companionPrimeCollar, 2, 0)
-        Me.TableLayoutPanel_companionTopLayout.Controls.Add(Me.MaxValueToggle_compainions, 4, 0)
-        Me.TableLayoutPanel_companionTopLayout.Controls.Add(Me.NumericInput_companionStability, 3, 0)
-        Me.TableLayoutPanel_companionTopLayout.Dock = System.Windows.Forms.DockStyle.Top
-        Me.TableLayoutPanel_companionTopLayout.Location = New System.Drawing.Point(3, 3)
-        Me.TableLayoutPanel_companionTopLayout.Name = "TableLayoutPanel_companionTopLayout"
-        Me.TableLayoutPanel_companionTopLayout.RowCount = 1
-        Me.TableLayoutPanel_companionTopLayout.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel_companionTopLayout.Size = New System.Drawing.Size(773, 27)
-        Me.TableLayoutPanel_companionTopLayout.TabIndex = 129
-        '
-        'ComboBox_companions
-        '
-        Me.ComboBox_companions.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox_companions.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox_companions.FormattingEnabled = True
-        Me.ComboBox_companions.Items.AddRange(New Object() {"Select a Companion"})
-        Me.ComboBox_companions.Location = New System.Drawing.Point(3, 3)
-        Me.ComboBox_companions.Name = "ComboBox_companions"
-        Me.ComboBox_companions.Size = New System.Drawing.Size(187, 21)
-        Me.ComboBox_companions.TabIndex = 4
         '
         'CompanionVariantSelection1
         '
@@ -1486,20 +3284,6 @@ Partial Class Form_main
         Me.CompanionVariantSelection1.SelectedVariant = "base"
         Me.CompanionVariantSelection1.Size = New System.Drawing.Size(121, 21)
         Me.CompanionVariantSelection1.TabIndex = 133
-        '
-        'CheckBox_companionPrimeCollar
-        '
-        Me.CheckBox_companionPrimeCollar.AutoSize = True
-        Me.CheckBox_companionPrimeCollar.Enabled = False
-        Me.CheckBox_companionPrimeCollar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox_companionPrimeCollar.Location = New System.Drawing.Point(326, 6)
-        Me.CheckBox_companionPrimeCollar.Margin = New System.Windows.Forms.Padding(3, 6, 3, 3)
-        Me.CheckBox_companionPrimeCollar.Name = "CheckBox_companionPrimeCollar"
-        Me.CheckBox_companionPrimeCollar.Padding = New System.Windows.Forms.Padding(3, 0, 0, 0)
-        Me.CheckBox_companionPrimeCollar.Size = New System.Drawing.Size(84, 17)
-        Me.CheckBox_companionPrimeCollar.TabIndex = 5
-        Me.CheckBox_companionPrimeCollar.Text = "Prime Collar"
-        Me.CheckBox_companionPrimeCollar.UseVisualStyleBackColor = True
         '
         'MaxValueToggle_compainions
         '
@@ -1528,64 +3312,6 @@ Partial Class Form_main
         Me.NumericInput_companionStability.TabIndex = 131
         Me.NumericInput_companionStability.Text = "Genetic Stability"
         Me.NumericInput_companionStability.Value = New Decimal(New Integer() {0, 0, 0, 0})
-        '
-        'TabPage_archwing
-        '
-        Me.TabPage_archwing.BackColor = System.Drawing.Color.White
-        Me.TabPage_archwing.Controls.Add(Me.TableLayoutPanel_archwingMainLayout)
-        Me.TabPage_archwing.Controls.Add(Me.TableLayoutPanel_archwingTopLayout)
-        Me.TabPage_archwing.ImageIndex = 3
-        Me.TabPage_archwing.Location = New System.Drawing.Point(4, 29)
-        Me.TabPage_archwing.Name = "TabPage_archwing"
-        Me.TabPage_archwing.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_archwing.Size = New System.Drawing.Size(779, 574)
-        Me.TabPage_archwing.TabIndex = 3
-        Me.TabPage_archwing.Text = "Archwing  "
-        '
-        'TableLayoutPanel_archwingMainLayout
-        '
-        Me.TableLayoutPanel_archwingMainLayout.ColumnCount = 2
-        Me.TableLayoutPanel_archwingMainLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel_archwingMainLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 196.0!))
-        Me.TableLayoutPanel_archwingMainLayout.Controls.Add(Me.GroupBox_archwingStats, 1, 0)
-        Me.TableLayoutPanel_archwingMainLayout.Controls.Add(Me.FlowLayoutPanel_archwingModsLayout, 0, 0)
-        Me.TableLayoutPanel_archwingMainLayout.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel_archwingMainLayout.Location = New System.Drawing.Point(3, 30)
-        Me.TableLayoutPanel_archwingMainLayout.Name = "TableLayoutPanel_archwingMainLayout"
-        Me.TableLayoutPanel_archwingMainLayout.RowCount = 1
-        Me.TableLayoutPanel_archwingMainLayout.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel_archwingMainLayout.Size = New System.Drawing.Size(773, 541)
-        Me.TableLayoutPanel_archwingMainLayout.TabIndex = 132
-        '
-        'GroupBox_archwingStats
-        '
-        Me.GroupBox_archwingStats.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.GroupBox_archwingStats.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.GroupBox_archwingStats.Controls.Add(Me.FlowLayoutPanel_archwingStatsLayout)
-        Me.GroupBox_archwingStats.Controls.Add(Me.StatBox_archwingEHP)
-        Me.GroupBox_archwingStats.Location = New System.Drawing.Point(582, 3)
-        Me.GroupBox_archwingStats.Name = "GroupBox_archwingStats"
-        Me.GroupBox_archwingStats.Size = New System.Drawing.Size(188, 535)
-        Me.GroupBox_archwingStats.TabIndex = 131
-        Me.GroupBox_archwingStats.TabStop = False
-        Me.GroupBox_archwingStats.Text = "Stats "
-        '
-        'FlowLayoutPanel_archwingStatsLayout
-        '
-        Me.FlowLayoutPanel_archwingStatsLayout.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.FlowLayoutPanel_archwingStatsLayout.Controls.Add(Me.StatBox_archwingArmor)
-        Me.FlowLayoutPanel_archwingStatsLayout.Controls.Add(Me.StatBox_archwingHealth)
-        Me.FlowLayoutPanel_archwingStatsLayout.Controls.Add(Me.StatBox_archwingShield)
-        Me.FlowLayoutPanel_archwingStatsLayout.Controls.Add(Me.StatBox_archwingEnergy)
-        Me.FlowLayoutPanel_archwingStatsLayout.Controls.Add(Me.StatBox_archwingPowerStrength)
-        Me.FlowLayoutPanel_archwingStatsLayout.Controls.Add(Me.StatBox_archwingDamageReduction)
-        Me.FlowLayoutPanel_archwingStatsLayout.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
-        Me.FlowLayoutPanel_archwingStatsLayout.Location = New System.Drawing.Point(4, 14)
-        Me.FlowLayoutPanel_archwingStatsLayout.Name = "FlowLayoutPanel_archwingStatsLayout"
-        Me.FlowLayoutPanel_archwingStatsLayout.Size = New System.Drawing.Size(181, 489)
-        Me.FlowLayoutPanel_archwingStatsLayout.TabIndex = 129
         '
         'StatBox_archwingArmor
         '
@@ -1663,7 +3389,7 @@ Partial Class Form_main
         'StatBox_archwingEHP
         '
         Me.StatBox_archwingEHP.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.StatBox_archwingEHP.Location = New System.Drawing.Point(7, 509)
+        Me.StatBox_archwingEHP.Location = New System.Drawing.Point(7, 653)
         Me.StatBox_archwingEHP.MaximumSize = New System.Drawing.Size(175, 20)
         Me.StatBox_archwingEHP.MinimumSize = New System.Drawing.Size(175, 20)
         Me.StatBox_archwingEHP.Name = "StatBox_archwingEHP"
@@ -1672,23 +3398,6 @@ Partial Class Form_main
         Me.StatBox_archwingEHP.TabIndex = 17
         Me.StatBox_archwingEHP.Text = "Effective Health"
         Me.StatBox_archwingEHP.Value = "0"
-        '
-        'FlowLayoutPanel_archwingModsLayout
-        '
-        Me.FlowLayoutPanel_archwingModsLayout.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.FlowLayoutPanel_archwingModsLayout.AutoSize = True
-        Me.FlowLayoutPanel_archwingModsLayout.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.FlowLayoutPanel_archwingModsLayout.Controls.Add(Me.CheckedGroupBox_archwingAura)
-        Me.FlowLayoutPanel_archwingModsLayout.Controls.Add(Me.CheckedGroupBox_archwingSurvivability)
-        Me.FlowLayoutPanel_archwingModsLayout.Controls.Add(Me.CheckedGroupBox_archwingMiscellaneous)
-        Me.FlowLayoutPanel_archwingModsLayout.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
-        Me.FlowLayoutPanel_archwingModsLayout.Location = New System.Drawing.Point(0, 0)
-        Me.FlowLayoutPanel_archwingModsLayout.Margin = New System.Windows.Forms.Padding(0)
-        Me.FlowLayoutPanel_archwingModsLayout.Name = "FlowLayoutPanel_archwingModsLayout"
-        Me.FlowLayoutPanel_archwingModsLayout.Size = New System.Drawing.Size(577, 541)
-        Me.FlowLayoutPanel_archwingModsLayout.TabIndex = 131
         '
         'CheckedGroupBox_archwingAura
         '
@@ -1736,1690 +3445,6 @@ Partial Class Form_main
         Me.CheckedGroupBox_archwingSurvivability.TabStop = False
         Me.CheckedGroupBox_archwingSurvivability.Text = "Survivability"
         '
-        'CheckedGroupBox_archwingMiscellaneous
-        '
-        Me.CheckedGroupBox_archwingMiscellaneous.AutoSize = True
-        Me.CheckedGroupBox_archwingMiscellaneous.Controls.Add(Me.CheckedInput_archwingCoactionDrift)
-        Me.CheckedGroupBox_archwingMiscellaneous.Location = New System.Drawing.Point(3, 207)
-        Me.CheckedGroupBox_archwingMiscellaneous.Name = "CheckedGroupBox_archwingMiscellaneous"
-        Me.CheckedGroupBox_archwingMiscellaneous.Size = New System.Drawing.Size(187, 58)
-        Me.CheckedGroupBox_archwingMiscellaneous.TabIndex = 1
-        Me.CheckedGroupBox_archwingMiscellaneous.TabStop = False
-        Me.CheckedGroupBox_archwingMiscellaneous.Text = "Miscellaneous"
-        '
-        'CheckedInput_archwingCoactionDrift
-        '
-        Me.CheckedInput_archwingCoactionDrift.Location = New System.Drawing.Point(6, 19)
-        Me.CheckedInput_archwingCoactionDrift.Maximum = 5
-        Me.CheckedInput_archwingCoactionDrift.MaximumSize = New System.Drawing.Size(175, 20)
-        Me.CheckedInput_archwingCoactionDrift.MinimumSize = New System.Drawing.Size(175, 20)
-        Me.CheckedInput_archwingCoactionDrift.Name = "CheckedInput_archwingCoactionDrift"
-        Me.CheckedInput_archwingCoactionDrift.Size = New System.Drawing.Size(175, 20)
-        Me.CheckedInput_archwingCoactionDrift.TabIndex = 3
-        Me.CheckedInput_archwingCoactionDrift.Text = "Coaction Drift"
-        '
-        'TableLayoutPanel_archwingTopLayout
-        '
-        Me.TableLayoutPanel_archwingTopLayout.ColumnCount = 3
-        Me.TableLayoutPanel_archwingTopLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 196.0!))
-        Me.TableLayoutPanel_archwingTopLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 127.0!))
-        Me.TableLayoutPanel_archwingTopLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
-        Me.TableLayoutPanel_archwingTopLayout.Controls.Add(Me.ComboBox_archwings, 0, 0)
-        Me.TableLayoutPanel_archwingTopLayout.Controls.Add(Me.MaxValueToggle_archwings, 2, 0)
-        Me.TableLayoutPanel_archwingTopLayout.Controls.Add(Me.CheckBox_archwingPrime, 1, 0)
-        Me.TableLayoutPanel_archwingTopLayout.Dock = System.Windows.Forms.DockStyle.Top
-        Me.TableLayoutPanel_archwingTopLayout.Location = New System.Drawing.Point(3, 3)
-        Me.TableLayoutPanel_archwingTopLayout.Name = "TableLayoutPanel_archwingTopLayout"
-        Me.TableLayoutPanel_archwingTopLayout.RowCount = 1
-        Me.TableLayoutPanel_archwingTopLayout.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel_archwingTopLayout.Size = New System.Drawing.Size(773, 27)
-        Me.TableLayoutPanel_archwingTopLayout.TabIndex = 129
-        '
-        'ComboBox_archwings
-        '
-        Me.ComboBox_archwings.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox_archwings.FormattingEnabled = True
-        Me.ComboBox_archwings.Items.AddRange(New Object() {"Select an Archwing"})
-        Me.ComboBox_archwings.Location = New System.Drawing.Point(3, 3)
-        Me.ComboBox_archwings.Name = "ComboBox_archwings"
-        Me.ComboBox_archwings.Size = New System.Drawing.Size(187, 21)
-        Me.ComboBox_archwings.TabIndex = 0
-        '
-        'MaxValueToggle_archwings
-        '
-        Me.MaxValueToggle_archwings.Dock = System.Windows.Forms.DockStyle.Right
-        Me.MaxValueToggle_archwings.Location = New System.Drawing.Point(640, 5)
-        Me.MaxValueToggle_archwings.Margin = New System.Windows.Forms.Padding(3, 5, 3, 3)
-        Me.MaxValueToggle_archwings.MaximumSize = New System.Drawing.Size(130, 17)
-        Me.MaxValueToggle_archwings.MinimumSize = New System.Drawing.Size(130, 17)
-        Me.MaxValueToggle_archwings.Name = "MaxValueToggle_archwings"
-        Me.MaxValueToggle_archwings.Size = New System.Drawing.Size(130, 17)
-        Me.MaxValueToggle_archwings.TabIndex = 125
-        Me.MaxValueToggle_archwings.Text = "Default to Max Values"
-        '
-        'CheckBox_archwingPrime
-        '
-        Me.CheckBox_archwingPrime.Enabled = False
-        Me.CheckBox_archwingPrime.Location = New System.Drawing.Point(202, 5)
-        Me.CheckBox_archwingPrime.Margin = New System.Windows.Forms.Padding(6, 5, 3, 3)
-        Me.CheckBox_archwingPrime.Name = "CheckBox_archwingPrime"
-        Me.CheckBox_archwingPrime.Size = New System.Drawing.Size(118, 19)
-        Me.CheckBox_archwingPrime.TabIndex = 3
-        Me.CheckBox_archwingPrime.Text = "Prime"
-        Me.CheckBox_archwingPrime.UseVisualStyleBackColor = True
-        '
-        'TabPage_development
-        '
-        Me.TabPage_development.Controls.Add(Me.TabControl_arcaneHelmets)
-        Me.TabPage_development.Controls.Add(Me.TabControl_abilities)
-        Me.TabPage_development.Controls.Add(Me.FlowLayoutPanel_abilitiesPanelTemplate)
-        Me.TabPage_development.Controls.Add(Me.RichTextBox1)
-        Me.TabPage_development.Controls.Add(Me.Label_companions)
-        Me.TabPage_development.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.TabPage_development.ImageIndex = 4
-        Me.TabPage_development.Location = New System.Drawing.Point(4, 29)
-        Me.TabPage_development.Name = "TabPage_development"
-        Me.TabPage_development.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_development.Size = New System.Drawing.Size(779, 574)
-        Me.TabPage_development.TabIndex = 2
-        Me.TabPage_development.Text = "Development  "
-        Me.TabPage_development.UseVisualStyleBackColor = True
-        '
-        'TabControl_arcaneHelmets
-        '
-        Me.TabControl_arcaneHelmets.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsDefault)
-        Me.TabControl_arcaneHelmets.Controls.Add(Me.TabPage_ashArcaneHelmets)
-        Me.TabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsBanshee)
-        Me.TabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsEmber)
-        Me.TabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsExcalibur)
-        Me.TabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsFrost)
-        Me.TabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsLoki)
-        Me.TabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsMag)
-        Me.TabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsNova)
-        Me.TabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsNyx)
-        Me.TabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsRhino)
-        Me.TabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsSaryn)
-        Me.TabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsTrinity)
-        Me.TabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsVauban)
-        Me.TabControl_arcaneHelmets.Controls.Add(Me.TabPage_arcaneHelmetsVolt)
-        Me.TabControl_arcaneHelmets.Enabled = False
-        Me.TabControl_arcaneHelmets.Location = New System.Drawing.Point(8, 248)
-        Me.TabControl_arcaneHelmets.Name = "TabControl_arcaneHelmets"
-        Me.TabControl_arcaneHelmets.SelectedIndex = 0
-        Me.TabControl_arcaneHelmets.Size = New System.Drawing.Size(768, 155)
-        Me.TabControl_arcaneHelmets.TabIndex = 118
-        '
-        'TabPage_arcaneHelmetsDefault
-        '
-        Me.TabPage_arcaneHelmetsDefault.BackColor = System.Drawing.Color.White
-        Me.TabPage_arcaneHelmetsDefault.Controls.Add(Me.FlowLayoutPanel_defaultArcaneHelmets)
-        Me.TabPage_arcaneHelmetsDefault.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage_arcaneHelmetsDefault.Name = "TabPage_arcaneHelmetsDefault"
-        Me.TabPage_arcaneHelmetsDefault.Size = New System.Drawing.Size(760, 129)
-        Me.TabPage_arcaneHelmetsDefault.TabIndex = 2
-        Me.TabPage_arcaneHelmetsDefault.Text = "Default"
-        '
-        'FlowLayoutPanel_defaultArcaneHelmets
-        '
-        Me.FlowLayoutPanel_defaultArcaneHelmets.AutoSize = True
-        Me.FlowLayoutPanel_defaultArcaneHelmets.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.FlowLayoutPanel_defaultArcaneHelmets.Controls.Add(Me.Label_arcaneHelmetPlaceholder)
-        Me.FlowLayoutPanel_defaultArcaneHelmets.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
-        Me.FlowLayoutPanel_defaultArcaneHelmets.Location = New System.Drawing.Point(6, 5)
-        Me.FlowLayoutPanel_defaultArcaneHelmets.Margin = New System.Windows.Forms.Padding(0)
-        Me.FlowLayoutPanel_defaultArcaneHelmets.MinimumSize = New System.Drawing.Size(181, 26)
-        Me.FlowLayoutPanel_defaultArcaneHelmets.Name = "FlowLayoutPanel_defaultArcaneHelmets"
-        Me.FlowLayoutPanel_defaultArcaneHelmets.Size = New System.Drawing.Size(181, 32)
-        Me.FlowLayoutPanel_defaultArcaneHelmets.TabIndex = 101
-        '
-        'Label_arcaneHelmetPlaceholder
-        '
-        Me.Label_arcaneHelmetPlaceholder.AutoSize = True
-        Me.Label_arcaneHelmetPlaceholder.BackColor = System.Drawing.Color.Transparent
-        Me.Label_arcaneHelmetPlaceholder.Location = New System.Drawing.Point(1, 3)
-        Me.Label_arcaneHelmetPlaceholder.Margin = New System.Windows.Forms.Padding(1, 3, 1, 3)
-        Me.Label_arcaneHelmetPlaceholder.MinimumSize = New System.Drawing.Size(179, 0)
-        Me.Label_arcaneHelmetPlaceholder.Name = "Label_arcaneHelmetPlaceholder"
-        Me.Label_arcaneHelmetPlaceholder.Size = New System.Drawing.Size(179, 26)
-        Me.Label_arcaneHelmetPlaceholder.TabIndex = 0
-        Me.Label_arcaneHelmetPlaceholder.Text = "This Warframe has no " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Arcane Helmets"
-        Me.Label_arcaneHelmetPlaceholder.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'TabPage_ashArcaneHelmets
-        '
-        Me.TabPage_ashArcaneHelmets.BackColor = System.Drawing.Color.White
-        Me.TabPage_ashArcaneHelmets.Controls.Add(Me.FlowLayoutPanel_ashAbilities)
-        Me.TabPage_ashArcaneHelmets.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage_ashArcaneHelmets.Name = "TabPage_ashArcaneHelmets"
-        Me.TabPage_ashArcaneHelmets.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_ashArcaneHelmets.Size = New System.Drawing.Size(760, 129)
-        Me.TabPage_ashArcaneHelmets.TabIndex = 0
-        Me.TabPage_ashArcaneHelmets.Text = "Ash"
-        '
-        'FlowLayoutPanel_ashAbilities
-        '
-        Me.FlowLayoutPanel_ashAbilities.AutoSize = True
-        Me.FlowLayoutPanel_ashAbilities.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.FlowLayoutPanel_ashAbilities.Controls.Add(Me.RadioButton_locustHelmet)
-        Me.FlowLayoutPanel_ashAbilities.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
-        Me.FlowLayoutPanel_ashAbilities.Location = New System.Drawing.Point(5, 7)
-        Me.FlowLayoutPanel_ashAbilities.Margin = New System.Windows.Forms.Padding(0)
-        Me.FlowLayoutPanel_ashAbilities.MinimumSize = New System.Drawing.Size(181, 26)
-        Me.FlowLayoutPanel_ashAbilities.Name = "FlowLayoutPanel_ashAbilities"
-        Me.FlowLayoutPanel_ashAbilities.Size = New System.Drawing.Size(181, 27)
-        Me.FlowLayoutPanel_ashAbilities.TabIndex = 100
-        '
-        'RadioButton_locustHelmet
-        '
-        Me.RadioButton_locustHelmet.Checked = True
-        Me.RadioButton_locustHelmet.Location = New System.Drawing.Point(3, 3)
-        Me.RadioButton_locustHelmet.Name = "RadioButton_locustHelmet"
-        Me.RadioButton_locustHelmet.Size = New System.Drawing.Size(175, 21)
-        Me.RadioButton_locustHelmet.TabIndex = 0
-        Me.RadioButton_locustHelmet.TabStop = True
-        Me.RadioButton_locustHelmet.Text = "Locust Helmet"
-        Me.RadioButton_locustHelmet.UseVisualStyleBackColor = True
-        '
-        'TabPage_arcaneHelmetsBanshee
-        '
-        Me.TabPage_arcaneHelmetsBanshee.BackColor = System.Drawing.Color.White
-        Me.TabPage_arcaneHelmetsBanshee.Controls.Add(Me.FlowLayoutPanel_bansheeArcaneHelmets)
-        Me.TabPage_arcaneHelmetsBanshee.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage_arcaneHelmetsBanshee.Name = "TabPage_arcaneHelmetsBanshee"
-        Me.TabPage_arcaneHelmetsBanshee.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_arcaneHelmetsBanshee.Size = New System.Drawing.Size(760, 129)
-        Me.TabPage_arcaneHelmetsBanshee.TabIndex = 1
-        Me.TabPage_arcaneHelmetsBanshee.Text = "Banshee"
-        '
-        'FlowLayoutPanel_bansheeArcaneHelmets
-        '
-        Me.FlowLayoutPanel_bansheeArcaneHelmets.AutoSize = True
-        Me.FlowLayoutPanel_bansheeArcaneHelmets.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.FlowLayoutPanel_bansheeArcaneHelmets.Controls.Add(Me.RadioButton_reverbHelmet)
-        Me.FlowLayoutPanel_bansheeArcaneHelmets.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
-        Me.FlowLayoutPanel_bansheeArcaneHelmets.Location = New System.Drawing.Point(10, 13)
-        Me.FlowLayoutPanel_bansheeArcaneHelmets.Margin = New System.Windows.Forms.Padding(0)
-        Me.FlowLayoutPanel_bansheeArcaneHelmets.MinimumSize = New System.Drawing.Size(181, 26)
-        Me.FlowLayoutPanel_bansheeArcaneHelmets.Name = "FlowLayoutPanel_bansheeArcaneHelmets"
-        Me.FlowLayoutPanel_bansheeArcaneHelmets.Size = New System.Drawing.Size(181, 27)
-        Me.FlowLayoutPanel_bansheeArcaneHelmets.TabIndex = 100
-        '
-        'RadioButton_reverbHelmet
-        '
-        Me.RadioButton_reverbHelmet.Checked = True
-        Me.RadioButton_reverbHelmet.Location = New System.Drawing.Point(3, 3)
-        Me.RadioButton_reverbHelmet.Name = "RadioButton_reverbHelmet"
-        Me.RadioButton_reverbHelmet.Size = New System.Drawing.Size(175, 21)
-        Me.RadioButton_reverbHelmet.TabIndex = 1
-        Me.RadioButton_reverbHelmet.TabStop = True
-        Me.RadioButton_reverbHelmet.Text = "Reverb Helmet"
-        Me.RadioButton_reverbHelmet.UseVisualStyleBackColor = True
-        '
-        'TabPage_arcaneHelmetsEmber
-        '
-        Me.TabPage_arcaneHelmetsEmber.BackColor = System.Drawing.Color.White
-        Me.TabPage_arcaneHelmetsEmber.Controls.Add(Me.FlowLayoutPanel_emberArcaneHelmets)
-        Me.TabPage_arcaneHelmetsEmber.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage_arcaneHelmetsEmber.Name = "TabPage_arcaneHelmetsEmber"
-        Me.TabPage_arcaneHelmetsEmber.Size = New System.Drawing.Size(760, 129)
-        Me.TabPage_arcaneHelmetsEmber.TabIndex = 3
-        Me.TabPage_arcaneHelmetsEmber.Text = "Ember"
-        '
-        'FlowLayoutPanel_emberArcaneHelmets
-        '
-        Me.FlowLayoutPanel_emberArcaneHelmets.AutoSize = True
-        Me.FlowLayoutPanel_emberArcaneHelmets.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.FlowLayoutPanel_emberArcaneHelmets.Controls.Add(Me.RadioButton_phoenixHelmet)
-        Me.FlowLayoutPanel_emberArcaneHelmets.Controls.Add(Me.RadioButton_backdraftHelmet)
-        Me.FlowLayoutPanel_emberArcaneHelmets.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
-        Me.FlowLayoutPanel_emberArcaneHelmets.Location = New System.Drawing.Point(6, 10)
-        Me.FlowLayoutPanel_emberArcaneHelmets.Margin = New System.Windows.Forms.Padding(0)
-        Me.FlowLayoutPanel_emberArcaneHelmets.MinimumSize = New System.Drawing.Size(181, 26)
-        Me.FlowLayoutPanel_emberArcaneHelmets.Name = "FlowLayoutPanel_emberArcaneHelmets"
-        Me.FlowLayoutPanel_emberArcaneHelmets.Size = New System.Drawing.Size(181, 54)
-        Me.FlowLayoutPanel_emberArcaneHelmets.TabIndex = 100
-        '
-        'RadioButton_phoenixHelmet
-        '
-        Me.RadioButton_phoenixHelmet.Checked = True
-        Me.RadioButton_phoenixHelmet.Location = New System.Drawing.Point(3, 3)
-        Me.RadioButton_phoenixHelmet.Name = "RadioButton_phoenixHelmet"
-        Me.RadioButton_phoenixHelmet.Size = New System.Drawing.Size(175, 21)
-        Me.RadioButton_phoenixHelmet.TabIndex = 2
-        Me.RadioButton_phoenixHelmet.TabStop = True
-        Me.RadioButton_phoenixHelmet.Tag = ""
-        Me.RadioButton_phoenixHelmet.Text = "Phoenix Helmet"
-        Me.RadioButton_phoenixHelmet.UseVisualStyleBackColor = True
-        '
-        'RadioButton_backdraftHelmet
-        '
-        Me.RadioButton_backdraftHelmet.Location = New System.Drawing.Point(3, 30)
-        Me.RadioButton_backdraftHelmet.Name = "RadioButton_backdraftHelmet"
-        Me.RadioButton_backdraftHelmet.Size = New System.Drawing.Size(175, 21)
-        Me.RadioButton_backdraftHelmet.TabIndex = 3
-        Me.RadioButton_backdraftHelmet.Tag = ""
-        Me.RadioButton_backdraftHelmet.Text = "Backdraft Helmet"
-        Me.RadioButton_backdraftHelmet.UseVisualStyleBackColor = True
-        '
-        'TabPage_arcaneHelmetsExcalibur
-        '
-        Me.TabPage_arcaneHelmetsExcalibur.BackColor = System.Drawing.Color.White
-        Me.TabPage_arcaneHelmetsExcalibur.Controls.Add(Me.FlowLayoutPanel_excaliburArcaneHelmets)
-        Me.TabPage_arcaneHelmetsExcalibur.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage_arcaneHelmetsExcalibur.Name = "TabPage_arcaneHelmetsExcalibur"
-        Me.TabPage_arcaneHelmetsExcalibur.Size = New System.Drawing.Size(760, 129)
-        Me.TabPage_arcaneHelmetsExcalibur.TabIndex = 4
-        Me.TabPage_arcaneHelmetsExcalibur.Text = "Excalibur"
-        '
-        'FlowLayoutPanel_excaliburArcaneHelmets
-        '
-        Me.FlowLayoutPanel_excaliburArcaneHelmets.AutoSize = True
-        Me.FlowLayoutPanel_excaliburArcaneHelmets.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.FlowLayoutPanel_excaliburArcaneHelmets.Controls.Add(Me.RadioButton_avalonHelmet)
-        Me.FlowLayoutPanel_excaliburArcaneHelmets.Controls.Add(Me.RadioButton_pendragonHelmet)
-        Me.FlowLayoutPanel_excaliburArcaneHelmets.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
-        Me.FlowLayoutPanel_excaliburArcaneHelmets.Location = New System.Drawing.Point(10, 9)
-        Me.FlowLayoutPanel_excaliburArcaneHelmets.Margin = New System.Windows.Forms.Padding(0)
-        Me.FlowLayoutPanel_excaliburArcaneHelmets.MinimumSize = New System.Drawing.Size(181, 26)
-        Me.FlowLayoutPanel_excaliburArcaneHelmets.Name = "FlowLayoutPanel_excaliburArcaneHelmets"
-        Me.FlowLayoutPanel_excaliburArcaneHelmets.Size = New System.Drawing.Size(181, 54)
-        Me.FlowLayoutPanel_excaliburArcaneHelmets.TabIndex = 100
-        '
-        'RadioButton_avalonHelmet
-        '
-        Me.RadioButton_avalonHelmet.Checked = True
-        Me.RadioButton_avalonHelmet.Location = New System.Drawing.Point(3, 3)
-        Me.RadioButton_avalonHelmet.Name = "RadioButton_avalonHelmet"
-        Me.RadioButton_avalonHelmet.Size = New System.Drawing.Size(175, 21)
-        Me.RadioButton_avalonHelmet.TabIndex = 3
-        Me.RadioButton_avalonHelmet.TabStop = True
-        Me.RadioButton_avalonHelmet.Tag = ""
-        Me.RadioButton_avalonHelmet.Text = "Avalon Helmet"
-        Me.RadioButton_avalonHelmet.UseVisualStyleBackColor = True
-        '
-        'RadioButton_pendragonHelmet
-        '
-        Me.RadioButton_pendragonHelmet.Location = New System.Drawing.Point(3, 30)
-        Me.RadioButton_pendragonHelmet.Name = "RadioButton_pendragonHelmet"
-        Me.RadioButton_pendragonHelmet.Size = New System.Drawing.Size(175, 21)
-        Me.RadioButton_pendragonHelmet.TabIndex = 4
-        Me.RadioButton_pendragonHelmet.Tag = ""
-        Me.RadioButton_pendragonHelmet.Text = "Pendragon Helmet"
-        Me.RadioButton_pendragonHelmet.UseVisualStyleBackColor = True
-        '
-        'TabPage_arcaneHelmetsFrost
-        '
-        Me.TabPage_arcaneHelmetsFrost.BackColor = System.Drawing.Color.White
-        Me.TabPage_arcaneHelmetsFrost.Controls.Add(Me.FlowLayoutPanel_frostArcaneHelmets)
-        Me.TabPage_arcaneHelmetsFrost.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage_arcaneHelmetsFrost.Name = "TabPage_arcaneHelmetsFrost"
-        Me.TabPage_arcaneHelmetsFrost.Size = New System.Drawing.Size(760, 129)
-        Me.TabPage_arcaneHelmetsFrost.TabIndex = 5
-        Me.TabPage_arcaneHelmetsFrost.Text = "Frost"
-        '
-        'FlowLayoutPanel_frostArcaneHelmets
-        '
-        Me.FlowLayoutPanel_frostArcaneHelmets.AutoSize = True
-        Me.FlowLayoutPanel_frostArcaneHelmets.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.FlowLayoutPanel_frostArcaneHelmets.Controls.Add(Me.RadioButton_auroraHelmet)
-        Me.FlowLayoutPanel_frostArcaneHelmets.Controls.Add(Me.RadioButton_squallHelmet)
-        Me.FlowLayoutPanel_frostArcaneHelmets.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
-        Me.FlowLayoutPanel_frostArcaneHelmets.Location = New System.Drawing.Point(6, 9)
-        Me.FlowLayoutPanel_frostArcaneHelmets.Margin = New System.Windows.Forms.Padding(0)
-        Me.FlowLayoutPanel_frostArcaneHelmets.MinimumSize = New System.Drawing.Size(181, 26)
-        Me.FlowLayoutPanel_frostArcaneHelmets.Name = "FlowLayoutPanel_frostArcaneHelmets"
-        Me.FlowLayoutPanel_frostArcaneHelmets.Size = New System.Drawing.Size(181, 54)
-        Me.FlowLayoutPanel_frostArcaneHelmets.TabIndex = 100
-        '
-        'RadioButton_auroraHelmet
-        '
-        Me.RadioButton_auroraHelmet.Checked = True
-        Me.RadioButton_auroraHelmet.Location = New System.Drawing.Point(3, 3)
-        Me.RadioButton_auroraHelmet.Name = "RadioButton_auroraHelmet"
-        Me.RadioButton_auroraHelmet.Size = New System.Drawing.Size(175, 21)
-        Me.RadioButton_auroraHelmet.TabIndex = 4
-        Me.RadioButton_auroraHelmet.TabStop = True
-        Me.RadioButton_auroraHelmet.Tag = ""
-        Me.RadioButton_auroraHelmet.Text = "Aurora Helmet"
-        Me.RadioButton_auroraHelmet.UseVisualStyleBackColor = True
-        '
-        'RadioButton_squallHelmet
-        '
-        Me.RadioButton_squallHelmet.Location = New System.Drawing.Point(3, 30)
-        Me.RadioButton_squallHelmet.Name = "RadioButton_squallHelmet"
-        Me.RadioButton_squallHelmet.Size = New System.Drawing.Size(175, 21)
-        Me.RadioButton_squallHelmet.TabIndex = 5
-        Me.RadioButton_squallHelmet.Tag = ""
-        Me.RadioButton_squallHelmet.Text = "Squall Helmet"
-        Me.RadioButton_squallHelmet.UseVisualStyleBackColor = True
-        '
-        'TabPage_arcaneHelmetsLoki
-        '
-        Me.TabPage_arcaneHelmetsLoki.BackColor = System.Drawing.Color.White
-        Me.TabPage_arcaneHelmetsLoki.Controls.Add(Me.FlowLayoutPanel_lokiArcaneHelmets)
-        Me.TabPage_arcaneHelmetsLoki.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage_arcaneHelmetsLoki.Name = "TabPage_arcaneHelmetsLoki"
-        Me.TabPage_arcaneHelmetsLoki.Size = New System.Drawing.Size(760, 129)
-        Me.TabPage_arcaneHelmetsLoki.TabIndex = 6
-        Me.TabPage_arcaneHelmetsLoki.Text = "Loki"
-        '
-        'FlowLayoutPanel_lokiArcaneHelmets
-        '
-        Me.FlowLayoutPanel_lokiArcaneHelmets.AutoSize = True
-        Me.FlowLayoutPanel_lokiArcaneHelmets.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.FlowLayoutPanel_lokiArcaneHelmets.Controls.Add(Me.RadioButton_essenceHelmet)
-        Me.FlowLayoutPanel_lokiArcaneHelmets.Controls.Add(Me.RadioButton_swindleHelmet)
-        Me.FlowLayoutPanel_lokiArcaneHelmets.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
-        Me.FlowLayoutPanel_lokiArcaneHelmets.Location = New System.Drawing.Point(6, 9)
-        Me.FlowLayoutPanel_lokiArcaneHelmets.Margin = New System.Windows.Forms.Padding(0)
-        Me.FlowLayoutPanel_lokiArcaneHelmets.MinimumSize = New System.Drawing.Size(181, 26)
-        Me.FlowLayoutPanel_lokiArcaneHelmets.Name = "FlowLayoutPanel_lokiArcaneHelmets"
-        Me.FlowLayoutPanel_lokiArcaneHelmets.Size = New System.Drawing.Size(181, 54)
-        Me.FlowLayoutPanel_lokiArcaneHelmets.TabIndex = 100
-        '
-        'RadioButton_essenceHelmet
-        '
-        Me.RadioButton_essenceHelmet.Checked = True
-        Me.RadioButton_essenceHelmet.Location = New System.Drawing.Point(3, 3)
-        Me.RadioButton_essenceHelmet.Name = "RadioButton_essenceHelmet"
-        Me.RadioButton_essenceHelmet.Size = New System.Drawing.Size(175, 21)
-        Me.RadioButton_essenceHelmet.TabIndex = 4
-        Me.RadioButton_essenceHelmet.TabStop = True
-        Me.RadioButton_essenceHelmet.Tag = ""
-        Me.RadioButton_essenceHelmet.Text = "Essence Helmet"
-        Me.RadioButton_essenceHelmet.UseVisualStyleBackColor = True
-        '
-        'RadioButton_swindleHelmet
-        '
-        Me.RadioButton_swindleHelmet.Location = New System.Drawing.Point(3, 30)
-        Me.RadioButton_swindleHelmet.Name = "RadioButton_swindleHelmet"
-        Me.RadioButton_swindleHelmet.Size = New System.Drawing.Size(175, 21)
-        Me.RadioButton_swindleHelmet.TabIndex = 5
-        Me.RadioButton_swindleHelmet.Tag = ""
-        Me.RadioButton_swindleHelmet.Text = "Swindle Helmet"
-        Me.RadioButton_swindleHelmet.UseVisualStyleBackColor = True
-        '
-        'TabPage_arcaneHelmetsMag
-        '
-        Me.TabPage_arcaneHelmetsMag.BackColor = System.Drawing.Color.White
-        Me.TabPage_arcaneHelmetsMag.Controls.Add(Me.FlowLayoutPanel_magArcaneHelmets)
-        Me.TabPage_arcaneHelmetsMag.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage_arcaneHelmetsMag.Name = "TabPage_arcaneHelmetsMag"
-        Me.TabPage_arcaneHelmetsMag.Size = New System.Drawing.Size(760, 129)
-        Me.TabPage_arcaneHelmetsMag.TabIndex = 7
-        Me.TabPage_arcaneHelmetsMag.Text = "Mag"
-        '
-        'FlowLayoutPanel_magArcaneHelmets
-        '
-        Me.FlowLayoutPanel_magArcaneHelmets.AutoSize = True
-        Me.FlowLayoutPanel_magArcaneHelmets.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.FlowLayoutPanel_magArcaneHelmets.Controls.Add(Me.RadioButton_coilHelmet)
-        Me.FlowLayoutPanel_magArcaneHelmets.Controls.Add(Me.RadioButton_gaussHelmet)
-        Me.FlowLayoutPanel_magArcaneHelmets.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
-        Me.FlowLayoutPanel_magArcaneHelmets.Location = New System.Drawing.Point(10, 13)
-        Me.FlowLayoutPanel_magArcaneHelmets.Margin = New System.Windows.Forms.Padding(0)
-        Me.FlowLayoutPanel_magArcaneHelmets.MinimumSize = New System.Drawing.Size(181, 26)
-        Me.FlowLayoutPanel_magArcaneHelmets.Name = "FlowLayoutPanel_magArcaneHelmets"
-        Me.FlowLayoutPanel_magArcaneHelmets.Size = New System.Drawing.Size(181, 54)
-        Me.FlowLayoutPanel_magArcaneHelmets.TabIndex = 100
-        '
-        'RadioButton_coilHelmet
-        '
-        Me.RadioButton_coilHelmet.Checked = True
-        Me.RadioButton_coilHelmet.Location = New System.Drawing.Point(3, 3)
-        Me.RadioButton_coilHelmet.Name = "RadioButton_coilHelmet"
-        Me.RadioButton_coilHelmet.Size = New System.Drawing.Size(175, 21)
-        Me.RadioButton_coilHelmet.TabIndex = 4
-        Me.RadioButton_coilHelmet.TabStop = True
-        Me.RadioButton_coilHelmet.Tag = ""
-        Me.RadioButton_coilHelmet.Text = "Coil Helmet"
-        Me.RadioButton_coilHelmet.UseVisualStyleBackColor = True
-        '
-        'RadioButton_gaussHelmet
-        '
-        Me.RadioButton_gaussHelmet.Location = New System.Drawing.Point(3, 30)
-        Me.RadioButton_gaussHelmet.Name = "RadioButton_gaussHelmet"
-        Me.RadioButton_gaussHelmet.Size = New System.Drawing.Size(175, 21)
-        Me.RadioButton_gaussHelmet.TabIndex = 5
-        Me.RadioButton_gaussHelmet.Tag = ""
-        Me.RadioButton_gaussHelmet.Text = "Gauss Helmet"
-        Me.RadioButton_gaussHelmet.UseVisualStyleBackColor = True
-        '
-        'TabPage_arcaneHelmetsNova
-        '
-        Me.TabPage_arcaneHelmetsNova.BackColor = System.Drawing.Color.White
-        Me.TabPage_arcaneHelmetsNova.Controls.Add(Me.FlowLayoutPanel_novaArcaneHelmets)
-        Me.TabPage_arcaneHelmetsNova.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage_arcaneHelmetsNova.Name = "TabPage_arcaneHelmetsNova"
-        Me.TabPage_arcaneHelmetsNova.Size = New System.Drawing.Size(760, 129)
-        Me.TabPage_arcaneHelmetsNova.TabIndex = 14
-        Me.TabPage_arcaneHelmetsNova.Text = "Nova"
-        '
-        'FlowLayoutPanel_novaArcaneHelmets
-        '
-        Me.FlowLayoutPanel_novaArcaneHelmets.AutoSize = True
-        Me.FlowLayoutPanel_novaArcaneHelmets.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.FlowLayoutPanel_novaArcaneHelmets.Controls.Add(Me.RadioButton_fluxHelmet)
-        Me.FlowLayoutPanel_novaArcaneHelmets.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
-        Me.FlowLayoutPanel_novaArcaneHelmets.Location = New System.Drawing.Point(10, 18)
-        Me.FlowLayoutPanel_novaArcaneHelmets.Margin = New System.Windows.Forms.Padding(0)
-        Me.FlowLayoutPanel_novaArcaneHelmets.MinimumSize = New System.Drawing.Size(181, 26)
-        Me.FlowLayoutPanel_novaArcaneHelmets.Name = "FlowLayoutPanel_novaArcaneHelmets"
-        Me.FlowLayoutPanel_novaArcaneHelmets.Size = New System.Drawing.Size(181, 27)
-        Me.FlowLayoutPanel_novaArcaneHelmets.TabIndex = 100
-        '
-        'RadioButton_fluxHelmet
-        '
-        Me.RadioButton_fluxHelmet.Checked = True
-        Me.RadioButton_fluxHelmet.Location = New System.Drawing.Point(3, 3)
-        Me.RadioButton_fluxHelmet.Name = "RadioButton_fluxHelmet"
-        Me.RadioButton_fluxHelmet.Size = New System.Drawing.Size(175, 21)
-        Me.RadioButton_fluxHelmet.TabIndex = 4
-        Me.RadioButton_fluxHelmet.TabStop = True
-        Me.RadioButton_fluxHelmet.Tag = ""
-        Me.RadioButton_fluxHelmet.Text = "Flux Helmet"
-        Me.RadioButton_fluxHelmet.UseVisualStyleBackColor = True
-        '
-        'TabPage_arcaneHelmetsNyx
-        '
-        Me.TabPage_arcaneHelmetsNyx.BackColor = System.Drawing.Color.White
-        Me.TabPage_arcaneHelmetsNyx.Controls.Add(Me.FlowLayoutPanel_nyxArcaneHelmets)
-        Me.TabPage_arcaneHelmetsNyx.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage_arcaneHelmetsNyx.Name = "TabPage_arcaneHelmetsNyx"
-        Me.TabPage_arcaneHelmetsNyx.Size = New System.Drawing.Size(760, 129)
-        Me.TabPage_arcaneHelmetsNyx.TabIndex = 8
-        Me.TabPage_arcaneHelmetsNyx.Text = "Nyx"
-        '
-        'FlowLayoutPanel_nyxArcaneHelmets
-        '
-        Me.FlowLayoutPanel_nyxArcaneHelmets.AutoSize = True
-        Me.FlowLayoutPanel_nyxArcaneHelmets.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.FlowLayoutPanel_nyxArcaneHelmets.Controls.Add(Me.RadioButton_menticideHelmet)
-        Me.FlowLayoutPanel_nyxArcaneHelmets.Controls.Add(Me.RadioButton_vespaHelmet)
-        Me.FlowLayoutPanel_nyxArcaneHelmets.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
-        Me.FlowLayoutPanel_nyxArcaneHelmets.Location = New System.Drawing.Point(10, 9)
-        Me.FlowLayoutPanel_nyxArcaneHelmets.Margin = New System.Windows.Forms.Padding(0)
-        Me.FlowLayoutPanel_nyxArcaneHelmets.MinimumSize = New System.Drawing.Size(181, 26)
-        Me.FlowLayoutPanel_nyxArcaneHelmets.Name = "FlowLayoutPanel_nyxArcaneHelmets"
-        Me.FlowLayoutPanel_nyxArcaneHelmets.Size = New System.Drawing.Size(181, 54)
-        Me.FlowLayoutPanel_nyxArcaneHelmets.TabIndex = 100
-        '
-        'RadioButton_menticideHelmet
-        '
-        Me.RadioButton_menticideHelmet.Checked = True
-        Me.RadioButton_menticideHelmet.Location = New System.Drawing.Point(3, 3)
-        Me.RadioButton_menticideHelmet.Name = "RadioButton_menticideHelmet"
-        Me.RadioButton_menticideHelmet.Size = New System.Drawing.Size(175, 21)
-        Me.RadioButton_menticideHelmet.TabIndex = 4
-        Me.RadioButton_menticideHelmet.TabStop = True
-        Me.RadioButton_menticideHelmet.Tag = ""
-        Me.RadioButton_menticideHelmet.Text = "Menticide Helmet"
-        Me.RadioButton_menticideHelmet.UseVisualStyleBackColor = True
-        '
-        'RadioButton_vespaHelmet
-        '
-        Me.RadioButton_vespaHelmet.Location = New System.Drawing.Point(3, 30)
-        Me.RadioButton_vespaHelmet.Name = "RadioButton_vespaHelmet"
-        Me.RadioButton_vespaHelmet.Size = New System.Drawing.Size(175, 21)
-        Me.RadioButton_vespaHelmet.TabIndex = 5
-        Me.RadioButton_vespaHelmet.Tag = ""
-        Me.RadioButton_vespaHelmet.Text = "Vespa Helmet"
-        Me.RadioButton_vespaHelmet.UseVisualStyleBackColor = True
-        '
-        'TabPage_arcaneHelmetsRhino
-        '
-        Me.TabPage_arcaneHelmetsRhino.BackColor = System.Drawing.Color.White
-        Me.TabPage_arcaneHelmetsRhino.Controls.Add(Me.FlowLayoutPanel_rhinoArcaneHelmets)
-        Me.TabPage_arcaneHelmetsRhino.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage_arcaneHelmetsRhino.Name = "TabPage_arcaneHelmetsRhino"
-        Me.TabPage_arcaneHelmetsRhino.Size = New System.Drawing.Size(760, 129)
-        Me.TabPage_arcaneHelmetsRhino.TabIndex = 9
-        Me.TabPage_arcaneHelmetsRhino.Text = "Rhino"
-        '
-        'FlowLayoutPanel_rhinoArcaneHelmets
-        '
-        Me.FlowLayoutPanel_rhinoArcaneHelmets.AutoSize = True
-        Me.FlowLayoutPanel_rhinoArcaneHelmets.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.FlowLayoutPanel_rhinoArcaneHelmets.Controls.Add(Me.RadioButton_thrak)
-        Me.FlowLayoutPanel_rhinoArcaneHelmets.Controls.Add(Me.RadioButton_vanguardHelmet)
-        Me.FlowLayoutPanel_rhinoArcaneHelmets.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
-        Me.FlowLayoutPanel_rhinoArcaneHelmets.Location = New System.Drawing.Point(10, 9)
-        Me.FlowLayoutPanel_rhinoArcaneHelmets.Margin = New System.Windows.Forms.Padding(0)
-        Me.FlowLayoutPanel_rhinoArcaneHelmets.MinimumSize = New System.Drawing.Size(181, 26)
-        Me.FlowLayoutPanel_rhinoArcaneHelmets.Name = "FlowLayoutPanel_rhinoArcaneHelmets"
-        Me.FlowLayoutPanel_rhinoArcaneHelmets.Size = New System.Drawing.Size(181, 54)
-        Me.FlowLayoutPanel_rhinoArcaneHelmets.TabIndex = 100
-        '
-        'RadioButton_thrak
-        '
-        Me.RadioButton_thrak.Checked = True
-        Me.RadioButton_thrak.Location = New System.Drawing.Point(3, 3)
-        Me.RadioButton_thrak.Name = "RadioButton_thrak"
-        Me.RadioButton_thrak.Size = New System.Drawing.Size(175, 21)
-        Me.RadioButton_thrak.TabIndex = 4
-        Me.RadioButton_thrak.TabStop = True
-        Me.RadioButton_thrak.Tag = ""
-        Me.RadioButton_thrak.Text = "Thrak Helmet"
-        Me.RadioButton_thrak.UseVisualStyleBackColor = True
-        '
-        'RadioButton_vanguardHelmet
-        '
-        Me.RadioButton_vanguardHelmet.Location = New System.Drawing.Point(3, 30)
-        Me.RadioButton_vanguardHelmet.Name = "RadioButton_vanguardHelmet"
-        Me.RadioButton_vanguardHelmet.Size = New System.Drawing.Size(175, 21)
-        Me.RadioButton_vanguardHelmet.TabIndex = 5
-        Me.RadioButton_vanguardHelmet.Tag = ""
-        Me.RadioButton_vanguardHelmet.Text = "Vanguard Helmet"
-        Me.RadioButton_vanguardHelmet.UseVisualStyleBackColor = True
-        '
-        'TabPage_arcaneHelmetsSaryn
-        '
-        Me.TabPage_arcaneHelmetsSaryn.BackColor = System.Drawing.Color.White
-        Me.TabPage_arcaneHelmetsSaryn.Controls.Add(Me.FlowLayoutPanel_sarynArcanHelmets)
-        Me.TabPage_arcaneHelmetsSaryn.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage_arcaneHelmetsSaryn.Name = "TabPage_arcaneHelmetsSaryn"
-        Me.TabPage_arcaneHelmetsSaryn.Size = New System.Drawing.Size(760, 129)
-        Me.TabPage_arcaneHelmetsSaryn.TabIndex = 10
-        Me.TabPage_arcaneHelmetsSaryn.Text = "Saryn"
-        '
-        'FlowLayoutPanel_sarynArcanHelmets
-        '
-        Me.FlowLayoutPanel_sarynArcanHelmets.AutoSize = True
-        Me.FlowLayoutPanel_sarynArcanHelmets.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.FlowLayoutPanel_sarynArcanHelmets.Controls.Add(Me.RadioButton_hemlockHelmet)
-        Me.FlowLayoutPanel_sarynArcanHelmets.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
-        Me.FlowLayoutPanel_sarynArcanHelmets.Location = New System.Drawing.Point(10, 13)
-        Me.FlowLayoutPanel_sarynArcanHelmets.Margin = New System.Windows.Forms.Padding(0)
-        Me.FlowLayoutPanel_sarynArcanHelmets.MinimumSize = New System.Drawing.Size(181, 26)
-        Me.FlowLayoutPanel_sarynArcanHelmets.Name = "FlowLayoutPanel_sarynArcanHelmets"
-        Me.FlowLayoutPanel_sarynArcanHelmets.Size = New System.Drawing.Size(181, 27)
-        Me.FlowLayoutPanel_sarynArcanHelmets.TabIndex = 100
-        '
-        'RadioButton_hemlockHelmet
-        '
-        Me.RadioButton_hemlockHelmet.Checked = True
-        Me.RadioButton_hemlockHelmet.Location = New System.Drawing.Point(3, 3)
-        Me.RadioButton_hemlockHelmet.Name = "RadioButton_hemlockHelmet"
-        Me.RadioButton_hemlockHelmet.Size = New System.Drawing.Size(175, 21)
-        Me.RadioButton_hemlockHelmet.TabIndex = 4
-        Me.RadioButton_hemlockHelmet.TabStop = True
-        Me.RadioButton_hemlockHelmet.Tag = ""
-        Me.RadioButton_hemlockHelmet.Text = "Hemlock Helmet"
-        Me.RadioButton_hemlockHelmet.UseVisualStyleBackColor = True
-        '
-        'TabPage_arcaneHelmetsTrinity
-        '
-        Me.TabPage_arcaneHelmetsTrinity.BackColor = System.Drawing.Color.White
-        Me.TabPage_arcaneHelmetsTrinity.Controls.Add(Me.FlowLayoutPanel_trinityArcaneHelmets)
-        Me.TabPage_arcaneHelmetsTrinity.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage_arcaneHelmetsTrinity.Name = "TabPage_arcaneHelmetsTrinity"
-        Me.TabPage_arcaneHelmetsTrinity.Size = New System.Drawing.Size(760, 129)
-        Me.TabPage_arcaneHelmetsTrinity.TabIndex = 11
-        Me.TabPage_arcaneHelmetsTrinity.Text = "Trinity"
-        '
-        'FlowLayoutPanel_trinityArcaneHelmets
-        '
-        Me.FlowLayoutPanel_trinityArcaneHelmets.AutoSize = True
-        Me.FlowLayoutPanel_trinityArcaneHelmets.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.FlowLayoutPanel_trinityArcaneHelmets.Controls.Add(Me.RadioButton_auraHelmet)
-        Me.FlowLayoutPanel_trinityArcaneHelmets.Controls.Add(Me.RadioButton_meridianHelmet)
-        Me.FlowLayoutPanel_trinityArcaneHelmets.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
-        Me.FlowLayoutPanel_trinityArcaneHelmets.Location = New System.Drawing.Point(6, 9)
-        Me.FlowLayoutPanel_trinityArcaneHelmets.Margin = New System.Windows.Forms.Padding(0)
-        Me.FlowLayoutPanel_trinityArcaneHelmets.MinimumSize = New System.Drawing.Size(181, 26)
-        Me.FlowLayoutPanel_trinityArcaneHelmets.Name = "FlowLayoutPanel_trinityArcaneHelmets"
-        Me.FlowLayoutPanel_trinityArcaneHelmets.Size = New System.Drawing.Size(181, 54)
-        Me.FlowLayoutPanel_trinityArcaneHelmets.TabIndex = 100
-        '
-        'RadioButton_auraHelmet
-        '
-        Me.RadioButton_auraHelmet.Checked = True
-        Me.RadioButton_auraHelmet.Location = New System.Drawing.Point(3, 3)
-        Me.RadioButton_auraHelmet.Name = "RadioButton_auraHelmet"
-        Me.RadioButton_auraHelmet.Size = New System.Drawing.Size(175, 21)
-        Me.RadioButton_auraHelmet.TabIndex = 4
-        Me.RadioButton_auraHelmet.TabStop = True
-        Me.RadioButton_auraHelmet.Tag = ""
-        Me.RadioButton_auraHelmet.Text = "Aura Helmet"
-        Me.RadioButton_auraHelmet.UseVisualStyleBackColor = True
-        '
-        'RadioButton_meridianHelmet
-        '
-        Me.RadioButton_meridianHelmet.Location = New System.Drawing.Point(3, 30)
-        Me.RadioButton_meridianHelmet.Name = "RadioButton_meridianHelmet"
-        Me.RadioButton_meridianHelmet.Size = New System.Drawing.Size(175, 21)
-        Me.RadioButton_meridianHelmet.TabIndex = 5
-        Me.RadioButton_meridianHelmet.Tag = ""
-        Me.RadioButton_meridianHelmet.Text = "Maridian Helmet"
-        Me.RadioButton_meridianHelmet.UseVisualStyleBackColor = True
-        '
-        'TabPage_arcaneHelmetsVauban
-        '
-        Me.TabPage_arcaneHelmetsVauban.BackColor = System.Drawing.Color.White
-        Me.TabPage_arcaneHelmetsVauban.Controls.Add(Me.FlowLayoutPanel_vaubanArcaneHelmets)
-        Me.TabPage_arcaneHelmetsVauban.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage_arcaneHelmetsVauban.Name = "TabPage_arcaneHelmetsVauban"
-        Me.TabPage_arcaneHelmetsVauban.Size = New System.Drawing.Size(760, 129)
-        Me.TabPage_arcaneHelmetsVauban.TabIndex = 12
-        Me.TabPage_arcaneHelmetsVauban.Text = "Vauban"
-        '
-        'FlowLayoutPanel_vaubanArcaneHelmets
-        '
-        Me.FlowLayoutPanel_vaubanArcaneHelmets.AutoSize = True
-        Me.FlowLayoutPanel_vaubanArcaneHelmets.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.FlowLayoutPanel_vaubanArcaneHelmets.Controls.Add(Me.RadioButton_espritHelmet)
-        Me.FlowLayoutPanel_vaubanArcaneHelmets.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
-        Me.FlowLayoutPanel_vaubanArcaneHelmets.Location = New System.Drawing.Point(10, 15)
-        Me.FlowLayoutPanel_vaubanArcaneHelmets.Margin = New System.Windows.Forms.Padding(0)
-        Me.FlowLayoutPanel_vaubanArcaneHelmets.MinimumSize = New System.Drawing.Size(181, 26)
-        Me.FlowLayoutPanel_vaubanArcaneHelmets.Name = "FlowLayoutPanel_vaubanArcaneHelmets"
-        Me.FlowLayoutPanel_vaubanArcaneHelmets.Size = New System.Drawing.Size(181, 27)
-        Me.FlowLayoutPanel_vaubanArcaneHelmets.TabIndex = 100
-        '
-        'RadioButton_espritHelmet
-        '
-        Me.RadioButton_espritHelmet.Checked = True
-        Me.RadioButton_espritHelmet.Location = New System.Drawing.Point(3, 3)
-        Me.RadioButton_espritHelmet.Name = "RadioButton_espritHelmet"
-        Me.RadioButton_espritHelmet.Size = New System.Drawing.Size(175, 21)
-        Me.RadioButton_espritHelmet.TabIndex = 4
-        Me.RadioButton_espritHelmet.TabStop = True
-        Me.RadioButton_espritHelmet.Tag = ""
-        Me.RadioButton_espritHelmet.Text = "Esprit Helmet"
-        Me.RadioButton_espritHelmet.UseVisualStyleBackColor = True
-        '
-        'TabPage_arcaneHelmetsVolt
-        '
-        Me.TabPage_arcaneHelmetsVolt.BackColor = System.Drawing.Color.White
-        Me.TabPage_arcaneHelmetsVolt.Controls.Add(Me.FlowLayoutPanel_voltArcaneHelmets)
-        Me.TabPage_arcaneHelmetsVolt.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage_arcaneHelmetsVolt.Name = "TabPage_arcaneHelmetsVolt"
-        Me.TabPage_arcaneHelmetsVolt.Size = New System.Drawing.Size(760, 129)
-        Me.TabPage_arcaneHelmetsVolt.TabIndex = 13
-        Me.TabPage_arcaneHelmetsVolt.Text = "Volt"
-        '
-        'FlowLayoutPanel_voltArcaneHelmets
-        '
-        Me.FlowLayoutPanel_voltArcaneHelmets.AutoSize = True
-        Me.FlowLayoutPanel_voltArcaneHelmets.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.FlowLayoutPanel_voltArcaneHelmets.Controls.Add(Me.RadioButton_pulseHelmet)
-        Me.FlowLayoutPanel_voltArcaneHelmets.Controls.Add(Me.RadioButton_stormHelmet)
-        Me.FlowLayoutPanel_voltArcaneHelmets.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
-        Me.FlowLayoutPanel_voltArcaneHelmets.Location = New System.Drawing.Point(10, 12)
-        Me.FlowLayoutPanel_voltArcaneHelmets.Margin = New System.Windows.Forms.Padding(0)
-        Me.FlowLayoutPanel_voltArcaneHelmets.MinimumSize = New System.Drawing.Size(181, 26)
-        Me.FlowLayoutPanel_voltArcaneHelmets.Name = "FlowLayoutPanel_voltArcaneHelmets"
-        Me.FlowLayoutPanel_voltArcaneHelmets.Size = New System.Drawing.Size(181, 54)
-        Me.FlowLayoutPanel_voltArcaneHelmets.TabIndex = 100
-        '
-        'RadioButton_pulseHelmet
-        '
-        Me.RadioButton_pulseHelmet.Checked = True
-        Me.RadioButton_pulseHelmet.Location = New System.Drawing.Point(3, 3)
-        Me.RadioButton_pulseHelmet.Name = "RadioButton_pulseHelmet"
-        Me.RadioButton_pulseHelmet.Size = New System.Drawing.Size(175, 21)
-        Me.RadioButton_pulseHelmet.TabIndex = 4
-        Me.RadioButton_pulseHelmet.TabStop = True
-        Me.RadioButton_pulseHelmet.Tag = ""
-        Me.RadioButton_pulseHelmet.Text = "Pulse Helmet"
-        Me.RadioButton_pulseHelmet.UseVisualStyleBackColor = True
-        '
-        'RadioButton_stormHelmet
-        '
-        Me.RadioButton_stormHelmet.Location = New System.Drawing.Point(3, 30)
-        Me.RadioButton_stormHelmet.Name = "RadioButton_stormHelmet"
-        Me.RadioButton_stormHelmet.Size = New System.Drawing.Size(175, 21)
-        Me.RadioButton_stormHelmet.TabIndex = 5
-        Me.RadioButton_stormHelmet.Tag = ""
-        Me.RadioButton_stormHelmet.Text = "Storm Helmet"
-        Me.RadioButton_stormHelmet.UseVisualStyleBackColor = True
-        '
-        'TabControl_abilities
-        '
-        Me.TabControl_abilities.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TabControl_abilities.Controls.Add(Me.TabPage_abilitiesDefault)
-        Me.TabControl_abilities.Controls.Add(Me.TabPage_abilitiesAtlas)
-        Me.TabControl_abilities.Controls.Add(Me.TabPage_abilitiesBaruuk)
-        Me.TabControl_abilities.Controls.Add(Me.TabPage_abilitiesChroma)
-        Me.TabControl_abilities.Controls.Add(Me.TabPage_abilitiesExcalibur)
-        Me.TabControl_abilities.Controls.Add(Me.TabPage_abilitiesFrost)
-        Me.TabControl_abilities.Controls.Add(Me.TabPage_abilitiesGara)
-        Me.TabControl_abilities.Controls.Add(Me.TabPage_abilitiesHarrow)
-        Me.TabControl_abilities.Controls.Add(Me.TabPage_abilitiesInaros)
-        Me.TabControl_abilities.Controls.Add(Me.TabPage_abilitiesMesa)
-        Me.TabControl_abilities.Controls.Add(Me.TabPage_abilitiesMirage)
-        Me.TabControl_abilities.Controls.Add(Me.TabPage_abilitiesNekros)
-        Me.TabControl_abilities.Controls.Add(Me.TabPage_abilitiesNezha)
-        Me.TabControl_abilities.Controls.Add(Me.TabPage_abilitiesNidus)
-        Me.TabControl_abilities.Controls.Add(Me.TabPage_abilitiesNova)
-        Me.TabControl_abilities.Controls.Add(Me.TabPage_abilitiesOberon)
-        Me.TabControl_abilities.Controls.Add(Me.TabPage_abilitiesOctavia)
-        Me.TabControl_abilities.Controls.Add(Me.TabPage_abilitiesRhino)
-        Me.TabControl_abilities.Controls.Add(Me.TabPage_abilitiesTitania)
-        Me.TabControl_abilities.Controls.Add(Me.TabPage_abilitiesTrinity)
-        Me.TabControl_abilities.Controls.Add(Me.TabPage_abilitiesValkyr)
-        Me.TabControl_abilities.Controls.Add(Me.TabPage_abilitiesWisp)
-        Me.TabControl_abilities.Location = New System.Drawing.Point(8, 406)
-        Me.TabControl_abilities.Name = "TabControl_abilities"
-        Me.TabControl_abilities.SelectedIndex = 0
-        Me.TabControl_abilities.Size = New System.Drawing.Size(767, 180)
-        Me.TabControl_abilities.TabIndex = 101
-        '
-        'TabPage_abilitiesDefault
-        '
-        Me.TabPage_abilitiesDefault.BackColor = System.Drawing.Color.White
-        Me.TabPage_abilitiesDefault.Controls.Add(Me.FlowLayoutPanel_defaultAbilities)
-        Me.TabPage_abilitiesDefault.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage_abilitiesDefault.Name = "TabPage_abilitiesDefault"
-        Me.TabPage_abilitiesDefault.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_abilitiesDefault.Size = New System.Drawing.Size(759, 154)
-        Me.TabPage_abilitiesDefault.TabIndex = 24
-        Me.TabPage_abilitiesDefault.Text = "Default"
-        '
-        'FlowLayoutPanel_defaultAbilities
-        '
-        Me.FlowLayoutPanel_defaultAbilities.AutoSize = True
-        Me.FlowLayoutPanel_defaultAbilities.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.FlowLayoutPanel_defaultAbilities.Controls.Add(Me.Label_abilityPlaceholder)
-        Me.FlowLayoutPanel_defaultAbilities.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
-        Me.FlowLayoutPanel_defaultAbilities.Location = New System.Drawing.Point(6, 6)
-        Me.FlowLayoutPanel_defaultAbilities.Margin = New System.Windows.Forms.Padding(0)
-        Me.FlowLayoutPanel_defaultAbilities.MinimumSize = New System.Drawing.Size(181, 26)
-        Me.FlowLayoutPanel_defaultAbilities.Name = "FlowLayoutPanel_defaultAbilities"
-        Me.FlowLayoutPanel_defaultAbilities.Size = New System.Drawing.Size(181, 32)
-        Me.FlowLayoutPanel_defaultAbilities.TabIndex = 100
-        '
-        'Label_abilityPlaceholder
-        '
-        Me.Label_abilityPlaceholder.AutoSize = True
-        Me.Label_abilityPlaceholder.BackColor = System.Drawing.Color.Transparent
-        Me.Label_abilityPlaceholder.Location = New System.Drawing.Point(1, 3)
-        Me.Label_abilityPlaceholder.Margin = New System.Windows.Forms.Padding(1, 3, 1, 3)
-        Me.Label_abilityPlaceholder.MinimumSize = New System.Drawing.Size(179, 0)
-        Me.Label_abilityPlaceholder.Name = "Label_abilityPlaceholder"
-        Me.Label_abilityPlaceholder.Size = New System.Drawing.Size(179, 26)
-        Me.Label_abilityPlaceholder.TabIndex = 0
-        Me.Label_abilityPlaceholder.Text = "This Warframe has no " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "EHP affecting Abilities"
-        Me.Label_abilityPlaceholder.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'TabPage_abilitiesAtlas
-        '
-        Me.TabPage_abilitiesAtlas.BackColor = System.Drawing.Color.White
-        Me.TabPage_abilitiesAtlas.Controls.Add(Me.FlowLayoutPanel_atlasAbilities)
-        Me.TabPage_abilitiesAtlas.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage_abilitiesAtlas.Name = "TabPage_abilitiesAtlas"
-        Me.TabPage_abilitiesAtlas.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_abilitiesAtlas.Size = New System.Drawing.Size(759, 154)
-        Me.TabPage_abilitiesAtlas.TabIndex = 18
-        Me.TabPage_abilitiesAtlas.Text = "Atlas"
-        '
-        'FlowLayoutPanel_atlasAbilities
-        '
-        Me.FlowLayoutPanel_atlasAbilities.AutoSize = True
-        Me.FlowLayoutPanel_atlasAbilities.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.FlowLayoutPanel_atlasAbilities.Controls.Add(Me.CheckedInput_rubble)
-        Me.FlowLayoutPanel_atlasAbilities.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
-        Me.FlowLayoutPanel_atlasAbilities.Location = New System.Drawing.Point(6, 6)
-        Me.FlowLayoutPanel_atlasAbilities.Margin = New System.Windows.Forms.Padding(0)
-        Me.FlowLayoutPanel_atlasAbilities.MinimumSize = New System.Drawing.Size(181, 26)
-        Me.FlowLayoutPanel_atlasAbilities.Name = "FlowLayoutPanel_atlasAbilities"
-        Me.FlowLayoutPanel_atlasAbilities.Size = New System.Drawing.Size(181, 26)
-        Me.FlowLayoutPanel_atlasAbilities.TabIndex = 40
-        '
-        'CheckedInput_rubble
-        '
-        Me.CheckedInput_rubble.Location = New System.Drawing.Point(3, 3)
-        Me.CheckedInput_rubble.Maximum = 1500
-        Me.CheckedInput_rubble.MaximumSize = New System.Drawing.Size(175, 20)
-        Me.CheckedInput_rubble.MinimumSize = New System.Drawing.Size(175, 20)
-        Me.CheckedInput_rubble.Name = "CheckedInput_rubble"
-        Me.CheckedInput_rubble.Size = New System.Drawing.Size(175, 20)
-        Me.CheckedInput_rubble.TabIndex = 2
-        Me.CheckedInput_rubble.Text = "Rubble"
-        '
-        'TabPage_abilitiesBaruuk
-        '
-        Me.TabPage_abilitiesBaruuk.BackColor = System.Drawing.Color.White
-        Me.TabPage_abilitiesBaruuk.Controls.Add(Me.FlowLayoutPanel_baruukAbilities)
-        Me.TabPage_abilitiesBaruuk.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage_abilitiesBaruuk.Name = "TabPage_abilitiesBaruuk"
-        Me.TabPage_abilitiesBaruuk.Size = New System.Drawing.Size(759, 154)
-        Me.TabPage_abilitiesBaruuk.TabIndex = 22
-        Me.TabPage_abilitiesBaruuk.Text = "Baruuk"
-        '
-        'FlowLayoutPanel_baruukAbilities
-        '
-        Me.FlowLayoutPanel_baruukAbilities.AutoSize = True
-        Me.FlowLayoutPanel_baruukAbilities.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.FlowLayoutPanel_baruukAbilities.Controls.Add(Me.CheckedInput_restraint)
-        Me.FlowLayoutPanel_baruukAbilities.Controls.Add(Me.CheckBox_desolateHands)
-        Me.FlowLayoutPanel_baruukAbilities.Controls.Add(Me.CheckBox_sereneStorm)
-        Me.FlowLayoutPanel_baruukAbilities.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
-        Me.FlowLayoutPanel_baruukAbilities.Location = New System.Drawing.Point(8, 12)
-        Me.FlowLayoutPanel_baruukAbilities.Margin = New System.Windows.Forms.Padding(0)
-        Me.FlowLayoutPanel_baruukAbilities.MinimumSize = New System.Drawing.Size(181, 26)
-        Me.FlowLayoutPanel_baruukAbilities.Name = "FlowLayoutPanel_baruukAbilities"
-        Me.FlowLayoutPanel_baruukAbilities.Size = New System.Drawing.Size(181, 80)
-        Me.FlowLayoutPanel_baruukAbilities.TabIndex = 100
-        '
-        'CheckedInput_restraint
-        '
-        Me.CheckedInput_restraint.Location = New System.Drawing.Point(3, 3)
-        Me.CheckedInput_restraint.Maximum = 100
-        Me.CheckedInput_restraint.MaximumSize = New System.Drawing.Size(175, 20)
-        Me.CheckedInput_restraint.MinimumSize = New System.Drawing.Size(175, 20)
-        Me.CheckedInput_restraint.Name = "CheckedInput_restraint"
-        Me.CheckedInput_restraint.Size = New System.Drawing.Size(175, 20)
-        Me.CheckedInput_restraint.TabIndex = 44
-        Me.CheckedInput_restraint.Text = "Restraint"
-        Me.CheckedInput_restraint.Value = 100
-        '
-        'CheckBox_desolateHands
-        '
-        Me.CheckBox_desolateHands.Location = New System.Drawing.Point(3, 29)
-        Me.CheckBox_desolateHands.Name = "CheckBox_desolateHands"
-        Me.CheckBox_desolateHands.Size = New System.Drawing.Size(175, 21)
-        Me.CheckBox_desolateHands.TabIndex = 42
-        Me.CheckBox_desolateHands.Text = "Desolate Hands"
-        Me.CheckBox_desolateHands.UseVisualStyleBackColor = True
-        '
-        'CheckBox_sereneStorm
-        '
-        Me.CheckBox_sereneStorm.Location = New System.Drawing.Point(3, 56)
-        Me.CheckBox_sereneStorm.Name = "CheckBox_sereneStorm"
-        Me.CheckBox_sereneStorm.Size = New System.Drawing.Size(175, 21)
-        Me.CheckBox_sereneStorm.TabIndex = 43
-        Me.CheckBox_sereneStorm.Text = "Serene Storm"
-        Me.CheckBox_sereneStorm.UseVisualStyleBackColor = True
-        '
-        'TabPage_abilitiesChroma
-        '
-        Me.TabPage_abilitiesChroma.BackColor = System.Drawing.Color.White
-        Me.TabPage_abilitiesChroma.Controls.Add(Me.FlowLayoutPanel_chromaAbilities)
-        Me.TabPage_abilitiesChroma.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage_abilitiesChroma.Name = "TabPage_abilitiesChroma"
-        Me.TabPage_abilitiesChroma.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_abilitiesChroma.Size = New System.Drawing.Size(759, 154)
-        Me.TabPage_abilitiesChroma.TabIndex = 0
-        Me.TabPage_abilitiesChroma.Text = "Chroma"
-        '
-        'FlowLayoutPanel_chromaAbilities
-        '
-        Me.FlowLayoutPanel_chromaAbilities.AutoSize = True
-        Me.FlowLayoutPanel_chromaAbilities.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.FlowLayoutPanel_chromaAbilities.Controls.Add(Me.RadioButton_electricChroma)
-        Me.FlowLayoutPanel_chromaAbilities.Controls.Add(Me.RadioButton_fireChroma)
-        Me.FlowLayoutPanel_chromaAbilities.Controls.Add(Me.RadioButton_iceChroma)
-        Me.FlowLayoutPanel_chromaAbilities.Controls.Add(Me.CheckBox_vexArmor)
-        Me.FlowLayoutPanel_chromaAbilities.Controls.Add(Me.CheckBox_elementalWard)
-        Me.FlowLayoutPanel_chromaAbilities.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
-        Me.FlowLayoutPanel_chromaAbilities.Location = New System.Drawing.Point(7, 8)
-        Me.FlowLayoutPanel_chromaAbilities.Margin = New System.Windows.Forms.Padding(0)
-        Me.FlowLayoutPanel_chromaAbilities.MinimumSize = New System.Drawing.Size(181, 26)
-        Me.FlowLayoutPanel_chromaAbilities.Name = "FlowLayoutPanel_chromaAbilities"
-        Me.FlowLayoutPanel_chromaAbilities.Size = New System.Drawing.Size(181, 135)
-        Me.FlowLayoutPanel_chromaAbilities.TabIndex = 100
-        '
-        'RadioButton_electricChroma
-        '
-        Me.RadioButton_electricChroma.Location = New System.Drawing.Point(3, 3)
-        Me.RadioButton_electricChroma.Name = "RadioButton_electricChroma"
-        Me.RadioButton_electricChroma.Size = New System.Drawing.Size(175, 21)
-        Me.RadioButton_electricChroma.TabIndex = 16
-        Me.RadioButton_electricChroma.Text = "Electric Chroma"
-        Me.RadioButton_electricChroma.UseVisualStyleBackColor = True
-        '
-        'RadioButton_fireChroma
-        '
-        Me.RadioButton_fireChroma.Checked = True
-        Me.RadioButton_fireChroma.Location = New System.Drawing.Point(3, 30)
-        Me.RadioButton_fireChroma.Name = "RadioButton_fireChroma"
-        Me.RadioButton_fireChroma.Size = New System.Drawing.Size(175, 21)
-        Me.RadioButton_fireChroma.TabIndex = 14
-        Me.RadioButton_fireChroma.TabStop = True
-        Me.RadioButton_fireChroma.Text = "Fire Chroma"
-        Me.RadioButton_fireChroma.UseVisualStyleBackColor = True
-        '
-        'RadioButton_iceChroma
-        '
-        Me.RadioButton_iceChroma.Location = New System.Drawing.Point(3, 57)
-        Me.RadioButton_iceChroma.Name = "RadioButton_iceChroma"
-        Me.RadioButton_iceChroma.Size = New System.Drawing.Size(175, 21)
-        Me.RadioButton_iceChroma.TabIndex = 15
-        Me.RadioButton_iceChroma.Text = "Ice Chroma"
-        Me.RadioButton_iceChroma.UseVisualStyleBackColor = True
-        '
-        'CheckBox_vexArmor
-        '
-        Me.CheckBox_vexArmor.Location = New System.Drawing.Point(3, 84)
-        Me.CheckBox_vexArmor.Name = "CheckBox_vexArmor"
-        Me.CheckBox_vexArmor.Size = New System.Drawing.Size(175, 21)
-        Me.CheckBox_vexArmor.TabIndex = 18
-        Me.CheckBox_vexArmor.Text = "Vex Armor"
-        Me.CheckBox_vexArmor.UseVisualStyleBackColor = True
-        '
-        'CheckBox_elementalWard
-        '
-        Me.CheckBox_elementalWard.Location = New System.Drawing.Point(3, 111)
-        Me.CheckBox_elementalWard.Name = "CheckBox_elementalWard"
-        Me.CheckBox_elementalWard.Size = New System.Drawing.Size(175, 21)
-        Me.CheckBox_elementalWard.TabIndex = 17
-        Me.CheckBox_elementalWard.Text = "Elemental Ward"
-        Me.CheckBox_elementalWard.UseVisualStyleBackColor = True
-        '
-        'TabPage_abilitiesExcalibur
-        '
-        Me.TabPage_abilitiesExcalibur.BackColor = System.Drawing.Color.White
-        Me.TabPage_abilitiesExcalibur.Controls.Add(Me.FlowLayoutPanel_excaliburAbilities)
-        Me.TabPage_abilitiesExcalibur.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage_abilitiesExcalibur.Name = "TabPage_abilitiesExcalibur"
-        Me.TabPage_abilitiesExcalibur.Size = New System.Drawing.Size(759, 154)
-        Me.TabPage_abilitiesExcalibur.TabIndex = 19
-        Me.TabPage_abilitiesExcalibur.Text = "Excalibur"
-        '
-        'FlowLayoutPanel_excaliburAbilities
-        '
-        Me.FlowLayoutPanel_excaliburAbilities.AutoSize = True
-        Me.FlowLayoutPanel_excaliburAbilities.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.FlowLayoutPanel_excaliburAbilities.Controls.Add(Me.CheckBox_exaltedBlade)
-        Me.FlowLayoutPanel_excaliburAbilities.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
-        Me.FlowLayoutPanel_excaliburAbilities.Location = New System.Drawing.Point(8, 10)
-        Me.FlowLayoutPanel_excaliburAbilities.Margin = New System.Windows.Forms.Padding(0)
-        Me.FlowLayoutPanel_excaliburAbilities.MinimumSize = New System.Drawing.Size(181, 26)
-        Me.FlowLayoutPanel_excaliburAbilities.Name = "FlowLayoutPanel_excaliburAbilities"
-        Me.FlowLayoutPanel_excaliburAbilities.Size = New System.Drawing.Size(181, 27)
-        Me.FlowLayoutPanel_excaliburAbilities.TabIndex = 100
-        '
-        'CheckBox_exaltedBlade
-        '
-        Me.CheckBox_exaltedBlade.Location = New System.Drawing.Point(3, 3)
-        Me.CheckBox_exaltedBlade.Name = "CheckBox_exaltedBlade"
-        Me.CheckBox_exaltedBlade.Size = New System.Drawing.Size(175, 21)
-        Me.CheckBox_exaltedBlade.TabIndex = 39
-        Me.CheckBox_exaltedBlade.Text = "Exalted Blade"
-        Me.CheckBox_exaltedBlade.UseVisualStyleBackColor = True
-        '
-        'TabPage_abilitiesFrost
-        '
-        Me.TabPage_abilitiesFrost.BackColor = System.Drawing.Color.White
-        Me.TabPage_abilitiesFrost.Controls.Add(Me.FlowLayoutPanel_frostAbilities)
-        Me.TabPage_abilitiesFrost.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage_abilitiesFrost.Name = "TabPage_abilitiesFrost"
-        Me.TabPage_abilitiesFrost.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_abilitiesFrost.Size = New System.Drawing.Size(759, 154)
-        Me.TabPage_abilitiesFrost.TabIndex = 2
-        Me.TabPage_abilitiesFrost.Text = "Frost"
-        '
-        'FlowLayoutPanel_frostAbilities
-        '
-        Me.FlowLayoutPanel_frostAbilities.AutoSize = True
-        Me.FlowLayoutPanel_frostAbilities.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.FlowLayoutPanel_frostAbilities.Controls.Add(Me.CheckedInput_icyAvalanche)
-        Me.FlowLayoutPanel_frostAbilities.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
-        Me.FlowLayoutPanel_frostAbilities.Location = New System.Drawing.Point(8, 12)
-        Me.FlowLayoutPanel_frostAbilities.Margin = New System.Windows.Forms.Padding(0)
-        Me.FlowLayoutPanel_frostAbilities.MinimumSize = New System.Drawing.Size(181, 26)
-        Me.FlowLayoutPanel_frostAbilities.Name = "FlowLayoutPanel_frostAbilities"
-        Me.FlowLayoutPanel_frostAbilities.Size = New System.Drawing.Size(181, 26)
-        Me.FlowLayoutPanel_frostAbilities.TabIndex = 100
-        '
-        'CheckedInput_icyAvalanche
-        '
-        Me.CheckedInput_icyAvalanche.Location = New System.Drawing.Point(3, 3)
-        Me.CheckedInput_icyAvalanche.Maximum = 200
-        Me.CheckedInput_icyAvalanche.MaximumSize = New System.Drawing.Size(175, 20)
-        Me.CheckedInput_icyAvalanche.MinimumSize = New System.Drawing.Size(175, 20)
-        Me.CheckedInput_icyAvalanche.Name = "CheckedInput_icyAvalanche"
-        Me.CheckedInput_icyAvalanche.Size = New System.Drawing.Size(175, 20)
-        Me.CheckedInput_icyAvalanche.TabIndex = 0
-        Me.CheckedInput_icyAvalanche.Text = "Icy Avalanche"
-        '
-        'TabPage_abilitiesGara
-        '
-        Me.TabPage_abilitiesGara.BackColor = System.Drawing.Color.White
-        Me.TabPage_abilitiesGara.Controls.Add(Me.FlowLayoutPanel_garaAbilities)
-        Me.TabPage_abilitiesGara.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage_abilitiesGara.Name = "TabPage_abilitiesGara"
-        Me.TabPage_abilitiesGara.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_abilitiesGara.Size = New System.Drawing.Size(759, 154)
-        Me.TabPage_abilitiesGara.TabIndex = 17
-        Me.TabPage_abilitiesGara.Text = "Gara"
-        '
-        'FlowLayoutPanel_garaAbilities
-        '
-        Me.FlowLayoutPanel_garaAbilities.AutoSize = True
-        Me.FlowLayoutPanel_garaAbilities.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.FlowLayoutPanel_garaAbilities.Controls.Add(Me.CheckBox_splinterStorm)
-        Me.FlowLayoutPanel_garaAbilities.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
-        Me.FlowLayoutPanel_garaAbilities.Location = New System.Drawing.Point(8, 15)
-        Me.FlowLayoutPanel_garaAbilities.Margin = New System.Windows.Forms.Padding(0)
-        Me.FlowLayoutPanel_garaAbilities.MinimumSize = New System.Drawing.Size(181, 26)
-        Me.FlowLayoutPanel_garaAbilities.Name = "FlowLayoutPanel_garaAbilities"
-        Me.FlowLayoutPanel_garaAbilities.Size = New System.Drawing.Size(181, 27)
-        Me.FlowLayoutPanel_garaAbilities.TabIndex = 100
-        '
-        'CheckBox_splinterStorm
-        '
-        Me.CheckBox_splinterStorm.Location = New System.Drawing.Point(3, 3)
-        Me.CheckBox_splinterStorm.Name = "CheckBox_splinterStorm"
-        Me.CheckBox_splinterStorm.Size = New System.Drawing.Size(175, 21)
-        Me.CheckBox_splinterStorm.TabIndex = 1
-        Me.CheckBox_splinterStorm.Text = "Splinter Storm"
-        Me.CheckBox_splinterStorm.UseVisualStyleBackColor = True
-        '
-        'TabPage_abilitiesHarrow
-        '
-        Me.TabPage_abilitiesHarrow.BackColor = System.Drawing.Color.White
-        Me.TabPage_abilitiesHarrow.Controls.Add(Me.FlowLayoutPanel_harrowAbilities)
-        Me.TabPage_abilitiesHarrow.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage_abilitiesHarrow.Name = "TabPage_abilitiesHarrow"
-        Me.TabPage_abilitiesHarrow.Size = New System.Drawing.Size(759, 154)
-        Me.TabPage_abilitiesHarrow.TabIndex = 21
-        Me.TabPage_abilitiesHarrow.Text = "Harrow"
-        '
-        'FlowLayoutPanel_harrowAbilities
-        '
-        Me.FlowLayoutPanel_harrowAbilities.AutoSize = True
-        Me.FlowLayoutPanel_harrowAbilities.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.FlowLayoutPanel_harrowAbilities.Controls.Add(Me.CheckBox_wardingThurible)
-        Me.FlowLayoutPanel_harrowAbilities.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
-        Me.FlowLayoutPanel_harrowAbilities.Location = New System.Drawing.Point(8, 10)
-        Me.FlowLayoutPanel_harrowAbilities.Margin = New System.Windows.Forms.Padding(0)
-        Me.FlowLayoutPanel_harrowAbilities.MinimumSize = New System.Drawing.Size(181, 26)
-        Me.FlowLayoutPanel_harrowAbilities.Name = "FlowLayoutPanel_harrowAbilities"
-        Me.FlowLayoutPanel_harrowAbilities.Size = New System.Drawing.Size(181, 27)
-        Me.FlowLayoutPanel_harrowAbilities.TabIndex = 100
-        '
-        'CheckBox_wardingThurible
-        '
-        Me.CheckBox_wardingThurible.Location = New System.Drawing.Point(3, 3)
-        Me.CheckBox_wardingThurible.Name = "CheckBox_wardingThurible"
-        Me.CheckBox_wardingThurible.Size = New System.Drawing.Size(175, 21)
-        Me.CheckBox_wardingThurible.TabIndex = 2
-        Me.CheckBox_wardingThurible.Text = "Warding Thurible"
-        Me.CheckBox_wardingThurible.UseVisualStyleBackColor = True
-        '
-        'TabPage_abilitiesInaros
-        '
-        Me.TabPage_abilitiesInaros.BackColor = System.Drawing.Color.White
-        Me.TabPage_abilitiesInaros.Controls.Add(Me.FlowLayoutPanel_inarosAbilities)
-        Me.TabPage_abilitiesInaros.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage_abilitiesInaros.Name = "TabPage_abilitiesInaros"
-        Me.TabPage_abilitiesInaros.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_abilitiesInaros.Size = New System.Drawing.Size(759, 154)
-        Me.TabPage_abilitiesInaros.TabIndex = 3
-        Me.TabPage_abilitiesInaros.Text = "Inaros"
-        '
-        'FlowLayoutPanel_inarosAbilities
-        '
-        Me.FlowLayoutPanel_inarosAbilities.AutoSize = True
-        Me.FlowLayoutPanel_inarosAbilities.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.FlowLayoutPanel_inarosAbilities.Controls.Add(Me.CheckedInput_scarabSwarm)
-        Me.FlowLayoutPanel_inarosAbilities.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
-        Me.FlowLayoutPanel_inarosAbilities.Location = New System.Drawing.Point(8, 12)
-        Me.FlowLayoutPanel_inarosAbilities.Margin = New System.Windows.Forms.Padding(0)
-        Me.FlowLayoutPanel_inarosAbilities.MinimumSize = New System.Drawing.Size(181, 26)
-        Me.FlowLayoutPanel_inarosAbilities.Name = "FlowLayoutPanel_inarosAbilities"
-        Me.FlowLayoutPanel_inarosAbilities.Size = New System.Drawing.Size(181, 26)
-        Me.FlowLayoutPanel_inarosAbilities.TabIndex = 100
-        '
-        'CheckedInput_scarabSwarm
-        '
-        Me.CheckedInput_scarabSwarm.Location = New System.Drawing.Point(3, 3)
-        Me.CheckedInput_scarabSwarm.Maximum = 200
-        Me.CheckedInput_scarabSwarm.MaximumSize = New System.Drawing.Size(175, 20)
-        Me.CheckedInput_scarabSwarm.MinimumSize = New System.Drawing.Size(175, 20)
-        Me.CheckedInput_scarabSwarm.Name = "CheckedInput_scarabSwarm"
-        Me.CheckedInput_scarabSwarm.Size = New System.Drawing.Size(175, 20)
-        Me.CheckedInput_scarabSwarm.TabIndex = 0
-        Me.CheckedInput_scarabSwarm.Text = "Scarab Swarm"
-        '
-        'TabPage_abilitiesMesa
-        '
-        Me.TabPage_abilitiesMesa.BackColor = System.Drawing.Color.White
-        Me.TabPage_abilitiesMesa.Controls.Add(Me.FlowLayoutPanel_mesaAbilities)
-        Me.TabPage_abilitiesMesa.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage_abilitiesMesa.Name = "TabPage_abilitiesMesa"
-        Me.TabPage_abilitiesMesa.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_abilitiesMesa.Size = New System.Drawing.Size(759, 154)
-        Me.TabPage_abilitiesMesa.TabIndex = 6
-        Me.TabPage_abilitiesMesa.Text = "Mesa"
-        '
-        'FlowLayoutPanel_mesaAbilities
-        '
-        Me.FlowLayoutPanel_mesaAbilities.AutoSize = True
-        Me.FlowLayoutPanel_mesaAbilities.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.FlowLayoutPanel_mesaAbilities.Controls.Add(Me.CheckBox_shatterShield)
-        Me.FlowLayoutPanel_mesaAbilities.Controls.Add(Me.CheckBox_marksmansDexterity)
-        Me.FlowLayoutPanel_mesaAbilities.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
-        Me.FlowLayoutPanel_mesaAbilities.Location = New System.Drawing.Point(8, 12)
-        Me.FlowLayoutPanel_mesaAbilities.Margin = New System.Windows.Forms.Padding(0)
-        Me.FlowLayoutPanel_mesaAbilities.MinimumSize = New System.Drawing.Size(181, 26)
-        Me.FlowLayoutPanel_mesaAbilities.Name = "FlowLayoutPanel_mesaAbilities"
-        Me.FlowLayoutPanel_mesaAbilities.Size = New System.Drawing.Size(181, 54)
-        Me.FlowLayoutPanel_mesaAbilities.TabIndex = 100
-        '
-        'CheckBox_shatterShield
-        '
-        Me.CheckBox_shatterShield.Location = New System.Drawing.Point(3, 3)
-        Me.CheckBox_shatterShield.Name = "CheckBox_shatterShield"
-        Me.CheckBox_shatterShield.Size = New System.Drawing.Size(175, 21)
-        Me.CheckBox_shatterShield.TabIndex = 2
-        Me.CheckBox_shatterShield.Text = "Shatter Shield"
-        Me.CheckBox_shatterShield.UseVisualStyleBackColor = True
-        '
-        'CheckBox_marksmansDexterity
-        '
-        Me.CheckBox_marksmansDexterity.Location = New System.Drawing.Point(3, 30)
-        Me.CheckBox_marksmansDexterity.Name = "CheckBox_marksmansDexterity"
-        Me.CheckBox_marksmansDexterity.Size = New System.Drawing.Size(175, 21)
-        Me.CheckBox_marksmansDexterity.TabIndex = 3
-        Me.CheckBox_marksmansDexterity.Text = "Marksman's Dexterity"
-        Me.CheckBox_marksmansDexterity.UseVisualStyleBackColor = True
-        '
-        'TabPage_abilitiesMirage
-        '
-        Me.TabPage_abilitiesMirage.BackColor = System.Drawing.Color.White
-        Me.TabPage_abilitiesMirage.Controls.Add(Me.FlowLayoutPanel_mirageAbilities)
-        Me.TabPage_abilitiesMirage.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage_abilitiesMirage.Name = "TabPage_abilitiesMirage"
-        Me.TabPage_abilitiesMirage.Size = New System.Drawing.Size(759, 154)
-        Me.TabPage_abilitiesMirage.TabIndex = 13
-        Me.TabPage_abilitiesMirage.Text = "Mirage"
-        '
-        'FlowLayoutPanel_mirageAbilities
-        '
-        Me.FlowLayoutPanel_mirageAbilities.AutoSize = True
-        Me.FlowLayoutPanel_mirageAbilities.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.FlowLayoutPanel_mirageAbilities.Controls.Add(Me.CheckBox_eclipse)
-        Me.FlowLayoutPanel_mirageAbilities.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
-        Me.FlowLayoutPanel_mirageAbilities.Location = New System.Drawing.Point(8, 9)
-        Me.FlowLayoutPanel_mirageAbilities.Margin = New System.Windows.Forms.Padding(0)
-        Me.FlowLayoutPanel_mirageAbilities.MinimumSize = New System.Drawing.Size(181, 26)
-        Me.FlowLayoutPanel_mirageAbilities.Name = "FlowLayoutPanel_mirageAbilities"
-        Me.FlowLayoutPanel_mirageAbilities.Size = New System.Drawing.Size(181, 27)
-        Me.FlowLayoutPanel_mirageAbilities.TabIndex = 100
-        '
-        'CheckBox_eclipse
-        '
-        Me.CheckBox_eclipse.Location = New System.Drawing.Point(3, 3)
-        Me.CheckBox_eclipse.Name = "CheckBox_eclipse"
-        Me.CheckBox_eclipse.Size = New System.Drawing.Size(175, 21)
-        Me.CheckBox_eclipse.TabIndex = 3
-        Me.CheckBox_eclipse.Text = "Eclipse"
-        Me.CheckBox_eclipse.UseVisualStyleBackColor = True
-        '
-        'TabPage_abilitiesNekros
-        '
-        Me.TabPage_abilitiesNekros.BackColor = System.Drawing.Color.White
-        Me.TabPage_abilitiesNekros.Controls.Add(Me.FlowLayoutPanel_nekrosAbilities)
-        Me.TabPage_abilitiesNekros.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage_abilitiesNekros.Name = "TabPage_abilitiesNekros"
-        Me.TabPage_abilitiesNekros.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_abilitiesNekros.Size = New System.Drawing.Size(759, 154)
-        Me.TabPage_abilitiesNekros.TabIndex = 11
-        Me.TabPage_abilitiesNekros.Text = "Nekros"
-        '
-        'FlowLayoutPanel_nekrosAbilities
-        '
-        Me.FlowLayoutPanel_nekrosAbilities.AutoSize = True
-        Me.FlowLayoutPanel_nekrosAbilities.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.FlowLayoutPanel_nekrosAbilities.Controls.Add(Me.CheckedInput_shieldOfShadows)
-        Me.FlowLayoutPanel_nekrosAbilities.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
-        Me.FlowLayoutPanel_nekrosAbilities.Location = New System.Drawing.Point(8, 12)
-        Me.FlowLayoutPanel_nekrosAbilities.Margin = New System.Windows.Forms.Padding(0)
-        Me.FlowLayoutPanel_nekrosAbilities.MinimumSize = New System.Drawing.Size(181, 26)
-        Me.FlowLayoutPanel_nekrosAbilities.Name = "FlowLayoutPanel_nekrosAbilities"
-        Me.FlowLayoutPanel_nekrosAbilities.Size = New System.Drawing.Size(181, 26)
-        Me.FlowLayoutPanel_nekrosAbilities.TabIndex = 100
-        '
-        'CheckedInput_shieldOfShadows
-        '
-        Me.CheckedInput_shieldOfShadows.Location = New System.Drawing.Point(3, 3)
-        Me.CheckedInput_shieldOfShadows.Maximum = 7
-        Me.CheckedInput_shieldOfShadows.MaximumSize = New System.Drawing.Size(175, 20)
-        Me.CheckedInput_shieldOfShadows.MinimumSize = New System.Drawing.Size(175, 20)
-        Me.CheckedInput_shieldOfShadows.Name = "CheckedInput_shieldOfShadows"
-        Me.CheckedInput_shieldOfShadows.Size = New System.Drawing.Size(175, 20)
-        Me.CheckedInput_shieldOfShadows.TabIndex = 0
-        Me.CheckedInput_shieldOfShadows.Text = "Shield of Shadows"
-        '
-        'TabPage_abilitiesNezha
-        '
-        Me.TabPage_abilitiesNezha.BackColor = System.Drawing.Color.White
-        Me.TabPage_abilitiesNezha.Controls.Add(Me.FlowLayoutPanel_nezhaAbilities)
-        Me.TabPage_abilitiesNezha.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage_abilitiesNezha.Name = "TabPage_abilitiesNezha"
-        Me.TabPage_abilitiesNezha.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_abilitiesNezha.Size = New System.Drawing.Size(759, 154)
-        Me.TabPage_abilitiesNezha.TabIndex = 4
-        Me.TabPage_abilitiesNezha.Text = "Nezha"
-        '
-        'FlowLayoutPanel_nezhaAbilities
-        '
-        Me.FlowLayoutPanel_nezhaAbilities.AutoSize = True
-        Me.FlowLayoutPanel_nezhaAbilities.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.FlowLayoutPanel_nezhaAbilities.Controls.Add(Me.CheckBox_wardingHalo)
-        Me.FlowLayoutPanel_nezhaAbilities.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
-        Me.FlowLayoutPanel_nezhaAbilities.Location = New System.Drawing.Point(8, 14)
-        Me.FlowLayoutPanel_nezhaAbilities.Margin = New System.Windows.Forms.Padding(0)
-        Me.FlowLayoutPanel_nezhaAbilities.MinimumSize = New System.Drawing.Size(181, 26)
-        Me.FlowLayoutPanel_nezhaAbilities.Name = "FlowLayoutPanel_nezhaAbilities"
-        Me.FlowLayoutPanel_nezhaAbilities.Size = New System.Drawing.Size(181, 27)
-        Me.FlowLayoutPanel_nezhaAbilities.TabIndex = 100
-        '
-        'CheckBox_wardingHalo
-        '
-        Me.CheckBox_wardingHalo.Location = New System.Drawing.Point(3, 3)
-        Me.CheckBox_wardingHalo.Name = "CheckBox_wardingHalo"
-        Me.CheckBox_wardingHalo.Size = New System.Drawing.Size(175, 21)
-        Me.CheckBox_wardingHalo.TabIndex = 2
-        Me.CheckBox_wardingHalo.Text = "Warding Halo"
-        Me.CheckBox_wardingHalo.UseVisualStyleBackColor = True
-        '
-        'TabPage_abilitiesNidus
-        '
-        Me.TabPage_abilitiesNidus.BackColor = System.Drawing.Color.White
-        Me.TabPage_abilitiesNidus.Controls.Add(Me.FlowLayoutPanel_nidusAbilities)
-        Me.TabPage_abilitiesNidus.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage_abilitiesNidus.Name = "TabPage_abilitiesNidus"
-        Me.TabPage_abilitiesNidus.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_abilitiesNidus.Size = New System.Drawing.Size(759, 154)
-        Me.TabPage_abilitiesNidus.TabIndex = 9
-        Me.TabPage_abilitiesNidus.Text = "Nidus"
-        '
-        'FlowLayoutPanel_nidusAbilities
-        '
-        Me.FlowLayoutPanel_nidusAbilities.AutoSize = True
-        Me.FlowLayoutPanel_nidusAbilities.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.FlowLayoutPanel_nidusAbilities.Controls.Add(Me.CheckBox_parasiticLink)
-        Me.FlowLayoutPanel_nidusAbilities.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
-        Me.FlowLayoutPanel_nidusAbilities.Location = New System.Drawing.Point(8, 15)
-        Me.FlowLayoutPanel_nidusAbilities.Margin = New System.Windows.Forms.Padding(0)
-        Me.FlowLayoutPanel_nidusAbilities.MinimumSize = New System.Drawing.Size(181, 26)
-        Me.FlowLayoutPanel_nidusAbilities.Name = "FlowLayoutPanel_nidusAbilities"
-        Me.FlowLayoutPanel_nidusAbilities.Size = New System.Drawing.Size(181, 27)
-        Me.FlowLayoutPanel_nidusAbilities.TabIndex = 100
-        '
-        'CheckBox_parasiticLink
-        '
-        Me.CheckBox_parasiticLink.Location = New System.Drawing.Point(3, 3)
-        Me.CheckBox_parasiticLink.Name = "CheckBox_parasiticLink"
-        Me.CheckBox_parasiticLink.Size = New System.Drawing.Size(175, 21)
-        Me.CheckBox_parasiticLink.TabIndex = 38
-        Me.CheckBox_parasiticLink.Text = "Parasitic Link"
-        Me.CheckBox_parasiticLink.UseVisualStyleBackColor = True
-        '
-        'TabPage_abilitiesNova
-        '
-        Me.TabPage_abilitiesNova.BackColor = System.Drawing.Color.White
-        Me.TabPage_abilitiesNova.Controls.Add(Me.FlowLayoutPanel_novaAbilities)
-        Me.TabPage_abilitiesNova.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage_abilitiesNova.Name = "TabPage_abilitiesNova"
-        Me.TabPage_abilitiesNova.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_abilitiesNova.Size = New System.Drawing.Size(759, 154)
-        Me.TabPage_abilitiesNova.TabIndex = 20
-        Me.TabPage_abilitiesNova.Text = "Nova"
-        '
-        'FlowLayoutPanel_novaAbilities
-        '
-        Me.FlowLayoutPanel_novaAbilities.AutoSize = True
-        Me.FlowLayoutPanel_novaAbilities.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.FlowLayoutPanel_novaAbilities.Controls.Add(Me.CheckedInput_nullStar)
-        Me.FlowLayoutPanel_novaAbilities.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
-        Me.FlowLayoutPanel_novaAbilities.Location = New System.Drawing.Point(8, 14)
-        Me.FlowLayoutPanel_novaAbilities.Margin = New System.Windows.Forms.Padding(0)
-        Me.FlowLayoutPanel_novaAbilities.MinimumSize = New System.Drawing.Size(181, 26)
-        Me.FlowLayoutPanel_novaAbilities.Name = "FlowLayoutPanel_novaAbilities"
-        Me.FlowLayoutPanel_novaAbilities.Size = New System.Drawing.Size(181, 26)
-        Me.FlowLayoutPanel_novaAbilities.TabIndex = 100
-        '
-        'CheckedInput_nullStar
-        '
-        Me.CheckedInput_nullStar.Location = New System.Drawing.Point(3, 3)
-        Me.CheckedInput_nullStar.Maximum = 18
-        Me.CheckedInput_nullStar.MaximumSize = New System.Drawing.Size(175, 20)
-        Me.CheckedInput_nullStar.MinimumSize = New System.Drawing.Size(175, 20)
-        Me.CheckedInput_nullStar.Name = "CheckedInput_nullStar"
-        Me.CheckedInput_nullStar.Size = New System.Drawing.Size(175, 20)
-        Me.CheckedInput_nullStar.TabIndex = 0
-        Me.CheckedInput_nullStar.Text = "Null Star"
-        '
-        'TabPage_abilitiesOberon
-        '
-        Me.TabPage_abilitiesOberon.BackColor = System.Drawing.Color.White
-        Me.TabPage_abilitiesOberon.Controls.Add(Me.FlowLayoutPanel_oberonAbilities)
-        Me.TabPage_abilitiesOberon.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage_abilitiesOberon.Name = "TabPage_abilitiesOberon"
-        Me.TabPage_abilitiesOberon.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_abilitiesOberon.Size = New System.Drawing.Size(759, 154)
-        Me.TabPage_abilitiesOberon.TabIndex = 5
-        Me.TabPage_abilitiesOberon.Text = "Oberon"
-        '
-        'FlowLayoutPanel_oberonAbilities
-        '
-        Me.FlowLayoutPanel_oberonAbilities.AutoSize = True
-        Me.FlowLayoutPanel_oberonAbilities.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.FlowLayoutPanel_oberonAbilities.Controls.Add(Me.CheckBox_ironRenewal)
-        Me.FlowLayoutPanel_oberonAbilities.Controls.Add(Me.CheckBox_hallowedReckoning)
-        Me.FlowLayoutPanel_oberonAbilities.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
-        Me.FlowLayoutPanel_oberonAbilities.Location = New System.Drawing.Point(8, 14)
-        Me.FlowLayoutPanel_oberonAbilities.Margin = New System.Windows.Forms.Padding(0)
-        Me.FlowLayoutPanel_oberonAbilities.MinimumSize = New System.Drawing.Size(181, 26)
-        Me.FlowLayoutPanel_oberonAbilities.Name = "FlowLayoutPanel_oberonAbilities"
-        Me.FlowLayoutPanel_oberonAbilities.Size = New System.Drawing.Size(181, 54)
-        Me.FlowLayoutPanel_oberonAbilities.TabIndex = 100
-        '
-        'CheckBox_ironRenewal
-        '
-        Me.CheckBox_ironRenewal.Location = New System.Drawing.Point(3, 3)
-        Me.CheckBox_ironRenewal.Name = "CheckBox_ironRenewal"
-        Me.CheckBox_ironRenewal.Size = New System.Drawing.Size(175, 21)
-        Me.CheckBox_ironRenewal.TabIndex = 3
-        Me.CheckBox_ironRenewal.Text = "Iron Renewal"
-        Me.CheckBox_ironRenewal.UseVisualStyleBackColor = True
-        '
-        'CheckBox_hallowedReckoning
-        '
-        Me.CheckBox_hallowedReckoning.Location = New System.Drawing.Point(3, 30)
-        Me.CheckBox_hallowedReckoning.Name = "CheckBox_hallowedReckoning"
-        Me.CheckBox_hallowedReckoning.Size = New System.Drawing.Size(175, 21)
-        Me.CheckBox_hallowedReckoning.TabIndex = 4
-        Me.CheckBox_hallowedReckoning.Text = "Hallowed Reckoning"
-        Me.CheckBox_hallowedReckoning.UseVisualStyleBackColor = True
-        '
-        'TabPage_abilitiesOctavia
-        '
-        Me.TabPage_abilitiesOctavia.BackColor = System.Drawing.Color.White
-        Me.TabPage_abilitiesOctavia.Controls.Add(Me.FlowLayoutPanel_octaviaAbilities)
-        Me.TabPage_abilitiesOctavia.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage_abilitiesOctavia.Name = "TabPage_abilitiesOctavia"
-        Me.TabPage_abilitiesOctavia.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_abilitiesOctavia.Size = New System.Drawing.Size(759, 154)
-        Me.TabPage_abilitiesOctavia.TabIndex = 15
-        Me.TabPage_abilitiesOctavia.Text = "Octavia"
-        '
-        'FlowLayoutPanel_octaviaAbilities
-        '
-        Me.FlowLayoutPanel_octaviaAbilities.AutoSize = True
-        Me.FlowLayoutPanel_octaviaAbilities.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.FlowLayoutPanel_octaviaAbilities.Controls.Add(Me.CheckBox_metronome)
-        Me.FlowLayoutPanel_octaviaAbilities.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
-        Me.FlowLayoutPanel_octaviaAbilities.Location = New System.Drawing.Point(8, 15)
-        Me.FlowLayoutPanel_octaviaAbilities.Margin = New System.Windows.Forms.Padding(0)
-        Me.FlowLayoutPanel_octaviaAbilities.MinimumSize = New System.Drawing.Size(181, 26)
-        Me.FlowLayoutPanel_octaviaAbilities.Name = "FlowLayoutPanel_octaviaAbilities"
-        Me.FlowLayoutPanel_octaviaAbilities.Size = New System.Drawing.Size(181, 27)
-        Me.FlowLayoutPanel_octaviaAbilities.TabIndex = 100
-        '
-        'CheckBox_metronome
-        '
-        Me.CheckBox_metronome.Location = New System.Drawing.Point(3, 3)
-        Me.CheckBox_metronome.Name = "CheckBox_metronome"
-        Me.CheckBox_metronome.Size = New System.Drawing.Size(175, 21)
-        Me.CheckBox_metronome.TabIndex = 4
-        Me.CheckBox_metronome.Text = "Metronome"
-        Me.CheckBox_metronome.UseVisualStyleBackColor = True
-        '
-        'TabPage_abilitiesRhino
-        '
-        Me.TabPage_abilitiesRhino.BackColor = System.Drawing.Color.White
-        Me.TabPage_abilitiesRhino.Controls.Add(Me.FlowLayoutPanel_rhinoAbilities)
-        Me.TabPage_abilitiesRhino.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage_abilitiesRhino.Name = "TabPage_abilitiesRhino"
-        Me.TabPage_abilitiesRhino.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_abilitiesRhino.Size = New System.Drawing.Size(759, 154)
-        Me.TabPage_abilitiesRhino.TabIndex = 7
-        Me.TabPage_abilitiesRhino.Text = "Rhino"
-        '
-        'FlowLayoutPanel_rhinoAbilities
-        '
-        Me.FlowLayoutPanel_rhinoAbilities.AutoSize = True
-        Me.FlowLayoutPanel_rhinoAbilities.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.FlowLayoutPanel_rhinoAbilities.Controls.Add(Me.CheckedInput_ironSkin)
-        Me.FlowLayoutPanel_rhinoAbilities.Controls.Add(Me.CheckedInput_ironcladCharge)
-        Me.FlowLayoutPanel_rhinoAbilities.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
-        Me.FlowLayoutPanel_rhinoAbilities.Location = New System.Drawing.Point(8, 14)
-        Me.FlowLayoutPanel_rhinoAbilities.Margin = New System.Windows.Forms.Padding(0)
-        Me.FlowLayoutPanel_rhinoAbilities.MinimumSize = New System.Drawing.Size(181, 26)
-        Me.FlowLayoutPanel_rhinoAbilities.Name = "FlowLayoutPanel_rhinoAbilities"
-        Me.FlowLayoutPanel_rhinoAbilities.Size = New System.Drawing.Size(181, 52)
-        Me.FlowLayoutPanel_rhinoAbilities.TabIndex = 100
-        '
-        'CheckedInput_ironSkin
-        '
-        Me.CheckedInput_ironSkin.Location = New System.Drawing.Point(3, 3)
-        Me.CheckedInput_ironSkin.Maximum = 100000000
-        Me.CheckedInput_ironSkin.MaximumSize = New System.Drawing.Size(175, 20)
-        Me.CheckedInput_ironSkin.MinimumSize = New System.Drawing.Size(175, 20)
-        Me.CheckedInput_ironSkin.Name = "CheckedInput_ironSkin"
-        Me.CheckedInput_ironSkin.Size = New System.Drawing.Size(175, 20)
-        Me.CheckedInput_ironSkin.TabIndex = 0
-        Me.CheckedInput_ironSkin.Text = "Iron Skin"
-        '
-        'CheckedInput_ironcladCharge
-        '
-        Me.CheckedInput_ironcladCharge.Location = New System.Drawing.Point(3, 29)
-        Me.CheckedInput_ironcladCharge.Maximum = 100
-        Me.CheckedInput_ironcladCharge.MaximumSize = New System.Drawing.Size(175, 20)
-        Me.CheckedInput_ironcladCharge.MinimumSize = New System.Drawing.Size(175, 20)
-        Me.CheckedInput_ironcladCharge.Name = "CheckedInput_ironcladCharge"
-        Me.CheckedInput_ironcladCharge.Size = New System.Drawing.Size(175, 20)
-        Me.CheckedInput_ironcladCharge.TabIndex = 1
-        Me.CheckedInput_ironcladCharge.Text = "Ironclad Charge"
-        '
-        'TabPage_abilitiesTitania
-        '
-        Me.TabPage_abilitiesTitania.BackColor = System.Drawing.Color.White
-        Me.TabPage_abilitiesTitania.Controls.Add(Me.FlowLayoutPanel_titaniaAbilities)
-        Me.TabPage_abilitiesTitania.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage_abilitiesTitania.Name = "TabPage_abilitiesTitania"
-        Me.TabPage_abilitiesTitania.Size = New System.Drawing.Size(759, 154)
-        Me.TabPage_abilitiesTitania.TabIndex = 16
-        Me.TabPage_abilitiesTitania.Text = "Titania"
-        '
-        'FlowLayoutPanel_titaniaAbilities
-        '
-        Me.FlowLayoutPanel_titaniaAbilities.AutoSize = True
-        Me.FlowLayoutPanel_titaniaAbilities.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.FlowLayoutPanel_titaniaAbilities.Controls.Add(Me.CheckedInput_thorns)
-        Me.FlowLayoutPanel_titaniaAbilities.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
-        Me.FlowLayoutPanel_titaniaAbilities.Location = New System.Drawing.Point(8, 11)
-        Me.FlowLayoutPanel_titaniaAbilities.Margin = New System.Windows.Forms.Padding(0)
-        Me.FlowLayoutPanel_titaniaAbilities.MinimumSize = New System.Drawing.Size(181, 26)
-        Me.FlowLayoutPanel_titaniaAbilities.Name = "FlowLayoutPanel_titaniaAbilities"
-        Me.FlowLayoutPanel_titaniaAbilities.Size = New System.Drawing.Size(181, 26)
-        Me.FlowLayoutPanel_titaniaAbilities.TabIndex = 100
-        '
-        'CheckedInput_thorns
-        '
-        Me.CheckedInput_thorns.Location = New System.Drawing.Point(3, 3)
-        Me.CheckedInput_thorns.Maximum = 25
-        Me.CheckedInput_thorns.MaximumSize = New System.Drawing.Size(175, 20)
-        Me.CheckedInput_thorns.MinimumSize = New System.Drawing.Size(175, 20)
-        Me.CheckedInput_thorns.Name = "CheckedInput_thorns"
-        Me.CheckedInput_thorns.Size = New System.Drawing.Size(175, 20)
-        Me.CheckedInput_thorns.TabIndex = 0
-        Me.CheckedInput_thorns.Text = "Thorns"
-        '
-        'TabPage_abilitiesTrinity
-        '
-        Me.TabPage_abilitiesTrinity.BackColor = System.Drawing.Color.White
-        Me.TabPage_abilitiesTrinity.Controls.Add(Me.FlowLayoutPanel_trinityAbilities)
-        Me.TabPage_abilitiesTrinity.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage_abilitiesTrinity.Name = "TabPage_abilitiesTrinity"
-        Me.TabPage_abilitiesTrinity.Size = New System.Drawing.Size(759, 154)
-        Me.TabPage_abilitiesTrinity.TabIndex = 12
-        Me.TabPage_abilitiesTrinity.Text = "Trinity"
-        '
-        'FlowLayoutPanel_trinityAbilities
-        '
-        Me.FlowLayoutPanel_trinityAbilities.AutoSize = True
-        Me.FlowLayoutPanel_trinityAbilities.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.FlowLayoutPanel_trinityAbilities.Controls.Add(Me.CheckBox_link)
-        Me.FlowLayoutPanel_trinityAbilities.Controls.Add(Me.CheckBox_blessing)
-        Me.FlowLayoutPanel_trinityAbilities.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
-        Me.FlowLayoutPanel_trinityAbilities.Location = New System.Drawing.Point(8, 14)
-        Me.FlowLayoutPanel_trinityAbilities.Margin = New System.Windows.Forms.Padding(0)
-        Me.FlowLayoutPanel_trinityAbilities.MinimumSize = New System.Drawing.Size(181, 26)
-        Me.FlowLayoutPanel_trinityAbilities.Name = "FlowLayoutPanel_trinityAbilities"
-        Me.FlowLayoutPanel_trinityAbilities.Size = New System.Drawing.Size(181, 54)
-        Me.FlowLayoutPanel_trinityAbilities.TabIndex = 100
-        '
-        'CheckBox_link
-        '
-        Me.CheckBox_link.Location = New System.Drawing.Point(3, 3)
-        Me.CheckBox_link.Name = "CheckBox_link"
-        Me.CheckBox_link.Size = New System.Drawing.Size(175, 21)
-        Me.CheckBox_link.TabIndex = 39
-        Me.CheckBox_link.Text = "Link"
-        Me.CheckBox_link.UseVisualStyleBackColor = True
-        '
-        'CheckBox_blessing
-        '
-        Me.CheckBox_blessing.Location = New System.Drawing.Point(3, 30)
-        Me.CheckBox_blessing.Name = "CheckBox_blessing"
-        Me.CheckBox_blessing.Size = New System.Drawing.Size(175, 21)
-        Me.CheckBox_blessing.TabIndex = 41
-        Me.CheckBox_blessing.Text = "Blessing"
-        Me.CheckBox_blessing.UseVisualStyleBackColor = True
-        '
-        'TabPage_abilitiesValkyr
-        '
-        Me.TabPage_abilitiesValkyr.BackColor = System.Drawing.Color.White
-        Me.TabPage_abilitiesValkyr.Controls.Add(Me.FlowLayoutPanel_valkyrAbilities)
-        Me.TabPage_abilitiesValkyr.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage_abilitiesValkyr.Name = "TabPage_abilitiesValkyr"
-        Me.TabPage_abilitiesValkyr.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_abilitiesValkyr.Size = New System.Drawing.Size(759, 154)
-        Me.TabPage_abilitiesValkyr.TabIndex = 8
-        Me.TabPage_abilitiesValkyr.Text = "Valkyr"
-        '
-        'FlowLayoutPanel_valkyrAbilities
-        '
-        Me.FlowLayoutPanel_valkyrAbilities.AutoSize = True
-        Me.FlowLayoutPanel_valkyrAbilities.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.FlowLayoutPanel_valkyrAbilities.Controls.Add(Me.CheckBox_warcry)
-        Me.FlowLayoutPanel_valkyrAbilities.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
-        Me.FlowLayoutPanel_valkyrAbilities.Location = New System.Drawing.Point(8, 15)
-        Me.FlowLayoutPanel_valkyrAbilities.Margin = New System.Windows.Forms.Padding(0)
-        Me.FlowLayoutPanel_valkyrAbilities.MinimumSize = New System.Drawing.Size(181, 26)
-        Me.FlowLayoutPanel_valkyrAbilities.Name = "FlowLayoutPanel_valkyrAbilities"
-        Me.FlowLayoutPanel_valkyrAbilities.Size = New System.Drawing.Size(181, 27)
-        Me.FlowLayoutPanel_valkyrAbilities.TabIndex = 100
-        '
-        'CheckBox_warcry
-        '
-        Me.CheckBox_warcry.Location = New System.Drawing.Point(3, 3)
-        Me.CheckBox_warcry.Name = "CheckBox_warcry"
-        Me.CheckBox_warcry.Size = New System.Drawing.Size(175, 21)
-        Me.CheckBox_warcry.TabIndex = 5
-        Me.CheckBox_warcry.Text = "Warcry"
-        Me.CheckBox_warcry.UseVisualStyleBackColor = True
-        '
-        'TabPage_abilitiesWisp
-        '
-        Me.TabPage_abilitiesWisp.BackColor = System.Drawing.Color.White
-        Me.TabPage_abilitiesWisp.Controls.Add(Me.FlowLayoutPanel_wispAbilities)
-        Me.TabPage_abilitiesWisp.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage_abilitiesWisp.Name = "TabPage_abilitiesWisp"
-        Me.TabPage_abilitiesWisp.Size = New System.Drawing.Size(759, 154)
-        Me.TabPage_abilitiesWisp.TabIndex = 23
-        Me.TabPage_abilitiesWisp.Text = "Wisp"
-        '
-        'FlowLayoutPanel_wispAbilities
-        '
-        Me.FlowLayoutPanel_wispAbilities.AutoSize = True
-        Me.FlowLayoutPanel_wispAbilities.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.FlowLayoutPanel_wispAbilities.Controls.Add(Me.CheckBox_vitalityMoteReservoirs)
-        Me.FlowLayoutPanel_wispAbilities.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
-        Me.FlowLayoutPanel_wispAbilities.Location = New System.Drawing.Point(8, 12)
-        Me.FlowLayoutPanel_wispAbilities.Margin = New System.Windows.Forms.Padding(0)
-        Me.FlowLayoutPanel_wispAbilities.MinimumSize = New System.Drawing.Size(181, 26)
-        Me.FlowLayoutPanel_wispAbilities.Name = "FlowLayoutPanel_wispAbilities"
-        Me.FlowLayoutPanel_wispAbilities.Size = New System.Drawing.Size(181, 27)
-        Me.FlowLayoutPanel_wispAbilities.TabIndex = 100
-        '
-        'CheckBox_vitalityMoteReservoirs
-        '
-        Me.CheckBox_vitalityMoteReservoirs.Location = New System.Drawing.Point(3, 3)
-        Me.CheckBox_vitalityMoteReservoirs.Name = "CheckBox_vitalityMoteReservoirs"
-        Me.CheckBox_vitalityMoteReservoirs.Size = New System.Drawing.Size(175, 21)
-        Me.CheckBox_vitalityMoteReservoirs.TabIndex = 6
-        Me.CheckBox_vitalityMoteReservoirs.Text = "Vitality Mote"
-        Me.CheckBox_vitalityMoteReservoirs.UseVisualStyleBackColor = True
-        '
-        'FlowLayoutPanel_abilitiesPanelTemplate
-        '
-        Me.FlowLayoutPanel_abilitiesPanelTemplate.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.FlowLayoutPanel_abilitiesPanelTemplate.AutoSize = True
-        Me.FlowLayoutPanel_abilitiesPanelTemplate.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.FlowLayoutPanel_abilitiesPanelTemplate.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
-        Me.FlowLayoutPanel_abilitiesPanelTemplate.Location = New System.Drawing.Point(561, 18)
-        Me.FlowLayoutPanel_abilitiesPanelTemplate.Margin = New System.Windows.Forms.Padding(0)
-        Me.FlowLayoutPanel_abilitiesPanelTemplate.MinimumSize = New System.Drawing.Size(181, 26)
-        Me.FlowLayoutPanel_abilitiesPanelTemplate.Name = "FlowLayoutPanel_abilitiesPanelTemplate"
-        Me.FlowLayoutPanel_abilitiesPanelTemplate.Size = New System.Drawing.Size(181, 26)
-        Me.FlowLayoutPanel_abilitiesPanelTemplate.TabIndex = 99
-        '
-        'RichTextBox1
-        '
-        Me.RichTextBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.RichTextBox1.Location = New System.Drawing.Point(3, 3)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(516, 239)
-        Me.RichTextBox1.TabIndex = 98
-        Me.RichTextBox1.Text = "TODO:" & Global.Microsoft.VisualBasic.ChrW(10) & "  -  Add missing mods" & Global.Microsoft.VisualBasic.ChrW(10) & "  -  Add Moa Pets" & Global.Microsoft.VisualBasic.ChrW(10) & "  -  Archwing"
-        '
-        'Label_companions
-        '
-        Me.Label_companions.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Label_companions.AutoSize = True
-        Me.Label_companions.Location = New System.Drawing.Point(326, -1428)
-        Me.Label_companions.Name = "Label_companions"
-        Me.Label_companions.Size = New System.Drawing.Size(47, 13)
-        Me.Label_companions.TabIndex = 97
-        Me.Label_companions.Text = "pet stats"
-        '
-        'Icons
-        '
-        Me.Icons.ImageStream = CType(resources.GetObject("Icons.ImageStream"), System.Windows.Forms.ImageListStreamer)
-        Me.Icons.TransparentColor = System.Drawing.Color.Transparent
-        Me.Icons.Images.SetKeyName(0, "warframe.png")
-        Me.Icons.Images.SetKeyName(1, "sentinel.png")
-        Me.Icons.Images.SetKeyName(2, "arcane.png")
-        Me.Icons.Images.SetKeyName(3, "archwing.png")
-        Me.Icons.Images.SetKeyName(4, "alert.png")
-        '
-        'Label_author
-        '
-        Me.Label_author.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label_author.AutoSize = True
-        Me.Label_author.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Label_author.Location = New System.Drawing.Point(615, 7)
-        Me.Label_author.Name = "Label_author"
-        Me.Label_author.Size = New System.Drawing.Size(164, 13)
-        Me.Label_author.TabIndex = 1
-        Me.Label_author.Text = "Made with        By /u/xEpicBradx"
-        '
-        'Label_love
-        '
-        Me.Label_love.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label_love.AutoSize = True
-        Me.Label_love.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.Label_love.ForeColor = System.Drawing.Color.Red
-        Me.Label_love.Location = New System.Drawing.Point(668, 6)
-        Me.Label_love.Name = "Label_love"
-        Me.Label_love.Size = New System.Drawing.Size(22, 15)
-        Me.Label_love.TabIndex = 2
-        Me.Label_love.Text = "♥"
-        '
         'CheckedInput_argonPlating
         '
         Me.CheckedInput_argonPlating.Location = New System.Drawing.Point(6, 19)
@@ -3453,14 +3478,149 @@ Partial Class Form_main
         Me.CheckedInput_energyInversion.TabIndex = 18
         Me.CheckedInput_energyInversion.Text = "Energy Inversion"
         '
+        'CheckedGroupBox_archwingMiscellaneous
+        '
+        Me.CheckedGroupBox_archwingMiscellaneous.AutoSize = True
+        Me.CheckedGroupBox_archwingMiscellaneous.Controls.Add(Me.CheckedInput_archwingCoactionDrift)
+        Me.CheckedGroupBox_archwingMiscellaneous.Location = New System.Drawing.Point(3, 207)
+        Me.CheckedGroupBox_archwingMiscellaneous.Name = "CheckedGroupBox_archwingMiscellaneous"
+        Me.CheckedGroupBox_archwingMiscellaneous.Size = New System.Drawing.Size(187, 58)
+        Me.CheckedGroupBox_archwingMiscellaneous.TabIndex = 1
+        Me.CheckedGroupBox_archwingMiscellaneous.TabStop = False
+        Me.CheckedGroupBox_archwingMiscellaneous.Text = "Miscellaneous"
+        '
+        'CheckedInput_archwingCoactionDrift
+        '
+        Me.CheckedInput_archwingCoactionDrift.Location = New System.Drawing.Point(6, 19)
+        Me.CheckedInput_archwingCoactionDrift.Maximum = 5
+        Me.CheckedInput_archwingCoactionDrift.MaximumSize = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_archwingCoactionDrift.MinimumSize = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_archwingCoactionDrift.Name = "CheckedInput_archwingCoactionDrift"
+        Me.CheckedInput_archwingCoactionDrift.Size = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_archwingCoactionDrift.TabIndex = 3
+        Me.CheckedInput_archwingCoactionDrift.Text = "Coaction Drift"
+        '
+        'MaxValueToggle_archwings
+        '
+        Me.MaxValueToggle_archwings.Dock = System.Windows.Forms.DockStyle.Right
+        Me.MaxValueToggle_archwings.Location = New System.Drawing.Point(640, 5)
+        Me.MaxValueToggle_archwings.Margin = New System.Windows.Forms.Padding(3, 5, 3, 3)
+        Me.MaxValueToggle_archwings.MaximumSize = New System.Drawing.Size(130, 17)
+        Me.MaxValueToggle_archwings.MinimumSize = New System.Drawing.Size(130, 17)
+        Me.MaxValueToggle_archwings.Name = "MaxValueToggle_archwings"
+        Me.MaxValueToggle_archwings.Size = New System.Drawing.Size(130, 17)
+        Me.MaxValueToggle_archwings.TabIndex = 125
+        Me.MaxValueToggle_archwings.Text = "Default to Max Values"
+        '
+        'CheckedInput_rubble
+        '
+        Me.CheckedInput_rubble.Location = New System.Drawing.Point(3, 3)
+        Me.CheckedInput_rubble.Maximum = 1500
+        Me.CheckedInput_rubble.MaximumSize = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_rubble.MinimumSize = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_rubble.Name = "CheckedInput_rubble"
+        Me.CheckedInput_rubble.Size = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_rubble.TabIndex = 2
+        Me.CheckedInput_rubble.Text = "Rubble"
+        '
+        'CheckedInput_restraint
+        '
+        Me.CheckedInput_restraint.Location = New System.Drawing.Point(3, 3)
+        Me.CheckedInput_restraint.Maximum = 100
+        Me.CheckedInput_restraint.MaximumSize = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_restraint.MinimumSize = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_restraint.Name = "CheckedInput_restraint"
+        Me.CheckedInput_restraint.Size = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_restraint.TabIndex = 44
+        Me.CheckedInput_restraint.Text = "Restraint"
+        Me.CheckedInput_restraint.Value = 100
+        '
+        'CheckedInput_icyAvalanche
+        '
+        Me.CheckedInput_icyAvalanche.Location = New System.Drawing.Point(3, 3)
+        Me.CheckedInput_icyAvalanche.Maximum = 200
+        Me.CheckedInput_icyAvalanche.MaximumSize = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_icyAvalanche.MinimumSize = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_icyAvalanche.Name = "CheckedInput_icyAvalanche"
+        Me.CheckedInput_icyAvalanche.Size = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_icyAvalanche.TabIndex = 0
+        Me.CheckedInput_icyAvalanche.Text = "Icy Avalanche"
+        '
+        'CheckedInput_scarabSwarm
+        '
+        Me.CheckedInput_scarabSwarm.Location = New System.Drawing.Point(3, 3)
+        Me.CheckedInput_scarabSwarm.Maximum = 200
+        Me.CheckedInput_scarabSwarm.MaximumSize = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_scarabSwarm.MinimumSize = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_scarabSwarm.Name = "CheckedInput_scarabSwarm"
+        Me.CheckedInput_scarabSwarm.Size = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_scarabSwarm.TabIndex = 0
+        Me.CheckedInput_scarabSwarm.Text = "Scarab Swarm"
+        '
+        'CheckedInput_shieldOfShadows
+        '
+        Me.CheckedInput_shieldOfShadows.Location = New System.Drawing.Point(3, 3)
+        Me.CheckedInput_shieldOfShadows.Maximum = 7
+        Me.CheckedInput_shieldOfShadows.MaximumSize = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_shieldOfShadows.MinimumSize = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_shieldOfShadows.Name = "CheckedInput_shieldOfShadows"
+        Me.CheckedInput_shieldOfShadows.Size = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_shieldOfShadows.TabIndex = 0
+        Me.CheckedInput_shieldOfShadows.Text = "Shield of Shadows"
+        '
+        'CheckedInput_nullStar
+        '
+        Me.CheckedInput_nullStar.Location = New System.Drawing.Point(3, 3)
+        Me.CheckedInput_nullStar.Maximum = 18
+        Me.CheckedInput_nullStar.MaximumSize = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_nullStar.MinimumSize = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_nullStar.Name = "CheckedInput_nullStar"
+        Me.CheckedInput_nullStar.Size = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_nullStar.TabIndex = 0
+        Me.CheckedInput_nullStar.Text = "Null Star"
+        '
+        'CheckedInput_ironSkin
+        '
+        Me.CheckedInput_ironSkin.Location = New System.Drawing.Point(3, 3)
+        Me.CheckedInput_ironSkin.Maximum = 100000000
+        Me.CheckedInput_ironSkin.MaximumSize = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_ironSkin.MinimumSize = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_ironSkin.Name = "CheckedInput_ironSkin"
+        Me.CheckedInput_ironSkin.Size = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_ironSkin.TabIndex = 0
+        Me.CheckedInput_ironSkin.Text = "Iron Skin"
+        '
+        'CheckedInput_ironcladCharge
+        '
+        Me.CheckedInput_ironcladCharge.Location = New System.Drawing.Point(3, 29)
+        Me.CheckedInput_ironcladCharge.Maximum = 100
+        Me.CheckedInput_ironcladCharge.MaximumSize = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_ironcladCharge.MinimumSize = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_ironcladCharge.Name = "CheckedInput_ironcladCharge"
+        Me.CheckedInput_ironcladCharge.Size = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_ironcladCharge.TabIndex = 1
+        Me.CheckedInput_ironcladCharge.Text = "Ironclad Charge"
+        '
+        'CheckedInput_thorns
+        '
+        Me.CheckedInput_thorns.Location = New System.Drawing.Point(3, 3)
+        Me.CheckedInput_thorns.Maximum = 25
+        Me.CheckedInput_thorns.MaximumSize = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_thorns.MinimumSize = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_thorns.Name = "CheckedInput_thorns"
+        Me.CheckedInput_thorns.Size = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_thorns.TabIndex = 0
+        Me.CheckedInput_thorns.Text = "Thorns"
+        '
         'Form_main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(787, 607)
+        Me.ClientSize = New System.Drawing.Size(787, 751)
         Me.Controls.Add(Me.Label_love)
         Me.Controls.Add(Me.Label_author)
         Me.Controls.Add(Me.TabControl_main)
+        Me.DoubleBuffered = True
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "Form_main"
@@ -3474,34 +3634,12 @@ Partial Class Form_main
         Me.FlowLayoutPanel_warframeStatsLayout.ResumeLayout(False)
         Me.FlowLayoutPanel_warframeModsLayout.ResumeLayout(False)
         Me.FlowLayoutPanel_warframeModsLayout.PerformLayout()
-        Me.CheckedGroupBox_aura.ResumeLayout(False)
-        Me.CheckedGroupBox_aura.PerformLayout()
-        Me.CheckedGroupBox_survivability.ResumeLayout(False)
-        Me.CheckedGroupBox_survivability.PerformLayout()
-        Me.CheckedGroupBox_miscellaneous.ResumeLayout(False)
-        Me.CheckedGroupBox_miscellaneous.PerformLayout()
-        Me.CheckedGroupBox_powerStrength.ResumeLayout(False)
-        Me.CheckedGroupBox_powerStrength.PerformLayout()
-        Me.CheckedGroupBox_dragonKeys.ResumeLayout(False)
-        Me.CheckedGroupBox_dragonKeys.PerformLayout()
-        Me.CheckedGroupBox_missionModifiers.ResumeLayout(False)
-        Me.CheckedGroupBox_missionModifiers.PerformLayout()
-        Me.CheckedGroupBox_blocking.ResumeLayout(False)
-        Me.CheckedGroupBox_blocking.PerformLayout()
-        Me.CheckedGroupBox_focus.ResumeLayout(False)
-        Me.CheckedGroupBox_focus.PerformLayout()
-        Me.CheckedGroupBox_specialEffects.ResumeLayout(False)
-        Me.CheckedGroupBox_specialEffects.PerformLayout()
-        Me.CheckedGroupBox_arcanes.ResumeLayout(False)
-        Me.CheckedGroupBox_arcanes.PerformLayout()
         Me.TableLayoutPanel_warframeTopLayout.ResumeLayout(False)
         Me.TabPage_companion.ResumeLayout(False)
         Me.TableLayoutPanel_compainionMainLayout.ResumeLayout(False)
         Me.TableLayoutPanel_compainionMainLayout.PerformLayout()
         Me.FlowLayoutPanel_compainionModsLayout.ResumeLayout(False)
         Me.FlowLayoutPanel_compainionModsLayout.PerformLayout()
-        Me.CheckedGroupBox_companionSurvivability.ResumeLayout(False)
-        Me.CheckedGroupBox_companionSurvivability.PerformLayout()
         Me.GroupBox_companionStats.ResumeLayout(False)
         Me.FlowLayoutPanel_companionStatsLayout.ResumeLayout(False)
         Me.TableLayoutPanel_companionTopLayout.ResumeLayout(False)
@@ -3513,12 +3651,6 @@ Partial Class Form_main
         Me.FlowLayoutPanel_archwingStatsLayout.ResumeLayout(False)
         Me.FlowLayoutPanel_archwingModsLayout.ResumeLayout(False)
         Me.FlowLayoutPanel_archwingModsLayout.PerformLayout()
-        Me.CheckedGroupBox_archwingAura.ResumeLayout(False)
-        Me.CheckedGroupBox_archwingAura.PerformLayout()
-        Me.CheckedGroupBox_archwingSurvivability.ResumeLayout(False)
-        Me.CheckedGroupBox_archwingSurvivability.PerformLayout()
-        Me.CheckedGroupBox_archwingMiscellaneous.ResumeLayout(False)
-        Me.CheckedGroupBox_archwingMiscellaneous.PerformLayout()
         Me.TableLayoutPanel_archwingTopLayout.ResumeLayout(False)
         Me.TabPage_development.ResumeLayout(False)
         Me.TabPage_development.PerformLayout()
@@ -3637,6 +3769,34 @@ Partial Class Form_main
         Me.TabPage_abilitiesWisp.ResumeLayout(False)
         Me.TabPage_abilitiesWisp.PerformLayout()
         Me.FlowLayoutPanel_wispAbilities.ResumeLayout(False)
+        Me.CheckedGroupBox_aura.ResumeLayout(False)
+        Me.CheckedGroupBox_aura.PerformLayout()
+        Me.CheckedGroupBox_survivability.ResumeLayout(False)
+        Me.CheckedGroupBox_survivability.PerformLayout()
+        Me.CheckedGroupBox_miscellaneous.ResumeLayout(False)
+        Me.CheckedGroupBox_miscellaneous.PerformLayout()
+        Me.CheckedGroupBox_powerStrength.ResumeLayout(False)
+        Me.CheckedGroupBox_powerStrength.PerformLayout()
+        Me.CheckedGroupBox_dragonKeys.ResumeLayout(False)
+        Me.CheckedGroupBox_dragonKeys.PerformLayout()
+        Me.CheckedGroupBox_missionModifiers.ResumeLayout(False)
+        Me.CheckedGroupBox_missionModifiers.PerformLayout()
+        Me.CheckedGroupBox_blocking.ResumeLayout(False)
+        Me.CheckedGroupBox_blocking.PerformLayout()
+        Me.CheckedGroupBox_focus.ResumeLayout(False)
+        Me.CheckedGroupBox_focus.PerformLayout()
+        Me.CheckedGroupBox_specialEffects.ResumeLayout(False)
+        Me.CheckedGroupBox_specialEffects.PerformLayout()
+        Me.CheckedGroupBox_arcanes.ResumeLayout(False)
+        Me.CheckedGroupBox_arcanes.PerformLayout()
+        Me.CheckedGroupBox_companionSurvivability.ResumeLayout(False)
+        Me.CheckedGroupBox_companionSurvivability.PerformLayout()
+        Me.CheckedGroupBox_archwingAura.ResumeLayout(False)
+        Me.CheckedGroupBox_archwingAura.PerformLayout()
+        Me.CheckedGroupBox_archwingSurvivability.ResumeLayout(False)
+        Me.CheckedGroupBox_archwingSurvivability.PerformLayout()
+        Me.CheckedGroupBox_archwingMiscellaneous.ResumeLayout(False)
+        Me.CheckedGroupBox_archwingMiscellaneous.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -3901,4 +4061,16 @@ Partial Class Form_main
     Friend WithEvents CheckedInput_argonPlating As CheckedInput
     Friend WithEvents CheckedInput_enhancedDurability As CheckedInput
     Friend WithEvents CheckedInput_energyInversion As CheckedInput
+    Friend WithEvents CheckBox_arbitrationBuff As CheckBox
+    Friend WithEvents CheckedInput_arcanePaxBolt As CheckedInput
+    Friend WithEvents CheckBox_cepholonSudaBuff As CheckBox
+    Friend WithEvents CheckBox_newLokaBuff As CheckBox
+    Friend WithEvents CheckBox_perrinSequenceBuff As CheckBox
+    Friend WithEvents CheckBox_steelMeridianBuff As CheckBox
+    Friend WithEvents CheckedInput_focusedDefense As CheckedInput
+    Friend WithEvents CheckedInput_agilityDrift As CheckedInput
+    Friend WithEvents CheckedInput_aviator As CheckedInput
+    Friend WithEvents CheckedInput_protonSet As CheckedInput
+    Friend WithEvents CheckedDualInput_mechaPulse As CheckedDualInput
+    Friend WithEvents CheckBox_adaptation As CheckBox
 End Class

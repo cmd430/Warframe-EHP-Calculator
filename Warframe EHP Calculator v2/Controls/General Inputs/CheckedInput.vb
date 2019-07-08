@@ -89,11 +89,13 @@ Public Class CheckedInput
         Checked = sender.Checked
         ' Allow tag to disable 'same' mods
         If Tag IsNot Nothing And Checked Then
-            For Each control In Parent.Controls.OfType(Of CheckedInput).Where(Function(ci) ci.Tag = Tag)
-                If Not control.Name = Name And control.Checked = True Then
-                    control.Checked = False
-                End If
-            Next
+            If Not Tag.ToString.Contains("limitGroup_") Then
+                For Each control In Parent.Controls.OfType(Of CheckedInput).Where(Function(ci) ci.Tag = Tag)
+                    If Not control.Name = Name And control.Checked = True Then
+                        control.Checked = False
+                    End If
+                Next
+            End If
         End If
         RaiseEvent CheckedChanged(Me, e)
     End Sub

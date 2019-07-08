@@ -146,16 +146,16 @@ Public Class CheckedDualInput
 #Region "Events"
 
     Public Event CheckedChanged As EventHandler
-    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs)
+    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
         Checked = sender.Checked
         RaiseEvent CheckedChanged(sender, e)
     End Sub
 
     Public Event ValueChanged As EventHandler
-    Private Sub NumericUpDown1_ValueChanged(sender As Object, e As EventArgs)
+    Private Sub NumericUpDown1_ValueChanged(sender As Object, e As EventArgs) Handles NumericUpDown1.ValueChanged
         RaiseEvent ValueChanged(sender, e)
     End Sub
-    Private Sub NumericUpDown2_ValueChanged(sender As Object, e As EventArgs)
+    Private Sub NumericUpDown2_ValueChanged(sender As Object, e As EventArgs) Handles NumericUpDown2.ValueChanged
         RaiseEvent ValueChanged(sender, e)
     End Sub
 

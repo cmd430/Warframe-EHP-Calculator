@@ -1,3 +1,10 @@
+1907-2
+* fixed version check using cached response and sometimes failing to detect an update
+* fixed abilities and arcane helmets not updating the ehp
+* fixed health conversion not working
++ added many missing mods and buffs
+	# please open an issue on the github if i've missed any
+
 1907-1
 * fix version being incorrectly cast to integer
 

@@ -119,24 +119,7 @@ Public Class Form_main
         AddHandler ComboBox_blocking.SelectedIndexChanged, AddressOf Warframe_Value_Changed
         For Each Group As Control In FlowLayoutPanel_warframeModsLayout.Controls
             If TypeOf Group Is CheckedGroupBox Then
-                For Each Control As Control In CType(Group, CheckedGroupBox).FlowLayout.Controls
-                    If TypeOf Control Is CheckedInput Then
-                        AddHandler CType(Control, CheckedInput).CheckedChanged, AddressOf Warframe_Value_Changed
-                        AddHandler CType(Control, CheckedInput).ValueChanged, AddressOf Warframe_Value_Changed
-                    ElseIf TypeOf Control Is RadioInput Then
-                        AddHandler CType(Control, RadioInput).CheckedChanged, AddressOf Warframe_Value_Changed
-                        AddHandler CType(Control, RadioInput).ValueChanged, AddressOf Warframe_Value_Changed
-                    ElseIf TypeOf Control Is CheckedDualInput Then
-                        AddHandler CType(Control, CheckedDualInput).CheckedChanged, AddressOf Warframe_Value_Changed
-                        AddHandler CType(Control, CheckedDualInput).ValueChanged, AddressOf Warframe_Value_Changed
-                    ElseIf TypeOf Control Is NumericInput Then
-                        AddHandler CType(Control, NumericInput).ValueChanged, AddressOf Warframe_Value_Changed
-                    ElseIf TypeOf Control Is CheckBox Then
-                        AddHandler CType(Control, CheckBox).CheckedChanged, AddressOf Warframe_Value_Changed
-                    ElseIf TypeOf Control Is RadioButton Then
-                        AddHandler CType(Control, RadioButton).CheckedChanged, AddressOf Warframe_Value_Changed
-                    End If
-                Next
+                Add_Warframe_Handlers(CType(Group, CheckedGroupBox).FlowLayout)
                 AddHandler CType(Group, CheckedGroupBox).CheckedChanged, AddressOf Warframe_Value_Changed
             End If
         Next
@@ -149,24 +132,7 @@ Public Class Form_main
         AddHandler NumericInput_companionStability.ValueChanged, AddressOf Companion_Value_Changed
         For Each Group As Control In FlowLayoutPanel_compainionModsLayout.Controls
             If TypeOf Group Is CheckedGroupBox Then
-                For Each Control As Control In CType(Group, CheckedGroupBox).FlowLayout.Controls
-                    If TypeOf Control Is CheckedInput Then
-                        AddHandler CType(Control, CheckedInput).CheckedChanged, AddressOf Companion_Value_Changed
-                        AddHandler CType(Control, CheckedInput).ValueChanged, AddressOf Companion_Value_Changed
-                    ElseIf TypeOf Control Is RadioInput Then
-                        AddHandler CType(Control, RadioInput).CheckedChanged, AddressOf Companion_Value_Changed
-                        AddHandler CType(Control, RadioInput).ValueChanged, AddressOf Companion_Value_Changed
-                    ElseIf TypeOf Control Is CheckedDualInput Then
-                        AddHandler CType(Control, CheckedDualInput).CheckedChanged, AddressOf Companion_Value_Changed
-                        AddHandler CType(Control, CheckedDualInput).ValueChanged, AddressOf Companion_Value_Changed
-                    ElseIf TypeOf Control Is NumericInput Then
-                        AddHandler CType(Control, NumericInput).ValueChanged, AddressOf Companion_Value_Changed
-                    ElseIf TypeOf Control Is CheckBox Then
-                        AddHandler CType(Control, CheckBox).CheckedChanged, AddressOf Companion_Value_Changed
-                    ElseIf TypeOf Control Is RadioButton Then
-                        AddHandler CType(Control, RadioButton).CheckedChanged, AddressOf Companion_Value_Changed
-                    End If
-                Next
+                Add_Companion_Handlers(CType(Group, CheckedGroupBox).FlowLayout)
                 AddHandler CType(Group, CheckedGroupBox).CheckedChanged, AddressOf Companion_Value_Changed
             End If
         Next
@@ -177,24 +143,7 @@ Public Class Form_main
         AddHandler CheckBox_archwingPrime.CheckedChanged, AddressOf Archwing_Value_Changed
         For Each Group As Control In FlowLayoutPanel_archwingModsLayout.Controls
             If TypeOf Group Is CheckedGroupBox Then
-                For Each Control As Control In CType(Group, CheckedGroupBox).FlowLayout.Controls
-                    If TypeOf Control Is CheckedInput Then
-                        AddHandler CType(Control, CheckedInput).CheckedChanged, AddressOf Archwing_Value_Changed
-                        AddHandler CType(Control, CheckedInput).ValueChanged, AddressOf Archwing_Value_Changed
-                    ElseIf TypeOf Control Is RadioInput Then
-                        AddHandler CType(Control, RadioInput).CheckedChanged, AddressOf Archwing_Value_Changed
-                        AddHandler CType(Control, RadioInput).ValueChanged, AddressOf Archwing_Value_Changed
-                    ElseIf TypeOf Control Is CheckedDualInput Then
-                        AddHandler CType(Control, CheckedDualInput).CheckedChanged, AddressOf Archwing_Value_Changed
-                        AddHandler CType(Control, CheckedDualInput).ValueChanged, AddressOf Archwing_Value_Changed
-                    ElseIf TypeOf Control Is NumericInput Then
-                        AddHandler CType(Control, NumericInput).ValueChanged, AddressOf Archwing_Value_Changed
-                    ElseIf TypeOf Control Is CheckBox Then
-                        AddHandler CType(Control, CheckBox).CheckedChanged, AddressOf Archwing_Value_Changed
-                    ElseIf TypeOf Control Is RadioButton Then
-                        AddHandler CType(Control, RadioButton).CheckedChanged, AddressOf Archwing_Value_Changed
-                    End If
-                Next
+                Add_Archwing_Handlers(CType(Group, CheckedGroupBox).FlowLayout)
                 AddHandler CType(Group, CheckedGroupBox).CheckedChanged, AddressOf Archwing_Value_Changed
             End If
         Next
@@ -208,7 +157,9 @@ Public Class Form_main
         ' Check for Update
         '
         Try
-            Dim WebClient = New WebClient
+            Dim WebClient = New WebClient With {
+                .CachePolicy = New Cache.RequestCachePolicy(Cache.RequestCacheLevel.NoCacheNoStore)
+            }
             Dim gitVersionRaw = WebClient.DownloadString("https://raw.githubusercontent.com/cmd430/Warframe-EHP-Calculator/master/Warframe%20EHP%20Calculator%20v2/version")
             If Format_Version(gitVersionRaw) > Format_Version(localVersion) Then
                 ' only show if version is less than released version
@@ -217,7 +168,74 @@ Public Class Form_main
         Catch ex As Exception
             'Cant check for updates
         End Try
-        'Me.Size = New Size(TableLayoutPanel_warframeMainLayout.Size.Width + 26, TableLayoutPanel_warframeMainLayout.Size.Height + TableLayoutPanel_warframeTopLayout.Size.Height + 81)
+        'Size = New Size(803, 790)
+    End Sub
+
+    Private Sub Add_Warframe_Handlers(ByVal ParentControl As Control)
+        For Each Control As Control In ParentControl.Controls
+            If TypeOf Control Is FlowLayoutPanel Then
+                Add_Warframe_Handlers(Control)
+            Else
+                If TypeOf Control Is CheckedInput Then
+                    AddHandler CType(Control, CheckedInput).CheckedChanged, AddressOf Warframe_Value_Changed
+                    AddHandler CType(Control, CheckedInput).ValueChanged, AddressOf Warframe_Value_Changed
+                ElseIf TypeOf Control Is RadioInput Then
+                    AddHandler CType(Control, RadioInput).CheckedChanged, AddressOf Warframe_Value_Changed
+                    AddHandler CType(Control, RadioInput).ValueChanged, AddressOf Warframe_Value_Changed
+                ElseIf TypeOf Control Is CheckedDualInput Then
+                    AddHandler CType(Control, CheckedDualInput).CheckedChanged, AddressOf Warframe_Value_Changed
+                    AddHandler CType(Control, CheckedDualInput).ValueChanged, AddressOf Warframe_Value_Changed
+                ElseIf TypeOf Control Is NumericInput Then
+                    AddHandler CType(Control, NumericInput).ValueChanged, AddressOf Warframe_Value_Changed
+                ElseIf TypeOf Control Is CheckBox Then
+                    AddHandler CType(Control, CheckBox).CheckedChanged, AddressOf Warframe_Value_Changed
+                ElseIf TypeOf Control Is RadioButton Then
+                    AddHandler CType(Control, RadioButton).CheckedChanged, AddressOf Warframe_Value_Changed
+                End If
+            End If
+        Next
+    End Sub
+
+    Private Sub Add_Companion_Handlers(ByVal ParentControl As Control)
+        For Each Control As Control In ParentControl.Controls
+            If TypeOf Control Is CheckedInput Then
+                AddHandler CType(Control, CheckedInput).CheckedChanged, AddressOf Companion_Value_Changed
+                AddHandler CType(Control, CheckedInput).ValueChanged, AddressOf Companion_Value_Changed
+            ElseIf TypeOf Control Is RadioInput Then
+                AddHandler CType(Control, RadioInput).CheckedChanged, AddressOf Companion_Value_Changed
+                AddHandler CType(Control, RadioInput).ValueChanged, AddressOf Companion_Value_Changed
+            ElseIf TypeOf Control Is CheckedDualInput Then
+                AddHandler CType(Control, CheckedDualInput).CheckedChanged, AddressOf Companion_Value_Changed
+                AddHandler CType(Control, CheckedDualInput).ValueChanged, AddressOf Companion_Value_Changed
+            ElseIf TypeOf Control Is NumericInput Then
+                AddHandler CType(Control, NumericInput).ValueChanged, AddressOf Companion_Value_Changed
+            ElseIf TypeOf Control Is CheckBox Then
+                AddHandler CType(Control, CheckBox).CheckedChanged, AddressOf Companion_Value_Changed
+            ElseIf TypeOf Control Is RadioButton Then
+                AddHandler CType(Control, RadioButton).CheckedChanged, AddressOf Companion_Value_Changed
+            End If
+        Next
+    End Sub
+
+    Private Sub Add_Archwing_Handlers(ByVal ParentControl As Control)
+        For Each Control As Control In ParentControl.Controls
+            If TypeOf Control Is CheckedInput Then
+                AddHandler CType(Control, CheckedInput).CheckedChanged, AddressOf Archwing_Value_Changed
+                AddHandler CType(Control, CheckedInput).ValueChanged, AddressOf Archwing_Value_Changed
+            ElseIf TypeOf Control Is RadioInput Then
+                AddHandler CType(Control, RadioInput).CheckedChanged, AddressOf Archwing_Value_Changed
+                AddHandler CType(Control, RadioInput).ValueChanged, AddressOf Archwing_Value_Changed
+            ElseIf TypeOf Control Is CheckedDualInput Then
+                AddHandler CType(Control, CheckedDualInput).CheckedChanged, AddressOf Archwing_Value_Changed
+                AddHandler CType(Control, CheckedDualInput).ValueChanged, AddressOf Archwing_Value_Changed
+            ElseIf TypeOf Control Is NumericInput Then
+                AddHandler CType(Control, NumericInput).ValueChanged, AddressOf Archwing_Value_Changed
+            ElseIf TypeOf Control Is CheckBox Then
+                AddHandler CType(Control, CheckBox).CheckedChanged, AddressOf Archwing_Value_Changed
+            ElseIf TypeOf Control Is RadioButton Then
+                AddHandler CType(Control, RadioButton).CheckedChanged, AddressOf Archwing_Value_Changed
+            End If
+        Next
     End Sub
 
     Private Function Format_Version(ByVal v As String) As Decimal
@@ -339,7 +357,7 @@ Public Class Form_main
                 End If
             Next
             '
-            ' Stats
+            ' Base Stats
             '
             Dim currentVariant As [Variant] = currentWarframe.Variants.Find(Function(var) var.Name = VariantSelection_warframes.SelectedVariant)
             baseArmor = currentVariant.Armor
@@ -347,6 +365,24 @@ Public Class Form_main
             baseShield = currentVariant.Shield
             baseEnergy = currentVariant.Energy
             basePowerStrength = currentVariant.strength / 100
+            '
+            ' Syndicate buffs (Modifiy Base Stats)
+            '
+            If CheckBox_cepholonSudaBuff.Checked Then
+                baseEnergy *= 1.25
+            End If
+            If CheckBox_newLokaBuff.Checked Then
+                baseHealth *= 1.25
+            End If
+            If CheckBox_perrinSequenceBuff.Checked Then
+                baseShield *= 1.5
+            End If
+            If CheckBox_steelMeridianBuff.Checked Then
+                baseArmor *= 1.15
+            End If
+            '
+            ' Rank 30 Stats
+            '
             If Not currentWarframe.Rank_Multipliers.Find(Function(rm) rm.Name = "armor") Is Nothing Then
                 Armor = baseArmor * currentWarframe.Rank_Multipliers.Find(Function(rm) rm.Name = "armor").Multiplier
             Else
@@ -516,10 +552,10 @@ Public Class Form_main
                 End If
             End If
             '
-            '   Armor / Health / Shield Mods
+            '   Armor / Health / Shield / Damage Reduction Mods
             '
             If CheckedGroupBox_survivability.Checked Then
-                'Armor
+                ' armor
                 If CheckedInput_steelFiber.Checked Then
                     armorMultiplier += 0.1 + (CheckedInput_steelFiber.Value * 0.1)
                 End If
@@ -527,21 +563,27 @@ Public Class Form_main
                     armorMultiplier += 0.075 + (CheckedInput_armoredAgility.Value * 0.075)
                 End If
                 If CheckedDualInput_healthConversion.Checked Then
-                    armorBonus = armorBonus + ((75 + (CheckedDualInput_healthConversion.Value * 75)) * CheckedDualInput_healthConversion.Secondary_Value)
+                    armorBonus += (75 + (CheckedDualInput_healthConversion.Value * 75)) * CheckedDualInput_healthConversion.Secondary_Value
                 End If
                 If CheckedInput_gladiatorAegis.Checked Then
                     armorMultiplier += 0.075 + (CheckedInput_gladiatorAegis.Value * 0.075)
                 End If
-                'health
+                If CheckedInput_focusedDefense.Checked Then
+                    armorMultiplier += 0.05 + (CheckedInput_focusedDefense.Value * 0.05)
+                End If
+                If CheckedDualInput_mechaPulse.Checked Then
+                    armorMultiplier += (0.15 + (CheckedDualInput_mechaPulse.Value * 0.15)) * (1 + CheckedDualInput_mechaPulse.Secondary_Value)
+                End If
+                ' health
                 If CheckedInput_vitality.Checked Then
                     healthMultiplier += 0.4 + (CheckedInput_vitality.Value * 0.4)
                 End If
                 If CheckedInput_gladiatorResolve.Checked Then
                     healthMultiplier += 0.3 + (CheckedInput_gladiatorResolve.Value * 0.3)
                 End If
-                'quickthinking moved.
-                'gladiator finesse moved.
-                'shields
+                ' quickthinking moved.
+                ' gladiator finesse moved.
+                ' shields
                 If CheckedInput_redirection.Checked Then
                     shieldMultiplier += 0.4 + (CheckedInput_redirection.Value * 0.4)
                 End If
@@ -552,6 +594,23 @@ Public Class Form_main
                 If CheckedInput_vigor.Checked Then
                     healthMultiplier += 0.2 + (CheckedInput_vigor.Value * 0.2)
                     shieldMultiplier += 0.2 + (CheckedInput_vigor.Value * 0.2)
+                End If
+                ' damage reduction
+                If CheckedInput_agilityDrift.Checked Then
+                    Dim agilityDrift As Decimal = 0.02 + (CheckedInput_agilityDrift.Value * 0.02)
+                    damageReduction += (1 - damageReduction) * agilityDrift
+                End If
+                If CheckedInput_aviator.Checked Then
+                    Dim aviator As Decimal = 0.1 + (CheckedInput_aviator.Value * 0.1)
+                    damageReduction += (1 - damageReduction) * aviator
+                End If
+                If CheckedInput_protonSet.Checked Then
+                    Dim protonSet As Decimal = CheckedInput_protonSet.Value * 0.165
+                    damageReduction += (1 - damageReduction) * protonSet
+                End If
+                If CheckBox_adaptation.Checked Then
+                    Dim adaptation As Decimal = 0.9
+                    damageReduction += (1 - damageReduction) * adaptation
                 End If
             End If
             '
@@ -638,14 +697,20 @@ Public Class Form_main
                     ElseIf UmbralModifiy = 3 Then
                         powerStrength += basePowerStrength * (0.06 + (CheckedInput_umbralIntensify.Value * 0.06))
                     End If
-
                 End If
             End If
             '
-            '   Reactant Buff | Void Fissures
+            '   Special Buffs
             '
-            If CheckedGroupBox_specialEffects.Checked And CheckBox_corruptedBuff.Checked Then
-                powerStrength *= 2
+            If CheckedGroupBox_specialEffects.Checked Then
+                ' Corrupted
+                If CheckBox_corruptedBuff.Checked Then
+                    powerStrength *= 2
+                End If
+                ' Arbitration
+                If CheckBox_arbitrationBuff.Checked Then
+                    powerStrength += 3
+                End If
             End If
             '
             '   Abilities
@@ -697,12 +762,12 @@ Public Class Form_main
                     Case "Excalibur"
                         If CheckBox_exaltedBlade.Checked Then
                             Dim exaltedBlade As Decimal = 0.6
-                            damageReduction += exaltedBlade
+                            damageReduction += (1 - damageReduction) * exaltedBlade
                         End If
                     Case "Frost"
                         If CheckedInput_icyAvalanche.Checked Then
                             Dim icyAvalance As Decimal = 0.6 * powerStrength * CheckedInput_icyAvalanche.Value
-                            damageAbsorbstion += icyAvalance
+                            damageReduction += (1 - damageReduction) * icyAvalance
                         End If
                     Case "Gara"
                         If CheckBox_splinterStorm.Checked Then
@@ -710,7 +775,7 @@ Public Class Form_main
                             If splinterStorm > 0.9 Then
                                 splinterStorm = 0.9
                             End If
-                            damageReduction += splinterStorm
+                            damageReduction += (1 - damageReduction) * splinterStorm
                         End If
                     Case "Harrow"
                         If CheckBox_wardingThurible.Checked Then
@@ -718,7 +783,7 @@ Public Class Form_main
                             If wardingThurible > 0.9 Then
                                 wardingThurible = 0.9
                             End If
-                            damageReduction += wardingThurible
+                            damageReduction += (1 - damageReduction) * wardingThurible
                         End If
                     Case "Inaros"
                         If CheckedInput_scarabSwarm.Checked Then
@@ -731,7 +796,7 @@ Public Class Form_main
                             If shatterShield > 0.95 Then
                                 shatterShield = 0.95
                             End If
-                            damageReduction += shatterShield
+                            damageReduction += (1 - damageReduction) * shatterShield
                         End If
                         If CheckBox_marksmansDexterity.Checked Then
                             healthBonus += 50
@@ -742,7 +807,7 @@ Public Class Form_main
                             If eclipse > 0.95 Then
                                 eclipse = 0.95
                             End If
-                            damageReduction += eclipse
+                            damageReduction += (1 - damageReduction) * eclipse
                         End If
                     Case "Nekros"
                         If CheckedInput_shieldOfShadows.Checked Then
@@ -750,12 +815,12 @@ Public Class Form_main
                             If shieldOfShadows > 0.9 Then
                                 shieldOfShadows = 0.9
                             End If
-                            damageReduction += shieldOfShadows
+                            damageReduction += (1 - damageReduction) * shieldOfShadows
                         End If
                     Case "Nezha"
                         If CheckBox_wardingHalo.Checked Then
                             Dim wardingHalo As Decimal = 0.9
-                            damageReduction += wardingHalo
+                            damageReduction += (1 - damageReduction) * wardingHalo
                         End If
                     Case "Nidus"
                         If CheckBox_parasiticLink.Checked Then
@@ -763,7 +828,7 @@ Public Class Form_main
                             If parasiticLink > 0.9 Then
                                 parasiticLink = 0.9
                             End If
-                            damageReduction += parasiticLink
+                            damageReduction += (1 - damageReduction) * parasiticLink
                         End If
                     Case "Nova"
                         If CheckedInput_nullStar.Checked Then
@@ -772,7 +837,7 @@ Public Class Form_main
                             If nullStar > 0.9 Then
                                 nullStar = 0.9
                             End If
-                            damageReduction += nullStar
+                            damageReduction += (1 - damageReduction) * nullStar
                         End If
                     Case "Oberon"
                         If CheckBox_ironRenewal.Checked Then
@@ -802,22 +867,19 @@ Public Class Form_main
                     Case "Titania"
                         If CheckedInput_thorns.Checked Then
                             Dim thorns As Decimal = Math.Floor(CheckedInput_thorns.Value / 5) * 0.05
-                            damageReduction += thorns
+                            damageReduction += (1 - damageReduction) * thorns
                         End If
                     Case "Trinity"
                         Dim link As Decimal = 0.75
                         Dim blessing As Decimal = 0.5 * powerStrength
+                        If blessing > 0.75 Then
+                            blessing = 0.75
+                        End If
                         If CheckBox_link.Checked And Not CheckBox_blessing.Checked Then
-                            damageReduction += link
+                            damageReduction += (1 - damageReduction) * link
                         ElseIf CheckBox_blessing.Checked And Not CheckBox_link.Checked Then
-                            If blessing > 0.75 Then
-                                blessing = 0.75
-                            End If
-                            damageReduction += blessing
+                            damageReduction += (1 - damageReduction) * blessing
                         ElseIf CheckBox_link.Checked And CheckBox_blessing.Checked Then
-                            If blessing > 0.75 Then
-                                blessing = 0.75
-                            End If
                             damageReduction += blessing + ((1 - blessing) * link)
                         End If
                     Case "Valkyr"
@@ -874,6 +936,9 @@ Public Class Form_main
                 End If
                 If CheckedInput_arcaneUltimatum2.Checked Then
                     Armor += 150 + (150 * CheckedInput_arcaneUltimatum2.Value)
+                End If
+                If CheckedInput_arcanePaxBolt.Checked Then
+                    powerStrength += 0.075 + (0.075 * CheckedInput_arcanePaxBolt.Value)
                 End If
             End If
             '
