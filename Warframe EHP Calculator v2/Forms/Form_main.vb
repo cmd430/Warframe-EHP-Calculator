@@ -123,6 +123,9 @@ Public Class Form_main
                     If TypeOf Control Is CheckedInput Then
                         AddHandler CType(Control, CheckedInput).CheckedChanged, AddressOf Warframe_Value_Changed
                         AddHandler CType(Control, CheckedInput).ValueChanged, AddressOf Warframe_Value_Changed
+                    ElseIf TypeOf Control Is RadioInput Then
+                        AddHandler CType(Control, RadioInput).CheckedChanged, AddressOf Warframe_Value_Changed
+                        AddHandler CType(Control, RadioInput).ValueChanged, AddressOf Warframe_Value_Changed
                     ElseIf TypeOf Control Is CheckedDualInput Then
                         AddHandler CType(Control, CheckedDualInput).CheckedChanged, AddressOf Warframe_Value_Changed
                         AddHandler CType(Control, CheckedDualInput).ValueChanged, AddressOf Warframe_Value_Changed
@@ -150,6 +153,9 @@ Public Class Form_main
                     If TypeOf Control Is CheckedInput Then
                         AddHandler CType(Control, CheckedInput).CheckedChanged, AddressOf Companion_Value_Changed
                         AddHandler CType(Control, CheckedInput).ValueChanged, AddressOf Companion_Value_Changed
+                    ElseIf TypeOf Control Is RadioInput Then
+                        AddHandler CType(Control, RadioInput).CheckedChanged, AddressOf Companion_Value_Changed
+                        AddHandler CType(Control, RadioInput).ValueChanged, AddressOf Companion_Value_Changed
                     ElseIf TypeOf Control Is CheckedDualInput Then
                         AddHandler CType(Control, CheckedDualInput).CheckedChanged, AddressOf Companion_Value_Changed
                         AddHandler CType(Control, CheckedDualInput).ValueChanged, AddressOf Companion_Value_Changed
@@ -175,6 +181,9 @@ Public Class Form_main
                     If TypeOf Control Is CheckedInput Then
                         AddHandler CType(Control, CheckedInput).CheckedChanged, AddressOf Archwing_Value_Changed
                         AddHandler CType(Control, CheckedInput).ValueChanged, AddressOf Archwing_Value_Changed
+                    ElseIf TypeOf Control Is RadioInput Then
+                        AddHandler CType(Control, RadioInput).CheckedChanged, AddressOf Archwing_Value_Changed
+                        AddHandler CType(Control, RadioInput).ValueChanged, AddressOf Archwing_Value_Changed
                     ElseIf TypeOf Control Is CheckedDualInput Then
                         AddHandler CType(Control, CheckedDualInput).CheckedChanged, AddressOf Archwing_Value_Changed
                         AddHandler CType(Control, CheckedDualInput).ValueChanged, AddressOf Archwing_Value_Changed
@@ -200,8 +209,9 @@ Public Class Form_main
         '
         Try
             Dim WebClient = New WebClient
-            liveVersion = WebClient.DownloadString("https://raw.githubusercontent.com/cmd430/Warframe-EHP-Calculator/master/Warframe%20EHP%20Calculator%20v2/version")
-            If Not liveVersion = localVersion Then
+            Dim gitVersionRaw = WebClient.DownloadString("https://raw.githubusercontent.com/cmd430/Warframe-EHP-Calculator/master/Warframe%20EHP%20Calculator%20v2/version")
+            If Format_Version(gitVersionRaw) > Format_Version(localVersion) Then
+                ' only show if version is less than released version
                 Form_update.ShowDialog()
             End If
         Catch ex As Exception
@@ -209,6 +219,19 @@ Public Class Form_main
         End Try
         'Me.Size = New Size(TableLayoutPanel_warframeMainLayout.Size.Width + 26, TableLayoutPanel_warframeMainLayout.Size.Height + TableLayoutPanel_warframeTopLayout.Size.Height + 81)
     End Sub
+
+    Private Function Format_Version(ByVal v As String) As Decimal
+        ' remove any whitespace
+        v = New String(v.Where(Function(x) Not Char.IsWhiteSpace(x)).ToArray())
+        ' if not has a patch number add "-0"
+        If v.IndexOf("-") = -1 Then
+            v &= "-0"
+        End If
+        Dim vParts As String() = v.Split("-")
+        Dim vMain As String = vParts(0)
+        Dim vPatch As String = vParts(1)
+        Return CType(vMain & "." & vPatch, Integer)
+    End Function
 
     Private Sub Warframe_Value_Changed(sender As Object, e As EventArgs)
         '
@@ -1137,6 +1160,51 @@ Public Class Form_main
             Else
                 powerStrength = basePowerStrength * DefaultRankMultipliers.Archwings.Find(Function(m) m.Name = "strength").Multiplier
             End If
+            '
+            '   Mods
+            '
+            If CheckedGroupBox_archwingAura.Checked Then
+                If RadioInput_physique.Checked Then
+                    Dim physique As Decimal = 0.15 + (RadioInput_archwingPhysique.Value * 0.15)
+                    If CheckedInput_archwingCoactionDrift.Checked And CheckedGroupBox_archwingMiscellaneous.Checked Then
+                        '
+                        '   Coaction Drift is Strange, it gives you a 0.15 boost to all Auras
+                        '   and another 0.15 boost to your Aura ontop of the other for a total
+                        '   of 0.15 * (1 + 0.15) + 0.15 = 0.3225 (values are for max rank mod)
+                        '
+                        Dim coactionDrit As Decimal = 0.025 + (0.025 * CheckedInput_archwingCoactionDrift.Value)
+                        healthMultiplier += physique + (physique * (coactionDrit * (1 + coactionDrit) + coactionDrit))
+                    Else
+                        healthMultiplier += physique
+                    End If
+                ElseIf RadioInput_archwingStandUnited.Checked Then
+                    Dim standUnited As Decimal = 0.0425 + (RadioInput_archwingStandUnited.Value * 0.0425)
+                    If CheckedInput_archwingCoactionDrift.Checked And CheckedGroupBox_archwingMiscellaneous.Checked Then
+                        Dim coactionDrit As Decimal = 0.025 + (0.025 * CheckedInput_archwingCoactionDrift.Value)
+                        armorMultiplier += standUnited + (standUnited * (coactionDrit * (1 + coactionDrit) + coactionDrit))
+                    Else
+                        armorMultiplier += standUnited
+                    End If
+                End If
+            End If
+            If CheckedGroupBox_archwingSurvivability.Checked Then
+                If CheckedInput_argonPlating.Checked Then
+                    armorMultiplier += 0.15 + (CheckedInput_argonPlating.Value * 0.15)
+                End If
+                If CheckedInput_enhancedDurability.Checked Then
+                    healthMultiplier += 0.25 + (CheckedInput_enhancedDurability.Value * 0.25)
+                End If
+                If CheckedInput_energyInversion.Checked Then
+                    shieldMultiplier += 0.3 + (CheckedInput_energyInversion.Value * 0.3)
+                End If
+            End If
+            '
+            ' Finalize Stats
+            '
+            Armor = (baseArmor * (1 + armorMultiplier)) + (Armor - baseArmor) + armorBonus
+            Health = (baseHealth * (1 + healthMultiplier)) + (Health - baseHealth) + healthBonus
+            Shield = (baseShield * (1 + shieldMultiplier)) + (Shield - baseShield) + shieldBonus
+            Energy = (baseEnergy * (1 + energyMultiplier)) + (Energy - baseEnergy) + energyBonus
             '
             '   Display Stats
             '

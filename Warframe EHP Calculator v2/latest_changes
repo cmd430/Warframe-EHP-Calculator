@@ -1,3 +1,9 @@
+1907
+* fixed auras not updating the EHP
++ finished archwing mods
+	# if i've missed any please open an issue on github
++ added wukong prime
+
 1906
 * application requires dotnet runtime 4.7.2
   https://dotnet.microsoft.com/download/dotnet-framework/net472

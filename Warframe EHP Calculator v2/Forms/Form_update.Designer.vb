@@ -127,7 +127,6 @@ Partial Class Form_update
         Me.MinimizeBox = False
         Me.Name = "Form_update"
         Me.Padding = New System.Windows.Forms.Padding(9)
-        Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "An Update is Available"
         Me.Panel1.ResumeLayout(False)

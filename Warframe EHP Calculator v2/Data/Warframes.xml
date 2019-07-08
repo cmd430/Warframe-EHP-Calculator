@@ -245,6 +245,7 @@
   <warframe name="Wukong">
     <variants>
       <variant name="base" armor="250" health="150" shield="100" energy="120" strength="100" />
+      <variant name="prime" armor="275" health="150" shield="120" energy="130" strength="100" />
     </variants>
   </warframe>
   <warframe name="Zephyr">

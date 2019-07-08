@@ -117,7 +117,6 @@ Partial Class Form_main
         Me.MaxValueToggle_compainions = New Warframe_EHP_Calculator_v2.MaxValueToggle()
         Me.NumericInput_companionStability = New Warframe_EHP_Calculator_v2.NumericInput()
         Me.TabPage_archwing = New System.Windows.Forms.TabPage()
-        Me.Label_archwingPlaceholder = New System.Windows.Forms.Label()
         Me.TableLayoutPanel_archwingMainLayout = New System.Windows.Forms.TableLayoutPanel()
         Me.GroupBox_archwingStats = New System.Windows.Forms.GroupBox()
         Me.FlowLayoutPanel_archwingStatsLayout = New System.Windows.Forms.FlowLayoutPanel()
@@ -130,18 +129,11 @@ Partial Class Form_main
         Me.StatBox_archwingEHP = New Warframe_EHP_Calculator_v2.StatBox()
         Me.FlowLayoutPanel_archwingModsLayout = New System.Windows.Forms.FlowLayoutPanel()
         Me.CheckedGroupBox_archwingAura = New Warframe_EHP_Calculator_v2.CheckedGroupBox()
-        Me.RadioInput_archwingGrowingPower = New Warframe_EHP_Calculator_v2.RadioInput()
         Me.RadioInput_archwingStandUnited = New Warframe_EHP_Calculator_v2.RadioInput()
         Me.RadioInput_archwingPhysique = New Warframe_EHP_Calculator_v2.RadioInput()
-        Me.RadioInput_archwingPowerDonation = New Warframe_EHP_Calculator_v2.RadioInput()
         Me.CheckedGroupBox_archwingSurvivability = New Warframe_EHP_Calculator_v2.CheckedGroupBox()
-        Me.CheckedInput_energyInversion = New Warframe_EHP_Calculator_v2.CheckedInput()
-        Me.CheckedInput_enhancedDurability = New Warframe_EHP_Calculator_v2.CheckedInput()
-        Me.CheckedInput_argonPlating = New Warframe_EHP_Calculator_v2.CheckedInput()
         Me.CheckedGroupBox_archwingMiscellaneous = New Warframe_EHP_Calculator_v2.CheckedGroupBox()
-        Me.CheckedInput_auxiliaryPower = New Warframe_EHP_Calculator_v2.CheckedInput()
-        Me.CheckedGroupBox_archwingPowerStrength = New Warframe_EHP_Calculator_v2.CheckedGroupBox()
-        Me.CheckedInput_morphicTransformer = New Warframe_EHP_Calculator_v2.CheckedInput()
+        Me.CheckedInput_archwingCoactionDrift = New Warframe_EHP_Calculator_v2.CheckedInput()
         Me.TableLayoutPanel_archwingTopLayout = New System.Windows.Forms.TableLayoutPanel()
         Me.ComboBox_archwings = New System.Windows.Forms.ComboBox()
         Me.MaxValueToggle_archwings = New Warframe_EHP_Calculator_v2.MaxValueToggle()
@@ -285,6 +277,9 @@ Partial Class Form_main
         Me.Icons = New System.Windows.Forms.ImageList(Me.components)
         Me.Label_author = New System.Windows.Forms.Label()
         Me.Label_love = New System.Windows.Forms.Label()
+        Me.CheckedInput_argonPlating = New Warframe_EHP_Calculator_v2.CheckedInput()
+        Me.CheckedInput_enhancedDurability = New Warframe_EHP_Calculator_v2.CheckedInput()
+        Me.CheckedInput_energyInversion = New Warframe_EHP_Calculator_v2.CheckedInput()
         Me.TabControl_main.SuspendLayout()
         Me.TabPage_warframe.SuspendLayout()
         Me.TableLayoutPanel_warframeMainLayout.SuspendLayout()
@@ -317,7 +312,6 @@ Partial Class Form_main
         Me.CheckedGroupBox_archwingAura.SuspendLayout()
         Me.CheckedGroupBox_archwingSurvivability.SuspendLayout()
         Me.CheckedGroupBox_archwingMiscellaneous.SuspendLayout()
-        Me.CheckedGroupBox_archwingPowerStrength.SuspendLayout()
         Me.TableLayoutPanel_archwingTopLayout.SuspendLayout()
         Me.TabPage_development.SuspendLayout()
         Me.TabControl_arcaneHelmets.SuspendLayout()
@@ -1538,7 +1532,6 @@ Partial Class Form_main
         'TabPage_archwing
         '
         Me.TabPage_archwing.BackColor = System.Drawing.Color.White
-        Me.TabPage_archwing.Controls.Add(Me.Label_archwingPlaceholder)
         Me.TabPage_archwing.Controls.Add(Me.TableLayoutPanel_archwingMainLayout)
         Me.TabPage_archwing.Controls.Add(Me.TableLayoutPanel_archwingTopLayout)
         Me.TabPage_archwing.ImageIndex = 3
@@ -1548,16 +1541,6 @@ Partial Class Form_main
         Me.TabPage_archwing.Size = New System.Drawing.Size(779, 574)
         Me.TabPage_archwing.TabIndex = 3
         Me.TabPage_archwing.Text = "Archwing  "
-        '
-        'Label_archwingPlaceholder
-        '
-        Me.Label_archwingPlaceholder.AutoSize = True
-        Me.Label_archwingPlaceholder.Location = New System.Drawing.Point(319, 279)
-        Me.Label_archwingPlaceholder.Name = "Label_archwingPlaceholder"
-        Me.Label_archwingPlaceholder.Size = New System.Drawing.Size(79, 13)
-        Me.Label_archwingPlaceholder.TabIndex = 115
-        Me.Label_archwingPlaceholder.Text = "Coming Soon™"
-        Me.Label_archwingPlaceholder.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'TableLayoutPanel_archwingMainLayout
         '
@@ -1700,7 +1683,6 @@ Partial Class Form_main
         Me.FlowLayoutPanel_archwingModsLayout.Controls.Add(Me.CheckedGroupBox_archwingAura)
         Me.FlowLayoutPanel_archwingModsLayout.Controls.Add(Me.CheckedGroupBox_archwingSurvivability)
         Me.FlowLayoutPanel_archwingModsLayout.Controls.Add(Me.CheckedGroupBox_archwingMiscellaneous)
-        Me.FlowLayoutPanel_archwingModsLayout.Controls.Add(Me.CheckedGroupBox_archwingPowerStrength)
         Me.FlowLayoutPanel_archwingModsLayout.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
         Me.FlowLayoutPanel_archwingModsLayout.Location = New System.Drawing.Point(0, 0)
         Me.FlowLayoutPanel_archwingModsLayout.Margin = New System.Windows.Forms.Padding(0)
@@ -1711,31 +1693,19 @@ Partial Class Form_main
         'CheckedGroupBox_archwingAura
         '
         Me.CheckedGroupBox_archwingAura.AutoSize = True
-        Me.CheckedGroupBox_archwingAura.Controls.Add(Me.RadioInput_archwingGrowingPower)
         Me.CheckedGroupBox_archwingAura.Controls.Add(Me.RadioInput_archwingStandUnited)
         Me.CheckedGroupBox_archwingAura.Controls.Add(Me.RadioInput_archwingPhysique)
-        Me.CheckedGroupBox_archwingAura.Controls.Add(Me.RadioInput_archwingPowerDonation)
         Me.CheckedGroupBox_archwingAura.Limit = 1
         Me.CheckedGroupBox_archwingAura.Location = New System.Drawing.Point(3, 3)
         Me.CheckedGroupBox_archwingAura.Name = "CheckedGroupBox_archwingAura"
-        Me.CheckedGroupBox_archwingAura.Size = New System.Drawing.Size(187, 130)
+        Me.CheckedGroupBox_archwingAura.Size = New System.Drawing.Size(187, 82)
         Me.CheckedGroupBox_archwingAura.TabIndex = 13
         Me.CheckedGroupBox_archwingAura.TabStop = False
         Me.CheckedGroupBox_archwingAura.Text = "Aura"
         '
-        'RadioInput_archwingGrowingPower
-        '
-        Me.RadioInput_archwingGrowingPower.Location = New System.Drawing.Point(6, 17)
-        Me.RadioInput_archwingGrowingPower.MaximumSize = New System.Drawing.Size(175, 20)
-        Me.RadioInput_archwingGrowingPower.MinimumSize = New System.Drawing.Size(175, 20)
-        Me.RadioInput_archwingGrowingPower.Name = "RadioInput_archwingGrowingPower"
-        Me.RadioInput_archwingGrowingPower.Size = New System.Drawing.Size(175, 20)
-        Me.RadioInput_archwingGrowingPower.TabIndex = 2
-        Me.RadioInput_archwingGrowingPower.Text = "Growing Power"
-        '
         'RadioInput_archwingStandUnited
         '
-        Me.RadioInput_archwingStandUnited.Location = New System.Drawing.Point(6, 91)
+        Me.RadioInput_archwingStandUnited.Location = New System.Drawing.Point(6, 43)
         Me.RadioInput_archwingStandUnited.MaximumSize = New System.Drawing.Size(175, 20)
         Me.RadioInput_archwingStandUnited.MinimumSize = New System.Drawing.Size(175, 20)
         Me.RadioInput_archwingStandUnited.Name = "RadioInput_archwingStandUnited"
@@ -1745,7 +1715,7 @@ Partial Class Form_main
         '
         'RadioInput_archwingPhysique
         '
-        Me.RadioInput_archwingPhysique.Location = New System.Drawing.Point(6, 67)
+        Me.RadioInput_archwingPhysique.Location = New System.Drawing.Point(6, 19)
         Me.RadioInput_archwingPhysique.MaximumSize = New System.Drawing.Size(175, 20)
         Me.RadioInput_archwingPhysique.MinimumSize = New System.Drawing.Size(175, 20)
         Me.RadioInput_archwingPhysique.Name = "RadioInput_archwingPhysique"
@@ -1753,107 +1723,40 @@ Partial Class Form_main
         Me.RadioInput_archwingPhysique.TabIndex = 4
         Me.RadioInput_archwingPhysique.Text = "Physique"
         '
-        'RadioInput_archwingPowerDonation
-        '
-        Me.RadioInput_archwingPowerDonation.Location = New System.Drawing.Point(6, 43)
-        Me.RadioInput_archwingPowerDonation.MaximumSize = New System.Drawing.Size(175, 20)
-        Me.RadioInput_archwingPowerDonation.MinimumSize = New System.Drawing.Size(175, 20)
-        Me.RadioInput_archwingPowerDonation.Name = "RadioInput_archwingPowerDonation"
-        Me.RadioInput_archwingPowerDonation.Size = New System.Drawing.Size(175, 20)
-        Me.RadioInput_archwingPowerDonation.TabIndex = 3
-        Me.RadioInput_archwingPowerDonation.Text = "Power Donation"
-        '
         'CheckedGroupBox_archwingSurvivability
         '
         Me.CheckedGroupBox_archwingSurvivability.AutoSize = True
-        Me.CheckedGroupBox_archwingSurvivability.Controls.Add(Me.CheckedInput_energyInversion)
-        Me.CheckedGroupBox_archwingSurvivability.Controls.Add(Me.CheckedInput_enhancedDurability)
         Me.CheckedGroupBox_archwingSurvivability.Controls.Add(Me.CheckedInput_argonPlating)
-        Me.CheckedGroupBox_archwingSurvivability.Location = New System.Drawing.Point(3, 139)
+        Me.CheckedGroupBox_archwingSurvivability.Controls.Add(Me.CheckedInput_enhancedDurability)
+        Me.CheckedGroupBox_archwingSurvivability.Controls.Add(Me.CheckedInput_energyInversion)
+        Me.CheckedGroupBox_archwingSurvivability.Location = New System.Drawing.Point(3, 91)
         Me.CheckedGroupBox_archwingSurvivability.Name = "CheckedGroupBox_archwingSurvivability"
         Me.CheckedGroupBox_archwingSurvivability.Size = New System.Drawing.Size(187, 110)
         Me.CheckedGroupBox_archwingSurvivability.TabIndex = 0
         Me.CheckedGroupBox_archwingSurvivability.TabStop = False
         Me.CheckedGroupBox_archwingSurvivability.Text = "Survivability"
         '
-        'CheckedInput_energyInversion
-        '
-        Me.CheckedInput_energyInversion.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.CheckedInput_energyInversion.Location = New System.Drawing.Point(6, 71)
-        Me.CheckedInput_energyInversion.Maximum = 5
-        Me.CheckedInput_energyInversion.MaximumSize = New System.Drawing.Size(175, 20)
-        Me.CheckedInput_energyInversion.MinimumSize = New System.Drawing.Size(175, 20)
-        Me.CheckedInput_energyInversion.Name = "CheckedInput_energyInversion"
-        Me.CheckedInput_energyInversion.Size = New System.Drawing.Size(175, 20)
-        Me.CheckedInput_energyInversion.TabIndex = 7
-        Me.CheckedInput_energyInversion.Tag = ""
-        Me.CheckedInput_energyInversion.Text = "Energy Inversion"
-        '
-        'CheckedInput_enhancedDurability
-        '
-        Me.CheckedInput_enhancedDurability.Location = New System.Drawing.Point(6, 45)
-        Me.CheckedInput_enhancedDurability.Maximum = 5
-        Me.CheckedInput_enhancedDurability.MaximumSize = New System.Drawing.Size(175, 20)
-        Me.CheckedInput_enhancedDurability.MinimumSize = New System.Drawing.Size(175, 20)
-        Me.CheckedInput_enhancedDurability.Name = "CheckedInput_enhancedDurability"
-        Me.CheckedInput_enhancedDurability.Size = New System.Drawing.Size(175, 20)
-        Me.CheckedInput_enhancedDurability.TabIndex = 6
-        Me.CheckedInput_enhancedDurability.Tag = ""
-        Me.CheckedInput_enhancedDurability.Text = "Enhanced Durability"
-        '
-        'CheckedInput_argonPlating
-        '
-        Me.CheckedInput_argonPlating.Location = New System.Drawing.Point(6, 19)
-        Me.CheckedInput_argonPlating.Maximum = 5
-        Me.CheckedInput_argonPlating.MaximumSize = New System.Drawing.Size(175, 20)
-        Me.CheckedInput_argonPlating.MinimumSize = New System.Drawing.Size(175, 20)
-        Me.CheckedInput_argonPlating.Name = "CheckedInput_argonPlating"
-        Me.CheckedInput_argonPlating.Size = New System.Drawing.Size(175, 20)
-        Me.CheckedInput_argonPlating.TabIndex = 5
-        Me.CheckedInput_argonPlating.Tag = ""
-        Me.CheckedInput_argonPlating.Text = "Argon Plating"
-        '
         'CheckedGroupBox_archwingMiscellaneous
         '
         Me.CheckedGroupBox_archwingMiscellaneous.AutoSize = True
-        Me.CheckedGroupBox_archwingMiscellaneous.Controls.Add(Me.CheckedInput_auxiliaryPower)
-        Me.CheckedGroupBox_archwingMiscellaneous.Location = New System.Drawing.Point(3, 255)
+        Me.CheckedGroupBox_archwingMiscellaneous.Controls.Add(Me.CheckedInput_archwingCoactionDrift)
+        Me.CheckedGroupBox_archwingMiscellaneous.Location = New System.Drawing.Point(3, 207)
         Me.CheckedGroupBox_archwingMiscellaneous.Name = "CheckedGroupBox_archwingMiscellaneous"
         Me.CheckedGroupBox_archwingMiscellaneous.Size = New System.Drawing.Size(187, 58)
         Me.CheckedGroupBox_archwingMiscellaneous.TabIndex = 1
         Me.CheckedGroupBox_archwingMiscellaneous.TabStop = False
         Me.CheckedGroupBox_archwingMiscellaneous.Text = "Miscellaneous"
         '
-        'CheckedInput_auxiliaryPower
+        'CheckedInput_archwingCoactionDrift
         '
-        Me.CheckedInput_auxiliaryPower.Location = New System.Drawing.Point(6, 19)
-        Me.CheckedInput_auxiliaryPower.MaximumSize = New System.Drawing.Size(175, 20)
-        Me.CheckedInput_auxiliaryPower.MinimumSize = New System.Drawing.Size(175, 20)
-        Me.CheckedInput_auxiliaryPower.Name = "CheckedInput_auxiliaryPower"
-        Me.CheckedInput_auxiliaryPower.Size = New System.Drawing.Size(175, 20)
-        Me.CheckedInput_auxiliaryPower.TabIndex = 2
-        Me.CheckedInput_auxiliaryPower.Text = "Auxiliary Power"
-        '
-        'CheckedGroupBox_archwingPowerStrength
-        '
-        Me.CheckedGroupBox_archwingPowerStrength.AutoSize = True
-        Me.CheckedGroupBox_archwingPowerStrength.Controls.Add(Me.CheckedInput_morphicTransformer)
-        Me.CheckedGroupBox_archwingPowerStrength.Location = New System.Drawing.Point(3, 319)
-        Me.CheckedGroupBox_archwingPowerStrength.Name = "CheckedGroupBox_archwingPowerStrength"
-        Me.CheckedGroupBox_archwingPowerStrength.Size = New System.Drawing.Size(187, 58)
-        Me.CheckedGroupBox_archwingPowerStrength.TabIndex = 2
-        Me.CheckedGroupBox_archwingPowerStrength.TabStop = False
-        Me.CheckedGroupBox_archwingPowerStrength.Text = "Power Strength"
-        '
-        'CheckedInput_morphicTransformer
-        '
-        Me.CheckedInput_morphicTransformer.Location = New System.Drawing.Point(6, 19)
-        Me.CheckedInput_morphicTransformer.MaximumSize = New System.Drawing.Size(175, 20)
-        Me.CheckedInput_morphicTransformer.MinimumSize = New System.Drawing.Size(175, 20)
-        Me.CheckedInput_morphicTransformer.Name = "CheckedInput_morphicTransformer"
-        Me.CheckedInput_morphicTransformer.Size = New System.Drawing.Size(175, 20)
-        Me.CheckedInput_morphicTransformer.TabIndex = 2
-        Me.CheckedInput_morphicTransformer.Text = "Morphic Transformer"
+        Me.CheckedInput_archwingCoactionDrift.Location = New System.Drawing.Point(6, 19)
+        Me.CheckedInput_archwingCoactionDrift.Maximum = 5
+        Me.CheckedInput_archwingCoactionDrift.MaximumSize = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_archwingCoactionDrift.MinimumSize = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_archwingCoactionDrift.Name = "CheckedInput_archwingCoactionDrift"
+        Me.CheckedInput_archwingCoactionDrift.Size = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_archwingCoactionDrift.TabIndex = 3
+        Me.CheckedInput_archwingCoactionDrift.Text = "Coaction Drift"
         '
         'TableLayoutPanel_archwingTopLayout
         '
@@ -3517,6 +3420,39 @@ Partial Class Form_main
         Me.Label_love.TabIndex = 2
         Me.Label_love.Text = "♥"
         '
+        'CheckedInput_argonPlating
+        '
+        Me.CheckedInput_argonPlating.Location = New System.Drawing.Point(6, 19)
+        Me.CheckedInput_argonPlating.Maximum = 5
+        Me.CheckedInput_argonPlating.MaximumSize = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_argonPlating.MinimumSize = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_argonPlating.Name = "CheckedInput_argonPlating"
+        Me.CheckedInput_argonPlating.Size = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_argonPlating.TabIndex = 16
+        Me.CheckedInput_argonPlating.Text = "Argon Plating"
+        '
+        'CheckedInput_enhancedDurability
+        '
+        Me.CheckedInput_enhancedDurability.Location = New System.Drawing.Point(6, 45)
+        Me.CheckedInput_enhancedDurability.Maximum = 5
+        Me.CheckedInput_enhancedDurability.MaximumSize = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_enhancedDurability.MinimumSize = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_enhancedDurability.Name = "CheckedInput_enhancedDurability"
+        Me.CheckedInput_enhancedDurability.Size = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_enhancedDurability.TabIndex = 17
+        Me.CheckedInput_enhancedDurability.Text = "Enhanced Durability"
+        '
+        'CheckedInput_energyInversion
+        '
+        Me.CheckedInput_energyInversion.Location = New System.Drawing.Point(6, 71)
+        Me.CheckedInput_energyInversion.Maximum = 5
+        Me.CheckedInput_energyInversion.MaximumSize = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_energyInversion.MinimumSize = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_energyInversion.Name = "CheckedInput_energyInversion"
+        Me.CheckedInput_energyInversion.Size = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_energyInversion.TabIndex = 18
+        Me.CheckedInput_energyInversion.Text = "Energy Inversion"
+        '
         'Form_main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -3571,7 +3507,6 @@ Partial Class Form_main
         Me.TableLayoutPanel_companionTopLayout.ResumeLayout(False)
         Me.TableLayoutPanel_companionTopLayout.PerformLayout()
         Me.TabPage_archwing.ResumeLayout(False)
-        Me.TabPage_archwing.PerformLayout()
         Me.TableLayoutPanel_archwingMainLayout.ResumeLayout(False)
         Me.TableLayoutPanel_archwingMainLayout.PerformLayout()
         Me.GroupBox_archwingStats.ResumeLayout(False)
@@ -3584,8 +3519,6 @@ Partial Class Form_main
         Me.CheckedGroupBox_archwingSurvivability.PerformLayout()
         Me.CheckedGroupBox_archwingMiscellaneous.ResumeLayout(False)
         Me.CheckedGroupBox_archwingMiscellaneous.PerformLayout()
-        Me.CheckedGroupBox_archwingPowerStrength.ResumeLayout(False)
-        Me.CheckedGroupBox_archwingPowerStrength.PerformLayout()
         Me.TableLayoutPanel_archwingTopLayout.ResumeLayout(False)
         Me.TabPage_development.ResumeLayout(False)
         Me.TabPage_development.PerformLayout()
@@ -3721,7 +3654,6 @@ Partial Class Form_main
     Friend WithEvents ComboBox_companions As ComboBox
     Friend WithEvents CheckBox_companionPrimeCollar As CheckBox
     Friend WithEvents TabPage_archwing As TabPage
-    Friend WithEvents Label_archwingPlaceholder As Label
     Friend WithEvents RadioButton_missionCryogenicLeakage As RadioButton
     Friend WithEvents RadioButton_missionFire As RadioButton
     Friend WithEvents TabPage_abilitiesKhora As TabPage
@@ -3946,9 +3878,6 @@ Partial Class Form_main
     Friend WithEvents MaxValueToggle_archwings As MaxValueToggle
     Friend WithEvents FlowLayoutPanel_archwingModsLayout As FlowLayoutPanel
     Friend WithEvents CheckedGroupBox_archwingSurvivability As CheckedGroupBox
-    Friend WithEvents CheckedInput_energyInversion As CheckedInput
-    Friend WithEvents CheckedInput_enhancedDurability As CheckedInput
-    Friend WithEvents CheckedInput_argonPlating As CheckedInput
     Friend WithEvents GroupBox_archwingStats As GroupBox
     Friend WithEvents FlowLayoutPanel_archwingStatsLayout As FlowLayoutPanel
     Friend WithEvents StatBox_archwingArmor As StatBox
@@ -3964,13 +3893,12 @@ Partial Class Form_main
     Friend WithEvents StatBox_archwingEnergy As StatBox
     Friend WithEvents StatBox_archwingPowerStrength As StatBox
     Friend WithEvents CheckedGroupBox_archwingMiscellaneous As CheckedGroupBox
-    Friend WithEvents CheckedInput_auxiliaryPower As CheckedInput
-    Friend WithEvents CheckedGroupBox_archwingPowerStrength As CheckedGroupBox
-    Friend WithEvents CheckedInput_morphicTransformer As CheckedInput
     Friend WithEvents CheckBox_archwingPrime As CheckBox
     Friend WithEvents CheckedGroupBox_archwingAura As CheckedGroupBox
-    Friend WithEvents RadioInput_archwingGrowingPower As RadioInput
     Friend WithEvents RadioInput_archwingStandUnited As RadioInput
     Friend WithEvents RadioInput_archwingPhysique As RadioInput
-    Friend WithEvents RadioInput_archwingPowerDonation As RadioInput
+    Friend WithEvents CheckedInput_archwingCoactionDrift As CheckedInput
+    Friend WithEvents CheckedInput_argonPlating As CheckedInput
+    Friend WithEvents CheckedInput_enhancedDurability As CheckedInput
+    Friend WithEvents CheckedInput_energyInversion As CheckedInput
 End Class
