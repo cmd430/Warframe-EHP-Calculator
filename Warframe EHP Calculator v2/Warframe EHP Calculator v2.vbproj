@@ -162,6 +162,7 @@
     </Compile>
     <Compile Include="Modules\CompanionData.vb" />
     <Compile Include="Modules\BuildSerializor.vb" />
+    <Compile Include="Modules\ResetForm.vb" />
     <Compile Include="Modules\SharedData.vb" />
     <Compile Include="Modules\ArchwingData.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />

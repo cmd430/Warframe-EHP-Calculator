@@ -25,58 +25,65 @@ Public Class BuildSerializor
 
     Private Shared Sub AddChildControls(ByVal xmlSerializedBuild As XmlTextWriter, ByVal c As Control)
         For Each childCtrl As Control In c.Controls
-            If TypeOf childCtrl IsNot Label AndAlso TypeOf childCtrl IsNot MaxValueToggle Then
-                If (TypeOf childCtrl Is CheckBox AndAlso CType(childCtrl, CheckBox).Checked) Or
-                     (TypeOf childCtrl Is RadioButton AndAlso CType(childCtrl, RadioButton).Checked) Or
-                     (TypeOf childCtrl Is RadioInput AndAlso CType(childCtrl, RadioInput).Checked) Or
-                     (TypeOf childCtrl Is CheckedInput AndAlso CType(childCtrl, CheckedInput).Checked) Or
-                     (TypeOf childCtrl Is CheckedDualInput AndAlso CType(childCtrl, CheckedDualInput).Checked) Or
-                     (TypeOf childCtrl Is CheckedGroupBox AndAlso CType(childCtrl, CheckedGroupBox).Checked) Or
-                     (TypeOf childCtrl Is FlowLayoutPanel AndAlso Not CType(childCtrl, FlowLayoutPanel).Visible = False) Or
-                     TypeOf childCtrl Is TableLayoutPanel Or
-                     TypeOf childCtrl Is ComboBox Or
-                     TypeOf childCtrl Is VariantSelection Then
-                    ' serialize the control
-                    If TypeOf childCtrl IsNot TableLayoutPanel AndAlso TypeOf childCtrl IsNot FlowLayoutPanel Then
-                        xmlSerializedBuild.WriteStartElement("Control")
-                        xmlSerializedBuild.WriteAttributeString("Type", childCtrl.GetType.ToString.Split("."c).Last())
-                        xmlSerializedBuild.WriteAttributeString("Name", childCtrl.Name)
-                        If (TypeOf childCtrl Is ComboBox) Then
-                            xmlSerializedBuild.WriteElementString("SelectedIndex", CType(childCtrl, ComboBox).SelectedIndex.ToString)
-                        ElseIf (TypeOf childCtrl Is CheckBox) Then
+            If TypeOf childCtrl IsNot Label AndAlso TypeOf childCtrl IsNot MaxValueToggle AndAlso
+                ((TypeOf childCtrl Is CheckBox AndAlso CType(childCtrl, CheckBox).Checked) Or
+                 (TypeOf childCtrl Is RadioButton AndAlso CType(childCtrl, RadioButton).Checked) Or
+                 (TypeOf childCtrl Is RadioInput AndAlso CType(childCtrl, RadioInput).Checked) Or
+                 (TypeOf childCtrl Is CheckedInput AndAlso CType(childCtrl, CheckedInput).Checked) Or
+                 (TypeOf childCtrl Is CheckedDualInput AndAlso CType(childCtrl, CheckedDualInput).Checked) Or
+                 (TypeOf childCtrl Is CheckedGroupBox AndAlso CType(childCtrl, CheckedGroupBox).Checked) Or
+                 (TypeOf childCtrl Is FlowLayoutPanel AndAlso CType(childCtrl, FlowLayoutPanel).Visible) Or
+                 TypeOf childCtrl Is TableLayoutPanel Or
+                 TypeOf childCtrl Is ComboBox Or
+                 TypeOf childCtrl Is VariantSelection) Then
+                ' serialize the control
+                If TypeOf childCtrl IsNot TableLayoutPanel AndAlso TypeOf childCtrl IsNot FlowLayoutPanel Then
+                    Dim controlType As String = childCtrl.GetType.ToString.Split("."c).Last()
+                    xmlSerializedBuild.WriteStartElement("Control")
+                    xmlSerializedBuild.WriteAttributeString("Type", controlType)
+                    xmlSerializedBuild.WriteAttributeString("Name", childCtrl.Name)
+                    Select Case controlType
+                        Case "ComboBox"
+                            xmlSerializedBuild.WriteElementString("SelectedItem", CType(childCtrl, ComboBox).SelectedItem.ToString)
+                        Case "CheckBox"
                             xmlSerializedBuild.WriteElementString("Checked", CType(childCtrl, CheckBox).Checked.ToString)
-                        ElseIf (TypeOf childCtrl Is RadioButton) Then
+                        Case "RadioButton"
                             xmlSerializedBuild.WriteElementString("Checked", CType(childCtrl, RadioButton).Checked.ToString)
-                        ElseIf TypeOf childCtrl Is RadioInput Then
+                        Case "RadioInput"
                             xmlSerializedBuild.WriteElementString("Checked", CType(childCtrl, RadioInput).Checked.ToString)
                             xmlSerializedBuild.WriteElementString("Value", CType(childCtrl, RadioInput).Value.ToString)
-                        ElseIf TypeOf childCtrl Is CheckedInput Then
+                        Case "CheckedInput"
                             xmlSerializedBuild.WriteElementString("Checked", CType(childCtrl, CheckedInput).Checked.ToString)
                             xmlSerializedBuild.WriteElementString("Value", CType(childCtrl, CheckedInput).Value.ToString)
-                        ElseIf TypeOf childCtrl Is CheckedDualInput Then
+                        Case "CheckedDualInput"
                             xmlSerializedBuild.WriteElementString("Checked", CType(childCtrl, CheckedDualInput).Checked.ToString)
                             xmlSerializedBuild.WriteElementString("Value", CType(childCtrl, CheckedDualInput).Value.ToString)
                             xmlSerializedBuild.WriteElementString("Secondary_Value", CType(childCtrl, CheckedDualInput).Secondary_Value.ToString)
-                        ElseIf TypeOf childCtrl Is CheckedGroupBox Then
+                        Case "CheckedGroupBox"
                             xmlSerializedBuild.WriteElementString("Checked", CType(childCtrl, CheckedGroupBox).Checked.ToString)
-                        ElseIf TypeOf childCtrl Is VariantSelection Then
+                        Case "VariantSelection"
                             xmlSerializedBuild.WriteElementString("SelectedVariant", CType(childCtrl, VariantSelection).SelectedVariant.ToString)
-                        End If
+                        Case "CompanionVariantSelection"
+                            xmlSerializedBuild.WriteElementString("SelectedVariant", CType(childCtrl, CompanionVariantSelection).SelectedVariant.ToString)
+                        Case "NumericInput"
+                            xmlSerializedBuild.WriteElementString("SelectedVariant", CType(childCtrl, NumericInput).Value.ToString)
+                    End Select
+                End If
+                ' serialize any children
+                If childCtrl.HasChildren Then
+                    If TypeOf childCtrl Is CheckedGroupBox Then
+                        AddChildControls(xmlSerializedBuild, CType(childCtrl, CheckedGroupBox).FlowLayout)
+                    ElseIf TypeOf childCtrl IsNot CheckedInput AndAlso
+                            TypeOf childCtrl IsNot CheckedDualInput AndAlso
+                            TypeOf childCtrl IsNot RadioInput AndAlso
+                            TypeOf childCtrl IsNot VariantSelection AndAlso
+                            TypeOf childCtrl IsNot CompanionVariantSelection AndAlso
+                            TypeOf childCtrl IsNot NumericInput Then
+                        AddChildControls(xmlSerializedBuild, childCtrl)
                     End If
-                    ' serialize any children
-                    If childCtrl.HasChildren Then
-                        If TypeOf childCtrl Is CheckedGroupBox Then
-                            AddChildControls(xmlSerializedBuild, CType(childCtrl, CheckedGroupBox).FlowLayout)
-                        ElseIf TypeOf childCtrl IsNot CheckedInput AndAlso
-                                TypeOf childCtrl IsNot CheckedDualInput AndAlso
-                                TypeOf childCtrl IsNot RadioInput AndAlso
-                                TypeOf childCtrl IsNot VariantSelection Then
-                            AddChildControls(xmlSerializedBuild, childCtrl)
-                        End If
-                    End If
-                    If TypeOf childCtrl IsNot TableLayoutPanel AndAlso TypeOf childCtrl IsNot FlowLayoutPanel Then
-                        xmlSerializedBuild.WriteEndElement()
-                    End If
+                End If
+                If TypeOf childCtrl IsNot TableLayoutPanel AndAlso TypeOf childCtrl IsNot FlowLayoutPanel Then
+                    xmlSerializedBuild.WriteEndElement()
                 End If
             End If
         Next
@@ -101,7 +108,7 @@ Public Class BuildSerializor
             Dim ctrlToSet As Control = ctrl.FirstOrDefault()
             Select Case controlType
                 Case "ComboBox"
-                    CType(ctrlToSet, ComboBox).SelectedIndex = Convert.ToInt32(n("SelectedIndex").InnerText)
+                    CType(ctrlToSet, ComboBox).SelectedItem = n("SelectedItem").InnerText
                 Case "CheckBox"
                     CType(ctrlToSet, CheckBox).Checked = Convert.ToBoolean(n("Checked").InnerText)
                 Case "RadioButton"
@@ -120,6 +127,10 @@ Public Class BuildSerializor
                     CType(ctrlToSet, CheckedGroupBox).Checked = Convert.ToBoolean(n("Checked").InnerText)
                 Case "VariantSelection"
                     CType(ctrlToSet, VariantSelection).SelectedVariant = n("SelectedVariant").InnerText
+                Case "CompanionVariantSelection"
+                    CType(ctrlToSet, CompanionVariantSelection).SelectedVariant = n("SelectedVariant").InnerText
+                Case "NumericInput"
+                    CType(ctrlToSet, NumericInput).Value = Integer.Parse(n("Value").InnerText)
             End Select
             ' deserialize any children
             If n.HasChildNodes AndAlso ctrlToSet.HasChildren Then

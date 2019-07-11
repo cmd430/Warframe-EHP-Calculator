@@ -127,7 +127,7 @@ Public Class Form_main
         '   Companions
         '
         AddHandler ComboBox_companions.SelectedIndexChanged, AddressOf Companion_Value_Changed
-        AddHandler CompanionVariantSelection1.SelectedVariantChanged, AddressOf Companion_Value_Changed
+        AddHandler VariantSelection_companions.SelectedVariantChanged, AddressOf Companion_Value_Changed
         AddHandler CheckBox_companionPrimeCollar.CheckedChanged, AddressOf Companion_Value_Changed
         AddHandler NumericInput_companionStability.ValueChanged, AddressOf Companion_Value_Changed
         For Each Group As Control In FlowLayoutPanel_compainionModsLayout.Controls
@@ -150,17 +150,94 @@ Public Class Form_main
         '
         ' Build Export / Import Buttons
         '
+        ' Warframes
         AddHandler Button_warframeImport.Click,
             Sub()
+                Dim DefaultExt As String = "wbs"
+                Dim Filter As String = "Warframe Builds|*.wfb"
+                Dim Title As String = "Import Warframe Build"
                 If OpenFileDialog_Import.ShowDialog = DialogResult.OK Then
+                    ResetForm.Warframe()
                     BuildSerializor.Deserialize(TabPage_warframe, OpenFileDialog_Import.FileName)
                 End If
             End Sub
         AddHandler Button_warframeExport.Click,
             Sub()
-                SaveFileDialog_Export.FileName = ComboBox_warframes.SelectedItem
+                Dim DefaultExt As String = "wfb"
+                Dim Filter As String = "Warframe Builds|*.wfb"
+                Dim Title As String = "Export Warframe Build"
+                Dim FileName As String = ComboBox_warframes.SelectedItem
+                If VariantSelection_warframes.SelectedVariant IsNot "base" Then
+                    FileName &= " (" & VariantSelection_warframes.SelectedVariant & ")"
+                End If
+                SaveFileDialog_Export.DefaultExt = DefaultExt
+                SaveFileDialog_Export.Filter = Filter
+                SaveFileDialog_Export.Title = Title
+                SaveFileDialog_Export.FileName = FileName
                 If SaveFileDialog_Export.ShowDialog = DialogResult.OK Then
                     BuildSerializor.Serialize(TabPage_warframe, SaveFileDialog_Export.FileName, "Warframe")
+                End If
+            End Sub
+        ' Companions
+        AddHandler Button_companionImport.Click,
+            Sub()
+                Dim DefaultExt As String = "cb"
+                Dim Filter As String = "Companion Builds|*.cb"
+                Dim Title As String = "Import Companion Build"
+                OpenFileDialog_Import.DefaultExt = DefaultExt
+                OpenFileDialog_Import.Filter = Filter
+                OpenFileDialog_Import.Title = Title
+                If OpenFileDialog_Import.ShowDialog = DialogResult.OK Then
+                    ResetForm.Companion()
+                    BuildSerializor.Deserialize(TabPage_companion, OpenFileDialog_Import.FileName)
+                End If
+            End Sub
+        AddHandler Button_companionExport.Click,
+            Sub()
+                Dim DefaultExt As String = "cb"
+                Dim Filter As String = "Companion Builds|*.cb"
+                Dim Title As String = "Export Companion Build"
+                Dim FileName As String = ComboBox_companions.SelectedItem
+                If VariantSelection_companions.SelectedVariant IsNot "base" Then
+                    FileName &= " (" & VariantSelection_companions.SelectedVariant & ")"
+                End If
+                SaveFileDialog_Export.DefaultExt = DefaultExt
+                SaveFileDialog_Export.Filter = Filter
+                SaveFileDialog_Export.Title = Title
+                SaveFileDialog_Export.FileName = FileName
+                If SaveFileDialog_Export.ShowDialog = DialogResult.OK Then
+                    BuildSerializor.Serialize(TabPage_companion, SaveFileDialog_Export.FileName, "Warframe")
+                End If
+            End Sub
+        ' Archwings
+        AddHandler Button_archwingImport.Click,
+            Sub()
+                Dim DefaultExt As String = "awb"
+                Dim Filter As String = "Archwing Builds|*.awb"
+                Dim Title As String = "Import Archwing Build"
+                OpenFileDialog_Import.DefaultExt = DefaultExt
+                OpenFileDialog_Import.Filter = Filter
+                OpenFileDialog_Import.Title = Title
+                If OpenFileDialog_Import.ShowDialog = DialogResult.OK Then
+                    ResetForm.Archwing()
+                    BuildSerializor.Deserialize(TabPage_archwing, OpenFileDialog_Import.FileName)
+                End If
+            End Sub
+        AddHandler Button_archwingExport.Click,
+            Sub()
+                Dim DefaultExt As String = "awb"
+                Dim Filter As String = "Archwing Builds|*.awb"
+                Dim Title As String = "Export Archwing Build"
+                Dim FileName As String = ComboBox_archwings.SelectedItem
+                If CheckBox_archwingPrime.Checked Then
+                    FileName &= " (prime)"
+                End If
+                SaveFileDialog_Export.DefaultExt = DefaultExt
+                SaveFileDialog_Export.Filter = Filter
+                SaveFileDialog_Export.Title = Title
+                SaveFileDialog_Export.FileName = FileName
+                If SaveFileDialog_Export.ShowDialog = DialogResult.OK Then
+                    BuildSerializor.Serialize(TabPage_archwing, SaveFileDialog_Export.FileName, "Warframe")
                 End If
             End Sub
         '
@@ -173,6 +250,8 @@ Public Class Form_main
         ' Prevent Export Blank Loadout
         '
         Button_warframeExport.Enabled = False
+        Button_companionExport.Enabled = False
+        Button_archwingExport.Enabled = False
         '
         ' Check for Update
         '
@@ -1060,13 +1139,13 @@ Public Class Form_main
             '   if so we can enable to checkbox
             '
             If hasPrime And hasPrisma Then
-                CompanionVariantSelection1.AvailableVariants = "prime_prisma"
+                VariantSelection_companions.AvailableVariants = "prime_prisma"
             ElseIf hasPrime Then
-                CompanionVariantSelection1.AvailableVariants = "prime"
+                VariantSelection_companions.AvailableVariants = "prime"
             ElseIf hasPrisma Then
-                CompanionVariantSelection1.AvailableVariants = "prisma"
+                VariantSelection_companions.AvailableVariants = "prisma"
             Else
-                CompanionVariantSelection1.AvailableVariants = "base"
+                VariantSelection_companions.AvailableVariants = "base"
             End If
             If currentCompanion.Type = "kubrow" Or currentCompanion.Type = "helminth" Then
                 CheckBox_companionPrimeCollar.Enabled = True
@@ -1085,7 +1164,7 @@ Public Class Form_main
                 NumericInput_companionStability.Enabled = True
             End If
 
-            Dim currentVariant As [Variant] = currentCompanion.Variants.Find(Function(var) var.Name = CompanionVariantSelection1.SelectedVariant)
+            Dim currentVariant As [Variant] = currentCompanion.Variants.Find(Function(var) var.Name = VariantSelection_companions.SelectedVariant)
             baseArmor = currentVariant.Armor
             baseHealth = currentVariant.Health
             baseShield = currentVariant.Shield
@@ -1170,7 +1249,9 @@ Public Class Form_main
             StatBox_companionShield.Value = Shield
             StatBox_companionDamageReduction.Value = damageReduction
             StatBox_companionEHP.Value = effectiveHealth
+            Button_companionExport.Enabled = True
         Else
+            Button_companionExport.Enabled = False
             StatBox_companionArmor.Value = Nothing
             StatBox_companionHealth.Value = Nothing
             StatBox_companionShield.Value = Nothing
@@ -1314,10 +1395,15 @@ Public Class Form_main
             Dim totalDamageReduction As Decimal = damageReductionArmor + ((1 - damageReductionArmor) * damageReduction)
             Dim effectiveHealth As Integer = Math.Ceiling((Health / (1 - totalDamageReduction)) + (Shield / (1 - damageReduction)) + damageAbsorbstion)
             StatBox_archwingEHP.Value = effectiveHealth
+            '
+            ' enable export
+            '
+            Button_archwingExport.Enabled = True
         Else
             '
             '   No Archwing selected, display values should be set to default
             '
+            Button_archwingExport.Enabled = False
             StatBox_archwingArmor.Value = Nothing
             StatBox_archwingHealth.Value = Nothing
             StatBox_archwingShield.Value = Nothing

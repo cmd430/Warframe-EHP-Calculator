@@ -1,3 +1,9 @@
+1907-5
+* preemptively fix exported builds breaking when new warframes are added
+* change default naming for exported builds to include prime/umbra if applicable
+* properly reset when a build is imported
++ add export/import to companions and archwings
+
 1907-4
 * optimized export build function to reduce size of exported build
 
