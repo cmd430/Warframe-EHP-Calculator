@@ -1,3 +1,6 @@
+1907-3
++ added import/export functionality for builds
+
 1907-2
 * fixed version check using cached response and sometimes failing to detect an update
 * fixed abilities and arcane helmets not updating the ehp

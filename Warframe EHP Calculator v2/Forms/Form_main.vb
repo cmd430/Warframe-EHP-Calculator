@@ -18,10 +18,10 @@ Public Class Form_main
     ' Fix Laggy Resize Events
     ' Only redraw on end resize
     '
-    Private Sub Main_ResizeBegin(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.ResizeBegin
+    Private Sub Main_ResizeBegin(ByVal sender As Object, ByVal e As EventArgs) Handles Me.ResizeBegin
         SuspendLayout()
     End Sub
-    Private Sub Main_ResizeEnd(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.ResizeEnd
+    Private Sub Main_ResizeEnd(ByVal sender As Object, ByVal e As EventArgs) Handles Me.ResizeEnd
         ResumeLayout()
     End Sub
 
@@ -42,7 +42,7 @@ Public Class Form_main
         ' Version Info
         '
         localVersion = New StreamReader(assembly.GetManifestResourceStream("Warframe_EHP_Calculator_v2.version")).ReadToEnd()
-        Me.Text = Me.Text & " (v" & localVersion & ")"
+        Text = Text & " (v" & localVersion & ")"
         '
         ' Load Warframe/Companion and Rank Data
         '
@@ -148,11 +148,31 @@ Public Class Form_main
             End If
         Next
         '
+        ' Build Export / Import Buttons
+        '
+        AddHandler Button_warframeImport.Click,
+            Sub()
+                If OpenFileDialog_Import.ShowDialog = DialogResult.OK Then
+                    BuildSerializor.Deserialize(TabPage_warframe, OpenFileDialog_Import.FileName)
+                End If
+            End Sub
+        AddHandler Button_warframeExport.Click,
+            Sub()
+                SaveFileDialog_Export.FileName = ComboBox_warframes.SelectedItem
+                If SaveFileDialog_Export.ShowDialog = DialogResult.OK Then
+                    BuildSerializor.Serialize(TabPage_warframe, SaveFileDialog_Export.FileName, "Warframe")
+                End If
+            End Sub
+        '
         ' Set Deafult Values to Max
         '
         MaxValueToggle_warframes.Checked = My.Settings.DefaultToMax_warframes
         MaxValueToggle_compainions.Checked = My.Settings.DefaultToMax_companions
         MaxValueToggle_archwings.Checked = My.Settings.DefaultToMax_archwings
+        '
+        ' Prevent Export Blank Loadout
+        '
+        Button_warframeExport.Enabled = False
         '
         ' Check for Update
         '
@@ -973,6 +993,10 @@ Public Class Form_main
             'Dim effectiveHealth As Integer = Math.Ceiling((Health / (1 - totalDamageReduction)) + (Shield + damageAbsorbstion))
             Dim effectiveHealth As Integer = Math.Ceiling((Health / (1 - totalDamageReduction)) + (Shield / (1 - damageReduction)) + damageAbsorbstion)
             StatBox_warframeEHP.Value = effectiveHealth
+            '
+            ' Enable Export of Build
+            '
+            Button_warframeExport.Enabled = True
         Else
             '
             '   No Warframe selected, display values should be set to default
@@ -1000,6 +1024,10 @@ Public Class Form_main
                     End If
                 End If
             Next
+            '
+            ' Disable Export of Build
+            '
+            Button_warframeExport.Enabled = False
         End If
         Companion_Value_Changed(sender, e)
     End Sub
