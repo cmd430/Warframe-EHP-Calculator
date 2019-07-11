@@ -39,7 +39,7 @@ Public Class BuildSerializor
                     ' serialize the control
                     If TypeOf childCtrl IsNot TableLayoutPanel AndAlso TypeOf childCtrl IsNot FlowLayoutPanel Then
                         xmlSerializedBuild.WriteStartElement("Control")
-                        xmlSerializedBuild.WriteAttributeString("Type", childCtrl.GetType.ToString)
+                        xmlSerializedBuild.WriteAttributeString("Type", childCtrl.GetType.ToString.Split("."c).Last())
                         xmlSerializedBuild.WriteAttributeString("Name", childCtrl.Name)
                         If (TypeOf childCtrl Is ComboBox) Then
                             xmlSerializedBuild.WriteElementString("SelectedIndex", CType(childCtrl, ComboBox).SelectedIndex.ToString)
@@ -100,32 +100,32 @@ Public Class BuildSerializor
         If ctrl.Length > 0 Then
             Dim ctrlToSet As Control = ctrl.FirstOrDefault()
             Select Case controlType
-                Case "System.Windows.Forms.ComboBox"
+                Case "ComboBox"
                     CType(ctrlToSet, ComboBox).SelectedIndex = Convert.ToInt32(n("SelectedIndex").InnerText)
-                Case "System.Windows.Forms.CheckBox"
+                Case "CheckBox"
                     CType(ctrlToSet, CheckBox).Checked = Convert.ToBoolean(n("Checked").InnerText)
-                Case "System.Windows.Forms.RadioButton"
+                Case "RadioButton"
                     CType(ctrlToSet, RadioButton).Checked = Convert.ToBoolean(n("Checked").InnerText)
-                Case "Warframe_EHP_Calculator_v2.RadioInput"
+                Case "RadioInput"
                     CType(ctrlToSet, RadioInput).Checked = Convert.ToBoolean(n("Checked").InnerText)
                     CType(ctrlToSet, RadioInput).Value = Integer.Parse(n("Value").InnerText)
-                Case "Warframe_EHP_Calculator_v2.CheckedInput"
+                Case "CheckedInput"
                     CType(ctrlToSet, CheckedInput).Checked = Convert.ToBoolean(n("Checked").InnerText)
                     CType(ctrlToSet, CheckedInput).Value = Integer.Parse(n("Value").InnerText)
-                Case "Warframe_EHP_Calculator_v2.CheckedDualInput"
+                Case "CheckedDualInput"
                     CType(ctrlToSet, CheckedDualInput).Checked = Convert.ToBoolean(n("Checked").InnerText)
                     CType(ctrlToSet, CheckedDualInput).Value = Integer.Parse(n("Value").InnerText)
                     CType(ctrlToSet, CheckedDualInput).Secondary_Value = Integer.Parse(n("Secondary_Value").InnerText)
-                Case "Warframe_EHP_Calculator_v2.CheckedGroupBox"
+                Case "CheckedGroupBox"
                     CType(ctrlToSet, CheckedGroupBox).Checked = Convert.ToBoolean(n("Checked").InnerText)
-                Case "Warframe_EHP_Calculator_v2.VariantSelection"
+                Case "VariantSelection"
                     CType(ctrlToSet, VariantSelection).SelectedVariant = n("SelectedVariant").InnerText
             End Select
             ' deserialize any children
             If n.HasChildNodes AndAlso ctrlToSet.HasChildren Then
                 Dim xnlControls As XmlNodeList = n.SelectNodes("Control")
                 For Each n2 As XmlNode In xnlControls
-                    If controlType = "Warframe_EHP_Calculator_v2.CheckedGroupBox" Then
+                    If controlType = "CheckedGroupBox" Then
                         SetControlProperties(CType(ctrlToSet, CheckedGroupBox).FlowLayout, n2)
                     Else
                         SetControlProperties(ctrlToSet, n2)

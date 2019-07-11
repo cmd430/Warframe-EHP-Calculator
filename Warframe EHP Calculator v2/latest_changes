@@ -1,3 +1,6 @@
+1907-4
+* optimized export build function to reduce size of exported build
+
 1907-3
 + added import/export functionality for builds
 
