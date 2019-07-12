@@ -991,6 +991,11 @@ Public Class Form_main
                             Dim vitalityMoteBonus As Decimal = 300 * powerStrength
                             healthBonus += vitalityMoteBonus
                         End If
+                    Case "Wukong"
+                        If CheckedInput_defy.Checked Then
+                            Dim defy As Decimal = CheckedInput_defy.Value
+                            armorBonus += defy
+                        End If
                 End Select
             End If
             '
