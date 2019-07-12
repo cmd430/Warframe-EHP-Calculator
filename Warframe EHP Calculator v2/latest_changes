@@ -1,7 +1,10 @@
+1907-6
+* properly reset when a build is imported for archwings and companions
+
 1907-5
 * preemptively fix exported builds breaking when new warframes are added
 * change default naming for exported builds to include prime/umbra if applicable
-* properly reset when a build is imported
+* properly reset when a build is imported for warframes
 + add export/import to companions and archwings
 
 1907-4

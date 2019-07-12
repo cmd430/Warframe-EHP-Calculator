@@ -8,14 +8,14 @@
     End Sub
 
     Public Shared Sub Companion()
-        Dim MaxToggle As MaxValueToggle = Form_main.TabPage_warframe.Controls.Find("MaxValueToggle_companions", True).FirstOrDefault()
+        Dim MaxToggle As MaxValueToggle = Form_main.TabPage_companion.Controls.Find("MaxValueToggle_companions", True).FirstOrDefault()
         MaxToggle.Checked = Not MaxToggle.Checked
         ResetComponent(Form_main.TabPage_companion)
         MaxToggle.Checked = Not MaxToggle.Checked
     End Sub
 
     Public Shared Sub Archwing()
-        Dim MaxToggle As MaxValueToggle = Form_main.TabPage_warframe.Controls.Find("MaxValueToggle_archwings", True).FirstOrDefault()
+        Dim MaxToggle As MaxValueToggle = Form_main.TabPage_archwing.Controls.Find("MaxValueToggle_archwings", True).FirstOrDefault()
         MaxToggle.Checked = Not MaxToggle.Checked
         ResetComponent(Form_main.TabPage_archwing)
         MaxToggle.Checked = Not MaxToggle.Checked
@@ -43,22 +43,16 @@
                         CType(control, RadioButton).Checked = False
                     Case "RadioInput"
                         CType(control, RadioInput).Checked = False
-                        CType(control, RadioInput).Value = CType(control, RadioInput).Minimum
                     Case "CheckedInput"
                         CType(control, CheckedInput).Checked = False
-                        CType(control, CheckedInput).Value.ToString()
                     Case "CheckedDualInput"
                         CType(control, CheckedDualInput).Checked = False
-                        CType(control, CheckedDualInput).Value = CType(control, CheckedDualInput).Minimum
-                        CType(control, CheckedDualInput).Secondary_Value = CType(control, CheckedDualInput).Secondary_Minimum
                     Case "CheckedGroupBox"
                         CType(control, CheckedGroupBox).Checked = False
                     Case "VariantSelection"
                         CType(control, VariantSelection).SelectedVariant = "base"
                     Case "CompanionVariantSelection"
                         CType(control, CompanionVariantSelection).SelectedVariant = "base"
-                    Case "NumericInput"
-                        CType(control, NumericInput).Value = CType(control, NumericInput).Minimum
                 End Select
                 If container.HasChildren Then
                     If TypeOf control Is CheckedGroupBox Then
