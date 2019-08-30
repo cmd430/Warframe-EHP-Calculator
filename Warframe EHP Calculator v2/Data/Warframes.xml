@@ -66,6 +66,11 @@
       <rank_multiplier name="energy" multiplier="2.25" />
     </rank_multipliers>
   </warframe>
+  <warframe name="Gauss">
+    <variants>
+      <variant name="base" armor="150" health="100" shield="150" energy="150" strength="100" />
+    </variants>
+  </warframe>
   <warframe name="Harrow">
     <variants>
       <variant name="base" armor="150" health="100" shield="150" energy="100" strength="100" />
