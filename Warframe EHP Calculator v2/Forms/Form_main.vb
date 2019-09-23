@@ -267,7 +267,7 @@ Public Class Form_main
         Catch ex As Exception
             'Cant check for updates
         End Try
-        'Size = New Size(803, 790)
+        Size = New Size(803, 744) ' Window Size = X+13, Y+10
     End Sub
 
     Private Sub Add_Warframe_Handlers(ByVal ParentControl As Control)
@@ -648,6 +648,14 @@ Public Class Form_main
                     'Note: Power Donation does not seem to be affected by co-action drift at this time.
                     Dim powerDonation As Decimal = basePowerStrength * (0.05 + (RadioInput_powerDonation.Value * 0.05))
                     powerStrength -= powerDonation
+                ElseIf RadioInput_aerodynamic.Checked Then
+                    Dim aerodynamic As Decimal = 0.1 + (RadioInput_aerodynamic.Value * 0.1)
+                    If CheckedInput_coactionDrift.Checked And CheckedGroupBox_miscellaneous.Checked Then
+                        Dim coactionDrit As Decimal = 0.025 + (0.025 * CheckedInput_coactionDrift.Value)
+                        damageReduction += (1 - damageReduction) * (aerodynamic * (coactionDrit * (1 + coactionDrit) + coactionDrit))
+                    Else
+                        damageReduction += (1 - damageReduction) * aerodynamic
+                    End If
                 End If
             End If
             '
@@ -1041,6 +1049,12 @@ Public Class Form_main
                 If CheckedInput_arcaneUltimatum2.Checked Then
                     Armor += 150 + (150 * CheckedInput_arcaneUltimatum2.Value)
                 End If
+                If CheckedInput_arcaneTanker.Checked Then
+                    Armor += 300 + (300 * CheckedInput_arcaneUltimatum.Value)
+                End If
+                If CheckedInput_arcaneTanker2.Checked Then
+                    Armor += 300 + (300 * CheckedInput_arcaneUltimatum2.Value)
+                End If
                 If CheckedInput_arcanePaxBolt.Checked Then
                     powerStrength += 0.075 + (0.075 * CheckedInput_arcanePaxBolt.Value)
                 End If
@@ -1235,6 +1249,13 @@ Public Class Form_main
                 End If
                 If CheckedInput_companionCalculatedRedirection.Checked = True Then
                     shieldMultiplier += (CheckedInput_companionLinkShield.Value + 1) * 0.25
+                End If
+            End If
+
+            If CheckedGroupBox_aura.Checked Then
+                If RadioInput_shepherd.Checked = True Then
+                    armorBonus += 30 + (30 * RadioInput_shepherd.Value)
+                    healthBonus += 50 + (50 * RadioInput_shepherd.Value)
                 End If
             End If
 

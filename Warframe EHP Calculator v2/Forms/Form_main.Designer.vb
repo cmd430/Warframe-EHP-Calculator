@@ -41,6 +41,8 @@ Partial Class Form_main
         Me.StatBox_warframeEHP = New Warframe_EHP_Calculator_v2.StatBox()
         Me.FlowLayoutPanel_warframeModsLayout = New System.Windows.Forms.FlowLayoutPanel()
         Me.CheckedGroupBox_aura = New Warframe_EHP_Calculator_v2.CheckedGroupBox()
+        Me.RadioInput_shepherd = New Warframe_EHP_Calculator_v2.RadioInput()
+        Me.RadioInput_aerodynamic = New Warframe_EHP_Calculator_v2.RadioInput()
         Me.RadioInput_growingPower = New Warframe_EHP_Calculator_v2.RadioInput()
         Me.RadioInput_standUnited = New Warframe_EHP_Calculator_v2.RadioInput()
         Me.RadioInput_physique = New Warframe_EHP_Calculator_v2.RadioInput()
@@ -97,6 +99,8 @@ Partial Class Form_main
         Me.CheckBox_corruptedBuff = New System.Windows.Forms.CheckBox()
         Me.CheckedInput_overshields = New Warframe_EHP_Calculator_v2.CheckedInput()
         Me.CheckedGroupBox_arcanes = New Warframe_EHP_Calculator_v2.CheckedGroupBox()
+        Me.CheckedInput_arcaneTanker2 = New Warframe_EHP_Calculator_v2.CheckedInput()
+        Me.CheckedInput_arcaneTanker = New Warframe_EHP_Calculator_v2.CheckedInput()
         Me.CheckedInput_arcanePaxBolt = New Warframe_EHP_Calculator_v2.CheckedInput()
         Me.CheckedInput_arcaneUltimatum2 = New Warframe_EHP_Calculator_v2.CheckedInput()
         Me.CheckedInput_arcaneUltimatum = New Warframe_EHP_Calculator_v2.CheckedInput()
@@ -168,7 +172,7 @@ Partial Class Form_main
         Me.FlowLayoutPanel_defaultArcaneHelmets = New System.Windows.Forms.FlowLayoutPanel()
         Me.Label_arcaneHelmetPlaceholder = New System.Windows.Forms.Label()
         Me.TabPage_ashArcaneHelmets = New System.Windows.Forms.TabPage()
-        Me.FlowLayoutPanel_ashAbilities = New System.Windows.Forms.FlowLayoutPanel()
+        Me.FlowLayoutPanel_ashArcaneHelmets = New System.Windows.Forms.FlowLayoutPanel()
         Me.RadioButton_locustHelmet = New System.Windows.Forms.RadioButton()
         Me.TabPage_arcaneHelmetsBanshee = New System.Windows.Forms.TabPage()
         Me.FlowLayoutPanel_bansheeArcaneHelmets = New System.Windows.Forms.FlowLayoutPanel()
@@ -347,7 +351,7 @@ Partial Class Form_main
         Me.TabPage_arcaneHelmetsDefault.SuspendLayout()
         Me.FlowLayoutPanel_defaultArcaneHelmets.SuspendLayout()
         Me.TabPage_ashArcaneHelmets.SuspendLayout()
-        Me.FlowLayoutPanel_ashAbilities.SuspendLayout()
+        Me.FlowLayoutPanel_ashArcaneHelmets.SuspendLayout()
         Me.TabPage_arcaneHelmetsBanshee.SuspendLayout()
         Me.FlowLayoutPanel_bansheeArcaneHelmets.SuspendLayout()
         Me.TabPage_arcaneHelmetsEmber.SuspendLayout()
@@ -435,7 +439,7 @@ Partial Class Form_main
         Me.TabControl_main.Location = New System.Drawing.Point(0, 0)
         Me.TabControl_main.Name = "TabControl_main"
         Me.TabControl_main.SelectedIndex = 0
-        Me.TabControl_main.Size = New System.Drawing.Size(787, 751)
+        Me.TabControl_main.Size = New System.Drawing.Size(954, 852)
         Me.TabControl_main.TabIndex = 0
         '
         'TabPage_warframe
@@ -449,7 +453,7 @@ Partial Class Form_main
         Me.TabPage_warframe.Location = New System.Drawing.Point(4, 29)
         Me.TabPage_warframe.Name = "TabPage_warframe"
         Me.TabPage_warframe.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_warframe.Size = New System.Drawing.Size(779, 718)
+        Me.TabPage_warframe.Size = New System.Drawing.Size(946, 819)
         Me.TabPage_warframe.TabIndex = 0
         Me.TabPage_warframe.Text = "Warframe  "
         '
@@ -466,7 +470,7 @@ Partial Class Form_main
         Me.TableLayoutPanel_warframeMainLayout.Name = "TableLayoutPanel_warframeMainLayout"
         Me.TableLayoutPanel_warframeMainLayout.RowCount = 1
         Me.TableLayoutPanel_warframeMainLayout.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel_warframeMainLayout.Size = New System.Drawing.Size(773, 685)
+        Me.TableLayoutPanel_warframeMainLayout.Size = New System.Drawing.Size(940, 786)
         Me.TableLayoutPanel_warframeMainLayout.TabIndex = 129
         '
         'GroupBox_stats
@@ -475,9 +479,9 @@ Partial Class Form_main
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GroupBox_stats.Controls.Add(Me.FlowLayoutPanel_warframeStatsLayout)
         Me.GroupBox_stats.Controls.Add(Me.StatBox_warframeEHP)
-        Me.GroupBox_stats.Location = New System.Drawing.Point(582, 3)
+        Me.GroupBox_stats.Location = New System.Drawing.Point(749, 3)
         Me.GroupBox_stats.Name = "GroupBox_stats"
-        Me.GroupBox_stats.Size = New System.Drawing.Size(188, 679)
+        Me.GroupBox_stats.Size = New System.Drawing.Size(188, 780)
         Me.GroupBox_stats.TabIndex = 130
         Me.GroupBox_stats.TabStop = False
         Me.GroupBox_stats.Text = "Stats "
@@ -497,7 +501,7 @@ Partial Class Form_main
         Me.FlowLayoutPanel_warframeStatsLayout.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
         Me.FlowLayoutPanel_warframeStatsLayout.Location = New System.Drawing.Point(4, 14)
         Me.FlowLayoutPanel_warframeStatsLayout.Name = "FlowLayoutPanel_warframeStatsLayout"
-        Me.FlowLayoutPanel_warframeStatsLayout.Size = New System.Drawing.Size(181, 633)
+        Me.FlowLayoutPanel_warframeStatsLayout.Size = New System.Drawing.Size(181, 734)
         Me.FlowLayoutPanel_warframeStatsLayout.TabIndex = 129
         '
         'StatBox_warframeArmor
@@ -613,7 +617,7 @@ Partial Class Form_main
         'StatBox_warframeEHP
         '
         Me.StatBox_warframeEHP.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.StatBox_warframeEHP.Location = New System.Drawing.Point(7, 653)
+        Me.StatBox_warframeEHP.Location = New System.Drawing.Point(7, 754)
         Me.StatBox_warframeEHP.MaximumSize = New System.Drawing.Size(175, 20)
         Me.StatBox_warframeEHP.MinimumSize = New System.Drawing.Size(175, 20)
         Me.StatBox_warframeEHP.Name = "StatBox_warframeEHP"
@@ -647,12 +651,14 @@ Partial Class Form_main
         Me.FlowLayoutPanel_warframeModsLayout.Location = New System.Drawing.Point(0, 0)
         Me.FlowLayoutPanel_warframeModsLayout.Margin = New System.Windows.Forms.Padding(0)
         Me.FlowLayoutPanel_warframeModsLayout.Name = "FlowLayoutPanel_warframeModsLayout"
-        Me.FlowLayoutPanel_warframeModsLayout.Size = New System.Drawing.Size(577, 685)
+        Me.FlowLayoutPanel_warframeModsLayout.Size = New System.Drawing.Size(744, 786)
         Me.FlowLayoutPanel_warframeModsLayout.TabIndex = 127
         '
         'CheckedGroupBox_aura
         '
         Me.CheckedGroupBox_aura.AutoSize = True
+        Me.CheckedGroupBox_aura.Controls.Add(Me.RadioInput_shepherd)
+        Me.CheckedGroupBox_aura.Controls.Add(Me.RadioInput_aerodynamic)
         Me.CheckedGroupBox_aura.Controls.Add(Me.RadioInput_growingPower)
         Me.CheckedGroupBox_aura.Controls.Add(Me.RadioInput_standUnited)
         Me.CheckedGroupBox_aura.Controls.Add(Me.RadioInput_physique)
@@ -660,14 +666,37 @@ Partial Class Form_main
         Me.CheckedGroupBox_aura.Limit = 1
         Me.CheckedGroupBox_aura.Location = New System.Drawing.Point(3, 3)
         Me.CheckedGroupBox_aura.Name = "CheckedGroupBox_aura"
-        Me.CheckedGroupBox_aura.Size = New System.Drawing.Size(187, 130)
+        Me.CheckedGroupBox_aura.Size = New System.Drawing.Size(187, 178)
         Me.CheckedGroupBox_aura.TabIndex = 12
         Me.CheckedGroupBox_aura.TabStop = False
         Me.CheckedGroupBox_aura.Text = "Aura"
         '
+        'RadioInput_shepherd
+        '
+        Me.RadioInput_shepherd.Location = New System.Drawing.Point(6, 141)
+        Me.RadioInput_shepherd.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
+        Me.RadioInput_shepherd.MaximumSize = New System.Drawing.Size(175, 20)
+        Me.RadioInput_shepherd.MinimumSize = New System.Drawing.Size(175, 20)
+        Me.RadioInput_shepherd.Name = "RadioInput_shepherd"
+        Me.RadioInput_shepherd.Size = New System.Drawing.Size(175, 20)
+        Me.RadioInput_shepherd.TabIndex = 7
+        Me.RadioInput_shepherd.Text = "Shepherd"
+        '
+        'RadioInput_aerodynamic
+        '
+        Me.RadioInput_aerodynamic.Location = New System.Drawing.Point(6, 116)
+        Me.RadioInput_aerodynamic.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
+        Me.RadioInput_aerodynamic.MaximumSize = New System.Drawing.Size(175, 20)
+        Me.RadioInput_aerodynamic.MinimumSize = New System.Drawing.Size(175, 20)
+        Me.RadioInput_aerodynamic.Name = "RadioInput_aerodynamic"
+        Me.RadioInput_aerodynamic.Size = New System.Drawing.Size(175, 20)
+        Me.RadioInput_aerodynamic.TabIndex = 6
+        Me.RadioInput_aerodynamic.Text = "Aerodynamic"
+        '
         'RadioInput_growingPower
         '
         Me.RadioInput_growingPower.Location = New System.Drawing.Point(6, 17)
+        Me.RadioInput_growingPower.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.RadioInput_growingPower.MaximumSize = New System.Drawing.Size(175, 20)
         Me.RadioInput_growingPower.MinimumSize = New System.Drawing.Size(175, 20)
         Me.RadioInput_growingPower.Name = "RadioInput_growingPower"
@@ -678,6 +707,7 @@ Partial Class Form_main
         'RadioInput_standUnited
         '
         Me.RadioInput_standUnited.Location = New System.Drawing.Point(6, 91)
+        Me.RadioInput_standUnited.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.RadioInput_standUnited.MaximumSize = New System.Drawing.Size(175, 20)
         Me.RadioInput_standUnited.MinimumSize = New System.Drawing.Size(175, 20)
         Me.RadioInput_standUnited.Name = "RadioInput_standUnited"
@@ -688,6 +718,7 @@ Partial Class Form_main
         'RadioInput_physique
         '
         Me.RadioInput_physique.Location = New System.Drawing.Point(6, 67)
+        Me.RadioInput_physique.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.RadioInput_physique.MaximumSize = New System.Drawing.Size(175, 20)
         Me.RadioInput_physique.MinimumSize = New System.Drawing.Size(175, 20)
         Me.RadioInput_physique.Name = "RadioInput_physique"
@@ -698,6 +729,7 @@ Partial Class Form_main
         'RadioInput_powerDonation
         '
         Me.RadioInput_powerDonation.Location = New System.Drawing.Point(6, 43)
+        Me.RadioInput_powerDonation.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.RadioInput_powerDonation.MaximumSize = New System.Drawing.Size(175, 20)
         Me.RadioInput_powerDonation.MinimumSize = New System.Drawing.Size(175, 20)
         Me.RadioInput_powerDonation.Name = "RadioInput_powerDonation"
@@ -727,9 +759,9 @@ Partial Class Form_main
         Me.CheckedGroupBox_survivability.Controls.Add(Me.CheckedInput_redirection)
         Me.CheckedGroupBox_survivability.Controls.Add(Me.CheckedInput_vitality)
         Me.CheckedGroupBox_survivability.Controls.Add(Me.CheckedInput_steelFiber)
-        Me.CheckedGroupBox_survivability.Location = New System.Drawing.Point(3, 139)
+        Me.CheckedGroupBox_survivability.Location = New System.Drawing.Point(3, 187)
         Me.CheckedGroupBox_survivability.Name = "CheckedGroupBox_survivability"
-        Me.CheckedGroupBox_survivability.Size = New System.Drawing.Size(187, 515)
+        Me.CheckedGroupBox_survivability.Size = New System.Drawing.Size(187, 513)
         Me.CheckedGroupBox_survivability.TabIndex = 13
         Me.CheckedGroupBox_survivability.TabStop = False
         Me.CheckedGroupBox_survivability.Text = "Survivability"
@@ -737,6 +769,7 @@ Partial Class Form_main
         'CheckBox_adaptation
         '
         Me.CheckBox_adaptation.Location = New System.Drawing.Point(6, 479)
+        Me.CheckBox_adaptation.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckBox_adaptation.Name = "CheckBox_adaptation"
         Me.CheckBox_adaptation.Size = New System.Drawing.Size(175, 17)
         Me.CheckBox_adaptation.TabIndex = 129
@@ -747,6 +780,7 @@ Partial Class Form_main
         'CheckedDualInput_mechaPulse
         '
         Me.CheckedDualInput_mechaPulse.Location = New System.Drawing.Point(6, 435)
+        Me.CheckedDualInput_mechaPulse.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckedDualInput_mechaPulse.Maximum = 3
         Me.CheckedDualInput_mechaPulse.MaximumSize = New System.Drawing.Size(175, 39)
         Me.CheckedDualInput_mechaPulse.MinimumSize = New System.Drawing.Size(175, 39)
@@ -760,6 +794,7 @@ Partial Class Form_main
         'CheckedInput_protonSet
         '
         Me.CheckedInput_protonSet.Location = New System.Drawing.Point(6, 411)
+        Me.CheckedInput_protonSet.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckedInput_protonSet.Maximum = 3
         Me.CheckedInput_protonSet.MaximumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_protonSet.Minimum = 1
@@ -773,6 +808,7 @@ Partial Class Form_main
         'CheckedInput_aviator
         '
         Me.CheckedInput_aviator.Location = New System.Drawing.Point(6, 387)
+        Me.CheckedInput_aviator.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckedInput_aviator.Maximum = 3
         Me.CheckedInput_aviator.MaximumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_aviator.MinimumSize = New System.Drawing.Size(175, 20)
@@ -784,6 +820,7 @@ Partial Class Form_main
         'CheckedInput_agilityDrift
         '
         Me.CheckedInput_agilityDrift.Location = New System.Drawing.Point(6, 363)
+        Me.CheckedInput_agilityDrift.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckedInput_agilityDrift.Maximum = 5
         Me.CheckedInput_agilityDrift.MaximumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_agilityDrift.MinimumSize = New System.Drawing.Size(175, 20)
@@ -795,6 +832,7 @@ Partial Class Form_main
         'CheckedInput_focusedDefense
         '
         Me.CheckedInput_focusedDefense.Location = New System.Drawing.Point(6, 339)
+        Me.CheckedInput_focusedDefense.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckedInput_focusedDefense.Maximum = 3
         Me.CheckedInput_focusedDefense.MaximumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_focusedDefense.MinimumSize = New System.Drawing.Size(175, 20)
@@ -806,6 +844,7 @@ Partial Class Form_main
         'CheckedInput_umbralVitality
         '
         Me.CheckedInput_umbralVitality.Location = New System.Drawing.Point(6, 316)
+        Me.CheckedInput_umbralVitality.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckedInput_umbralVitality.MaximumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_umbralVitality.Minimum = 5
         Me.CheckedInput_umbralVitality.MinimumSize = New System.Drawing.Size(175, 20)
@@ -819,6 +858,7 @@ Partial Class Form_main
         'CheckedInput_umbralFiber
         '
         Me.CheckedInput_umbralFiber.Location = New System.Drawing.Point(6, 292)
+        Me.CheckedInput_umbralFiber.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckedInput_umbralFiber.MaximumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_umbralFiber.Minimum = 5
         Me.CheckedInput_umbralFiber.MinimumSize = New System.Drawing.Size(175, 20)
@@ -832,6 +872,7 @@ Partial Class Form_main
         'CheckedInput_gladiatorFinesse
         '
         Me.CheckedInput_gladiatorFinesse.Location = New System.Drawing.Point(6, 269)
+        Me.CheckedInput_gladiatorFinesse.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckedInput_gladiatorFinesse.Maximum = 5
         Me.CheckedInput_gladiatorFinesse.MaximumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_gladiatorFinesse.MinimumSize = New System.Drawing.Size(175, 20)
@@ -843,6 +884,7 @@ Partial Class Form_main
         'CheckedInput_augurAccord
         '
         Me.CheckedInput_augurAccord.Location = New System.Drawing.Point(6, 246)
+        Me.CheckedInput_augurAccord.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckedInput_augurAccord.Maximum = 5
         Me.CheckedInput_augurAccord.MaximumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_augurAccord.MinimumSize = New System.Drawing.Size(175, 20)
@@ -854,6 +896,7 @@ Partial Class Form_main
         'CheckedInput_gladiatorResolve
         '
         Me.CheckedInput_gladiatorResolve.Location = New System.Drawing.Point(6, 223)
+        Me.CheckedInput_gladiatorResolve.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckedInput_gladiatorResolve.Maximum = 5
         Me.CheckedInput_gladiatorResolve.MaximumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_gladiatorResolve.MinimumSize = New System.Drawing.Size(175, 20)
@@ -865,6 +908,7 @@ Partial Class Form_main
         'CheckedInput_gladiatorAegis
         '
         Me.CheckedInput_gladiatorAegis.Location = New System.Drawing.Point(6, 200)
+        Me.CheckedInput_gladiatorAegis.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckedInput_gladiatorAegis.Maximum = 5
         Me.CheckedInput_gladiatorAegis.MaximumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_gladiatorAegis.MinimumSize = New System.Drawing.Size(175, 20)
@@ -876,6 +920,7 @@ Partial Class Form_main
         'CheckedDualInput_healthConversion
         '
         Me.CheckedDualInput_healthConversion.Location = New System.Drawing.Point(6, 158)
+        Me.CheckedDualInput_healthConversion.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckedDualInput_healthConversion.Maximum = 5
         Me.CheckedDualInput_healthConversion.MaximumSize = New System.Drawing.Size(175, 39)
         Me.CheckedDualInput_healthConversion.MinimumSize = New System.Drawing.Size(175, 39)
@@ -889,6 +934,7 @@ Partial Class Form_main
         'CheckedInput_quickThinking
         '
         Me.CheckedInput_quickThinking.Location = New System.Drawing.Point(6, 135)
+        Me.CheckedInput_quickThinking.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckedInput_quickThinking.Maximum = 5
         Me.CheckedInput_quickThinking.MaximumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_quickThinking.MinimumSize = New System.Drawing.Size(175, 20)
@@ -900,6 +946,7 @@ Partial Class Form_main
         'CheckedInput_armoredAgility
         '
         Me.CheckedInput_armoredAgility.Location = New System.Drawing.Point(6, 112)
+        Me.CheckedInput_armoredAgility.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckedInput_armoredAgility.Maximum = 5
         Me.CheckedInput_armoredAgility.MaximumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_armoredAgility.MinimumSize = New System.Drawing.Size(175, 20)
@@ -911,6 +958,7 @@ Partial Class Form_main
         'CheckedInput_vigor
         '
         Me.CheckedInput_vigor.Location = New System.Drawing.Point(6, 88)
+        Me.CheckedInput_vigor.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckedInput_vigor.MaximumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_vigor.MinimumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_vigor.Name = "CheckedInput_vigor"
@@ -921,6 +969,7 @@ Partial Class Form_main
         'CheckedInput_redirection
         '
         Me.CheckedInput_redirection.Location = New System.Drawing.Point(6, 65)
+        Me.CheckedInput_redirection.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckedInput_redirection.MaximumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_redirection.MinimumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_redirection.Name = "CheckedInput_redirection"
@@ -931,6 +980,7 @@ Partial Class Form_main
         'CheckedInput_vitality
         '
         Me.CheckedInput_vitality.Location = New System.Drawing.Point(6, 42)
+        Me.CheckedInput_vitality.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckedInput_vitality.MaximumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_vitality.MinimumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_vitality.Name = "CheckedInput_vitality"
@@ -942,6 +992,7 @@ Partial Class Form_main
         'CheckedInput_steelFiber
         '
         Me.CheckedInput_steelFiber.Location = New System.Drawing.Point(6, 19)
+        Me.CheckedInput_steelFiber.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckedInput_steelFiber.MaximumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_steelFiber.MinimumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_steelFiber.Name = "CheckedInput_steelFiber"
@@ -958,7 +1009,7 @@ Partial Class Form_main
         Me.CheckedGroupBox_miscellaneous.Controls.Add(Me.CheckedInput_coactionDrift)
         Me.CheckedGroupBox_miscellaneous.Location = New System.Drawing.Point(196, 3)
         Me.CheckedGroupBox_miscellaneous.Name = "CheckedGroupBox_miscellaneous"
-        Me.CheckedGroupBox_miscellaneous.Size = New System.Drawing.Size(187, 102)
+        Me.CheckedGroupBox_miscellaneous.Size = New System.Drawing.Size(187, 100)
         Me.CheckedGroupBox_miscellaneous.TabIndex = 14
         Me.CheckedGroupBox_miscellaneous.TabStop = False
         Me.CheckedGroupBox_miscellaneous.Text = "Miscellaneous"
@@ -966,6 +1017,7 @@ Partial Class Form_main
         'CheckedInput_flow
         '
         Me.CheckedInput_flow.Location = New System.Drawing.Point(6, 63)
+        Me.CheckedInput_flow.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckedInput_flow.MaximumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_flow.MinimumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_flow.Name = "CheckedInput_flow"
@@ -976,6 +1028,7 @@ Partial Class Form_main
         'CheckedInput_enduranceDrift
         '
         Me.CheckedInput_enduranceDrift.Location = New System.Drawing.Point(6, 39)
+        Me.CheckedInput_enduranceDrift.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckedInput_enduranceDrift.Maximum = 5
         Me.CheckedInput_enduranceDrift.MaximumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_enduranceDrift.MinimumSize = New System.Drawing.Size(175, 20)
@@ -987,6 +1040,7 @@ Partial Class Form_main
         'CheckedInput_coactionDrift
         '
         Me.CheckedInput_coactionDrift.Location = New System.Drawing.Point(6, 17)
+        Me.CheckedInput_coactionDrift.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckedInput_coactionDrift.Maximum = 5
         Me.CheckedInput_coactionDrift.MaximumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_coactionDrift.MinimumSize = New System.Drawing.Size(175, 20)
@@ -1006,9 +1060,9 @@ Partial Class Form_main
         Me.CheckedGroupBox_powerStrength.Controls.Add(Me.CheckedInput_intensify)
         Me.CheckedGroupBox_powerStrength.Controls.Add(Me.CheckedInput_energyConversion)
         Me.CheckedGroupBox_powerStrength.Controls.Add(Me.CheckedInput_blindRage)
-        Me.CheckedGroupBox_powerStrength.Location = New System.Drawing.Point(196, 111)
+        Me.CheckedGroupBox_powerStrength.Location = New System.Drawing.Point(196, 109)
         Me.CheckedGroupBox_powerStrength.Name = "CheckedGroupBox_powerStrength"
-        Me.CheckedGroupBox_powerStrength.Size = New System.Drawing.Size(187, 212)
+        Me.CheckedGroupBox_powerStrength.Size = New System.Drawing.Size(187, 210)
         Me.CheckedGroupBox_powerStrength.TabIndex = 15
         Me.CheckedGroupBox_powerStrength.TabStop = False
         Me.CheckedGroupBox_powerStrength.Text = "Power Strength"
@@ -1016,6 +1070,7 @@ Partial Class Form_main
         'CheckedInput_umbralIntensify
         '
         Me.CheckedInput_umbralIntensify.Location = New System.Drawing.Point(6, 173)
+        Me.CheckedInput_umbralIntensify.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckedInput_umbralIntensify.MaximumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_umbralIntensify.Minimum = 5
         Me.CheckedInput_umbralIntensify.MinimumSize = New System.Drawing.Size(175, 20)
@@ -1029,6 +1084,7 @@ Partial Class Form_main
         'CheckedInput_augurSecrets
         '
         Me.CheckedInput_augurSecrets.Location = New System.Drawing.Point(6, 151)
+        Me.CheckedInput_augurSecrets.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckedInput_augurSecrets.Maximum = 5
         Me.CheckedInput_augurSecrets.MaximumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_augurSecrets.MinimumSize = New System.Drawing.Size(175, 20)
@@ -1040,6 +1096,7 @@ Partial Class Form_main
         'CheckedInput_powerDrift
         '
         Me.CheckedInput_powerDrift.Location = New System.Drawing.Point(6, 129)
+        Me.CheckedInput_powerDrift.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckedInput_powerDrift.Maximum = 5
         Me.CheckedInput_powerDrift.MaximumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_powerDrift.MinimumSize = New System.Drawing.Size(175, 20)
@@ -1051,6 +1108,7 @@ Partial Class Form_main
         'CheckedInput_overextended
         '
         Me.CheckedInput_overextended.Location = New System.Drawing.Point(6, 107)
+        Me.CheckedInput_overextended.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckedInput_overextended.Maximum = 5
         Me.CheckedInput_overextended.MaximumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_overextended.MinimumSize = New System.Drawing.Size(175, 20)
@@ -1062,6 +1120,7 @@ Partial Class Form_main
         'CheckedInput_transientFortitude
         '
         Me.CheckedInput_transientFortitude.Location = New System.Drawing.Point(6, 85)
+        Me.CheckedInput_transientFortitude.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckedInput_transientFortitude.MaximumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_transientFortitude.MinimumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_transientFortitude.Name = "CheckedInput_transientFortitude"
@@ -1072,6 +1131,7 @@ Partial Class Form_main
         'CheckedInput_intensify
         '
         Me.CheckedInput_intensify.Location = New System.Drawing.Point(6, 63)
+        Me.CheckedInput_intensify.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckedInput_intensify.Maximum = 5
         Me.CheckedInput_intensify.MaximumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_intensify.MinimumSize = New System.Drawing.Size(175, 20)
@@ -1084,6 +1144,7 @@ Partial Class Form_main
         'CheckedInput_energyConversion
         '
         Me.CheckedInput_energyConversion.Location = New System.Drawing.Point(6, 41)
+        Me.CheckedInput_energyConversion.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckedInput_energyConversion.Maximum = 5
         Me.CheckedInput_energyConversion.MaximumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_energyConversion.MinimumSize = New System.Drawing.Size(175, 20)
@@ -1095,6 +1156,7 @@ Partial Class Form_main
         'CheckedInput_blindRage
         '
         Me.CheckedInput_blindRage.Location = New System.Drawing.Point(6, 19)
+        Me.CheckedInput_blindRage.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckedInput_blindRage.MaximumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_blindRage.MinimumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_blindRage.Name = "CheckedInput_blindRage"
@@ -1107,9 +1169,9 @@ Partial Class Form_main
         Me.CheckedGroupBox_dragonKeys.AutoSize = True
         Me.CheckedGroupBox_dragonKeys.Controls.Add(Me.CheckBox_decayingKey)
         Me.CheckedGroupBox_dragonKeys.Controls.Add(Me.CheckBox_bleedingKey)
-        Me.CheckedGroupBox_dragonKeys.Location = New System.Drawing.Point(196, 329)
+        Me.CheckedGroupBox_dragonKeys.Location = New System.Drawing.Point(196, 325)
         Me.CheckedGroupBox_dragonKeys.Name = "CheckedGroupBox_dragonKeys"
-        Me.CheckedGroupBox_dragonKeys.Size = New System.Drawing.Size(187, 74)
+        Me.CheckedGroupBox_dragonKeys.Size = New System.Drawing.Size(187, 72)
         Me.CheckedGroupBox_dragonKeys.TabIndex = 16
         Me.CheckedGroupBox_dragonKeys.TabStop = False
         Me.CheckedGroupBox_dragonKeys.Text = "Dragon Keys"
@@ -1117,6 +1179,7 @@ Partial Class Form_main
         'CheckBox_decayingKey
         '
         Me.CheckBox_decayingKey.Location = New System.Drawing.Point(6, 38)
+        Me.CheckBox_decayingKey.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckBox_decayingKey.Name = "CheckBox_decayingKey"
         Me.CheckBox_decayingKey.Size = New System.Drawing.Size(175, 17)
         Me.CheckBox_decayingKey.TabIndex = 3
@@ -1126,6 +1189,7 @@ Partial Class Form_main
         'CheckBox_bleedingKey
         '
         Me.CheckBox_bleedingKey.Location = New System.Drawing.Point(6, 19)
+        Me.CheckBox_bleedingKey.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckBox_bleedingKey.Name = "CheckBox_bleedingKey"
         Me.CheckBox_bleedingKey.Size = New System.Drawing.Size(175, 17)
         Me.CheckBox_bleedingKey.TabIndex = 2
@@ -1137,9 +1201,9 @@ Partial Class Form_main
         Me.CheckedGroupBox_missionModifiers.AutoSize = True
         Me.CheckedGroupBox_missionModifiers.Controls.Add(Me.RadioButton_missionFire)
         Me.CheckedGroupBox_missionModifiers.Controls.Add(Me.RadioButton_missionCryogenicLeakage)
-        Me.CheckedGroupBox_missionModifiers.Location = New System.Drawing.Point(196, 409)
+        Me.CheckedGroupBox_missionModifiers.Location = New System.Drawing.Point(196, 403)
         Me.CheckedGroupBox_missionModifiers.Name = "CheckedGroupBox_missionModifiers"
-        Me.CheckedGroupBox_missionModifiers.Size = New System.Drawing.Size(187, 76)
+        Me.CheckedGroupBox_missionModifiers.Size = New System.Drawing.Size(187, 74)
         Me.CheckedGroupBox_missionModifiers.TabIndex = 17
         Me.CheckedGroupBox_missionModifiers.TabStop = False
         Me.CheckedGroupBox_missionModifiers.Text = "Mission Modifiers"
@@ -1147,6 +1211,7 @@ Partial Class Form_main
         'RadioButton_missionFire
         '
         Me.RadioButton_missionFire.Location = New System.Drawing.Point(6, 40)
+        Me.RadioButton_missionFire.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.RadioButton_missionFire.Name = "RadioButton_missionFire"
         Me.RadioButton_missionFire.Size = New System.Drawing.Size(175, 17)
         Me.RadioButton_missionFire.TabIndex = 1
@@ -1157,6 +1222,7 @@ Partial Class Form_main
         '
         Me.RadioButton_missionCryogenicLeakage.Checked = True
         Me.RadioButton_missionCryogenicLeakage.Location = New System.Drawing.Point(6, 19)
+        Me.RadioButton_missionCryogenicLeakage.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.RadioButton_missionCryogenicLeakage.Name = "RadioButton_missionCryogenicLeakage"
         Me.RadioButton_missionCryogenicLeakage.Size = New System.Drawing.Size(175, 17)
         Me.RadioButton_missionCryogenicLeakage.TabIndex = 0
@@ -1168,9 +1234,9 @@ Partial Class Form_main
         '
         Me.CheckedGroupBox_blocking.AutoSize = True
         Me.CheckedGroupBox_blocking.Controls.Add(Me.ComboBox_blocking)
-        Me.CheckedGroupBox_blocking.Location = New System.Drawing.Point(196, 491)
+        Me.CheckedGroupBox_blocking.Location = New System.Drawing.Point(196, 483)
         Me.CheckedGroupBox_blocking.Name = "CheckedGroupBox_blocking"
-        Me.CheckedGroupBox_blocking.Size = New System.Drawing.Size(187, 59)
+        Me.CheckedGroupBox_blocking.Size = New System.Drawing.Size(187, 57)
         Me.CheckedGroupBox_blocking.TabIndex = 18
         Me.CheckedGroupBox_blocking.TabStop = False
         Me.CheckedGroupBox_blocking.Text = "Blocking"
@@ -1181,6 +1247,7 @@ Partial Class Form_main
         Me.ComboBox_blocking.FormattingEnabled = True
         Me.ComboBox_blocking.Items.AddRange(New Object() {"Blocking Damange Reduction", "35%", "60%", "80%", "85%", "90%"})
         Me.ComboBox_blocking.Location = New System.Drawing.Point(6, 19)
+        Me.ComboBox_blocking.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.ComboBox_blocking.Name = "ComboBox_blocking"
         Me.ComboBox_blocking.Size = New System.Drawing.Size(175, 21)
         Me.ComboBox_blocking.TabIndex = 1
@@ -1189,9 +1256,9 @@ Partial Class Form_main
         '
         Me.CheckedGroupBox_focus.AutoSize = True
         Me.CheckedGroupBox_focus.Controls.Add(Me.CheckedInput_stoneSkin)
-        Me.CheckedGroupBox_focus.Location = New System.Drawing.Point(196, 556)
+        Me.CheckedGroupBox_focus.Location = New System.Drawing.Point(196, 546)
         Me.CheckedGroupBox_focus.Name = "CheckedGroupBox_focus"
-        Me.CheckedGroupBox_focus.Size = New System.Drawing.Size(187, 56)
+        Me.CheckedGroupBox_focus.Size = New System.Drawing.Size(187, 54)
         Me.CheckedGroupBox_focus.TabIndex = 19
         Me.CheckedGroupBox_focus.TabStop = False
         Me.CheckedGroupBox_focus.Text = "Focus"
@@ -1199,6 +1266,7 @@ Partial Class Form_main
         'CheckedInput_stoneSkin
         '
         Me.CheckedInput_stoneSkin.Location = New System.Drawing.Point(6, 17)
+        Me.CheckedInput_stoneSkin.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckedInput_stoneSkin.Maximum = 3
         Me.CheckedInput_stoneSkin.MaximumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_stoneSkin.MinimumSize = New System.Drawing.Size(175, 20)
@@ -1217,9 +1285,9 @@ Partial Class Form_main
         Me.CheckedGroupBox_specialEffects.Controls.Add(Me.CheckBox_arbitrationBuff)
         Me.CheckedGroupBox_specialEffects.Controls.Add(Me.CheckBox_corruptedBuff)
         Me.CheckedGroupBox_specialEffects.Controls.Add(Me.CheckedInput_overshields)
-        Me.CheckedGroupBox_specialEffects.Location = New System.Drawing.Point(389, 3)
+        Me.CheckedGroupBox_specialEffects.Location = New System.Drawing.Point(196, 606)
         Me.CheckedGroupBox_specialEffects.Name = "CheckedGroupBox_specialEffects"
-        Me.CheckedGroupBox_specialEffects.Size = New System.Drawing.Size(187, 171)
+        Me.CheckedGroupBox_specialEffects.Size = New System.Drawing.Size(187, 169)
         Me.CheckedGroupBox_specialEffects.TabIndex = 20
         Me.CheckedGroupBox_specialEffects.TabStop = False
         Me.CheckedGroupBox_specialEffects.Text = "Special Effects"
@@ -1227,6 +1295,7 @@ Partial Class Form_main
         'CheckBox_steelMeridianBuff
         '
         Me.CheckBox_steelMeridianBuff.Location = New System.Drawing.Point(6, 135)
+        Me.CheckBox_steelMeridianBuff.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckBox_steelMeridianBuff.Name = "CheckBox_steelMeridianBuff"
         Me.CheckBox_steelMeridianBuff.Size = New System.Drawing.Size(175, 17)
         Me.CheckBox_steelMeridianBuff.TabIndex = 128
@@ -1237,6 +1306,7 @@ Partial Class Form_main
         'CheckBox_perrinSequenceBuff
         '
         Me.CheckBox_perrinSequenceBuff.Location = New System.Drawing.Point(6, 116)
+        Me.CheckBox_perrinSequenceBuff.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckBox_perrinSequenceBuff.Name = "CheckBox_perrinSequenceBuff"
         Me.CheckBox_perrinSequenceBuff.Size = New System.Drawing.Size(175, 17)
         Me.CheckBox_perrinSequenceBuff.TabIndex = 127
@@ -1247,6 +1317,7 @@ Partial Class Form_main
         'CheckBox_newLokaBuff
         '
         Me.CheckBox_newLokaBuff.Location = New System.Drawing.Point(6, 97)
+        Me.CheckBox_newLokaBuff.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckBox_newLokaBuff.Name = "CheckBox_newLokaBuff"
         Me.CheckBox_newLokaBuff.Size = New System.Drawing.Size(175, 17)
         Me.CheckBox_newLokaBuff.TabIndex = 126
@@ -1257,6 +1328,7 @@ Partial Class Form_main
         'CheckBox_cepholonSudaBuff
         '
         Me.CheckBox_cepholonSudaBuff.Location = New System.Drawing.Point(6, 78)
+        Me.CheckBox_cepholonSudaBuff.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckBox_cepholonSudaBuff.Name = "CheckBox_cepholonSudaBuff"
         Me.CheckBox_cepholonSudaBuff.Size = New System.Drawing.Size(175, 17)
         Me.CheckBox_cepholonSudaBuff.TabIndex = 125
@@ -1267,6 +1339,7 @@ Partial Class Form_main
         'CheckBox_arbitrationBuff
         '
         Me.CheckBox_arbitrationBuff.Location = New System.Drawing.Point(6, 59)
+        Me.CheckBox_arbitrationBuff.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckBox_arbitrationBuff.Name = "CheckBox_arbitrationBuff"
         Me.CheckBox_arbitrationBuff.Size = New System.Drawing.Size(175, 17)
         Me.CheckBox_arbitrationBuff.TabIndex = 124
@@ -1277,6 +1350,7 @@ Partial Class Form_main
         'CheckBox_corruptedBuff
         '
         Me.CheckBox_corruptedBuff.Location = New System.Drawing.Point(6, 40)
+        Me.CheckBox_corruptedBuff.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckBox_corruptedBuff.Name = "CheckBox_corruptedBuff"
         Me.CheckBox_corruptedBuff.Size = New System.Drawing.Size(175, 17)
         Me.CheckBox_corruptedBuff.TabIndex = 123
@@ -1287,6 +1361,7 @@ Partial Class Form_main
         'CheckedInput_overshields
         '
         Me.CheckedInput_overshields.Location = New System.Drawing.Point(6, 16)
+        Me.CheckedInput_overshields.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckedInput_overshields.Maximum = 1200
         Me.CheckedInput_overshields.MaximumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_overshields.MinimumSize = New System.Drawing.Size(175, 20)
@@ -1298,6 +1373,8 @@ Partial Class Form_main
         'CheckedGroupBox_arcanes
         '
         Me.CheckedGroupBox_arcanes.AutoSize = True
+        Me.CheckedGroupBox_arcanes.Controls.Add(Me.CheckedInput_arcaneTanker2)
+        Me.CheckedGroupBox_arcanes.Controls.Add(Me.CheckedInput_arcaneTanker)
         Me.CheckedGroupBox_arcanes.Controls.Add(Me.CheckedInput_arcanePaxBolt)
         Me.CheckedGroupBox_arcanes.Controls.Add(Me.CheckedInput_arcaneUltimatum2)
         Me.CheckedGroupBox_arcanes.Controls.Add(Me.CheckedInput_arcaneUltimatum)
@@ -1306,28 +1383,56 @@ Partial Class Form_main
         Me.CheckedGroupBox_arcanes.Limit = 1
         Me.CheckedGroupBox_arcanes.Limited = True
         Me.CheckedGroupBox_arcanes.LimitUsesTags = True
-        Me.CheckedGroupBox_arcanes.Location = New System.Drawing.Point(389, 180)
+        Me.CheckedGroupBox_arcanes.Location = New System.Drawing.Point(389, 3)
         Me.CheckedGroupBox_arcanes.Name = "CheckedGroupBox_arcanes"
-        Me.CheckedGroupBox_arcanes.Size = New System.Drawing.Size(187, 153)
+        Me.CheckedGroupBox_arcanes.Size = New System.Drawing.Size(187, 198)
         Me.CheckedGroupBox_arcanes.TabIndex = 21
         Me.CheckedGroupBox_arcanes.TabStop = False
         Me.CheckedGroupBox_arcanes.Text = "Arcanes"
         '
+        'CheckedInput_arcaneTanker2
+        '
+        Me.CheckedInput_arcaneTanker2.Location = New System.Drawing.Point(6, 137)
+        Me.CheckedInput_arcaneTanker2.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
+        Me.CheckedInput_arcaneTanker2.Maximum = 3
+        Me.CheckedInput_arcaneTanker2.MaximumSize = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_arcaneTanker2.MinimumSize = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_arcaneTanker2.Name = "CheckedInput_arcaneTanker2"
+        Me.CheckedInput_arcaneTanker2.Size = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_arcaneTanker2.TabIndex = 7
+        Me.CheckedInput_arcaneTanker2.Tag = "limitGroup_warframe_2"
+        Me.CheckedInput_arcaneTanker2.Text = "Arcane Tanker"
+        '
+        'CheckedInput_arcaneTanker
+        '
+        Me.CheckedInput_arcaneTanker.Location = New System.Drawing.Point(6, 113)
+        Me.CheckedInput_arcaneTanker.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
+        Me.CheckedInput_arcaneTanker.Maximum = 3
+        Me.CheckedInput_arcaneTanker.MaximumSize = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_arcaneTanker.MinimumSize = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_arcaneTanker.Name = "CheckedInput_arcaneTanker"
+        Me.CheckedInput_arcaneTanker.Size = New System.Drawing.Size(175, 20)
+        Me.CheckedInput_arcaneTanker.TabIndex = 6
+        Me.CheckedInput_arcaneTanker.Tag = "limitGroup_warframe_2"
+        Me.CheckedInput_arcaneTanker.Text = "Arcane Tanker"
+        '
         'CheckedInput_arcanePaxBolt
         '
-        Me.CheckedInput_arcanePaxBolt.Location = New System.Drawing.Point(6, 114)
+        Me.CheckedInput_arcanePaxBolt.Location = New System.Drawing.Point(6, 161)
+        Me.CheckedInput_arcanePaxBolt.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckedInput_arcanePaxBolt.Maximum = 3
         Me.CheckedInput_arcanePaxBolt.MaximumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_arcanePaxBolt.MinimumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_arcanePaxBolt.Name = "CheckedInput_arcanePaxBolt"
         Me.CheckedInput_arcanePaxBolt.Size = New System.Drawing.Size(175, 20)
-        Me.CheckedInput_arcanePaxBolt.TabIndex = 6
+        Me.CheckedInput_arcanePaxBolt.TabIndex = 8
         Me.CheckedInput_arcanePaxBolt.Tag = "limitGroup_kitgun_1"
         Me.CheckedInput_arcanePaxBolt.Text = "Pax Bolt"
         '
         'CheckedInput_arcaneUltimatum2
         '
         Me.CheckedInput_arcaneUltimatum2.Location = New System.Drawing.Point(6, 90)
+        Me.CheckedInput_arcaneUltimatum2.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckedInput_arcaneUltimatum2.Maximum = 3
         Me.CheckedInput_arcaneUltimatum2.MaximumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_arcaneUltimatum2.MinimumSize = New System.Drawing.Size(175, 20)
@@ -1340,6 +1445,7 @@ Partial Class Form_main
         'CheckedInput_arcaneUltimatum
         '
         Me.CheckedInput_arcaneUltimatum.Location = New System.Drawing.Point(6, 66)
+        Me.CheckedInput_arcaneUltimatum.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckedInput_arcaneUltimatum.Maximum = 3
         Me.CheckedInput_arcaneUltimatum.MaximumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_arcaneUltimatum.MinimumSize = New System.Drawing.Size(175, 20)
@@ -1352,6 +1458,7 @@ Partial Class Form_main
         'CheckedInput_arcaneGuardian2
         '
         Me.CheckedInput_arcaneGuardian2.Location = New System.Drawing.Point(6, 43)
+        Me.CheckedInput_arcaneGuardian2.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckedInput_arcaneGuardian2.Maximum = 3
         Me.CheckedInput_arcaneGuardian2.MaximumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_arcaneGuardian2.MinimumSize = New System.Drawing.Size(175, 20)
@@ -1364,6 +1471,7 @@ Partial Class Form_main
         'CheckedInput_arcaneGuardian
         '
         Me.CheckedInput_arcaneGuardian.Location = New System.Drawing.Point(6, 19)
+        Me.CheckedInput_arcaneGuardian.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckedInput_arcaneGuardian.Maximum = 3
         Me.CheckedInput_arcaneGuardian.MaximumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_arcaneGuardian.MinimumSize = New System.Drawing.Size(175, 20)
@@ -1376,10 +1484,10 @@ Partial Class Form_main
         'CheckedGroupBox_abilities
         '
         Me.CheckedGroupBox_abilities.AutoSize = True
-        Me.CheckedGroupBox_abilities.Location = New System.Drawing.Point(389, 339)
-        Me.CheckedGroupBox_abilities.MinimumSize = New System.Drawing.Size(187, 25)
+        Me.CheckedGroupBox_abilities.Location = New System.Drawing.Point(389, 207)
+        Me.CheckedGroupBox_abilities.MinimumSize = New System.Drawing.Size(183, 25)
         Me.CheckedGroupBox_abilities.Name = "CheckedGroupBox_abilities"
-        Me.CheckedGroupBox_abilities.Size = New System.Drawing.Size(187, 35)
+        Me.CheckedGroupBox_abilities.Size = New System.Drawing.Size(183, 35)
         Me.CheckedGroupBox_abilities.TabIndex = 22
         Me.CheckedGroupBox_abilities.TabStop = False
         Me.CheckedGroupBox_abilities.Text = "Abilities"
@@ -1387,10 +1495,10 @@ Partial Class Form_main
         'CheckedGroupBox_arcaneHelmets
         '
         Me.CheckedGroupBox_arcaneHelmets.AutoSize = True
-        Me.CheckedGroupBox_arcaneHelmets.Location = New System.Drawing.Point(389, 380)
-        Me.CheckedGroupBox_arcaneHelmets.MinimumSize = New System.Drawing.Size(187, 25)
+        Me.CheckedGroupBox_arcaneHelmets.Location = New System.Drawing.Point(389, 248)
+        Me.CheckedGroupBox_arcaneHelmets.MinimumSize = New System.Drawing.Size(183, 25)
         Me.CheckedGroupBox_arcaneHelmets.Name = "CheckedGroupBox_arcaneHelmets"
-        Me.CheckedGroupBox_arcaneHelmets.Size = New System.Drawing.Size(187, 35)
+        Me.CheckedGroupBox_arcaneHelmets.Size = New System.Drawing.Size(183, 35)
         Me.CheckedGroupBox_arcaneHelmets.TabIndex = 23
         Me.CheckedGroupBox_arcaneHelmets.TabStop = False
         Me.CheckedGroupBox_arcaneHelmets.Text = "Arcane Helmets"
@@ -1399,7 +1507,7 @@ Partial Class Form_main
         '
         Me.TableLayoutPanel_warframeTopLayout.ColumnCount = 3
         Me.TableLayoutPanel_warframeTopLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 196.0!))
-        Me.TableLayoutPanel_warframeTopLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 127.0!))
+        Me.TableLayoutPanel_warframeTopLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 131.0!))
         Me.TableLayoutPanel_warframeTopLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
         Me.TableLayoutPanel_warframeTopLayout.Controls.Add(Me.ComboBox_warframes, 0, 0)
         Me.TableLayoutPanel_warframeTopLayout.Controls.Add(Me.VariantSelection_warframes, 1, 0)
@@ -1409,7 +1517,7 @@ Partial Class Form_main
         Me.TableLayoutPanel_warframeTopLayout.Name = "TableLayoutPanel_warframeTopLayout"
         Me.TableLayoutPanel_warframeTopLayout.RowCount = 1
         Me.TableLayoutPanel_warframeTopLayout.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel_warframeTopLayout.Size = New System.Drawing.Size(773, 27)
+        Me.TableLayoutPanel_warframeTopLayout.Size = New System.Drawing.Size(940, 27)
         Me.TableLayoutPanel_warframeTopLayout.TabIndex = 128
         '
         'ComboBox_warframes
@@ -1436,7 +1544,7 @@ Partial Class Form_main
         'MaxValueToggle_warframes
         '
         Me.MaxValueToggle_warframes.Dock = System.Windows.Forms.DockStyle.Right
-        Me.MaxValueToggle_warframes.Location = New System.Drawing.Point(640, 5)
+        Me.MaxValueToggle_warframes.Location = New System.Drawing.Point(807, 5)
         Me.MaxValueToggle_warframes.Margin = New System.Windows.Forms.Padding(3, 5, 3, 3)
         Me.MaxValueToggle_warframes.MaximumSize = New System.Drawing.Size(130, 17)
         Me.MaxValueToggle_warframes.MinimumSize = New System.Drawing.Size(130, 17)
@@ -1455,7 +1563,7 @@ Partial Class Form_main
         Me.TabPage_companion.Location = New System.Drawing.Point(4, 29)
         Me.TabPage_companion.Name = "TabPage_companion"
         Me.TabPage_companion.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_companion.Size = New System.Drawing.Size(779, 718)
+        Me.TabPage_companion.Size = New System.Drawing.Size(946, 819)
         Me.TabPage_companion.TabIndex = 1
         Me.TabPage_companion.Text = "Companions  "
         '
@@ -1471,7 +1579,7 @@ Partial Class Form_main
         Me.TableLayoutPanel_compainionMainLayout.Name = "TableLayoutPanel_compainionMainLayout"
         Me.TableLayoutPanel_compainionMainLayout.RowCount = 1
         Me.TableLayoutPanel_compainionMainLayout.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel_compainionMainLayout.Size = New System.Drawing.Size(773, 685)
+        Me.TableLayoutPanel_compainionMainLayout.Size = New System.Drawing.Size(940, 786)
         Me.TableLayoutPanel_compainionMainLayout.TabIndex = 132
         '
         'FlowLayoutPanel_compainionModsLayout
@@ -1486,7 +1594,7 @@ Partial Class Form_main
         Me.FlowLayoutPanel_compainionModsLayout.Location = New System.Drawing.Point(0, 0)
         Me.FlowLayoutPanel_compainionModsLayout.Margin = New System.Windows.Forms.Padding(0)
         Me.FlowLayoutPanel_compainionModsLayout.Name = "FlowLayoutPanel_compainionModsLayout"
-        Me.FlowLayoutPanel_compainionModsLayout.Size = New System.Drawing.Size(577, 685)
+        Me.FlowLayoutPanel_compainionModsLayout.Size = New System.Drawing.Size(744, 786)
         Me.FlowLayoutPanel_compainionModsLayout.TabIndex = 130
         '
         'CheckedGroupBox_companionSurvivability
@@ -1500,7 +1608,7 @@ Partial Class Form_main
         Me.CheckedGroupBox_companionSurvivability.Controls.Add(Me.CheckedInput_companionLinkArmor)
         Me.CheckedGroupBox_companionSurvivability.Location = New System.Drawing.Point(3, 3)
         Me.CheckedGroupBox_companionSurvivability.Name = "CheckedGroupBox_companionSurvivability"
-        Me.CheckedGroupBox_companionSurvivability.Size = New System.Drawing.Size(187, 184)
+        Me.CheckedGroupBox_companionSurvivability.Size = New System.Drawing.Size(187, 182)
         Me.CheckedGroupBox_companionSurvivability.TabIndex = 0
         Me.CheckedGroupBox_companionSurvivability.TabStop = False
         Me.CheckedGroupBox_companionSurvivability.Text = "Survivability"
@@ -1509,6 +1617,7 @@ Partial Class Form_main
         '
         Me.CheckedInput_companionCalculatedRedirection.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!)
         Me.CheckedInput_companionCalculatedRedirection.Location = New System.Drawing.Point(6, 145)
+        Me.CheckedInput_companionCalculatedRedirection.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckedInput_companionCalculatedRedirection.MaximumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_companionCalculatedRedirection.MinimumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_companionCalculatedRedirection.Name = "CheckedInput_companionCalculatedRedirection"
@@ -1520,6 +1629,7 @@ Partial Class Form_main
         'CheckedInput_companionEnhancedVitality
         '
         Me.CheckedInput_companionEnhancedVitality.Location = New System.Drawing.Point(6, 119)
+        Me.CheckedInput_companionEnhancedVitality.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckedInput_companionEnhancedVitality.MaximumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_companionEnhancedVitality.MinimumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_companionEnhancedVitality.Name = "CheckedInput_companionEnhancedVitality"
@@ -1531,6 +1641,7 @@ Partial Class Form_main
         'CheckedInput_companionMetalFiber
         '
         Me.CheckedInput_companionMetalFiber.Location = New System.Drawing.Point(6, 93)
+        Me.CheckedInput_companionMetalFiber.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckedInput_companionMetalFiber.MaximumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_companionMetalFiber.MinimumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_companionMetalFiber.Name = "CheckedInput_companionMetalFiber"
@@ -1542,6 +1653,7 @@ Partial Class Form_main
         'CheckedInput_companionLinkShield
         '
         Me.CheckedInput_companionLinkShield.Location = New System.Drawing.Point(6, 68)
+        Me.CheckedInput_companionLinkShield.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckedInput_companionLinkShield.MaximumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_companionLinkShield.MinimumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_companionLinkShield.Name = "CheckedInput_companionLinkShield"
@@ -1553,6 +1665,7 @@ Partial Class Form_main
         'CheckedInput_companionLinkHealth
         '
         Me.CheckedInput_companionLinkHealth.Location = New System.Drawing.Point(6, 42)
+        Me.CheckedInput_companionLinkHealth.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckedInput_companionLinkHealth.MaximumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_companionLinkHealth.MinimumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_companionLinkHealth.Name = "CheckedInput_companionLinkHealth"
@@ -1564,6 +1677,7 @@ Partial Class Form_main
         'CheckedInput_companionLinkArmor
         '
         Me.CheckedInput_companionLinkArmor.Location = New System.Drawing.Point(6, 16)
+        Me.CheckedInput_companionLinkArmor.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckedInput_companionLinkArmor.MaximumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_companionLinkArmor.MinimumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_companionLinkArmor.Name = "CheckedInput_companionLinkArmor"
@@ -1579,9 +1693,9 @@ Partial Class Form_main
         Me.GroupBox_companionStats.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.GroupBox_companionStats.Controls.Add(Me.FlowLayoutPanel_companionStatsLayout)
         Me.GroupBox_companionStats.Controls.Add(Me.StatBox_companionEHP)
-        Me.GroupBox_companionStats.Location = New System.Drawing.Point(582, 3)
+        Me.GroupBox_companionStats.Location = New System.Drawing.Point(749, 3)
         Me.GroupBox_companionStats.Name = "GroupBox_companionStats"
-        Me.GroupBox_companionStats.Size = New System.Drawing.Size(188, 679)
+        Me.GroupBox_companionStats.Size = New System.Drawing.Size(188, 780)
         Me.GroupBox_companionStats.TabIndex = 131
         Me.GroupBox_companionStats.TabStop = False
         Me.GroupBox_companionStats.Text = "Stats "
@@ -1598,7 +1712,7 @@ Partial Class Form_main
         Me.FlowLayoutPanel_companionStatsLayout.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
         Me.FlowLayoutPanel_companionStatsLayout.Location = New System.Drawing.Point(4, 14)
         Me.FlowLayoutPanel_companionStatsLayout.Name = "FlowLayoutPanel_companionStatsLayout"
-        Me.FlowLayoutPanel_companionStatsLayout.Size = New System.Drawing.Size(181, 634)
+        Me.FlowLayoutPanel_companionStatsLayout.Size = New System.Drawing.Size(181, 735)
         Me.FlowLayoutPanel_companionStatsLayout.TabIndex = 129
         '
         'StatBox_companionArmor
@@ -1690,7 +1804,7 @@ Partial Class Form_main
         'StatBox_companionEHP
         '
         Me.StatBox_companionEHP.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.StatBox_companionEHP.Location = New System.Drawing.Point(7, 653)
+        Me.StatBox_companionEHP.Location = New System.Drawing.Point(7, 754)
         Me.StatBox_companionEHP.MaximumSize = New System.Drawing.Size(175, 20)
         Me.StatBox_companionEHP.MinimumSize = New System.Drawing.Size(175, 20)
         Me.StatBox_companionEHP.Name = "StatBox_companionEHP"
@@ -1718,7 +1832,7 @@ Partial Class Form_main
         Me.TableLayoutPanel_companionTopLayout.Name = "TableLayoutPanel_companionTopLayout"
         Me.TableLayoutPanel_companionTopLayout.RowCount = 1
         Me.TableLayoutPanel_companionTopLayout.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel_companionTopLayout.Size = New System.Drawing.Size(773, 27)
+        Me.TableLayoutPanel_companionTopLayout.Size = New System.Drawing.Size(940, 27)
         Me.TableLayoutPanel_companionTopLayout.TabIndex = 129
         '
         'ComboBox_companions
@@ -1760,7 +1874,7 @@ Partial Class Form_main
         'MaxValueToggle_compainions
         '
         Me.MaxValueToggle_compainions.Dock = System.Windows.Forms.DockStyle.Right
-        Me.MaxValueToggle_compainions.Location = New System.Drawing.Point(640, 5)
+        Me.MaxValueToggle_compainions.Location = New System.Drawing.Point(807, 5)
         Me.MaxValueToggle_compainions.Margin = New System.Windows.Forms.Padding(3, 5, 3, 3)
         Me.MaxValueToggle_compainions.MaximumSize = New System.Drawing.Size(130, 17)
         Me.MaxValueToggle_compainions.MinimumSize = New System.Drawing.Size(130, 17)
@@ -1794,7 +1908,7 @@ Partial Class Form_main
         Me.TabPage_archwing.Location = New System.Drawing.Point(4, 29)
         Me.TabPage_archwing.Name = "TabPage_archwing"
         Me.TabPage_archwing.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_archwing.Size = New System.Drawing.Size(779, 718)
+        Me.TabPage_archwing.Size = New System.Drawing.Size(946, 819)
         Me.TabPage_archwing.TabIndex = 3
         Me.TabPage_archwing.Text = "Archwing  "
         '
@@ -1810,7 +1924,7 @@ Partial Class Form_main
         Me.TableLayoutPanel_archwingMainLayout.Name = "TableLayoutPanel_archwingMainLayout"
         Me.TableLayoutPanel_archwingMainLayout.RowCount = 1
         Me.TableLayoutPanel_archwingMainLayout.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel_archwingMainLayout.Size = New System.Drawing.Size(773, 685)
+        Me.TableLayoutPanel_archwingMainLayout.Size = New System.Drawing.Size(940, 786)
         Me.TableLayoutPanel_archwingMainLayout.TabIndex = 132
         '
         'GroupBox_archwingStats
@@ -1820,9 +1934,9 @@ Partial Class Form_main
         Me.GroupBox_archwingStats.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.GroupBox_archwingStats.Controls.Add(Me.FlowLayoutPanel_archwingStatsLayout)
         Me.GroupBox_archwingStats.Controls.Add(Me.StatBox_archwingEHP)
-        Me.GroupBox_archwingStats.Location = New System.Drawing.Point(582, 3)
+        Me.GroupBox_archwingStats.Location = New System.Drawing.Point(749, 3)
         Me.GroupBox_archwingStats.Name = "GroupBox_archwingStats"
-        Me.GroupBox_archwingStats.Size = New System.Drawing.Size(188, 679)
+        Me.GroupBox_archwingStats.Size = New System.Drawing.Size(188, 780)
         Me.GroupBox_archwingStats.TabIndex = 131
         Me.GroupBox_archwingStats.TabStop = False
         Me.GroupBox_archwingStats.Text = "Stats "
@@ -1841,7 +1955,7 @@ Partial Class Form_main
         Me.FlowLayoutPanel_archwingStatsLayout.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
         Me.FlowLayoutPanel_archwingStatsLayout.Location = New System.Drawing.Point(4, 14)
         Me.FlowLayoutPanel_archwingStatsLayout.Name = "FlowLayoutPanel_archwingStatsLayout"
-        Me.FlowLayoutPanel_archwingStatsLayout.Size = New System.Drawing.Size(181, 633)
+        Me.FlowLayoutPanel_archwingStatsLayout.Size = New System.Drawing.Size(181, 734)
         Me.FlowLayoutPanel_archwingStatsLayout.TabIndex = 129
         '
         'StatBox_archwingArmor
@@ -1959,7 +2073,7 @@ Partial Class Form_main
         'StatBox_archwingEHP
         '
         Me.StatBox_archwingEHP.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.StatBox_archwingEHP.Location = New System.Drawing.Point(7, 653)
+        Me.StatBox_archwingEHP.Location = New System.Drawing.Point(7, 754)
         Me.StatBox_archwingEHP.MaximumSize = New System.Drawing.Size(175, 20)
         Me.StatBox_archwingEHP.MinimumSize = New System.Drawing.Size(175, 20)
         Me.StatBox_archwingEHP.Name = "StatBox_archwingEHP"
@@ -1983,7 +2097,7 @@ Partial Class Form_main
         Me.FlowLayoutPanel_archwingModsLayout.Location = New System.Drawing.Point(0, 0)
         Me.FlowLayoutPanel_archwingModsLayout.Margin = New System.Windows.Forms.Padding(0)
         Me.FlowLayoutPanel_archwingModsLayout.Name = "FlowLayoutPanel_archwingModsLayout"
-        Me.FlowLayoutPanel_archwingModsLayout.Size = New System.Drawing.Size(577, 685)
+        Me.FlowLayoutPanel_archwingModsLayout.Size = New System.Drawing.Size(744, 786)
         Me.FlowLayoutPanel_archwingModsLayout.TabIndex = 131
         '
         'CheckedGroupBox_archwingAura
@@ -1994,7 +2108,7 @@ Partial Class Form_main
         Me.CheckedGroupBox_archwingAura.Limit = 1
         Me.CheckedGroupBox_archwingAura.Location = New System.Drawing.Point(3, 3)
         Me.CheckedGroupBox_archwingAura.Name = "CheckedGroupBox_archwingAura"
-        Me.CheckedGroupBox_archwingAura.Size = New System.Drawing.Size(187, 82)
+        Me.CheckedGroupBox_archwingAura.Size = New System.Drawing.Size(187, 80)
         Me.CheckedGroupBox_archwingAura.TabIndex = 13
         Me.CheckedGroupBox_archwingAura.TabStop = False
         Me.CheckedGroupBox_archwingAura.Text = "Aura"
@@ -2002,6 +2116,7 @@ Partial Class Form_main
         'RadioInput_archwingStandUnited
         '
         Me.RadioInput_archwingStandUnited.Location = New System.Drawing.Point(6, 43)
+        Me.RadioInput_archwingStandUnited.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.RadioInput_archwingStandUnited.MaximumSize = New System.Drawing.Size(175, 20)
         Me.RadioInput_archwingStandUnited.MinimumSize = New System.Drawing.Size(175, 20)
         Me.RadioInput_archwingStandUnited.Name = "RadioInput_archwingStandUnited"
@@ -2012,6 +2127,7 @@ Partial Class Form_main
         'RadioInput_archwingPhysique
         '
         Me.RadioInput_archwingPhysique.Location = New System.Drawing.Point(6, 19)
+        Me.RadioInput_archwingPhysique.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.RadioInput_archwingPhysique.MaximumSize = New System.Drawing.Size(175, 20)
         Me.RadioInput_archwingPhysique.MinimumSize = New System.Drawing.Size(175, 20)
         Me.RadioInput_archwingPhysique.Name = "RadioInput_archwingPhysique"
@@ -2025,9 +2141,9 @@ Partial Class Form_main
         Me.CheckedGroupBox_archwingSurvivability.Controls.Add(Me.CheckedInput_argonPlating)
         Me.CheckedGroupBox_archwingSurvivability.Controls.Add(Me.CheckedInput_enhancedDurability)
         Me.CheckedGroupBox_archwingSurvivability.Controls.Add(Me.CheckedInput_energyInversion)
-        Me.CheckedGroupBox_archwingSurvivability.Location = New System.Drawing.Point(3, 91)
+        Me.CheckedGroupBox_archwingSurvivability.Location = New System.Drawing.Point(3, 89)
         Me.CheckedGroupBox_archwingSurvivability.Name = "CheckedGroupBox_archwingSurvivability"
-        Me.CheckedGroupBox_archwingSurvivability.Size = New System.Drawing.Size(187, 110)
+        Me.CheckedGroupBox_archwingSurvivability.Size = New System.Drawing.Size(187, 108)
         Me.CheckedGroupBox_archwingSurvivability.TabIndex = 0
         Me.CheckedGroupBox_archwingSurvivability.TabStop = False
         Me.CheckedGroupBox_archwingSurvivability.Text = "Survivability"
@@ -2035,6 +2151,7 @@ Partial Class Form_main
         'CheckedInput_argonPlating
         '
         Me.CheckedInput_argonPlating.Location = New System.Drawing.Point(6, 19)
+        Me.CheckedInput_argonPlating.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckedInput_argonPlating.Maximum = 5
         Me.CheckedInput_argonPlating.MaximumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_argonPlating.MinimumSize = New System.Drawing.Size(175, 20)
@@ -2046,6 +2163,7 @@ Partial Class Form_main
         'CheckedInput_enhancedDurability
         '
         Me.CheckedInput_enhancedDurability.Location = New System.Drawing.Point(6, 45)
+        Me.CheckedInput_enhancedDurability.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckedInput_enhancedDurability.Maximum = 5
         Me.CheckedInput_enhancedDurability.MaximumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_enhancedDurability.MinimumSize = New System.Drawing.Size(175, 20)
@@ -2057,6 +2175,7 @@ Partial Class Form_main
         'CheckedInput_energyInversion
         '
         Me.CheckedInput_energyInversion.Location = New System.Drawing.Point(6, 71)
+        Me.CheckedInput_energyInversion.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckedInput_energyInversion.Maximum = 5
         Me.CheckedInput_energyInversion.MaximumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_energyInversion.MinimumSize = New System.Drawing.Size(175, 20)
@@ -2069,9 +2188,9 @@ Partial Class Form_main
         '
         Me.CheckedGroupBox_archwingMiscellaneous.AutoSize = True
         Me.CheckedGroupBox_archwingMiscellaneous.Controls.Add(Me.CheckedInput_archwingCoactionDrift)
-        Me.CheckedGroupBox_archwingMiscellaneous.Location = New System.Drawing.Point(3, 207)
+        Me.CheckedGroupBox_archwingMiscellaneous.Location = New System.Drawing.Point(3, 203)
         Me.CheckedGroupBox_archwingMiscellaneous.Name = "CheckedGroupBox_archwingMiscellaneous"
-        Me.CheckedGroupBox_archwingMiscellaneous.Size = New System.Drawing.Size(187, 58)
+        Me.CheckedGroupBox_archwingMiscellaneous.Size = New System.Drawing.Size(187, 56)
         Me.CheckedGroupBox_archwingMiscellaneous.TabIndex = 1
         Me.CheckedGroupBox_archwingMiscellaneous.TabStop = False
         Me.CheckedGroupBox_archwingMiscellaneous.Text = "Miscellaneous"
@@ -2079,6 +2198,7 @@ Partial Class Form_main
         'CheckedInput_archwingCoactionDrift
         '
         Me.CheckedInput_archwingCoactionDrift.Location = New System.Drawing.Point(6, 19)
+        Me.CheckedInput_archwingCoactionDrift.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckedInput_archwingCoactionDrift.Maximum = 5
         Me.CheckedInput_archwingCoactionDrift.MaximumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_archwingCoactionDrift.MinimumSize = New System.Drawing.Size(175, 20)
@@ -2101,7 +2221,7 @@ Partial Class Form_main
         Me.TableLayoutPanel_archwingTopLayout.Name = "TableLayoutPanel_archwingTopLayout"
         Me.TableLayoutPanel_archwingTopLayout.RowCount = 1
         Me.TableLayoutPanel_archwingTopLayout.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel_archwingTopLayout.Size = New System.Drawing.Size(773, 27)
+        Me.TableLayoutPanel_archwingTopLayout.Size = New System.Drawing.Size(940, 27)
         Me.TableLayoutPanel_archwingTopLayout.TabIndex = 129
         '
         'ComboBox_archwings
@@ -2117,7 +2237,7 @@ Partial Class Form_main
         'MaxValueToggle_archwings
         '
         Me.MaxValueToggle_archwings.Dock = System.Windows.Forms.DockStyle.Right
-        Me.MaxValueToggle_archwings.Location = New System.Drawing.Point(640, 5)
+        Me.MaxValueToggle_archwings.Location = New System.Drawing.Point(807, 5)
         Me.MaxValueToggle_archwings.Margin = New System.Windows.Forms.Padding(3, 5, 3, 3)
         Me.MaxValueToggle_archwings.MaximumSize = New System.Drawing.Size(130, 17)
         Me.MaxValueToggle_archwings.MinimumSize = New System.Drawing.Size(130, 17)
@@ -2149,7 +2269,7 @@ Partial Class Form_main
         Me.TabPage_development.Location = New System.Drawing.Point(4, 29)
         Me.TabPage_development.Name = "TabPage_development"
         Me.TabPage_development.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_development.Size = New System.Drawing.Size(779, 718)
+        Me.TabPage_development.Size = New System.Drawing.Size(946, 819)
         Me.TabPage_development.TabIndex = 2
         Me.TabPage_development.Text = "Development  "
         Me.TabPage_development.UseVisualStyleBackColor = True
@@ -2177,7 +2297,7 @@ Partial Class Form_main
         Me.TabControl_arcaneHelmets.Location = New System.Drawing.Point(8, 248)
         Me.TabControl_arcaneHelmets.Name = "TabControl_arcaneHelmets"
         Me.TabControl_arcaneHelmets.SelectedIndex = 0
-        Me.TabControl_arcaneHelmets.Size = New System.Drawing.Size(768, 152)
+        Me.TabControl_arcaneHelmets.Size = New System.Drawing.Size(935, 152)
         Me.TabControl_arcaneHelmets.TabIndex = 118
         '
         'TabPage_arcaneHelmetsDefault
@@ -2186,7 +2306,7 @@ Partial Class Form_main
         Me.TabPage_arcaneHelmetsDefault.Controls.Add(Me.FlowLayoutPanel_defaultArcaneHelmets)
         Me.TabPage_arcaneHelmetsDefault.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_arcaneHelmetsDefault.Name = "TabPage_arcaneHelmetsDefault"
-        Me.TabPage_arcaneHelmetsDefault.Size = New System.Drawing.Size(760, 126)
+        Me.TabPage_arcaneHelmetsDefault.Size = New System.Drawing.Size(927, 126)
         Me.TabPage_arcaneHelmetsDefault.TabIndex = 2
         Me.TabPage_arcaneHelmetsDefault.Text = "Default"
         '
@@ -2194,6 +2314,7 @@ Partial Class Form_main
         '
         Me.FlowLayoutPanel_defaultArcaneHelmets.AutoSize = True
         Me.FlowLayoutPanel_defaultArcaneHelmets.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.FlowLayoutPanel_defaultArcaneHelmets.BackColor = System.Drawing.Color.White
         Me.FlowLayoutPanel_defaultArcaneHelmets.Controls.Add(Me.Label_arcaneHelmetPlaceholder)
         Me.FlowLayoutPanel_defaultArcaneHelmets.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
         Me.FlowLayoutPanel_defaultArcaneHelmets.Location = New System.Drawing.Point(6, 5)
@@ -2205,13 +2326,11 @@ Partial Class Form_main
         '
         'Label_arcaneHelmetPlaceholder
         '
-        Me.Label_arcaneHelmetPlaceholder.AutoSize = True
         Me.Label_arcaneHelmetPlaceholder.BackColor = System.Drawing.Color.Transparent
         Me.Label_arcaneHelmetPlaceholder.Location = New System.Drawing.Point(1, 3)
         Me.Label_arcaneHelmetPlaceholder.Margin = New System.Windows.Forms.Padding(1, 3, 1, 3)
-        Me.Label_arcaneHelmetPlaceholder.MinimumSize = New System.Drawing.Size(179, 0)
         Me.Label_arcaneHelmetPlaceholder.Name = "Label_arcaneHelmetPlaceholder"
-        Me.Label_arcaneHelmetPlaceholder.Size = New System.Drawing.Size(179, 26)
+        Me.Label_arcaneHelmetPlaceholder.Size = New System.Drawing.Size(178, 26)
         Me.Label_arcaneHelmetPlaceholder.TabIndex = 0
         Me.Label_arcaneHelmetPlaceholder.Text = "This Warframe has no " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Arcane Helmets"
         Me.Label_arcaneHelmetPlaceholder.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -2219,31 +2338,32 @@ Partial Class Form_main
         'TabPage_ashArcaneHelmets
         '
         Me.TabPage_ashArcaneHelmets.BackColor = System.Drawing.Color.White
-        Me.TabPage_ashArcaneHelmets.Controls.Add(Me.FlowLayoutPanel_ashAbilities)
+        Me.TabPage_ashArcaneHelmets.Controls.Add(Me.FlowLayoutPanel_ashArcaneHelmets)
         Me.TabPage_ashArcaneHelmets.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_ashArcaneHelmets.Name = "TabPage_ashArcaneHelmets"
         Me.TabPage_ashArcaneHelmets.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_ashArcaneHelmets.Size = New System.Drawing.Size(760, 126)
+        Me.TabPage_ashArcaneHelmets.Size = New System.Drawing.Size(927, 126)
         Me.TabPage_ashArcaneHelmets.TabIndex = 0
         Me.TabPage_ashArcaneHelmets.Text = "Ash"
         '
-        'FlowLayoutPanel_ashAbilities
+        'FlowLayoutPanel_ashArcaneHelmets
         '
-        Me.FlowLayoutPanel_ashAbilities.AutoSize = True
-        Me.FlowLayoutPanel_ashAbilities.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.FlowLayoutPanel_ashAbilities.Controls.Add(Me.RadioButton_locustHelmet)
-        Me.FlowLayoutPanel_ashAbilities.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
-        Me.FlowLayoutPanel_ashAbilities.Location = New System.Drawing.Point(5, 7)
-        Me.FlowLayoutPanel_ashAbilities.Margin = New System.Windows.Forms.Padding(0)
-        Me.FlowLayoutPanel_ashAbilities.MinimumSize = New System.Drawing.Size(181, 26)
-        Me.FlowLayoutPanel_ashAbilities.Name = "FlowLayoutPanel_ashAbilities"
-        Me.FlowLayoutPanel_ashAbilities.Size = New System.Drawing.Size(181, 27)
-        Me.FlowLayoutPanel_ashAbilities.TabIndex = 100
+        Me.FlowLayoutPanel_ashArcaneHelmets.AutoSize = True
+        Me.FlowLayoutPanel_ashArcaneHelmets.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.FlowLayoutPanel_ashArcaneHelmets.Controls.Add(Me.RadioButton_locustHelmet)
+        Me.FlowLayoutPanel_ashArcaneHelmets.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
+        Me.FlowLayoutPanel_ashArcaneHelmets.Location = New System.Drawing.Point(5, 7)
+        Me.FlowLayoutPanel_ashArcaneHelmets.Margin = New System.Windows.Forms.Padding(0)
+        Me.FlowLayoutPanel_ashArcaneHelmets.MinimumSize = New System.Drawing.Size(181, 26)
+        Me.FlowLayoutPanel_ashArcaneHelmets.Name = "FlowLayoutPanel_ashArcaneHelmets"
+        Me.FlowLayoutPanel_ashArcaneHelmets.Size = New System.Drawing.Size(181, 26)
+        Me.FlowLayoutPanel_ashArcaneHelmets.TabIndex = 100
         '
         'RadioButton_locustHelmet
         '
         Me.RadioButton_locustHelmet.Checked = True
-        Me.RadioButton_locustHelmet.Location = New System.Drawing.Point(3, 3)
+        Me.RadioButton_locustHelmet.Location = New System.Drawing.Point(3, 1)
+        Me.RadioButton_locustHelmet.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.RadioButton_locustHelmet.Name = "RadioButton_locustHelmet"
         Me.RadioButton_locustHelmet.Size = New System.Drawing.Size(175, 21)
         Me.RadioButton_locustHelmet.TabIndex = 0
@@ -2258,7 +2378,7 @@ Partial Class Form_main
         Me.TabPage_arcaneHelmetsBanshee.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_arcaneHelmetsBanshee.Name = "TabPage_arcaneHelmetsBanshee"
         Me.TabPage_arcaneHelmetsBanshee.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_arcaneHelmetsBanshee.Size = New System.Drawing.Size(760, 126)
+        Me.TabPage_arcaneHelmetsBanshee.Size = New System.Drawing.Size(927, 126)
         Me.TabPage_arcaneHelmetsBanshee.TabIndex = 1
         Me.TabPage_arcaneHelmetsBanshee.Text = "Banshee"
         '
@@ -2272,13 +2392,14 @@ Partial Class Form_main
         Me.FlowLayoutPanel_bansheeArcaneHelmets.Margin = New System.Windows.Forms.Padding(0)
         Me.FlowLayoutPanel_bansheeArcaneHelmets.MinimumSize = New System.Drawing.Size(181, 26)
         Me.FlowLayoutPanel_bansheeArcaneHelmets.Name = "FlowLayoutPanel_bansheeArcaneHelmets"
-        Me.FlowLayoutPanel_bansheeArcaneHelmets.Size = New System.Drawing.Size(181, 27)
+        Me.FlowLayoutPanel_bansheeArcaneHelmets.Size = New System.Drawing.Size(181, 26)
         Me.FlowLayoutPanel_bansheeArcaneHelmets.TabIndex = 100
         '
         'RadioButton_reverbHelmet
         '
         Me.RadioButton_reverbHelmet.Checked = True
-        Me.RadioButton_reverbHelmet.Location = New System.Drawing.Point(3, 3)
+        Me.RadioButton_reverbHelmet.Location = New System.Drawing.Point(3, 1)
+        Me.RadioButton_reverbHelmet.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.RadioButton_reverbHelmet.Name = "RadioButton_reverbHelmet"
         Me.RadioButton_reverbHelmet.Size = New System.Drawing.Size(175, 21)
         Me.RadioButton_reverbHelmet.TabIndex = 1
@@ -2292,7 +2413,7 @@ Partial Class Form_main
         Me.TabPage_arcaneHelmetsEmber.Controls.Add(Me.FlowLayoutPanel_emberArcaneHelmets)
         Me.TabPage_arcaneHelmetsEmber.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_arcaneHelmetsEmber.Name = "TabPage_arcaneHelmetsEmber"
-        Me.TabPage_arcaneHelmetsEmber.Size = New System.Drawing.Size(760, 126)
+        Me.TabPage_arcaneHelmetsEmber.Size = New System.Drawing.Size(927, 126)
         Me.TabPage_arcaneHelmetsEmber.TabIndex = 3
         Me.TabPage_arcaneHelmetsEmber.Text = "Ember"
         '
@@ -2307,13 +2428,14 @@ Partial Class Form_main
         Me.FlowLayoutPanel_emberArcaneHelmets.Margin = New System.Windows.Forms.Padding(0)
         Me.FlowLayoutPanel_emberArcaneHelmets.MinimumSize = New System.Drawing.Size(181, 26)
         Me.FlowLayoutPanel_emberArcaneHelmets.Name = "FlowLayoutPanel_emberArcaneHelmets"
-        Me.FlowLayoutPanel_emberArcaneHelmets.Size = New System.Drawing.Size(181, 54)
+        Me.FlowLayoutPanel_emberArcaneHelmets.Size = New System.Drawing.Size(181, 46)
         Me.FlowLayoutPanel_emberArcaneHelmets.TabIndex = 100
         '
         'RadioButton_phoenixHelmet
         '
         Me.RadioButton_phoenixHelmet.Checked = True
-        Me.RadioButton_phoenixHelmet.Location = New System.Drawing.Point(3, 3)
+        Me.RadioButton_phoenixHelmet.Location = New System.Drawing.Point(3, 1)
+        Me.RadioButton_phoenixHelmet.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.RadioButton_phoenixHelmet.Name = "RadioButton_phoenixHelmet"
         Me.RadioButton_phoenixHelmet.Size = New System.Drawing.Size(175, 21)
         Me.RadioButton_phoenixHelmet.TabIndex = 2
@@ -2324,7 +2446,8 @@ Partial Class Form_main
         '
         'RadioButton_backdraftHelmet
         '
-        Me.RadioButton_backdraftHelmet.Location = New System.Drawing.Point(3, 30)
+        Me.RadioButton_backdraftHelmet.Location = New System.Drawing.Point(3, 24)
+        Me.RadioButton_backdraftHelmet.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.RadioButton_backdraftHelmet.Name = "RadioButton_backdraftHelmet"
         Me.RadioButton_backdraftHelmet.Size = New System.Drawing.Size(175, 21)
         Me.RadioButton_backdraftHelmet.TabIndex = 3
@@ -2338,7 +2461,7 @@ Partial Class Form_main
         Me.TabPage_arcaneHelmetsExcalibur.Controls.Add(Me.FlowLayoutPanel_excaliburArcaneHelmets)
         Me.TabPage_arcaneHelmetsExcalibur.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_arcaneHelmetsExcalibur.Name = "TabPage_arcaneHelmetsExcalibur"
-        Me.TabPage_arcaneHelmetsExcalibur.Size = New System.Drawing.Size(760, 126)
+        Me.TabPage_arcaneHelmetsExcalibur.Size = New System.Drawing.Size(927, 126)
         Me.TabPage_arcaneHelmetsExcalibur.TabIndex = 4
         Me.TabPage_arcaneHelmetsExcalibur.Text = "Excalibur"
         '
@@ -2353,13 +2476,14 @@ Partial Class Form_main
         Me.FlowLayoutPanel_excaliburArcaneHelmets.Margin = New System.Windows.Forms.Padding(0)
         Me.FlowLayoutPanel_excaliburArcaneHelmets.MinimumSize = New System.Drawing.Size(181, 26)
         Me.FlowLayoutPanel_excaliburArcaneHelmets.Name = "FlowLayoutPanel_excaliburArcaneHelmets"
-        Me.FlowLayoutPanel_excaliburArcaneHelmets.Size = New System.Drawing.Size(181, 54)
+        Me.FlowLayoutPanel_excaliburArcaneHelmets.Size = New System.Drawing.Size(181, 46)
         Me.FlowLayoutPanel_excaliburArcaneHelmets.TabIndex = 100
         '
         'RadioButton_avalonHelmet
         '
         Me.RadioButton_avalonHelmet.Checked = True
-        Me.RadioButton_avalonHelmet.Location = New System.Drawing.Point(3, 3)
+        Me.RadioButton_avalonHelmet.Location = New System.Drawing.Point(3, 1)
+        Me.RadioButton_avalonHelmet.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.RadioButton_avalonHelmet.Name = "RadioButton_avalonHelmet"
         Me.RadioButton_avalonHelmet.Size = New System.Drawing.Size(175, 21)
         Me.RadioButton_avalonHelmet.TabIndex = 3
@@ -2370,7 +2494,8 @@ Partial Class Form_main
         '
         'RadioButton_pendragonHelmet
         '
-        Me.RadioButton_pendragonHelmet.Location = New System.Drawing.Point(3, 30)
+        Me.RadioButton_pendragonHelmet.Location = New System.Drawing.Point(3, 24)
+        Me.RadioButton_pendragonHelmet.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.RadioButton_pendragonHelmet.Name = "RadioButton_pendragonHelmet"
         Me.RadioButton_pendragonHelmet.Size = New System.Drawing.Size(175, 21)
         Me.RadioButton_pendragonHelmet.TabIndex = 4
@@ -2384,7 +2509,7 @@ Partial Class Form_main
         Me.TabPage_arcaneHelmetsFrost.Controls.Add(Me.FlowLayoutPanel_frostArcaneHelmets)
         Me.TabPage_arcaneHelmetsFrost.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_arcaneHelmetsFrost.Name = "TabPage_arcaneHelmetsFrost"
-        Me.TabPage_arcaneHelmetsFrost.Size = New System.Drawing.Size(760, 126)
+        Me.TabPage_arcaneHelmetsFrost.Size = New System.Drawing.Size(927, 126)
         Me.TabPage_arcaneHelmetsFrost.TabIndex = 5
         Me.TabPage_arcaneHelmetsFrost.Text = "Frost"
         '
@@ -2399,13 +2524,14 @@ Partial Class Form_main
         Me.FlowLayoutPanel_frostArcaneHelmets.Margin = New System.Windows.Forms.Padding(0)
         Me.FlowLayoutPanel_frostArcaneHelmets.MinimumSize = New System.Drawing.Size(181, 26)
         Me.FlowLayoutPanel_frostArcaneHelmets.Name = "FlowLayoutPanel_frostArcaneHelmets"
-        Me.FlowLayoutPanel_frostArcaneHelmets.Size = New System.Drawing.Size(181, 54)
+        Me.FlowLayoutPanel_frostArcaneHelmets.Size = New System.Drawing.Size(181, 46)
         Me.FlowLayoutPanel_frostArcaneHelmets.TabIndex = 100
         '
         'RadioButton_auroraHelmet
         '
         Me.RadioButton_auroraHelmet.Checked = True
-        Me.RadioButton_auroraHelmet.Location = New System.Drawing.Point(3, 3)
+        Me.RadioButton_auroraHelmet.Location = New System.Drawing.Point(3, 1)
+        Me.RadioButton_auroraHelmet.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.RadioButton_auroraHelmet.Name = "RadioButton_auroraHelmet"
         Me.RadioButton_auroraHelmet.Size = New System.Drawing.Size(175, 21)
         Me.RadioButton_auroraHelmet.TabIndex = 4
@@ -2416,7 +2542,8 @@ Partial Class Form_main
         '
         'RadioButton_squallHelmet
         '
-        Me.RadioButton_squallHelmet.Location = New System.Drawing.Point(3, 30)
+        Me.RadioButton_squallHelmet.Location = New System.Drawing.Point(3, 24)
+        Me.RadioButton_squallHelmet.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.RadioButton_squallHelmet.Name = "RadioButton_squallHelmet"
         Me.RadioButton_squallHelmet.Size = New System.Drawing.Size(175, 21)
         Me.RadioButton_squallHelmet.TabIndex = 5
@@ -2430,7 +2557,7 @@ Partial Class Form_main
         Me.TabPage_arcaneHelmetsLoki.Controls.Add(Me.FlowLayoutPanel_lokiArcaneHelmets)
         Me.TabPage_arcaneHelmetsLoki.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_arcaneHelmetsLoki.Name = "TabPage_arcaneHelmetsLoki"
-        Me.TabPage_arcaneHelmetsLoki.Size = New System.Drawing.Size(760, 126)
+        Me.TabPage_arcaneHelmetsLoki.Size = New System.Drawing.Size(927, 126)
         Me.TabPage_arcaneHelmetsLoki.TabIndex = 6
         Me.TabPage_arcaneHelmetsLoki.Text = "Loki"
         '
@@ -2445,13 +2572,14 @@ Partial Class Form_main
         Me.FlowLayoutPanel_lokiArcaneHelmets.Margin = New System.Windows.Forms.Padding(0)
         Me.FlowLayoutPanel_lokiArcaneHelmets.MinimumSize = New System.Drawing.Size(181, 26)
         Me.FlowLayoutPanel_lokiArcaneHelmets.Name = "FlowLayoutPanel_lokiArcaneHelmets"
-        Me.FlowLayoutPanel_lokiArcaneHelmets.Size = New System.Drawing.Size(181, 54)
+        Me.FlowLayoutPanel_lokiArcaneHelmets.Size = New System.Drawing.Size(181, 46)
         Me.FlowLayoutPanel_lokiArcaneHelmets.TabIndex = 100
         '
         'RadioButton_essenceHelmet
         '
         Me.RadioButton_essenceHelmet.Checked = True
-        Me.RadioButton_essenceHelmet.Location = New System.Drawing.Point(3, 3)
+        Me.RadioButton_essenceHelmet.Location = New System.Drawing.Point(3, 1)
+        Me.RadioButton_essenceHelmet.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.RadioButton_essenceHelmet.Name = "RadioButton_essenceHelmet"
         Me.RadioButton_essenceHelmet.Size = New System.Drawing.Size(175, 21)
         Me.RadioButton_essenceHelmet.TabIndex = 4
@@ -2462,7 +2590,8 @@ Partial Class Form_main
         '
         'RadioButton_swindleHelmet
         '
-        Me.RadioButton_swindleHelmet.Location = New System.Drawing.Point(3, 30)
+        Me.RadioButton_swindleHelmet.Location = New System.Drawing.Point(3, 24)
+        Me.RadioButton_swindleHelmet.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.RadioButton_swindleHelmet.Name = "RadioButton_swindleHelmet"
         Me.RadioButton_swindleHelmet.Size = New System.Drawing.Size(175, 21)
         Me.RadioButton_swindleHelmet.TabIndex = 5
@@ -2476,7 +2605,7 @@ Partial Class Form_main
         Me.TabPage_arcaneHelmetsMag.Controls.Add(Me.FlowLayoutPanel_magArcaneHelmets)
         Me.TabPage_arcaneHelmetsMag.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_arcaneHelmetsMag.Name = "TabPage_arcaneHelmetsMag"
-        Me.TabPage_arcaneHelmetsMag.Size = New System.Drawing.Size(760, 126)
+        Me.TabPage_arcaneHelmetsMag.Size = New System.Drawing.Size(927, 126)
         Me.TabPage_arcaneHelmetsMag.TabIndex = 7
         Me.TabPage_arcaneHelmetsMag.Text = "Mag"
         '
@@ -2491,13 +2620,14 @@ Partial Class Form_main
         Me.FlowLayoutPanel_magArcaneHelmets.Margin = New System.Windows.Forms.Padding(0)
         Me.FlowLayoutPanel_magArcaneHelmets.MinimumSize = New System.Drawing.Size(181, 26)
         Me.FlowLayoutPanel_magArcaneHelmets.Name = "FlowLayoutPanel_magArcaneHelmets"
-        Me.FlowLayoutPanel_magArcaneHelmets.Size = New System.Drawing.Size(181, 54)
+        Me.FlowLayoutPanel_magArcaneHelmets.Size = New System.Drawing.Size(181, 46)
         Me.FlowLayoutPanel_magArcaneHelmets.TabIndex = 100
         '
         'RadioButton_coilHelmet
         '
         Me.RadioButton_coilHelmet.Checked = True
-        Me.RadioButton_coilHelmet.Location = New System.Drawing.Point(3, 3)
+        Me.RadioButton_coilHelmet.Location = New System.Drawing.Point(3, 1)
+        Me.RadioButton_coilHelmet.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.RadioButton_coilHelmet.Name = "RadioButton_coilHelmet"
         Me.RadioButton_coilHelmet.Size = New System.Drawing.Size(175, 21)
         Me.RadioButton_coilHelmet.TabIndex = 4
@@ -2508,7 +2638,8 @@ Partial Class Form_main
         '
         'RadioButton_gaussHelmet
         '
-        Me.RadioButton_gaussHelmet.Location = New System.Drawing.Point(3, 30)
+        Me.RadioButton_gaussHelmet.Location = New System.Drawing.Point(3, 24)
+        Me.RadioButton_gaussHelmet.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.RadioButton_gaussHelmet.Name = "RadioButton_gaussHelmet"
         Me.RadioButton_gaussHelmet.Size = New System.Drawing.Size(175, 21)
         Me.RadioButton_gaussHelmet.TabIndex = 5
@@ -2522,7 +2653,7 @@ Partial Class Form_main
         Me.TabPage_arcaneHelmetsNova.Controls.Add(Me.FlowLayoutPanel_novaArcaneHelmets)
         Me.TabPage_arcaneHelmetsNova.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_arcaneHelmetsNova.Name = "TabPage_arcaneHelmetsNova"
-        Me.TabPage_arcaneHelmetsNova.Size = New System.Drawing.Size(760, 126)
+        Me.TabPage_arcaneHelmetsNova.Size = New System.Drawing.Size(927, 126)
         Me.TabPage_arcaneHelmetsNova.TabIndex = 14
         Me.TabPage_arcaneHelmetsNova.Text = "Nova"
         '
@@ -2536,13 +2667,14 @@ Partial Class Form_main
         Me.FlowLayoutPanel_novaArcaneHelmets.Margin = New System.Windows.Forms.Padding(0)
         Me.FlowLayoutPanel_novaArcaneHelmets.MinimumSize = New System.Drawing.Size(181, 26)
         Me.FlowLayoutPanel_novaArcaneHelmets.Name = "FlowLayoutPanel_novaArcaneHelmets"
-        Me.FlowLayoutPanel_novaArcaneHelmets.Size = New System.Drawing.Size(181, 27)
+        Me.FlowLayoutPanel_novaArcaneHelmets.Size = New System.Drawing.Size(181, 26)
         Me.FlowLayoutPanel_novaArcaneHelmets.TabIndex = 100
         '
         'RadioButton_fluxHelmet
         '
         Me.RadioButton_fluxHelmet.Checked = True
-        Me.RadioButton_fluxHelmet.Location = New System.Drawing.Point(3, 3)
+        Me.RadioButton_fluxHelmet.Location = New System.Drawing.Point(3, 1)
+        Me.RadioButton_fluxHelmet.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.RadioButton_fluxHelmet.Name = "RadioButton_fluxHelmet"
         Me.RadioButton_fluxHelmet.Size = New System.Drawing.Size(175, 21)
         Me.RadioButton_fluxHelmet.TabIndex = 4
@@ -2557,7 +2689,7 @@ Partial Class Form_main
         Me.TabPage_arcaneHelmetsNyx.Controls.Add(Me.FlowLayoutPanel_nyxArcaneHelmets)
         Me.TabPage_arcaneHelmetsNyx.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_arcaneHelmetsNyx.Name = "TabPage_arcaneHelmetsNyx"
-        Me.TabPage_arcaneHelmetsNyx.Size = New System.Drawing.Size(760, 126)
+        Me.TabPage_arcaneHelmetsNyx.Size = New System.Drawing.Size(927, 126)
         Me.TabPage_arcaneHelmetsNyx.TabIndex = 8
         Me.TabPage_arcaneHelmetsNyx.Text = "Nyx"
         '
@@ -2572,13 +2704,14 @@ Partial Class Form_main
         Me.FlowLayoutPanel_nyxArcaneHelmets.Margin = New System.Windows.Forms.Padding(0)
         Me.FlowLayoutPanel_nyxArcaneHelmets.MinimumSize = New System.Drawing.Size(181, 26)
         Me.FlowLayoutPanel_nyxArcaneHelmets.Name = "FlowLayoutPanel_nyxArcaneHelmets"
-        Me.FlowLayoutPanel_nyxArcaneHelmets.Size = New System.Drawing.Size(181, 54)
+        Me.FlowLayoutPanel_nyxArcaneHelmets.Size = New System.Drawing.Size(181, 46)
         Me.FlowLayoutPanel_nyxArcaneHelmets.TabIndex = 100
         '
         'RadioButton_menticideHelmet
         '
         Me.RadioButton_menticideHelmet.Checked = True
-        Me.RadioButton_menticideHelmet.Location = New System.Drawing.Point(3, 3)
+        Me.RadioButton_menticideHelmet.Location = New System.Drawing.Point(3, 1)
+        Me.RadioButton_menticideHelmet.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.RadioButton_menticideHelmet.Name = "RadioButton_menticideHelmet"
         Me.RadioButton_menticideHelmet.Size = New System.Drawing.Size(175, 21)
         Me.RadioButton_menticideHelmet.TabIndex = 4
@@ -2589,7 +2722,8 @@ Partial Class Form_main
         '
         'RadioButton_vespaHelmet
         '
-        Me.RadioButton_vespaHelmet.Location = New System.Drawing.Point(3, 30)
+        Me.RadioButton_vespaHelmet.Location = New System.Drawing.Point(3, 24)
+        Me.RadioButton_vespaHelmet.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.RadioButton_vespaHelmet.Name = "RadioButton_vespaHelmet"
         Me.RadioButton_vespaHelmet.Size = New System.Drawing.Size(175, 21)
         Me.RadioButton_vespaHelmet.TabIndex = 5
@@ -2603,7 +2737,7 @@ Partial Class Form_main
         Me.TabPage_arcaneHelmetsRhino.Controls.Add(Me.FlowLayoutPanel_rhinoArcaneHelmets)
         Me.TabPage_arcaneHelmetsRhino.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_arcaneHelmetsRhino.Name = "TabPage_arcaneHelmetsRhino"
-        Me.TabPage_arcaneHelmetsRhino.Size = New System.Drawing.Size(760, 126)
+        Me.TabPage_arcaneHelmetsRhino.Size = New System.Drawing.Size(927, 126)
         Me.TabPage_arcaneHelmetsRhino.TabIndex = 9
         Me.TabPage_arcaneHelmetsRhino.Text = "Rhino"
         '
@@ -2618,13 +2752,14 @@ Partial Class Form_main
         Me.FlowLayoutPanel_rhinoArcaneHelmets.Margin = New System.Windows.Forms.Padding(0)
         Me.FlowLayoutPanel_rhinoArcaneHelmets.MinimumSize = New System.Drawing.Size(181, 26)
         Me.FlowLayoutPanel_rhinoArcaneHelmets.Name = "FlowLayoutPanel_rhinoArcaneHelmets"
-        Me.FlowLayoutPanel_rhinoArcaneHelmets.Size = New System.Drawing.Size(181, 54)
+        Me.FlowLayoutPanel_rhinoArcaneHelmets.Size = New System.Drawing.Size(181, 46)
         Me.FlowLayoutPanel_rhinoArcaneHelmets.TabIndex = 100
         '
         'RadioButton_thrak
         '
         Me.RadioButton_thrak.Checked = True
-        Me.RadioButton_thrak.Location = New System.Drawing.Point(3, 3)
+        Me.RadioButton_thrak.Location = New System.Drawing.Point(3, 1)
+        Me.RadioButton_thrak.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.RadioButton_thrak.Name = "RadioButton_thrak"
         Me.RadioButton_thrak.Size = New System.Drawing.Size(175, 21)
         Me.RadioButton_thrak.TabIndex = 4
@@ -2635,7 +2770,8 @@ Partial Class Form_main
         '
         'RadioButton_vanguardHelmet
         '
-        Me.RadioButton_vanguardHelmet.Location = New System.Drawing.Point(3, 30)
+        Me.RadioButton_vanguardHelmet.Location = New System.Drawing.Point(3, 24)
+        Me.RadioButton_vanguardHelmet.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.RadioButton_vanguardHelmet.Name = "RadioButton_vanguardHelmet"
         Me.RadioButton_vanguardHelmet.Size = New System.Drawing.Size(175, 21)
         Me.RadioButton_vanguardHelmet.TabIndex = 5
@@ -2649,7 +2785,7 @@ Partial Class Form_main
         Me.TabPage_arcaneHelmetsSaryn.Controls.Add(Me.FlowLayoutPanel_sarynArcanHelmets)
         Me.TabPage_arcaneHelmetsSaryn.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_arcaneHelmetsSaryn.Name = "TabPage_arcaneHelmetsSaryn"
-        Me.TabPage_arcaneHelmetsSaryn.Size = New System.Drawing.Size(760, 126)
+        Me.TabPage_arcaneHelmetsSaryn.Size = New System.Drawing.Size(927, 126)
         Me.TabPage_arcaneHelmetsSaryn.TabIndex = 10
         Me.TabPage_arcaneHelmetsSaryn.Text = "Saryn"
         '
@@ -2663,13 +2799,14 @@ Partial Class Form_main
         Me.FlowLayoutPanel_sarynArcanHelmets.Margin = New System.Windows.Forms.Padding(0)
         Me.FlowLayoutPanel_sarynArcanHelmets.MinimumSize = New System.Drawing.Size(181, 26)
         Me.FlowLayoutPanel_sarynArcanHelmets.Name = "FlowLayoutPanel_sarynArcanHelmets"
-        Me.FlowLayoutPanel_sarynArcanHelmets.Size = New System.Drawing.Size(181, 27)
+        Me.FlowLayoutPanel_sarynArcanHelmets.Size = New System.Drawing.Size(181, 26)
         Me.FlowLayoutPanel_sarynArcanHelmets.TabIndex = 100
         '
         'RadioButton_hemlockHelmet
         '
         Me.RadioButton_hemlockHelmet.Checked = True
-        Me.RadioButton_hemlockHelmet.Location = New System.Drawing.Point(3, 3)
+        Me.RadioButton_hemlockHelmet.Location = New System.Drawing.Point(3, 1)
+        Me.RadioButton_hemlockHelmet.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.RadioButton_hemlockHelmet.Name = "RadioButton_hemlockHelmet"
         Me.RadioButton_hemlockHelmet.Size = New System.Drawing.Size(175, 21)
         Me.RadioButton_hemlockHelmet.TabIndex = 4
@@ -2684,7 +2821,7 @@ Partial Class Form_main
         Me.TabPage_arcaneHelmetsTrinity.Controls.Add(Me.FlowLayoutPanel_trinityArcaneHelmets)
         Me.TabPage_arcaneHelmetsTrinity.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_arcaneHelmetsTrinity.Name = "TabPage_arcaneHelmetsTrinity"
-        Me.TabPage_arcaneHelmetsTrinity.Size = New System.Drawing.Size(760, 126)
+        Me.TabPage_arcaneHelmetsTrinity.Size = New System.Drawing.Size(927, 126)
         Me.TabPage_arcaneHelmetsTrinity.TabIndex = 11
         Me.TabPage_arcaneHelmetsTrinity.Text = "Trinity"
         '
@@ -2699,13 +2836,14 @@ Partial Class Form_main
         Me.FlowLayoutPanel_trinityArcaneHelmets.Margin = New System.Windows.Forms.Padding(0)
         Me.FlowLayoutPanel_trinityArcaneHelmets.MinimumSize = New System.Drawing.Size(181, 26)
         Me.FlowLayoutPanel_trinityArcaneHelmets.Name = "FlowLayoutPanel_trinityArcaneHelmets"
-        Me.FlowLayoutPanel_trinityArcaneHelmets.Size = New System.Drawing.Size(181, 54)
+        Me.FlowLayoutPanel_trinityArcaneHelmets.Size = New System.Drawing.Size(181, 46)
         Me.FlowLayoutPanel_trinityArcaneHelmets.TabIndex = 100
         '
         'RadioButton_auraHelmet
         '
         Me.RadioButton_auraHelmet.Checked = True
-        Me.RadioButton_auraHelmet.Location = New System.Drawing.Point(3, 3)
+        Me.RadioButton_auraHelmet.Location = New System.Drawing.Point(3, 1)
+        Me.RadioButton_auraHelmet.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.RadioButton_auraHelmet.Name = "RadioButton_auraHelmet"
         Me.RadioButton_auraHelmet.Size = New System.Drawing.Size(175, 21)
         Me.RadioButton_auraHelmet.TabIndex = 4
@@ -2716,7 +2854,8 @@ Partial Class Form_main
         '
         'RadioButton_meridianHelmet
         '
-        Me.RadioButton_meridianHelmet.Location = New System.Drawing.Point(3, 30)
+        Me.RadioButton_meridianHelmet.Location = New System.Drawing.Point(3, 24)
+        Me.RadioButton_meridianHelmet.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.RadioButton_meridianHelmet.Name = "RadioButton_meridianHelmet"
         Me.RadioButton_meridianHelmet.Size = New System.Drawing.Size(175, 21)
         Me.RadioButton_meridianHelmet.TabIndex = 5
@@ -2730,7 +2869,7 @@ Partial Class Form_main
         Me.TabPage_arcaneHelmetsVauban.Controls.Add(Me.FlowLayoutPanel_vaubanArcaneHelmets)
         Me.TabPage_arcaneHelmetsVauban.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_arcaneHelmetsVauban.Name = "TabPage_arcaneHelmetsVauban"
-        Me.TabPage_arcaneHelmetsVauban.Size = New System.Drawing.Size(760, 126)
+        Me.TabPage_arcaneHelmetsVauban.Size = New System.Drawing.Size(927, 126)
         Me.TabPage_arcaneHelmetsVauban.TabIndex = 12
         Me.TabPage_arcaneHelmetsVauban.Text = "Vauban"
         '
@@ -2744,13 +2883,14 @@ Partial Class Form_main
         Me.FlowLayoutPanel_vaubanArcaneHelmets.Margin = New System.Windows.Forms.Padding(0)
         Me.FlowLayoutPanel_vaubanArcaneHelmets.MinimumSize = New System.Drawing.Size(181, 26)
         Me.FlowLayoutPanel_vaubanArcaneHelmets.Name = "FlowLayoutPanel_vaubanArcaneHelmets"
-        Me.FlowLayoutPanel_vaubanArcaneHelmets.Size = New System.Drawing.Size(181, 27)
+        Me.FlowLayoutPanel_vaubanArcaneHelmets.Size = New System.Drawing.Size(181, 26)
         Me.FlowLayoutPanel_vaubanArcaneHelmets.TabIndex = 100
         '
         'RadioButton_espritHelmet
         '
         Me.RadioButton_espritHelmet.Checked = True
-        Me.RadioButton_espritHelmet.Location = New System.Drawing.Point(3, 3)
+        Me.RadioButton_espritHelmet.Location = New System.Drawing.Point(3, 1)
+        Me.RadioButton_espritHelmet.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.RadioButton_espritHelmet.Name = "RadioButton_espritHelmet"
         Me.RadioButton_espritHelmet.Size = New System.Drawing.Size(175, 21)
         Me.RadioButton_espritHelmet.TabIndex = 4
@@ -2765,7 +2905,7 @@ Partial Class Form_main
         Me.TabPage_arcaneHelmetsVolt.Controls.Add(Me.FlowLayoutPanel_voltArcaneHelmets)
         Me.TabPage_arcaneHelmetsVolt.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_arcaneHelmetsVolt.Name = "TabPage_arcaneHelmetsVolt"
-        Me.TabPage_arcaneHelmetsVolt.Size = New System.Drawing.Size(760, 126)
+        Me.TabPage_arcaneHelmetsVolt.Size = New System.Drawing.Size(927, 126)
         Me.TabPage_arcaneHelmetsVolt.TabIndex = 13
         Me.TabPage_arcaneHelmetsVolt.Text = "Volt"
         '
@@ -2780,13 +2920,14 @@ Partial Class Form_main
         Me.FlowLayoutPanel_voltArcaneHelmets.Margin = New System.Windows.Forms.Padding(0)
         Me.FlowLayoutPanel_voltArcaneHelmets.MinimumSize = New System.Drawing.Size(181, 26)
         Me.FlowLayoutPanel_voltArcaneHelmets.Name = "FlowLayoutPanel_voltArcaneHelmets"
-        Me.FlowLayoutPanel_voltArcaneHelmets.Size = New System.Drawing.Size(181, 54)
+        Me.FlowLayoutPanel_voltArcaneHelmets.Size = New System.Drawing.Size(181, 46)
         Me.FlowLayoutPanel_voltArcaneHelmets.TabIndex = 100
         '
         'RadioButton_pulseHelmet
         '
         Me.RadioButton_pulseHelmet.Checked = True
-        Me.RadioButton_pulseHelmet.Location = New System.Drawing.Point(3, 3)
+        Me.RadioButton_pulseHelmet.Location = New System.Drawing.Point(3, 1)
+        Me.RadioButton_pulseHelmet.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.RadioButton_pulseHelmet.Name = "RadioButton_pulseHelmet"
         Me.RadioButton_pulseHelmet.Size = New System.Drawing.Size(175, 21)
         Me.RadioButton_pulseHelmet.TabIndex = 4
@@ -2797,7 +2938,8 @@ Partial Class Form_main
         '
         'RadioButton_stormHelmet
         '
-        Me.RadioButton_stormHelmet.Location = New System.Drawing.Point(3, 30)
+        Me.RadioButton_stormHelmet.Location = New System.Drawing.Point(3, 24)
+        Me.RadioButton_stormHelmet.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.RadioButton_stormHelmet.Name = "RadioButton_stormHelmet"
         Me.RadioButton_stormHelmet.Size = New System.Drawing.Size(175, 21)
         Me.RadioButton_stormHelmet.TabIndex = 5
@@ -2835,7 +2977,7 @@ Partial Class Form_main
         Me.TabControl_abilities.Location = New System.Drawing.Point(6, 425)
         Me.TabControl_abilities.Name = "TabControl_abilities"
         Me.TabControl_abilities.SelectedIndex = 0
-        Me.TabControl_abilities.Size = New System.Drawing.Size(767, 212)
+        Me.TabControl_abilities.Size = New System.Drawing.Size(934, 212)
         Me.TabControl_abilities.TabIndex = 101
         '
         'TabPage_abilitiesDefault
@@ -2845,7 +2987,7 @@ Partial Class Form_main
         Me.TabPage_abilitiesDefault.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_abilitiesDefault.Name = "TabPage_abilitiesDefault"
         Me.TabPage_abilitiesDefault.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_abilitiesDefault.Size = New System.Drawing.Size(759, 186)
+        Me.TabPage_abilitiesDefault.Size = New System.Drawing.Size(926, 186)
         Me.TabPage_abilitiesDefault.TabIndex = 24
         Me.TabPage_abilitiesDefault.Text = "Default"
         '
@@ -2853,6 +2995,7 @@ Partial Class Form_main
         '
         Me.FlowLayoutPanel_defaultAbilities.AutoSize = True
         Me.FlowLayoutPanel_defaultAbilities.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.FlowLayoutPanel_defaultAbilities.BackColor = System.Drawing.Color.White
         Me.FlowLayoutPanel_defaultAbilities.Controls.Add(Me.Label_abilityPlaceholder)
         Me.FlowLayoutPanel_defaultAbilities.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
         Me.FlowLayoutPanel_defaultAbilities.Location = New System.Drawing.Point(6, 6)
@@ -2864,13 +3007,11 @@ Partial Class Form_main
         '
         'Label_abilityPlaceholder
         '
-        Me.Label_abilityPlaceholder.AutoSize = True
         Me.Label_abilityPlaceholder.BackColor = System.Drawing.Color.Transparent
         Me.Label_abilityPlaceholder.Location = New System.Drawing.Point(1, 3)
         Me.Label_abilityPlaceholder.Margin = New System.Windows.Forms.Padding(1, 3, 1, 3)
-        Me.Label_abilityPlaceholder.MinimumSize = New System.Drawing.Size(179, 0)
         Me.Label_abilityPlaceholder.Name = "Label_abilityPlaceholder"
-        Me.Label_abilityPlaceholder.Size = New System.Drawing.Size(179, 26)
+        Me.Label_abilityPlaceholder.Size = New System.Drawing.Size(178, 26)
         Me.Label_abilityPlaceholder.TabIndex = 0
         Me.Label_abilityPlaceholder.Text = "This Warframe has no " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "EHP affecting Abilities"
         Me.Label_abilityPlaceholder.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -2882,7 +3023,7 @@ Partial Class Form_main
         Me.TabPage_abilitiesAtlas.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_abilitiesAtlas.Name = "TabPage_abilitiesAtlas"
         Me.TabPage_abilitiesAtlas.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_abilitiesAtlas.Size = New System.Drawing.Size(759, 186)
+        Me.TabPage_abilitiesAtlas.Size = New System.Drawing.Size(926, 186)
         Me.TabPage_abilitiesAtlas.TabIndex = 18
         Me.TabPage_abilitiesAtlas.Text = "Atlas"
         '
@@ -2901,7 +3042,8 @@ Partial Class Form_main
         '
         'CheckedInput_rubble
         '
-        Me.CheckedInput_rubble.Location = New System.Drawing.Point(3, 3)
+        Me.CheckedInput_rubble.Location = New System.Drawing.Point(3, 1)
+        Me.CheckedInput_rubble.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckedInput_rubble.Maximum = 1500
         Me.CheckedInput_rubble.MaximumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_rubble.MinimumSize = New System.Drawing.Size(175, 20)
@@ -2916,7 +3058,7 @@ Partial Class Form_main
         Me.TabPage_abilitiesBaruuk.Controls.Add(Me.FlowLayoutPanel_baruukAbilities)
         Me.TabPage_abilitiesBaruuk.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_abilitiesBaruuk.Name = "TabPage_abilitiesBaruuk"
-        Me.TabPage_abilitiesBaruuk.Size = New System.Drawing.Size(759, 186)
+        Me.TabPage_abilitiesBaruuk.Size = New System.Drawing.Size(926, 186)
         Me.TabPage_abilitiesBaruuk.TabIndex = 22
         Me.TabPage_abilitiesBaruuk.Text = "Baruuk"
         '
@@ -2932,12 +3074,13 @@ Partial Class Form_main
         Me.FlowLayoutPanel_baruukAbilities.Margin = New System.Windows.Forms.Padding(0)
         Me.FlowLayoutPanel_baruukAbilities.MinimumSize = New System.Drawing.Size(181, 26)
         Me.FlowLayoutPanel_baruukAbilities.Name = "FlowLayoutPanel_baruukAbilities"
-        Me.FlowLayoutPanel_baruukAbilities.Size = New System.Drawing.Size(181, 80)
+        Me.FlowLayoutPanel_baruukAbilities.Size = New System.Drawing.Size(181, 68)
         Me.FlowLayoutPanel_baruukAbilities.TabIndex = 100
         '
         'CheckedInput_restraint
         '
-        Me.CheckedInput_restraint.Location = New System.Drawing.Point(3, 3)
+        Me.CheckedInput_restraint.Location = New System.Drawing.Point(3, 1)
+        Me.CheckedInput_restraint.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckedInput_restraint.Maximum = 100
         Me.CheckedInput_restraint.MaximumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_restraint.MinimumSize = New System.Drawing.Size(175, 20)
@@ -2949,7 +3092,8 @@ Partial Class Form_main
         '
         'CheckBox_desolateHands
         '
-        Me.CheckBox_desolateHands.Location = New System.Drawing.Point(3, 29)
+        Me.CheckBox_desolateHands.Location = New System.Drawing.Point(3, 23)
+        Me.CheckBox_desolateHands.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckBox_desolateHands.Name = "CheckBox_desolateHands"
         Me.CheckBox_desolateHands.Size = New System.Drawing.Size(175, 21)
         Me.CheckBox_desolateHands.TabIndex = 42
@@ -2958,7 +3102,8 @@ Partial Class Form_main
         '
         'CheckBox_sereneStorm
         '
-        Me.CheckBox_sereneStorm.Location = New System.Drawing.Point(3, 56)
+        Me.CheckBox_sereneStorm.Location = New System.Drawing.Point(3, 46)
+        Me.CheckBox_sereneStorm.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckBox_sereneStorm.Name = "CheckBox_sereneStorm"
         Me.CheckBox_sereneStorm.Size = New System.Drawing.Size(175, 21)
         Me.CheckBox_sereneStorm.TabIndex = 43
@@ -2972,7 +3117,7 @@ Partial Class Form_main
         Me.TabPage_abilitiesChroma.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_abilitiesChroma.Name = "TabPage_abilitiesChroma"
         Me.TabPage_abilitiesChroma.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_abilitiesChroma.Size = New System.Drawing.Size(759, 186)
+        Me.TabPage_abilitiesChroma.Size = New System.Drawing.Size(926, 186)
         Me.TabPage_abilitiesChroma.TabIndex = 0
         Me.TabPage_abilitiesChroma.Text = "Chroma"
         '
@@ -2990,12 +3135,13 @@ Partial Class Form_main
         Me.FlowLayoutPanel_chromaAbilities.Margin = New System.Windows.Forms.Padding(0)
         Me.FlowLayoutPanel_chromaAbilities.MinimumSize = New System.Drawing.Size(181, 26)
         Me.FlowLayoutPanel_chromaAbilities.Name = "FlowLayoutPanel_chromaAbilities"
-        Me.FlowLayoutPanel_chromaAbilities.Size = New System.Drawing.Size(181, 135)
+        Me.FlowLayoutPanel_chromaAbilities.Size = New System.Drawing.Size(181, 115)
         Me.FlowLayoutPanel_chromaAbilities.TabIndex = 100
         '
         'RadioButton_electricChroma
         '
-        Me.RadioButton_electricChroma.Location = New System.Drawing.Point(3, 3)
+        Me.RadioButton_electricChroma.Location = New System.Drawing.Point(3, 1)
+        Me.RadioButton_electricChroma.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.RadioButton_electricChroma.Name = "RadioButton_electricChroma"
         Me.RadioButton_electricChroma.Size = New System.Drawing.Size(175, 21)
         Me.RadioButton_electricChroma.TabIndex = 16
@@ -3005,7 +3151,8 @@ Partial Class Form_main
         'RadioButton_fireChroma
         '
         Me.RadioButton_fireChroma.Checked = True
-        Me.RadioButton_fireChroma.Location = New System.Drawing.Point(3, 30)
+        Me.RadioButton_fireChroma.Location = New System.Drawing.Point(3, 24)
+        Me.RadioButton_fireChroma.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.RadioButton_fireChroma.Name = "RadioButton_fireChroma"
         Me.RadioButton_fireChroma.Size = New System.Drawing.Size(175, 21)
         Me.RadioButton_fireChroma.TabIndex = 14
@@ -3015,7 +3162,8 @@ Partial Class Form_main
         '
         'RadioButton_iceChroma
         '
-        Me.RadioButton_iceChroma.Location = New System.Drawing.Point(3, 57)
+        Me.RadioButton_iceChroma.Location = New System.Drawing.Point(3, 47)
+        Me.RadioButton_iceChroma.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.RadioButton_iceChroma.Name = "RadioButton_iceChroma"
         Me.RadioButton_iceChroma.Size = New System.Drawing.Size(175, 21)
         Me.RadioButton_iceChroma.TabIndex = 15
@@ -3024,7 +3172,8 @@ Partial Class Form_main
         '
         'CheckBox_vexArmor
         '
-        Me.CheckBox_vexArmor.Location = New System.Drawing.Point(3, 84)
+        Me.CheckBox_vexArmor.Location = New System.Drawing.Point(3, 70)
+        Me.CheckBox_vexArmor.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckBox_vexArmor.Name = "CheckBox_vexArmor"
         Me.CheckBox_vexArmor.Size = New System.Drawing.Size(175, 21)
         Me.CheckBox_vexArmor.TabIndex = 18
@@ -3033,7 +3182,8 @@ Partial Class Form_main
         '
         'CheckBox_elementalWard
         '
-        Me.CheckBox_elementalWard.Location = New System.Drawing.Point(3, 111)
+        Me.CheckBox_elementalWard.Location = New System.Drawing.Point(3, 93)
+        Me.CheckBox_elementalWard.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckBox_elementalWard.Name = "CheckBox_elementalWard"
         Me.CheckBox_elementalWard.Size = New System.Drawing.Size(175, 21)
         Me.CheckBox_elementalWard.TabIndex = 17
@@ -3046,7 +3196,7 @@ Partial Class Form_main
         Me.TabPage_abilitiesExcalibur.Controls.Add(Me.FlowLayoutPanel_excaliburAbilities)
         Me.TabPage_abilitiesExcalibur.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_abilitiesExcalibur.Name = "TabPage_abilitiesExcalibur"
-        Me.TabPage_abilitiesExcalibur.Size = New System.Drawing.Size(759, 186)
+        Me.TabPage_abilitiesExcalibur.Size = New System.Drawing.Size(926, 186)
         Me.TabPage_abilitiesExcalibur.TabIndex = 19
         Me.TabPage_abilitiesExcalibur.Text = "Excalibur"
         '
@@ -3060,12 +3210,13 @@ Partial Class Form_main
         Me.FlowLayoutPanel_excaliburAbilities.Margin = New System.Windows.Forms.Padding(0)
         Me.FlowLayoutPanel_excaliburAbilities.MinimumSize = New System.Drawing.Size(181, 26)
         Me.FlowLayoutPanel_excaliburAbilities.Name = "FlowLayoutPanel_excaliburAbilities"
-        Me.FlowLayoutPanel_excaliburAbilities.Size = New System.Drawing.Size(181, 27)
+        Me.FlowLayoutPanel_excaliburAbilities.Size = New System.Drawing.Size(181, 26)
         Me.FlowLayoutPanel_excaliburAbilities.TabIndex = 100
         '
         'CheckBox_exaltedBlade
         '
-        Me.CheckBox_exaltedBlade.Location = New System.Drawing.Point(3, 3)
+        Me.CheckBox_exaltedBlade.Location = New System.Drawing.Point(3, 1)
+        Me.CheckBox_exaltedBlade.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckBox_exaltedBlade.Name = "CheckBox_exaltedBlade"
         Me.CheckBox_exaltedBlade.Size = New System.Drawing.Size(175, 21)
         Me.CheckBox_exaltedBlade.TabIndex = 39
@@ -3079,7 +3230,7 @@ Partial Class Form_main
         Me.TabPage_abilitiesFrost.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_abilitiesFrost.Name = "TabPage_abilitiesFrost"
         Me.TabPage_abilitiesFrost.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_abilitiesFrost.Size = New System.Drawing.Size(759, 186)
+        Me.TabPage_abilitiesFrost.Size = New System.Drawing.Size(926, 186)
         Me.TabPage_abilitiesFrost.TabIndex = 2
         Me.TabPage_abilitiesFrost.Text = "Frost"
         '
@@ -3098,7 +3249,8 @@ Partial Class Form_main
         '
         'CheckedInput_icyAvalanche
         '
-        Me.CheckedInput_icyAvalanche.Location = New System.Drawing.Point(3, 3)
+        Me.CheckedInput_icyAvalanche.Location = New System.Drawing.Point(3, 1)
+        Me.CheckedInput_icyAvalanche.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckedInput_icyAvalanche.Maximum = 200
         Me.CheckedInput_icyAvalanche.MaximumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_icyAvalanche.MinimumSize = New System.Drawing.Size(175, 20)
@@ -3114,7 +3266,7 @@ Partial Class Form_main
         Me.TabPage_abilitiesGara.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_abilitiesGara.Name = "TabPage_abilitiesGara"
         Me.TabPage_abilitiesGara.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_abilitiesGara.Size = New System.Drawing.Size(759, 186)
+        Me.TabPage_abilitiesGara.Size = New System.Drawing.Size(926, 186)
         Me.TabPage_abilitiesGara.TabIndex = 17
         Me.TabPage_abilitiesGara.Text = "Gara"
         '
@@ -3128,12 +3280,13 @@ Partial Class Form_main
         Me.FlowLayoutPanel_garaAbilities.Margin = New System.Windows.Forms.Padding(0)
         Me.FlowLayoutPanel_garaAbilities.MinimumSize = New System.Drawing.Size(181, 26)
         Me.FlowLayoutPanel_garaAbilities.Name = "FlowLayoutPanel_garaAbilities"
-        Me.FlowLayoutPanel_garaAbilities.Size = New System.Drawing.Size(181, 27)
+        Me.FlowLayoutPanel_garaAbilities.Size = New System.Drawing.Size(181, 26)
         Me.FlowLayoutPanel_garaAbilities.TabIndex = 100
         '
         'CheckBox_splinterStorm
         '
-        Me.CheckBox_splinterStorm.Location = New System.Drawing.Point(3, 3)
+        Me.CheckBox_splinterStorm.Location = New System.Drawing.Point(3, 1)
+        Me.CheckBox_splinterStorm.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckBox_splinterStorm.Name = "CheckBox_splinterStorm"
         Me.CheckBox_splinterStorm.Size = New System.Drawing.Size(175, 21)
         Me.CheckBox_splinterStorm.TabIndex = 1
@@ -3146,7 +3299,7 @@ Partial Class Form_main
         Me.TabPage_abilitiesHarrow.Controls.Add(Me.FlowLayoutPanel_harrowAbilities)
         Me.TabPage_abilitiesHarrow.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_abilitiesHarrow.Name = "TabPage_abilitiesHarrow"
-        Me.TabPage_abilitiesHarrow.Size = New System.Drawing.Size(759, 186)
+        Me.TabPage_abilitiesHarrow.Size = New System.Drawing.Size(926, 186)
         Me.TabPage_abilitiesHarrow.TabIndex = 21
         Me.TabPage_abilitiesHarrow.Text = "Harrow"
         '
@@ -3160,12 +3313,13 @@ Partial Class Form_main
         Me.FlowLayoutPanel_harrowAbilities.Margin = New System.Windows.Forms.Padding(0)
         Me.FlowLayoutPanel_harrowAbilities.MinimumSize = New System.Drawing.Size(181, 26)
         Me.FlowLayoutPanel_harrowAbilities.Name = "FlowLayoutPanel_harrowAbilities"
-        Me.FlowLayoutPanel_harrowAbilities.Size = New System.Drawing.Size(181, 27)
+        Me.FlowLayoutPanel_harrowAbilities.Size = New System.Drawing.Size(181, 26)
         Me.FlowLayoutPanel_harrowAbilities.TabIndex = 100
         '
         'CheckBox_wardingThurible
         '
-        Me.CheckBox_wardingThurible.Location = New System.Drawing.Point(3, 3)
+        Me.CheckBox_wardingThurible.Location = New System.Drawing.Point(3, 1)
+        Me.CheckBox_wardingThurible.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckBox_wardingThurible.Name = "CheckBox_wardingThurible"
         Me.CheckBox_wardingThurible.Size = New System.Drawing.Size(175, 21)
         Me.CheckBox_wardingThurible.TabIndex = 2
@@ -3179,7 +3333,7 @@ Partial Class Form_main
         Me.TabPage_abilitiesInaros.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_abilitiesInaros.Name = "TabPage_abilitiesInaros"
         Me.TabPage_abilitiesInaros.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_abilitiesInaros.Size = New System.Drawing.Size(759, 186)
+        Me.TabPage_abilitiesInaros.Size = New System.Drawing.Size(926, 186)
         Me.TabPage_abilitiesInaros.TabIndex = 3
         Me.TabPage_abilitiesInaros.Text = "Inaros"
         '
@@ -3198,7 +3352,8 @@ Partial Class Form_main
         '
         'CheckedInput_scarabSwarm
         '
-        Me.CheckedInput_scarabSwarm.Location = New System.Drawing.Point(3, 3)
+        Me.CheckedInput_scarabSwarm.Location = New System.Drawing.Point(3, 1)
+        Me.CheckedInput_scarabSwarm.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckedInput_scarabSwarm.Maximum = 200
         Me.CheckedInput_scarabSwarm.MaximumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_scarabSwarm.MinimumSize = New System.Drawing.Size(175, 20)
@@ -3214,7 +3369,7 @@ Partial Class Form_main
         Me.TabPage_abilitiesMesa.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_abilitiesMesa.Name = "TabPage_abilitiesMesa"
         Me.TabPage_abilitiesMesa.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_abilitiesMesa.Size = New System.Drawing.Size(759, 186)
+        Me.TabPage_abilitiesMesa.Size = New System.Drawing.Size(926, 186)
         Me.TabPage_abilitiesMesa.TabIndex = 6
         Me.TabPage_abilitiesMesa.Text = "Mesa"
         '
@@ -3229,12 +3384,13 @@ Partial Class Form_main
         Me.FlowLayoutPanel_mesaAbilities.Margin = New System.Windows.Forms.Padding(0)
         Me.FlowLayoutPanel_mesaAbilities.MinimumSize = New System.Drawing.Size(181, 26)
         Me.FlowLayoutPanel_mesaAbilities.Name = "FlowLayoutPanel_mesaAbilities"
-        Me.FlowLayoutPanel_mesaAbilities.Size = New System.Drawing.Size(181, 54)
+        Me.FlowLayoutPanel_mesaAbilities.Size = New System.Drawing.Size(181, 46)
         Me.FlowLayoutPanel_mesaAbilities.TabIndex = 100
         '
         'CheckBox_shatterShield
         '
-        Me.CheckBox_shatterShield.Location = New System.Drawing.Point(3, 3)
+        Me.CheckBox_shatterShield.Location = New System.Drawing.Point(3, 1)
+        Me.CheckBox_shatterShield.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckBox_shatterShield.Name = "CheckBox_shatterShield"
         Me.CheckBox_shatterShield.Size = New System.Drawing.Size(175, 21)
         Me.CheckBox_shatterShield.TabIndex = 2
@@ -3243,7 +3399,8 @@ Partial Class Form_main
         '
         'CheckBox_marksmansDexterity
         '
-        Me.CheckBox_marksmansDexterity.Location = New System.Drawing.Point(3, 30)
+        Me.CheckBox_marksmansDexterity.Location = New System.Drawing.Point(3, 24)
+        Me.CheckBox_marksmansDexterity.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckBox_marksmansDexterity.Name = "CheckBox_marksmansDexterity"
         Me.CheckBox_marksmansDexterity.Size = New System.Drawing.Size(175, 21)
         Me.CheckBox_marksmansDexterity.TabIndex = 3
@@ -3256,7 +3413,7 @@ Partial Class Form_main
         Me.TabPage_abilitiesMirage.Controls.Add(Me.FlowLayoutPanel_mirageAbilities)
         Me.TabPage_abilitiesMirage.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_abilitiesMirage.Name = "TabPage_abilitiesMirage"
-        Me.TabPage_abilitiesMirage.Size = New System.Drawing.Size(759, 186)
+        Me.TabPage_abilitiesMirage.Size = New System.Drawing.Size(926, 186)
         Me.TabPage_abilitiesMirage.TabIndex = 13
         Me.TabPage_abilitiesMirage.Text = "Mirage"
         '
@@ -3270,12 +3427,13 @@ Partial Class Form_main
         Me.FlowLayoutPanel_mirageAbilities.Margin = New System.Windows.Forms.Padding(0)
         Me.FlowLayoutPanel_mirageAbilities.MinimumSize = New System.Drawing.Size(181, 26)
         Me.FlowLayoutPanel_mirageAbilities.Name = "FlowLayoutPanel_mirageAbilities"
-        Me.FlowLayoutPanel_mirageAbilities.Size = New System.Drawing.Size(181, 27)
+        Me.FlowLayoutPanel_mirageAbilities.Size = New System.Drawing.Size(181, 26)
         Me.FlowLayoutPanel_mirageAbilities.TabIndex = 100
         '
         'CheckBox_eclipse
         '
-        Me.CheckBox_eclipse.Location = New System.Drawing.Point(3, 3)
+        Me.CheckBox_eclipse.Location = New System.Drawing.Point(3, 1)
+        Me.CheckBox_eclipse.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckBox_eclipse.Name = "CheckBox_eclipse"
         Me.CheckBox_eclipse.Size = New System.Drawing.Size(175, 21)
         Me.CheckBox_eclipse.TabIndex = 3
@@ -3289,7 +3447,7 @@ Partial Class Form_main
         Me.TabPage_abilitiesNekros.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_abilitiesNekros.Name = "TabPage_abilitiesNekros"
         Me.TabPage_abilitiesNekros.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_abilitiesNekros.Size = New System.Drawing.Size(759, 186)
+        Me.TabPage_abilitiesNekros.Size = New System.Drawing.Size(926, 186)
         Me.TabPage_abilitiesNekros.TabIndex = 11
         Me.TabPage_abilitiesNekros.Text = "Nekros"
         '
@@ -3308,7 +3466,8 @@ Partial Class Form_main
         '
         'CheckedInput_shieldOfShadows
         '
-        Me.CheckedInput_shieldOfShadows.Location = New System.Drawing.Point(3, 3)
+        Me.CheckedInput_shieldOfShadows.Location = New System.Drawing.Point(3, 1)
+        Me.CheckedInput_shieldOfShadows.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckedInput_shieldOfShadows.Maximum = 7
         Me.CheckedInput_shieldOfShadows.MaximumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_shieldOfShadows.MinimumSize = New System.Drawing.Size(175, 20)
@@ -3324,7 +3483,7 @@ Partial Class Form_main
         Me.TabPage_abilitiesNezha.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_abilitiesNezha.Name = "TabPage_abilitiesNezha"
         Me.TabPage_abilitiesNezha.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_abilitiesNezha.Size = New System.Drawing.Size(759, 186)
+        Me.TabPage_abilitiesNezha.Size = New System.Drawing.Size(926, 186)
         Me.TabPage_abilitiesNezha.TabIndex = 4
         Me.TabPage_abilitiesNezha.Text = "Nezha"
         '
@@ -3338,12 +3497,13 @@ Partial Class Form_main
         Me.FlowLayoutPanel_nezhaAbilities.Margin = New System.Windows.Forms.Padding(0)
         Me.FlowLayoutPanel_nezhaAbilities.MinimumSize = New System.Drawing.Size(181, 26)
         Me.FlowLayoutPanel_nezhaAbilities.Name = "FlowLayoutPanel_nezhaAbilities"
-        Me.FlowLayoutPanel_nezhaAbilities.Size = New System.Drawing.Size(181, 27)
+        Me.FlowLayoutPanel_nezhaAbilities.Size = New System.Drawing.Size(181, 26)
         Me.FlowLayoutPanel_nezhaAbilities.TabIndex = 100
         '
         'CheckBox_wardingHalo
         '
-        Me.CheckBox_wardingHalo.Location = New System.Drawing.Point(3, 3)
+        Me.CheckBox_wardingHalo.Location = New System.Drawing.Point(3, 1)
+        Me.CheckBox_wardingHalo.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckBox_wardingHalo.Name = "CheckBox_wardingHalo"
         Me.CheckBox_wardingHalo.Size = New System.Drawing.Size(175, 21)
         Me.CheckBox_wardingHalo.TabIndex = 2
@@ -3357,7 +3517,7 @@ Partial Class Form_main
         Me.TabPage_abilitiesNidus.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_abilitiesNidus.Name = "TabPage_abilitiesNidus"
         Me.TabPage_abilitiesNidus.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_abilitiesNidus.Size = New System.Drawing.Size(759, 186)
+        Me.TabPage_abilitiesNidus.Size = New System.Drawing.Size(926, 186)
         Me.TabPage_abilitiesNidus.TabIndex = 9
         Me.TabPage_abilitiesNidus.Text = "Nidus"
         '
@@ -3371,12 +3531,13 @@ Partial Class Form_main
         Me.FlowLayoutPanel_nidusAbilities.Margin = New System.Windows.Forms.Padding(0)
         Me.FlowLayoutPanel_nidusAbilities.MinimumSize = New System.Drawing.Size(181, 26)
         Me.FlowLayoutPanel_nidusAbilities.Name = "FlowLayoutPanel_nidusAbilities"
-        Me.FlowLayoutPanel_nidusAbilities.Size = New System.Drawing.Size(181, 27)
+        Me.FlowLayoutPanel_nidusAbilities.Size = New System.Drawing.Size(181, 26)
         Me.FlowLayoutPanel_nidusAbilities.TabIndex = 100
         '
         'CheckBox_parasiticLink
         '
-        Me.CheckBox_parasiticLink.Location = New System.Drawing.Point(3, 3)
+        Me.CheckBox_parasiticLink.Location = New System.Drawing.Point(3, 1)
+        Me.CheckBox_parasiticLink.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckBox_parasiticLink.Name = "CheckBox_parasiticLink"
         Me.CheckBox_parasiticLink.Size = New System.Drawing.Size(175, 21)
         Me.CheckBox_parasiticLink.TabIndex = 38
@@ -3390,7 +3551,7 @@ Partial Class Form_main
         Me.TabPage_abilitiesNova.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_abilitiesNova.Name = "TabPage_abilitiesNova"
         Me.TabPage_abilitiesNova.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_abilitiesNova.Size = New System.Drawing.Size(759, 186)
+        Me.TabPage_abilitiesNova.Size = New System.Drawing.Size(926, 186)
         Me.TabPage_abilitiesNova.TabIndex = 20
         Me.TabPage_abilitiesNova.Text = "Nova"
         '
@@ -3409,7 +3570,8 @@ Partial Class Form_main
         '
         'CheckedInput_nullStar
         '
-        Me.CheckedInput_nullStar.Location = New System.Drawing.Point(3, 3)
+        Me.CheckedInput_nullStar.Location = New System.Drawing.Point(3, 1)
+        Me.CheckedInput_nullStar.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckedInput_nullStar.Maximum = 18
         Me.CheckedInput_nullStar.MaximumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_nullStar.MinimumSize = New System.Drawing.Size(175, 20)
@@ -3425,7 +3587,7 @@ Partial Class Form_main
         Me.TabPage_abilitiesOberon.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_abilitiesOberon.Name = "TabPage_abilitiesOberon"
         Me.TabPage_abilitiesOberon.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_abilitiesOberon.Size = New System.Drawing.Size(759, 186)
+        Me.TabPage_abilitiesOberon.Size = New System.Drawing.Size(926, 186)
         Me.TabPage_abilitiesOberon.TabIndex = 5
         Me.TabPage_abilitiesOberon.Text = "Oberon"
         '
@@ -3440,12 +3602,13 @@ Partial Class Form_main
         Me.FlowLayoutPanel_oberonAbilities.Margin = New System.Windows.Forms.Padding(0)
         Me.FlowLayoutPanel_oberonAbilities.MinimumSize = New System.Drawing.Size(181, 26)
         Me.FlowLayoutPanel_oberonAbilities.Name = "FlowLayoutPanel_oberonAbilities"
-        Me.FlowLayoutPanel_oberonAbilities.Size = New System.Drawing.Size(181, 54)
+        Me.FlowLayoutPanel_oberonAbilities.Size = New System.Drawing.Size(181, 46)
         Me.FlowLayoutPanel_oberonAbilities.TabIndex = 100
         '
         'CheckBox_ironRenewal
         '
-        Me.CheckBox_ironRenewal.Location = New System.Drawing.Point(3, 3)
+        Me.CheckBox_ironRenewal.Location = New System.Drawing.Point(3, 1)
+        Me.CheckBox_ironRenewal.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckBox_ironRenewal.Name = "CheckBox_ironRenewal"
         Me.CheckBox_ironRenewal.Size = New System.Drawing.Size(175, 21)
         Me.CheckBox_ironRenewal.TabIndex = 3
@@ -3454,7 +3617,8 @@ Partial Class Form_main
         '
         'CheckBox_hallowedReckoning
         '
-        Me.CheckBox_hallowedReckoning.Location = New System.Drawing.Point(3, 30)
+        Me.CheckBox_hallowedReckoning.Location = New System.Drawing.Point(3, 24)
+        Me.CheckBox_hallowedReckoning.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckBox_hallowedReckoning.Name = "CheckBox_hallowedReckoning"
         Me.CheckBox_hallowedReckoning.Size = New System.Drawing.Size(175, 21)
         Me.CheckBox_hallowedReckoning.TabIndex = 4
@@ -3468,7 +3632,7 @@ Partial Class Form_main
         Me.TabPage_abilitiesOctavia.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_abilitiesOctavia.Name = "TabPage_abilitiesOctavia"
         Me.TabPage_abilitiesOctavia.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_abilitiesOctavia.Size = New System.Drawing.Size(759, 186)
+        Me.TabPage_abilitiesOctavia.Size = New System.Drawing.Size(926, 186)
         Me.TabPage_abilitiesOctavia.TabIndex = 15
         Me.TabPage_abilitiesOctavia.Text = "Octavia"
         '
@@ -3482,12 +3646,13 @@ Partial Class Form_main
         Me.FlowLayoutPanel_octaviaAbilities.Margin = New System.Windows.Forms.Padding(0)
         Me.FlowLayoutPanel_octaviaAbilities.MinimumSize = New System.Drawing.Size(181, 26)
         Me.FlowLayoutPanel_octaviaAbilities.Name = "FlowLayoutPanel_octaviaAbilities"
-        Me.FlowLayoutPanel_octaviaAbilities.Size = New System.Drawing.Size(181, 27)
+        Me.FlowLayoutPanel_octaviaAbilities.Size = New System.Drawing.Size(181, 26)
         Me.FlowLayoutPanel_octaviaAbilities.TabIndex = 100
         '
         'CheckBox_metronome
         '
-        Me.CheckBox_metronome.Location = New System.Drawing.Point(3, 3)
+        Me.CheckBox_metronome.Location = New System.Drawing.Point(3, 1)
+        Me.CheckBox_metronome.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckBox_metronome.Name = "CheckBox_metronome"
         Me.CheckBox_metronome.Size = New System.Drawing.Size(175, 21)
         Me.CheckBox_metronome.TabIndex = 4
@@ -3501,7 +3666,7 @@ Partial Class Form_main
         Me.TabPage_abilitiesRhino.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_abilitiesRhino.Name = "TabPage_abilitiesRhino"
         Me.TabPage_abilitiesRhino.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_abilitiesRhino.Size = New System.Drawing.Size(759, 186)
+        Me.TabPage_abilitiesRhino.Size = New System.Drawing.Size(926, 186)
         Me.TabPage_abilitiesRhino.TabIndex = 7
         Me.TabPage_abilitiesRhino.Text = "Rhino"
         '
@@ -3516,12 +3681,13 @@ Partial Class Form_main
         Me.FlowLayoutPanel_rhinoAbilities.Margin = New System.Windows.Forms.Padding(0)
         Me.FlowLayoutPanel_rhinoAbilities.MinimumSize = New System.Drawing.Size(181, 26)
         Me.FlowLayoutPanel_rhinoAbilities.Name = "FlowLayoutPanel_rhinoAbilities"
-        Me.FlowLayoutPanel_rhinoAbilities.Size = New System.Drawing.Size(181, 52)
+        Me.FlowLayoutPanel_rhinoAbilities.Size = New System.Drawing.Size(181, 44)
         Me.FlowLayoutPanel_rhinoAbilities.TabIndex = 100
         '
         'CheckedInput_ironSkin
         '
-        Me.CheckedInput_ironSkin.Location = New System.Drawing.Point(3, 3)
+        Me.CheckedInput_ironSkin.Location = New System.Drawing.Point(3, 1)
+        Me.CheckedInput_ironSkin.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckedInput_ironSkin.Maximum = 100000000
         Me.CheckedInput_ironSkin.MaximumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_ironSkin.MinimumSize = New System.Drawing.Size(175, 20)
@@ -3532,7 +3698,8 @@ Partial Class Form_main
         '
         'CheckedInput_ironcladCharge
         '
-        Me.CheckedInput_ironcladCharge.Location = New System.Drawing.Point(3, 29)
+        Me.CheckedInput_ironcladCharge.Location = New System.Drawing.Point(3, 23)
+        Me.CheckedInput_ironcladCharge.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckedInput_ironcladCharge.Maximum = 100
         Me.CheckedInput_ironcladCharge.MaximumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_ironcladCharge.MinimumSize = New System.Drawing.Size(175, 20)
@@ -3547,7 +3714,7 @@ Partial Class Form_main
         Me.TabPage_abilitiesTitania.Controls.Add(Me.FlowLayoutPanel_titaniaAbilities)
         Me.TabPage_abilitiesTitania.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_abilitiesTitania.Name = "TabPage_abilitiesTitania"
-        Me.TabPage_abilitiesTitania.Size = New System.Drawing.Size(759, 186)
+        Me.TabPage_abilitiesTitania.Size = New System.Drawing.Size(926, 186)
         Me.TabPage_abilitiesTitania.TabIndex = 16
         Me.TabPage_abilitiesTitania.Text = "Titania"
         '
@@ -3566,7 +3733,8 @@ Partial Class Form_main
         '
         'CheckedInput_thorns
         '
-        Me.CheckedInput_thorns.Location = New System.Drawing.Point(3, 3)
+        Me.CheckedInput_thorns.Location = New System.Drawing.Point(3, 1)
+        Me.CheckedInput_thorns.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckedInput_thorns.Maximum = 25
         Me.CheckedInput_thorns.MaximumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_thorns.MinimumSize = New System.Drawing.Size(175, 20)
@@ -3581,7 +3749,7 @@ Partial Class Form_main
         Me.TabPage_abilitiesTrinity.Controls.Add(Me.FlowLayoutPanel_trinityAbilities)
         Me.TabPage_abilitiesTrinity.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_abilitiesTrinity.Name = "TabPage_abilitiesTrinity"
-        Me.TabPage_abilitiesTrinity.Size = New System.Drawing.Size(759, 186)
+        Me.TabPage_abilitiesTrinity.Size = New System.Drawing.Size(926, 186)
         Me.TabPage_abilitiesTrinity.TabIndex = 12
         Me.TabPage_abilitiesTrinity.Text = "Trinity"
         '
@@ -3596,12 +3764,13 @@ Partial Class Form_main
         Me.FlowLayoutPanel_trinityAbilities.Margin = New System.Windows.Forms.Padding(0)
         Me.FlowLayoutPanel_trinityAbilities.MinimumSize = New System.Drawing.Size(181, 26)
         Me.FlowLayoutPanel_trinityAbilities.Name = "FlowLayoutPanel_trinityAbilities"
-        Me.FlowLayoutPanel_trinityAbilities.Size = New System.Drawing.Size(181, 54)
+        Me.FlowLayoutPanel_trinityAbilities.Size = New System.Drawing.Size(181, 46)
         Me.FlowLayoutPanel_trinityAbilities.TabIndex = 100
         '
         'CheckBox_link
         '
-        Me.CheckBox_link.Location = New System.Drawing.Point(3, 3)
+        Me.CheckBox_link.Location = New System.Drawing.Point(3, 1)
+        Me.CheckBox_link.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckBox_link.Name = "CheckBox_link"
         Me.CheckBox_link.Size = New System.Drawing.Size(175, 21)
         Me.CheckBox_link.TabIndex = 39
@@ -3610,7 +3779,8 @@ Partial Class Form_main
         '
         'CheckBox_blessing
         '
-        Me.CheckBox_blessing.Location = New System.Drawing.Point(3, 30)
+        Me.CheckBox_blessing.Location = New System.Drawing.Point(3, 24)
+        Me.CheckBox_blessing.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckBox_blessing.Name = "CheckBox_blessing"
         Me.CheckBox_blessing.Size = New System.Drawing.Size(175, 21)
         Me.CheckBox_blessing.TabIndex = 41
@@ -3624,7 +3794,7 @@ Partial Class Form_main
         Me.TabPage_abilitiesValkyr.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_abilitiesValkyr.Name = "TabPage_abilitiesValkyr"
         Me.TabPage_abilitiesValkyr.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_abilitiesValkyr.Size = New System.Drawing.Size(759, 186)
+        Me.TabPage_abilitiesValkyr.Size = New System.Drawing.Size(926, 186)
         Me.TabPage_abilitiesValkyr.TabIndex = 8
         Me.TabPage_abilitiesValkyr.Text = "Valkyr"
         '
@@ -3638,12 +3808,13 @@ Partial Class Form_main
         Me.FlowLayoutPanel_valkyrAbilities.Margin = New System.Windows.Forms.Padding(0)
         Me.FlowLayoutPanel_valkyrAbilities.MinimumSize = New System.Drawing.Size(181, 26)
         Me.FlowLayoutPanel_valkyrAbilities.Name = "FlowLayoutPanel_valkyrAbilities"
-        Me.FlowLayoutPanel_valkyrAbilities.Size = New System.Drawing.Size(181, 27)
+        Me.FlowLayoutPanel_valkyrAbilities.Size = New System.Drawing.Size(181, 26)
         Me.FlowLayoutPanel_valkyrAbilities.TabIndex = 100
         '
         'CheckBox_warcry
         '
-        Me.CheckBox_warcry.Location = New System.Drawing.Point(3, 3)
+        Me.CheckBox_warcry.Location = New System.Drawing.Point(3, 1)
+        Me.CheckBox_warcry.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckBox_warcry.Name = "CheckBox_warcry"
         Me.CheckBox_warcry.Size = New System.Drawing.Size(175, 21)
         Me.CheckBox_warcry.TabIndex = 5
@@ -3656,7 +3827,7 @@ Partial Class Form_main
         Me.TabPage_abilitiesWisp.Controls.Add(Me.FlowLayoutPanel_wispAbilities)
         Me.TabPage_abilitiesWisp.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_abilitiesWisp.Name = "TabPage_abilitiesWisp"
-        Me.TabPage_abilitiesWisp.Size = New System.Drawing.Size(759, 186)
+        Me.TabPage_abilitiesWisp.Size = New System.Drawing.Size(926, 186)
         Me.TabPage_abilitiesWisp.TabIndex = 23
         Me.TabPage_abilitiesWisp.Text = "Wisp"
         '
@@ -3670,12 +3841,13 @@ Partial Class Form_main
         Me.FlowLayoutPanel_wispAbilities.Margin = New System.Windows.Forms.Padding(0)
         Me.FlowLayoutPanel_wispAbilities.MinimumSize = New System.Drawing.Size(181, 26)
         Me.FlowLayoutPanel_wispAbilities.Name = "FlowLayoutPanel_wispAbilities"
-        Me.FlowLayoutPanel_wispAbilities.Size = New System.Drawing.Size(181, 27)
+        Me.FlowLayoutPanel_wispAbilities.Size = New System.Drawing.Size(181, 26)
         Me.FlowLayoutPanel_wispAbilities.TabIndex = 100
         '
         'CheckBox_vitalityMoteReservoirs
         '
-        Me.CheckBox_vitalityMoteReservoirs.Location = New System.Drawing.Point(3, 3)
+        Me.CheckBox_vitalityMoteReservoirs.Location = New System.Drawing.Point(3, 1)
+        Me.CheckBox_vitalityMoteReservoirs.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckBox_vitalityMoteReservoirs.Name = "CheckBox_vitalityMoteReservoirs"
         Me.CheckBox_vitalityMoteReservoirs.Size = New System.Drawing.Size(175, 21)
         Me.CheckBox_vitalityMoteReservoirs.TabIndex = 6
@@ -3688,7 +3860,7 @@ Partial Class Form_main
         Me.TabPage_abilitiesWukong.Location = New System.Drawing.Point(4, 22)
         Me.TabPage_abilitiesWukong.Name = "TabPage_abilitiesWukong"
         Me.TabPage_abilitiesWukong.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_abilitiesWukong.Size = New System.Drawing.Size(759, 186)
+        Me.TabPage_abilitiesWukong.Size = New System.Drawing.Size(926, 186)
         Me.TabPage_abilitiesWukong.TabIndex = 25
         Me.TabPage_abilitiesWukong.Text = "Wukong"
         Me.TabPage_abilitiesWukong.UseVisualStyleBackColor = True
@@ -3708,7 +3880,8 @@ Partial Class Form_main
         '
         'CheckedInput_defy
         '
-        Me.CheckedInput_defy.Location = New System.Drawing.Point(3, 3)
+        Me.CheckedInput_defy.Location = New System.Drawing.Point(3, 1)
+        Me.CheckedInput_defy.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckedInput_defy.Maximum = 1500
         Me.CheckedInput_defy.MaximumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_defy.Minimum = 50
@@ -3725,7 +3898,7 @@ Partial Class Form_main
         Me.FlowLayoutPanel_abilitiesPanelTemplate.AutoSize = True
         Me.FlowLayoutPanel_abilitiesPanelTemplate.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.FlowLayoutPanel_abilitiesPanelTemplate.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
-        Me.FlowLayoutPanel_abilitiesPanelTemplate.Location = New System.Drawing.Point(561, 18)
+        Me.FlowLayoutPanel_abilitiesPanelTemplate.Location = New System.Drawing.Point(732, 18)
         Me.FlowLayoutPanel_abilitiesPanelTemplate.Margin = New System.Windows.Forms.Padding(0)
         Me.FlowLayoutPanel_abilitiesPanelTemplate.MinimumSize = New System.Drawing.Size(181, 26)
         Me.FlowLayoutPanel_abilitiesPanelTemplate.Name = "FlowLayoutPanel_abilitiesPanelTemplate"
@@ -3738,7 +3911,7 @@ Partial Class Form_main
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.RichTextBox1.Location = New System.Drawing.Point(3, 3)
         Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(516, 239)
+        Me.RichTextBox1.Size = New System.Drawing.Size(683, 239)
         Me.RichTextBox1.TabIndex = 98
         Me.RichTextBox1.Text = "TODO:" & Global.Microsoft.VisualBasic.ChrW(10) & "  -  Add Moa Pets"
         '
@@ -3746,7 +3919,7 @@ Partial Class Form_main
         '
         Me.Label_companions.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Label_companions.AutoSize = True
-        Me.Label_companions.Location = New System.Drawing.Point(326, -1284)
+        Me.Label_companions.Location = New System.Drawing.Point(326, -1183)
         Me.Label_companions.Name = "Label_companions"
         Me.Label_companions.Size = New System.Drawing.Size(47, 13)
         Me.Label_companions.TabIndex = 97
@@ -3767,7 +3940,7 @@ Partial Class Form_main
         Me.Label_author.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label_author.AutoSize = True
         Me.Label_author.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Label_author.Location = New System.Drawing.Point(615, 7)
+        Me.Label_author.Location = New System.Drawing.Point(782, 7)
         Me.Label_author.Name = "Label_author"
         Me.Label_author.Size = New System.Drawing.Size(164, 13)
         Me.Label_author.TabIndex = 1
@@ -3779,7 +3952,7 @@ Partial Class Form_main
         Me.Label_love.AutoSize = True
         Me.Label_love.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.Label_love.ForeColor = System.Drawing.Color.Red
-        Me.Label_love.Location = New System.Drawing.Point(668, 6)
+        Me.Label_love.Location = New System.Drawing.Point(835, 6)
         Me.Label_love.Name = "Label_love"
         Me.Label_love.Size = New System.Drawing.Size(22, 15)
         Me.Label_love.TabIndex = 2
@@ -3797,7 +3970,7 @@ Partial Class Form_main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(787, 751)
+        Me.ClientSize = New System.Drawing.Size(954, 852)
         Me.Controls.Add(Me.Label_love)
         Me.Controls.Add(Me.Label_author)
         Me.Controls.Add(Me.TabControl_main)
@@ -3870,10 +4043,9 @@ Partial Class Form_main
         Me.TabPage_arcaneHelmetsDefault.ResumeLayout(False)
         Me.TabPage_arcaneHelmetsDefault.PerformLayout()
         Me.FlowLayoutPanel_defaultArcaneHelmets.ResumeLayout(False)
-        Me.FlowLayoutPanel_defaultArcaneHelmets.PerformLayout()
         Me.TabPage_ashArcaneHelmets.ResumeLayout(False)
         Me.TabPage_ashArcaneHelmets.PerformLayout()
-        Me.FlowLayoutPanel_ashAbilities.ResumeLayout(False)
+        Me.FlowLayoutPanel_ashArcaneHelmets.ResumeLayout(False)
         Me.TabPage_arcaneHelmetsBanshee.ResumeLayout(False)
         Me.TabPage_arcaneHelmetsBanshee.PerformLayout()
         Me.FlowLayoutPanel_bansheeArcaneHelmets.ResumeLayout(False)
@@ -3917,7 +4089,6 @@ Partial Class Form_main
         Me.TabPage_abilitiesDefault.ResumeLayout(False)
         Me.TabPage_abilitiesDefault.PerformLayout()
         Me.FlowLayoutPanel_defaultAbilities.ResumeLayout(False)
-        Me.FlowLayoutPanel_defaultAbilities.PerformLayout()
         Me.TabPage_abilitiesAtlas.ResumeLayout(False)
         Me.TabPage_abilitiesAtlas.PerformLayout()
         Me.FlowLayoutPanel_atlasAbilities.ResumeLayout(False)
@@ -4159,7 +4330,7 @@ Partial Class Form_main
     Friend WithEvents RadioButton_pulseHelmet As RadioButton
     Friend WithEvents FlowLayoutPanel_defaultArcaneHelmets As FlowLayoutPanel
     Friend WithEvents Label_arcaneHelmetPlaceholder As Label
-    Friend WithEvents FlowLayoutPanel_ashAbilities As FlowLayoutPanel
+    Friend WithEvents FlowLayoutPanel_ashArcaneHelmets As FlowLayoutPanel
     Friend WithEvents FlowLayoutPanel_bansheeArcaneHelmets As FlowLayoutPanel
     Friend WithEvents FlowLayoutPanel_emberArcaneHelmets As FlowLayoutPanel
     Friend WithEvents FlowLayoutPanel_excaliburArcaneHelmets As FlowLayoutPanel
@@ -4274,4 +4445,8 @@ Partial Class Form_main
     Friend WithEvents TabPage_abilitiesWukong As TabPage
     Friend WithEvents FlowLayoutPanel_wukongAbilities As FlowLayoutPanel
     Friend WithEvents CheckedInput_defy As CheckedInput
+    Friend WithEvents CheckedInput_arcaneTanker2 As CheckedInput
+    Friend WithEvents CheckedInput_arcaneTanker As CheckedInput
+    Friend WithEvents RadioInput_aerodynamic As RadioInput
+    Friend WithEvents RadioInput_shepherd As RadioInput
 End Class
