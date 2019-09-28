@@ -652,10 +652,11 @@ Public Class Form_main
                     Dim aerodynamic As Decimal = 0.1 + (RadioInput_aerodynamic.Value * 0.1)
                     If CheckedInput_coactionDrift.Checked And CheckedGroupBox_miscellaneous.Checked Then
                         Dim coactionDrit As Decimal = 0.025 + (0.025 * CheckedInput_coactionDrift.Value)
-                        damageReduction += (1 - damageReduction) * (aerodynamic * (coactionDrit * (1 + coactionDrit) + coactionDrit))
+                        damageReduction += (1 - damageReduction) * (aerodynamic + (aerodynamic * (coactionDrit * (1 + coactionDrit) + coactionDrit)))
                     Else
                         damageReduction += (1 - damageReduction) * aerodynamic
                     End If
+                    MsgBox(damageReduction)
                 End If
             End If
             '

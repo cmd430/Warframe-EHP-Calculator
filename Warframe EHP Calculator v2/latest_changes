@@ -1,2 +1,7 @@
+1909-1
+* fix aerodynamic and coaction drift interaction (thanks for the bug report: GlitchMC)
+!known issue: items may be incorrectly scaled on the application window (https://github.com/cmd430/Warframe-EHP-Calculator/issues/13)
+
+
 1909
 + add new arcanes and auras from 'arbitrations revisited: hotfix 25.7.6'
