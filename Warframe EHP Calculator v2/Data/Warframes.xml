@@ -9,6 +9,7 @@
   <warframe name="Atlas">
     <variants>
       <variant name="base" armor="450" health="100" shield="100" energy="150" strength="100" />
+      <variant name="prime" armor="475" health="175" shield="150" energy="175" strength="100" />
     </variants>
   </warframe>
   <warframe name="Banshee">
