@@ -1,3 +1,6 @@
+1910-1
+* window should now be the correct size again
+
 1910
 + added atlas prime
 ! items may be incorrectly scaled on the application window when using application scaling (other than 100%) in windows per (https://github.com/cmd430/Warframe-EHP-Calculator/issues/13)

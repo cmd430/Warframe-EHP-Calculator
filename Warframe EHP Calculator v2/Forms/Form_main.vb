@@ -267,7 +267,7 @@ Public Class Form_main
         Catch ex As Exception
             'Cant check for updates
         End Try
-        'Size = New Size(803, 744) ' Window Size = X+13, Y+10
+        Size = New Size(803, 744) ' Window Size = X+13, Y+10
     End Sub
 
     Private Sub Add_Warframe_Handlers(ByVal ParentControl As Control)
