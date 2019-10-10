@@ -1189,33 +1189,28 @@ Public Class Form_main
             baseHealth = currentVariant.Health
             baseShield = currentVariant.Shield
 
-            If Not currentCompanion.Rank_Multipliers.Find(Function(rm) rm.Name = "armor") Is Nothing Then
-                Armor = baseArmor * currentCompanion.Rank_Multipliers.Find(Function(rm) rm.Name = "armor").Multiplier
+            If currentCompanion.Type = "sentinel" Then
+                Armor = baseArmor
+                Health = baseHealth
+                Shield = baseShield
             Else
-                If currentCompanion.Type = "sentinel" Then
-                    Armor = baseArmor * DefaultRankMultipliers.Sentinels.Find(Function(m) m.Name = "armor").Multiplier
+                If Not currentCompanion.Rank_Multipliers.Find(Function(rm) rm.Name = "armor") Is Nothing Then
+                    Armor = baseArmor * currentCompanion.Rank_Multipliers.Find(Function(rm) rm.Name = "armor").Multiplier
                 Else
                     Armor = baseArmor * DefaultRankMultipliers.Companions.Find(Function(m) m.Name = "armor").Multiplier
                 End If
-            End If
-            If Not currentCompanion.Rank_Multipliers.Find(Function(rm) rm.Name = "health") Is Nothing Then
-                Health = baseHealth * currentCompanion.Rank_Multipliers.Find(Function(rm) rm.Name = "health").Multiplier
-            Else
-                If currentCompanion.Type = "sentinel" Then
-                    Health = baseHealth * DefaultRankMultipliers.Sentinels.Find(Function(m) m.Name = "health").Multiplier
+                If Not currentCompanion.Rank_Multipliers.Find(Function(rm) rm.Name = "health") Is Nothing Then
+                    Health = baseHealth * currentCompanion.Rank_Multipliers.Find(Function(rm) rm.Name = "health").Multiplier
                 Else
                     Health = baseHealth * DefaultRankMultipliers.Companions.Find(Function(m) m.Name = "health").Multiplier
                 End If
-            End If
-            If Not currentCompanion.Rank_Multipliers.Find(Function(rm) rm.Name = "shield") Is Nothing Then
-                Shield = baseShield * currentCompanion.Rank_Multipliers.Find(Function(rm) rm.Name = "shield").Multiplier
-            Else
-                If currentCompanion.Type = "sentinel" Then
-                    Shield = baseShield * DefaultRankMultipliers.Sentinels.Find(Function(m) m.Name = "shield").Multiplier
+                If Not currentCompanion.Rank_Multipliers.Find(Function(rm) rm.Name = "shield") Is Nothing Then
+                    Shield = baseShield * currentCompanion.Rank_Multipliers.Find(Function(rm) rm.Name = "shield").Multiplier
                 Else
                     Shield = baseShield * DefaultRankMultipliers.Companions.Find(Function(m) m.Name = "shield").Multiplier
                 End If
             End If
+
             damageReduction = StatBox_warframeDamageReduction.Value / 100
             If currentWarframe IsNot Nothing Then
                 If currentWarframe.Name = "Oberon" Then

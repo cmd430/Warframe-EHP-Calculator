@@ -1,3 +1,7 @@
+1920-2
++ added dethcube prime
+* fixed sentinals incorrectly applying rank bonuses per https://github.com/cmd430/Warframe-EHP-Calculator/issues/15
+
 1910-1
 * window should now be the correct size again
 

@@ -54,6 +54,7 @@
   <companion name="Dethcube" type="sentinel" sort="30">
     <variants>
       <variant name="base" armor="50" health="200" shield="100" />
+      <variant name="prime" armor="150" health="300" shield="100" />
     </variants>
   </companion>
   <companion name="Diriga" type="sentinel" sort="30">
