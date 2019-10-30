@@ -1,4 +1,7 @@
-1920-2
+1910-3
+* fix oberon passive being applied incorrectly per https://github.com/cmd430/Warframe-EHP-Calculator/issues/16
+
+1910-2
 + added dethcube prime
 * fixed sentinals incorrectly applying rank bonuses per https://github.com/cmd430/Warframe-EHP-Calculator/issues/15
 

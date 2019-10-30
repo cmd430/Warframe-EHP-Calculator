@@ -7,7 +7,7 @@
   </companion>
   <companion name="Smeeta" type="kavat" sort="0">
     <variants>
-      <variant name="base" armor="65" health="50" shield="60" />
+      <variant name="base" armor="50" health="50" shield="60" />
     </variants>
   </companion>
   <companion name="Venari" type="kavat" sort="0">

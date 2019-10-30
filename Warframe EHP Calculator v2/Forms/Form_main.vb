@@ -1211,13 +1211,20 @@ Public Class Form_main
                 End If
             End If
 
+            If NumericInput_companionStability.Enabled = True Then
+                'genetic stability
+                Health *= 1 + (NumericInput_companionStability.Value / 100)
+            End If
+
             damageReduction = StatBox_warframeDamageReduction.Value / 100
             If currentWarframe IsNot Nothing Then
-                If currentWarframe.Name = "Oberon" Then
-                    'Oberon Passive
-                    armorBonus += StatBox_warframeArmor.Value * 0.25
-                    Health += StatBox_warframeHealth.Value * 0.25
-                    Shield += StatBox_warframeShield.Value * 0.25
+                If currentWarframe.Name = "Oberon" And Not currentCompanion.Type = "sentinel" And Not currentCompanion.Type = "moa" Then
+                    If (currentCompanion.Name IsNot "Venari") Then
+                        'Oberon Passive
+                        armorBonus += StatBox_warframeArmor.Value * 0.25
+                        healthBonus += StatBox_warframeHealth.Value * 0.25
+                        shieldBonus += StatBox_warframeShield.Value * 0.25
+                    End If
                 End If
             End If
             If CheckBox_companionPrimeCollar.Enabled And CheckBox_companionPrimeCollar.Checked Then
@@ -1258,10 +1265,6 @@ Public Class Form_main
             Armor = (baseArmor * (1 + armorMultiplier)) + (Armor - baseArmor) + armorBonus
             Health = (baseHealth * (1 + healthMultiplier)) + (Health - baseHealth) + healthBonus
             Shield = (baseShield * (1 + shieldMultiplier)) + (Shield - baseShield) + shieldBonus
-            If NumericInput_companionStability.Enabled = True Then
-                'genetic stability
-                Health *= 1 + (NumericInput_companionStability.Value / 100)
-            End If
 
             Dim damageReductionArmor = Armor / (300 + Armor)
             Dim totalDamageReduction = damageReductionArmor + ((1 - damageReductionArmor) * damageReduction)
