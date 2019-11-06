@@ -1,13 +1,5 @@
-1910-3
-* fix oberon passive being applied incorrectly per https://github.com/cmd430/Warframe-EHP-Calculator/issues/16
-
-1910-2
-+ added dethcube prime
-* fixed sentinals incorrectly applying rank bonuses per https://github.com/cmd430/Warframe-EHP-Calculator/issues/15
-
-1910-1
-* window should now be the correct size again
-
-1910
-+ added atlas prime
-! items may be incorrectly scaled on the application window when using application scaling (other than 100%) in windows per (https://github.com/cmd430/Warframe-EHP-Calculator/issues/13)
+1911
++ added grendel
++ added vasca kavat
+* updated ember
+* updated vauban

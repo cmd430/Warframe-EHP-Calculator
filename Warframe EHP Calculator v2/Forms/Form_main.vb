@@ -823,6 +823,13 @@ Public Class Form_main
             '
             '   Abilities
             '
+            '   +Special Ember Effect
+            '
+            Dim immolation_min As Decimal = 0.4 * powerStrength
+            CheckedInput_immolation.Minimum = If(immolation_min > 0.5, 0.5, immolation_min) * 100
+            Dim immolation_max As Decimal = 0.85 * powerStrength
+            CheckedInput_immolation.Maximum = If(immolation_max > 0.9, 0.9, immolation_max) * 100
+            '
             If CheckedGroupBox_abilities.Checked Then
                 Select Case currentWarframe.Name
                     Case "Atlas"
@@ -867,6 +874,14 @@ Public Class Form_main
                             Dim vexArmor As Decimal = 3.5 * powerStrength
                             armorMultiplier += vexArmor
                         End If
+                    Case "Ember"
+                        If CheckedInput_conflagration.Checked Then
+                            Dim conflagration As Decimal = 0.05 * CheckedInput_conflagration.Value
+                            powerStrength += conflagration
+                        End If
+                        If CheckedInput_immolation.Checked Then
+                            damageReduction += (1 - damageReduction) * (CheckedInput_immolation.Value / 100)
+                        End If
                     Case "Excalibur"
                         If CheckBox_exaltedBlade.Checked Then
                             Dim exaltedBlade As Decimal = 0.6
@@ -884,6 +899,10 @@ Public Class Form_main
                                 splinterStorm = 0.9
                             End If
                             damageReduction += (1 - damageReduction) * splinterStorm
+                        End If
+                    Case "Grendel"
+                        If CheckedInput_glutton.Checked Then
+                            armorBonus += 50 * CheckedInput_glutton.Value
                         End If
                     Case "Harrow"
                         If CheckBox_wardingThurible.Checked Then
@@ -994,6 +1013,10 @@ Public Class Form_main
                         If CheckBox_warcry.Checked Then
                             Dim warcryMultiplier As Decimal = 0.5 * powerStrength
                             armorMultiplier += warcryMultiplier
+                        End If
+                    Case "Vauban"
+                        If CheckedInput_bastille.Checked Then
+                            armorBonus += CheckedInput_bastille.Value
                         End If
                     Case "Wisp"
                         If CheckBox_vitalityMoteReservoirs.Checked Then

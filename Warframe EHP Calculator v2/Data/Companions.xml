@@ -10,6 +10,11 @@
       <variant name="base" armor="50" health="50" shield="60" />
     </variants>
   </companion>
+  <companion name="Vasca" type="kavat" sort="0">
+    <variants>
+      <variant name="base" armor="50" health="40" shield="70" />
+    </variants>
+  </companion>
   <companion name="Venari" type="kavat" sort="0">
     <variants>
       <variant name="base" armor="350" health="300" shield="0" />
