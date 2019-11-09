@@ -656,7 +656,6 @@ Public Class Form_main
                     Else
                         damageReduction += (1 - damageReduction) * aerodynamic
                     End If
-                    MsgBox(damageReduction)
                 End If
             End If
             '
