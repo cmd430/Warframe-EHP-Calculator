@@ -107,7 +107,6 @@ Public Class Form_main
         ComboBox_warframes.SelectedIndex = 0
         ComboBox_companions.SelectedIndex = 0
         ComboBox_archwings.SelectedIndex = 0
-        ComboBox_blocking.SelectedIndex = 0
         '
         '   UI Update on warframe change - ability and helmet enabling
         '   and recalc EHP on stat change (pretty much everything is linked in here)
@@ -116,7 +115,6 @@ Public Class Form_main
         '
         AddHandler ComboBox_warframes.SelectedIndexChanged, AddressOf Warframe_Value_Changed
         AddHandler VariantSelection_warframes.SelectedVariantChanged, AddressOf Warframe_Value_Changed
-        AddHandler ComboBox_blocking.SelectedIndexChanged, AddressOf Warframe_Value_Changed
         For Each Group As Control In FlowLayoutPanel_warframeModsLayout.Controls
             If TypeOf Group Is CheckedGroupBox Then
                 Add_Warframe_Handlers(CType(Group, CheckedGroupBox).FlowLayout)
@@ -991,8 +989,8 @@ Public Class Form_main
                             damageAbsorbstion += ironSkin
                         End If
                     Case "Titania"
-                        If CheckedInput_thorns.Checked Then
-                            Dim thorns As Decimal = Math.Floor(CheckedInput_thorns.Value / 5) * 0.05
+                        If CheckBox_thorns.Checked Then
+                            Dim thorns As Decimal = 0.5
                             damageReduction += (1 - damageReduction) * thorns
                         End If
                     Case "Trinity"
@@ -1028,15 +1026,6 @@ Public Class Form_main
                             armorBonus += defy
                         End If
                 End Select
-            End If
-            '
-            '   Blocking
-            '
-            If CheckedGroupBox_blocking.Checked Then
-                If ComboBox_blocking.SelectedIndex > 0 Then
-                    Dim BlockSTR As String = "0." & ComboBox_blocking.SelectedItem.ToString.Replace("%", "")
-                    damageReduction += (1 - damageReduction) * Convert.ToDecimal(BlockSTR, New Globalization.CultureInfo("en-US"))
-                End If
             End If
             '
             '   Calculate Values (with special support for Quickthinking and Gladiator Finesse)

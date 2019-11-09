@@ -1,3 +1,7 @@
+1911-2
+* update titania thorns abillity per https://github.com/cmd430/Warframe-EHP-Calculator/issues/18
+- removed blocking as it is nolonger needed per https://github.com/cmd430/Warframe-EHP-Calculator/issues/18
+
 1911-1
 - removed debug msg per https://github.com/cmd430/Warframe-EHP-Calculator/issues/17
 
