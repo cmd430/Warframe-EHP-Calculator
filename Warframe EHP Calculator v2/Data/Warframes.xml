@@ -110,6 +110,7 @@
   <warframe name="Ivara">
     <variants>
       <variant name="base" armor="65" health="75" shield="100" energy="175" strength="100" />
+      <variant name="prime" armor="65" health="75" shield="150" energy="200" strength="100" />
     </variants>
     <rank_multipliers>
       <rank_multiplier name="energy" multiplier="1.497142857142857" />
