@@ -821,11 +821,17 @@ Public Class Form_main
             '   Abilities
             '
             '   +Special Ember Effect
+            '   +Pax Bolt
             '
             Dim immolation_min As Decimal = 0.4 * powerStrength
             CheckedInput_immolation.Minimum = If(immolation_min > 0.5, 0.5, immolation_min) * 100
             Dim immolation_max As Decimal = 0.85 * powerStrength
             CheckedInput_immolation.Maximum = If(immolation_max > 0.9, 0.9, immolation_max) * 100
+            If CheckedGroupBox_arcanes.Checked Then
+                If CheckedInput_arcanePaxBolt.Checked Then
+                    powerStrength += 0.075 + (0.075 * CheckedInput_arcanePaxBolt.Value)
+                End If
+            End If
             '
             If CheckedGroupBox_abilities.Checked Then
                 Select Case currentWarframe.Name
@@ -1066,9 +1072,6 @@ Public Class Form_main
                 End If
                 If CheckedInput_arcaneTanker2.Checked Then
                     Armor += 300 + (300 * CheckedInput_arcaneUltimatum2.Value)
-                End If
-                If CheckedInput_arcanePaxBolt.Checked Then
-                    powerStrength += 0.075 + (0.075 * CheckedInput_arcanePaxBolt.Value)
                 End If
             End If
             '
