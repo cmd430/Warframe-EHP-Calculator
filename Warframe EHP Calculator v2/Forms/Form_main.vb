@@ -647,7 +647,7 @@ Public Class Form_main
                     Dim powerDonation As Decimal = basePowerStrength * (0.05 + (RadioInput_powerDonation.Value * 0.05))
                     powerStrength -= powerDonation
                 ElseIf RadioInput_aerodynamic.Checked Then
-                    Dim aerodynamic As Decimal = 0.1 + (RadioInput_aerodynamic.Value * 0.1)
+                    Dim aerodynamic As Decimal = 0.04 + (RadioInput_aerodynamic.Value * 0.04)
                     If CheckedInput_coactionDrift.Checked And CheckedGroupBox_miscellaneous.Checked Then
                         Dim coactionDrit As Decimal = 0.025 + (0.025 * CheckedInput_coactionDrift.Value)
                         damageReduction += (1 - damageReduction) * (aerodynamic + (aerodynamic * (coactionDrit * (1 + coactionDrit) + coactionDrit)))
