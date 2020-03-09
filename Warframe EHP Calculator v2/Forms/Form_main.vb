@@ -1092,7 +1092,7 @@ Public Class Form_main
             '
             '   sheild dr
             '
-            Shield = Shield * 1.25
+            Shield = Shield * (4 / 3)
             '
             '   Calculate EHP
             '
