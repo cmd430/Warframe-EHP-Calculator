@@ -1058,20 +1058,11 @@ Public Class Form_main
                 If CheckedInput_arcaneGuardian.Checked Then
                     Armor += 150 + (150 * CheckedInput_arcaneGuardian.Value)
                 End If
-                If CheckedInput_arcaneGuardian2.Checked Then
-                    Armor += 150 + (150 * CheckedInput_arcaneGuardian2.Value)
-                End If
                 If CheckedInput_arcaneUltimatum.Checked Then
-                    Armor += 150 + (150 * CheckedInput_arcaneUltimatum.Value)
-                End If
-                If CheckedInput_arcaneUltimatum2.Checked Then
-                    Armor += 150 + (150 * CheckedInput_arcaneUltimatum2.Value)
+                    Armor += 200 + (200 * CheckedInput_arcaneUltimatum.Value)
                 End If
                 If CheckedInput_arcaneTanker.Checked Then
-                    Armor += 300 + (300 * CheckedInput_arcaneUltimatum.Value)
-                End If
-                If CheckedInput_arcaneTanker2.Checked Then
-                    Armor += 300 + (300 * CheckedInput_arcaneUltimatum2.Value)
+                    Armor += 200 + (200 * CheckedInput_arcaneUltimatum.Value)
                 End If
             End If
             '
@@ -1098,6 +1089,10 @@ Public Class Form_main
             StatBox_warframeEnergy.Value = Energy
             StatBox_warframePowerStrength.Value = powerStrength * 100
             StatBox_warframeDamageReduction.Value = damageReduction * 100
+            '
+            '   sheild dr
+            '
+            Shield = Shield * 1.25
             '
             '   Calculate EHP
             '

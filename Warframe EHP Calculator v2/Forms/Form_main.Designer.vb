@@ -97,12 +97,9 @@ Partial Class Form_main
         Me.CheckBox_corruptedBuff = New System.Windows.Forms.CheckBox()
         Me.CheckedInput_overshields = New Warframe_EHP_Calculator_v2.CheckedInput()
         Me.CheckedGroupBox_arcanes = New Warframe_EHP_Calculator_v2.CheckedGroupBox()
-        Me.CheckedInput_arcaneTanker2 = New Warframe_EHP_Calculator_v2.CheckedInput()
         Me.CheckedInput_arcaneTanker = New Warframe_EHP_Calculator_v2.CheckedInput()
         Me.CheckedInput_arcanePaxBolt = New Warframe_EHP_Calculator_v2.CheckedInput()
-        Me.CheckedInput_arcaneUltimatum2 = New Warframe_EHP_Calculator_v2.CheckedInput()
         Me.CheckedInput_arcaneUltimatum = New Warframe_EHP_Calculator_v2.CheckedInput()
-        Me.CheckedInput_arcaneGuardian2 = New Warframe_EHP_Calculator_v2.CheckedInput()
         Me.CheckedInput_arcaneGuardian = New Warframe_EHP_Calculator_v2.CheckedInput()
         Me.CheckedGroupBox_abilities = New Warframe_EHP_Calculator_v2.CheckedGroupBox()
         Me.CheckedGroupBox_arcaneHelmets = New Warframe_EHP_Calculator_v2.CheckedGroupBox()
@@ -1363,41 +1360,25 @@ Partial Class Form_main
         'CheckedGroupBox_arcanes
         '
         Me.CheckedGroupBox_arcanes.AutoSize = True
-        Me.CheckedGroupBox_arcanes.Controls.Add(Me.CheckedInput_arcaneTanker2)
         Me.CheckedGroupBox_arcanes.Controls.Add(Me.CheckedInput_arcaneTanker)
         Me.CheckedGroupBox_arcanes.Controls.Add(Me.CheckedInput_arcanePaxBolt)
-        Me.CheckedGroupBox_arcanes.Controls.Add(Me.CheckedInput_arcaneUltimatum2)
         Me.CheckedGroupBox_arcanes.Controls.Add(Me.CheckedInput_arcaneUltimatum)
-        Me.CheckedGroupBox_arcanes.Controls.Add(Me.CheckedInput_arcaneGuardian2)
         Me.CheckedGroupBox_arcanes.Controls.Add(Me.CheckedInput_arcaneGuardian)
         Me.CheckedGroupBox_arcanes.Limit = 1
         Me.CheckedGroupBox_arcanes.Limited = True
         Me.CheckedGroupBox_arcanes.LimitUsesTags = True
         Me.CheckedGroupBox_arcanes.Location = New System.Drawing.Point(389, 3)
         Me.CheckedGroupBox_arcanes.Name = "CheckedGroupBox_arcanes"
-        Me.CheckedGroupBox_arcanes.Size = New System.Drawing.Size(187, 198)
+        Me.CheckedGroupBox_arcanes.Size = New System.Drawing.Size(187, 125)
         Me.CheckedGroupBox_arcanes.TabIndex = 21
         Me.CheckedGroupBox_arcanes.TabStop = False
         Me.CheckedGroupBox_arcanes.Text = "Arcanes"
         '
-        'CheckedInput_arcaneTanker2
-        '
-        Me.CheckedInput_arcaneTanker2.Location = New System.Drawing.Point(6, 137)
-        Me.CheckedInput_arcaneTanker2.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
-        Me.CheckedInput_arcaneTanker2.Maximum = 3
-        Me.CheckedInput_arcaneTanker2.MaximumSize = New System.Drawing.Size(175, 20)
-        Me.CheckedInput_arcaneTanker2.MinimumSize = New System.Drawing.Size(175, 20)
-        Me.CheckedInput_arcaneTanker2.Name = "CheckedInput_arcaneTanker2"
-        Me.CheckedInput_arcaneTanker2.Size = New System.Drawing.Size(175, 20)
-        Me.CheckedInput_arcaneTanker2.TabIndex = 7
-        Me.CheckedInput_arcaneTanker2.Tag = "limitGroup_warframe_2"
-        Me.CheckedInput_arcaneTanker2.Text = "Arcane Tanker"
-        '
         'CheckedInput_arcaneTanker
         '
-        Me.CheckedInput_arcaneTanker.Location = New System.Drawing.Point(6, 113)
+        Me.CheckedInput_arcaneTanker.Location = New System.Drawing.Point(6, 65)
         Me.CheckedInput_arcaneTanker.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
-        Me.CheckedInput_arcaneTanker.Maximum = 3
+        Me.CheckedInput_arcaneTanker.Maximum = 5
         Me.CheckedInput_arcaneTanker.MaximumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_arcaneTanker.MinimumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_arcaneTanker.Name = "CheckedInput_arcaneTanker"
@@ -1408,7 +1389,7 @@ Partial Class Form_main
         '
         'CheckedInput_arcanePaxBolt
         '
-        Me.CheckedInput_arcanePaxBolt.Location = New System.Drawing.Point(6, 161)
+        Me.CheckedInput_arcanePaxBolt.Location = New System.Drawing.Point(6, 88)
         Me.CheckedInput_arcanePaxBolt.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
         Me.CheckedInput_arcanePaxBolt.Maximum = 3
         Me.CheckedInput_arcanePaxBolt.MaximumSize = New System.Drawing.Size(175, 20)
@@ -1419,24 +1400,11 @@ Partial Class Form_main
         Me.CheckedInput_arcanePaxBolt.Tag = "limitGroup_kitgun_1"
         Me.CheckedInput_arcanePaxBolt.Text = "Pax Bolt"
         '
-        'CheckedInput_arcaneUltimatum2
-        '
-        Me.CheckedInput_arcaneUltimatum2.Location = New System.Drawing.Point(6, 90)
-        Me.CheckedInput_arcaneUltimatum2.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
-        Me.CheckedInput_arcaneUltimatum2.Maximum = 3
-        Me.CheckedInput_arcaneUltimatum2.MaximumSize = New System.Drawing.Size(175, 20)
-        Me.CheckedInput_arcaneUltimatum2.MinimumSize = New System.Drawing.Size(175, 20)
-        Me.CheckedInput_arcaneUltimatum2.Name = "CheckedInput_arcaneUltimatum2"
-        Me.CheckedInput_arcaneUltimatum2.Size = New System.Drawing.Size(175, 20)
-        Me.CheckedInput_arcaneUltimatum2.TabIndex = 5
-        Me.CheckedInput_arcaneUltimatum2.Tag = "limitGroup_warframe_2"
-        Me.CheckedInput_arcaneUltimatum2.Text = "Arcane Ultimatum"
-        '
         'CheckedInput_arcaneUltimatum
         '
-        Me.CheckedInput_arcaneUltimatum.Location = New System.Drawing.Point(6, 66)
+        Me.CheckedInput_arcaneUltimatum.Location = New System.Drawing.Point(6, 42)
         Me.CheckedInput_arcaneUltimatum.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
-        Me.CheckedInput_arcaneUltimatum.Maximum = 3
+        Me.CheckedInput_arcaneUltimatum.Maximum = 5
         Me.CheckedInput_arcaneUltimatum.MaximumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_arcaneUltimatum.MinimumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_arcaneUltimatum.Name = "CheckedInput_arcaneUltimatum"
@@ -1445,24 +1413,11 @@ Partial Class Form_main
         Me.CheckedInput_arcaneUltimatum.Tag = "limitGroup_warframe_2"
         Me.CheckedInput_arcaneUltimatum.Text = "Arcane Ultimatum"
         '
-        'CheckedInput_arcaneGuardian2
-        '
-        Me.CheckedInput_arcaneGuardian2.Location = New System.Drawing.Point(6, 43)
-        Me.CheckedInput_arcaneGuardian2.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
-        Me.CheckedInput_arcaneGuardian2.Maximum = 3
-        Me.CheckedInput_arcaneGuardian2.MaximumSize = New System.Drawing.Size(175, 20)
-        Me.CheckedInput_arcaneGuardian2.MinimumSize = New System.Drawing.Size(175, 20)
-        Me.CheckedInput_arcaneGuardian2.Name = "CheckedInput_arcaneGuardian2"
-        Me.CheckedInput_arcaneGuardian2.Size = New System.Drawing.Size(175, 20)
-        Me.CheckedInput_arcaneGuardian2.TabIndex = 3
-        Me.CheckedInput_arcaneGuardian2.Tag = "limitGroup_warframe_2"
-        Me.CheckedInput_arcaneGuardian2.Text = "Arcane Guardian"
-        '
         'CheckedInput_arcaneGuardian
         '
         Me.CheckedInput_arcaneGuardian.Location = New System.Drawing.Point(6, 19)
         Me.CheckedInput_arcaneGuardian.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
-        Me.CheckedInput_arcaneGuardian.Maximum = 3
+        Me.CheckedInput_arcaneGuardian.Maximum = 5
         Me.CheckedInput_arcaneGuardian.MaximumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_arcaneGuardian.MinimumSize = New System.Drawing.Size(175, 20)
         Me.CheckedInput_arcaneGuardian.Name = "CheckedInput_arcaneGuardian"
@@ -1474,7 +1429,7 @@ Partial Class Form_main
         'CheckedGroupBox_abilities
         '
         Me.CheckedGroupBox_abilities.AutoSize = True
-        Me.CheckedGroupBox_abilities.Location = New System.Drawing.Point(389, 207)
+        Me.CheckedGroupBox_abilities.Location = New System.Drawing.Point(389, 134)
         Me.CheckedGroupBox_abilities.MinimumSize = New System.Drawing.Size(183, 25)
         Me.CheckedGroupBox_abilities.Name = "CheckedGroupBox_abilities"
         Me.CheckedGroupBox_abilities.Size = New System.Drawing.Size(183, 35)
@@ -1485,7 +1440,7 @@ Partial Class Form_main
         'CheckedGroupBox_arcaneHelmets
         '
         Me.CheckedGroupBox_arcaneHelmets.AutoSize = True
-        Me.CheckedGroupBox_arcaneHelmets.Location = New System.Drawing.Point(389, 248)
+        Me.CheckedGroupBox_arcaneHelmets.Location = New System.Drawing.Point(389, 175)
         Me.CheckedGroupBox_arcaneHelmets.MinimumSize = New System.Drawing.Size(183, 25)
         Me.CheckedGroupBox_arcaneHelmets.Name = "CheckedGroupBox_arcaneHelmets"
         Me.CheckedGroupBox_arcaneHelmets.Size = New System.Drawing.Size(183, 35)
@@ -4348,8 +4303,6 @@ Partial Class Form_main
     Friend WithEvents CheckBox_corruptedBuff As CheckBox
     Friend WithEvents CheckedGroupBox_arcanes As CheckedGroupBox
     Friend WithEvents CheckedInput_arcaneGuardian As CheckedInput
-    Friend WithEvents CheckedInput_arcaneGuardian2 As CheckedInput
-    Friend WithEvents CheckedInput_arcaneUltimatum2 As CheckedInput
     Friend WithEvents CheckedInput_arcaneUltimatum As CheckedInput
     Friend WithEvents CheckedGroupBox_abilities As CheckedGroupBox
     Friend WithEvents GroupBox_stats As GroupBox
@@ -4559,7 +4512,6 @@ Partial Class Form_main
     Friend WithEvents TabPage_abilitiesWukong As TabPage
     Friend WithEvents FlowLayoutPanel_wukongAbilities As FlowLayoutPanel
     Friend WithEvents CheckedInput_defy As CheckedInput
-    Friend WithEvents CheckedInput_arcaneTanker2 As CheckedInput
     Friend WithEvents CheckedInput_arcaneTanker As CheckedInput
     Friend WithEvents RadioInput_aerodynamic As RadioInput
     Friend WithEvents RadioInput_shepherd As RadioInput
