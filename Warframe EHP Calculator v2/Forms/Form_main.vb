@@ -647,12 +647,14 @@ Public Class Form_main
                     Dim powerDonation As Decimal = basePowerStrength * (0.05 + (RadioInput_powerDonation.Value * 0.05))
                     powerStrength -= powerDonation
                 ElseIf RadioInput_aerodynamic.Checked Then
-                    Dim aerodynamic As Decimal = 0.04 + (RadioInput_aerodynamic.Value * 0.04)
-                    If CheckedInput_coactionDrift.Checked And CheckedGroupBox_miscellaneous.Checked Then
-                        Dim coactionDrit As Decimal = 0.025 + (0.025 * CheckedInput_coactionDrift.Value)
-                        damageReduction += (1 - damageReduction) * (aerodynamic + (aerodynamic * (coactionDrit * (1 + coactionDrit) + coactionDrit)))
-                    Else
-                        damageReduction += (1 - damageReduction) * aerodynamic
+                    If CheckBox_airborne.Checked And CheckedGroupBox_specialEffects.Checked Then
+                        Dim aerodynamic As Decimal = 0.04 + (RadioInput_aerodynamic.Value * 0.04)
+                        If CheckedInput_coactionDrift.Checked And CheckedGroupBox_miscellaneous.Checked Then
+                            Dim coactionDrit As Decimal = 0.025 + (0.025 * CheckedInput_coactionDrift.Value)
+                            damageReduction += (1 - damageReduction) * (aerodynamic + (aerodynamic * (coactionDrit * (1 + coactionDrit) + coactionDrit)))
+                        Else
+                            damageReduction += (1 - damageReduction) * aerodynamic
+                        End If
                     End If
                 End If
             End If
@@ -701,27 +703,58 @@ Public Class Form_main
                     shieldMultiplier += 0.2 + (CheckedInput_vigor.Value * 0.2)
                 End If
                 ' damage reduction
-                If CheckedInput_agilityDrift.Checked Then
-                    Dim agilityDrift As Decimal = 0.02 + (CheckedInput_agilityDrift.Value * 0.02)
-                    damageReduction += (1 - damageReduction) * agilityDrift
-                End If
-                If CheckedInput_aviator.Checked Then
-                    Dim aviator As Decimal = 0.1 + (CheckedInput_aviator.Value * 0.1)
-                    damageReduction += (1 - damageReduction) * aviator
+                If CheckBox_airborne.Checked And CheckedGroupBox_specialEffects.Checked Then
+                    If CheckedInput_agilityDrift.Checked And Not CheckedInput_aviator.Checked And Not RadioInput_aerodynamic.Checked Then
+                        Dim agilityDrift As Decimal = 0.02 + (CheckedInput_agilityDrift.Value * 0.02)
+                        damageReduction += (1 - damageReduction) * agilityDrift
+                    End If
+                    If CheckedInput_aviator.Checked And Not CheckedInput_agilityDrift.Checked And Not RadioInput_aerodynamic.Checked Then
+                        Dim aviator As Decimal = 0.1 + (CheckedInput_aviator.Value * 0.1)
+                        damageReduction += (1 - damageReduction) * aviator
+                    End If
+                    If CheckedInput_aviator.Checked Or CheckedInput_agilityDrift.Checked Or RadioInput_aerodynamic.Checked Then
+                        Dim aerodynamic As Decimal = 0.04 + (RadioInput_aerodynamic.Value * 0.04)
+                        If CheckedInput_coactionDrift.Checked And CheckedGroupBox_miscellaneous.Checked Then
+                            Dim coactionDrit As Decimal = 0.025 + (0.025 * CheckedInput_coactionDrift.Value)
+                            aerodynamic = (aerodynamic + (aerodynamic * (coactionDrit * (1 + coactionDrit) + coactionDrit)))
+                        End If
+                        Dim agilityDrift As Decimal = 0.02 + (CheckedInput_agilityDrift.Value * 0.02)
+                        Dim aviator As Decimal = 0.1 + (CheckedInput_aviator.Value * 0.1)
+
+                        If CheckedInput_aviator.Checked And CheckedInput_agilityDrift.Checked And RadioInput_aerodynamic.Checked And CheckedGroupBox_aura.Checked Then
+                            ' all 3
+                            damageReduction = aviator + agilityDrift + aerodynamic
+                        ElseIf CheckedInput_aviator.Checked And CheckedInput_agilityDrift.Checked Then
+                            ' 2 non aura
+                            damageReduction = aviator + agilityDrift
+                        ElseIf CheckedInput_aviator.Checked And RadioInput_aerodynamic.Checked And CheckedGroupBox_aura.Checked Then
+                            ' 1 non aua + aura
+                            damageReduction = aviator + aerodynamic
+                        ElseIf CheckedInput_agilityDrift.Checked And RadioInput_aerodynamic.Checked And CheckedGroupBox_aura.Checked Then
+                            ' 1 non aua + aura
+                            damageReduction = agilityDrift + aerodynamic
+                        End If
+                    End If
+
+                    If Shield > 0 Then
+                        If damageReduction > 0 Then ' additivly stack with aerodynamic mods
+                            damageReduction += 0.25
+                        End If
+                    End If
                 End If
                 If CheckedInput_protonSet.Checked Then
                     Dim protonSet As Decimal = CheckedInput_protonSet.Value * 0.165
                     damageReduction += (1 - damageReduction) * protonSet
                 End If
                 If CheckBox_adaptation.Checked Then
-                    Dim adaptation As Decimal = 0.9
-                    damageReduction += (1 - damageReduction) * adaptation
+                        Dim adaptation As Decimal = 0.9
+                        damageReduction += (1 - damageReduction) * adaptation
+                    End If
                 End If
-            End If
-            '
-            '   Energy Mods
-            '
-            If CheckedGroupBox_miscellaneous.Checked Then
+                '
+                '   Energy Mods
+                '
+                If CheckedGroupBox_miscellaneous.Checked Then
                 If CheckedInput_enduranceDrift.Checked Then
                     energyMultiplier += 0.025 + (CheckedInput_enduranceDrift.Value * 0.025)
                 End If
@@ -815,6 +848,23 @@ Public Class Form_main
                 ' Arbitration
                 If CheckBox_arbitrationBuff.Checked Then
                     powerStrength += 3
+                End If
+                If CheckBox_airborne.Checked Then
+                    If damageReduction > 0.9 Then
+                        damageReduction = 0.9
+                    End If
+                End If
+            End If
+            '
+            ' Shield DR
+            '
+            If Shield > 0 Then
+                If Not CheckBox_airborne.Checked Or Not CheckedGroupBox_specialEffects.Checked Then
+                    damageReduction += (1 - damageReduction) * 0.25
+                Else
+                    If damageReduction = 0 Then
+                        damageReduction += (1 - damageReduction) * 0.25
+                    End If
                 End If
             End If
             '
@@ -1092,7 +1142,7 @@ Public Class Form_main
             '
             '   sheild dr
             '
-            Shield = Shield * (4 / 3)
+            'Shield = Shield * (4 / 3) old way
             '
             '   Calculate EHP
             '

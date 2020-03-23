@@ -315,6 +315,7 @@ Partial Class Form_main
         Me.Label_love = New System.Windows.Forms.Label()
         Me.OpenFileDialog_Import = New System.Windows.Forms.OpenFileDialog()
         Me.SaveFileDialog_Export = New System.Windows.Forms.SaveFileDialog()
+        Me.CheckBox_airborne = New System.Windows.Forms.CheckBox()
         Me.TabControl_main.SuspendLayout()
         Me.TabPage_warframe.SuspendLayout()
         Me.TableLayoutPanel_warframeMainLayout.SuspendLayout()
@@ -1265,6 +1266,7 @@ Partial Class Form_main
         'CheckedGroupBox_specialEffects
         '
         Me.CheckedGroupBox_specialEffects.AutoSize = True
+        Me.CheckedGroupBox_specialEffects.Controls.Add(Me.CheckBox_airborne)
         Me.CheckedGroupBox_specialEffects.Controls.Add(Me.CheckBox_steelMeridianBuff)
         Me.CheckedGroupBox_specialEffects.Controls.Add(Me.CheckBox_perrinSequenceBuff)
         Me.CheckedGroupBox_specialEffects.Controls.Add(Me.CheckBox_newLokaBuff)
@@ -1274,7 +1276,7 @@ Partial Class Form_main
         Me.CheckedGroupBox_specialEffects.Controls.Add(Me.CheckedInput_overshields)
         Me.CheckedGroupBox_specialEffects.Location = New System.Drawing.Point(196, 543)
         Me.CheckedGroupBox_specialEffects.Name = "CheckedGroupBox_specialEffects"
-        Me.CheckedGroupBox_specialEffects.Size = New System.Drawing.Size(187, 169)
+        Me.CheckedGroupBox_specialEffects.Size = New System.Drawing.Size(187, 189)
         Me.CheckedGroupBox_specialEffects.TabIndex = 20
         Me.CheckedGroupBox_specialEffects.TabStop = False
         Me.CheckedGroupBox_specialEffects.Text = "Special Effects"
@@ -4031,6 +4033,17 @@ Partial Class Form_main
         '
         Me.SaveFileDialog_Export.Title = "Export Build"
         '
+        'CheckBox_airborne
+        '
+        Me.CheckBox_airborne.Location = New System.Drawing.Point(6, 155)
+        Me.CheckBox_airborne.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
+        Me.CheckBox_airborne.Name = "CheckBox_airborne"
+        Me.CheckBox_airborne.Size = New System.Drawing.Size(175, 17)
+        Me.CheckBox_airborne.TabIndex = 129
+        Me.CheckBox_airborne.Tag = ""
+        Me.CheckBox_airborne.Text = "Airborne"
+        Me.CheckBox_airborne.UseVisualStyleBackColor = True
+        '
         'Form_main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -4526,4 +4539,5 @@ Partial Class Form_main
     Friend WithEvents FlowLayoutPanel_vaubanAbilities As FlowLayoutPanel
     Friend WithEvents CheckedInput_bastille As CheckedInput
     Friend WithEvents CheckBox_thorns As CheckBox
+    Friend WithEvents CheckBox_airborne As CheckBox
 End Class
