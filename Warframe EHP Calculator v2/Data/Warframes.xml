@@ -223,6 +223,7 @@
   <warframe name="Titania">
     <variants>
       <variant name="base" armor="100" health="100" shield="100" energy="150" strength="100" />
+      <variant name="prime" armor="125" health="125" shield="100" energy="175" strength="100" />
     </variants>
   </warframe>
   <warframe name="Trinity">

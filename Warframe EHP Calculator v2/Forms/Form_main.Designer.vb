@@ -89,6 +89,7 @@ Partial Class Form_main
         Me.CheckedGroupBox_focus = New Warframe_EHP_Calculator_v2.CheckedGroupBox()
         Me.CheckedInput_stoneSkin = New Warframe_EHP_Calculator_v2.CheckedInput()
         Me.CheckedGroupBox_specialEffects = New Warframe_EHP_Calculator_v2.CheckedGroupBox()
+        Me.CheckBox_airborne = New System.Windows.Forms.CheckBox()
         Me.CheckBox_steelMeridianBuff = New System.Windows.Forms.CheckBox()
         Me.CheckBox_perrinSequenceBuff = New System.Windows.Forms.CheckBox()
         Me.CheckBox_newLokaBuff = New System.Windows.Forms.CheckBox()
@@ -315,7 +316,6 @@ Partial Class Form_main
         Me.Label_love = New System.Windows.Forms.Label()
         Me.OpenFileDialog_Import = New System.Windows.Forms.OpenFileDialog()
         Me.SaveFileDialog_Export = New System.Windows.Forms.SaveFileDialog()
-        Me.CheckBox_airborne = New System.Windows.Forms.CheckBox()
         Me.TabControl_main.SuspendLayout()
         Me.TabPage_warframe.SuspendLayout()
         Me.TableLayoutPanel_warframeMainLayout.SuspendLayout()
@@ -1280,6 +1280,17 @@ Partial Class Form_main
         Me.CheckedGroupBox_specialEffects.TabIndex = 20
         Me.CheckedGroupBox_specialEffects.TabStop = False
         Me.CheckedGroupBox_specialEffects.Text = "Special Effects"
+        '
+        'CheckBox_airborne
+        '
+        Me.CheckBox_airborne.Location = New System.Drawing.Point(6, 155)
+        Me.CheckBox_airborne.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
+        Me.CheckBox_airborne.Name = "CheckBox_airborne"
+        Me.CheckBox_airborne.Size = New System.Drawing.Size(175, 17)
+        Me.CheckBox_airborne.TabIndex = 129
+        Me.CheckBox_airborne.Tag = ""
+        Me.CheckBox_airborne.Text = "Airborne"
+        Me.CheckBox_airborne.UseVisualStyleBackColor = True
         '
         'CheckBox_steelMeridianBuff
         '
@@ -4032,17 +4043,6 @@ Partial Class Form_main
         'SaveFileDialog_Export
         '
         Me.SaveFileDialog_Export.Title = "Export Build"
-        '
-        'CheckBox_airborne
-        '
-        Me.CheckBox_airborne.Location = New System.Drawing.Point(6, 155)
-        Me.CheckBox_airborne.Margin = New System.Windows.Forms.Padding(3, 1, 3, 1)
-        Me.CheckBox_airborne.Name = "CheckBox_airborne"
-        Me.CheckBox_airborne.Size = New System.Drawing.Size(175, 17)
-        Me.CheckBox_airborne.TabIndex = 129
-        Me.CheckBox_airborne.Tag = ""
-        Me.CheckBox_airborne.Text = "Airborne"
-        Me.CheckBox_airborne.UseVisualStyleBackColor = True
         '
         'Form_main
         '

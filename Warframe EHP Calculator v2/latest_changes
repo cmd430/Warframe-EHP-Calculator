@@ -1,12 +1,2 @@
-2003-2
-* fix airborne damage reduction interaction (https://github.com/cmd430/Warframe-EHP-Calculator/issues/21)
-
-2003-1
-* fix shield damage reduction
-
-2003
-* remove dupe arcanes
-* adjust arcane tanker and ultimaium to the new values
-* add extra ranks to arcanes
-* add dr from shields
-* update warframe stats
+2004
++ add titaina prime
