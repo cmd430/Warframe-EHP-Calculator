@@ -200,6 +200,11 @@
       <variant name="base" armor="150" health="100" shield="75" energy="150" strength="100" />
     </variants>
   </warframe>
+  <warframe name="Protea">
+    <variants>
+      <variant name="base" armor="125" health="100" shield="150" energy="150" strength="100" />
+    </variants>
+  </warframe>
   <warframe name="Revenant">
     <variants>
       <variant name="base" armor="125" health="100" shield="225" energy="125" strength="100" />
