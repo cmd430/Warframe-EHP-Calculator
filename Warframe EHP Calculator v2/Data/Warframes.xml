@@ -102,6 +102,7 @@
   <warframe name="Inaros">
     <variants>
       <variant name="base" armor="225" health="550" shield="0" energy="100" strength="100" />
+      <variant name="prime" armor="225" health="575" shield="0" energy="125" strength="100" />
     </variants>
     <rank_multipliers>
       <rank_multiplier name="health" multiplier="4" />
